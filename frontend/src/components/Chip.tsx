@@ -1,0 +1,9 @@
+import React from "react";
+
+export default function Chip({ children }: { children: React.ReactNode }) {
+  return (
+    <span className="inline-flex items-center rounded-full bg-neutral-100 px-2 py-0.5 text-xs text-neutral-700">
+      {children}
+    </span>
+  );
+}

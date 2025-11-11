@@ -1,0 +1,281 @@
+# =========================
+# Veille Tech — Configuration complète (version rééquilibrée)
+# =========================
+
+storage:
+  sqlite_path: "veille.db"
+
+# --------- CRAWL / FILTRAGE ---------
+crawl:
+  lookback_days: 7
+  concurrency: 12
+  per_host_rps: 1.5
+  timeout_sec: 25
+  user_agent: "VeilleTechBot/1.0 (+https://example.local/veille)"
+  min_text_length: 300
+
+  # ✅ On désactive la whitelist pour autoriser les articles Medium / Substack / Dev.to / Hashnode
+  # whitelist_domains: []
+
+  # Toujours ignorés
+  blacklist_domains:
+    - reddit.com
+    - twitter.com
+    - x.com
+    - youtube.com
+    - producthunt.com
+    - github.com
+    - glassdoor.com
+    - community.*
+    - careers.*
+
+  # ✅ Autoriser plus de patterns de publication éditoriale
+  path_allow_regex: "(?i)(/blog|/posts?|/post|/articles?|/news|/p/|^/@|/tag/|/t/|/n/|/stories?)"
+  path_deny_regex:  "(?i)(forum|community|jobs|careers|events|release[-_ ]?notes|whats[-_ ]?new|changelog|\\bdocs?\\b|/api/|/sdk/|buzz|people|marketing|podcast|social)"
+
+# --------- EXPORT ---------
+export:
+  out_dir: "export"
+  make_markdown_digest: true
+  max_items_per_cat: 60
+
+# --------- NOTIF (optionnel) ---------
+notify:
+  slack_webhook_env: "SLACK_WEBHOOK_URL"
+
+# --------- CATEGORIES ---------
+categories:
+  - key: "db_sql_olap"
+    title: "🔢 Bases de données & OLAP"
+    keywords: ["postgres","mysql","sql server","oracle","bigquery","snowflake","databricks","trino","duckdb","olap","warehouse","fabric","azure sql"]
+
+  - key: "dataprep_orchestration_etl"
+    title: "👨‍🔧 Data Prep & Orchestration (ELT/ETL)"
+    keywords: ["airbyte","airflow","dagster","prefect","dbt","dataform","sqlmesh","ingestion","transformation"]
+
+  - key: "python_polars_duckdb"
+    title: "🐍 Python, Polars, DuckDB"
+    keywords: ["python","polars","duckdb"]
+
+  - key: "viz_bi"
+    title: "📊 Data Viz & BI"
+    keywords: ["power bi","tableau","qlik","metabase","superset","looker","looker studio","excel","streamlit","omni","viz"]
+
+  - key: "ml_ai"
+    title: "🔬 IA / ML"
+    keywords: ["machine learning","ml","ai","mlops","rag"]
+
+  - key: "cloud"
+    title: "🏛️ Cloud (AWS/GCP/Azure/OVH)"
+    keywords: ["aws","gcp","azure","ovh","bigquery","athena","redshift","synapse","fabric"]
+
+  - key: "news_general"
+    title: "📰 Tendances & Actus Tech (FR)"
+    keywords: ["ia","cloud","data","innovation","numérique","cybersécurité","technologie"]
+
+# --------- SOURCES ---------
+sources:
+  # --- DB/OLAP ---
+  - name: "Snowflake Blog"
+    url: "https://www.snowflake.com/blog/feed/"
+  - name: "Databricks Blog"
+    url: "https://www.databricks.com/blog/feed"
+  - name: "DuckDB Blog"
+    url: "https://duckdb.org/news/index.xml"
+  - name: "Polars Blog"
+    url: "https://www.pola.rs/feed.xml"
+  - name: "Trino Blog"
+    url: "https://trino.io/feed.xml"
+
+  # --- ELT / Orchestration / Transform ---
+  - name: "Astronomer Blog"
+    url: "https://www.astronomer.io/blog/rss.xml"
+  - name: "Airbyte Blog"
+    url: "https://airbyte.com/blog/rss.xml"
+  - name: "dlt Blog"
+    url: "https://dlthub.com/blog/rss.xml"
+  - name: "Apache Airflow Blog"
+    url: "https://airflow.apache.org/feeds/blog.xml"
+  - name: "Dagster Blog"
+    url: "https://dagster.io/blog/rss.xml"
+  - name: "Prefect Blog"
+    url: "https://www.prefect.io/blog/rss.xml"
+  - name: "dbt Blog"
+    url: "https://www.getdbt.com/rss.xml"
+  - name: "Meltano Blog"
+    url: "https://meltano.com/blog/index.xml"
+  - name: "Datafold Blog"
+    url: "https://www.datafold.com/blog/rss.xml"
+  - name: "Rudderstack Blog"
+    url: "https://www.rudderstack.com/blog/rss.xml"
+
+  # --- BI / Viz ---
+  - name: "Power BI Blog"
+    url: "https://powerbi.microsoft.com/en-us/blog/feed/"
+  - name: "Tableau Blog"
+    url: "https://www.tableau.com/blog/feed"
+  - name: "Qlik Blog"
+    url: "https://www.qlik.com/blog.rss"
+  - name: "Metabase Blog"
+    url: "https://www.metabase.com/blog/atom.xml"
+  - name: "Apache Superset Blog"
+    url: "https://superset.apache.org/atom.xml"
+  - name: "Looker Blog"
+    url: "https://cloud.google.com/looker/rss.xml"
+  - name: "Streamlit Blog"
+    url: "https://blog.streamlit.io/feed.xml"
+
+  # --- ML / AI ---
+  - name: "Google AI Blog"
+    url: "https://ai.googleblog.com/feeds/posts/default"
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+  - name: "LangChain Blog"
+    url: "https://blog.langchain.dev/rss/"
+  - name: "Pinecone Blog"
+    url: "https://www.pinecone.io/learn/feed.xml"
+  - name: "Weights & Biases Blog"
+    url: "https://wandb.ai/site/rss.xml"
+  - name: "Lightning AI Blog"
+    url: "https://lightning.ai/pages/blog/rss/"
+
+  # --- Cloud / Infra / Observability ---
+  - name: "AWS Blog (global)"
+    url: "https://aws.amazon.com/blogs/aws/feed/"
+  - name: "Google Cloud (Announcements)"
+    url: "https://cloud.google.com/blog/topics/announcements/rss.xml"
+  - name: "Azure Blog"
+    url: "https://azure.microsoft.com/en-us/blog/feed/"
+  - name: "Cloudflare Engineering Blog"
+    url: "https://blog.cloudflare.com/rss/"
+  - name: "Grafana Labs Blog"
+    url: "https://grafana.com/blog/rss/"
+  - name: "DataDog Engineering"
+    url: "https://www.datadoghq.com/blog/engineering/rss/"
+
+  # --- Python / Analytics ---
+  - name: "FastAPI Blog"
+    url: "https://fastapi.tiangolo.com/feed.xml"
+
+  # --- 🇫🇷 FR / EU ---
+  - name: "OCTO Talks!"
+    url: "https://blog.octo.com/feed/"
+  - name: "OVHcloud Blog"
+    url: "https://blog.ovhcloud.com/feed/"
+  - name: "Clever Cloud Blog"
+    url: "https://www.clever-cloud.com/blog/feed.xml"
+  - name: "Scaleway Blog"
+    url: "https://www.scaleway.com/en/blog/rss/"
+  - name: "Dataiku Blog"
+    url: "https://blog.dataiku.com/rss.xml"
+  - name: "Artefact Blog"
+    url: "https://blog.artefact.com/feed/"
+  - name: "Zenika Tech Blog"
+    url: "https://blog.zenika.com/feed/"
+  - name: "Theodo Tech Blog"
+    url: "https://blog.theodo.com/feed/"
+
+  # --- 📰 Médias FR ---
+  - name: "BDM (Blog du Modérateur)"
+    url: "https://www.blogdumoderateur.com/feed/"
+  - name: "Siècle Digital"
+    url: "https://siecledigital.fr/feed/"
+  - name: "L’Usine Digitale"
+    url: "https://www.usine-digitale.fr/rss"
+  - name: "ZDNet France"
+    url: "https://www.zdnet.fr/feeds/rss/actualites/"
+  - name: "Numerama"
+    url: "https://www.numerama.com/feed/"
+  - name: "Le Big Data"
+    url: "https://www.lebigdata.fr/feed/"
+  - name: "ActuIA"
+    url: "https://www.actuia.com/feed/"
+  - name: "Journal du Net"
+    url: "https://www.journaldunet.com/rss/"
+  - name: "LeMagIT"
+    url: "https://www.lemagit.fr/rss"
+  - name: "Programmez!"
+    url: "https://www.programmez.com/rss"
+
+  # --- 🌐 Medium / Dev.to / Hashnode (ajouts) ---
+  - name: "Medium · Data Engineering"
+    url: "https://medium.com/tag/data-engineering/rss"
+  - name: "Medium · Data"
+    url: "https://medium.com/tag/data/rss"
+  - name: "Medium · Machine Learning"
+    url: "https://medium.com/tag/machine-learning/rss"
+  - name: "Medium · Python"
+    url: "https://medium.com/tag/python/rss"
+  - name: "Medium · Data Visualization"
+    url: "https://medium.com/tag/data-visualization/rss"
+  - name: "dev.to · data"
+    url: "https://dev.to/t/data/rss"
+  - name: "dev.to · datascience"
+    url: "https://dev.to/t/datascience/rss"
+  - name: "dev.to · machinelearning"
+    url: "https://dev.to/t/machinelearning/rss"
+  - name: "Hashnode · data"
+    url: "https://hashnode.com/n/data/rss"
+  - name: "Hashnode · machine-learning"
+    url: "https://hashnode.com/n/machine-learning/rss"
+
+# --------- LLM (Groq OpenAI-compatible) ---------
+llm:
+  provider: "openai_compat"
+  base_url: "https://api.groq.com/openai/v1"
+  api_key_env: "GROQ_API_KEY"
+  model: "llama-3.1-8b-instant"
+  temperature: 0.2
+  max_tokens: 400
+  concurrent: 1
+  score_threshold: 60
+
+# --------- SEUILS ---------
+category_thresholds:
+  db_sql_olap: 58
+  dataprep_orchestration_etl: 62
+  python_polars_duckdb: 55
+  viz_bi: 65
+  ml_ai: 62
+  cloud: 70
+  news_general: 70
+
+# --------- HEURISTIQUES ---------
+heuristics:
+  trusted_sources:
+    - "DuckDB Blog"
+    - "Polars Blog"
+    - "Databricks Blog"
+    - "Snowflake Blog"
+    - "Google Cloud Blog"
+    - "Power BI Blog"
+    - "OCTO Talks!"
+    - "OVHcloud Blog"
+    - "Scaleway Blog"
+    - "Dataiku Blog"
+
+  bonuses:
+    trusted_source: 5
+    deep_content_min_len: 2500
+    deep_content_bonus: 5
+    editorial_url_bonus: 4
+
+  penalties:
+    deny_paths_penalty: 15
+
+  regex:
+    allow_path: "(?i)(/blog|/posts?|/post|/articles?|/news|/p/|^/@|/tag/|/t/|/n/|/stories?)"
+    deny_path:  "(?i)(release[-_ ]?notes|whats[-_ ]?new|changelog|\\bdocs?\\b|/api/|/sdk/)"
+
+  boost_keywords: ["vector search","columnar","DAG","late materialization"]
+  boost_points: 4
+  down_keywords: ["release notes","GA","monthly updates","changelog","Dagster"]
+  down_points: 5
+
+# --------- RÉSUMÉ IA ---------
+summary:
+  enabled: true
+  lookback_days: 7
+  min_score: 60
+  max_sections: 8
+  links_per_section: 5

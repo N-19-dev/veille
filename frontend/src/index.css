@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* petites touches UI */
+:root { color-scheme: light; }
+a { text-decoration: none; }
+a:hover { text-decoration: underline; }

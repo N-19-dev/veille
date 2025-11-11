@@ -1,0 +1,9 @@
+[
+  {
+    "week": "2025w44",
+    "range": "2025-10-27 → 2025-11-03",
+    "summary_md": "export/2025w44/ai_summary.md",
+    "top3_md": "export/2025w44/top3.md",
+    "selection_json": "export/2025w44/ai_selection.json"
+  }
+]

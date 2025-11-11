@@ -1,0 +1,15 @@
+aiohttp
+aiolimiter
+beautifulsoup4
+feedparser
+html5lib
+lxml
+pydantic
+pyyaml
+readability-lxml
+tqdm
+openai
+
+fastapi
+uvicorn[standard]
+PyYAML

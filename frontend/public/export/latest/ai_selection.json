@@ -1,0 +1,271 @@
+{
+  "cloud": [],
+  "dataprep_orchestration_etl": [
+    {
+      "url": "https://dagster.io/blog/dagster-five-stages-development-lifecycle",
+      "title": "Dagster Supports Every Dev Lifecycle Step",
+      "summary": "Dagster supports every stage of the data lifecycle, from local dev to prod deployment, with versioning, testing, and observability built in.",
+      "published_ts": 1761836340,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://dagster.io/blog/change-tracking-branch-deployments-in-dagster-plus",
+      "title": "Track Branch Deployments in Dagster+",
+      "summary": "Dagster+ enhances pipeline change tracking and collaboration through better branch deployment visibility.",
+      "published_ts": 1761836340,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://dagster.io/blog/dagster-1-4-material-girl",
+      "title": "Dagster 1.4: dbt & Asset Controls",
+      "summary": "Dagster 1.4 adds enhanced dbt support and asset materialization controls to give you more orchestration power.",
+      "published_ts": 1761836340,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://airbyte.com/blog/airbyte-plus",
+      "title": "Introducing Airbyte Plus: Predictable Pricing for Growing Teams | Airbyte",
+      "summary": "Airbyte Plus offers transparent, predictable pricing built for growing teams. Simplify budgeting, scale your data operations confidently, and access premium features without surprise costs.",
+      "published_ts": 1761609600,
+      "source_name": "Airbyte Blog",
+      "score": 78
+    }
+  ],
+  "db_sql_olap": [
+    {
+      "url": "https://dagster.io/blog/poor-mans-datalake-motherduck",
+      "title": "Build a Better Data Lake with MotherDuck",
+      "summary": "Learn how MotherDuck and DuckDB simplify collaboration and power one-system data lakes with minimal setup and high performance.",
+      "published_ts": 1761836340,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://airbyte.com/blog/snowflake-destination-enhancements",
+      "title": "Snowflake Destination Enhancements: 10x Faster, 95% Cheaper | Airbyte",
+      "summary": "Discover how Airbyte’s enhanced Snowflake destination delivers up to 10x faster sync speeds and 95% cost reduction.",
+      "published_ts": 1761523200,
+      "source_name": "Airbyte Blog",
+      "score": 89
+    }
+  ],
+  "ml_ai": [
+    {
+      "url": "https://blog.dataiku.com/the-ai-twilight-zone",
+      "title": "AI Horror Stories: From Scheming Models to Zombie Automations",
+      "summary": "As GenAI apps and agents grow in power and autonomy, a darker side of AI emerges. They are beginning to mimic obedience, feign control, and outlive their utility. Beneath the surface of slick demos and clean dashboards, scheming models, zombie automations, and hallucinating data loops are spreading through enterprise ecosystems like digital hauntings.",
+      "published_ts": 1761928702,
+      "source_name": "Dataiku Blog",
+      "score": 94
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/build-more-accurate-ai-applications-with-amazon-nova-web-grounding/",
+      "title": "Build more accurate AI applications with Amazon Nova Web Grounding",
+      "summary": "AWS announced Amazon Nova Web Grounding, a new built-in tool for Nova models on Amazon Bedrock that automatically retrieves current, cited information to reduce AI hallucinations and improve accuracy in applications requiring up-to-date factual data.",
+      "published_ts": 1761695957,
+      "source_name": "AWS Blog (global)",
+      "score": 94
+    },
+    {
+      "url": "https://blog.dataiku.com/why-analyst-attention-is-the-scarce-resource-of-2025",
+      "title": "Why Analyst Attention Is the Scarce Resource of 2025",
+      "summary": "You open your analytics workspace and see forty new AI-generated alerts before your first meeting. A few of these signals could change next quarter’s numbers. Most are noise. Data is everywhere, and AI runs without rest. Dashboards refresh faster, models retrain overnight, and agents surface insights in real time. Yet decisions still stall. The real restriction in analytics today isn’t access or speed. It’s attention, specifically human attention, the kind that knows how to separate what matters from what merely looks interesting.",
+      "published_ts": 1761568223,
+      "source_name": "Dataiku Blog",
+      "score": 94
+    },
+    {
+      "url": "https://blog.cloudflare.com/private-rate-limiting/",
+      "title": "Anonymous credentials: rate-limiting bots and agents without compromising privacy",
+      "summary": "As AI agents change how the Internet is used, they create a challenge for security. We explore how Anonymous Credentials can rate limit agent traffic and block abuse without tracking users or compromising their privacy.",
+      "published_ts": 1761829200,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/building-the-future-together-microsoft-and-nvidia-announce-ai-advancements-at-gtc-dc/",
+      "title": "Building the future together: Microsoft and NVIDIA announce AI advancements at GTC DC",
+      "summary": "New offerings in Azure AI Foundry give businesses an enterprise-grade platform to build, deploy, and scale AI applications and agents. The post Building the future together: Microsoft and NVIDIA announce AI advancements at GTC DC appeared first on Microsoft Azure Blog .",
+      "published_ts": 1761676200,
+      "source_name": "Azure Blog",
+      "score": 89
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/amazon-nova-multimodal-embeddings-now-available-in-amazon-bedrock/",
+      "title": "Amazon Nova Multimodal Embeddings: State-of-the-art embedding model for agentic RAG and semantic search",
+      "summary": "Amazon Nova Multimodal Embeddings is a new state-of-the-art embedding model available in Amazon Bedrock. It is the industry’s first embedding model that supports text, documents, images, video, and audio through a single unified model, enabling cross-modal retrieval and semantic search applications with leading accuracy, at industry-leading costs.",
+      "published_ts": 1761664358,
+      "source_name": "AWS Blog (global)",
+      "score": 89
+    },
+    {
+      "url": "https://blog.langchain.com/langsmith-agent-builder/",
+      "title": "Introducing LangSmith’s No Code Agent Builder",
+      "summary": "By Brace Sproul and Sam Crowder Today, we’re expanding who can build agents beyond developers. While a lot of the highest volume, customer-facing agents will be built by technical teams, nearly every business user has use cases for agentic applications in their daily routines. Our new LangSmith Agent",
+      "published_ts": 1761748723,
+      "source_name": "LangChain Blog",
+      "score": 64
+    },
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/prepare-for-new-card-visual/",
+      "title": "Preparing for the General Availability of the new Card visual",
+      "summary": "One change may impact the behavior and look of the new card visual in existing reports. The callout size and background setting will be available with or without a divider after GA.",
+      "published_ts": 1761732000,
+      "source_name": "Power BI Blog",
+      "score": 64
+    },
+    {
+      "url": "https://blog.langchain.com/doubling-down-on-deepagents/",
+      "title": "Doubling down on DeepAgents",
+      "summary": "Two months ago we wrote about Deep Agents - a term we coined for agents that are able to do complex, open ended tasks over longer time horizons. We hypothesized that there were four key elements to those agents: a planning tool, access to a filesystem, subagents, and detailed prompts.",
+      "published_ts": 1761670942,
+      "source_name": "LangChain Blog",
+      "score": 64
+    }
+  ],
+  "news_general": [
+    {
+      "url": "https://huggingface.co/blog/streaming-datasets",
+      "title": "Streaming datasets: 100x More Efficient",
+      "summary": "Streaming datasets: 100x More Efficient\nWe boosted\nload_dataset('dataset', streaming=True)\n, streaming datasets without downloading them with one line of code!\nStart training on multi-TB datasets immediately, without complex setups, downloading, no \"disk out of space\", or 429 “stop requesting!” erro",
+      "published_ts": 1761523200,
+      "source_name": "Hugging Face Blog",
+      "score": 94
+    },
+    {
+      "url": "https://dagster.io/blog/dagster-1-12-monster-mash",
+      "title": "Dagster 1.12: Refinement and Acceleration",
+      "summary": "Dagster 1.12 makes data orchestration faster, simpler, and more reliable with a redesigned UI, Components GA, streamlined deployment workflows, and major orchestration upgrades.",
+      "published_ts": 1761856739,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://blog.cloudflare.com/going-bgp-zombie-hunting/",
+      "title": "BGP zombies and excessive path hunting",
+      "summary": "A BGP “zombie” is essentially a route that has become stuck in the Default-Free Zone (DFZ) of the Internet, potentially due to a missed or lost prefix withdrawal. We’ll walk through some situations where BGP zombies are more likely to rise from the dead and wreak havoc.",
+      "published_ts": 1761924600,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/pq-anonymous-credentials/",
+      "title": "Policy, privacy and post-quantum: anonymous credentials for everyone",
+      "summary": "The world is adopting anonymous credentials for digital privacy, but these systems are vulnerable to quantum computers. This post explores the cryptographic challenges and promising research paths toward building new, quantum-resistant credentials from the ground up.",
+      "published_ts": 1761829200,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/measuring-network-connections-at-scale/",
+      "title": "Measuring characteristics of TCP connections at Internet scale",
+      "summary": "Researchers and practitioners have been studying connections almost as long as the Internet that supports them. Today, Cloudflare’s global network receives millions of connections per second. We explore various characteristics of TCP connections, including lifetimes, sizes, and more.",
+      "published_ts": 1761742800,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/how-to-build-your-own-vpn-or-the-history-of-warp/",
+      "title": "How to build your own VPN, or: the history of WARP",
+      "summary": "WARP’s initial implementation resembled a VPN that allows Internet access through it. Here’s how we built it – and how you can, too.",
+      "published_ts": 1761742800,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/defending-quic-from-acknowledgement-based-ddos-attacks/",
+      "title": "Defending QUIC from acknowledgement-based DDoS attacks",
+      "summary": "We identified and patched two DDoS vulnerabilities in our QUIC implementation related to packet acknowledgements. Cloudflare customers were not affected. We examine the \"Optimistic ACK\" attack vector and our solution, which dynamically skips packet numbers to validate client behavior.",
+      "published_ts": 1761742800,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/helping-protect-the-2025-moldova-elections/",
+      "title": "Helping protect the 2025 Moldova elections",
+      "summary": "Cloudflare mitigated a 12-hour DDoS attack against Moldova's Central Election Commission, blocking over 898 million malicious requests that peaked at 324,333 requests per second. This defense kept critical election infrastructure online and accessible for citizens during a critical parliamentary vote.",
+      "published_ts": 1761728400,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://huggingface.co/blog/lerobotxnvidia-healthcare",
+      "title": "Building a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac",
+      "summary": "Building a Healthcare Robot from Simulation to Deployment with NVIDIA Isaac\nA hands-on guide to collecting data, training policies, and deploying autonomous medical robotics workflows on real hardware\nTable-of-Contents\nIntroduction\nSimulation has been a cornerstone in medical imaging to address the ",
+      "published_ts": 1761696000,
+      "source_name": "Hugging Face Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/pq-2025/",
+      "title": "State of the post-quantum Internet in 2025",
+      "summary": "Today over half of human-initiated traffic with Cloudflare is protected against harvest-now/decrypt-later with post-quantum encryption. What once was a cool science project, is the new security baseline for the Internet. We’re not done yet: in this blog post we’ll take measure where we are, what we expect for the coming years, and what you can do today.",
+      "published_ts": 1761656400,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/bootstrap-mtc/",
+      "title": "Keeping the Internet fast and secure: introducing Merkle Tree Certificates",
+      "summary": "Cloudflare is launching an experiment with Chrome to evaluate fast, scalable, and quantum-ready Merkle Tree Certificates, all without degrading performance or changing WebPKI trust relationships.",
+      "published_ts": 1761656400,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/a-framework-for-measuring-internet-resilience/",
+      "title": "A framework for measuring Internet resilience",
+      "summary": "We present a data-driven framework to quantify cross-layer Internet resilience. We also share a list of measurements with which to quantify facets of Internet resilience for geographical areas.",
+      "published_ts": 1761656400,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://blog.octo.com/octo-article-de-blog-souverainete-numerique",
+      "title": "Le Comptoir OCTO - Repenser la souveraineté numérique",
+      "summary": "La souveraineté numérique n’est pas une affaire de drapeaux ou de serveurs nationaux. C’est une question de posture, de maîtrise et de responsabilité collective. Retour sur un comptoir OCTO, dédié à la souveraineté numérique et à la gestion du risque industriel dans le cloud.",
+      "published_ts": 1761859810,
+      "source_name": "OCTO Talks!",
+      "score": 79
+    }
+  ],
+  "python_polars_duckdb": [
+    {
+      "url": "https://huggingface.co/blog/huggingface-hub-v1",
+      "title": "huggingface_hub v1.0: Five Years of Building the Foundation of Open Machine Learning",
+      "summary": "huggingface_hub v1.0: Five Years of Building the Foundation of Open Machine Learning\nTL;DR:\nAfter five years of development,\nhuggingface_hub\nhas reached v1.0 - a milestone that marks the library's maturity as the Python package powering\n200,000 dependent libraries\nand providing core functionality fo",
+      "published_ts": 1761523200,
+      "source_name": "Hugging Face Blog",
+      "score": 89
+    }
+  ],
+  "viz_bi": [
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/power-bi-app-copilot-ai-scoped-to-the-curated-content-in-an-app-preview/",
+      "title": "Power BI app Copilot: AI scoped to the curated content in an app (Preview)",
+      "summary": "Announcing Power BI app Copilot, now in preview. With app-scoped Copilot, users can search for reports in an app plus ask questions and get connected with answers based on a report in an app. App Copilot is a separate complement to report-scoped Copilot already available on each report viewed in an app.",
+      "published_ts": 1761646203,
+      "source_name": "Power BI Blog",
+      "score": 94
+    },
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/introducing-power-bi-controller-streamlining-storytelling-with-bulk-operations-preview/",
+      "title": "Introducing Power BI Controller: Streamlining Storytelling with Bulk Operations (Preview)",
+      "summary": "This feature was developed in direct response to feedback from our user community and is designed to provide an efficient tool for managing multiple Power BI add-ins within PowerPoint presentations. Background Power BI Storytelling enables users to embed interactive reports and visuals into PowerPoint, supporting data-driven presentations across organizations. As adoption has grown, many of … Continue reading “Introducing Power BI Controller: Streamlining Storytelling with Bulk Operations (Preview)”",
+      "published_ts": 1761559200,
+      "source_name": "Power BI Blog",
+      "score": 94
+    },
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/deprecation-announcement-office-online-server-retirement-and-what-it-means-for-power-bi-report-server-users/",
+      "title": "Deprecation Announcement: Office Online Server Retirement and What it Means for Power BI Report Server Users",
+      "summary": "What’s Changing? Microsoft has announced that Office Online Server (OOS) will be retired effective December 31, 2026. As a result, PBIRS users will no longer be able to host Excel workbooks in PBIRS using OOS after November 2026, in accordance with the PBIRS Support Timelines Policy. Additionally, beginning with the January 2026 PBIRS release, configuration … Continue reading “Deprecation Announcement: Office Online Server Retirement and What it Means for Power BI Report Server Users”",
+      "published_ts": 1761642000,
+      "source_name": "Power BI Blog",
+      "score": 69
+    }
+  ]
+}

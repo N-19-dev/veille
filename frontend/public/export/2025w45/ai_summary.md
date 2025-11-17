@@ -1,62 +1,82 @@
-## 🏆 Top 3 de la semaine
-
-- **1.** [Building Agents With Snowflake Cortex AI at Every Level](https://blog.dataiku.com/building-agents-with-snowflake-cortex-ai) — Dataiku Blog · 2025-11-04 · **98/100**
-- **2.** [Et si on avait un GPS... à l'intérieur ?](https://blog.octo.com/et-si-on-avait-un-gps...-a-l'interieur) — OCTO Talks! · 2025-11-03 · **98/100**
-- **3.** [Power BI semantic models as accelerators for AI-enabled consumption](https://powerbi.microsoft.com/en-us/blog/power-bi-semantic-models-as-accelerators-for-ai-enabled-consumption/) — Power BI Blog · 2025-11-05 · **94/100**
-
-## 🟦 Aperçu général de la semaine
+## Aperçu général de la semaine
 
 🟦 Aperçu général de la semaine
 
-Cette semaine, nous avons vu une grande variété d'articles liés à l'intelligence artificielle, à la visualisation de données, à la préparation et à l'orchestration de données, ainsi qu'à la mise en œuvre de solutions cloud. Les articles les plus élevés en termes de score ont trait à l'intelligence artificielle, à la visualisation de données et à la préparation de données.
+Cette semaine, les articles de data engineering mettent l'accent sur l'évolution des techniques et des outils au fil des ans. Les articles sélectionnés abordent des sujets tels que l'intelligence artificielle, la gouvernance des données, les formats de stockage et les changements dans le domaine de l'ingénierie des données. Les articles les plus élevés en score sont ceux qui traitent de l'évolution de l'ingénierie des données et des outils tels que Snowflake Cortex AI.
 
-- L'IA est au cœur de plusieurs articles, notamment ceux liés à la mise en œuvre de solutions AI dans les entreprises et à l'utilisation de l'IA pour améliorer la croissance de Tinder.
-- La visualisation de données est également un thème important, avec des articles sur la mise en œuvre de modèles de données semantiques dans Power BI et sur l'utilisation de la visualisation de données pour améliorer la prise de décision.
-- La préparation et l'orchestration de données sont également des thèmes importants, avec des articles sur la mise en œuvre de plateformes de données qui grandissent avec l'entreprise et sur la préparation de données pour l'IA.
 
-## 🔢 Bases de données & OLAP
+Aucun article n'est spécifiquement lié à ce thème cette semaine.
 
-🔢 Bases de données & OLAP
+### 🔄 Orchestration, ETL & Data Movement
 
-- [Advance your career in Data & AI with Microsoft Fabric Data Days](https://powerbi.microsoft.com/en-us/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/) — Power BI Blog · 2025-11-03 · **64/100**
+Aucun article n'est spécifiquement lié à ce thème cette semaine.
 
-## 👨‍🔧 Data Prep & Orchestration (ELT/ETL)
+### 📐 Data Modeling, Governance & Quality
 
-👨‍🔧 Data Prep & Orchestration (ELT/ETL)
+* [Scaling data governance with Amazon DataZone: Covestro success story](https://aws.amazon.com/blogs/big-data/scaling-data-governance-with-amazon-datazone-covestro-success-story/) — Redshift / AWS Big Data · 2025-11-03 · **53.02879601716995/100** : Cette article présente une histoire de réussite de Covestro qui a utilisé Amazon DataZone pour échelonner la gouvernance des données.
 
-- [A Practical Guide to Building Data Platforms That Grow with You](https://dagster.io/blog/introducing-our-new-ebook-scaling-data-teams) — Dagster Blog · 2025-11-05 · **88/100**
-- [Les suppressions d'emplois liées à l'IA vous inquiètent ? Comment les cols blancs peuvent se protéger - dès maintenant](https://www.zdnet.fr/actualites/les-suppressions-demplois-liees-a-lia-vous-inquietent-comment-les-cols-blancs-peuvent-se-proteger-des-maintenant-484574.htm#xtor=RSS-1) — ZDNet France · 2025-11-06 · **60/100**
+**À creuser :**
+** Amazon DataZone, gouvernance des données
 
-## 🐍 Python, Polars, DuckDB
+### 🗄️ Data Lakes, Storage & Formats
 
-🐍 Python, Polars, DuckDB
+* [I spent 8 hours understanding how Parquet actually stores the data.](https://vutr.substack.com/p/i-spent-8-understanding-how-parquet) — VuTrinh · Data Engineering · 2025-11-04 · **58.302869364619255/100** : Dans cet article, l'auteur décrit son expérience de compréhension de la façon dont Parquet stocke les données.
 
-Aucun article n'est lié à ce thème cette semaine.
+**À creuser :**
+** Parquet, stockage de données
 
-## 📊 Data Viz & BI
+### ☁️ Cloud, Infra & Observability
 
-📊 Data Viz & BI
+Aucun article n'est spécifiquement lié à ce thème cette semaine.
 
-- [Test Chipolo Loop : ce traceur Bluetooth avec boucle est une alternative intéressante à l’AirTag](https://www.zdnet.fr/guide-achat/test-chipolo-loop-ce-traceur-bluetooth-avec-boucle-est-une-alternative-interessante-a-lairtag-484547.htm#xtor=RSS-1) — ZDNet France · 2025-11-06 · **85/100**
-- [L'excellence décisionnelle : le nouvel impératif stratégique pour toute entreprise qui veut pérenniser son activité](https://www.journaldunet.com/intelligence-artificielle/1545875-l-excellence-decisionnelle-le-nouvel-imperatif-strategique-pour-toute-entreprise-qui-veut-perenniser-son-activite/) — Journal du Net · 2025-11-07 · **60/100**
+### 🐍 Python, Analytics & Tools
 
-## 🔬 IA / ML
+Aucun article n'est spécifiquement lié à ce thème cette semaine.
 
-🔬 IA / ML
+### 🤖 AI for Data Engineering
 
-- [Building Agents With Snowflake Cortex AI at Every Level](https://blog.dataiku.com/building-agents-with-snowflake-cortex-ai) — Dataiku Blog · 2025-11-04 · **98/100**
-- [Et si on avait un GPS... à l'intérieur ?](https://blog.octo.com/et-si-on-avait-un-gps...-a-l'interieur) — OCTO Talks! · 2025-11-03 · **98/100**
-- [Performance d’entreprise : le rôle clé de la Supply Chain et de la donnée](https://blog.octo.com/performance-d'entreprise--le-role-cle-de-la-supply-chain-et-de-la-donnee) — OCTO Talks! · 2025-11-04 · **94/100**
-- [Tinder espère relancer sa croissance en analysant les photos de ses utilisateurs](https://siecledigital.fr/2025/11/07/tinder-espere-relancer-sa-croissance-en-analysant-les-photos-de-ses-utilisateurs/) — Siècle Digital · 2025-11-07 · **90/100**
-- [Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments](https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/) — AWS Blog (global) · 2025-11-06 · **89/100**
+* [Building Agents With Snowflake Cortex AI at Every Level](http://www.dataiku.com/stories/blog/building-agents-with-snowflake-cortex-ai) — Dataiku Blog · 2025-11-04 · **57.7270148396492/100** : Dans cet article, l'auteur présente la façon dont Snowflake Cortex AI peut être utilisé pour construire des agents à différents niveaux.
+* [The Modern Analyst’s Simplified Path From Question to Insight](http://www.dataiku.com/stories/blog/the-modern-analysts-path-from-question-to-insight) — Dataiku Blog · 2025-11-06 · **57.0961285084486/100** : Dans cet article, l'auteur présente une approche simplifiée pour les analystes modernes pour passer d'une question à une compréhension.
 
-## 🏛️ Cloud (AWS/GCP/Azure/OVH)
+**À creuser :**
+** Snowflake Cortex AI, intelligence artificielle
 
-🏛️ Cloud (AWS/GCP/Azure/OVH)
+### 📰 Tech / Cloud / IA News
 
-- [DIY BYOIP: a new way to Bring Your Own IP prefixes to Cloudflare](https://blog.cloudflare.com/diy-byoip/) — Cloudflare Engineering Blog · 2025-11-07 · **89/100**
-- [Async QUIC and HTTP/3 made easy: tokio-quiche is now open-source](https://blog.cloudflare.com/async-quic-and-http-3-made-easy-tokio-quiche-is
+* [Data Engineering Weekly #244](https://www.dataengineeringweekly.com/p/data-engineering-weekly-244) — Data Engineering Weekly · 2025-11-03 · **68.24004653096199/100** : Dans cet article, les auteurs présentent les dernières nouvelles et tendances dans le domaine de l'ingénierie des données.
+* [5 Things in Data Engineering That Have Changed In The Last 10 Years](https://seattledataguy.substack.com/p/5-things-in-data-engineering-that-d11) — Seattle Data Guy · 2025-11-07 · **66.76180724799633/100** : Dans cet article, l'auteur présente cinq choses qui ont changé dans le domaine de l'ingénierie des données au cours des dix dernières années.
 
-## 📰 Tendances & Actus Tech (FR)
+**À creuser :**
+** Ingénierie des données, tendances
+
+## 🏛️ Warehouses & Query Engines
+
+_Rien d’important cette semaine._
+
+## 🔄 Orchestration, ETL & Data Movement
+
+_Rien d’important cette semaine._
+
+## 📐 Data Modeling, Governance & Quality
+
+_Rien d’important cette semaine._
+
+## 🗄️ Data Lakes, Storage & Formats
+
+_Rien d’important cette semaine._
+
+## ☁️ Cloud, Infra & Observability
+
+_Rien d’important cette semaine._
+
+## 🐍 Python, Analytics & Tools
+
+_Rien d’important cette semaine._
+
+## 🤖 AI for Data Engineering
+
+_Rien d’important cette semaine._
+
+## 📰 Tech / Cloud / IA News
 
 _Rien d’important cette semaine._

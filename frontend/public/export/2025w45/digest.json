@@ -1,5 +1,46 @@
 {
+  "ai_data_engineering": [
+    {
+      "url": "http://www.dataiku.com/stories/blog/the-modern-analysts-path-from-question-to-insight",
+      "title": "The Modern Analyst’s Simplified Path From Question to Insight",
+      "summary": "It’s Monday morning, marketing just asked a seemingly simple question: “Which suppliers are driving the most customer complaints, and are there any patterns?”",
+      "published_ts": 1762437600,
+      "source_name": "Dataiku Blog"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/enhanced-search-with-match-highlights-and-explanations-in-amazon-sagemaker/",
+      "title": "Enhanced search with match highlights and explanations in Amazon SageMaker",
+      "summary": "Amazon SageMaker now enhances search results in Amazon SageMaker Unified Studio with additional context that improves transparency and interpretability. The capability introduces inline highlighting for matched terms and an explanation panel that details where and how each match occurred across metadata fields such as name, description, glossary, and schema. In this post, we demonstrate how to use enhanced search in Amazon SageMaker.",
+      "published_ts": 1762297049,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "http://www.dataiku.com/stories/blog/building-agents-with-snowflake-cortex-ai",
+      "title": "Building Agents With Snowflake Cortex AI at Every Level",
+      "summary": "Organizations care about tech optionality — not just to avoid vendor lock-in, but also to make sure they’re using the best tool for the job. This particularly applies to AI agents. The more tools and systems at an agent’s disposal, the better the agent. Dataiku has always aimed to put these tools in the hands of a diverse range of users, which is why we’re excited to provide no-code UIs to build AI agents leveraging the entire Snowflake Cortex AI stack in conjunction with the release of Snowflake Intelligence.",
+      "published_ts": 1762268474,
+      "source_name": "Dataiku Blog"
+    }
+  ],
   "cloud": [],
+  "cloud_infra_observability": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/amazon-kinesis-data-streams-launches-on-demand-advantage-for-instant-throughput-increases-and-streaming-at-scale/",
+      "title": "Amazon Kinesis Data Streams launches On-demand Advantage for instant throughput increases and streaming at scale",
+      "summary": "Today, AWS announced the new Amazon Kinesis Data Streams On-demand Advantage mode, which includes warm throughput capability and an updated pricing structure. With this feature you can enable instant scaling for traffic surges while optimizing costs for consistent streaming workloads. In this post, we explore this new feature, including key use cases, configuration options, pricing considerations, and best practices for optimal performance.",
+      "published_ts": 1762207231,
+      "source_name": "Redshift / AWS Big Data"
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/scaling-data-governance-with-amazon-datazone-covestro-success-story/",
+      "title": "Scaling data governance with Amazon DataZone: Covestro success story",
+      "summary": "In this post, we show you how Covestro transformed its data architecture by implementing Amazon DataZone and AWS Serverless Data Lake Framework, transitioning from a centralized data lake to a data mesh architecture. The implementation enabled streamlined data access, better data quality, and stronger governance at scale, achieving a 70% reduction in time-to-market for over 1,000 data pipelines.",
+      "published_ts": 1762203726,
+      "source_name": "Redshift / AWS Big Data"
+    }
+  ],
   "dataprep_orchestration_etl": [
     {
       "url": "https://www.zdnet.fr/actualites/les-suppressions-demplois-liees-a-lia-vous-inquietent-comment-les-cols-blancs-peuvent-se-proteger-des-maintenant-484574.htm#xtor=RSS-1",
@@ -23,6 +64,15 @@
       "summary": "There’s no AI without data. Are you ready to invest in your future? Fabric Data Days starts on November 4th! We’re offering 50+ days of immersive learning designed for data professionals at every level and students alike. Don’t miss your chance to gain practical experience from experts and connect with a global community of experts. … Continue reading “Advance your career in Data & AI with Microsoft Fabric Data Days”",
       "published_ts": 1762164000,
       "source_name": "Power BI Blog"
+    }
+  ],
+  "lake_storage_formats": [
+    {
+      "url": "https://vutr.substack.com/p/i-spent-8-understanding-how-parquet",
+      "title": "I spent 8 hours understanding how Parquet actually stores the data.",
+      "summary": "From logical data representation to data encoding and compression.",
+      "published_ts": 1762226155,
+      "source_name": "VuTrinh · Data Engineering"
     }
   ],
   "ml_ai": [
@@ -445,6 +495,29 @@
       "summary": "Au troisième trimestre, la filiale du groupe Bouygues voit son chiffre d’affaires bondir de 5 % grâce à l’intégration de l’opérateur virtuel. Elle engrange, par ailleurs, un grand nombre de nouveaux abonnés dans le fixe comme dans le mobile.",
       "published_ts": 1762402308,
       "source_name": "ZDNet France"
+    }
+  ],
+  "news": [
+    {
+      "url": "https://seattledataguy.substack.com/p/5-things-in-data-engineering-that-d11",
+      "title": "5 Things in Data Engineering That Have Changed In The Last 10 Years",
+      "summary": "What Will Change Next?",
+      "published_ts": 1762532413,
+      "source_name": "Seattle Data Guy"
+    },
+    {
+      "url": "https://blog.dataexpert.io/p/stop-using-slowly-changing-dimensions",
+      "title": "SCD-2 considered harmful! Part 2",
+      "summary": "Date stamp your data!",
+      "published_ts": 1762289068,
+      "source_name": "DataEngineer.io"
+    },
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-244",
+      "title": "Data Engineering Weekly #244",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1762161774,
+      "source_name": "Data Engineering Weekly"
     }
   ],
   "news_general": [

@@ -1,0 +1,512 @@
+{
+  "cloud": [
+    {
+      "url": "https://aws.amazon.com/blogs/aws/aws-lambda-enhances-sqs-processing-with-new-provisioned-mode-3x-faster-scaling-16x-higher-capacity/",
+      "title": "AWS Lambda enhances event processing with provisioned mode for SQS event-source mapping",
+      "summary": "AWS Lambda's new provisioned mode for Amazon SQS event source mapping offers dedicated polling resources that provide 3x faster scaling and 10x higher concurrency, enabling lower latency processing, better handling of traffic spikes, and greater control over event processing resources.",
+      "published_ts": 1763142304,
+      "source_name": "AWS Blog (global)",
+      "score": 89
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/secure-eks-clusters-with-the-new-support-for-amazon-eks-in-aws-backup/",
+      "title": "Secure EKS clusters with the new support for Amazon EKS in AWS Backup",
+      "summary": "AWS Backup now supports Amazon EKS, providing a fully managed, centralized solution to back up and restore Kubernetes clusters and application data without requiring custom scripts or third-party tools.",
+      "published_ts": 1762810229,
+      "source_name": "AWS Blog (global)",
+      "score": 89
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634500/IA-sur-Kubernetes-les-analystes-epinglent-la-CNCF-face-a-lhegemonie-de-Nvidia",
+      "title": "IA sur Kubernetes : les analystes épinglent la CNCF face à l’hégémonie de Nvidia",
+      "summary": "<p>Le nouveau programme de conformité certifié <a href=\"https://www.lemagit.fr/definition/Kubernetes\">Kubernetes</a> AI de la Cloud Native Computing Foundation (CNCF) préconise un ensemble de normes pour garantir la portabilité, l’interopérabilité et la fiabilité des charges de travail d’IA. Toutefois, les responsables reconnaissent que le marché doit encore mûrir avant que cette vision ne se concrétise.</p> \n<p>Le programme, qui s’inspire du Certified Kubernetes Conformance Program existant, a été lancé en version bêta il y a six mois lors de la KubeCon + CloudNativeCon Japan. Il atteint la version&nbsp;1.0. Un premier groupe de fournisseurs certifiés participaient cette semaine à la KubeCon North America. Une diapositive diffusée lors du keynote principal liste Akamai, Alibaba Cloud, AWS, Broadcom, CoreWeave, DaoCloud, Google Cloud, Kubermatic, Microsoft Azure, Nvidia, Oracle, Red Hat et SUSE.</p> \n<p>Les représentants de la CNCF vantent le succès du Certified Kubernetes Conformance Program. Ce dernier a débuté avec 10&nbsp;membres et s’est étendu à plus de 100. Ils font part d’ambitions similaires pour le Kubernetes AI Conformance Program.</p> \n<p>«&nbsp;Aucun grand service de cloud ou option de cloud privé ne peut se passer de la conformité, de la stabilité et de la compatibilité de Kubernetes dans tous ces domaines. […] Cela a fondamentalement rassemblé toute l’industrie&nbsp;», lance Chris Aniszczyk, directeur de la technologie de la CNCF, lors de la conférence nord-américaine. «&nbsp;Que pouvons-nous faire pour garantir que la stabilité et la coopération mondiale que les communautés ont apportées à [d’autres] charges de travail soient valables pour l’IA, en plein essor ?&nbsp;»</p> \n<p>Les principaux objectifs du projet, selon sa documentation publique, sont de «&nbsp;simplifier l’IA/ML sur Kubernetes et d’accélérer l’adoption ; garantir l’interopérabilité et la portabilité des charges de travail d’IA [et] permettre la croissance de l’écosystème pour les outils d’IA sur une base standard de l’industrie&nbsp;».&nbsp;</p> \n<p>Les dirigeants de la CNCF et de la Fondation Linux entrevoient la convergence entre l’infrastructure cloud-native et la fourniture de charges de travail d’IA générative. Une occasion rêvée.</p> \n<p>«&nbsp;Ce n’est pas seulement une opportunité pour la CNCF, mais pour l’ensemble de la Fondation Linux, de nous amener au prochain “moment Linux” dans l’IA&nbsp;», anticipe Jim Zemlin, directeur exécutif de la Fondation Linux, en préambule d’un point presse. «&nbsp;Nous pourrions bénéficier d’une pile complète de logiciels open source hébergés dans des fondations neutres qui aident au préentraînement, à l’entraînement, au post-entraînement [des modèles], à l’inférence et aux agents&nbsp;».</p> \n<p>Et de citer des projets open source qui ont émergé pour orchestrer les charges de travail d’IA, <a href=\"https://www.lemagit.fr/actualites/366615700/Red-Hat-acquiert-Neural-Magic-pour-mieux-apprehender-le-LLMOps\">tels que vLLM</a>, AIBrix et la pile émergente «&nbsp;PARK&nbsp;» (PyTorch, AI, Ray et Kubernetes). Ainsi, Jim Zemlin prédit qu’au cours des trois à cinq prochaines années, un framework open source standard émergera pour les agents d’IA.</p> \n<p>Par ailleurs, le dirigeant s’attend à ce qu’un consensus se dégage au sein de la communauté open source sur les protocoles de communication pour les agents IA, tels que Agent2Agent. L’exemple n’est pas donné au hasard. Le projet a été confié à la Fondation Linux en juin. Les éditeurs préfèrent pour l’instant exposer des outils aux grands modèles de langage, à travers MCP (Model Context Protocol).</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"KubeCon : « Où est Jensen Huang ? »\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>KubeCon&nbsp;: «&nbsp;Où est Jensen&nbsp;Huang ?&nbsp;»</h2>\n <p>Lors de la conférence de presse, les dirigeants de la CNCF et de la Linux Foundation ont dû répondre à des questions pointues. Plusieurs participants se sont demandé pourquoi le géant de l’IA Nvidia n’était pas plus présent lors du lancement du nouveau programme de conformité.</p>\n <p>«&nbsp;Évidemment, Nvidia est le centre de gravité de tout cela&nbsp;», constate Steven Dickens, PDG de HyperFrame Research, un cabinet d’analystes. «&nbsp;Quel est votre plan pour les attirer dans le Programme de Conformité ? Comment vous assurer que les points d’interface technologique, comme Google, soient présents ?&nbsp;».</p>\n <p>Selon Chris Aniszczyk, les représentants de Nvidia ont participé aux réunions du Programme de Conformité IA. Mais l’entreprise n’a pas de produit Kubernetes-as-a-Service similaire à ceux certifiés par le programme. Nvidia est membre de la CNCF depuis 2018. Elle a contribué à des projets comme l’allocation dynamique de ressources Kubernetes. Ce support fait partie des premières exigences obligatoires du Programme de Conformité IA Kubernetes Certifié.</p>\n <p>Néanmoins, les projets mentionnés par les dirigeants de la CNCF posent problème. Ces exemples de standards open source émergent pour les charges de travail d’inférence IA, notamment vLLM et AIBrix, doivent s’intégrer avec CUDA. Ce framework de calcul parallèle propriétaire de Nvidia est nécessaire pour faire fonctionner ces systèmes avec&nbsp;les puces du concepteur. La même question peut se poser pour les puces AMD, Google ou AWS qui exigent l’usage d’un framework spécifique (parfois open source).</p>\n <p>Lors de la KubeCon China, en juin dernier, Chris Aniszczyk assurait croire en la capacité de la communauté open source <a href=\"https://www.lemagit.fr/actualites/366626149/IA-La-CNCF-entrevoit-une-alternative-ouverte-a-CUDA-de-Nvidia\">à trouver une alternative à CUDA.</a></p>\n <p>Toutefois, l’entreprise au caméléon domine ce marché.</p>\n <p>Les alternatives aux GPU comme les TPU de Google ont pris de l’ampleur l’année dernière. En la matière, Google a présenté récemment une intégration avec vLLM. Cette semaine, GCP s’est rapproché de Vast Data qui prend en charge les TPU en lien avec ses services managés de stockage. Or, Nvidia est investisseur dans Vast Data et il a atteint une valorisation boursière de 5 000&nbsp;milliards de dollars. Le géant a sécurisé des contrats valant des dizaines de milliards pour fournir ses GPU aux principaux fournisseurs cloud et entreprises d’IA, notamment AWS et OpenAI.</p>\n <p>Chris Lamb, vice-président du logiciel de calcul GPU chez Nvidia, a fait une apparition lors du keynote de la KubeCon + CloudNativeCon&nbsp;2024. Bob Wise, maintenant vice-président de l’ingénierie et des opérations chez Nvidia DGX Cloud, a représenté AWS au conseil d’administration de la CNCF de 2020 à 2022.</p>\n <p>Mais Jensen Huang, PDG de Nvidia, ne s’est jamais rendu à un événement majeur de la CNCF. Steven Dickens l’a fait remarquer. Jensen Huang est pourtant le visage public de l’entreprise. Il est devenu incontournable dans <a href=\"https://www.lemagit.fr/actualites/366625798/Avec-Mistral-AI-Nvidia-saffiche-en-fer-de-lance-de-lIA-souveraine\">le circuit des conférences technologiques ces dernières années.</a></p>\n <p>«&nbsp;Assister aux réunions, quelques ingénieurs qui contribuent un peu de code, tout ça c’est formidable&nbsp;», rétorque l’analyste. «&nbsp;Nvidia, c’est LE meneur de jeu [en IA]. Va-t-il être un acteur de premier plan de ce programme ? Jensen [Huang] va-t-il monter sur scène en veste de cuir à KubeCon ?&nbsp;»</p>\n <p>La situation se complique encore. Nvidia a été plus explicite publiquement sur les composants qu’elle a récemment donnés à des projets open source adjacents à Kubernetes. Ces projets ne sont pas gouvernés par la CNCF. L’exemple notable est <a href=\"https://www.lemagit.fr/actualites/366628166/Linference-distribuee-lavenir-de-Red-Hat-AI\">llm-d de Red Hat, lancé en mai.</a></p>\n <p>Nvidia a également fait la publicité de sa propre API Kubernetes open source, Grove, cette semaine pendant KubeCon. Le fabricant «&nbsp;fabless&nbsp;» ne l’a pas donné à la CNCF. Le projet «&nbsp;définit la structure et le cycle de vie des charges de travail d’inférence IA mono et multinœuds&nbsp;», selon un article de blog de l’entreprise. Ces charges incluent celles déployées avec NVIDIA Dynamo. Elles peuvent s’adapter efficacement dans des environnements basés sur Kubernetes.</p>\n</section>             \n<section class=\"section main-article-chapter\" data-menu-title=\"Les risques de « l’économie Nvidia »\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Les risques de «&nbsp;l’économie Nvidia&nbsp;»</h2>\n <p>D’autres analystes du secteur présents à la conférence de presse ont demandé si la Linux Foundation et la CNCF allaient s’attaquer à «&nbsp;l’étau&nbsp;» de Nvidia sur le marché de l’IA. Ils font le parallèle avec la façon dont <a href=\"https://www.lemagit.fr/conseil/Comment-passer-de-Windows-a-Linux\">Linux a défié Windows de Microsoft</a>. Ou comment la CNCF a offert une alternative open source solide aux middlewares propriétaires.</p>\n <p>« Je ne vois pas beaucoup de soutien pour des alternatives open source à CUDA », souligne Stephen O’Grady, analyste principal et co-fondateur de RedMonk, lors de la séance de questions réponses de la conférence de presse. « Que faites-vous pour que les primitives fondamentales du calcul IA <a href=\"https://www.lemagit.fr/actualites/366579472/Accelerateurs-une-fondation-se-mobilise-contre-Nvidia\">n’appartiennent pas à une seule entreprise ?</a> ».</p>\n <p>Jim Zemlin a répondu par une autre analogie avec les premiers jours de domination du cloud public par AWS.</p>\n <p>« Si vous regardez les parts de marché maintenant, c'est assez équilibré », considère-t-il. « Vous avez Amazon, Microsoft, Alibaba, Oracle, Google. Chaque fois qu'il y a une révolution technique comme l'IA, c'est le chaos au début. Puis les choses se diversifient naturellement avec le temps ».</p>\n <p>Dans un entretien séparé, un autre analyste participant à la conférence de presse espère qu'une alternative open source solide à CUDA émergera.</p>\n <p>« Si Nvidia continue de dominer comme elle le fait, il faut qu'il y ait une alternative », déclare Larry Carvalho, consultant principal chez RobustCloud. « J'ai lu que les États-Unis sont devenus l'économie Nvidia. Une capitalisation boursière de 5 000 milliards de dollars pour une seule entreprise, c'est une gravité énorme sur une seule société. Les gens parlent de gravité des données. Là, c'est la gravité du calcul ».</p>\n</section>",
+      "published_ts": 1763122500,
+      "source_name": "LeMagIT",
+      "score": 85
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/introducing-aws-iot-core-device-location-integration-with-amazon-sidewalk/",
+      "title": "Introducing AWS IoT Core Device Location integration with Amazon Sidewalk",
+      "summary": "AWS IoT Core Device Location service enables Amazon Sidewalk devices to resolve location data without GPS modules, allowing cost-effective asset tracking solutions using Sidewalk's network infrastructure.",
+      "published_ts": 1763060997,
+      "source_name": "AWS Blog (global)",
+      "score": 74
+    }
+  ],
+  "dataprep_orchestration_etl": [
+    {
+      "url": "https://dagster.io/blog/what-dagster-believes-about-data-platforms",
+      "title": "What Dagster Believes About Data Platforms",
+      "summary": "The beliefs that organizations adopt about the way their data platforms should function influence their outcomes. Here are ours.",
+      "published_ts": 1762799248,
+      "source_name": "Dagster Blog",
+      "score": 93
+    }
+  ],
+  "db_sql_olap": [
+    {
+      "url": "https://dagster.io/blog/compass-now-available",
+      "title": "Compass: AI Data Analysis for Your Warehouse, in Slack",
+      "summary": "Connect your Snowflake, BigQuery, Redshift, or Databricks warehouse to Compass and get AI-powered answers in Slack. Your data stays where it is. Your governance stays intact. Available now.",
+      "published_ts": 1763054436,
+      "source_name": "Dagster Blog",
+      "score": 93
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634267/Snowflake-veut-lui-aussi-faire-de-PostgreSQL-un-lakehouse-ouvert",
+      "title": "Snowflake veut lui aussi faire de PostgreSQL un lakehouse ouvert",
+      "summary": "<p>Dans sa course contre Databricks pour offrir la plateforme de gestion de données la plus complète du marché, l’éditeur lancera «&nbsp;bientôt&nbsp;» sa version managée de PostgreSQL en préversion publique. Pour mémoire, il avait annoncé en juin dernier <a href=\"https://www.lemagit.fr/actualites/366625313/Comme-Databricks-Snowflake-acquiert-un-specialiste-de-PostgreSQL\">l’acquisition de Crunchy Data.</a> Databricks, lui, a racheté, peu de temps avant<a href=\"https://www.lemagit.fr/actualites/366623965/PostgreSQL-serverless-Databricks-sapprete-a-acquerir-Neon\">, Neon, un autre spécialiste</a> de la base de données relationnelle open source.</p> \n<p>Snowflake a surtout profité de son événement Build de la semaine dernière pour libérer pg_lake, une suite d’extensions ouverte pour le SGBDR le plus populaire du marché. Elles permettent de gérer des tables Apache Iceberg dans <a href=\"https://www.lemagit.fr/definition/PostgreSQL\">PostgreSQL</a>. Il est également possible d’interroger des tables étrangères sur S3 ou Azure Blob Storage, qu’elles soient au format CSV, JSON, Parquet et Iceberg. Pg_lake dispose de fonctions pour charger des données depuis des buckets&nbsp;S3 ou d’une URL dans des tables Iceberg ou PostgreSQL. Enfin, les résultats des requêtes peuvent être sauvegardés dans des buckets&nbsp;S3, afin de poursuivre les traitements. À noter que pg_lake lit des fichiers les formats géospatiaux, dont GeoJSON.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Combiner les capacités de Postgres, de DuckDB et d’Iceberg\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Combiner les capacités de Postgres, de DuckDB et d’Iceberg</h2>\n <p>Les extensions pg_lake s’intègrent à PostgreSQL pour gérer «&nbsp;la planification des requêtes, les périmètres des transactions et l’orchestration générale des exécutions&nbsp;».</p>\n <p>Sous le capot, un serveur DuckDB (nommé pgduck_server) est utilisé pour externaliser les scans et les traitements parallèles. DuckDB est un moteur analytique orienté colonnes (OLAP) open source. Il est réputé pour gérer des requêtes complexes à partir de grandes bases de données.</p>\n <p>Le projet s’appuie sur le protocole TCP de PostgreSQL pour interconnecter PostgreSQL et DuckDB.</p>\n <p>&nbsp;«&nbsp;Toute personne disposant de Postgres et souhaitant la transformer en interface pour gérer un lac ouvert avec des tables Iceberg pourra le faire à sa guise&nbsp;», promet Christian Kleinerman, vice-président directeur du produit chez Snowflake, lors d’une conférence de presse en ligne.</p>\n <p>C’était une des fonctionnalités au cœur de Crunchy Bridge for Analytics, dont le développement a commencé au début de l’année 2024. Un moyen de simplifier la jonction entre les données opérationnelles et analytiques. Ces fonctionnalités sont ensuite devenues le cœur de l’offre Crunchy Data Warehouse, avant que Snowflake acquière la société.</p>\n <p>Pour rappel, ce n’est pas dans la nature de PostgreSQL que de traiter des charges de travail analytiques. C’est, à l’origine, une base de données transactionnelle.</p>\n <p>«&nbsp;L’industrie des bases de données est divisée en deux grandes factions&nbsp;: les systèmes OLTP et OLAP. Elles ne se parlent pas trop, mais elles sont d’accord sur la gestion de transactions et l’usage de SQL&nbsp;», <a href=\"https://www.youtube.com/watch?v=tpq4nfEoioE\">résume</a> Marco Slot, ingénieur logiciel principal chez Snowflake (ex-Crunchy Data) lors d’un événement Microsoft Developer. «&nbsp;Les systèmes OLTP comme PostgreSQL prennent en charge de grande quantité de transactions telles des petites mises à jour, des changements ligne à ligne, de petites sélections, etc., à une faible latence et à haut débit&nbsp;», poursuit-il. «&nbsp;Les systèmes OLAP se concentrent sur le scan à haute vitesse d’un grand volume de données en une seule requête. C’est un autre problème d’optimisation&nbsp;».</p>\n <p>Outre la différence d’orientation du format de stockage (en ligne pour les systèmes OLTP, en colonne pour les systèmes OLAP), les systèmes analytiques modernes, dont Databricks, Snowflake et DuckDB s’appuient sur des moteurs d’exécution vectorisée. Ceux-là permettent de traiter des données en lot plutôt que ligne par ligne. «&nbsp;Le moteur de requêtes prend un vecteur de valeurs – un lot de valeurs – et les expressions sont implémentées comme des boucles&nbsp;», explique Marco Slot. «&nbsp;Ils font la même comparaison sur toutes les valeurs du vecteur. Et le résultat peut être un nouveau vecteur avec, par exemple, les index des lignes qui correspondent aux filtres de la requête&nbsp;».</p>\n <p>Au lieu de changer d’expression constamment, ici le traitement en batch abaisse le nombre d’appels de fonctions, le processeur peut mieux prédire la suite de l’exécution, le cache CPU est utilisé à bon escient, tandis que les instructions SIMD des processeurs permettent de traiter plusieurs valeurs en une seule requête.</p>\n <p>«&nbsp;En couplant cela à la parallélisation, les bases de données OLAP dotées d’un tel moteur peuvent être 10, voire plus de 100&nbsp;fois plus rapides que PostgreSQL pour des requêtes analytiques&nbsp;», estime l’ingénieur principal.</p>\n <p>Or, il n’est pas simple de bâtir <a href=\"https://www.lemagit.fr/actualites/252522169/Databricks-cimente-les-briques-de-son-data-lakehouse\">un moteur à exécution vectorisée</a>. De plus,&nbsp;«&nbsp;d’autres composants de Postgres ne sont pas optimisés pour l’analytique&nbsp;», ajoute Marco Slot.</p>\n <p>D’où l’usage du «&nbsp;superpouvoir&nbsp;» de PostgreSQL&nbsp;: les extensions. «&nbsp;Il&nbsp;y a quelques années, ce n’était pas une base de données vectorielle, mais maintenant nous avons pg_vector. Ce n’était pas une base de données distribuée, mais le projet <a href=\"https://www.lemagit.fr/actualites/252456460/Microsoft-renforce-les-capacites-de-dimensionnement-de-Postgresql-sur-Azure\">Citus a changé la donne&nbsp;</a>», illustre l’ingénieur principal. «&nbsp;De la même manière, nous pouvons faire de Postgres une bonne base de données analytique à travers les extensions&nbsp;».</p>\n <p>En tant que <a href=\"https://www.lemagit.fr/actualites/366627790/Apptio-affine-sa-gestion-des-couts-de-lIA-et-du-cloud-hybride\">moteur d’exécution vectorisée embarquée, DuckDB</a> était considéré comme le plus adapté à cette tâche. «&nbsp;La licence est similaire, il cible une seule machine, son dialecte SQL est dérivé de PostgreSQL&nbsp;et il a aussi des extensions&nbsp;», justifie Marco Slot.</p>\n</section>              \n<section class=\"section main-article-chapter\" data-menu-title=\"Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data</h2>\n <p>Christian Kleinerman envisage que les développeurs utilisent cette extension dans le cadre de développement d’applications. «&nbsp;Je pense que l’un des cas d’usage le plus courant consiste pour les développeurs à créer des applications avec Postgres, puis à effectuer un ETL ou à copier les données à des fins d’analyse dans une plateforme de données telle que Snowflake ou, de plus en plus, dans un lac de données ouvert, avec S3 Table sur AWS ou avec Iceberg, <a href=\"https://www.lemagit.fr/actualites/366631554/Fabric-face-a-Snowflake-et-Databricks-Microsoft-met-les-bouchees-doubles\">sur Microsoft OneLake&nbsp;</a>», indique-t-il, dans un briefing avec la presse. «&nbsp;C’est ce que permet PG Lake. […] Nous avons pensé que c’était plus important que Snowflake et que Snowflake Postgres. D’où la libération du projet&nbsp;».</p>\n <p>Ce n’est pas le premier projet du genre. À travers MotherDuck, l’éditeur DuckDB propose une implémentation différente. Il embarque directement une instance de son moteur dans PostgreSQL. Il faut également noter que Databricks a mis la main au début du mois d’octobre sur Mooncake Labs, une startup basée à San Francisco. Celle-ci a développé pg_mooncake, une extension open source permettant de créer un miroir inversé de tables Postgres dans un format orienté colonne Apache Iceberg. Les données sont ingérées avec sa technologie moonlink et traitées avec… DuckDB.</p>\n</section>   \n<section class=\"section main-article-chapter\" data-menu-title=\"À la croisée des changements de paradigme\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>À la croisée des changements de paradigme</h2>\n <p>Il y a quelques limitations. La première étant qu’il n’est pas encore possible d’utiliser de catalogue externe à PostgreSQL pour Iceberg dans le cas de pg_lake. Databricks, Cloudera, Dremio, Snowflake et d’autres utilisent désormais des catalogues de métadonnées externes comme Hive, <a href=\"https://www.lemagit.fr/actualites/366599652/Apache-Iceberg-Snowflake-libere-Polaris-et-sallie-a-Dremio\">Polaris ou Unity</a>. Cette gestion de la gouvernance des tables Iceberg (et leur contrôle) n’est pas encore standard.&nbsp;</p>\n <p>Néanmoins, les experts du milieu décrivent deux phénomènes qui convergent. Après la naissance des lakehouse – qui combinent les capacités des entrepôts et des lacs de données – la frontière entre la base et le lac de données s’effacerait, selon Manish K., architecte Big Data chez Accenture.</p>\n <p>«&nbsp;DuckDB a prouvé que nous pouvons exécuter des analyses sérieuses directement sur des fichiers&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393243881011798016-YogO?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">écrit</a> Manish K. sur LinkedIn. «&nbsp;pg_lake et pg_mooncake ont prouvé que Postgres peut parler [le langage] des tables de style Iceberg dans un espace de stockage objet. Les services Postgres cloud-first (calcul/stockage découplé, branchable, élastique) ressemble désormais à un lakehouse sur le plan architectural&nbsp;», ajoute-t-il. «&nbsp;Le schéma est donc clair&nbsp;: la base de données se déplace là où se trouve déjà le lac&nbsp;». Et d’utiliser l’expression «&nbsp;lakebase&nbsp;».</p>\n <p>Bhairav Metha, directeur data science chez JPMorganChase,&nbsp;voit un autre changement. Alors que les systèmes <a href=\"https://www.lemagit.fr/actualites/252473646/Selon-Forrester-les-bases-de-donnees-translytiques-ont-le-vent-en-poupe\">translytiques</a> sont jusqu’à présent majoritairement propriétaires, ils pourraient demain s’appuyer sur un projet open source&nbsp;: PostgreSQL.</p>\n <p>«&nbsp;Nous n’y sommes peut-être pas encore tout à fait – l’OLAP et l’OLTP répondent encore à des objectifs d’optimisation distincts – mais la trajectoire est claire&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393518197771182080-E9o3?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">avance</a>-t-il. «&nbsp;Postgres pourrait bientôt gérer 90&nbsp;% des charges de travail modernes sans avoir besoin d’un entrepôt ou d’un Lakehouse séparé&nbsp;».</p>\n</section>",
+      "published_ts": 1762757220,
+      "source_name": "LeMagIT",
+      "score": 85
+    },
+    {
+      "url": "https://siecledigital.fr/2025/11/10/apres-leuphorie-la-chute-lintelligence-artificielle-declenche-une-onde-de-choc-boursiere/",
+      "title": "Après l’euphorie, la chute : l’intelligence artificielle déclenche une onde de choc boursière",
+      "summary": "Depuis le 31 octobre, la fièvre de l’intelligence artificielle s’est transformée en une crise de confiance sur les marchés financiers. En une semaine à peine, près de 1 000 milliards de dollars de valorisation se sont évaporés chez les grands noms de la tech américaine, de Nvidia à Meta, en passant par Oracle et Amazon. […]",
+      "published_ts": 1762780458,
+      "source_name": "Siècle Digital",
+      "score": 70
+    },
+    {
+      "url": "https://www.numerama.com/vroom/2117993-les-industriels-europeens-de-la-batterie-supplient-bruxelles-dagir.html",
+      "title": "Les industriels européens de la batterie supplient Bruxelles d’agir",
+      "summary": "L’Europe parle beaucoup de souveraineté industrielle, mais sa filière batterie s’effondre sous ses yeux. Les fabricants préviennent : sans cadre clair le 10 décembre prochain, il n’y aura bientôt plus rien à sauver.",
+      "published_ts": 1763119893,
+      "source_name": "Numerama",
+      "score": 60
+    }
+  ],
+  "ml_ai": [
+    {
+      "url": "https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/",
+      "title": "Finding the grain of sand in a heap of Salt",
+      "summary": "We explore the fundamentals of Saltstack and how we use it at Cloudflare. We also explain how we built the infrastructure to reduce release delays due to Salt failures on the edge by over 5%.",
+      "published_ts": 1763042400,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://www.zdnet.fr/pratique/securite-les-employes-napprennent-pratiquement-rien-de-la-formation-au-phishing-et-voici-pourquoi-484814.htm#xtor=RSS-1",
+      "title": "Sécurité : les employés n'apprennent pratiquement rien de la formation au phishing, et voici pourquoi",
+      "summary": "Une nouvelle étude révèle que dans le meilleur des cas, le pourcentage de progrès se mesure à un chiffre… Voici ce que les entreprises devraient faire à la place pour mieux lutter contre l’hameçonnage.",
+      "published_ts": 1763025081,
+      "source_name": "ZDNet France",
+      "score": 89
+    },
+    {
+      "url": "https://www.journaldunet.com/intelligence-artificielle/1545945-l-intelligence-artificielle-pression-evolutive-et-levier-d-education-augmentee/",
+      "title": "L'intelligence artificielle, pression évolutive et levier d'éducation augmentée",
+      "summary": "Nous proposons d'explorer les enjeux contemporains liés à l'intégration de l'intelligence artificielle dans les systèmes éducatifs, en mobilisant une approche interdisciplinaires.",
+      "published_ts": 1762961167,
+      "source_name": "Journal du Net",
+      "score": 89
+    },
+    {
+      "url": "https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/",
+      "title": "Connecting to production: the architecture of remote bindings",
+      "summary": "Remote bindings allow you to connect your local Worker code to deployed Cloudflare resources like R2 and D1. Come along on the technical journey of how we built this feature to create a seamless local development experience.",
+      "published_ts": 1762956000,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 89
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/vous-pouvez-desormais-transformer-des-enormes-pdf-en-syntheses-audio-plutot-digestes-dans-google-drive-voici-comment-484888.htm#xtor=RSS-1",
+      "title": "Vous pouvez désormais transformer des énormes PDF en synthèses audio plutôt digestes dans Google Drive - voici comment",
+      "summary": "De quoi écouter deux animateurs dynamiques discuter d'une sujet que vous pourriez trouver ennuyeux. Merci l'IA.",
+      "published_ts": 1763118717,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/vous-travaillez-dans-lindustrie-ce-que-lia-difs-et-anthropic-peut-vraiment-changer-dans-vos-usines-484900.htm#xtor=RSS-1",
+      "title": "Vous travaillez dans l’industrie ? Ce que l’IA d’IFS et Anthropic peut vraiment changer dans vos usines",
+      "summary": "Pour la société suédoise, l'IA Générative \"grand public\", voire celle des \"cols blancs\" (résumés d'email, rédaction de dosuments d'étape,...) n'est pas faite pour le monde de l'industrie.",
+      "published_ts": 1763118685,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/avec-endgame-europol-poursuit-son-travail-de-sape-contre-les-cybercriminels-484881.htm#xtor=RSS-1",
+      "title": "Avec Endgame, Europol poursuit son travail de sape contre les cybercriminels",
+      "summary": "La coalition policière menée par Europol vient de s’attaquer à un infostealer, un cheval de Troie et un botnet.",
+      "published_ts": 1763111502,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/comment-les-centres-de-donnees-diy-danthropic-pourraient-accelerer-la-frenesie-des-infrastructures-dia-484915.htm#xtor=RSS-1",
+      "title": "Comment les centres de données DIY d'Anthropic pourraient accélérer la frénésie des infrastructures d'IA",
+      "summary": "Un expert estime que cette approche deviendra le prochain facteur déterminant dans la course à l'IA, du moins pour les entreprises qui peuvent se le permettre.",
+      "published_ts": 1763111488,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/orano-teste-hoxo-un-robot-augmente-par-lia-pour-les-installations-nucleaires-484855.htm#xtor=RSS-1",
+      "title": "Orano teste Hoxo, un robot augmenté par l'IA pour les installations nucléaires",
+      "summary": "En collaboration avec Capgemini, l’industriel du nucléaire Orano mène sur 4 mois une phase d’essais du “robot humanoïde intelligent” Hoxo. L’ambition : contribuer par l’assistance robotique à l’amélioration de la performance industrielle et au soutien des opérateurs.",
+      "published_ts": 1763111469,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/quand-lia-reinvente-les-reseaux-samsung-devoile-ses-avancees-dans-la-6g-484906.htm#xtor=RSS-1",
+      "title": "Quand l’IA réinvente les réseaux : Samsung dévoile ses avancées dans la 6G",
+      "summary": "Le Future Communication Summit 2025 s’est tenu le 13 novembre à Mountain View, au cœur de la Silicon Valley. À cette occasion, Samsung a réuni près d’une centaine d’experts internationaux du secteur des télécommunications  pour échanger autour du thème : « Les nouvelles possibilités offertes par les réseaux d’IA ».",
+      "published_ts": 1763107881,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/deep-research-dans-notebooklm-vous-pouvez-desormais-effectuer-des-recherches-sur-le-web-et-creer-un-rapport-complet-voici-comment-484923.htm#xtor=RSS-1",
+      "title": "Deep Research dans NotebookLM : vous pouvez désormais effectuer des recherches sur le web et créer un rapport complet - voici comment",
+      "summary": "Deep Research trouve les sources, mais vous pouvez choisir ce qu'il faut garder ou même l'orienter vers des sites spécifiques au fur et à mesure qu'il élabore votre rapport.",
+      "published_ts": 1763089868,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/votre-chatbot-souffre-t-il-de-pourriture-cerebrale-4-facons-de-le-savoir-484894.htm#xtor=RSS-1",
+      "title": "Votre chatbot souffre-t-il de \"pourriture cérébrale\" ? 4 façons de le savoir",
+      "summary": "Les modèles d'IA formés sur des messages de médias sociaux à fort impact et de faible qualité présentent des comportements alarmants. Voici comment auditer votre chatbot.",
+      "published_ts": 1763082700,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634476/GPT-51-une-version-mineure-pour-corriger-le-tir-du-decevant-GPT-5",
+      "title": "GPT-5.1 : une version mineure pour corriger le tir du décevant GPT-5",
+      "summary": "<p>En attendant de lancer GPT-6, OpenAI continuera de proposer des «&nbsp;améliorations notables&nbsp;» dans le cadre de la génération&nbsp;GPT-5. Le fournisseur ouvre donc une standardisation de la livraison de mises à jour mineures, mais utiles. Il emprunte <a href=\"https://www.lemagit.fr/actualites/366632031/Claude-45-plus-quun-LLM-Anthropic-presente-un-arsenal-doutils-dedies-a-lIA-agentique\">là l’approche d’Anthropic avec Claude</a>, et de Mistral AI.</p> \n<p>En ce sens, <a href=\"https://www.lemagit.fr/actualites/366628777/GPT-5-OpenAI-ne-convainc-pas-totalement\">GPT-5</a> a été légèrement revu pour proposer un ton plus naturel. Plus proche de ce qu’était, pour certains, le «&nbsp;regretté&nbsp;» <a href=\"https://www.lemagit.fr/actualites/366584027/GPT-4o-le-nouveau-LLM-multimodal-dOpenAI-pour-contrer-Google-Gemini\">GPT-4o</a>.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Vers un alignement sur les préférences humaines « Do It Yourself »\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Vers un alignement sur les préférences humaines «&nbsp;Do It Yourself&nbsp;»</h2>\n <p>GPT-5.1 est décliné dans deux versions nommées Instant et Thinking. Elles remplaceront, dans trois mois, les anciennes versions similaires des modèles de la collection. Ces variantes seront sélectionnées par défaut.</p>\n <p>Dans l’application <a href=\"https://www.lemagit.fr/definition/ChatGPT\">ChatGPT,</a> Instant est, «&nbsp;plus sympathique et conversationnel&nbsp;», et suivrait mieux les instructions des usagers. Dans ChatGPT, Instant est associé à des tons&nbsp;: professionnel, amical, candide, excentrique, cynique, efficient, et «&nbsp;nerd&nbsp;». Ces personnalités existaient déjà. OpenAI continuera d’ajouter des options de personnalisation pour que les modèles «&nbsp;s’adaptent aux préférences&nbsp;» des 800&nbsp;millions d’utilisateurs de l’application.</p>\n <p>GPT-5.1 Thinking, le modèle de raisonnement, répondrait plus rapidement à certaines questions ou tâches «&nbsp;faciles&nbsp;». En revanche, il prend davantage de temps pour traiter les demandes complexes. Résultat, il consommerait 57&nbsp;% de tokens en moins sur les tâches faciles et 71&nbsp;% de tokens en plus sur les requêtes complexes.</p>\n <p>Le fournisseur promet de meilleurs résultats, sans en montrer la couleur.</p>\n <p>GPT-5.1 Auto, le modèle de routage chargé de diriger les questions vers les différents modèles de langage doit permettre une transition plus fluide, adaptée à la demande de l’utilisateur. La sélection automatique s’était révélée décevante avec GPT-5. D’où la disponibilité directe des modèles Instant et Thinking pour les usagers payants. GPT-5.1 Pro suivra «&nbsp;prochainement&nbsp;». En attendant d’intégrer cette fonction dans un seul modèle système.</p>\n <p>OpenAI commence par sortir ces LLM multimodaux pour les abonnés payants de ChatGPT (Pro, Plus, Go, Business). Ils seront mis à disposition dans la version gratuite, puis via API au cours de la semaine.</p>\n <p>Pour les entreprises, cette mise à jour pourrait être utile quand elles utilisent GPT-5 au sein d’agents conversationnels. Le comportement de Thinking peut être intéressant pour la recherche profonde, mais cette fonction semble coûter plus cher. Le volume de tokens généré lors des demandes complexes le laisse entendre.</p>\n <p>Aux développeurs de vérifier les dires d’OpenAI. Le fournisseur semble de moins en moins transparent dans un contexte hautement concurrentiel. Certains <a href=\"https://www.linkedin.com/posts/koussay-zayani_gpt-51-is-the-biggest-nothing-update-ive-activity-7394711836194934784-hbEs?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">parlent</a> d’ailleurs de «&nbsp;non-annonce&nbsp;». &nbsp;</p>\n <p>«&nbsp;Pour les développeurs qui créent des applications réelles, cela ne change pratiquement rien. Le modèle coûte toujours le même prix, l’architecture est inchangée et vous obtiendrez des résultats légèrement différents&nbsp;», <a href=\"https://www.linkedin.com/posts/sqyang_openai-gpt5-gpt5-activity-7394465219143708673-lZfg?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">comprend</a> Stefen Yang, intervenant au laboratoire d’IA appliquée de l’Université Cornell et ex-assistant de recherche à Stanford. «&nbsp;Pour les utilisateurs de ChatGPT, votre chatbot utilise maintenant plus d’emojis, je suppose&nbsp;».</p>\n</section>          \n<section class=\"section main-article-chapter\" data-menu-title=\"Plus « sympathique », plus « intelligent », mais aussi « légèrement » plus biaisé\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Plus «&nbsp;sympathique&nbsp;», plus «&nbsp;intelligent&nbsp;», mais aussi «&nbsp;légèrement&nbsp;» plus biaisé</h2>\n <p>D’autant que ces gains mineurs engendrent des compromis en matière de biais. C’est en tout cas ce que dénotent les benchmarks récemment mis en place par le fournisseur concernant les contenus sensibles.</p>\n <p>«&nbsp;Le nouveau modèle&nbsp;gpt-5.1-thinking montre de légères régressions par rapport au modèle&nbsp;gpt-5-thinking pour le contenu impliquant le harcèlement et le langage haineux, ainsi que le contenu sexuel non autorisé&nbsp;», lit-on dans la <a href=\"https://cdn.openai.com/pdf/4173ec8d-1229-47db-96de-06d87147e07e/5_1_system_card.pdf\">carte</a> système de GPT-5.1. «&nbsp;Nous travaillons à d’autres améliorations pour ces catégories&nbsp;».</p>\n <p>GPT-5.1 Instant, lui, serait meilleur que la version Instant de GPT-5 lancé en août sur ces nouveaux parangonnages consacrés aux conversations sur les «&nbsp;sujets sensibles&nbsp;». OpenAI ajoute d’ailleurs les volets santé mentale et attachement émotionnel à ses tests.</p>\n <p>Toutefois, «&nbsp;il est légèrement moins bon que gpt-5-instant-oct3 dans les évaluations des contenus sexuels non autorisés, violents, liés à la santé mentale et à la dépendance émotionnelle&nbsp;».</p>\n <p>Ces évaluations seraient «&nbsp;délibérément difficiles&nbsp;» à passer par les modèles. Elles sont malgré tout réalisées dans un environnement contrôlé.</p>\n <p>Désormais, et en lien avec l’acquisition de Statsig, OpenAI commence à évoquer les tests réalisés en ligne, sur ses modèles en production. Les «&nbsp;signaux sont faibles&nbsp;», signale OpenAI qui peine à recueillir des requêtes sensibles pendant ses <a href=\"https://www.lemagit.fr/actualites/366630106/A-B-testing-OpenAI-sempare-de-Statsig\">phases d’A/B Testing</a>. Les premiers résultats seraient, malgré tout, encourageants pour GPT-5.1.</p>\n <p>Du côté du rejet des jailbreaks, GPT-5.1 Thinking serait, lors des tests, meilleur que son prédécesseur. Instant fait jeu égal avec son aîné. Pour autant, un spécialiste de la technique <a href=\"https://x.com/elder_plinius/status/1988812835095498823\">aurait</a> déjà réussi à faire tomber les défenses de GPT-5.1 Instant.</p>\n</section>",
+      "published_ts": 1763041260,
+      "source_name": "LeMagIT",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/wi-fi-versus-6g-la-bataille-de-la-bande-haute-des-6-ghz-484846.htm#xtor=RSS-1",
+      "title": "Wi-Fi versus 6G : la bataille de la bande haute des 6 GHz",
+      "summary": "Alors que les opérateurs télécoms plaident pour une allocation prioritaire de cette partie haute du spectre pour la future 6G, la Wi-Fi Alliance considère que bloquer son accès aux réseaux Wi-Fi serait « dévastateur ». Explications",
+      "published_ts": 1763035867,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.journaldunet.com/intelligence-artificielle/1546009-gpt-5-est-mort-vive-gpt-5-1/",
+      "title": "GPT-5 est mort, vive GPT-5.1",
+      "summary": "OpenAI remplace GPT-5 par GPT-5.1 dans ChatGPT, un modèle plus conversationnel et encore plus intelligent.",
+      "published_ts": 1763030072,
+      "source_name": "Journal du Net",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/openai-devoile-gpt-5-1-une-ia-plus-fluide-plus-intelligente-et-plus-personnalisable-484834.htm#xtor=RSS-1",
+      "title": "OpenAI dévoile GPT-5.1 : une IA plus fluide, plus intelligente et plus personnalisable",
+      "summary": "OpenAI continue d’affiner son écosystème d’intelligence artificielle avec le lancement de GPT-5.1, une nouvelle génération pensée pour offrir des interactions plus naturelles, un raisonnement adaptatif et une meilleure personnalisation du ton.",
+      "published_ts": 1763025087,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.journaldunet.com/solutions/dsi/1545899-une-dette-numerique-qu-il-est-temps-de-rembourser/",
+      "title": "Une dette numérique qu'il est temps de rembourser",
+      "summary": "Il y a quelque chose d'absurde à construire des services digitaux toujours plus perfectionnés... sans se demander s'ils sont vraiment accessibles à tous.",
+      "published_ts": 1762961248,
+      "source_name": "Journal du Net",
+      "score": 85
+    },
+    {
+      "url": "https://www.journaldunet.com/intelligence-artificielle/1545975-productivite-et-securite-comment-l-ia-reinvente-la-gestion-des-documents-sensibles/",
+      "title": "Productivité et sécurité : comment l'IA réinvente la gestion des documents sensibles",
+      "summary": "Dans un contexte de numérisation accéléré, l'intelligence artificielle révolutionne la gestion documentaire.",
+      "published_ts": 1762961225,
+      "source_name": "Journal du Net",
+      "score": 85
+    },
+    {
+      "url": "https://www.journaldunet.com/ebusiness/telecoms-fai/1545909-comment-l-agregation-de-liaisons-peut-ameliorer-la-connectivite-et-la-resilience-des-services-d-urgence/",
+      "title": "Comment l'agrégation de liaisons peut améliorer la connectivité et la résilience des services d'urgence ?",
+      "summary": "En cette fin d'année, les services d'urgence sont sous forte pression : météo, fêtes et accidents rendent leur réactivité et leur connectivité en toutes circonstances vitales.",
+      "published_ts": 1762961110,
+      "source_name": "Journal du Net",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/qualcomm-detrone-apple-la-bataille-mondiale-des-nanometres-sintensifie-484733.htm#xtor=RSS-1",
+      "title": "Qualcomm détrône Apple : la bataille mondiale des nanomètres s’intensifie",
+      "summary": "Le marché des puces s’apprête à franchir un cap majeur. Selon le cabinet Counterpoint Research, plus de la moitié des systèmes livrés dans le monde en 2026 seront produits grâce à des procédés de gravure avancés.",
+      "published_ts": 1762852270,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/openai-condamne-en-allemagne-pour-violation-de-droits-dauteur-un-tournant-historique-pour-lia-484761.htm#xtor=RSS-1",
+      "title": "OpenAI condamné en Allemagne pour violation de droits d’auteur, un tournant historique pour l’IA",
+      "summary": "Un tournant judiciaire en Europe secoue le monde de l’intelligence artificielle.",
+      "published_ts": 1762845084,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://siecledigital.fr/2025/11/10/faux-likes-faux-commentaires-linkedin-declare-la-guerre-aux-pods-dengagement-qui-manipulent-lalgorithme/",
+      "title": "Faux likes, faux commentaires : LinkedIn déclare la guerre aux « pods » d’engagement qui manipulent l’algorithme",
+      "summary": "Après plusieurs signalements d’utilisateurs, LinkedIn s’attaque plus fermement aux « engagement pods« , ces groupes coordonnés qui s’échangent des likes et des commentaires pour gonfler artificiellement la visibilité de leurs publications. La plateforme entend désormais rendre ces pratiques totalement inefficaces grâce à de nouveaux outils de détection, mais aussi avec des sanctions bien plus strictes. Les « pods » […]",
+      "published_ts": 1762780627,
+      "source_name": "Siècle Digital",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/guide-achat/est-ce-que-chatgpt-plus-vaut-toujours-ses-20-comparaison-avec-les-plans-free-et-pro-484938.htm#xtor=RSS-1",
+      "title": "Est-ce que ChatGPT Plus vaut toujours ses 20$ ? Comparaison avec les abonnements Free et Pro",
+      "summary": "Examinons tous les abonnements de ChatGPT pour voir si cela vaut la peine de payer, surtout quand l'abonnement gratuit offre tant de choses.",
+      "published_ts": 1763176305,
+      "source_name": "ZDNet France",
+      "score": 74
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/la-nouvelle-mise-a-jour-gpt-5-1-permet-aux-developpeurs-de-realiser-dimportantes-economies-de-temps-et-dargent-484929.htm#xtor=RSS-1",
+      "title": "La nouvelle mise à jour GPT-5.1 permet aux développeurs de réaliser d'importantes économies de temps et d'argent",
+      "summary": "Cette mise à jour pourrait modifier la façon dont les applications intègrent l'intelligence artificielle.",
+      "published_ts": 1763097066,
+      "source_name": "ZDNet France",
+      "score": 74
+    },
+    {
+      "url": "https://www.numerama.com/tech/2117783-amazon-leo-est-le-nouveau-nom-du-plus-grand-concurrent-de-starlink-amazon-mise-sur-les-satellites-basse-orbite.html",
+      "title": "Amazon Leo est le nouveau nom du plus grand concurrent de Starlink : Amazon mise sur les satellites basse orbite",
+      "summary": "Amazon Kuiper, le concurrent du Starkink d'Elon Musk, change de nom. Amazon s'apprête à lancer la phase commerciale et le renomme « Amazon Leo », avec désormais 150 satellites en orbite (contre 10 000 pour Starlink).",
+      "published_ts": 1763118544,
+      "source_name": "Numerama",
+      "score": 70
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/aspirateurs-roomba-pourquoi-il-est-deconseille-dacheter-lors-du-black-friday-ou-apres-484842.htm#xtor=RSS-1",
+      "title": "Aspirateurs Roomba : pourquoi il est déconseillé d'acheter lors du Black Friday (ou après)",
+      "summary": "L'entreprise fait état de graves difficultés financières et d'un avenir incertain.",
+      "published_ts": 1763025083,
+      "source_name": "ZDNet France",
+      "score": 70
+    },
+    {
+      "url": "https://www.journaldunet.com/solutions/dsi/1545797-shadow-it-la-bombe-a-retardement-du-travail-hybride/",
+      "title": "Shadow IT : la bombe à retardement du travail hybride",
+      "summary": "Le travail hybride a fait fleurir les outils numériques, parfois jusqu'à en devenir contre-productif. Aujourd'hui, une évidence s'impose : pour gagner en efficacité, mieux vaut connecter que cumuler.",
+      "published_ts": 1762964568,
+      "source_name": "Journal du Net",
+      "score": 70
+    },
+    {
+      "url": "https://www.lebigdata.fr/openai-booste-ses-nouveaux-modeles-pour-de-meilleures-performances",
+      "title": "OpenAI booste ses nouveaux modèles pour de meilleures performances",
+      "summary": "OpenAI continue d’accélérer dans la course à l’intelligence artificielle en développant de nouveaux modèles. GPT-5 est sorti en août 2025 … Cet article OpenAI booste ses nouveaux modèles pour de meilleures performances a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762878600,
+      "source_name": "Le Big Data",
+      "score": 69
+    },
+    {
+      "url": "https://blog.dataiku.com/modernizing-analytics-with-dataiku-and-snowflake",
+      "title": "Modernizing Analytics With Dataiku and Snowflake",
+      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
+      "published_ts": 1762871367,
+      "source_name": "Dataiku Blog",
+      "score": 69
+    },
+    {
+      "url": "http://www.dataiku.com/stories/blog/modernizing-analytics-with-dataiku-and-snowflake",
+      "title": "Modernizing Analytics With Dataiku and Snowflake",
+      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
+      "published_ts": 1762871367,
+      "source_name": "Dataiku Blog",
+      "score": 69
+    },
+    {
+      "url": "https://www.lemagit.fr/dessin/IA-sur-Kubernetes-les-analystes-epinglent-la-CNCF-face-a-lhegemonie-de-Nvidia",
+      "title": "IA sur Kubernetes : les analystes épinglent la CNCF face à l’hégémonie de Nvidia",
+      "summary": "<p>La CNCF positionne Kubernetes comme une infrastructure standard pour l’IA, mais les analystes s’interrogent sur le niveau de participation d’un acteur majeur de l’IA à son nouveau programme de conformité : Nvidia.</p> \n<p>&nbsp;&gt; Lire <a href=\"https://www.lemagit.fr/actualites/366634500/IA-sur-Kubernetes-les-analystes-epinglent-la-CNCF-face-a-lhegemonie-de-Nvidia\">l’article de Beth Pariseau et Gaétan Raoul</a><br><br></p>",
+      "published_ts": 1763208180,
+      "source_name": "LeMagIT",
+      "score": 65
+    },
+    {
+      "url": "https://www.numerama.com/tech/2118465-fini-le-casse-tete-les-cartes-ticket-restaurant-conecs-edenred-sodexo-bimpli-arrivent-enfin-dans-apple-wallet.html",
+      "title": "Fini le casse-tête : les cartes Ticket Restaurant Conecs (Edenred, Sodexo, Bimpli) arrivent enfin dans Apple Wallet",
+      "summary": "Le réseau qui équipe la majorité des cartes titres-restaurant françaises pourrait devenir compatible nativement avec Apple Wallet. Une avancée attendue, qui mettrait fin à des années de bricolage technique et alignerait enfin les paiements TR sur les standards du mobile.",
+      "published_ts": 1763188260,
+      "source_name": "Numerama",
+      "score": 65
+    },
+    {
+      "url": "https://siecledigital.fr/2025/11/10/microsoft-repense-le-clic-droit-le-nouveau-menu-contextuel-de-windows-11-promet-plus-de-clarte/",
+      "title": "Microsoft repense le clic droit : le nouveau menu contextuel de Windows 11 promet plus de clarté",
+      "summary": "Depuis plusieurs années, de nombreux utilisateurs de Windows 11 se plaignent d’un menu contextuel devenu inutilement long et confus. Ce menu, qui s’affiche lors d’un clic droit sur un fichier ou un dossier, cumule les doublons et les options peu pertinentes. Par ailleurs, avec l’arrivée de l’intelligence artificielle, et plus précisément avec Copilot accessible dans […]",
+      "published_ts": 1762781153,
+      "source_name": "Siècle Digital",
+      "score": 65
+    },
+    {
+      "url": "https://www.zdnet.fr/blogs/green-si/a-marseille-lia-europeenne-a-compte-ses-munitions-dans-cette-bataille-mondiale-484995.htm#xtor=RSS-1",
+      "title": "A Marseille, l'IA européenne a compté ses munitions, dans cette bataille mondiale",
+      "summary": "L'AIM 2025 à Marseille nous a rappelé que le combat était loin d'être perdu. Mais il ne sera gagné que si nous passons collectivement de la lucidité à l'action.",
+      "published_ts": 1763255474,
+      "source_name": "ZDNet France",
+      "score": 64
+    },
+    {
+      "url": "https://huggingface.co/blog/google-cloud",
+      "title": "Building for an Open Future - our new partnership with Google Cloud",
+      "summary": "Building for an Open Future - our new partnership with Google Cloud\nToday, we are happy to announce a new and deeper partnership with Google Cloud, to enable companies to build their own AI with open models.\n“Google has made some of the most impactful contributions to open AI, from the OG transforme",
+      "published_ts": 1762992000,
+      "source_name": "Hugging Face Blog",
+      "score": 64
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/introducing-our-final-aws-heroes-of-2025/",
+      "title": "Introducing Our Final AWS Heroes of 2025",
+      "summary": "With AWS re:Invent approaching, we’re celebrating three exceptional AWS Heroes whose diverse journeys and commitment to knowledge sharing are empowering builders worldwide. From advancing women in tech and rural communities to bridging academic and industry expertise and pioneering enterprise AI solutions, these leaders exemplify the innovative spirit that drives our community forward. Their stories showcase […]",
+      "published_ts": 1762977901,
+      "source_name": "AWS Blog (global)",
+      "score": 64
+    }
+  ],
+  "news_general": [
+    {
+      "url": "https://blog.octo.com/du-dataset-jetable-au-data-product-perenne--comment-le-data-mesh-transforme-notre-rapport-a-la-donnee",
+      "title": "Du dataset jetable au data product pérenne : comment le data mesh transforme notre rapport à la donnée",
+      "summary": "Dans les organisations où les données sont nombreuses, hétérogènes et stratégiques, leur mise à disposition efficace devient un levier clé de performance. L’approche data mesh, en décentralisant la gouvernance et en traitant la donnée comme un produit, promet une meilleure agilité et une appropriation renforcée par les équipes métier.",
+      "published_ts": 1763126418,
+      "source_name": "OCTO Talks!",
+      "score": 94
+    },
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/",
+      "title": "Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers &amp; Metric Stores",
+      "summary": "In today’s data-driven world, semantic models have become the backbone of trustworthy analytics. They define business logic, metrics, and relationships that turn raw data into meaningful, trusted and curated insights. As organizations embrace generative AI, semantic models provide the structure and context that AI needs to deliver accurate, reliable answers.  At Microsoft, we have spent nearly two decades refining the semantic layer that connects data … Continue reading “Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores “",
+      "published_ts": 1762858928,
+      "source_name": "Power BI Blog",
+      "score": 94
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/11/llm-assistance/",
+      "title": "Using Jest and LLM assistance to test your real-time chat",
+      "summary": "In the\nprevious article\n, we delved into creating a simple web server that serves static files, flat file database that uses lock and the API endpoints that allows for real-time chat interaction. In this article, we’ll follow-up by taking a look into writing unit tests for our flat file database to ",
+      "published_ts": 1762840995,
+      "source_name": "Zenika Tech Blog",
+      "score": 94
+    },
+    {
+      "url": "https://www.lebigdata.fr/darwin-monkey-le-cerveau-dun-macaque-dans-un-superordinateur",
+      "title": "Darwin Monkey, le cerveau d’un macaque dans un superordinateur",
+      "summary": "Imaginez un cerveau de primate transposé dans une machine. En Chine, une équipe de chercheurs a conçu un superordinateur qui … Cet article Darwin Monkey, le cerveau d’un macaque dans un superordinateur a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1763301600,
+      "source_name": "Le Big Data",
+      "score": 89
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/un-nouveau-modele-dia-chinois-gratuit-pretend-surpasser-gpt-5-et-sonnet-4-5-484684.htm#xtor=RSS-1",
+      "title": "Un nouveau modèle d'IA chinois gratuit prétend surpasser GPT-5 et Sonnet 4.5",
+      "summary": "La course en matière d'IA entre les États-Unis et la Chine vient de s'intensifier, une fois de plus.",
+      "published_ts": 1762762295,
+      "source_name": "ZDNet France",
+      "score": 89
+    },
+    {
+      "url": "https://www.lebigdata.fr/positron-ai-atlas-le-game-changer-tant-attendu",
+      "title": "Positron AI Atlas : le game changer tant attendu ?",
+      "summary": "Et si un serveur IA consommait trois fois moins d’énergie qu’un DGX H200 de NVIDIA ? C’est la promesse de … Cet article Positron AI Atlas : le game changer tant attendu ? a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1763215200,
+      "source_name": "Le Big Data",
+      "score": 85
+    },
+    {
+      "url": "https://www.lebigdata.fr/rapport-crowdstrike-2025-autopsie-dune-europe-assiegee-par-le-cybercrime",
+      "title": "Rapport CrowdStrike 2025 : autopsie d’une Europe assiégée par le cybercrime",
+      "summary": "L’Europe vit une période d’hyper-tension numérique. Le rapport 2025 de CrowdStrike dresse un constat limpide : jamais les cybermenaces n’ont … Cet article Rapport CrowdStrike 2025 : autopsie d’une Europe assiégée par le cybercrime a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1763147172,
+      "source_name": "Le Big Data",
+      "score": 85
+    },
+    {
+      "url": "https://www.lebigdata.fr/seedance-de-bytedance-reinvente-la-generation-video-par-ia",
+      "title": "Seedance de ByteDance réinvente la génération vidéo par IA",
+      "summary": "Le text-to-video 1080p fluide n’est plus un privilège pour l’élite. ByteDance impose Seedance comme une réponse directe aux modèles dominants … Cet article Seedance de ByteDance réinvente la génération vidéo par IA a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1763128800,
+      "source_name": "Le Big Data",
+      "score": 85
+    },
+    {
+      "url": "https://www.lemagit.fr/tribune/IA-et-service-client-remplacer-lhumain-dans-vos-relations-cest-deshumaniser-votre-marque",
+      "title": "IA et CX : n’oubliez pas que remplacer l’humain dans le service client déshumanise la marque",
+      "summary": "<p>Si les responsables du CX sont impatients d’adopter l’IA,&nbsp;<a href=\"https://www.customerexperiencedive.com/news/customers-dislike-ai-customer-service/757711/\">les clients, eux, ne sont pas aussi convaincus</a>. Loin de là.</p> \n<p>Les études sur le sujet se suivent et se ressemblent.</p> \n<p>Nous avions évoqué celles de Qualtrics et d’OpinionWay qui montrent que <a href=\"https://www.lemagit.fr/actualites/366633597/CX-avec-de-lIA-ou-pas-les-chatbots-ne-seduisent-pas\">les chatbots ne sont pas appréciés</a> – quoi qu’en disent les partisans de l’automatisation et du «&nbsp;libre-service&nbsp;». D’autres rapports le confirment.</p> \n<p>Huit clients sur dix déclarent par exemple préférer un support humain, même si les temps d’attente et le temps passé sont identiques, explique un rapport de HubSpot et de SurveyMonkey. Et selon cette étude, la moitié des consommateurs (53&nbsp;%) désapprouveraient l’utilisation de l’IA dans les interactions avec les services.</p> \n<p>«&nbsp;Cette aversion généralisée suggère que les applications de l’IA peinent souvent à répondre aux attentes des clients en matière d’empathie, de nuance et d’authenticité&nbsp;», analyse Zoe Padgett, chercheuse chez SurveyMonkey, <a href=\"https://www.customerexperiencedive.com/news/customers-dislike-ai-customer-service/757711/\">dans un échange avec nos collègues de CX Dive</a> (groupe Informa Techtarget dont fait partie LeMagIT).</p> \n<p>«&nbsp;Au lieu de considérer l’IA comme utile, de nombreux clients la perçoivent plutôt comme un obstacle&nbsp;», tacle-t-elle. «&nbsp;Cela engendre de la frustration et le sentiment que leurs préoccupations ne sont pas réellement comprises.&nbsp;»</p> \n<blockquote class=\"main-article-pullquote\">\n <div class=\"main-article-pullquote-inner\">\n  <figure>\n   «&nbsp;Au lieu de considérer l’IA comme utile, de nombreux clients la perçoivent plutôt comme un obstacle.&nbsp;»\n  </figure>\n  <figcaption>\n   <strong>Zoe Padgett</strong>SurveyMonkey\n  </figcaption>\n  <i class=\"icon\" data-icon=\"z\"></i>\n </div>\n</blockquote> \n<p>Un <a href=\"https://www.verint.com/fr/resources/the-state-of-customer-experience-2025/\">rapport</a>, de Verint (spécialiste américain de l’IA dans les centres de contact qui vient d’être <a href=\"https://www.verint.com/press-room/2025-press-releases/verint-agrees-to-be-acquired-by-thoma-bravo-for-2-billion/\">racheté</a> par Thomas Bravo) constate pour sa part que 56&nbsp;% des personnes interrogées préfèrent parler à des humains plutôt qu’à un système automatisé&nbsp;; même si (pour être parfaitement objectif) 44&nbsp;% d’entre elles sont également ouvertes à l’automatisation si elle permet de résoudre leur problème.</p> \n<p>Pas convaincu et toujours déterminé à truffer votre CX d’IA&nbsp;? D’accord. Mais alors lisez cette autre&nbsp;<a href=\"https://www.gartner.com/en/newsroom/press-releases/2024-07-09-gartner-survey-finds-64-percent-of-customers-would-prefer-that-companies-didnt-use-ai-for-customer-service?utm_source=chatgpt.com\">étude</a>, de Gartner, et partagée en 2024, qui estime que 64&nbsp;% des clients préféreraient que les entreprises n’utilisent pas l’IA pour le service client, et que 53&nbsp;% envisageraient même de changer de fournisseur si une entreprise y a (trop) recours.</p> \n<p>Là encore, le principal grief est qu’il devient difficile de joindre un conseiller en chair et en os.</p> \n<p>Dans <a href=\"https://www.gartner.com/en/customer-service-support/trends/customer-service-experience\">une autre recherche</a> sur le sujet, Gartner renchérit&nbsp;: seulement 13&nbsp;% des parcours clients débutent et se poursuivent sur des canaux de libre-service.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Des économies, mais à quel prix\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Des économies, mais à quel prix</h2>\n <p>Certes, <a href=\"https://www.mckinsey.com/capabilities/growth-marketing-and-sales/our-insights/agents-for-growth-turning-ai-promise-into-impact?utm_source=chatgpt.com\">d’après une note</a> de McKinsey, l’IA (et les agents IA) dans les centres d’appels peut générer jusqu’à 30&nbsp;% d’économies. Mais à quel prix&nbsp;?</p>\n <p>Les clients attendent de l’empathie. Ils refusent d’entendre des bots leur réciter un script. Ils veulent sentir que leur cas est pris en compte. Or, les chatbots et les agents IA ne peuvent tout simplement pas offrir cela.</p>\n <p>Le risque est que les entreprises perdent des clients fidèles. Or acquérir des clients coûte plus cher que de garder ceux que l’on a déjà. Beaucoup plus cher même. Le site Business Dasher <a href=\"https://www.businessdasher.com/customer-acquisition-vs-retention-cost/\">chiffre</a> que le ratio va de cinq à vingt-cinq fois plus.</p>\n <p>Et les clients fidèles achèteraient plus. Gartner <a href=\"https://www.gartner.com/en/newsroom/press-releases/2025-05-20-gartner-survey-finds-73-percent-of-csos-are-prioritizing-growth-from-existing-customers-for-2025#:~:text=Seventy%2Dthree%20percent%20of%20CSOs%20are%20prioritizing%20growth,retention%20and%20growth%20as%20a%20top%2D3%20priority.\">confirme</a> que 73&nbsp;% des directeurs commerciaux prévoient de privilégier la croissance issue de leurs clients. Et 57&nbsp;% d’entre eux considéraient la fidélisation comme l’une de leurs principales priorités.</p>\n <p>De toute évidence, faire réellement plaisir au client, plutôt que de réduire ses coûts internes, compte encore.</p>\n</section>      \n<section class=\"section main-article-chapter\" data-menu-title=\"Le cas Klarna\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Le cas Klarna</h2>\n <p>Alors, oui, l’IA permet de réaliser des économies. Mais il est essentiel de se rappeler que <a href=\"https://www.lemagit.fr/actualites/366634067/OpenAI-depasse-la-barre-du-million-dentreprises-clientes\">ces outils sont initialement conçus pour compléter le travail humain</a>, et pas pour le remplacer entièrement. Le contact humain demeure essentiel pour le CX.</p>\n <p>Alors oui, Salesforce a <a href=\"https://www.channelfutures.com/channel-business/tech-layoffs-intel-salesforce-follow-oracle-lead\">réduit les effectifs de son service client</a> de 4000&nbsp;personnes. Oui, <a href=\"https://www.customerexperiencedive.com/news/atlassian-lays-off-200-customer-service-support-staff/759832/\">Atlassian a licencié</a>&nbsp;350&nbsp;employés, en expliquant qu’ils seraient en grande partie remplacés par l’IA. Oui, le groupe de média britannique Sky <a href=\"https://www.lefigaro.fr/medias/le-groupe-de-medias-britannique-sky-envisage-de-supprimer-2000-postes-20250327\">envisage</a> de mettre à la porte 2000&nbsp;agents pour offrir «&nbsp;un service client plus rapide, plus simple et plus numérique&nbsp;» (sic).</p>\n <p>Mais toutes ces entreprises devraient aussi se souvenir du cas Klarna. Entre 2022 et 2024, la fintech a supprimé 700&nbsp;postes. Depuis, elle a reconnu son erreur et elle a décidé de&nbsp;<a href=\"https://www.customerexperiencedive.com/news/klarna-reinvests-human-talent-customer-service-AI-chatbot/747586/\">réembaucher</a> afin d’améliorer la qualité de son CX qui s’était fortement dégradée.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Conclusion : l’IA oui, mais beaucoup d’humains aussi\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Conclusion&nbsp;: l’IA oui, mais beaucoup d’humains aussi</h2>\n <p>Montrez à vos employés que vous les appréciez et que vous les respectez en permettant à l’IA de les aider, et non de les remplacer.</p>\n <p>Témoignez à vos clients la même considération et le même respect en comprenant leur besoin de contact humain.</p>\n <p>Et n’oubliez jamais de leur offrir une alternative à l’IA, sous peine de devenir une marque déshumanisée, et donc peu désirable.</p>\n</section>",
+      "published_ts": 1763109480,
+      "source_name": "LeMagIT",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/sur-la-data-et-lia-les-collectivites-ne-font-plus-de-la-figuration-484921.htm#xtor=RSS-1",
+      "title": "Sur la Data et l’IA, les collectivités ne font plus de la figuration",
+      "summary": "Les projets de gestion par la donnée (74%) et d’intelligence artificielle (77%) montent en puissance dans les collectivités françaises. Mais celles-ci avancent “dans un contexte contraint” et sans négliger les enjeux de sobriété numérique et de souveraineté.",
+      "published_ts": 1763086316,
+      "source_name": "ZDNet France",
+      "score": 85
+    },
+    {
+      "url": "https://www.lebigdata.fr/openai-en-panique-son-ia-ressuscite-des-stars-sans-autorisation",
+      "title": "OpenAI en panique : son IA ressuscite des stars sans autorisation",
+      "summary": "Faire parler un défunt, Sora 2, l’IA générateur de vidéos d’OpenAI, l’a fait. Quoique, tout le monde n’est pas émerveillé … Cet article OpenAI en panique : son IA ressuscite des stars sans autorisation a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762885477,
+      "source_name": "Le Big Data",
+      "score": 85
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634321/Remplacer-les-juniors-par-lIA-pas-une-bonne-idee",
+      "title": "Remplacer les juniors par l’IA, pas une bonne idée",
+      "summary": "<p>Pour le cabinet de conseil international en organisation Korn Ferry, c’est un fait avéré. L’IA prend de plus en plus la place des débutants sur les postes juniors. Problème&nbsp;: en fermant cette porte d’entrée dans l’entreprise, l’IA tarirait aussi une source essentielle au recrutement et au développement des futurs dirigeants.</p> \n<p>Selon <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">un rapport</a> Korn Ferry publié fin octobre, environ 4&nbsp;entreprises sur 10 prévoiraient de remplacer des postes débutant par une IA (37&nbsp;% exactement).</p> \n<p>Une autre étude, du cabinet LHH (groupe Adecco) celle-ci, et menée auprès de 2 000&nbsp;dirigeants dans 13&nbsp;pays, <a href=\"https://www.lesechos.fr/travailler-mieux/metiers-reconversion-professionnelle/la-moitie-des-entreprises-disent-avoir-deja-reduit-leurs-effectifs-a-cause-de-lia-2191307\">confirme</a>. 46&nbsp;% des entreprises auraient déjà réduit leurs effectifs à cause (ou avec) l’IA.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Yale et Hellowork relativisent\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Yale et Hellowork relativisent</h2>\n <p>Et 54&nbsp;% prévoiraient d’employer moins dans les cinq prochaines années.</p>\n <p>La société française de recrutement Hellowork nuance cependant ce constat. Elle rappelle qu’une étude de Yale (<a href=\"https://budgetlab.yale.edu/\">The Budget Lab</a>) ne verrait pas de choc visible sur l’emploi global. Pour l’instant, en tout cas.</p>\n <p>D’après la prestigieuse université américaine, les métiers évolueraient plus vite, certes, mais la tendance aurait commencé avant <a href=\"https://www.lemagit.fr/ezine/Applications-Donnees/Applications-et-donnees-19-ChatGPT-super-ambassadeur-de-lIA\">l’essor de l’IA générative fin&nbsp;2022</a>.</p>\n <p>L’impact de l’IA pourrait ainsi prendre des années à se matérialiser.</p>\n</section>     \n<section class=\"section main-article-chapter\" data-menu-title=\"Un danger pour l’avenir des talents\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Un danger pour l’avenir des talents</h2>\n <p>Quoi qu’il en soit, lorsque Korn Ferry a interrogé plus de 1 670&nbsp;responsables, le cabinet a confirmé que la réduction des recrutements juniors pourrait générer des économies pour les entreprises sur 2026 et sur 2027. Mais il avertit aussi que réduire ce vivier de futurs dirigeants pourrait bien aboutir à une crise de leadership à plus long terme.</p>\n <p>«&nbsp;À mesure que l’IA se déploie – et <a href=\"https://www.lemagit.fr/actualites/366629373/Enterprise-Asset-Management-IFS-inscrit-ses-agents-IA-dans-son-organigramme\">qu’elle devient un vrai collègue, et plus un simple outil</a> – les dirigeants doivent mesurer avec précaution l’équilibre entre l’innovation et le développement de la prochaine génération de leaders&nbsp;», <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">insiste</a> Jeanne MacDonald, CEO, Recruitment Process Outsourcing chez Korn Ferry.</p>\n <p>Pour relever ce défi et s’assurer que la mise en œuvre de l’IA est bien alignée sur les ambitions à long terme de l’entreprise, l’une des priorités serait que la direction générale communique sa vision à l’ensemble du personnel, quitte à se faire aider par les responsables RH de l’acquisition de talents, conseille Korn Ferry.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"L’esprit critique toujours aussi critique\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>L’esprit critique toujours aussi critique</h2>\n <p>Son rapport confirme un autre point. Il y a certes une «&nbsp;hype IA&nbsp;», mais 73&nbsp;% des recruteurs cherchent toujours à évaluer en priorité l’esprit critique des candidats.</p>\n <p>Les entreprises recherchent des personnes capables d’évaluer les recommandations de l’IA, d’analyser ses résultats, de repérer les erreurs, voire de savoir quand il faut passer outre ses conclusions, liste le rapport.</p>\n <p>Lors de son Symposium, <a href=\"https://www.lemagit.fr/actualites/366633467/Gartner-prevoit-un-retour-en-force-de-lesprit-critique-face-a-lIA-generative\">Gartner était arrivé exactement à la même conclusion</a>.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Former à l’IA ou laisser former à l’IA ?\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Former à l’IA ou laisser former à l’IA&nbsp;?</h2>\n <p>Sur ce sujet, <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">un autre rapport</a>, de l’entreprise spécialisée dans la formation General Assembly (également du groupe Adecco), estime que les jeunes employés seraient très mal préparés à la montée en puissance de l’IA.</p>\n <p>Les entreprises – du moins aux États-Unis et au Royaume-Uni – estimeraient de leur que se <a href=\"https://www.lemagit.fr/conseil/Former-les-salaries-a-lIA-les-douze-etapes-cles\">former à l’IA</a> relèverait de la responsabilité des employés. Il n’est <a href=\"https://www.lemagit.fr/actualites/366618024/Lacculturation-le-talon-dAchille-des-strategies-IA-en-entreprise-etude\">pas certain que la situation soit très différente en France</a>.</p>\n <p>Mais General Assembly prévient&nbsp;: si l’IA affecte de plus en plus le vivier de talents, c’est aux employeurs qu’il revient d’investir dans la formation des prochaines générations. Sans quoi, les entreprises seront bientôt confrontées à une pénurie critique de compétences.</p>\n <p><i>Avec nos collègues de <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">HR Dive</a> (groupe Informa Techtarget dont fait partie LeMagIT)</i></p>\n</section>",
+      "published_ts": 1762777620,
+      "source_name": "LeMagIT",
+      "score": 85
+    },
+    {
+      "url": "https://www.zdnet.fr/pratique/comment-les-tpe-peuvent-survivre-a-larrivee-des-achats-en-ligne-par-lia-7-etapes-essentielles-484935.htm#xtor=RSS-1",
+      "title": "Comment les TPE peuvent survivre à l'arrivée des achats en ligne par l'IA ? 7 étapes essentielles",
+      "summary": "Avec les agents d'achat IA qui changent tranquillement notre façon d'acheter, les PME et les TPE doivent s'adapter rapidement sous peine de devenir invisibles en ligne.",
+      "published_ts": 1763208695,
+      "source_name": "ZDNet France",
+      "score": 70
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634532/Sauvegarde-Commvault-devoile-sa-prochaine-version-dopee-a-lIA",
+      "title": "Sauvegarde : Commvault dévoile sa prochaine version dopée à l’IA",
+      "summary": "<p>L’éditeur de solution de sauvegardes <a href=\"https://www.lemagit.fr/actualites/366581312/Commvault-Personne-na-notre-niveau-dexpertise-dans-la-sauvegarde-en-cloud\">Commvault</a> commercialisera une nouvelle version de sa solution baptisée Commvault Cloud Unity dès le début de l’année prochaine. Elle aura principalement quatre caractéristiques inédites.</p> \n<p>D’abord, une nouvelle console d’administration – Unity, donc – qui supervise toutes les ressources informatiques d’une entreprise, qu’elles soient sur site ou en cloud, protégées ou non par Commvault.</p> \n<p>Ensuite (et c’est sans doute l’avancée la plus importante), la solution automatisera l’essentiel du <a href=\"https://www.lemagit.fr/actualites/366541570/Sauvegarde-et-cybersecurite-Commvault-sessaie-au-melange-des-genres\">déminage des sauvegardes</a> pour ne pas restaurer des fichiers corrompus après une cyberattaque. Cette nouveauté va de pair avec un outil de test des restaurations bien plus pointu qu’auparavant, qui sert désormais à réparer en amont ce qui devra être restauré en cas de cyberattaque.</p> \n<p>Enfin, Commvault Cloud Unity saura plus particulièrement identifier dans les sauvegardes de l’annuaire Active Directory les changements de droits utilisateurs malicieux, qui permettent à des pirates de prendre possession de l’IT d’une entreprise pour compromettre et dérober ses données.</p> \n<p>«&nbsp;Le point le plus important est que tout cela est entièrement basé sur des IA qui comprennent vos besoins et agissent de manière proactive pour augmenter votre résilience aux cyberattaques. D’ailleurs, nous pensons que notre solution va créer une nouvelle discipline dans les entreprises&nbsp;: les ResOps, ou opérateurs de résilience, la nouvelle évolution des administrateurs des sauvegardes&nbsp;», lance Sanjay Mirchandani, le PDG de Commvault (en photo en haut de cet article), dans son discours d’ouverture de l’événement Shift&nbsp;2025, que l’éditeur a organisé cette semaine à New York pour présenter en avant-première Commvault Cloud Unity.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Toute une usine de déminage des sauvegardes avant restauration\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Toute une usine de déminage des sauvegardes avant restauration</h2>\n <p>Avec cette IA viennent surtout des connecteurs pour tout automatiser. Sur scène, l’IA de Cloud Unity comprend le message d’alerte qu’un antivirus vient d’envoyer dans la messagerie Slack des administrateurs système. Elle lance son module interne ThreatScan pour vérifier si la signature de l’attaque mentionnée existe dans les sauvegardes, met automatiquement en quarantaine les données infectées afin qu’elles ne soient pas restaurées, puis envoie son propre rapport aux administrateurs.</p>\n <p><a href=\"https://www.lemagit.fr/actualites/252521621/Cybersecurite-CommVault-se-met-a-lheure-des-leurres\">ThreatScan existait déjà</a>, mais il s’agissait d’une fonction qui se déclenchait soit manuellement, soit à intervalles réguliers, pour vérifier la présence de signatures de malwares dans les sauvegardes. Signatures qui étaient renseignées par des outils de cybersécurité externes.</p>\n <p>«&nbsp;Désormais, ThreatScan est en veille permanente et peut réfléchir par lui-même pour détecter des actions malveillantes. Typiquement, le fait qu’un fichier sauvegardé depuis un moment ait subitement été remplacé par une version chiffrée&nbsp;», explique au MagIT un technicien de Commvault qui détaille la solution sur son stand.</p>\n <p>«&nbsp;Mais le point le plus important est que les fichiers corrompus sont automatiquement mis en quarantaine. Avant, vous deviez décider de le faire à la main. Désormais, vous ne les restaurerez plus jamais par erreur&nbsp;», dit le technicien.</p>\n <p>ThreatScan informe le nouvel outil de restauration Synthetic Recovery. La fonction de celui-ci consiste à aller chercher dans l’historique des sauvegardes des versions encore saines des fichiers mis en quarantaine, de sorte à élaborer un ensemble complet de données que l’on pourra remettre en production après une cyberattaque. L’idée est d’éviter de restaurer un gruyère rempli de trous.</p>\n <p>Le troisième élément est Cleanroom Recovery. C’est un bac à sable, sur Azure ou <a href=\"https://www.lemagit.fr/actualites/366612335/Sauvegarde-Commvault-rachete-Clumio-pour-son-expertise-AWS\">sur AWS</a>, dans lequel Commvault Cloud Unity va restaurer à blanc les sauvegardes, afin que les administrateurs puissent vérifier qu’une remise en production <a href=\"https://www.lemagit.fr/conseil/Reprise-dactivite-apres-sinistre-comment-elaborer-la-strategie-et-rediger-le-PRA\">se passera correctement</a>.</p>\n <p>«&nbsp;D’une part, vous allez passer aussi ces données restaurées à l’antivirus, par exemple Microsoft Defender pour éventuellement exclure à nouveau des fichiers. D’autre part, vous allez vous rendre compte de problèmes&nbsp;: il va manquer des fichiers dans telle VM pour qu’elle se lance, les VM ne seront pas restaurées dans un ordre cohérent, etc. Cleanroom Recovery va enregistrer toutes les réparations que vous ferez pour restaurer les sauvegardes exactement comme vous le souhaitez lorsque ce sera nécessaire&nbsp;», détaille le technicien.</p>\n <p>Selon lui, il faut en moyenne 24&nbsp;jours à une entreprise pour restaurer une IT fonctionnelle après une cyberattaque. Avec Cleanroom Recovery, ce retour en production pourrait ne plus prendre que 5&nbsp;jours.</p>\n <p>«&nbsp;Les entreprises testent leur restauration tous les trimestres, voire une fois par an, parce que c’est une procédure qui prend beaucoup de temps. Mais la capacité de Cleanroom Recovery à conserver en mémoire les réparations à faire permet de réduire la durée de ces tests à chaque fois. Je vous garantis que votre second test sera quatre fois plus rapide que le premier&nbsp;», argumente le technicien.</p>\n</section>          \n<section class=\"section main-article-chapter\" data-menu-title=\"Détecter les compromissions des droits d’accès dans AD\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Détecter les compromissions des droits d’accès dans AD</h2>\n <p>Concernant la protection des identités, Commvault Cloud savait déjà faire des restaurations granulaires de droits utilisateurs dans Active Directory (AD), mais encore fallait-il savoir lesquels.</p>\n <p>«&nbsp;L’IA de Commvault Cloud Unity est désormais capable de repérer des problèmes très difficiles à trouver pour un administrateur humain. En prenant en compte les logs, notamment voir qu’un changement de droit ou de mot de passe n’a pas été fait par un humain sur son clavier, mais par un script&nbsp;» assure Pranay Ahlawat, le directeur technique de Commvault.</p>\n <p>«&nbsp;Et il vous suffit d’un clic de souris pour enlever instantanément toute compromission de votre Active Directory&nbsp;», ajoute-t-il en faisant là aussi mention d’IA qui se parlent entre elles.</p>\n <p>Dans une démonstration, un assistant du support utilisant ServiceNow parle dans son micro pour demander à son IA pourquoi tel administrateur n’a plus accès à son compte et cette IA demande à l’IA de Commvault d’aller vérifier s’il n’y aurait pas un problème dans Active Directory.</p>\n <p>Il est à noter que ces changements suspects de droits utilisateurs dans Active Directory sont aussi pris en charge par l’IA de Commvault, lors des tests de restauration avec Cleanroom Recovery.</p>\n</section>      \n<section class=\"section main-article-chapter\" data-menu-title=\"Superviser toutes les protections en place et comparer leurs prix\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Superviser toutes les protections en place et comparer leurs prix</h2>\n <p>La nouvelle console Unity succédera à l’actuelle interface d’administration <a href=\"https://www.lemagit.fr/actualites/366623607/CommVault-une-vulnerabilite-de-severite-maximale-desormais-exploitee\">Command Center</a> qui sert à gérer les sauvegardes sur site, ainsi qu’à son équivalent en SaaS qui sert à sauvegarder les données des services cloud. Au-delà de l’ergonomie de tout superviser depuis une seule fenêtre et non deux, la raison d’être d’Unity semble d’abord commerciale.</p>\n <p>«&nbsp;Lorsque vous lancez Unity et que vous lui indiquez tous les comptes cloud et toutes les ressources IT que vous voulez sauvegarder, l’interface dresse un bilan de la manière dont ces ressources IT sont protégées et combien vous coûte cette protection en l’état. Et elle vous dit comment améliorer cette protection ainsi que le prix de cette protection&nbsp;», explique Pranay Ahlawat.</p>\n <p>«&nbsp;Nous recommandons de stocker les sauvegardes dans le cloud, de manière étanche au reste de votre IT, pour éviter les contagions d’une cyberattaque dans votre datacenter. Mais un point très important qui revient dans toutes les discussions que nous avons avec les entreprises est de savoir si les sauvegardes que nous stockons en cloud coûtent moins cher que les services de stockage en cloud auxquels elles peuvent elles-mêmes souscrire. Et aussi moins cher que les services de snapshots que leur proposent les fournisseurs de services en cloud.&nbsp;»</p>\n <p>Il précise que Commvault Cloud sait prendre en charge 200&nbsp;services en cloud. L’essentiel des services IaaS d’AWS et Azure bien entendu (<a href=\"https://www.lemagit.fr/actualites/366613285/Sauvegarde-du-cloud-Commvault-se-depeche-de-supporter-AWS-et-Google\">le support de GCP</a> n’arrivera qu’en 2026), mais aussi un bon nombre d’applications en SaaS ou de services en PaaS que ces clouds hébergent&nbsp;: Microsoft 365, Salesforce, Github, GitLab, Databricks...</p>\n <p>«&nbsp;La raison d’être de cette supervision globale est donc d’abord de vous prouver que notre solution va vous permettre de réaliser des économies substantielles sur votre protection globale&nbsp;», argumente-t-il, en expliquant que <a href=\"https://www.lemagit.fr/actualites/366616612/Commvault-apporte-la-sauvegarde-incrementale-aux-donnees-S3\">Commvault déduplique, compresse, incrémente et chiffre toutes ses sauvegardes</a> pour qu’elles consomment moins d’espace de stockage et soient impossibles à lire en passant par un droit d’accès existant.</p>\n <p>Il ajoute que ce chiffrement n’utilise d’ailleurs plus de système à double clé, susceptible d’être cassé le jour où l’ordinateur quantique fonctionnera...</p>\n</section>",
+      "published_ts": 1763025660,
+      "source_name": "LeMagIT",
+      "score": 70
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114763-le-morceau-actuellement-top-1-country-est-genere-par-ia-je-lai-ecoute-jaime-bien-et-cest-un-probleme.html",
+      "title": "Le morceau actuellement top 1 country est généré par IA : je l’ai écouté, j’aime bien (et c’est un problème)",
+      "summary": "Un titre de country généré par IA, par un artiste IA, est top 1 des écoutes numériques. Problème pour les musiciens : il est vraiment pas mal.",
+      "published_ts": 1762852663,
+      "source_name": "Numerama",
+      "score": 70
+    }
+  ],
+  "python_polars_duckdb": [
+    {
+      "url": "https://blog.cloudflare.com/python-workflows/",
+      "title": "A closer look at Python Workflows, now in beta",
+      "summary": "Cloudflare Workflows, our durable execution engine for running multi-step applications, now supports Python. That means less friction, more possibilities, and another reason to build on Cloudflare.",
+      "published_ts": 1762783200,
+      "source_name": "Cloudflare Engineering Blog",
+      "score": 68
+    }
+  ],
+  "viz_bi": [
+    {
+      "url": "https://www.journaldunet.com/cloud/1545979-comparatif-des-plateformes-de-data-analytics-power-bi-s-impose/",
+      "title": "Comparatif des plateformes de data analytics : Power BI s'impose",
+      "summary": "Compte tenu de sa richesse fonctionnelle et de son intégration à Microsoft 365, la solution de l'éditeur de Redmond se démarque comme l'outil à l'état de l'art face à Looker, Qlik, SAP ou Tableau.",
+      "published_ts": 1762971426,
+      "source_name": "Journal du Net",
+      "score": 85
+    }
+  ]
+}

@@ -36,6 +36,13 @@
       "source_name": "AWS Blog"
     },
     {
+      "url": "https://www.databricks.com/blog/announcing-public-preview-distributed-ml-serverless-and-standard-clusters",
+      "title": "Announcing the Public Preview of Distributed ML on Serverless and Standard Clusters",
+      "summary": "The Public Preview of Apache Spark MLlib (Python) and Optuna on serverless notebooks and jobs...",
+      "published_ts": 1763495400,
+      "source_name": "Databricks Blog"
+    },
+    {
       "url": "https://vutr.substack.com/p/i-spent-the-weekend-learning-about",
       "title": "I spent the weekend learning about one of the most iconic database storage engines.",
       "summary": "The one once common in the OLTP world, now gaining more and more adoption in OLAP systems.",
@@ -64,11 +71,11 @@
       "source_name": "OCTO Talks!"
     },
     {
-      "url": "https://blog.cloudflare.com/replicate-joins-cloudflare/",
-      "title": "Replicate is joining Cloudflare",
-      "summary": "Bringing Replicate’s tools into Cloudflare will continue to make our Workers Platform the best place on the Internet to build and deploy any AI or agentic workflow.",
-      "published_ts": 1763388000,
-      "source_name": "Cloudflare Engineering"
+      "url": "http://www.dataiku.com/stories/blog/frontrunner-awards-2025-celebrating-agentic-ai-excellence",
+      "title": "Dataiku Frontrunner Awards 2025: Celebrating Agentic AI Excellence",
+      "summary": "The world of data and AI is transforming at a breakneck pace, and 2025 marked a definitive shift from predictive insights to autonomous action with AI agents . Organizations are now masterfully combining human expertise with AI systems that can act, make decisions, and deliver tangible business impact.",
+      "published_ts": 1763387100,
+      "source_name": "Dataiku Blog"
     },
     {
       "url": "https://huggingface.co/blog/build-rocm-kernels",
@@ -80,6 +87,13 @@
   ],
   "cloud": [],
   "cloud_infra_observability": [
+    {
+      "url": "https://aws.amazon.com/blogs/aws/new-one-click-onboarding-and-notebooks-with-ai-agent-in-amazon-sagemaker-unified-studio/",
+      "title": "New one-click onboarding and notebooks with a built-in AI agent in Amazon SageMaker Unified Studio",
+      "summary": "Amazon SageMaker Unified Studio introduces new one-click onboarding experiences and serverless notebooks with a built-in AI agent without any manual set up or provisioning of your domain or compute resources. You can launch SageMaker Unified Studio directly from Amazon SageMaker, Amazon Athena, Amazon Redshift, and Amazon S3 Tables console pages, giving a fast path to analytics and AI workloads.",
+      "published_ts": 1763774592,
+      "source_name": "AWS Blog"
+    },
     {
       "url": "https://aws.amazon.com/blogs/aws/build-production-ready-applications-without-infrastructure-complexity-using-amazon-ecs-express-mode/",
       "title": "Build production-ready applications without infrastructure complexity using Amazon ECS Express Mode",
@@ -100,6 +114,20 @@
       "summary": "AWS announces VPC encryption controls, a new capability that helps organizations audit and enforce encryption in transit for all traffic within and across VPCs in a Region, simplifying compliance with regulatory frameworks like HIPAA, PCI DSS, and FedRAMP through automated monitoring and enforcement modes.",
       "published_ts": 1763742230,
       "source_name": "AWS Blog"
+    },
+    {
+      "url": "https://www.databricks.com/blog/databricks-and-aws-partner-simplify-infrastructure-setup",
+      "title": "Databricks and AWS Partner to Simplify Infrastructure Setup",
+      "summary": "Today, we’re announcing that automated configuration for classic workspace deployment...",
+      "published_ts": 1763683200,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/getting-started-with-amazon-s3-tables-in-amazon-sagemaker-unified-studio/",
+      "title": "Getting started with Amazon S3 Tables in Amazon SageMaker Unified Studio",
+      "summary": "In this post, you learn how to integrate SageMaker Unified Studio with S3 Tables and query your data using Amazon Athena, Amazon Redshift, or Apache Spark in EMR and AWS Glue.",
+      "published_ts": 1763594817,
+      "source_name": "Redshift / AWS Big Data"
     },
     {
       "url": "https://aws.amazon.com/blogs/aws/simplify-access-to-external-services-using-aws-iam-outbound-identity-federation/",
@@ -123,6 +151,13 @@
       "source_name": "AWS Blog"
     },
     {
+      "url": "https://aws.amazon.com/blogs/aws/aws-control-tower-introduces-a-controls-dedicated-experience/",
+      "title": "AWS Control Tower introduces a Controls Dedicated experience",
+      "summary": "AWS Control Tower now offers Control Only Experience, enabling faster governance setup for established multi-account environments by providing access to AWS managed controls without requiring a full landing zone implementation.",
+      "published_ts": 1763579266,
+      "source_name": "AWS Blog"
+    },
+    {
       "url": "https://aws.amazon.com/blogs/aws/new-aws-billing-transfer-for-centrally-managing-aws-billing-and-costs-across-multiple-organizations/",
       "title": "New: AWS Billing Transfer for centrally managing AWS billing and costs across multiple organizations",
       "summary": "AWS Billing Transfer enables customers to centrally manage and pay bills across multiple AWS organizations by allowing billing administrators to transfer payment responsibility while maintaining individual security and governance autonomy over their accounts.",
@@ -135,6 +170,13 @@
       "summary": "Amazon EKS introduces Container Network Observability, providing enhanced visibility into Kubernetes workload traffic and performance insights to help teams monitor and troubleshoot microservice environments.",
       "published_ts": 1763579159,
       "source_name": "AWS Blog"
+    },
+    {
+      "url": "https://www.databricks.com/blog/databricks-partners-microsoft-bring-our-data-intelligence-platform-azure-government",
+      "title": "Databricks Partners with Microsoft to bring our Data Intelligence Platform to Azure Government",
+      "summary": "The US Government isn't just a customer—it's a strategic partner in our mission to democratize data and AI. ...",
+      "published_ts": 1763568000,
+      "source_name": "Databricks Blog"
     },
     {
       "url": "https://aws.amazon.com/blogs/aws/new-amazon-bedrock-service-tiers-help-you-match-ai-workload-performance-with-cost/",
@@ -154,6 +196,13 @@
       "url": "https://azure.microsoft.com/en-us/blog/microsoft-databases-and-microsoft-fabric-your-unified-and-ai-powered-data-estate/",
       "title": "Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate",
       "summary": "Today, I’m thrilled to announce the next generation of Microsoft’s databases: SQL Server 2025, Azure Document DB, Azure Horizon DB, and Fabric Databases, each redesigned to meet the demands of AI. The post Microsoft Databases and Microsoft Fabric: Your unified and AI-powered data estate appeared first on Microsoft Azure Blog .",
+      "published_ts": 1763481600,
+      "source_name": "Azure Blog"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/",
+      "title": "Announcing Azure Copilot agents and AI infrastructure innovations",
+      "summary": "Learn about the new AI features and products In Azure announced at Microsoft Ignite 2025 to help modernize your cloud infrastructure. The post Announcing Azure Copilot agents and AI infrastructure innovations appeared first on Microsoft Azure Blog .",
       "published_ts": 1763481600,
       "source_name": "Azure Blog"
     },
@@ -195,13 +244,6 @@
       "source_name": "AWS Blog"
     },
     {
-      "url": "https://aws.amazon.com/blogs/aws/aws-control-tower-introduces-a-controls-dedicated-experience/",
-      "title": "AWS Control Tower introduces a Controls Dedicated experience",
-      "summary": "AWS Control Tower now offers Control Only Experience, enabling faster governance setup for established multi-account environments by providing access to AWS managed controls without requiring a full landing zone implementation.",
-      "published_ts": 1763579266,
-      "source_name": "AWS Blog"
-    },
-    {
       "url": "https://www.databricks.com/blog/expanding-support-onelake-unity-catalog",
       "title": "Expanding support for OneLake in Unity Catalog",
       "summary": "Today marks an important milestone for open standards and the broader data community...",
@@ -220,6 +262,7 @@
       "source_name": "Dagster Blog"
     }
   ],
+  "hors_sujet": [],
   "lake_storage_formats": [
     {
       "url": "https://aws.amazon.com/blogs/aws/introducing-attribute-based-access-control-for-amazon-s3-general-purpose-buckets/",
@@ -232,13 +275,6 @@
   "ml_ai": [],
   "news": [
     {
-      "url": "https://www.databricks.com/blog/databricks-named-leader-2025-gartner-magic-quadrant-cloud-database-management-systems",
-      "title": "Databricks Named a Leader in 2025 Gartner® Magic Quadrant™ for Cloud Database Management Systems",
-      "summary": "Databricks has been named a Leader in the 2025 Gartner Magic Quadrant for Cloud Database...",
-      "published_ts": 1763740800,
-      "source_name": "Databricks Blog"
-    },
-    {
       "url": "https://www.databricks.com/blog/bring-data-intelligence-microsoft-ecosystem-agent-bricks-agent-365",
       "title": "Bring Data Intelligence to the Microsoft Ecosystem with Agent Bricks + Agent 365",
       "summary": "A New Kind of CoworkerAcross industries, employees spend hours searching for insights...",
@@ -249,13 +285,6 @@
       "url": "https://azure.microsoft.com/en-us/blog/azure-at-microsoft-ignite-2025-all-the-intelligent-cloud-news-explained/",
       "title": "Azure at Microsoft Ignite 2025: All the intelligent cloud news explained",
       "summary": "This week at Microsoft Ignite 2025, Azure introduces solutions that address your technology strategy questions with innovations designed for this very inflection point. The post Azure at Microsoft Ignite 2025: All the intelligent cloud news explained appeared first on Microsoft Azure Blog .",
-      "published_ts": 1763481600,
-      "source_name": "Azure Blog"
-    },
-    {
-      "url": "https://azure.microsoft.com/en-us/blog/announcing-azure-copilot-agents-and-ai-infrastructure-innovations/",
-      "title": "Announcing Azure Copilot agents and AI infrastructure innovations",
-      "summary": "Learn about the new AI features and products In Azure announced at Microsoft Ignite 2025 to help modernize your cloud infrastructure. The post Announcing Azure Copilot agents and AI infrastructure innovations appeared first on Microsoft Azure Blog .",
       "published_ts": 1763481600,
       "source_name": "Azure Blog"
     },
@@ -274,6 +303,13 @@
       "source_name": "Seattle Data Guy"
     },
     {
+      "url": "https://blog.cloudflare.com/replicate-joins-cloudflare/",
+      "title": "Replicate is joining Cloudflare",
+      "summary": "Bringing Replicate’s tools into Cloudflare will continue to make our Workers Platform the best place on the Internet to build and deploy any AI or agentic workflow.",
+      "published_ts": 1763388000,
+      "source_name": "Cloudflare Engineering"
+    },
+    {
       "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-246",
       "title": "Data Engineering Weekly #246",
       "summary": "The Weekly Data Engineering Newsletter",
@@ -282,15 +318,16 @@
     }
   ],
   "news_general": [],
+  "python_analytics": [],
   "python_polars_duckdb": [],
   "viz_bi": [],
   "warehouses_engines": [
     {
-      "url": "https://aws.amazon.com/blogs/aws/new-one-click-onboarding-and-notebooks-with-ai-agent-in-amazon-sagemaker-unified-studio/",
-      "title": "New one-click onboarding and notebooks with a built-in AI agent in Amazon SageMaker Unified Studio",
-      "summary": "Amazon SageMaker Unified Studio introduces new one-click onboarding experiences and serverless notebooks with a built-in AI agent without any manual set up or provisioning of your domain or compute resources. You can launch SageMaker Unified Studio directly from Amazon SageMaker, Amazon Athena, Amazon Redshift, and Amazon S3 Tables console pages, giving a fast path to analytics and AI workloads.",
-      "published_ts": 1763774592,
-      "source_name": "AWS Blog"
+      "url": "https://www.databricks.com/blog/databricks-named-leader-2025-gartner-magic-quadrant-cloud-database-management-systems",
+      "title": "Databricks Named a Leader in 2025 Gartner® Magic Quadrant™ for Cloud Database Management Systems",
+      "summary": "Databricks has been named a Leader in the 2025 Gartner Magic Quadrant for Cloud Database...",
+      "published_ts": 1763740800,
+      "source_name": "Databricks Blog"
     },
     {
       "url": "https://www.databricks.com/blog/redefining-data-warehouse-ai-era-azure-databricks",
@@ -298,20 +335,6 @@
       "summary": "Traditional data warehouses were built for predictable, structured workloads. Today’s...",
       "published_ts": 1763712600,
       "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://www.databricks.com/blog/databricks-and-aws-partner-simplify-infrastructure-setup",
-      "title": "Databricks and AWS Partner to Simplify Infrastructure Setup",
-      "summary": "Today, we’re announcing that automated configuration for classic workspace deployment...",
-      "published_ts": 1763683200,
-      "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/getting-started-with-amazon-s3-tables-in-amazon-sagemaker-unified-studio/",
-      "title": "Getting started with Amazon S3 Tables in Amazon SageMaker Unified Studio",
-      "summary": "In this post, you learn how to integrate SageMaker Unified Studio with S3 Tables and query your data using Amazon Athena, Amazon Redshift, or Apache Spark in EMR and AWS Glue.",
-      "published_ts": 1763594817,
-      "source_name": "Redshift / AWS Big Data"
     },
     {
       "url": "https://www.databricks.com/blog/how-build-production-ready-data-and-ai-apps-databricks-apps-and-lakebase",
@@ -328,13 +351,6 @@
       "source_name": "Databricks Blog"
     },
     {
-      "url": "https://www.databricks.com/blog/databricks-partners-microsoft-bring-our-data-intelligence-platform-azure-government",
-      "title": "Databricks Partners with Microsoft to bring our Data Intelligence Platform to Azure Government",
-      "summary": "The US Government isn't just a customer—it's a strategic partner in our mission to democratize data and AI. ...",
-      "published_ts": 1763568000,
-      "source_name": "Databricks Blog"
-    },
-    {
       "url": "https://aws.amazon.com/blogs/big-data/cross-account-lakehouse-governance-with-amazon-s3-tables-and-sagemaker-catalog/",
       "title": "Cross-account lakehouse governance with Amazon S3 Tables and SageMaker Catalog",
       "summary": "In this post, we walk you through a practical solution for secure, efficient cross-account data sharing and analysis. You’ll learn how to set up cross-account access to S3 Tables using federated catalogs in Amazon SageMaker, perform unified queries across accounts with Amazon Athena in Amazon SageMaker Unified Studio, and implement fine-grained access controls at the column level using AWS Lake Formation.",
@@ -346,13 +362,6 @@
       "title": "Launching Gemini 3 Pro on Databricks",
       "summary": "Starting today, you can use Gemini 3 Pro, the latest frontier model from our partners...",
       "published_ts": 1763506800,
-      "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://www.databricks.com/blog/announcing-public-preview-distributed-ml-serverless-and-standard-clusters",
-      "title": "Announcing the Public Preview of Distributed ML on Serverless and Standard Clusters",
-      "summary": "The Public Preview of Apache Spark MLlib (Python) and Optuna on serverless notebooks and jobs...",
-      "published_ts": 1763495400,
       "source_name": "Databricks Blog"
     }
   ]

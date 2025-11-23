@@ -1,374 +1,66 @@
 {
-  "cloud": [],
-  "dataprep_orchestration_etl": [
+  "ai_data_engineering": [
     {
-      "url": "https://dagster.io/blog/introducing-our-new-ebook-scaling-data-teams",
-      "title": "A Practical Guide to Building Data Platforms That Grow with You",
-      "summary": "Discover how to design and scale data platforms with clarity and confidence. Learn from real Dagster users and practical examples in our free eBook, Scaling Data Teams.",
-      "published_ts": 1762358935,
-      "source_name": "Dagster Blog",
-      "score": 88
-    }
-  ],
-  "db_sql_olap": [
-    {
-      "url": "https://powerbi.microsoft.com/en-us/blog/advance-your-career-in-data-ai-with-microsoft-fabric-data-days/",
-      "title": "Advance your career in Data &amp; AI with Microsoft Fabric Data Days",
-      "summary": "There’s no AI without data. Are you ready to invest in your future? Fabric Data Days starts on November 4th! We’re offering 50+ days of immersive learning designed for data professionals at every level and students alike. Don’t miss your chance to gain practical experience from experts and connect with a global community of experts. … Continue reading “Advance your career in Data & AI with Microsoft Fabric Data Days”",
-      "published_ts": 1762164000,
-      "source_name": "Power BI Blog",
-      "score": 64
-    }
-  ],
-  "ml_ai": [
-    {
-      "url": "https://blog.dataiku.com/building-agents-with-snowflake-cortex-ai",
+      "url": "http://www.dataiku.com/stories/blog/building-agents-with-snowflake-cortex-ai",
       "title": "Building Agents With Snowflake Cortex AI at Every Level",
       "summary": "Organizations care about tech optionality — not just to avoid vendor lock-in, but also to make sure they’re using the best tool for the job. This particularly applies to AI agents. The more tools and systems at an agent’s disposal, the better the agent. Dataiku has always aimed to put these tools in the hands of a diverse range of users, which is why we’re excited to provide no-code UIs to build AI agents leveraging the entire Snowflake Cortex AI stack in conjunction with the release of Snowflake Intelligence.",
       "published_ts": 1762268474,
       "source_name": "Dataiku Blog",
-      "score": 98
+      "score": 57.7270148396492
     },
     {
-      "url": "https://blog.octo.com/et-si-on-avait-un-gps...-a-l'interieur",
-      "title": "Et si on avait un GPS... à l'intérieur ?",
-      "summary": "Et si on pouvait avoir un Google Maps d’intérieur ? La géolocalisation indoor cherche à combler le vide laissé par le GPS dès qu’on passe une porte. Entre Wi-Fi, Bluetooth, UWB ou capteurs, les technologies se multiplient sans solution miracle : tout dépend du contexte et des besoins. Un sujet passionnant à explorer !",
-      "published_ts": 1762164310,
-      "source_name": "OCTO Talks!",
-      "score": 98
-    },
-    {
-      "url": "https://blog.octo.com/performance-d'entreprise--le-role-cle-de-la-supply-chain-et-de-la-donnee",
-      "title": "Performance d’entreprise : le rôle clé de la Supply Chain et de la donnée",
-      "summary": "Les directions clés portent la stratégie, mais si la Supply Chain n’est pas maîtrisée, la performance s’effrite : coûts, délais, qualité, satisfaction client… Dans cet article, explorez comment la transformer pour obtenir des résultats opérationnels et financiers tangibles.",
-      "published_ts": 1762266190,
-      "source_name": "OCTO Talks!",
-      "score": 94
-    },
-    {
-      "url": "https://siecledigital.fr/2025/11/07/tinder-espere-relancer-sa-croissance-en-analysant-les-photos-de-ses-utilisateurs/",
-      "title": "Tinder espère relancer sa croissance en analysant les photos de ses utilisateurs",
-      "summary": "Après s’être retrouvé en difficulté depuis 2022, face à des choix technologiques discutables, une baisse des abonnés payants, et des concurrents de plus en plus agressifs, Tinder ne s’avoue pas vaincu… Dans son dernier rapport aux investisseurs, Tinder sort l’arme de l’intelligence artificielle. Le groupe Match, propriétaire de l’application, teste actuellement une nouvelle fonctionnalité baptisée […]",
-      "published_ts": 1762510618,
-      "source_name": "Siècle Digital",
-      "score": 90
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/aws/introducing-aws-capabilities-by-region-for-easier-regional-planning-and-faster-global-deployments/",
-      "title": "Introducing AWS Capabilities by Region for easier Regional planning and faster global deployments",
-      "summary": "AWS Capabilities by Region is a new planning tool that provides detailed visibility into AWS services, features, APIs, and CloudFormation resources across different AWS Regions, helping customers make informed decisions for global deployments and prevent costly rework through side-by-side regional comparisons and forward-looking roadmap information.",
-      "published_ts": 1762464658,
-      "source_name": "AWS Blog (global)",
-      "score": 89
-    },
-    {
-      "url": "https://blog.cloudflare.com/extract-audio-from-your-videos-with-cloudflare-stream/",
-      "title": "Extract audio from your videos with Cloudflare Stream",
-      "summary": "Cloudflare Stream provides a unified platform for video storage, encoding, and delivery. We are now enabling developers to seamlessly extract audio from videos.",
-      "published_ts": 1762437600,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://www.lemagit.fr/actualites/366634088/RPT-1-SAP-lance-un-modele-de-fondation-dedie-aux-donnees-relationnelles",
-      "title": "RPT-1 : SAP lance un « modèle de fondation » dédié aux données relationnelles",
-      "summary": "<p>Lors de son TechEd organisé à Berlin, SAP a présenté le fruit de deux ans de travail en matière d’IA. Dès 2023, Erik&nbsp;Marcadé, alors vice-président de l’analytique avancée chez SAP, avait évoqué que l’éditeur allemand envisageait l’entraînement d’un «&nbsp;modèle de fondation&nbsp;».</p> \n<p>Ce qu’il n’avait pas dit, c’est que ce dernier mêlerait <a href=\"https://www.lemagit.fr/definition/Machine-Learning\">machine learning</a> traditionnel et compréhension avancée du langage.</p> \n<p>SAP-RPT-1 (RPT, pour Relational Pre-trained Transformer) est dans les faits, un modèle Transformer modifié pour deux tâches de prédiction&nbsp;(régression et classification) à partir de tables. Pour rappel, le terme Transformer désigne une architecture de réseaux de neurones. C’est le socle des modèles NLP. Et des grands modèles de langage popularisés par l’application <a href=\"https://www.lemagit.fr/definition/ChatGPT\">ChatGPT.</a></p> \n<p>Techniquement, RPT-1 peut être perçu comme un <a href=\"https://www.lemagit.fr/conseil/Reseaux-de-neurones-RNN-et-CNN-comment-les-differencier\">réseau de neurones récurrent.</a></p> \n<p>Il est pensé pour optimiser des prédictions effectuées sur des données structurées en exploitant le contexte sémantique.</p> \n<p>«&nbsp;SAP-RPT-1 est conçu pour comprendre les relations dans les données structurées, telles que les bons de commande, les transactions financières, les tables de performance des fournisseurs ou les indicateurs de ressources humaines&nbsp;», indique l’éditeur dans sa documentation. Il suffit de lui confier un fichier CSV en entrée. Sa tâche est de remplir la valeur à prédire.</p> \n<p>La collection commerciale inclut deux modèles&nbsp;: SAP-RPT-1-Small et SAP-RPT-1-Large. Ils sont pour l’instant disponibles gratuitement depuis une interface «&nbsp;playground&nbsp;» dédiée, ou via API à travers le Generative AI Hub. La disponibilité générale est prévue plus tard au quatrième trimestre&nbsp;2025.</p> \n<p>Dans son bac à sable, l’éditeur décline différents scénarios utiles en entreprise. Maintenance prédictive, recommandation d’offres commerciales, prédiction de retard de paiements, priorisation de tickets de support client, estimation de l’empreinte carbone de matériaux… Tout y passe ou presque. D’ailleurs, SAP-RPT-1 peut prédire des valeurs (ex.&nbsp;: la quantité de CO2 généré par le sourcing) et des mots (ex.&nbsp;: le niveau de criticité d’un ticket).</p> \n<p>La promesse de SAP est de réduire drastiquement, voire de supprimer l’entraînement autrefois nécessaire des algorithmes d’analytique prédictive. RPT-1 présenterait des résultats&nbsp;2 à 3,5&nbsp;fois supérieurs comparativement aux modèles de sa catégorie et aux LLM (Large Language Model) pour les mêmes tâches.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Une famille de modèles qui se développe en parallèle des LLM\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Une famille de modèles qui se développe en parallèle des LLM</h2>\n <p>L’équipe marketing de SAP ne perd pas ses vieilles habitudes. RPT-1 (à prononcer «&nbsp;rapide one&nbsp;») est le renommage de ContextTab, un modèle «&nbsp;open weight&nbsp;» (sous licence Apache&nbsp;2.0). Il est désormais accessible sous l’appellation&nbsp;sap-rpt1-oss.</p>\n <p>C’est le membre d’une nouvelle famille de modèles. Ceux-là exploitent «&nbsp;l’apprentissage en contexte&nbsp;» au sein de données tabulaires. L’un des premiers du genre, né en novembre&nbsp;2022 comme ChatGPT, se nomme TabPFN. Il a été entraîné par des chercheurs de l’université de Fribourg, l’Université de médecine Charité de Berlin et du centre d’intelligence artificielle de l’équipementier Bosch. &nbsp;</p>\n <p>Certains d’entre eux ont fondé la startup PriorLabs, en 2024. Ils ont ainsi présenté TabPFNv2. Un modèle qui a inspiré TableICL, un projet mené par une équipe interdisciplinaire au sein de l’INRIA.</p>\n <p>Une équipe de trois chercheurs des universités de Washington, d’Harvard et de Stanford ont présenté en 2024 Tabula-8B, un modèle de langage de prédiction de tables.</p>\n <p>Ce sont ces projets qui ont inspiré des chercheurs au sein de SAP SE (Allemagne) et SAP France pour entraîner ContextTab.</p>\n <p>L’article de recherche associé, paru en juin, et qui sera présenté lors du NeurIPS de San Diego, indique que SAP s’appuie sur l’architecture TabPFN. Ainsi, il exploite une version alternative du mécanisme d’attention hybride. Dans un LLM, il sert à interpréter la place d’un mot dans une phrase et dans un texte. Ici, il est exploité pour comprendre la relation entre les colonnes et la relation entre les lignes dans une table.</p>\n <p>«&nbsp;Conformément à TabPFN, l’attention entre les colonnes n’est pas masquée, tandis que l’attention entre les rangées est masquée de manière que chaque rangée ne puisse s’intéresser qu’au contexte fourni&nbsp;», écrivent les chercheurs de SAP. «&nbsp;Pour augmenter la modularité de notre code, le bloc MLP feedforward du Transformer est répété après chaque bloc d’auto-attention de sorte que les blocs “horizontaux” et “verticaux” ont la même structure&nbsp;».</p>\n <p>Du fait de cette architecture à deux dimensions (horizontale et verticale), ContextTab (RPT-1) est proportionnellement deux fois plus grand que le réseau de neurones BERT, imaginé par Google Research. Le modèle final contient 172&nbsp;millions de paramètres, dont 16&nbsp;millions entraînable. Il est doté d’une fenêtre de contexte de 8&nbsp;000 tokens.</p>\n <p>Une fonction d’entropie croisée (de perte) après un bloc de perceptron multiple est utilisée pour réaliser la classification. Pour l’exercice de régression, le modèle «&nbsp;prédit la valeur en virgule flottante de la cible, puis elle est écrêtée et normalisée&nbsp;».</p>\n</section>          \n<section class=\"section main-article-chapter\" data-menu-title=\"L’apport des « données du monde réel »\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>L’apport des «&nbsp;données du monde réel&nbsp;»</h2>\n <p>L’apport de ContextTab se joue davantage au niveau de la vectorisation et des données utilisées lors de l’entraînement.</p>\n <p>L’encodage des données est différent suivant leur nature. Trois techniques distinctes sont utilisées pour le texte, les dates, les nombres et l’en-tête des colonnes. Pour le texte, <a href=\"https://www.lemagit.fr/conseil/Lessentiel-sur-les-modeles-dembeddings\">un modèle d’embedding</a> de petite taille est utilisé. L’en-tête des colonnes subit le même traitement, couplé à une fonction de normalisation.</p>\n <p>Les dates, les jours, les mois et les années et leur signification (par exemple quand ce sont des périodes de vacances ou qu’ils sont fériés) sont encodés dans trois vecteurs distincts.</p>\n <p>Les nombres sont encodés à l’aide d’un vecteur à une dimension. Selon les chercheurs, les données numériques sont normalisées (écrêtage, centrage-réduction) pour éviter les problèmes d’explosion des gradients à l’entraînement. Puis, elles sont encodées par multiplication avec un vecteur appris. Les scientifiques ont incorporé un biais pour que les valeurs manquantes (NaN) soient remplacées par un 0.</p>\n <p>«&nbsp;Il convient de noter que tous les embeddings ci-dessus sont entièrement équivariants en cas de permutations des lignes ou des colonnes&nbsp;», précisent les chercheurs. Cette symétrie rend les prédictions «&nbsp;plus robustes et reproductibles&nbsp;».</p>\n <p>Lors de l’entraînement de ContextTab, l’équipe de SAP a utilisé 2,18&nbsp;millions de tables issues du jeu de données&nbsp;T4, à l’instar des chercheurs derrière Tabula-8B. Ces tables sont issues de différentes sources, dont les dépôts Git ouverts ou CommonCrawl (une extraction géante du Web).</p>\n <p>&nbsp;TabPFN et TabICL n’ont été entraînés qu’avec <a href=\"https://www.lemagit.fr/conseil/Donnees-synthetiques-ou-reelles-quel-choix-pour-lanalytique-predictive\">des données synthétiques.</a> «&nbsp;Si l’utilisation de données synthétiques présente de nombreux avantages, en particulier sa diversité à grande échelle, elle a pour conséquence que les données ne contiennent pas de valeurs sémantiquement significatives telles qu’on les trouve dans les applications du monde réel&nbsp;», distinguent les chercheurs de SAP.</p>\n <p>Résultat, ContextTab obtiendrait de meilleurs résultats que ses aînés sur les données sémantiques et proposerait des performances proches des modèles «&nbsp;non sémantiques&nbsp;» (XGBoost, par exemple). Il ne dépasse pas toutefois AutoGluon, un framework d’autoML imaginé par AWS en 2020.</p>\n</section>         \n<section class=\"section main-article-chapter\" data-menu-title=\"Industrialiser RPT-1\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Industrialiser RPT-1</h2>\n <blockquote class=\"main-article-pullquote\">\n  <div class=\"main-article-pullquote-inner\">\n   <figure>\n    «&nbsp;L’utilisation d’un LLM pour effectuer la même tâche de prédiction nécessite jusqu’à 100&nbsp;000&nbsp;fois plus d’opérations en virgule flottante (FLOP).&nbsp;»\n   </figure>\n   <figcaption>\n    <strong>Philip&nbsp;Herzig</strong>CTO et chief AI officer, SAP\n   </figcaption>\n   <i class=\"icon\" data-icon=\"z\"></i>\n  </div>\n </blockquote>\n <p>Avec les versions commerciales de RPT-1, SAP dit avoir amélioré ces résultats en s’appuyant sur des données réelles. Le modèle open weight réclame <a href=\"https://www.lemagit.fr/actualites/366538613/Dell-World-2023-le-PowerEdge-XE9680-premiere-machine-HGX-H100\">un seul GPU&nbsp;Nvidia&nbsp;H100</a> (80&nbsp;Go de VRAM) pour s’exécuter correctement. C’est à la fois peu et beaucoup au vu des tâches à accomplir. C’est en tout cas beaucoup mieux que la plupart des LLM.</p>\n <p>«&nbsp;L’utilisation d’un LLM pour effectuer la même tâche de prédiction nécessite jusqu’à 100&nbsp;000&nbsp;fois plus d’opérations en virgule flottante (FLOP)&nbsp;», assure Philip&nbsp;Herzig, CTO et chief AI officer chez SAP, dans un billet de blog. «&nbsp;Cela prend jusqu’à 50&nbsp;fois plus de temps (malgré des équipements nettement plus puissants)&nbsp;».</p>\n <p>Toutefois, comme les modèles de langage, il n’y a pas de magie. La documentation de SAP précise qu’il faut d’abord s’assurer de la bonne qualité des données au sein de tables. Cela veut dire supprimer au maximum les valeurs manquantes, de correctement nommer les colonnes, d’enregistrer un type de données par colonne et de n’appliquer ce traitement que sur les données nécessaires. Et au CTO de préciser qu’il est possible de fine-tuner la version open weight de RPT-1.</p>\n <p>La technologie est intéressante sur le papier. Notamment au vu des déploiements passés du <a href=\"https://www.lemagit.fr/definition/Machine-Learning\">machine learning</a> au sein de l’écosystème SAP. Reste à l’éditeur allemand de l’intégrer dans ses solutions. D’en simplifier le <a href=\"https://www.lemagit.fr/conseil/Prompt-engineering-et-fine-tuning-quelles-sont-les-differences\">fine-tuning</a>, au besoin. &nbsp;</p>\n <p>L’annonce permet surtout à SAP de tâter le terrain. La centaine de commentaires sous le post LinkedIn de Philip&nbsp;Herzig qui accompagne l’annonce reflète un engouement certain. Et pas seulement au sein des équipes SAP. Les partenaires semblent bien accueillir la solution.</p>\n</section>",
-      "published_ts": 1762434360,
-      "source_name": "LeMagIT",
-      "score": 89
-    },
-    {
-      "url": "https://www.zdnet.fr/pratique/utiliser-lia-dans-une-tpe-10-lecons-tirees-de-la-pratique-de-terrain-484588.htm#xtor=RSS-1",
-      "title": "Utiliser l'IA dans une TPE : 10 leçons tirées de la pratique de terrain",
-      "summary": "Il ne s'agit pas de prouver que l'on peut utiliser l'IA, mais de l'utiliser à bon escient. Passons outre le battage médiatique. Voici des conseils pratiques sur la manière dont les petites entreprises peuvent obtenir des résultats concrets avec l'IA.",
-      "published_ts": 1762405915,
-      "source_name": "ZDNet France",
-      "score": 89
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-project-rainier-online-amazon-nova-amazon-bedrock-and-more-november-3-2025/",
-      "title": "AWS Weekly Roundup: Project Rainier online, Amazon Nova, Amazon Bedrock, and more (November 3, 2025)",
-      "summary": "Last week I met Jeff Barr at the AWS Shenzhen Community Day. Jeff shared stories about how builders around the world are experimenting with generative AI and encouraged local developers to keep pushing ideas into real prototypes. Many attendees stayed after the sessions to discuss model grounding, evaluation, and how to bring generative AI into […]",
-      "published_ts": 1762192523,
-      "source_name": "AWS Blog (global)",
-      "score": 89
-    },
-    {
-      "url": "https://azure.microsoft.com/en-us/blog/enhancing-software-supply-chain-security-with-microsofts-signing-transparency/",
-      "title": "Enhancing software supply chain security with Microsoft’s Signing Transparency",
-      "summary": "Microsoft is announcing the preview of Signing Transparency to address software supply chain threats that traditional code signing alone cannot fully prevent, building on the Zero Trust principle of “never trust, always verify.” Signing Transparency uses an append-only log to verifiably record each signature, with keys protected in a secure confidential computing enclave. The post Enhancing software supply chain security with Microsoft’s Signing Transparency appeared first on Microsoft Azure Blog .",
-      "published_ts": 1762189200,
-      "source_name": "Azure Blog",
-      "score": 89
-    },
-    {
-      "url": "https://www.journaldunet.com/intelligence-artificielle/1545911-l-observabilite-intelligente-l-outil-critique-pour-assurer-la-gestion-des-environnements-informatiques-hybrides/",
-      "title": "L'observabilité intelligente : l'outil critique pour assurer la gestion des environnements informatiques hybrides",
-      "summary": "La donnée qui prolifère rend inefficaces les outils de visibilité IT classiques, incapables de distinguer les informations habituelles de celles qui pourraient constituer une menace. Comment faire ?",
-      "published_ts": 1762527443,
-      "source_name": "Journal du Net",
-      "score": 85
-    },
-    {
-      "url": "https://www.journaldunet.com/intelligence-artificielle/1545865-piloter-la-performance-dans-l-ecosysteme-de-l-ia-vers-la-mesure-et-l-optimisation/",
-      "title": "Piloter la performance dans l'écosystème de l'IA : vers la mesure et l'optimisation",
-      "summary": "Après avoir repensé sa stratégie de contenu, la question de l'évaluation de l'efficacité des efforts se pose. Dans l'univers de la AI Engine Optimization (AEO) ou recherche par l'IA, les métriques traditionnelles ne suffisent plus. Il est pourtant essentiel de mesurer, analyser et optimiser la performance dans ce nouvel écosystème.",
-      "published_ts": 1762527341,
-      "source_name": "Journal du Net",
-      "score": 85
-    },
-    {
-      "url": "https://www.journaldunet.com/intelligence-artificielle/1545823-ai-factories-en-afrique-transformer-l-essai-par-l-energie-les-talents-et-la-donnee/",
-      "title": "AI factories en Afrique : transformer l'essai par l'énergie, les talents et la donnée",
-      "summary": "AI factories en Afrique : la puissance de calcul arrive sur le terrain. Pour transformer l'essai : énergie fiable, talents opérationnels, données gouvernées. Place aux résultats, fin des promesses.",
-      "published_ts": 1762527254,
-      "source_name": "Journal du Net",
-      "score": 85
-    },
-    {
-      "url": "https://siecledigital.fr/2025/11/07/snapchat-sallie-a-perplexity-un-partenariat-a-400-millions-de-dollars/",
-      "title": "Snapchat s’allie à Perplexity : un partenariat à 400 millions de dollars",
-      "summary": "Si Snapchat s’était fait très discret dans l’univers de l’intelligence artificielle, le réseau social semble déterminé à se positionner face à la concurrence. En effet, Snap Inc. vient d’annoncer un accord majeur avec Perplexity, afin de marquer une nouvelle étape pour l’entreprise qui cherche à réinventer son expérience utilisateur. Un moteur de recherche conversationnel intégré […]",
-      "published_ts": 1762511015,
-      "source_name": "Siècle Digital",
-      "score": 85
-    },
-    {
-      "url": "https://www.journaldunet.com/cybersecurite/1545859-cyber-resilience-proteger-les-voyages-aeriens-des-chaos-estivaux/",
-      "title": "Cyber-résilience : protéger les voyages aériens des chaos estivaux",
-      "summary": "Les cyberattaques menacent le secteur aérien, perturbant vols et opérations et faisant de la cybersécurité un enjeu majeur pour l'industrie.",
-      "published_ts": 1762505982,
-      "source_name": "Journal du Net",
-      "score": 85
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/zd-tech-les-ia-commencent-a-etre-capables-dintrospection-484653.htm#xtor=RSS-1",
-      "title": "ZD Tech : Les IA commencent à être capables d'introspection",
-      "summary": "Oui, vous avez bien lu. Selon une nouvelle étude signée Anthropic, le créateur du chatbot Claude, certaines IA seraient capables… de « regarder à l’intérieur d’elles-mêmes ».",
-      "published_ts": 1762495905,
-      "source_name": "ZDNet France",
-      "score": 85
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/ils-ont-manipule-des-agents-dia-concus-pour-les-transactions-automatisees-un-seul-a-totalement-resiste-484638.htm#xtor=RSS-1",
-      "title": "Ils ont manipulé des agents d'IA conçus pour les transactions automatisées - un seul a totalement résisté",
-      "summary": "Les agents de l'IA peuvent acheter et vendre en notre nom. Et voici pourquoi cela devrait nous inquiéter.",
-      "published_ts": 1762488698,
-      "source_name": "ZDNet France",
-      "score": 85
-    },
-    {
-      "url": "https://devblogs.microsoft.com/all-things-azure/powering-distributed-aiml-at-scale-with-azure-and-anyscale/",
-      "title": "Powering Distributed AI/ML at Scale with Azure and Anyscale",
-      "summary": "The path from prototype to production for AI/ML workloads is rarely straightforward. As data pipelines expand and model complexity grows, teams can find themselves spending more time orchestrating distributed compute than building the intelligence that powers their products. Scaling from a laptop experiment to a production-grade workload still feels like reinventing the wheel. What if scaling AI workloads felt as natural as writing in Python itself? That’s the idea behind Ray, the open-source distributed computing framework born at UC Berkeley’s RISELab, and now, it’s coming to Azure in a whole new way. The post Powering Distributed AI/ML at Scale with Azure and Anyscale appeared first on Microsoft Azure Blog .",
-      "published_ts": 1762289921,
-      "source_name": "Azure Blog",
-      "score": 85
-    },
-    {
-      "url": "https://azure.microsoft.com/en-us/blog/driving-roi-with-azure-ai-foundry-and-uipath-intelligent-agents-in-real-world-healthcare-workflows/",
-      "title": "Driving ROI with Azure AI Foundry and UiPath: Intelligent agents in real-world healthcare workflows",
-      "summary": "Automate healthcare workflows with Azure AI Foundry and UiPath to improve efficiency, reduce costs, and deliver real ROI across patient care. The post Driving ROI with Azure AI Foundry and UiPath: Intelligent agents in real-world healthcare workflows appeared first on Microsoft Azure Blog .",
-      "published_ts": 1762365600,
-      "source_name": "Azure Blog",
-      "score": 78
-    },
-    {
-      "url": "https://www.lemagit.fr/actualites/366634244/Stockage-pour-lIA-Huawei-devoile-sa-strategie-a-Madrid",
-      "title": "Stockage pour l’IA : Huawei dévoile sa stratégie à Madrid",
-      "summary": "<p>En matière de stockage de données pour l’IA, Huawei a une stratégie en deux temps&nbsp;: fournir dès maintenant des baies de SSD accélérées et, d’ici à la fin de l’année, tout un ensemble de logiciels pour préparer ces données à l’IA. Un planning que le constructeur chinois a détaillé lors de l’événement <a href=\"https://www.lemagit.fr/actualites/366633919/Huawei-sefforce-de-maintenir-une-longueur-davance-dans-tous-les-reseaux\">Huawei Connect 2025</a> qu’il vient d’organiser à Madrid.</p> \n<p>«&nbsp;Nos dernières baies de stockage OceanStor offrent des débits de 500 Go/s et des dizaines de millions d’IOPS. Nous sommes tellement en avance sur la concurrence que nous n’aurons plus besoin de lancer de nouveaux modèles avant deux ans&nbsp;», lance Yuan Yuan, le patron des baies de disque élastiques (en photo en haut de cet article), lors d’un entretien avec LeMagIT.</p> \n<p>«&nbsp;Mais la vitesse ne suffit pas. Il s’agit d’aider les entreprises à valoriser leurs données dans les IA. Pour ce faire, nous avons conçu une pile complète que nous appelons l’<a href=\"https://e.huawei.com/sg/solutions/storage/scale-out-storage/ai-data-lake\">AI Data Lake</a>. Outre les baies de stockage, elle comprend toute une pile de logiciels qui permettent, d’une part, de contrôler les données (regroupement, indexation, gestion des versions et des accès)&nbsp;; c’est la partie Omni-Dataverse qui sera bientôt complétée par eDataInsight. Et, d’autre part, de brancher ces données à l’IA&nbsp;; c’est la partie iData + ModelEngine&nbsp;», précise-t-il.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Quatre baies de stockage pour l’IA\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Quatre baies de stockage pour l’IA</h2>\n <p>Huawei avait historiquement deux familles de baies de stockage de production&nbsp;: les <a href=\"https://www.lemagit.fr/actualites/366623534/Stockage-Huawei-presente-la-v7-de-ses-baies-OceanStor-Dorado\">OceanStor Dorado </a>comme stockage bloc pour les serveurs applicatifs (images de machines virtuelles et de containers, bases de données), ainsi que les <a href=\"https://www.lemagit.fr/actualites/366551283/Stockage-Huawei-lance-la-baie-OceanStor-Pacific-9920-en-Europe\">OceanStor Pacific</a>, des NAS pour partager les données de travail au format fichier ou objet. Les OceanStor Pacific se déclinent aujourd’hui en deux versions accélérées, avec deux nouveaux modèles 9926 et 9928 pensés pour les travaux d’inférence. Et il existe désormais une troisième famille, les baies de SSD OceanStor A-Series, spécifiquement conçues pour épauler l’entraînement des intelligences artificielles. &nbsp;&nbsp;&nbsp;</p>\n <p>Les OceanStor Pacific 9926 et 9928 sont physiquement identiques. Ils se composent d’un boîtier 2U pouvant contenir 36 SSD QLC extra-plats, mais allongés, un format propriétaire «&nbsp;Palm-Sized&nbsp;» de Huawei. Lors de sa conférence à Madrid, ces SSD avaient une capacité de 61 To, mais le constructeur promet que les modèles <a href=\"https://www.lemagit.fr/actualites/366616027/Les-premiers-SSD-122-To-se-montrent\">en 122 To</a> seront disponibles d’ici à la fin de l’année.</p>\n <p>«&nbsp;Ces machines pèsent seulement 45 kg pour une capacité de stockage brute de 2 Po&nbsp;! Personne d’autre n’atteint une telle densité&nbsp;», se félicite Yuan Yuan, qui précise que la capacité est huit fois plus importante qu’avec une baie 2U composée de disques durs mécaniques et qui pèse deux fois plus lourd.</p>\n <p>En termes de puissance, les OceanStor Pacific 9926 et 9928 sont équipées de deux processeurs <a href=\"https://www.lemagit.fr/actualites/252526515/Huawei-en-campagne-pour-devenir-un-grand-acteur-du-stockage\">ARM Kunpeng 920</a>, conçus par Huawei, de 1 To de RAM et de connecteurs Ethernet RoCE en 200 Gbit/s ou Infiniband en 400 Gbit/s. Leur débit est de 90 Go/s et leur vitesse d’accès est de 2,4 millions d’IOPS. Enfin, 256 baies peuvent être déployées en cluster pour augmenter d’autant la capacité et la bande passante.</p>\n <p>La différence entre les modèles 9926 et 9928 est que le second supporte plus de protocoles d’accès, notamment <a href=\"https://www.lemagit.fr/conseil/S3-contre-HDFS-que-choisir-pour-son-data-lake\">l’API HDFS</a> typique des lacs de données, alors que le 9926 se limite aux accès fichier, en NFS, et objet, en S3.</p>\n <p>La famille A-Series se distingue principalement des Pacific par l’utilisation de SSD MLC plus rapides. Dans un boîtier 8U contenant 64 SSD, l’OceanStor A800 atteint ainsi un débit de 500 Go/s et une vitesse d’accès de 10 millions d’IOPS. En l’occurrence, la machine contient deux contrôleurs qui disposent chacun de quatre processeurs ARM Kunpeng 920 et de 1 To de RAM (soit huit processeurs et 2 To de RAM par machine).</p>\n <p>Surtout, l’OceanStor A800 est équipé de puces accélératrices NPU derrière ses cartes réseau pour lire et écrire les données directement sur les SSD, sans passer par un décodage au niveau des processeurs. Ce dispositif permettrait d’accélérer les accès de 40%. Huawei parle d’une technologie NPUDirect Storage (NDS), qui n’est pas sans rappeler le <a href=\"https://www.lemagit.fr/actualites/366618802/Infrastructure-IA-Nvidia-adapte-son-reseau-rapide-Spectrum-X-au-stockage\">GPUDirect Storage</a> de Nvidia du côté des serveurs de calcul. Les cartes réseau proposent des ports 200 Gbit/s, en Ethernet RoCE comme en Infiniband.</p>\n <p>Il existe aussi une petite baie OceanStor A600 qui reprend les caractéristiques physiques des nouvelles OceanStor Pacific 9926 et 9928&nbsp;: 2U, 36 SSD. Comme l’A800, elle dispose de deux contrôleurs. Ici, chacun contient deux ARM Kunpeng 920, 512 Go de RAM et des NPU qui accélèrent les accès de 30%. Le débit de l’OceanStor A600 est de 160 Go/s et, ce, alors que ses cartes réseau sont limitées du 100 Gbit/s.</p>\n</section>         \n<section class=\"section main-article-chapter\" data-menu-title=\"Des accélérations logicielles\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Des accélérations logicielles</h2>\n <p>En outre, toutes ces nouvelles baies de stockage pour l’IA s’accompagnent d’une couche logicielle appelée <a href=\"https://www.huaweicentral.com/huawei-launches-ucm-algorithm-as-reliable-alternative-to-hbm-chips/#google_vignette\">UCM</a> (Unified Cache Manager). Elle permet aux serveurs de calcul d’accéder aux baies de stockage via un protocole clé-valeur (KV), soit une sorte d’accès en mode bloc, mais avec des blocs de taille variable.</p>\n <p>«&nbsp;UCM, qui nécessite l’installation d’un pilote côté serveurs, va faire un fort usage de la RAM embarquée dans les baies de stockage pour y maintenir un cache. Ce cache fonctionne aussi bien pour le RAG (inférence sur un LLM préentraîné) que pour l’entraînement d’une IA&nbsp;», explique un porte-parole de Huawei devant le stand des OceanStor A-Series.</p>\n <p>Selon Yuan Yuan, UCM, de par son fonctionnement, permet d’utiliser des serveurs de calcul dont les GPU sont dépourvus de mémoire HBM, qui leur sert habituellement de cache ultra rapide. Huawei aurait développé cette technologie suite à l’embargo américain concernant <a href=\"https://www.lemagit.fr/actualites/366630089/Une-nouvelle-interdiction-americaine-menace-la-production-de-memoires\">l’export de mémoires HBM vers la Chine</a>.</p>\n <p>UCM fera partie à terme d’un ensemble de logiciels Open source baptisé CANN (Compute Architecture for Neural Networks) que Huawei compte partager d’ici à la fin de l’année et qu’il relie à sa plateforme logicielle Ai Data Lake. À ce stade, on ignore si CANN comprendra un outil pour convertir les données de l’entreprise cliente au format vectoriel, nécessaire au traitement par une IA, et si cet outil fonctionnerait directement sur les baies OceanStor, à la manière de la baie de stockage intelligente AFX présentée récemment par NetApp.</p>\n</section>",
-      "published_ts": 1762726500,
-      "source_name": "LeMagIT",
-      "score": 76
-    },
-    {
-      "url": "https://blog.octo.com/numerique-en-commun-2025--quand-la-parentalite-devient-un-choix-engage-1",
-      "title": "Numérique en commun(s) 2025 : quand la parentalité devient un choix engagé",
-      "summary": "Entre les nombreuses présentations de NEC 2025, qui sont autant de petits pas et de bons de géants pour faire avancer les services publics, il y avait la place pour toutes les questions, dont la mienne : comment construire une parentalité à l'ère du numérique?",
-      "published_ts": 1762273510,
-      "source_name": "OCTO Talks!",
-      "score": 73
-    },
-    {
-      "url": "https://blog.octo.com/connaissez-vous-vraiment-les-okr-quelques-astuces-pour-bien-demarrer",
-      "title": "Connaissez vous vraiment les OKR ? Quelques astuces pour bien démarrer",
-      "summary": "Je vous partage quelques astuces OKR à avoir pour bien démarrer et éviter quelques pièges. Avançons dans un cycle OKR et voyons comment progresser un peu plus sereinement",
-      "published_ts": 1762521310,
-      "source_name": "OCTO Talks!",
-      "score": 69
-    },
-    {
-      "url": "https://blog.dataiku.com/the-modern-analysts-path-from-question-to-insight",
+      "url": "http://www.dataiku.com/stories/blog/the-modern-analysts-path-from-question-to-insight",
       "title": "The Modern Analyst’s Simplified Path From Question to Insight",
       "summary": "It’s Monday morning, marketing just asked a seemingly simple question: “Which suppliers are driving the most customer complaints, and are there any patterns?”",
       "published_ts": 1762437600,
       "source_name": "Dataiku Blog",
-      "score": 69
-    },
-    {
-      "url": "https://www.journaldunet.com/magazine/1545833-cd1-inondation-ville/",
-      "title": "L'inondation du siècle va forcément frapper cette grande ville française et ce ne sera que le début",
-      "summary": "Climatologues et météorologues s'intéressent à cet événement qui pourrait prendre de l'ampleur avec le réchauffement climatique.",
-      "published_ts": 1762580703,
-      "source_name": "Journal du Net",
-      "score": 65
-    },
-    {
-      "url": "https://www.journaldunet.com/cybersecurite/1545895-les-barrieres-numeriques-echouent-a-proteger-la-generation-connectee-d-aujourd-hui/",
-      "title": "Les barrières numériques échouent à protéger la génération connectée d'aujourd'hui",
-      "summary": "La loi française sur la majorité numérique et la lutte contre la haine en ligne imposent aux plateformes des responsabilités pour protéger les enfants contre les contenus nuisibles. Cela marque une étape décisive dans la protection numérique des jeunes internautes.",
-      "published_ts": 1762508230,
-      "source_name": "Journal du Net",
-      "score": 65
-    },
-    {
-      "url": "https://siecledigital.fr/2025/11/06/spotify-depasse-les-700-millions-dutilisateurs-mais-fait-face-a-une-plainte-pour-ecoutes-frauduleuses/",
-      "title": "Spotify dépasse les 700 millions d’utilisateurs, mais fait face à une plainte pour écoutes frauduleuses",
-      "summary": "Le géant du streaming musical, qui vient de publier des résultats trimestriels au sommet, fait face au même à une plainte collective aux États-Unis pour fraude aux écoutes. Un contraste saisissant pour l’entreprise dirigée par Daniel Ek, à quelques semaines d’un changement de direction majeur… Spotify franchit les 700 millions d’utilisateurs Le troisième trimestre 2025 […]",
-      "published_ts": 1762422789,
-      "source_name": "Siècle Digital",
-      "score": 65
-    },
-    {
-      "url": "https://www.zdnet.fr/pratique/protegez-votre-vie-privee-comment-debusquer-et-desactiver-un-logiciel-espion-sur-android-et-iphone-484656.htm#xtor=RSS-1",
-      "title": "Protégez votre vie privée : Comment débusquer et désactiver un logiciel espion sur Android et iPhone",
-      "summary": "Votre smartphone contient toutes vos données personnelles, ce qui en fait une cible de choix pour les pirates et les espions. Voici comment le protéger.",
-      "published_ts": 1762596681,
-      "source_name": "ZDNet France",
-      "score": 64
-    },
-    {
-      "url": "https://www.zdnet.fr/pratique/je-dirige-une-tres-petite-entreprise-voici-21-facons-simples-ou-lia-me-fait-gagner-du-temps-chaque-jour-484597.htm#xtor=RSS-1",
-      "title": "Je dirige une très petite entreprise. Voici 21 façons simples où l'IA me fait gagner du temps chaque jour",
-      "summary": "Du codage au marketing en passant par la production sur YouTube, voici comment une entreprise de deux personnes exploite l'IA pour surpasser des équipes dix fois plus grandes qu'elle.",
-      "published_ts": 1762517518,
-      "source_name": "ZDNet France",
-      "score": 64
-    },
-    {
-      "url": "https://blog.langchain.com/rebuilding-chat-langchain/",
-      "title": "Why We Rebuilt LangChain’s Chatbot and What We Learned",
-      "summary": "By Liam Bush Background Every successful platform needs reliable support, but we realized our own team was spending hours tracking down answers to technical questions. This friction wasn't just slowing down our engineers—it was a critical bottleneck for our users. We set out to solve this",
-      "published_ts": 1762360133,
-      "source_name": "LangChain Blog",
-      "score": 64
+      "score": 57.0961285084486
     }
   ],
-  "news_general": [
+  "cloud": [],
+  "cloud_infra_observability": [],
+  "data_modeling_governance": [
     {
-      "url": "https://powerbi.microsoft.com/en-us/blog/power-bi-semantic-models-as-accelerators-for-ai-enabled-consumption/",
-      "title": "Power BI semantic models as accelerators for AI-enabled consumption",
-      "summary": "As data volumes grow exponentially, Power BI customers demand AI-driven analytical solutions that scale to petabytes, are secure, governed, and easy to manage. Power BI semantic models, backed by Microsoft Fabric, are the foundation for user-friendly BI solutions, bridging the gap between business users and IT by enabling trusted ad-hoc analysis. Consequently, Power BI semantic … Continue reading “Power BI semantic models as accelerators for AI-enabled consumption”",
-      "published_ts": 1762333200,
-      "source_name": "Power BI Blog",
-      "score": 94
-    },
-    {
-      "url": "https://blog.cloudflare.com/diy-byoip/",
-      "title": "DIY BYOIP: a new way to Bring Your Own IP prefixes to Cloudflare",
-      "summary": "Announcing a new self-serve API for Bring Your Own IP (BYOIP), giving customers unprecedented control and flexibility to onboard, manage, and use their own IP prefixes with Cloudflare's services.",
-      "published_ts": 1762524000,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://blog.cloudflare.com/async-quic-and-http-3-made-easy-tokio-quiche-is-now-open-source/",
-      "title": "Async QUIC and HTTP/3 made easy: tokio-quiche is now open-source",
-      "summary": "We’re excited to announce the open sourcing of tokio-quiche, our async QUIC library built on quiche and tokio. Relied upon in our services such as iCloud Private Relay and our next-generation Oxy-based proxies, tokio-quiche handles millions of HTTP/3 requests per second with low latency and high throughput.",
-      "published_ts": 1762437600,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://blog.cloudflare.com/workers-vpc-open-beta/",
-      "title": "How Workers VPC Services connects to your regional private networks from anywhere in the world",
-      "summary": "Workers VPC Services enter open beta today. We look under the hood to see how Workers VPC connects your globally-deployed Workers to your regional private networks by using Cloudflare's global network, while abstracting cross-cloud networking complexity.",
-      "published_ts": 1762351200,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://blog.cloudflare.com/better-testing-for-workflows/",
-      "title": "Building a better testing experience for Workflows, our durable execution engine for multi-step applications",
-      "summary": "End-to-end testing for Cloudflare Workflows was challenging. We're introducing first-class support for Workflows in cloudflare:test, enabling full introspection, mocking, and isolated, reliable tests for your most complex applications.",
-      "published_ts": 1762264800,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://blog.cloudflare.com/fresh-insights-from-old-data-corroborating-reports-of-turkmenistan-ip/",
-      "title": "Fresh insights from old data: corroborating reports of Turkmenistan IP unblocking and firewall testing",
-      "summary": "Cloudflare used historical data to investigate reports of potential new firewall tests in Turkmenistan. Shifts in TCP resets/timeouts across ASNs corroborate large-scale network control system changes.",
-      "published_ts": 1762174800,
-      "source_name": "Cloudflare Engineering Blog",
-      "score": 89
-    },
-    {
-      "url": "https://www.lemagit.fr/actualites/366634228/Ingestion-transformation-streaming-Snowflake-accelere-le-rythme",
-      "title": "Ingestion, transformation, streaming : Snowflake accélère le rythme",
-      "summary": "<p>S’il concentre principalement ses efforts sur l’ajout de fonctionnalités d’IA, Snowflake n’en oublie pas ses fondamentaux.</p> \n<p>Lors de sa conférence Build cette semaine, il a présenté la disponibilité générale (ou imminente) de plusieurs fonctionnalités ciblant les ingénieurs de données. Son objectif demeure l’unification d’un maximum de charges de travail sur sa plateforme. Tout en bousculant, au passage, la concurrence.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Snowflake se concentre sur l’ingestion et la transformation de données…\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Snowflake se concentre sur l’ingestion et la transformation de données…</h2>\n <p>D’abord, l’éditeur poursuit le déploiement de son service d’intégration de données, Openflow. <a href=\"https://www.lemagit.fr/actualites/366625496/Openflow-Snowflake-veut-unifier-lingestion-des-donnees-structurees-et-non-structurees\">Basé sur Apache NiFi et le rachat de Datavolo</a>, l’outil aura « bientôt » le droit, en « GA » (General Availability), à l’option Snowflake Deployment. En clair, les clients n’ont plus déployé eux-mêmes l’outil sur AWS ou Azure. Une suite de commandes permet d’installer OpenFlow <a href=\"https://www.lemagit.fr/actualites/366542916/Snowflake-devient-une-Data-PaaS\">depuis Snowpark Container Services</a>, l’instrumentation de Kubernetes et de Docker au besoin de l’éditeur.</p>\n <p>Après l’ingestion, la transformation. Snowpark Connect for Apache Spark doit permettre d’exécuter des DataFrame et des requêtes Spark SQL directement sur le «&nbsp;Data Cloud&nbsp;».</p>\n <p>Les ingénieurs et les data scientists peuvent utiliser des notebooks Jupyter (au sein de Snowflake ou non), Apache Airflow, Snowpark, ou encore Visual Studio Code.</p>\n <p>Il s’agit «&nbsp;d’éliminer la gestion des clusters Spark&nbsp;» et les coûts de sortie des données. Une solution qui serait 3&nbsp;fois plus rapide qu’un cluster Spark self-managed. Elle offrirait une réduction de 30&nbsp;% du coût total de possession.</p>\n <p>Snowflake cherche là à supplanter <a href=\"https://www.lemagit.fr/actualites/366626094/Databricks-aiguise-ses-outils-de-migration-dingestion-et-de-transformation-de-donnees\">Databricks sur son terrain de jeu de prédilection</a>. Tout en sachant pertinemment qu’il ne couvre qu’une portion des fonctionnalités du moteur de traitement mis sur pied par les cofondateurs de Databricks.</p>\n <p>Dans la même veine, l’éditeur a annoncé la disponibilité générale de dbt on Snowflake. En clair, il est possible de gérer et exécuter les pipelines de transformation dbt à même la plateforme. Il n’est plus nécessaire de déployer des instances AWS ou Azure séparées. Là, il s’agit <a href=\"https://www.lemagit.fr/actualites/366632811/Avec-son-moteur-Fusion-dbt-Labs-fait-la-chasse-aux-couts\">d’une alternative à dbt Cloud</a>.</p>\n</section>       \n<section class=\"section main-article-chapter\" data-menu-title=\"… si possible en temps réel\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>… si possible en temps réel</h2>\n <p>À cela s’ajoute un nouveau type de tables, bientôt en disponibilité générale. Les tables et les entrepôts «&nbsp;interactifs&nbsp;» sont optimisés pour l’ingestion et l’interrogation de données «&nbsp;sous la seconde&nbsp;». Ici, Snowflake s’appuie sur des flux de données Apache Kafka et le moteur Snowpipe Streaming.</p>\n <p>Il faut toutefois que les requêtes demeurent simples. Ensemble, les deux dispositifs permettraient d’alimenter des tableaux de bord en quasi temps réel, des API, ou les charges de travail hautement concurrentes. L’éditeur avait déjà <a href=\"https://www.lemagit.fr/actualites/366587992/Snowflake-embrasse-la-philosophie-data-as-code\">proposé les tables dynamiques</a>, servant à rafraîchir rapidement les données. Ici, il cherche principalement à fluidifier les projets de BI opérationnelle ou de machine learning en temps réel.</p>\n <p>Pour les développeurs,&nbsp;Snowflake met en place un espace de travail unifié, organisé en dossiers et en fichiers qui prend en charge les commandes SQL, les notebooks Python, les applications Streamlit et les pipelines de données. Il s’agit de centraliser les outils et les flux de travail à partir de ces workspaces rattachés à des dépôts Git (eux même potentiellement connecté à VS Code). En clair, les profils techniques peuvent pousser l’ensemble des actifs qu’ils conçoivent vers un seul environnement accessible aux métiers. Une initiative lancée en 2023.</p>\n <p>En préversion publique, une interface utilisateur doit permettre d’analyser les données à la recherche de problème de qualité, dont les biais, la fraîcheur, la précision, les valeurs manquantes, etc. Ici, la fonctionnalité est liée au système de lineage de la plateforme. L’objectif semble de proposer une fonctionnalité proche du Trust Score de Qlik Talend. «&nbsp;Nous avons introduit un certain nombre de fonctionnalités, à la fois dans le moteur de base et dans notre interface utilisateur, afin de permettre à nos clients de créer facilement des règles sur la qualité des données&nbsp;», précise Christian Kleinerman. «&nbsp;Il s’agit de savoir quand un jeu de données n’est pas conforme à certains critères&nbsp;».</p>\n</section>     \n<section class=\"section main-article-chapter\" data-menu-title=\"Le fail-over des tables Iceberg arrive\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Le fail-over des tables Iceberg arrive</h2>\n <p>Enfin, place aux administrateurs. Snowflake a annoncé la disponibilité générale d’une fonction de reprise après sinistre pour les tables Iceberg. Les objets et les bases de données sont copiés sur plusieurs régions cloud entre un compte Snowflake principal et un autre, secondaire. « Nous n’avons pas fait exprès, mais le moment est opportun », déclare Christian Kleinerman, vice-président directeur du produit chez Snowflake. « Beaucoup de nos clients ont été en mesure d’appliquer le fail-over lors de la panne [d’AWS] et faire de cet incident un non-événement. Ils veulent la même chose pour les tables Iceberg ».</p>\n <p>La prise en charge multirégion d’AWS PrivateLink et du trafic sortant pour Google Private Connect Service en disponibilité générale participe à cet effort. Les administrateurs peuvent d’ailleurs paramétrer des règles de gestion réseau depuis la console Snowflake.</p>\n <p>En outre, Performance Explorer permet d’acquérir des métriques plus précises sur la santé des environnements Snowflake, le volume de requêtes, les changements effectués sur les warehouses et les tables.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Un « rythme d’innovation effréné » ?\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Un «&nbsp;rythme d’innovation effréné&nbsp;» ?</h2>\n <p>Alors qu’il déclinait sa feuille de route sur deux ans (de la sortie d’une fonction en préversion privée à sa disponibilité générale), l’éditeur semble accélérer le mouvement.</p>\n <p>«&nbsp;Si vous considérez ce que nous avons fait au cours des six-douze derniers mois, le rythme de l’innovation chez Snowflake est effréné&nbsp;», affirme Christian Kleinerman en réponse à une question du MagIT. «&nbsp;Bon nombre des technologies en disponibilité générale cette semaine ont été introduites pour la première fois il y a six mois ou moins de six mois&nbsp;», assure-t-il. «&nbsp;Et ce qui est intéressant, c’est que nous avons une multitude d’innovations supplémentaires en cours que nous espérons présenter à nos clients dans le courant de l’année prochaine&nbsp;».</p>\n <p>Beaucoup d’entre elles concernent l’IA et l’IA agentique. Moins la gestion de données pure et dure. «&nbsp;Nous sommes en phase avec les priorités et tendances de l’industrie, et nous continuerons à les saisir pour servir nos clients&nbsp;».</p>\n <p>Il y a toutefois des fonctionnalités clés qui arrivent plus tardivement, du fait de cette course à l’échalote. Par exemple, l’accès unifié aux moteurs externes, dont Apache Spark, Flink, Python, Trino vient de passer en préversion privée. Cet ajout avait été présenté l’année dernière. Ces moteurs ne peuvent que lire les données des tables Iceberg managées à travers l’API REST d’Iceberg et Apache Polaris. La possibilité pour ces moteurs d’écrire des données sur les tables dans la plateforme est encore en cours de développement. C’est pourtant la clé d’une véritable ouverture de la plateforme.</p>\n <p>Enfin, certains clients et partenaires attendent encore des améliorations des tables hybrides.</p>\n</section>",
-      "published_ts": 1762527900,
-      "source_name": "LeMagIT",
-      "score": 85
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/google-repere-les-malware-qui-se-transforment-en-cours-dattaque-grace-a-lia-484646.htm#xtor=RSS-1",
-      "title": "Google repère les malware qui se transforment en cours d'attaque, grâce à l'IA",
-      "summary": "Les cyberattaquants ne se contentent plus d'utiliser l'IA pour peaufiner leurs courriels d'hameçonnage.",
-      "published_ts": 1762492300,
-      "source_name": "ZDNet France",
-      "score": 85
-    },
-    {
-      "url": "https://www.lemagit.fr/conseil/La-detection-et-la-reponse-dans-le-navigateur-comblent-de-relles-lacunes",
-      "title": "La détection et la réponse aux menaces dans le navigateur comblent de réelles lacunes",
-      "summary": "<p>Les logiciels de détection et de réponse ciblées sont devenus un élément essentiel de la sécurité des systèmes d’information. Ces derniers temps, il semble que pour chaque technologie utilisée par une organisation, il existe un outil de détection et de réponse dédié pour la sécuriser –&nbsp;comme la détection et la réponse du réseau (<a href=\"https://www.lemagit.fr/definition/Quest-ce-que-la-detection-et-reponse-dans-le-reseau-NDR\">NDR</a>), la détection et la réponse sur le terminal (<a href=\"https://www.lemagit.fr/definition/EDR-Endpoint-Detection-and-Response\">EDR</a>), la détection et la réponse des données, la détection et la réponse étendue (XDR) et bien d’autres encore.</p> \n<p>L’outil le plus récent à entrer en scène est la détection et la réponse dans le navigateur <em>(Browser Dectection and Response</em>, ou BDR).</p> \n<p>En bref, la BDR permet aux navigateurs de détecter, d’étudier et de répondre aux menaces qui proviennent d’eux, ou qui les traversent. La BDR s’attaque à un angle mort de plus en plus important. Les agents traditionnels pour les terminaux et les contrôles réseau passent souvent à côté des attaques sophistiquées basées sur le web, telles que le détournement de formulaires, les extensions malveillantes, le vol d’informations d’identification via des scripts injectés, le <a href=\"https://www.lemagit.fr/definition/Phishing\"><em>phishing</em></a> qui s’exécute dans le navigateur, les compromissions de la chaîne d’approvisionnement sur des JavaScript tiers et l’exfiltration de données orchestrée par des applications web ou des interfaces de discussion AI.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Comment fonctionne la BDR\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Comment fonctionne la BDR</h2>\n <p>La BDR place la logique de détection aussi près que possible du point d’interaction&nbsp;: le navigateur, qui tend aujourd’hui à servir de client principal pour les applications cloud, le webmail, le SaaS et les services tiers de la plupart des utilisateurs. La BDR capture la télémétrie et applique les contrôles là où les attaquants opèrent, réduisant ainsi le temps de détection et permettant un confinement plus rapide et plus précis.</p>\n <p>Le logiciel de BDR est généralement déployé de trois manières&nbsp;: en tant qu’extension de navigateur managée, en tant qu’agent de navigateur léger ou par l’intermédiaire d’une session de navigateur avec courtier, c’est-à-dire en isolant le navigateur à distance. Il recueille des données télémétriques, notamment les URL visitées, les modifications du modèle d’objet du document, les arbres d’exécution des scripts, les soumissions de formulaires, les opérations du presse-papiers, les téléchargements de fichiers et l’activité de l’extension. Ces données sont ensuite mises en corrélation avec l’identité de l’utilisateur, la localisation de l’appareil et le contexte de l’application cloud.</p>\n <p>Les profils de détection s’appuient sur des habitudes comportementales, des scores d’anomalie et des indicateurs de compromission, tels que des <em>iframes</em> injectés, des requêtes XMLHttp inattendues vers des domaines inhabituels et des modèles de collecte d’informations d’identification. Les réponses vont des avertissements dans le navigateur et du blocage des actions risquées –&nbsp;parmi lesquelles le téléchargement de fichiers et le collage de secrets&nbsp;–, à l’interruption automatique de la session, à la ré-authentification forcée ou au déclenchement de playbooks à partir de plateformes EDR et <a href=\"https://www.lemagit.fr/definition/SOAR\">SOAR</a> (Security Orchestration, Automation and Response).</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Ajouter la BDR pour un programme de sécurité complet\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Ajouter la BDR pour un programme de sécurité complet</h2>\n <p>La BDR complète les technologies EDR, <a href=\"https://www.lemagit.fr/definition/Passerelle-dacces-Cloud-securise\">CASB</a> (passerelle d’accès cloud sécurisé), les services d’accès sécurisé en périphérie et la protection contre la perte de données (<a href=\"https://www.lemagit.fr/definition/Prevention-des-fuites-de-donnees-DLP\">DLP</a>). Il améliore également la télémétrie <a href=\"https://www.lemagit.fr/definition/SIEM\">SIEM</a> et XDR avec des événements de navigation de haute fidélité, alimente les alertes dans SOAR pour l’orchestration et soutient les enquêtes forensiques en fournissant des données sources.</p>\n <p>Comme le navigateur se trouve à l’intersection de l’identité, des données et des applications, la BDR s’intègre souvent avec les fournisseurs d’identité pour le contexte de l’utilisateur, les CASB et la gestion de la posture de sécurité SaaS pour la posture de l’application, et les moteurs DLP pour la classification du contenu. Résultat&nbsp;: des réponses coordonnées et adaptées au contexte.</p>\n</section>   \n<section class=\"section main-article-chapter\" data-menu-title=\"Qui a besoin de BDR ?\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Qui a besoin de BDR&nbsp;?</h2>\n <p>Les organisations qui devraient évaluer la BDR sont celles qui ont une importante main-d’œuvre distante ou hybride, qui dépendent fortement des SaaS et des portails web, qui ont des exigences réglementaires élevées ou qui ont des applications web importantes en contact avec les clients qui traitent des données sensibles.</p>\n <p>L’adoption est motivée par plusieurs tendances, parmi lesquelles l’accélération de l’adoption des workflows cloud-native où tout se passe dans le navigateur, l’augmentation des attaques ciblées de la chaîne logistique web, le phishing sophistiqué qui échappe aux passerelles de sécurité des courriels, la prolifération des scripts tiers et des extensions de navigateur, et l’essor des outils d’IA non recensés qui exfiltrent des données en remplissant des formulaires et en participant à des sessions de discussion.</p>\n</section>   \n<section class=\"section main-article-chapter\" data-menu-title=\"Combler les lacunes\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Combler les lacunes</h2>\n <p>Il convient de noter que la BDR ne remplace pas l’EDR, le CASB ou les contrôles de réseau. Il les complète plutôt en fournissant un contexte et un contrôle plus complets au niveau du navigateur, que les autres outils ne peuvent pas capturer de manière fiable. Combinée, cette pile de détection et de réponse permet une visibilité et un contrôle à plusieurs niveaux sur les couches d’identité, d’extrémité, de réseau et d’application.</p>\n <p>La BDR comble une lacune critique dans les architectures de sécurité modernes en instrumentant l’environnement dans lequel la majorité des travaux et des attaques se produisent aujourd’hui. D’une certaine manière, le navigateur est vraiment le champ de bataille le plus répandu aujourd’hui.</p>\n <p>Un projet pilote de BDR soigneusement conçu, intégré aux workflows d’identité, de SIEM et de XDR et conçu en tenant compte de la protection de la vie privée, aide les entreprises à minimiser les risques liés au SaaS, au phishing ciblé et aux menaces de la chaîne d’approvisionnement en ligne. Cette approche peut mettre en évidence des risques précédemment non détectés et raccourcir les délais de détection et de réponse.</p>\n</section>",
-      "published_ts": 1762433700,
-      "source_name": "LeMagIT",
-      "score": 85
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/mise-a-jour-majeure-de-google-maps-lia-permet-desormais-de-discuter-avec-lapplication-484555.htm#xtor=RSS-1",
-      "title": "Mise à jour majeure de Google Maps : l'IA permet désormais de « discuter » avec l'application",
-      "summary": "Google Maps reçoit quatre mises à jour majeures basées sur la technologie Gemini.",
-      "published_ts": 1762413110,
-      "source_name": "ZDNet France",
-      "score": 85
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/accord-apple-google-pour-mettre-sur-pied-le-nouveau-siri-484625.htm#xtor=RSS-1",
-      "title": "Accord Apple / Google pour mettre sur pied le nouveau Siri",
-      "summary": "Apple se tourne vers Google pour propulser le nouvel Siri : un modèle d’IA à 1,2 trillion de paramètres, près d’un milliard de dollars par an, et un lancement prévu pour le printemps 2026. Un tournant majeur dans la stratégie d’assistant vocal d’Apple.",
-      "published_ts": 1762517498,
-      "source_name": "ZDNet France",
-      "score": 80
-    },
-    {
-      "url": "https://azure.microsoft.com/en-us/blog/microsoft-strengthens-sovereign-cloud-capabilities-with-new-services/",
-      "title": "Microsoft strengthens sovereign cloud capabilities with new services",
-      "summary": "We continue to adapt our sovereignty approach—innovating to meet customer needs and regulatory requirements within our Sovereign Public Cloud and Sovereign Private Cloud. We are announcing a new wave of capabilities, building upon our digital sovereignty controls, to deliver advanced AI and scale, strengthened by our ecosystem of specialized in-country partner experts. The post Microsoft strengthens sovereign cloud capabilities with new services appeared first on Microsoft Azure Blog .",
-      "published_ts": 1762326000,
-      "source_name": "Azure Blog",
-      "score": 74
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/la-filiere-nucleaire-dispose-desormais-de-son-data-space-data4nuclearx-484634.htm#xtor=RSS-1",
-      "title": "La filière nucléaire dispose désormais de son Data Space Data4NuclearX",
-      "summary": "6 acteurs du nucléaire et du numérique (EDF, CEA, Dawex, GIFEN, l’Institut Mines-Télécom et Sopra Steria) créent un espace numérique d’échange de données, un Data Space intitulé Data4NuclearX. Le déploiement est prévu pour 2028.",
-      "published_ts": 1762492280,
-      "source_name": "ZDNet France",
-      "score": 70
+      "url": "https://aws.amazon.com/blogs/big-data/scaling-data-governance-with-amazon-datazone-covestro-success-story/",
+      "title": "Scaling data governance with Amazon DataZone: Covestro success story",
+      "summary": "In this post, we show you how Covestro transformed its data architecture by implementing Amazon DataZone and AWS Serverless Data Lake Framework, transitioning from a centralized data lake to a data mesh architecture. The implementation enabled streamlined data access, better data quality, and stronger governance at scale, achieving a 70% reduction in time-to-market for over 1,000 data pipelines.",
+      "published_ts": 1762203726,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 53.02879601716995
     }
   ],
+  "dataprep_orchestration_etl": [],
+  "db_sql_olap": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://vutr.substack.com/p/i-spent-8-understanding-how-parquet",
+      "title": "I spent 8 hours understanding how Parquet actually stores the data.",
+      "summary": "From logical data representation to data encoding and compression.",
+      "published_ts": 1762226155,
+      "source_name": "VuTrinh · Data Engineering",
+      "score": 58.302869364619255
+    }
+  ],
+  "ml_ai": [],
+  "news": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-244",
+      "title": "Data Engineering Weekly #244",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1762161774,
+      "source_name": "Data Engineering Weekly",
+      "score": 68.24004653096199
+    },
+    {
+      "url": "https://seattledataguy.substack.com/p/5-things-in-data-engineering-that-d11",
+      "title": "5 Things in Data Engineering That Have Changed In The Last 10 Years",
+      "summary": "What Will Change Next?",
+      "published_ts": 1762532413,
+      "source_name": "Seattle Data Guy",
+      "score": 66.76180724799633
+    }
+  ],
+  "news_general": [],
   "python_polars_duckdb": [],
-  "viz_bi": [
-    {
-      "url": "https://www.zdnet.fr/guide-achat/test-chipolo-loop-ce-traceur-bluetooth-avec-boucle-est-une-alternative-interessante-a-lairtag-484547.htm#xtor=RSS-1",
-      "title": "Test Chipolo Loop : ce traceur Bluetooth avec boucle est une alternative intéressante à l’AirTag",
-      "summary": "Le traqueur d'Apple est excellent, mais il a ses limites. Celui-ci peut être attaché aux objets et son signal sonore est bien plus fort.",
-      "published_ts": 1762402299,
-      "source_name": "ZDNet France",
-      "score": 85
-    }
-  ]
+  "viz_bi": []
 }

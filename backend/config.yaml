@@ -1,11 +1,12 @@
-# =========================
-# Veille Tech — Configuration complète (version rééquilibrée)
-# =========================
-
+# ============================================
+#               STORAGE
+# ============================================
 storage:
   sqlite_path: "veille.db"
 
-# --------- CRAWL / FILTRAGE ---------
+# ============================================
+#               CRAWL
+# ============================================
 crawl:
   lookback_days: 7
   concurrency: 12
@@ -14,268 +15,381 @@ crawl:
   user_agent: "VeilleTechBot/1.0 (+https://example.local/veille)"
   min_text_length: 300
 
-  # ✅ On désactive la whitelist pour autoriser les articles Medium / Substack / Dev.to / Hashnode
+  # On ne met pas de whitelist → le filtrage se fait via regex + pertinence
   # whitelist_domains: []
 
-  # Toujours ignorés
-  blacklist_domains:
-    - reddit.com
-    - twitter.com
-    - x.com
-    - youtube.com
-    - producthunt.com
-    - github.com
-    - glassdoor.com
-    - community.*
-    - careers.*
 
-  # ✅ Autoriser plus de patterns de publication éditoriale
+  # URLs typiques d’articles éditoriaux
   path_allow_regex: "(?i)(/blog|/posts?|/post|/articles?|/news|/p/|^/@|/tag/|/t/|/n/|/stories?)"
   path_deny_regex:  "(?i)(forum|community|jobs|careers|events|release[-_ ]?notes|whats[-_ ]?new|changelog|\\bdocs?\\b|/api/|/sdk/|buzz|people|marketing|podcast|social)"
 
-# --------- EXPORT ---------
+# ============================================
+#               EXPORT
+# ============================================
 export:
   out_dir: "export"
-  make_markdown_digest: true
+  make_markdown_digest: true      # utilisé par veille_tech.py pour le digest brut
   max_items_per_cat: 60
 
-# --------- NOTIF (optionnel) ---------
+# ============================================
+#               NOTIFICATION (OPTIONNEL)
+# ============================================
 notify:
   slack_webhook_env: "SLACK_WEBHOOK_URL"
 
-# --------- CATEGORIES ---------
+# ============================================
+#               CATEGORIES (Data Engineer)
+# ============================================
 categories:
-  - key: "db_sql_olap"
-    title: "🔢 Bases de données & OLAP"
-    keywords: ["postgres","mysql","sql server","oracle","bigquery","snowflake","databricks","trino","duckdb","olap","warehouse","fabric","azure sql"]
+  - key: "warehouses_engines"
+    title: "🏛️ Warehouses & Query Engines"
+    keywords: ["snowflake","databricks","bigquery","redshift","athena","trino","duckdb","spark","starrocks","clickhouse","warehouse","lakehouse"]
 
-  - key: "dataprep_orchestration_etl"
-    title: "👨‍🔧 Data Prep & Orchestration (ELT/ETL)"
-    keywords: ["airbyte","airflow","dagster","prefect","dbt","dataform","sqlmesh","ingestion","transformation"]
+  - key: "etl_orchestration"
+    title: "🔄 Orchestration, ETL & Data Movement"
+    keywords: ["airflow","dagster","prefect","airbyte","meltano","dbt","sqlmesh","dataform","ingestion","pipeline","batch","elt","etl"]
 
-  - key: "python_polars_duckdb"
-    title: "🐍 Python, Polars, DuckDB"
-    keywords: ["python","polars","duckdb"]
+  - key: "data_modeling_governance"
+    title: "📐 Data Modeling, Governance & Quality"
+    keywords: ["data modeling","star schema","data vault","governance","catalog","lineage","quality","expectations","datafold","great expectations","unity catalog","semantic layer"]
 
-  - key: "viz_bi"
-    title: "📊 Data Viz & BI"
-    keywords: ["power bi","tableau","qlik","metabase","superset","looker","looker studio","excel","streamlit","omni","viz"]
+  - key: "lake_storage_formats"
+    title: "🗄️ Data Lakes, Storage & Formats"
+    keywords: ["parquet","iceberg","delta lake","hudi","s3","gcs","adls","lake","compaction","partitions","object storage"]
 
-  - key: "ml_ai"
-    title: "🔬 IA / ML"
-    keywords: ["machine learning","ml","ai","mlops","rag"]
+  - key: "cloud_infra_observability"
+    title: "☁️ Cloud, Infra & Observability"
+    keywords: ["aws","gcp","azure","ovh","terraform","kubernetes","k8s","cost","observability","monitoring","grafana","datadog","prometheus"]
 
-  - key: "cloud"
-    title: "🏛️ Cloud (AWS/GCP/Azure/OVH)"
-    keywords: ["aws","gcp","azure","ovh","bigquery","athena","redshift","synapse","fabric"]
+  - key: "python_analytics"
+    title: "🐍 Python, Analytics & Tools"
+    keywords: ["python","polars","pandas","duckdb","fastapi","sql","analytics engineering"]
 
-  - key: "news_general"
-    title: "📰 Tendances & Actus Tech (FR)"
-    keywords: ["ia","cloud","data","innovation","numérique","cybersécurité","technologie"]
+  - key: "ai_data_engineering"
+    title: "🤖 AI for Data Engineering"
+    keywords: ["mlops","llm","rag","genai","embedding","vector db","feature store","ml","ai"]
 
-# --------- SOURCES ---------
+  - key: "news"
+    title: "📰 Tech / Cloud / IA News"
+    keywords: ["ia","cloud","data","innovation","cybersécurité","technologie"]
+
+# ============================================
+#          THRESHOLDS PAR CATÉGORIE
+# ============================================
+# seuils sur final_score (0–100) pour la sélection par catégorie
+category_thresholds:
+  warehouses_engines: 50
+  etl_orchestration: 50
+  data_modeling_governance: 50
+  lake_storage_formats: 50
+  cloud_infra_observability: 55
+  python_analytics: 55
+  ai_data_engineering: 50
+  news: 60
+
+# ============================================
+#               SOURCES
+# ============================================
 sources:
-  # --- DB/OLAP ---
+
+  # --- DATA WAREHOUSE / ENGINES ---
   - name: "Snowflake Blog"
     url: "https://www.snowflake.com/blog/feed/"
+
   - name: "Databricks Blog"
-    url: "https://www.databricks.com/blog/feed"
+    url: "https://databricks.com/feed"
+
+  - name: "BigQuery Blog"
+    url: "https://cloud.google.com/bigquery/rss.xml"
+
+  - name: "Redshift / AWS Big Data"
+    url: "https://aws.amazon.com/blogs/big-data/feed/"
+
   - name: "DuckDB Blog"
     url: "https://duckdb.org/news/index.xml"
+
   - name: "Polars Blog"
     url: "https://www.pola.rs/feed.xml"
+
   - name: "Trino Blog"
     url: "https://trino.io/feed.xml"
 
-  # --- ELT / Orchestration / Transform ---
-  - name: "Astronomer Blog"
-    url: "https://www.astronomer.io/blog/rss.xml"
-  - name: "Airbyte Blog"
-    url: "https://airbyte.com/blog/rss.xml"
-  - name: "dlt Blog"
-    url: "https://dlthub.com/blog/rss.xml"
+  - name: "ClickHouse Blog"
+    url: "https://clickhouse.com/blog/rss"
+
+  - name: "StarRocks Blog"
+    url: "https://www.starrocks.io/blog/rss"
+
+
+  # --- ETL / ORCHESTRATION / TRANSFORM ---
   - name: "Apache Airflow Blog"
     url: "https://airflow.apache.org/feeds/blog.xml"
+
+  - name: "Astronomer Blog"
+    url: "https://www.astronomer.io/blog/rss.xml"
+
   - name: "Dagster Blog"
     url: "https://dagster.io/blog/rss.xml"
+
   - name: "Prefect Blog"
     url: "https://www.prefect.io/blog/rss.xml"
+
   - name: "dbt Blog"
     url: "https://www.getdbt.com/rss.xml"
+
+  - name: "SQLMesh Blog"
+    url: "https://sqlmesh.com/blog/feed.xml"
+
+  - name: "Airbyte Blog"
+    url: "https://airbyte.com/blog/rss.xml"
+
   - name: "Meltano Blog"
     url: "https://meltano.com/blog/index.xml"
-  - name: "Datafold Blog"
-    url: "https://www.datafold.com/blog/rss.xml"
+
+  - name: "dlt Blog"
+    url: "https://dlthub.com/blog/rss.xml"
+
   - name: "Rudderstack Blog"
     url: "https://www.rudderstack.com/blog/rss.xml"
 
-  # --- BI / Viz ---
-  - name: "Power BI Blog"
-    url: "https://powerbi.microsoft.com/en-us/blog/feed/"
-  - name: "Tableau Blog"
-    url: "https://www.tableau.com/blog/feed"
-  - name: "Qlik Blog"
-    url: "https://www.qlik.com/blog.rss"
-  - name: "Metabase Blog"
-    url: "https://www.metabase.com/blog/atom.xml"
-  - name: "Apache Superset Blog"
-    url: "https://superset.apache.org/atom.xml"
-  - name: "Looker Blog"
-    url: "https://cloud.google.com/looker/rss.xml"
-  - name: "Streamlit Blog"
-    url: "https://blog.streamlit.io/feed.xml"
 
-  # --- ML / AI ---
-  - name: "Google AI Blog"
-    url: "https://ai.googleblog.com/feeds/posts/default"
-  - name: "Hugging Face Blog"
-    url: "https://huggingface.co/blog/feed.xml"
-  - name: "LangChain Blog"
-    url: "https://blog.langchain.dev/rss/"
-  - name: "Pinecone Blog"
-    url: "https://www.pinecone.io/learn/feed.xml"
-  - name: "Weights & Biases Blog"
-    url: "https://wandb.ai/site/rss.xml"
-  - name: "Lightning AI Blog"
-    url: "https://lightning.ai/pages/blog/rss/"
+  # --- MODELING / GOVERNANCE / QUALITY ---
+  - name: "Datafold Blog"
+    url: "https://www.datafold.com/blog/rss.xml"
 
-  # --- Cloud / Infra / Observability ---
-  - name: "AWS Blog (global)"
+  - name: "Great Expectations Blog"
+    url: "https://greatexpectations.io/blog/feed"
+
+  - name: "Collibra Blog"
+    url: "https://www.collibra.com/us/en/blog/rss"
+
+
+  # --- STORAGE / FORMATS / LAKEHOUSE ---
+  - name: "Apache Iceberg"
+    url: "https://iceberg.apache.org/feed.xml"
+
+  - name: "Delta Lake"
+    url: "https://delta.io/blog/index.xml"
+
+  - name: "Apache Hudi"
+    url: "https://hudi.apache.org/blog/feed.xml"
+
+  - name: "MinIO Blog"
+    url: "https://blog.min.io/index.xml"
+
+
+  # --- CLOUD / INFRA / OBSERVABILITY ---
+  - name: "AWS Blog"
     url: "https://aws.amazon.com/blogs/aws/feed/"
-  - name: "Google Cloud (Announcements)"
-    url: "https://cloud.google.com/blog/topics/announcements/rss.xml"
+
+  - name: "Google Cloud Blog"
+    url: "https://cloud.google.com/blog/feeds/posts/default"
+
   - name: "Azure Blog"
     url: "https://azure.microsoft.com/en-us/blog/feed/"
-  - name: "Cloudflare Engineering Blog"
+
+  - name: "Cloudflare Engineering"
     url: "https://blog.cloudflare.com/rss/"
-  - name: "Grafana Labs Blog"
+
+  - name: "Grafana Labs"
     url: "https://grafana.com/blog/rss/"
-  - name: "DataDog Engineering"
+
+  - name: "Datadog Engineering"
     url: "https://www.datadoghq.com/blog/engineering/rss/"
 
-  # --- Python / Analytics ---
+
+  # --- PYTHON / TOOLS ---
   - name: "FastAPI Blog"
     url: "https://fastapi.tiangolo.com/feed.xml"
 
-  # --- 🇫🇷 FR / EU ---
+  - name: "Pydantic Blog"
+    url: "https://docs.pydantic.dev/latest/blog/feed.xml"
+
+
+  # --- AI FOR DATA ENGINEERS ---
+  - name: "Google AI Blog"
+    url: "https://ai.googleblog.com/feeds/posts/default"
+
+  - name: "Hugging Face Blog"
+    url: "https://huggingface.co/blog/feed.xml"
+
+  - name: "LangChain Blog"
+    url: "https://blog.langchain.dev/rss/"
+
+  - name: "Pinecone Blog"
+    url: "https://www.pinecone.io/learn/feed.xml"
+
+  - name: "Weights & Biases"
+    url: "https://wandb.ai/site/rss.xml"
+
+  - name: "Lightning AI"
+    url: "https://lightning.ai/pages/blog/rss/"
+
+
+  # --- 🇫🇷 / 🇪🇺 BLOGS TECH & CLOUD ---
   - name: "OCTO Talks!"
     url: "https://blog.octo.com/feed/"
+
+  - name: "Ippon Technologies Blog"
+    url: "https://blog.ippon.fr/feed.xml"
+
   - name: "OVHcloud Blog"
     url: "https://blog.ovhcloud.com/feed/"
-  - name: "Clever Cloud Blog"
-    url: "https://www.clever-cloud.com/blog/feed.xml"
+
   - name: "Scaleway Blog"
     url: "https://www.scaleway.com/en/blog/rss/"
+
+  - name: "Clever Cloud"
+    url: "https://www.clever-cloud.com/blog/feed.xml"
+
   - name: "Dataiku Blog"
     url: "https://blog.dataiku.com/rss.xml"
+
   - name: "Artefact Blog"
     url: "https://blog.artefact.com/feed/"
+
   - name: "Zenika Tech Blog"
     url: "https://blog.zenika.com/feed/"
+
   - name: "Theodo Tech Blog"
     url: "https://blog.theodo.com/feed/"
 
-  # --- 📰 Médias FR ---
-  - name: "BDM (Blog du Modérateur)"
-    url: "https://www.blogdumoderateur.com/feed/"
-  - name: "Siècle Digital"
-    url: "https://siecledigital.fr/feed/"
-  - name: "L’Usine Digitale"
-    url: "https://www.usine-digitale.fr/rss"
-  - name: "ZDNet France"
-    url: "https://www.zdnet.fr/feeds/rss/actualites/"
-  - name: "Numerama"
-    url: "https://www.numerama.com/feed/"
-  - name: "Le Big Data"
-    url: "https://www.lebigdata.fr/feed/"
-  - name: "ActuIA"
-    url: "https://www.actuia.com/feed/"
-  - name: "Journal du Net"
-    url: "https://www.journaldunet.com/rss/"
-  - name: "LeMagIT"
-    url: "https://www.lemagit.fr/rss"
-  - name: "Programmez!"
-    url: "https://www.programmez.com/rss"
 
-  # --- 🌐 Medium / Dev.to / Hashnode (ajouts) ---
+  # --- NEWSLETTERS DATA ENGINEERING ---
+  - name: "VuTrinh · Data Engineering"
+    url: "https://vutr.substack.com/feed"
+
+  - name: "Data Engineering Weekly"
+    url: "https://www.dataengineeringweekly.com/feed"
+
+  - name: "Start Data Engineering"
+    url: "https://www.startdataengineering.com/index.xml"
+
+  - name: "Seattle Data Guy"
+    url: "https://seattledataguy.substack.com/feed"
+
+  - name: "DataEngineer.io"
+    url: "https://blog.dataengineer.io/feed"
+
+  - name: "Blef · Data (FR)"
+    url: "https://www.blef.fr/blog/rss"
+
+
+  # --- MEDIUM / DEV.TO / HASHNODE (CIBLÉ UNIQUEMENT) ---
   - name: "Medium · Data Engineering"
     url: "https://medium.com/tag/data-engineering/rss"
+
   - name: "Medium · Data"
     url: "https://medium.com/tag/data/rss"
+
   - name: "Medium · Machine Learning"
     url: "https://medium.com/tag/machine-learning/rss"
-  - name: "Medium · Python"
-    url: "https://medium.com/tag/python/rss"
-  - name: "Medium · Data Visualization"
-    url: "https://medium.com/tag/data-visualization/rss"
+
   - name: "dev.to · data"
     url: "https://dev.to/t/data/rss"
+
   - name: "dev.to · datascience"
     url: "https://dev.to/t/datascience/rss"
+
   - name: "dev.to · machinelearning"
     url: "https://dev.to/t/machinelearning/rss"
+
+  - name: "dev.to · dataengineering"
+    url: "https://dev.to/t/dataengineering/rss"
+
   - name: "Hashnode · data"
     url: "https://hashnode.com/n/data/rss"
+
   - name: "Hashnode · machine-learning"
     url: "https://hashnode.com/n/machine-learning/rss"
 
-# --------- LLM (Groq OpenAI-compatible) ---------
+
+  # --- AGRÉGATEUR (OPTIONNEL) ---
+  - name: "daily.dev"
+    url: "https://daily.dev"
+
+# ============================================
+#           CONFIG PERTINENCE (relevance)
+# ============================================
+relevance:
+  # Score global = combinaison de ces 4 composantes (0–100 chacune)
+  weights:
+    semantic: 0.55
+    source:   0.20
+    quality:  0.15
+    tech:     0.10
+
+  # Score minimal par défaut pour considérer un article "bon"
+  score_threshold: 60
+
+  # Profil de veille pour les embeddings
+  profile_text: >
+    data engineering, data platform, data warehouse, lakehouse, dbt, airflow,
+    dagster, prefect, spark, snowflake, databricks, bigquery, redshift, duckdb,
+    orchestration, ingestion, etl, elt, data modeling, governance, quality,
+    monitoring, observability, data contracts, lakehouse, iceberg, delta lake.
+
+  # Poids des sources (0–1). Le reste tombe à 0.4 par défaut.
+  source_weights:
+    "Data Engineering Weekly": 1.0
+    "VuTrinh · Data Engineering": 1.0
+    "Start Data Engineering": 0.95
+    "Seattle Data Guy": 0.95
+    "Blef · Data (FR)": 0.90
+    "Snowflake Blog": 0.70
+    "Databricks Blog": 0.70
+    "dbt Blog": 0.70
+    "Dagster Blog": 0.70
+    "Apache Airflow Blog": 0.70
+    "Airbyte Blog": 0.70
+    "Meltano Blog": 0.70
+    "dlt Blog": 0.70
+    "OCTO Talks!": 0.70
+    "Ippon Technologies Blog": 0.70
+    "Zenika Tech Blog": 0.70
+    "Dataiku Blog": 0.70
+    "daily.dev": 0.30
+
+  quality:
+    min_len_good: 1500        # >1500 caractères => vrai article
+    bonus_good_len: 20
+    bonus_has_code: 10        # blocs de code markdown / HTML
+
+  tech:
+    keywords:
+      - "airflow"
+      - "dagster"
+      - "prefect"
+      - "dbt"
+      - "spark"
+      - "lakehouse"
+      - "iceberg"
+      - "delta lake"
+      - "hudi"
+      - "warehouse"
+      - "orchestration"
+      - "etl"
+      - "elt"
+      - "kafka"
+      - "data contract"
+      - "feature store"
+      - "rag"
+      - "llm"
+    max_points: 20
+
+# ============================================
+#        CONFIG LLM (pour le résumé)
+# ============================================
 llm:
   provider: "openai_compat"
   base_url: "https://api.groq.com/openai/v1"
   api_key_env: "GROQ_API_KEY"
   model: "llama-3.1-8b-instant"
   temperature: 0.2
-  max_tokens: 400
-  concurrent: 1
-  score_threshold: 60
+  max_tokens: 1200
 
-# --------- SEUILS ---------
-category_thresholds:
-  db_sql_olap: 58
-  dataprep_orchestration_etl: 62
-  python_polars_duckdb: 55
-  viz_bi: 65
-  ml_ai: 62
-  cloud: 70
-  news_general: 70
-
-# --------- HEURISTIQUES ---------
-heuristics:
-  trusted_sources:
-    - "DuckDB Blog"
-    - "Polars Blog"
-    - "Databricks Blog"
-    - "Snowflake Blog"
-    - "Google Cloud Blog"
-    - "Power BI Blog"
-    - "OCTO Talks!"
-    - "OVHcloud Blog"
-    - "Scaleway Blog"
-    - "Dataiku Blog"
-
-  bonuses:
-    trusted_source: 5
-    deep_content_min_len: 2500
-    deep_content_bonus: 5
-    editorial_url_bonus: 4
-
-  penalties:
-    deny_paths_penalty: 15
-
-  regex:
-    allow_path: "(?i)(/blog|/posts?|/post|/articles?|/news|/p/|^/@|/tag/|/t/|/n/|/stories?)"
-    deny_path:  "(?i)(release[-_ ]?notes|whats[-_ ]?new|changelog|\\bdocs?\\b|/api/|/sdk/)"
-
-  boost_keywords: ["vector search","columnar","DAG","late materialization"]
-  boost_points: 4
-  down_keywords: ["release notes","GA","monthly updates","changelog","Dagster"]
-  down_points: 5
-
-# --------- RÉSUMÉ IA ---------
 summary:
   enabled: true
-  lookback_days: 7
-  min_score: 60
   max_sections: 8
   links_per_section: 5
+  min_score: 45   # score minimal pour qu’un article entre dans le résumé

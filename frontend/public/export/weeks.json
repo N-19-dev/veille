@@ -1,16 +1,23 @@
 [
   {
-    "week": "2025w45",
-    "range": "2025-11-03 → 2025-11-10",
-    "summary_md": "export/2025w45/ai_summary.md",
-    "top3_md": "export/2025w45/top3.md",
-    "selection_json": "export/2025w45/ai_selection.json"
+    "week": "2025w47",
+    "range": "2025-11-17 → 2025-11-24",
+    "top3_md": "export/2025w47/top3.md",
+    "selection_json": "export/2025w47/ai_selection.json",
+    "selection_md": "export/2025w47/ai_selection.md"
   },
   {
-    "week": "2025w44",
-    "range": "2025-10-27 → 2025-11-03",
-    "summary_md": "export/2025w44/ai_summary.md",
-    "top3_md": "export/2025w44/top3.md",
-    "selection_json": "export/2025w44/ai_selection.json"
+    "week": "2025w46",
+    "range": "2025-11-10 → 2025-11-17",
+    "top3_md": "export/2025w46/top3.md",
+    "selection_json": "export/2025w46/ai_selection.json",
+    "selection_md": "export/2025w46/ai_selection.md"
+  },
+  {
+    "week": "2025w45",
+    "range": "2025-11-03 → 2025-11-10",
+    "top3_md": "export/2025w45/top3.md",
+    "selection_json": "export/2025w45/ai_selection.json",
+    "selection_md": "export/2025w45/ai_selection.md"
   }
 ]

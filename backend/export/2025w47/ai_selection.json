@@ -25,7 +25,6 @@
       "score": 54.94231495261192
     }
   ],
-  "cloud": [],
   "cloud_infra_observability": [
     {
       "url": "https://aws.amazon.com/blogs/big-data/getting-started-with-amazon-s3-tables-in-amazon-sagemaker-unified-studio/",
@@ -78,8 +77,6 @@
       "score": 51.97106593847275
     }
   ],
-  "dataprep_orchestration_etl": [],
-  "db_sql_olap": [],
   "etl_orchestration": [
     {
       "url": "https://www.databricks.com/blog/new-way-build-pipelines-databricks-introducing-ide-data-engineering",
@@ -108,7 +105,6 @@
   ],
   "hors_sujet": [],
   "lake_storage_formats": [],
-  "ml_ai": [],
   "news": [
     {
       "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-246",
@@ -121,8 +117,6 @@
   ],
   "news_general": [],
   "python_analytics": [],
-  "python_polars_duckdb": [],
-  "viz_bi": [],
   "warehouses_engines": [
     {
       "url": "https://www.databricks.com/blog/databricks-named-leader-2025-gartner-magic-quadrant-cloud-database-management-systems",

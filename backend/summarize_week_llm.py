@@ -25,15 +25,22 @@ SUMMARY_SYSTEM_PROMPT = """Tu es un assistant de veille techno (data/analytics/B
 Objectif: produire un résumé hebdomadaire clair, actionnable, concis.
 
 Structure (Markdown):
-1) "## 🟦 Aperçu général de la semaine"
+1) "## Aperçu général de la semaine"
    - 1–2 paragraphes ou 5–8 puces max (tendances transversales)
-2) Sections par thèmes (mêmes titres que fournis), 3–6 puces max
+2) Sections par thèmes (mêmes titres que fournis)
+   - Pour chaque section, COPIE EXACTEMENT les liens fournis dans le contexte
+   - Format OBLIGATOIRE pour chaque lien : - [Titre](url) — Source · Date · **Score/100**
+   - Utilise TOUJOURS le tiret "-" (pas "*" ni "•")
+   - NE MODIFIE PAS les liens, scores ou dates fournis
+   - Tu peux ajouter un court commentaire APRÈS chaque lien si pertinent
    - Termine CHAQUE section par "**À creuser :**" avec quelques liens si disponibles
 
 Règles:
 - Français pro, concis. Pas d'invention : s'appuyer sur le contexte donné.
 - Ne pas mettre la réponse dans un bloc de code.
+- CONSERVE le format EXACT des liens du contexte (ne les réécris pas).
 """
+
 
 def build_summary_context(
     items: List[Dict[str, Any]],
@@ -132,6 +139,20 @@ def ensure_all_sections_ordered(
             body = _normalize_creuser_lists(body.strip())
             # On enlève un éventuel premier titre Hx parasite
             body = re.sub(r"(?m)^\s*#{1,6}\s+.*$", "", body, count=1).strip()
+            
+            # Supprimer les lignes qui répètent le titre de la section au début du contenu
+            # Par exemple, si le titre est "🏛️ Warehouses & Query Engines"
+            # et que la première ligne du body est "🏛️ Warehouses & Query Engines", on la supprime
+            lines = body.split('\n')
+            if lines and lines[0].strip():
+                # Nettoyer le titre et la première ligne pour comparaison
+                clean_title = re.sub(r'[^\w\s]', '', h.strip().lower())
+                clean_first_line = re.sub(r'[^\w\s]', '', lines[0].strip().lower())
+                # Si la première ligne est similaire au titre (au moins 70% de correspondance)
+                if clean_first_line and clean_title in clean_first_line or clean_first_line in clean_title:
+                    lines = lines[1:]  # Supprimer la première ligne
+                    body = '\n'.join(lines).strip()
+            
             content_by_title[h.strip()] = body
 
     overview_key = "Aperçu général de la semaine"

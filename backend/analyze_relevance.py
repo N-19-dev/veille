@@ -367,6 +367,7 @@ def write_weeks_index(out_root: Path):
             "top3_md": f"export/{w}/top3.md",
             "selection_json": f"export/{w}/ai_selection.json",
             "selection_md": f"export/{w}/ai_selection.md",
+            "summary_md": f"export/{w}/ai_summary.md",  # Ajout du champ summary_md
         })
 
     (out_root / "weeks.json").write_text(

@@ -1,18 +1,18 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/",
-      "title": "Finding the grain of sand in a heap of Salt",
-      "summary": "We explore the fundamentals of Saltstack and how we use it at Cloudflare. We also explain how we built the infrastructure to reduce release delays due to Salt failures on the edge by over 5%.",
-      "published_ts": 1763042400,
-      "source_name": "Cloudflare Engineering"
+      "url": "https://www.databricks.com/blog/native-openai-models-now-generally-available-databricks",
+      "title": "Native OpenAI Models Now Generally Available on Databricks",
+      "summary": "OpenAI models, including GPT-5.1, are now generally available on the Databricks Data...",
+      "published_ts": 1763056800,
+      "source_name": "Databricks Blog"
     },
     {
-      "url": "https://huggingface.co/blog/google-cloud",
-      "title": "Building for an Open Future - our new partnership with Google Cloud",
-      "summary": "Building for an Open Future - our new partnership with Google Cloud\nToday, we are happy to announce a new and deeper partnership with Google Cloud, to enable companies to build their own AI with open models.\n“Google has made some of the most impactful contributions to open AI, from the OG transforme",
-      "published_ts": 1762992000,
-      "source_name": "Hugging Face Blog"
+      "url": "https://dagster.io/blog/compass-now-available",
+      "title": "Compass: AI Data Analysis for Your Warehouse, in Slack",
+      "summary": "Connect your Snowflake, BigQuery, Redshift, or Databricks warehouse to Compass and get AI-powered answers in Slack. Your data stays where it is. Your governance stays intact. Available now.",
+      "published_ts": 1763054436,
+      "source_name": "Dagster Blog"
     },
     {
       "url": "https://www.databricks.com/blog/introducing-databricks-cross-industry-partner-accelerators-agentic-ai-genai-and-llmops",
@@ -22,36 +22,70 @@
       "source_name": "Databricks Blog"
     },
     {
-      "url": "https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/",
-      "title": "Connecting to production: the architecture of remote bindings",
-      "summary": "Remote bindings allow you to connect your local Worker code to deployed Cloudflare resources like R2 and D1. Come along on the technical journey of how we built this feature to create a seamless local development experience.",
-      "published_ts": 1762956000,
-      "source_name": "Cloudflare Engineering"
+      "url": "https://www.lebigdata.fr/openai-en-panique-son-ia-ressuscite-des-stars-sans-autorisation",
+      "title": "OpenAI en panique : son IA ressuscite des stars sans autorisation",
+      "summary": "Faire parler un défunt, Sora 2, l’IA générateur de vidéos d’OpenAI, l’a fait. Quoique, tout le monde n’est pas émerveillé … Cet article OpenAI en panique : son IA ressuscite des stars sans autorisation a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762885477,
+      "source_name": "Le Big Data"
     },
     {
-      "url": "http://www.dataiku.com/stories/blog/modernizing-analytics-with-dataiku-and-snowflake",
-      "title": "Modernizing Analytics With Dataiku and Snowflake",
-      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
-      "published_ts": 1762871367,
-      "source_name": "Dataiku Blog"
-    }
-  ],
-  "cloud": [
-    {
-      "url": "https://aws.amazon.com/blogs/aws/secure-eks-clusters-with-the-new-support-for-amazon-eks-in-aws-backup/",
-      "title": "Secure EKS clusters with the new support for Amazon EKS in AWS Backup",
-      "summary": "AWS Backup now supports Amazon EKS, providing a fully managed, centralized solution to back up and restore Kubernetes clusters and application data without requiring custom scripts or third-party tools.",
-      "published_ts": 1762810229,
-      "source_name": "AWS Blog (global)"
+      "url": "https://www.databricks.com/blog/building-agentic-food-label-reader-greater-transparency",
+      "title": "Building an Agentic Food Label Reader for Greater Transparency",
+      "summary": "Customer expectations for food labeling have undergone a fundamental shift. According...",
+      "published_ts": 1762884900,
+      "source_name": "Databricks Blog"
     },
     {
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-amazon-ec2-and-more-november-10-2025/",
-      "title": "AWS Weekly Roundup: Amazon S3, Amazon EC2, and more (November 10, 2025)",
-      "summary": "AWS re:Invent 2025 is only 3 weeks away and I’m already looking forward to the new launches and announcements at the conference. Last year brought 60,000 attendees from across the globe to Las Vegas, Nevada, and the atmosphere was amazing. Registration is still open for AWS re:Invent 2025. We hope you’ll join us in Las Vegas […]",
-      "published_ts": 1762792718,
-      "source_name": "AWS Blog (global)"
+      "url": "https://www.databricks.com/blog/unlocking-future-automotive-industry-part-2-implementing-scalable-geospatial-analytics-ai",
+      "title": "Unlocking the future of the Automotive Industry (Part 2): Implementing Scalable Geospatial Analytics & AI",
+      "summary": "In Part 1, we explored core concepts and datasets driving geospatial analytics in...",
+      "published_ts": 1762882200,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://www.lebigdata.fr/openai-booste-ses-nouveaux-modeles-pour-de-meilleures-performances",
+      "title": "OpenAI booste ses nouveaux modèles pour de meilleures performances",
+      "summary": "OpenAI continue d’accélérer dans la course à l’intelligence artificielle en développant de nouveaux modèles. GPT-5 est sorti en août 2025 … Cet article OpenAI booste ses nouveaux modèles pour de meilleures performances a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762878600,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/11/llm-assistance/",
+      "title": "Using Jest and LLM assistance to test your real-time chat",
+      "summary": "In the\nprevious article\n, we delved into creating a simple web server that serves static files, flat file database that uses lock and the API endpoints that allows for real-time chat interaction. In this article, we’ll follow-up by taking a look into writing unit tests for our flat file database to ",
+      "published_ts": 1762840995,
+      "source_name": "Zenika Tech Blog"
+    },
+    {
+      "url": "https://vutr.substack.com/p/i-spent-8-hours-learning-about-vector",
+      "title": "I spent 8 hours learning about vector databases",
+      "summary": "From their typical workload, how it stores to how it serves the data",
+      "published_ts": 1762830936,
+      "source_name": "VuTrinh · Data Engineering"
+    },
+    {
+      "url": "https://www.lemagit.fr/conseil/Adoption-de-lIA-Gartner-appelle-les-DSI-a-former-et-a-cibler-les-bons-cas-dusage",
+      "title": "Adoption de l’IA : Gartner appelle les DSI à former et à cibler les bons cas d’usage",
+      "summary": "<p>L’arrivée massive des outils d’IA dans l’entreprise, souvent par des outils qui viennent du grand public, est un vrai défi pour les DSI. C’est ce qu’a récemment rappelé Gartner IT Symposium/Xpo, un évènement auquel ont assisté nos collègues de <a href=\"https://www.ciodive.com/\">CIO Dive</a> (groupe Informa TechTarget dont fait partie LeMagIT).</p> \n<p>Pour Guy Fruda, directeur de l’expérience client chez Deloitte qui a participé à une table ronde lors du Symposium, la formation est pourtant la condition <i>sine qua non</i> pour tirer de la valeur de l’IA.</p> \n<p>«&nbsp;Si vous ne formez pas les gens à s’en servir, c’est comme si vous me donniez un burin, un marteau et un bloc de marbre en me disant&nbsp;: “Fais-en quelque chose.” Vous ne voudrez pas voir le résultat, et encore moins l’acheter&nbsp;», a-t-il plaisanté.</p> \n<p>Selon Gartner, pour déployer l’IA à grande échelle, les dirigeants doivent hiérarchiser les cas d’usage, <a href=\"https://www.lemagit.fr/conseil/Former-les-salaries-a-lIA-les-douze-etapes-cles\">créer des programmes de formation</a> – ciblés en fonction des publics – et encourager l’expérimentation. Le tout en mettant en place <a href=\"https://www.lemagit.fr/conseil/Comment-eviter-les-derives-de-lIA-agentique\">des garde-fous pour encadrer les risques</a> liés à la sécurité et à la fiabilité des résultats.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Se focaliser sur les cas d’usages à réelle valeur métier\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Se focaliser sur les cas d’usages à réelle valeur métier</h2>\n <p>En France, c’est exactement <a href=\"https://www.lemagit.fr/etude/DSI-les-conseils-de-Kaufman-Broad-pour-favoriser-la-culture-IA\">ce qu’a mis en place le DSI de Kaufman &amp; Broad</a>, Philippe&nbsp;Minier, pour favoriser une culture IA au sein du groupe immobilier depuis plus de deux ans.</p>\n <p>« Nous n’avons pas cherché à faire de grands chantiers techniques. Nous avons essayé de faire des démonstrateurs simples, utiles, qui parlent aux métiers », résume Philippe Minier, DSI du groupe qui partageait ses conseils lors de la journée de l’AUFO (club utilisateur d’Oracle) à Paris début novembre.</p>\n <blockquote class=\"main-article-pullquote\">\n  <div class=\"main-article-pullquote-inner\">\n   <figure>\n    «&nbsp;Nous avons essayé de faire des démonstrateurs simples, utiles, qui parlent aux métiers.&nbsp;»\n   </figure>\n   <figcaption>\n    <strong>Philippe Minier</strong>DSI de Kaufman &amp; Broad\n   </figcaption>\n   <i class=\"icon\" data-icon=\"z\"></i>\n  </div>\n </blockquote>\n <p>Au Gartner IT Symposium/Xpo, May Yap, la DSI du fabricant américain d’appareils électroménagers, électriques et électroniques Jabil, a partagé sur scène une expérience similaire.</p>\n <p>«&nbsp;Nous avons mis en place ce que nous appelons un <i>AI and Data Council</i>, où j’ai sélectionné des responsables seniors de chaque fonction – business, opérations, RH, finances et juridique&nbsp;», explique-t-elle.</p>\n <p>Ce conseil a défini trois domaines prioritaires d’investissement&nbsp;: la vision par ordinateur (<a href=\"https://www.lemagit.fr/definition/Vision-par-ordinateur-machine-vision-computer-vision\">computer vision</a>), <a href=\"https://www.lemagit.fr/conseil/IA-machine-learning-deep-learning-IA-generative-quelles-differences\">le machine learning pour la prévision et l’IA générative</a>.</p>\n <p>«&nbsp;Nous devons toujours garder en tête le cas d’usage&nbsp;», insiste May Yap. «&nbsp;Il faut savoir à quel problème concret ou à quelle opportunité métier nous cherchons à répondre.&nbsp;»</p>\n <p>«&nbsp;Les <a href=\"https://www.lemagit.fr/conseil/Intelligence-Artificielle-cinq-conseils-pour-bien-choisir-ses-premiers-cas-dusage\">cas d’usage qui améliorent directement la productivité</a> sont ceux qui convainquent le plus vite&nbsp;», acquiesce Guy Fruda. « Si vous recevez vingt appels par jour pour réinitialiser des mots de passe, pourquoi ne pas confier cela à un agent qui pourra automatiser ces tâches répétitives ? », illustre-t-il.</p>\n</section>         \n<section class=\"section main-article-chapter\" data-menu-title=\"Former les collaborateurs, encadrer les usages\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Former les collaborateurs, encadrer les usages</h2>\n <p>Pour favoriser l’adoption de l’IA, Deloitte a également intégré des modules de formation dans son programme de développement, Deloitte University.</p>\n <p>Le groupe propose également une formation spécifique sur <a href=\"https://www.lemagit.fr/actualites/366592816/De-lIA-generative-a-lIA-agentique-rapport\">l’IA agentique</a> (en fait des assistants), destinée à aider les salariés à comprendre quels outils utiliser et dans quel contexte.</p>\n <p>«&nbsp;Nous avons cherché à offrir aux employés un moyen d’apprendre et d’expérimenter sans mettre en danger nos données&nbsp;», explique Guy Fruda. «&nbsp;Nous avons créé notre propre agent, appelé <i>Sidekick</i>. L’idée est qu’il soit protégé par davantage de pare-feu, afin que chacun puisse le tester et l’utiliser sans craindre pour les données de Deloitte ou celles de nos clients.&nbsp;»</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Maintenir la vigilance face aux erreurs de l’IA\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Maintenir la vigilance face aux erreurs de l’IA</h2>\n <p>L’un des plus grands défis reste la fiabilité des réponses générées par les grands modèles de langage. Pour Art Thompson, DSI de la ville de Détroit, également présent au Symposium, il est essentiel de <a href=\"https://www.lemagit.fr/conseil/Comment-fixer-des-regles-claires-pour-un-usage-sur-de-ChatGPT-en-entreprise\">vérifier systématique les outputs de l’IA</a>.</p>\n <p>«&nbsp;Je suis plutôt du côté des prudents&nbsp;», admet-il. «&nbsp;Mais l’enjeu, c’est de s’assurer que tout le monde partage une compréhension commune de ce qu’est réellement l’IA.&nbsp;» Par exemple en comprenant que l’IA générative est une IA probabiliste, qui peut halluciner et qui doivent donc être relues, à la différence d’autres formes d’IA, déterministes, comme le prédictif.</p>\n <p>D’où l’importance, pour Gartner, de <a href=\"https://www.lemagit.fr/actualites/366633467/Gartner-prevoit-un-retour-en-force-de-lesprit-critique-face-a-lIA-generative\">cultiver plus que jamais l’esprit critique</a> au sein de des équipes.</p>\n</section>",
+      "published_ts": 1762777860,
+      "source_name": "LeMagIT"
+    },
+    {
+      "url": "https://www.zdnet.fr/pratique/ia-pratique-creez-votre-presentation-avec-la-derniere-mise-a-jour-de-gemini-484655.htm#xtor=RSS-1",
+      "title": "IA pratique : créez votre présentation avec la dernière mise à jour de Gemini",
+      "summary": "Vous avez du mal avec vos diapositives ? Voici comment le chatbot d’intelligence artificielle de Google peut vous aider à divers niveaux à peaufiner votre prestation.",
+      "published_ts": 1762765866,
+      "source_name": "ZDNet France"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/un-nouveau-modele-dia-chinois-gratuit-pretend-surpasser-gpt-5-et-sonnet-4-5-484684.htm#xtor=RSS-1",
+      "title": "Un nouveau modèle d'IA chinois gratuit prétend surpasser GPT-5 et Sonnet 4.5",
+      "summary": "La course en matière d'IA entre les États-Unis et la Chine vient de s'intensifier, une fois de plus.",
+      "published_ts": 1762762295,
+      "source_name": "ZDNet France"
     }
   ],
+  "cloud": [],
   "cloud_infra_observability": [
     {
       "url": "https://aws.amazon.com/blogs/aws/aws-lambda-enhances-sqs-processing-with-new-provisioned-mode-3x-faster-scaling-16x-higher-capacity/",
@@ -61,6 +95,13 @@
       "source_name": "AWS Blog"
     },
     {
+      "url": "https://aws.amazon.com/blogs/big-data/your-guide-to-aws-analytics-at-aws-reinvent-2025/",
+      "title": "Your guide to AWS Analytics at AWS re:Invent 2025",
+      "summary": "It’s that time of year again — AWS re:Invent is here! At re:Invent, bold ideas come to life. Get a front-row seat to hear inspiring stories from AWS experts, customers, and leaders as they explore today’s most impactful topics, from data analytics to AI. For all the data enthusiasts and professionals, we’ve curated a comprehensive […]",
+      "published_ts": 1763064379,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
       "url": "https://aws.amazon.com/blogs/aws/introducing-aws-iot-core-device-location-integration-with-amazon-sidewalk/",
       "title": "Introducing AWS IoT Core Device Location integration with Amazon Sidewalk",
       "summary": "AWS IoT Core Device Location service enables Amazon Sidewalk devices to resolve location data without GPS modules, allowing cost-effective asset tracking solutions using Sidewalk's network infrastructure.",
@@ -68,11 +109,18 @@
       "source_name": "AWS Blog"
     },
     {
-      "url": "https://aws.amazon.com/blogs/aws/introducing-our-final-aws-heroes-of-2025/",
-      "title": "Introducing Our Final AWS Heroes of 2025",
-      "summary": "With AWS re:Invent approaching, we’re celebrating three exceptional AWS Heroes whose diverse journeys and commitment to knowledge sharing are empowering builders worldwide. From advancing women in tech and rural communities to bridging academic and industry expertise and pioneering enterprise AI solutions, these leaders exemplify the innovative spirit that drives our community forward. Their stories showcase […]",
-      "published_ts": 1762977901,
-      "source_name": "AWS Blog"
+      "url": "https://blog.cloudflare.com/finding-the-grain-of-sand-in-a-heap-of-salt/",
+      "title": "Finding the grain of sand in a heap of Salt",
+      "summary": "We explore the fundamentals of Saltstack and how we use it at Cloudflare. We also explain how we built the infrastructure to reduce release delays due to Salt failures on the edge by over 5%.",
+      "published_ts": 1763042400,
+      "source_name": "Cloudflare Engineering"
+    },
+    {
+      "url": "https://blog.cloudflare.com/connecting-to-production-the-architecture-of-remote-bindings/",
+      "title": "Connecting to production: the architecture of remote bindings",
+      "summary": "Remote bindings allow you to connect your local Worker code to deployed Cloudflare resources like R2 and D1. Come along on the technical journey of how we built this feature to create a seamless local development experience.",
+      "published_ts": 1762956000,
+      "source_name": "Cloudflare Engineering"
     },
     {
       "url": "https://aws.amazon.com/blogs/big-data/introducing-the-amazon-opensearch-lens-for-the-aws-well-architected-framework/",
@@ -89,37 +137,53 @@
       "source_name": "Redshift / AWS Big Data"
     },
     {
+      "url": "https://aws.amazon.com/blogs/big-data/analyzing-amazon-ec2-spot-instance-interruptions-by-using-event-driven-architecture/",
+      "title": "Analyzing Amazon EC2 Spot instance interruptions by using event-driven architecture",
+      "summary": "In this post, you'll learn how to build this comprehensive monitoring solution step-by-step. You'll gain practical experience designing an event-driven pipeline, implementing data processing workflows, and creating insightful dashboards that help you track interruption trends, optimize ASG configurations, and improve the resilience of your Spot Instance workloads.",
+      "published_ts": 1762812320,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/secure-eks-clusters-with-the-new-support-for-amazon-eks-in-aws-backup/",
+      "title": "Secure EKS clusters with the new support for Amazon EKS in AWS Backup",
+      "summary": "AWS Backup now supports Amazon EKS, providing a fully managed, centralized solution to back up and restore Kubernetes clusters and application data without requiring custom scripts or third-party tools.",
+      "published_ts": 1762810229,
+      "source_name": "AWS Blog (global)"
+    },
+    {
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-amazon-ec2-and-more-november-10-2025/",
-      "title": "AWS Weekly Roundup: OpenAI partnership, Jane Goodall Institute research archive, and more (November 10, 2025)",
+      "title": "AWS Weekly Roundup: Amazon S3, Amazon EC2, and more (November 10, 2025)",
       "summary": "AWS re:Invent 2025 is only 3 weeks away and I’m already looking forward to the new launches and announcements at the conference. Last year brought 60,000 attendees from across the globe to Las Vegas, Nevada, and the atmosphere was amazing. Registration is still open for AWS re:Invent 2025. We hope you’ll join us in Las Vegas […]",
       "published_ts": 1762792718,
-      "source_name": "AWS Blog"
+      "source_name": "AWS Blog (global)"
     }
   ],
   "data_modeling_governance": [
+    {
+      "url": "https://blog.octo.com/du-dataset-jetable-au-data-product-perenne--comment-le-data-mesh-transforme-notre-rapport-a-la-donnee",
+      "title": "Du dataset jetable au data product pérenne : comment le data mesh transforme notre rapport à la donnée",
+      "summary": "Dans les organisations où les données sont nombreuses, hétérogènes et stratégiques, leur mise à disposition efficace devient un levier clé de performance. L’approche data mesh, en décentralisant la gouvernance et en traitant la donnée comme un produit, promet une meilleure agilité et une appropriation renforcée par les équipes métier.",
+      "published_ts": 1763126418,
+      "source_name": "OCTO Talks!"
+    },
+    {
+      "url": "https://www.databricks.com/blog/accelerating-secure-interoperable-identity-collaboration-trade-desk-and-databricks-partnership",
+      "title": "Accelerating Secure, Interoperable Identity Collaboration: The Trade Desk and Databricks Partnership",
+      "summary": "Databricks is pleased to announce a new technology integration with The Trade Desk...",
+      "published_ts": 1763047800,
+      "source_name": "Databricks Blog"
+    },
     {
       "url": "https://www.databricks.com/blog/how-scale-data-governance-attribute-based-access-control-unity-catalog",
       "title": "How to scale data governance with Attribute-Based Access Control in Unity Catalog",
       "summary": "As organizations democratize access to data to accelerate analytics and AI, maintaining...",
       "published_ts": 1763042400,
       "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://www.databricks.com/blog/explore-data-instantly-databricks-assistant-unity-catalog",
-      "title": "Explore Data Instantly with Databricks Assistant in Unity Catalog",
-      "summary": "Every analyst knows the feeling: you open a dataset in your catalog, scroll through...",
-      "published_ts": 1763042400,
-      "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://www.databricks.com/blog/building-agentic-food-label-reader-greater-transparency",
-      "title": "Building an Agentic Food Label Reader for Greater Transparency",
-      "summary": "Customer expectations for food labeling have undergone a fundamental shift. According...",
-      "published_ts": 1762884900,
-      "source_name": "Databricks Blog"
     }
   ],
-  "dataprep_orchestration_etl": [
+  "dataprep_orchestration_etl": [],
+  "db_sql_olap": [],
+  "etl_orchestration": [
     {
       "url": "https://dagster.io/blog/what-dagster-believes-about-data-platforms",
       "title": "What Dagster Believes About Data Platforms",
@@ -128,61 +192,7 @@
       "source_name": "Dagster Blog"
     }
   ],
-  "db_sql_olap": [
-    {
-      "url": "https://www.numerama.com/pop-culture/2114047-funko-createur-des-figurines-pop-pourrait-mettre-la-cle-sous-la-porte-dici-un-an.html",
-      "title": "Funko, créateur des figurines Pop!, pourrait mettre la clé sous la porte d’ici un an",
-      "summary": "Les ventes de Funko, le fabricant américain des figurines Pop!,  ont chuté de 14,3 % en un an et sa dette dépasse désormais les 240 millions de dollars. L’entreprise reconnaît avoir de « sérieux doutes » quant à sa capacité à poursuivre ses activités au-delà des douze prochains mois.",
-      "published_ts": 1762785561,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://siecledigital.fr/2025/11/10/apres-leuphorie-la-chute-lintelligence-artificielle-declenche-une-onde-de-choc-boursiere/",
-      "title": "Après l’euphorie, la chute : l’intelligence artificielle déclenche une onde de choc boursière",
-      "summary": "Depuis le 31 octobre, la fièvre de l’intelligence artificielle s’est transformée en une crise de confiance sur les marchés financiers. En une semaine à peine, près de 1 000 milliards de dollars de valorisation se sont évaporés chez les grands noms de la tech américaine, de Nvidia à Meta, en passant par Oracle et Amazon. […]",
-      "published_ts": 1762780458,
-      "source_name": "Siècle Digital"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2113985-lun-des-meilleurs-tv-oled-perd-plus-de-la-moitie-de-son-prix-pour-le-pre-black-friday.html",
-      "title": "L’un des meilleurs TV OLED perd plus de la moitié de son prix pour le pré-Black Friday",
-      "summary": "[Deal du jour] Plusieurs références de téléviseurs LG sont en promotion pendant le pré-Black Friday, dont la série C5. Avec son modèle OLED55C5, le fabricant propose un téléviseur aux belles performances. Il est en promotion pour le pré-Black Friday.",
-      "published_ts": 1762771774,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.lemagit.fr/actualites/366634267/Snowflake-veut-lui-aussi-faire-de-PostgreSQL-un-lakehouse-ouvert",
-      "title": "Snowflake veut lui aussi faire de PostgreSQL un lakehouse ouvert",
-      "summary": "<p>Dans sa course contre Databricks pour offrir la plateforme de gestion de données la plus complète du marché, l’éditeur lancera «&nbsp;bientôt&nbsp;» sa version managée de PostgreSQL en préversion publique. Pour mémoire, il avait annoncé en juin dernier <a href=\"https://www.lemagit.fr/actualites/366625313/Comme-Databricks-Snowflake-acquiert-un-specialiste-de-PostgreSQL\">l’acquisition de Crunchy Data.</a> Databricks, lui, a racheté, peu de temps avant<a href=\"https://www.lemagit.fr/actualites/366623965/PostgreSQL-serverless-Databricks-sapprete-a-acquerir-Neon\">, Neon, un autre spécialiste</a> de la base de données relationnelle open source.</p> \n<p>Snowflake a surtout profité de son événement Build de la semaine dernière pour libérer pg_lake, une suite d’extensions ouverte pour le SGBDR le plus populaire du marché. Elles permettent de gérer des tables Apache Iceberg dans <a href=\"https://www.lemagit.fr/definition/PostgreSQL\">PostgreSQL</a>. Il est également possible d’interroger des tables étrangères sur S3 ou Azure Blob Storage, qu’elles soient au format CSV, JSON, Parquet et Iceberg. Pg_lake dispose de fonctions pour charger des données depuis des buckets&nbsp;S3 ou d’une URL dans des tables Iceberg ou PostgreSQL. Enfin, les résultats des requêtes peuvent être sauvegardés dans des buckets&nbsp;S3, afin de poursuivre les traitements. À noter que pg_lake lit des fichiers les formats géospatiaux, dont GeoJSON.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Combiner les capacités de Postgres, de DuckDB et d’Iceberg\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Combiner les capacités de Postgres, de DuckDB et d’Iceberg</h2>\n <p>Les extensions pg_lake s’intègrent à PostgreSQL pour gérer «&nbsp;la planification des requêtes, les périmètres des transactions et l’orchestration générale des exécutions&nbsp;».</p>\n <p>Sous le capot, un serveur DuckDB (nommé pgduck_server) est utilisé pour externaliser les scans et les traitements parallèles. DuckDB est un moteur analytique orienté colonnes (OLAP) open source. Il est réputé pour gérer des requêtes complexes à partir de grandes bases de données.</p>\n <p>Le projet s’appuie sur le protocole TCP de PostgreSQL pour interconnecter PostgreSQL et DuckDB.</p>\n <p>&nbsp;«&nbsp;Toute personne disposant de Postgres et souhaitant la transformer en interface pour gérer un lac ouvert avec des tables Iceberg pourra le faire à sa guise&nbsp;», promet Christian Kleinerman, vice-président directeur du produit chez Snowflake, lors d’une conférence de presse en ligne.</p>\n <p>C’était une des fonctionnalités au cœur de Crunchy Bridge for Analytics, dont le développement a commencé au début de l’année 2024. Un moyen de simplifier la jonction entre les données opérationnelles et analytiques. Ces fonctionnalités sont ensuite devenues le cœur de l’offre Crunchy Data Warehouse, avant que Snowflake acquière la société.</p>\n <p>Pour rappel, ce n’est pas dans la nature de PostgreSQL que de traiter des charges de travail analytiques. C’est, à l’origine, une base de données transactionnelle.</p>\n <p>«&nbsp;L’industrie des bases de données est divisée en deux grandes factions&nbsp;: les systèmes OLTP et OLAP. Elles ne se parlent pas trop, mais elles sont d’accord sur la gestion de transactions et l’usage de SQL&nbsp;», <a href=\"https://www.youtube.com/watch?v=tpq4nfEoioE\">résume</a> Marco Slot, ingénieur logiciel principal chez Snowflake (ex-Crunchy Data) lors d’un événement Microsoft Developer. «&nbsp;Les systèmes OLTP comme PostgreSQL prennent en charge de grande quantité de transactions telles des petites mises à jour, des changements ligne à ligne, de petites sélections, etc., à une faible latence et à haut débit&nbsp;», poursuit-il. «&nbsp;Les systèmes OLAP se concentrent sur le scan à haute vitesse d’un grand volume de données en une seule requête. C’est un autre problème d’optimisation&nbsp;».</p>\n <p>Outre la différence d’orientation du format de stockage (en ligne pour les systèmes OLTP, en colonne pour les systèmes OLAP), les systèmes analytiques modernes, dont Databricks, Snowflake et DuckDB s’appuient sur des moteurs d’exécution vectorisée. Ceux-là permettent de traiter des données en lot plutôt que ligne par ligne. «&nbsp;Le moteur de requêtes prend un vecteur de valeurs – un lot de valeurs – et les expressions sont implémentées comme des boucles&nbsp;», explique Marco Slot. «&nbsp;Ils font la même comparaison sur toutes les valeurs du vecteur. Et le résultat peut être un nouveau vecteur avec, par exemple, les index des lignes qui correspondent aux filtres de la requête&nbsp;».</p>\n <p>Au lieu de changer d’expression constamment, ici le traitement en batch abaisse le nombre d’appels de fonctions, le processeur peut mieux prédire la suite de l’exécution, le cache CPU est utilisé à bon escient, tandis que les instructions SIMD des processeurs permettent de traiter plusieurs valeurs en une seule requête.</p>\n <p>«&nbsp;En couplant cela à la parallélisation, les bases de données OLAP dotées d’un tel moteur peuvent être 10, voire plus de 100&nbsp;fois plus rapides que PostgreSQL pour des requêtes analytiques&nbsp;», estime l’ingénieur principal.</p>\n <p>Or, il n’est pas simple de bâtir <a href=\"https://www.lemagit.fr/actualites/252522169/Databricks-cimente-les-briques-de-son-data-lakehouse\">un moteur à exécution vectorisée</a>. De plus,&nbsp;«&nbsp;d’autres composants de Postgres ne sont pas optimisés pour l’analytique&nbsp;», ajoute Marco Slot.</p>\n <p>D’où l’usage du «&nbsp;superpouvoir&nbsp;» de PostgreSQL&nbsp;: les extensions. «&nbsp;Il&nbsp;y a quelques années, ce n’était pas une base de données vectorielle, mais maintenant nous avons pg_vector. Ce n’était pas une base de données distribuée, mais le projet <a href=\"https://www.lemagit.fr/actualites/252456460/Microsoft-renforce-les-capacites-de-dimensionnement-de-Postgresql-sur-Azure\">Citus a changé la donne&nbsp;</a>», illustre l’ingénieur principal. «&nbsp;De la même manière, nous pouvons faire de Postgres une bonne base de données analytique à travers les extensions&nbsp;».</p>\n <p>En tant que <a href=\"https://www.lemagit.fr/actualites/366627790/Apptio-affine-sa-gestion-des-couts-de-lIA-et-du-cloud-hybride\">moteur d’exécution vectorisée embarquée, DuckDB</a> était considéré comme le plus adapté à cette tâche. «&nbsp;La licence est similaire, il cible une seule machine, son dialecte SQL est dérivé de PostgreSQL&nbsp;et il a aussi des extensions&nbsp;», justifie Marco Slot.</p>\n</section>              \n<section class=\"section main-article-chapter\" data-menu-title=\"Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data</h2>\n <p>Christian Kleinerman envisage que les développeurs utilisent cette extension dans le cadre de développement d’applications. «&nbsp;Je pense que l’un des cas d’usage le plus courant consiste pour les développeurs à créer des applications avec Postgres, puis à effectuer un ETL ou à copier les données à des fins d’analyse dans une plateforme de données telle que Snowflake ou, de plus en plus, dans un lac de données ouvert, avec S3 Table sur AWS ou avec Iceberg, <a href=\"https://www.lemagit.fr/actualites/366631554/Fabric-face-a-Snowflake-et-Databricks-Microsoft-met-les-bouchees-doubles\">sur Microsoft OneLake&nbsp;</a>», indique-t-il, dans un briefing avec la presse. «&nbsp;C’est ce que permet PG Lake. […] Nous avons pensé que c’était plus important que Snowflake et que Snowflake Postgres. D’où la libération du projet&nbsp;».</p>\n <p>Ce n’est pas le premier projet du genre. À travers MotherDuck, l’éditeur DuckDB propose une implémentation différente. Il embarque directement une instance de son moteur dans PostgreSQL. Il faut également noter que Databricks a mis la main au début du mois d’octobre sur Mooncake Labs, une startup basée à San Francisco. Celle-ci a développé pg_mooncake, une extension open source permettant de créer un miroir inversé de tables Postgres dans un format orienté colonne Apache Iceberg. Les données sont ingérées avec sa technologie moonlink et traitées avec… DuckDB.</p>\n</section>   \n<section class=\"section main-article-chapter\" data-menu-title=\"À la croisée des changements de paradigme\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>À la croisée des changements de paradigme</h2>\n <p>Il y a quelques limitations. La première étant qu’il n’est pas encore possible d’utiliser de catalogue externe à PostgreSQL pour Iceberg dans le cas de pg_lake. Databricks, Cloudera, Dremio, Snowflake et d’autres utilisent désormais des catalogues de métadonnées externes comme Hive, <a href=\"https://www.lemagit.fr/actualites/366599652/Apache-Iceberg-Snowflake-libere-Polaris-et-sallie-a-Dremio\">Polaris ou Unity</a>. Cette gestion de la gouvernance des tables Iceberg (et leur contrôle) n’est pas encore standard.&nbsp;</p>\n <p>Néanmoins, les experts du milieu décrivent deux phénomènes qui convergent. Après la naissance des lakehouse – qui combinent les capacités des entrepôts et des lacs de données – la frontière entre la base et le lac de données s’effacerait, selon Manish K., architecte Big Data chez Accenture.</p>\n <p>«&nbsp;DuckDB a prouvé que nous pouvons exécuter des analyses sérieuses directement sur des fichiers&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393243881011798016-YogO?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">écrit</a> Manish K. sur LinkedIn. «&nbsp;pg_lake et pg_mooncake ont prouvé que Postgres peut parler [le langage] des tables de style Iceberg dans un espace de stockage objet. Les services Postgres cloud-first (calcul/stockage découplé, branchable, élastique) ressemble désormais à un lakehouse sur le plan architectural&nbsp;», ajoute-t-il. «&nbsp;Le schéma est donc clair&nbsp;: la base de données se déplace là où se trouve déjà le lac&nbsp;». Et d’utiliser l’expression «&nbsp;lakebase&nbsp;».</p>\n <p>Bhairav Metha, directeur data science chez JPMorganChase,&nbsp;voit un autre changement. Alors que les systèmes <a href=\"https://www.lemagit.fr/actualites/252473646/Selon-Forrester-les-bases-de-donnees-translytiques-ont-le-vent-en-poupe\">translytiques</a> sont jusqu’à présent majoritairement propriétaires, ils pourraient demain s’appuyer sur un projet open source&nbsp;: PostgreSQL.</p>\n <p>«&nbsp;Nous n’y sommes peut-être pas encore tout à fait – l’OLAP et l’OLTP répondent encore à des objectifs d’optimisation distincts – mais la trajectoire est claire&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393518197771182080-E9o3?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">avance</a>-t-il. «&nbsp;Postgres pourrait bientôt gérer 90&nbsp;% des charges de travail modernes sans avoir besoin d’un entrepôt ou d’un Lakehouse séparé&nbsp;».</p>\n</section>",
-      "published_ts": 1762757220,
-      "source_name": "LeMagIT"
-    }
-  ],
-  "etl_orchestration": [
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/analyzing-amazon-ec2-spot-instance-interruptions-by-using-event-driven-architecture/",
-      "title": "Analyzing Amazon EC2 Spot instance interruptions by using event-driven architecture",
-      "summary": "In this post, you'll learn how to build this comprehensive monitoring solution step-by-step. You'll gain practical experience designing an event-driven pipeline, implementing data processing workflows, and creating insightful dashboards that help you track interruption trends, optimize ASG configurations, and improve the resilience of your Spot Instance workloads.",
-      "published_ts": 1762812320,
-      "source_name": "Redshift / AWS Big Data"
-    }
-  ],
-  "lake_storage_formats": [],
-  "ml_ai": [
-    {
-      "url": "https://www.numerama.com/sciences/2115203-rocket-lab-repousse-le-vol-de-sa-neutron-le-rival-de-spacex-prefere-la-prudence-aux-explosions.html",
-      "title": "Rocket Lab repousse le vol de sa Neutron : le rival de SpaceX préfère la prudence aux explosions",
-      "summary": "Finalement, Rocket Lab ne fera pas voler sa nouvelle fusée Neutron en 2025. Pour son patron, il vaut mieux ajouter trois à six mois pour mener des tests complémentaires, plutôt que de foncer et courir le risque de rater le vol inaugural.",
-      "published_ts": 1762880617,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.lebigdata.fr/openai-booste-ses-nouveaux-modeles-pour-de-meilleures-performances",
-      "title": "OpenAI booste ses nouveaux modèles pour de meilleures performances",
-      "summary": "OpenAI continue d’accélérer dans la course à l’intelligence artificielle en développant de nouveaux modèles. GPT-5 est sorti en août 2025 … Cet article OpenAI booste ses nouveaux modèles pour de meilleures performances a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762878600,
-      "source_name": "Le Big Data"
-    },
+  "hors_sujet": [
     {
       "url": "https://www.numerama.com/cyberguerre/595059-leboncoin-attention-ce-piege-tres-elabore-tente-de-voler-votre-carte-bancaire.html",
       "title": "Vendeurs Leboncoin : ne cliquez jamais sur cette URL ! Tous les indices pour déjouer la classique arnaque du SMS",
@@ -191,10 +201,17 @@
       "source_name": "Numerama"
     },
     {
-      "url": "https://www.numerama.com/tech/2114023-single-day-meilleures-offres-du-11-11.html",
-      "title": "Singles Day, la réponse au Black Friday est là : voici les meilleurs deals du 11.11, en direct",
-      "summary": "Le Black Friday n’a plus le monopole des bons plans. Le 11 novembre laisse place au Singles Day, l’autre grand rendez-vous du shopping en ligne importé de Chine. Aliexpress, Rakuten et bien d'autres jouent le jeu. Ces plateformes peuvent parfois susciter la méfiance. C’est pourquoi nous avons pris soin de ne retenir que des offres sérieuses et fiables.",
-      "published_ts": 1762873767,
+      "url": "https://www.lebigdata.fr/iphone-16e-128-go-a-prix-choc-seulement-489-e-au-lieu-de-719-e-chez-rakuten-32",
+      "title": "iPhone 16e 128  Go à prix choc : seulement 489 € au lieu de 719 € chez Rakuten (-32 %)",
+      "summary": "Le plus abordable des iPhone chute à un tarif inédit : 489 € seulement au lieu de 719 €, grâce … Cet article iPhone 16e 128  Go à prix choc : seulement 489 € au lieu de 719 € chez Rakuten (-32 %) a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762873866,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.numerama.com/vroom/2115057-on-a-trouve-8-excellents-velos-electriques-a-prix-hallucinant-dans-le-bike-friday-dupway.html",
+      "title": "On a trouvé 8 excellents vélos électriques à prix hallucinant dans le « Bike Friday » d’Upway",
+      "summary": "On a exploré tout le rayon vélo du Bike Friday d'Upway pour vous dénicher ces pépites. Foncez, il n'y a qu'un exemplaire par modèle.",
+      "published_ts": 1762873646,
       "source_name": "Numerama"
     },
     {
@@ -205,38 +222,17 @@
       "source_name": "Numerama"
     },
     {
-      "url": "https://blog.dataiku.com/modernizing-analytics-with-dataiku-and-snowflake",
-      "title": "Modernizing Analytics With Dataiku and Snowflake",
-      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
-      "published_ts": 1762871367,
-      "source_name": "Dataiku Blog"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2109483-windows-11-une-version-majeure-expire-le-11-novembre-verifiez-la-votre-sans-tarder.html",
-      "title": "Windows 11 : une version majeure expire le 11 novembre, vérifiez la vôtre sans tarder",
-      "summary": "Windows 11 a encore de beaux jours devant lui avant de partir à la retraite. Mais certaines sous-versions de l'OS expirent à mesure que le temps passe. C'est le cas pour une branche qui va être délaissée après le 11 novembre. Il est temps de mettre à jour.",
-      "published_ts": 1762866716,
-      "source_name": "Numerama"
+      "url": "https://www.lebigdata.fr/meta-quest-3-10x-moins-cher-que-lapple-vision-pro-il-explose-les-ventes-sur-aliexpress",
+      "title": "Meta Quest 3 : 10x moins cher que l’Apple Vision Pro, il explose les ventes sur AliExpress",
+      "summary": "Le casque VR/AR haut de gamme de Meta s’effondre à seulement 390 € au lieu de 699 €. En ajoutant … Cet article Meta Quest 3 : 10x moins cher que l’Apple Vision Pro, il explose les ventes sur AliExpress a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762869830,
+      "source_name": "Le Big Data"
     },
     {
       "url": "https://www.numerama.com/tech/2114261-moitie-prix-pour-ce-tres-bon-modele-daspirateur-laveur-de-tineco-pour-le-single-day.html",
       "title": "Moitié prix pour ce très bon modèle d’aspirateur laveur de Tineco pour le Single Day",
       "summary": "[Deal du jour] Quoi de mieux qu'un aspirateur balai qui aspire efficacement les sols ? Un aspirateur balai qui aspire et lave efficacement les sols. Et c'est encore mieux quand il y a une promotion.",
       "published_ts": 1762863060,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2114803-whatsapp-et-signal-ne-vous-protegent-pas-a-100-selon-la-dgse-cest-vrai-mais-cest-un-peu-alarmiste.html",
-      "title": "WhatsApp et Signal ne vous protègent pas à 100 % selon la DGSE (c’est vrai, mais c’est un peu alarmiste)",
-      "summary": "« Il n'y a pas une solution qui vous prémunisse à 100 % du risque d'être intercepté et écouté ». Voilà la mise en garde faite par le patron de la DGSE, les services secrets français. Nicolas Lerner évoquait à ce moment-là les applications de messagerie instantanée proposant du chiffrement de bout en bout. Mais est-ce qu'il faut pour autant les jeter à la poubelle ?",
-      "published_ts": 1762860645,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2114911-ces-applications-vident-secretement-votre-batterie-google-le-sait-et-annonce-des-mesures-punitives.html",
-      "title": "Ces applications vident secrètement votre batterie, Google le sait et annonce des mesures punitives",
-      "summary": "Google veut empêcher les applications Android d'avoir recours à des techniques énergivores, qui drainent la batterie de vos smartphones -- quand elles sont injustifiées.",
-      "published_ts": 1762858320,
       "source_name": "Numerama"
     },
     {
@@ -268,13 +264,6 @@
       "source_name": "ZDNet France"
     },
     {
-      "url": "https://www.zdnet.fr/pratique/carriere-lia-nest-pas-un-frein-si-vous-possedez-des-competences-en-particulier-selon-une-etude-de-mckinsey-484725.htm#xtor=RSS-1",
-      "title": "Carrière : l'IA n’est pas un frein si vous possédez des compétences en particulier, selon une étude de McKinsey",
-      "summary": "Certaines organisations font état d'une diminution de leurs effectifs, tandis que d'autres recrutent pour des postes liés à l'intelligence artificielle dont deux rôles en particulier.",
-      "published_ts": 1762852260,
-      "source_name": "ZDNet France"
-    },
-    {
       "url": "https://www.numerama.com/pop-culture/2114723-le-bug-de-battlefield-6-le-plus-agacant-et-le-plus-emblematique-est-enfin-corrige.html",
       "title": "Le bug de Battlefield 6 le plus agaçant et le plus emblématique est enfin corrigé",
       "summary": "Electronic Arts annonce que le bug du drone+marteau a enfin été résolu. Présent depuis le début de Battlefield 6, il permettait à des joueurs et des joueuses de tricher en dehors des limites du terrain.",
@@ -286,6 +275,13 @@
       "title": "On a trouvé de la vie dans cette drôle de gelée volcanique bleue",
       "summary": "La recherche de la vie ne se fait pas uniquement sur les autres planètes. Sur Terre aussi, cette quête existe notamment dans des endroits inattendus ou particulièrement hostiles. Et parfois, on peut croiser des formes de vie surprenantes, y compris au cœur des volcans.",
       "published_ts": 1762849162,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/tech/1841152-cette-excellente-console-portable-retrogaming-est-a-35-pour-le-single-day.html",
+      "title": "Cette excellente console portable rétrogaming est à 35 € pour le Single Day",
+      "summary": "Pour le Single Day, AliExpress fait baisser le prix de la Miyoo Mini+ 35 € avec un code promo qui enlève 5 € dès 29 € d'achat. Une occasion à ne pas manquer.",
+      "published_ts": 1762849092,
       "source_name": "Numerama"
     },
     {
@@ -301,13 +297,6 @@
       "summary": "[Deal du jour] Si vous attendiez une baisse de prix pour craquer pour la Switch 2, cette offre avec le tout dernier Mario Kart World est probablement la meilleure occasion du moment.",
       "published_ts": 1762846320,
       "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/openai-condamne-en-allemagne-pour-violation-de-droits-dauteur-un-tournant-historique-pour-lia-484761.htm#xtor=RSS-1",
-      "title": "OpenAI condamné en Allemagne pour violation de droits d’auteur, un tournant historique pour l’IA",
-      "summary": "Un tournant judiciaire en Europe secoue le monde de l’intelligence artificielle.",
-      "published_ts": 1762845084,
-      "source_name": "ZDNet France"
     },
     {
       "url": "https://www.journaldunet.com/magazine/1545889-bp1-salarie-le-mieux-traite-au-monde/",
@@ -328,6 +317,241 @@
       "title": "Test Baseus Nomos NU1 Air Spacemate : une station d’accueil qui remédie au désordre des câbles sur le bureau",
       "summary": "Avec 12 ports intégrés, cette petite tour de grande qualité fait face aux multiples charges de travail.",
       "published_ts": 1762834317,
+      "source_name": "ZDNet France"
+    },
+    {
+      "url": "https://www.numerama.com/tech/570620-single-day-2025-date-coupons-conseils-tout-savoir-sur-le-black-friday-chinois.html",
+      "title": "Single Day 2025 : date, coupons, conseils… tout savoir sur le « Black Friday chinois »",
+      "summary": "Avant même le Black Friday, novembre est devenu le mois des promotions à rallonge. Ce qui n’était autrefois qu’un week-end de réductions s’étire désormais sur plusieurs semaines. Et au milieu de cette période déjà bien chargée, un autre événement s’est imposé : le Single Day, célébré chaque année le 11 novembre, qui prend lui aussi de plus en plus d’ampleur en France.",
+      "published_ts": 1762790800,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2114277-bien-sur-que-la-nouvelle-monnaie-virtuelle-de-world-of-warcraft-fait-jaser.html",
+      "title": "Bien sûr que la nouvelle monnaie virtuelle de World of Warcraft fait jaser",
+      "summary": "La prochaine extension de World of Warcraft, intitulée Midnight, introduira une nouvelle monnaie virtuelle, spécifiquement pensée pour le logis (housing). Sur les forums officiels, la nouvelle n'est pas accueillie chaudement.",
+      "published_ts": 1762790103,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2090441-casting-histoire-sortie-tout-savoir-sur-la-saison-4-de-ginny-georgia-sur-netflix.html",
+      "title": "Casting, histoire, sortie… Tout savoir sur la saison 4 de Ginny & Georgia sur Netflix",
+      "summary": "L'une des séries les plus populaires du catalogue Netflix va enfin faire son grand retour dans les prochains mois. La production de la saison 4 de Ginny & Georgia a ainsi commencé, promettant de nouveaux épisodes remplis de rebondissements. Voici tout ce que vous devez savoir sur le sujet.",
+      "published_ts": 1762788538,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2114047-funko-createur-des-figurines-pop-pourrait-mettre-la-cle-sous-la-porte-dici-un-an.html",
+      "title": "Funko, créateur des figurines Pop!, pourrait mettre la clé sous la porte d’ici un an",
+      "summary": "Les ventes de Funko, le fabricant américain des figurines Pop!,  ont chuté de 14,3 % en un an et sa dette dépasse désormais les 240 millions de dollars. L’entreprise reconnaît avoir de « sérieux doutes » quant à sa capacité à poursuivre ses activités au-delà des douze prochains mois.",
+      "published_ts": 1762785561,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114103-150-e-de-moins-pour-le-robot-cuiseur-moulinex-companion-pendant-le-black-friday.html",
+      "title": "150 € de moins pour le robot cuiseur Moulinex Companion pendant le Black Friday",
+      "summary": "[Deal du jour] La marque française Moulinex propose un robot cuiseur utile pour vous aider dans la plupart des tâches dans la cuisine. Pratique du matin au soir, le Moulinex Companion profite de plus d'un très bon rapport qualité-prix en promotion.",
+      "published_ts": 1762781434,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://siecledigital.fr/2025/11/10/shein-echappe-a-la-suspension-mais-reste-sous-etroite-surveillance/",
+      "title": "Shein échappe à la suspension mais reste sous étroite surveillance…",
+      "summary": "Alors que le gouvernement français menaçait de suspendre la plateforme Shein après la découverte de produits illicites, le site e-commerce a finalement évité le pire. Malgré une mise en conformité rapide, les autorités maintiennent une surveillance renforcée, et plusieurs procédures judiciaires sont encore en cours… Une mise en conformité « express » pour éviter la fermeture Le […]",
+      "published_ts": 1762780194,
+      "source_name": "Siècle Digital"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2113997-des-joueurs-de-battlefield-6-ragent-contre-le-systeme-de-progression.html",
+      "title": "Des joueurs de Battlefield 6 ragent contre le système de progression",
+      "summary": "Battlefield 6 impose une limite dans le nombre de points d'expérience que l'on peut gagner chaque jour. Ce n'est pas grave pour la majorité des joueuses et des joueurs, mais les personnes les plus assidues sont en colère contre ce système.",
+      "published_ts": 1762776060,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2113927-voici-la-vraie-raison-du-nom-kaamelott-et-son-orthographe-unique-au-lieu-de-camelot.html",
+      "title": "Voici la vraie raison du nom Kaamelott et son orthographe unique (au lieu de Camelot)",
+      "summary": "Pourquoi la série Kaamelott a-t-elle une orthographe si éloignée de Camelot ? Alexandre Astier, créateur de la série et de l'univers étendu, a fini par expliquer comment il en est arrivé à ce nom.",
+      "published_ts": 1762773412,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2113985-lun-des-meilleurs-tv-oled-perd-plus-de-la-moitie-de-son-prix-pour-le-pre-black-friday.html",
+      "title": "L’un des meilleurs TV OLED perd plus de la moitié de son prix pour le pré-Black Friday",
+      "summary": "[Deal du jour] Plusieurs références de téléviseurs LG sont en promotion pendant le pré-Black Friday, dont la série C5. Avec son modèle OLED55C5, le fabricant propose un téléviseur aux belles performances. Il est en promotion pour le pré-Black Friday.",
+      "published_ts": 1762771774,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/pop-culture/2113751-the-witcher-saison-4-le-tournage-dans-le-marais-etait-un-enfer.html",
+      "title": "The Witcher saison 4 : le tournage dans le marais était un enfer",
+      "summary": "Alors que la saison 4 de The Witcher continue de figurer dnas le top 10 de Netflix, le timing est parfait pour découvrir quelques secrets de tournage. Visiblement, les séquences dans le marais hanté ont été assez ardues à vivre pour les comédiens.",
+      "published_ts": 1762771551,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/vroom/2113929-le-constructeur-rivian-va-jusqua-copier-tesla-sur-la-remuneration-de-son-patron.html",
+      "title": "Le constructeur Rivian va jusqu’à copier Tesla sur la rémunération de son patron",
+      "summary": "Rivian revoit à la hausse la rémunération de son fondateur RJ Scaringe avec un plan à la Elon Musk : des milliards potentiels de gains en actions à condition d’atteindre des objectifs boursiers et financiers précis.",
+      "published_ts": 1762770112,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.zdnet.fr/guide-achat/test-xtar-vx2-pro-ce-testeur-de-batteries-est-un-produit-de-reve-484680.htm#xtor=RSS-1",
+      "title": "Test Xtar VX2 Pro : ce testeur de batteries est un produit de rêve",
+      "summary": "Cet appareil n’est pas seulement un chargeur, il diagnostique et prépare les piles rechargeables pour un stockage à long terme.",
+      "published_ts": 1762765896,
+      "source_name": "ZDNet France"
+    },
+    {
+      "url": "https://www.journaldunet.com/patrimoine/finances-personnelles/1545873-hf1-taxe-loyer-proprietaire-2790-euros/",
+      "title": "Hausse des taxes sur les loyers : les propriétaires vont payer jusqu'à 2 800 euros de plus par an",
+      "summary": "Des millions de propriétaires vont payer plus de taxes sur les loyers qu'ils encaissent. Même les loueurs qui passent par Airbnb, Booking ou Abritel devront mettre la main à la poche.",
+      "published_ts": 1762753802,
+      "source_name": "Journal du Net"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/un-reseau-de-voleurs-a-la-fausse-enceinte-connectee-vise-par-un-nouveau-coup-de-filet-judiciaire-484713.htm#xtor=RSS-1",
+      "title": "Un réseau de voleurs à la fausse enceinte connectée visé par un nouveau coup de filet judiciaire",
+      "summary": "Facilement trouvables sur Internet, ces appareils électroniques customisés peuvent, avertissent les gendarmes, servir à des vols de véhicules.",
+      "published_ts": 1762737096,
+      "source_name": "ZDNet France"
+    }
+  ],
+  "lake_storage_formats": [],
+  "ml_ai": [],
+  "news": [
+    {
+      "url": "https://www.databricks.com/blog/databricks-achieves-awardability-dods-tradewinds-solutions-marketplace",
+      "title": "Databricks Achieves Awardability on the DoD’s Tradewinds Solutions Marketplace",
+      "summary": "Databricks is proud to announce that the Databricks Data Intelligence Platform has...",
+      "published_ts": 1763062800,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://huggingface.co/blog/google-cloud",
+      "title": "Building for an Open Future - our new partnership with Google Cloud",
+      "summary": "Building for an Open Future - our new partnership with Google Cloud\nToday, we are happy to announce a new and deeper partnership with Google Cloud, to enable companies to build their own AI with open models.\n“Google has made some of the most impactful contributions to open AI, from the OG transforme",
+      "published_ts": 1762992000,
+      "source_name": "Hugging Face Blog"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/introducing-our-final-aws-heroes-of-2025/",
+      "title": "Introducing Our Final AWS Heroes of 2025",
+      "summary": "With AWS re:Invent approaching, we’re celebrating three exceptional AWS Heroes whose diverse journeys and commitment to knowledge sharing are empowering builders worldwide. From advancing women in tech and rural communities to bridging academic and industry expertise and pioneering enterprise AI solutions, these leaders exemplify the innovative spirit that drives our community forward. Their stories showcase […]",
+      "published_ts": 1762977901,
+      "source_name": "AWS Blog"
+    },
+    {
+      "url": "https://aka.ms/AAyjgcy",
+      "title": "Infinite scale: The architecture behind the Azure AI superfactory",
+      "summary": "Today, we are unveiling the next Fairwater site of Azure AI datacenters in Atlanta, Georgia. This purpose-built datacenter is connected to our first Fairwater site in Wisconsin, prior generations of AI supercomputers and the broader Azure global datacenter footprint to create the world’s first planet-scale AI superfactory. The post Infinite scale: The architecture behind the Azure AI superfactory appeared first on Microsoft Azure Blog .",
+      "published_ts": 1762968780,
+      "source_name": "Azure Blog"
+    },
+    {
+      "url": "https://www.lebigdata.fr/un-chanteur-100-ia-grimpe-au-sommet-du-billboard-et-trompe-tout-le-monde",
+      "title": "Un chanteur 100 % IA grimpe au sommet du Billboard et trompe tout le monde",
+      "summary": "Un artiste virtuel en tête des classements, cela semblait encore improbable il y a peu. Pourtant, Breaking Rust, né de … Cet article Un chanteur 100 % IA grimpe au sommet du Billboard et trompe tout le monde a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762888656,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.lebigdata.fr/le-pere-de-lia-previent-pour-quelle-rapporte-il-faut-virer-les-humains",
+      "title": "Le père de l’IA prévient : pour qu’elle rapporte, il faut virer les humains",
+      "summary": "Depuis des siècles, chaque innovation promet de soulager l’humain sans jamais l’effacer. La machine à vapeur, l’ordinateur ou Internet ont … Cet article Le père de l’IA prévient : pour qu’elle rapporte, il faut virer les humains a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762885236,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.lebigdata.fr/whatsapp-et-signal-votre-protection-nest-pas-totale-dit-la-dgse",
+      "title": "WhatsApp et Signal : votre protection n’est pas totale, dit la DGSE",
+      "summary": "WhatsApp, Signal, Telegram, on les considère souvent comme les forteresses ultimes de nos conversations privées. Pourtant, tout n’est pas inviolable. … Cet article WhatsApp et Signal : votre protection n’est pas totale, dit la DGSE a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762883296,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.numerama.com/sciences/2115203-rocket-lab-repousse-le-vol-de-sa-neutron-le-rival-de-spacex-prefere-la-prudence-aux-explosions.html",
+      "title": "Rocket Lab repousse le vol de sa Neutron : le rival de SpaceX préfère la prudence aux explosions",
+      "summary": "Finalement, Rocket Lab ne fera pas voler sa nouvelle fusée Neutron en 2025. Pour son patron, il vaut mieux ajouter trois à six mois pour mener des tests complémentaires, plutôt que de foncer et courir le risque de rater le vol inaugural.",
+      "published_ts": 1762880617,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.lebigdata.fr/meta-renforce-sa-puissance-ia-mais-ses-profits-font-un-plongeon-inquietant",
+      "title": "Meta renforce sa puissance IA, mais ses profits font un plongeon inquiétant",
+      "summary": "Tout allait bien chez de Meta. Les publicités cartonnent, les utilisateurs défilent, les revenus explosent. Puis, au milieu de la … Cet article Meta renforce sa puissance IA, mais ses profits font un plongeon inquiétant a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762879504,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.lebigdata.fr/en-chine-les-scenaristes-passent-a-la-trappe-lia-ecrit-les-series",
+      "title": "En Chine, les scénaristes passent à la trappe : l’IA écrit les séries",
+      "summary": "L’IA commence à prendre la place de tout le monde. En Chine, les séries ne sont plus écrites par des … Cet article En Chine, les scénaristes passent à la trappe : l’IA écrit les séries a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762877523,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114023-single-day-meilleures-offres-du-11-11.html",
+      "title": "Singles Day, la réponse au Black Friday est là : voici les meilleurs deals du 11.11, en direct",
+      "summary": "Le Black Friday n’a plus le monopole des bons plans. Le 11 novembre laisse place au Singles Day, l’autre grand rendez-vous du shopping en ligne importé de Chine. Aliexpress, Rakuten et bien d'autres jouent le jeu. Ces plateformes peuvent parfois susciter la méfiance. C’est pourquoi nous avons pris soin de ne retenir que des offres sérieuses et fiables.",
+      "published_ts": 1762873767,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.lebigdata.fr/les-depenses-folles-openai-ne-toucheront-pas-sam-altman",
+      "title": "Les dépenses folles d’OpenAI ne toucheront pas Sam Altman",
+      "summary": "Sam Altman évite toute responsabilité pour les dépenses massives d’OpenAI. Sans enjeux financiers, il mise sur des renégociations ou une … Cet article Les dépenses folles d’OpenAI ne toucheront pas Sam Altman a été publié sur LEBIGDATA.FR .",
+      "published_ts": 1762872363,
+      "source_name": "Le Big Data"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2109483-windows-11-une-version-majeure-expire-le-11-novembre-verifiez-la-votre-sans-tarder.html",
+      "title": "Windows 11 : une version majeure expire le 11 novembre, vérifiez la vôtre sans tarder",
+      "summary": "Windows 11 a encore de beaux jours devant lui avant de partir à la retraite. Mais certaines sous-versions de l'OS expirent à mesure que le temps passe. C'est le cas pour une branche qui va être délaissée après le 11 novembre. Il est temps de mettre à jour.",
+      "published_ts": 1762866716,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114803-whatsapp-et-signal-ne-vous-protegent-pas-a-100-selon-la-dgse-cest-vrai-mais-cest-un-peu-alarmiste.html",
+      "title": "WhatsApp et Signal ne vous protègent pas à 100 % selon la DGSE (c’est vrai, mais c’est un peu alarmiste)",
+      "summary": "« Il n'y a pas une solution qui vous prémunisse à 100 % du risque d'être intercepté et écouté ». Voilà la mise en garde faite par le patron de la DGSE, les services secrets français. Nicolas Lerner évoquait à ce moment-là les applications de messagerie instantanée proposant du chiffrement de bout en bout. Mais est-ce qu'il faut pour autant les jeter à la poubelle ?",
+      "published_ts": 1762860645,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://powerbi.microsoft.com/en-us/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/",
+      "title": "Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers &amp; Metric Stores",
+      "summary": "In today’s data-driven world, semantic models have become the backbone of trustworthy analytics. They define business logic, metrics, and relationships that turn raw data into meaningful, trusted and curated insights. As organizations embrace generative AI, semantic models provide the structure and context that AI needs to deliver accurate, reliable answers.  At Microsoft, we have spent nearly two decades refining the semantic layer that connects data … Continue reading “Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores “",
+      "published_ts": 1762858928,
+      "source_name": "Power BI Blog"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114911-ces-applications-vident-secretement-votre-batterie-google-le-sait-et-annonce-des-mesures-punitives.html",
+      "title": "Ces applications vident secrètement votre batterie, Google le sait et annonce des mesures punitives",
+      "summary": "Google veut empêcher les applications Android d'avoir recours à des techniques énergivores, qui drainent la batterie de vos smartphones -- quand elles sont injustifiées.",
+      "published_ts": 1762858320,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.numerama.com/tech/2114763-le-morceau-actuellement-top-1-country-est-genere-par-ia-je-lai-ecoute-jaime-bien-et-cest-un-probleme.html",
+      "title": "Le morceau actuellement top 1 country est généré par IA : je l’ai écouté, j’aime bien (et c’est un problème)",
+      "summary": "Un titre de country généré par IA, par un artiste IA, est top 1 des écoutes numériques. Problème pour les musiciens : il est vraiment pas mal.",
+      "published_ts": 1762852663,
+      "source_name": "Numerama"
+    },
+    {
+      "url": "https://www.zdnet.fr/pratique/carriere-lia-nest-pas-un-frein-si-vous-possedez-des-competences-en-particulier-selon-une-etude-de-mckinsey-484725.htm#xtor=RSS-1",
+      "title": "Carrière : l'IA n’est pas un frein si vous possédez des compétences en particulier, selon une étude de McKinsey",
+      "summary": "Certaines organisations font état d'une diminution de leurs effectifs, tandis que d'autres recrutent pour des postes liés à l'intelligence artificielle dont deux rôles en particulier.",
+      "published_ts": 1762852260,
+      "source_name": "ZDNet France"
+    },
+    {
+      "url": "https://www.zdnet.fr/actualites/openai-condamne-en-allemagne-pour-violation-de-droits-dauteur-un-tournant-historique-pour-lia-484761.htm#xtor=RSS-1",
+      "title": "OpenAI condamné en Allemagne pour violation de droits d’auteur, un tournant historique pour l’IA",
+      "summary": "Un tournant judiciaire en Europe secoue le monde de l’intelligence artificielle.",
+      "published_ts": 1762845084,
       "source_name": "ZDNet France"
     },
     {
@@ -352,6 +576,13 @@
       "source_name": "Numerama"
     },
     {
+      "url": "https://www.microsoft.com/en-us/security/blog/2025/11/10/securing-our-future-november-2025-progress-report-on-microsofts-secure-future-initiative/",
+      "title": "Securing our future: November 2025 progress report on Microsoft’s Secure Future Initiative",
+      "summary": "When we launched the Secure Future Initiative, our mission was clear: accelerate innovation, strengthen resilience, and lead the industry toward a safer digital future. The post Securing our future: November 2025 progress report on Microsoft’s Secure Future Initiative appeared first on Microsoft Azure Blog .",
+      "published_ts": 1762795517,
+      "source_name": "Azure Blog"
+    },
+    {
       "url": "https://www.numerama.com/pop-culture/1839524-stranger-things-quand-sort-la-saison-5-de-la-serie-netflix.html",
       "title": "Stranger Things : quand sort la saison 5 sur Netflix ?",
       "summary": "La série fantastique phare de Netflix reviendra bientôt pour une saison 5, trois ans après la précédente. Bandes-annonces, date de sortie, casting... Voici tout ce que l'on sait sur la conclusion épique de Stranger Things.",
@@ -359,25 +590,11 @@
       "source_name": "Numerama"
     },
     {
-      "url": "https://www.numerama.com/tech/570620-single-day-2025-date-coupons-conseils-tout-savoir-sur-le-black-friday-chinois.html",
-      "title": "Single Day 2025 : date, coupons, conseils… tout savoir sur le « Black Friday chinois »",
-      "summary": "Avant même le Black Friday, novembre est devenu le mois des promotions à rallonge. Ce qui n’était autrefois qu’un week-end de réductions s’étire désormais sur plusieurs semaines. Et au milieu de cette période déjà bien chargée, un autre événement s’est imposé : le Single Day, célébré chaque année le 11 novembre, qui prend lui aussi de plus en plus d’ampleur en France.",
-      "published_ts": 1762790800,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/pop-culture/2114277-bien-sur-que-la-nouvelle-monnaie-virtuelle-de-world-of-warcraft-fait-jaser.html",
-      "title": "Bien sûr que la nouvelle monnaie virtuelle de World of Warcraft fait jaser",
-      "summary": "La prochaine extension de World of Warcraft, intitulée Midnight, introduira une nouvelle monnaie virtuelle, spécifiquement pensée pour le logis (housing). Sur les forums officiels, la nouvelle n'est pas accueillie chaudement.",
-      "published_ts": 1762790103,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/pop-culture/2090441-casting-histoire-sortie-tout-savoir-sur-la-saison-4-de-ginny-georgia-sur-netflix.html",
-      "title": "Casting, histoire, sortie… Tout savoir sur la saison 4 de Ginny & Georgia sur Netflix",
-      "summary": "L'une des séries les plus populaires du catalogue Netflix va enfin faire son grand retour dans les prochains mois. La production de la saison 4 de Ginny & Georgia a ainsi commencé, promettant de nouveaux épisodes remplis de rebondissements. Voici tout ce que vous devez savoir sur le sujet.",
-      "published_ts": 1762788538,
-      "source_name": "Numerama"
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-s3-amazon-ec2-and-more-november-10-2025/",
+      "title": "AWS Weekly Roundup: OpenAI partnership, Jane Goodall Institute research archive, and more (November 10, 2025)",
+      "summary": "AWS re:Invent 2025 is only 3 weeks away and I’m already looking forward to the new launches and announcements at the conference. Last year brought 60,000 attendees from across the globe to Las Vegas, Nevada, and the atmosphere was amazing. Registration is still open for AWS re:Invent 2025. We hope you’ll join us in Las Vegas […]",
+      "published_ts": 1762792718,
+      "source_name": "AWS Blog"
     },
     {
       "url": "https://www.journaldunet.com/start-up/1545721-start-up-la-defensetech-francaise-passe-a-l-offensive/",
@@ -398,13 +615,6 @@
       "title": "Voilà à quoi va ressembler Yoshi dans le film d’animation Super Mario Galaxy",
       "summary": "Un paquet de biscuits aux couleurs du prochain film d'animation Mario est coupable d'une fuite révélant le design de Yoshi. Le plus mignon des dinosaures chez Nintendo apparaîtra dans cette suite, comme l'annonçait la scène post-générique du premier long métrage.",
       "published_ts": 1762782711,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2114103-150-e-de-moins-pour-le-robot-cuiseur-moulinex-companion-pendant-le-black-friday.html",
-      "title": "150 € de moins pour le robot cuiseur Moulinex Companion pendant le Black Friday",
-      "summary": "[Deal du jour] La marque française Moulinex propose un robot cuiseur utile pour vous aider dans la plupart des tâches dans la cuisine. Pratique du matin au soir, le Moulinex Companion profite de plus d'un très bon rapport qualité-prix en promotion.",
-      "published_ts": 1762781434,
       "source_name": "Numerama"
     },
     {
@@ -457,10 +667,10 @@
       "source_name": "Siècle Digital"
     },
     {
-      "url": "https://siecledigital.fr/2025/11/10/shein-echappe-a-la-suspension-mais-reste-sous-etroite-surveillance/",
-      "title": "Shein échappe à la suspension mais reste sous étroite surveillance…",
-      "summary": "Alors que le gouvernement français menaçait de suspendre la plateforme Shein après la découverte de produits illicites, le site e-commerce a finalement évité le pire. Malgré une mise en conformité rapide, les autorités maintiennent une surveillance renforcée, et plusieurs procédures judiciaires sont encore en cours… Une mise en conformité « express » pour éviter la fermeture Le […]",
-      "published_ts": 1762780194,
+      "url": "https://siecledigital.fr/2025/11/10/apres-leuphorie-la-chute-lintelligence-artificielle-declenche-une-onde-de-choc-boursiere/",
+      "title": "Après l’euphorie, la chute : l’intelligence artificielle déclenche une onde de choc boursière",
+      "summary": "Depuis le 31 octobre, la fièvre de l’intelligence artificielle s’est transformée en une crise de confiance sur les marchés financiers. En une semaine à peine, près de 1 000 milliards de dollars de valorisation se sont évaporés chez les grands noms de la tech américaine, de Nvidia à Meta, en passant par Oracle et Amazon. […]",
+      "published_ts": 1762780458,
       "source_name": "Siècle Digital"
     },
     {
@@ -471,18 +681,11 @@
       "source_name": "Numerama"
     },
     {
-      "url": "https://www.lemagit.fr/conseil/Adoption-de-lIA-Gartner-appelle-les-DSI-a-former-et-a-cibler-les-bons-cas-dusage",
-      "title": "Adoption de l’IA : Gartner appelle les DSI à former et à cibler les bons cas d’usage",
-      "summary": "<p>L’arrivée massive des outils d’IA dans l’entreprise, souvent par des outils qui viennent du grand public, est un vrai défi pour les DSI. C’est ce qu’a récemment rappelé Gartner IT Symposium/Xpo, un évènement auquel ont assisté nos collègues de <a href=\"https://www.ciodive.com/\">CIO Dive</a> (groupe Informa TechTarget dont fait partie LeMagIT).</p> \n<p>Pour Guy Fruda, directeur de l’expérience client chez Deloitte qui a participé à une table ronde lors du Symposium, la formation est pourtant la condition <i>sine qua non</i> pour tirer de la valeur de l’IA.</p> \n<p>«&nbsp;Si vous ne formez pas les gens à s’en servir, c’est comme si vous me donniez un burin, un marteau et un bloc de marbre en me disant&nbsp;: “Fais-en quelque chose.” Vous ne voudrez pas voir le résultat, et encore moins l’acheter&nbsp;», a-t-il plaisanté.</p> \n<p>Selon Gartner, pour déployer l’IA à grande échelle, les dirigeants doivent hiérarchiser les cas d’usage, <a href=\"https://www.lemagit.fr/conseil/Former-les-salaries-a-lIA-les-douze-etapes-cles\">créer des programmes de formation</a> – ciblés en fonction des publics – et encourager l’expérimentation. Le tout en mettant en place <a href=\"https://www.lemagit.fr/conseil/Comment-eviter-les-derives-de-lIA-agentique\">des garde-fous pour encadrer les risques</a> liés à la sécurité et à la fiabilité des résultats.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Se focaliser sur les cas d’usages à réelle valeur métier\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Se focaliser sur les cas d’usages à réelle valeur métier</h2>\n <p>En France, c’est exactement <a href=\"https://www.lemagit.fr/etude/DSI-les-conseils-de-Kaufman-Broad-pour-favoriser-la-culture-IA\">ce qu’a mis en place le DSI de Kaufman &amp; Broad</a>, Philippe&nbsp;Minier, pour favoriser une culture IA au sein du groupe immobilier depuis plus de deux ans.</p>\n <p>« Nous n’avons pas cherché à faire de grands chantiers techniques. Nous avons essayé de faire des démonstrateurs simples, utiles, qui parlent aux métiers », résume Philippe Minier, DSI du groupe qui partageait ses conseils lors de la journée de l’AUFO (club utilisateur d’Oracle) à Paris début novembre.</p>\n <blockquote class=\"main-article-pullquote\">\n  <div class=\"main-article-pullquote-inner\">\n   <figure>\n    «&nbsp;Nous avons essayé de faire des démonstrateurs simples, utiles, qui parlent aux métiers.&nbsp;»\n   </figure>\n   <figcaption>\n    <strong>Philippe Minier</strong>DSI de Kaufman &amp; Broad\n   </figcaption>\n   <i class=\"icon\" data-icon=\"z\"></i>\n  </div>\n </blockquote>\n <p>Au Gartner IT Symposium/Xpo, May Yap, la DSI du fabricant américain d’appareils électroménagers, électriques et électroniques Jabil, a partagé sur scène une expérience similaire.</p>\n <p>«&nbsp;Nous avons mis en place ce que nous appelons un <i>AI and Data Council</i>, où j’ai sélectionné des responsables seniors de chaque fonction – business, opérations, RH, finances et juridique&nbsp;», explique-t-elle.</p>\n <p>Ce conseil a défini trois domaines prioritaires d’investissement&nbsp;: la vision par ordinateur (<a href=\"https://www.lemagit.fr/definition/Vision-par-ordinateur-machine-vision-computer-vision\">computer vision</a>), <a href=\"https://www.lemagit.fr/conseil/IA-machine-learning-deep-learning-IA-generative-quelles-differences\">le machine learning pour la prévision et l’IA générative</a>.</p>\n <p>«&nbsp;Nous devons toujours garder en tête le cas d’usage&nbsp;», insiste May Yap. «&nbsp;Il faut savoir à quel problème concret ou à quelle opportunité métier nous cherchons à répondre.&nbsp;»</p>\n <p>«&nbsp;Les <a href=\"https://www.lemagit.fr/conseil/Intelligence-Artificielle-cinq-conseils-pour-bien-choisir-ses-premiers-cas-dusage\">cas d’usage qui améliorent directement la productivité</a> sont ceux qui convainquent le plus vite&nbsp;», acquiesce Guy Fruda. « Si vous recevez vingt appels par jour pour réinitialiser des mots de passe, pourquoi ne pas confier cela à un agent qui pourra automatiser ces tâches répétitives ? », illustre-t-il.</p>\n</section>         \n<section class=\"section main-article-chapter\" data-menu-title=\"Former les collaborateurs, encadrer les usages\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Former les collaborateurs, encadrer les usages</h2>\n <p>Pour favoriser l’adoption de l’IA, Deloitte a également intégré des modules de formation dans son programme de développement, Deloitte University.</p>\n <p>Le groupe propose également une formation spécifique sur <a href=\"https://www.lemagit.fr/actualites/366592816/De-lIA-generative-a-lIA-agentique-rapport\">l’IA agentique</a> (en fait des assistants), destinée à aider les salariés à comprendre quels outils utiliser et dans quel contexte.</p>\n <p>«&nbsp;Nous avons cherché à offrir aux employés un moyen d’apprendre et d’expérimenter sans mettre en danger nos données&nbsp;», explique Guy Fruda. «&nbsp;Nous avons créé notre propre agent, appelé <i>Sidekick</i>. L’idée est qu’il soit protégé par davantage de pare-feu, afin que chacun puisse le tester et l’utiliser sans craindre pour les données de Deloitte ou celles de nos clients.&nbsp;»</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Maintenir la vigilance face aux erreurs de l’IA\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Maintenir la vigilance face aux erreurs de l’IA</h2>\n <p>L’un des plus grands défis reste la fiabilité des réponses générées par les grands modèles de langage. Pour Art Thompson, DSI de la ville de Détroit, également présent au Symposium, il est essentiel de <a href=\"https://www.lemagit.fr/conseil/Comment-fixer-des-regles-claires-pour-un-usage-sur-de-ChatGPT-en-entreprise\">vérifier systématique les outputs de l’IA</a>.</p>\n <p>«&nbsp;Je suis plutôt du côté des prudents&nbsp;», admet-il. «&nbsp;Mais l’enjeu, c’est de s’assurer que tout le monde partage une compréhension commune de ce qu’est réellement l’IA.&nbsp;» Par exemple en comprenant que l’IA générative est une IA probabiliste, qui peut halluciner et qui doivent donc être relues, à la différence d’autres formes d’IA, déterministes, comme le prédictif.</p>\n <p>D’où l’importance, pour Gartner, de <a href=\"https://www.lemagit.fr/actualites/366633467/Gartner-prevoit-un-retour-en-force-de-lesprit-critique-face-a-lIA-generative\">cultiver plus que jamais l’esprit critique</a> au sein de des équipes.</p>\n</section>",
-      "published_ts": 1762777860,
+      "url": "https://www.lemagit.fr/actualites/366634321/Remplacer-les-juniors-par-lIA-pas-une-bonne-idee",
+      "title": "Remplacer les juniors par l’IA, pas une bonne idée",
+      "summary": "<p>Pour le cabinet de conseil international en organisation Korn Ferry, c’est un fait avéré. L’IA prend de plus en plus la place des débutants sur les postes juniors. Problème&nbsp;: en fermant cette porte d’entrée dans l’entreprise, l’IA tarirait aussi une source essentielle au recrutement et au développement des futurs dirigeants.</p> \n<p>Selon <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">un rapport</a> Korn Ferry publié fin octobre, environ 4&nbsp;entreprises sur 10 prévoiraient de remplacer des postes débutant par une IA (37&nbsp;% exactement).</p> \n<p>Une autre étude, du cabinet LHH (groupe Adecco) celle-ci, et menée auprès de 2 000&nbsp;dirigeants dans 13&nbsp;pays, <a href=\"https://www.lesechos.fr/travailler-mieux/metiers-reconversion-professionnelle/la-moitie-des-entreprises-disent-avoir-deja-reduit-leurs-effectifs-a-cause-de-lia-2191307\">confirme</a>. 46&nbsp;% des entreprises auraient déjà réduit leurs effectifs à cause (ou avec) l’IA.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Yale et Hellowork relativisent\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Yale et Hellowork relativisent</h2>\n <p>Et 54&nbsp;% prévoiraient d’employer moins dans les cinq prochaines années.</p>\n <p>La société française de recrutement Hellowork nuance cependant ce constat. Elle rappelle qu’une étude de Yale (<a href=\"https://budgetlab.yale.edu/\">The Budget Lab</a>) ne verrait pas de choc visible sur l’emploi global. Pour l’instant, en tout cas.</p>\n <p>D’après la prestigieuse université américaine, les métiers évolueraient plus vite, certes, mais la tendance aurait commencé avant <a href=\"https://www.lemagit.fr/ezine/Applications-Donnees/Applications-et-donnees-19-ChatGPT-super-ambassadeur-de-lIA\">l’essor de l’IA générative fin&nbsp;2022</a>.</p>\n <p>L’impact de l’IA pourrait ainsi prendre des années à se matérialiser.</p>\n</section>     \n<section class=\"section main-article-chapter\" data-menu-title=\"Un danger pour l’avenir des talents\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Un danger pour l’avenir des talents</h2>\n <p>Quoi qu’il en soit, lorsque Korn Ferry a interrogé plus de 1 670&nbsp;responsables, le cabinet a confirmé que la réduction des recrutements juniors pourrait générer des économies pour les entreprises sur 2026 et sur 2027. Mais il avertit aussi que réduire ce vivier de futurs dirigeants pourrait bien aboutir à une crise de leadership à plus long terme.</p>\n <p>«&nbsp;À mesure que l’IA se déploie – et <a href=\"https://www.lemagit.fr/actualites/366629373/Enterprise-Asset-Management-IFS-inscrit-ses-agents-IA-dans-son-organigramme\">qu’elle devient un vrai collègue, et plus un simple outil</a> – les dirigeants doivent mesurer avec précaution l’équilibre entre l’innovation et le développement de la prochaine génération de leaders&nbsp;», <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">insiste</a> Jeanne MacDonald, CEO, Recruitment Process Outsourcing chez Korn Ferry.</p>\n <p>Pour relever ce défi et s’assurer que la mise en œuvre de l’IA est bien alignée sur les ambitions à long terme de l’entreprise, l’une des priorités serait que la direction générale communique sa vision à l’ensemble du personnel, quitte à se faire aider par les responsables RH de l’acquisition de talents, conseille Korn Ferry.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"L’esprit critique toujours aussi critique\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>L’esprit critique toujours aussi critique</h2>\n <p>Son rapport confirme un autre point. Il y a certes une «&nbsp;hype IA&nbsp;», mais 73&nbsp;% des recruteurs cherchent toujours à évaluer en priorité l’esprit critique des candidats.</p>\n <p>Les entreprises recherchent des personnes capables d’évaluer les recommandations de l’IA, d’analyser ses résultats, de repérer les erreurs, voire de savoir quand il faut passer outre ses conclusions, liste le rapport.</p>\n <p>Lors de son Symposium, <a href=\"https://www.lemagit.fr/actualites/366633467/Gartner-prevoit-un-retour-en-force-de-lesprit-critique-face-a-lIA-generative\">Gartner était arrivé exactement à la même conclusion</a>.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Former à l’IA ou laisser former à l’IA ?\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Former à l’IA ou laisser former à l’IA&nbsp;?</h2>\n <p>Sur ce sujet, <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">un autre rapport</a>, de l’entreprise spécialisée dans la formation General Assembly (également du groupe Adecco), estime que les jeunes employés seraient très mal préparés à la montée en puissance de l’IA.</p>\n <p>Les entreprises – du moins aux États-Unis et au Royaume-Uni – estimeraient de leur que se <a href=\"https://www.lemagit.fr/conseil/Former-les-salaries-a-lIA-les-douze-etapes-cles\">former à l’IA</a> relèverait de la responsabilité des employés. Il n’est <a href=\"https://www.lemagit.fr/actualites/366618024/Lacculturation-le-talon-dAchille-des-strategies-IA-en-entreprise-etude\">pas certain que la situation soit très différente en France</a>.</p>\n <p>Mais General Assembly prévient&nbsp;: si l’IA affecte de plus en plus le vivier de talents, c’est aux employeurs qu’il revient d’investir dans la formation des prochaines générations. Sans quoi, les entreprises seront bientôt confrontées à une pénurie critique de compétences.</p>\n <p><i>Avec nos collègues de <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">HR Dive</a> (groupe Informa Techtarget dont fait partie LeMagIT)</i></p>\n</section>",
+      "published_ts": 1762777620,
       "source_name": "LeMagIT"
-    },
-    {
-      "url": "https://www.numerama.com/pop-culture/2113997-des-joueurs-de-battlefield-6-ragent-contre-le-systeme-de-progression.html",
-      "title": "Des joueurs de Battlefield 6 ragent contre le système de progression",
-      "summary": "Battlefield 6 impose une limite dans le nombre de points d'expérience que l'on peut gagner chaque jour. Ce n'est pas grave pour la majorité des joueuses et des joueurs, mais les personnes les plus assidues sont en colère contre ce système.",
-      "published_ts": 1762776060,
-      "source_name": "Numerama"
     },
     {
       "url": "https://www.numerama.com/tech/2114031-meta-deploie-enfin-sa-derniere-nouveaute-en-europe-voici-vibes-un-reseau-social-pas-comme-les-autres.html",
@@ -499,20 +702,6 @@
       "source_name": "Journal du Net"
     },
     {
-      "url": "https://www.numerama.com/pop-culture/2113927-voici-la-vraie-raison-du-nom-kaamelott-et-son-orthographe-unique-au-lieu-de-camelot.html",
-      "title": "Voici la vraie raison du nom Kaamelott et son orthographe unique (au lieu de Camelot)",
-      "summary": "Pourquoi la série Kaamelott a-t-elle une orthographe si éloignée de Camelot ? Alexandre Astier, créateur de la série et de l'univers étendu, a fini par expliquer comment il en est arrivé à ce nom.",
-      "published_ts": 1762773412,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/pop-culture/2113751-the-witcher-saison-4-le-tournage-dans-le-marais-etait-un-enfer.html",
-      "title": "The Witcher saison 4 : le tournage dans le marais était un enfer",
-      "summary": "Alors que la saison 4 de The Witcher continue de figurer dnas le top 10 de Netflix, le timing est parfait pour découvrir quelques secrets de tournage. Visiblement, les séquences dans le marais hanté ont été assez ardues à vivre pour les comédiens.",
-      "published_ts": 1762771551,
-      "source_name": "Numerama"
-    },
-    {
       "url": "https://www.numerama.com/cyberguerre/2113817-cest-vraiment-prometteur-leurope-a-casse-le-web-avec-le-rgpd-mais-a-un-plan-pour-le-sauver.html",
       "title": "« C’est vraiment prometteur » : l’Europe a cassé le web avec le RGPD, mais a un plan pour le sauver",
       "summary": "Un document publié le 9 novembre 2025 dévoile le plan de la Commission européenne pour en finir avec le cauchemar des cookies. Elle veut notamment moderniser le RGPD afin de simplifier la gestion du consentement en ligne.",
@@ -520,24 +709,17 @@
       "source_name": "Numerama"
     },
     {
-      "url": "https://www.numerama.com/vroom/2113929-le-constructeur-rivian-va-jusqua-copier-tesla-sur-la-remuneration-de-son-patron.html",
-      "title": "Le constructeur Rivian va jusqu’à copier Tesla sur la rémunération de son patron",
-      "summary": "Rivian revoit à la hausse la rémunération de son fondateur RJ Scaringe avec un plan à la Elon Musk : des milliards potentiels de gains en actions à condition d’atteindre des objectifs boursiers et financiers précis.",
-      "published_ts": 1762770112,
-      "source_name": "Numerama"
+      "url": "https://www.zdnet.fr/actualites/zdnet-morning-10-11-2025-bulle-de-lia-dans-le-labo-des-tv-samsung-la-chine-superpuissance-de-lia-484707.htm#xtor=RSS-1",
+      "title": "ZDNET Morning 10/11/2025 : Bulle de l'IA, Dans le labo des TV Samsung, La Chine superpuissance de l'IA,...",
+      "summary": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
+      "published_ts": 1762769494,
+      "source_name": "ZDNet France"
     },
     {
       "url": "https://www.zdnet.fr/actualites/bulle-de-lia-le-fmi-et-la-banque-dangleterre-redoutent-une-correction-brutale-des-marches-484700.htm#xtor=RSS-1",
       "title": "Bulle de l’IA : le FMI redoute une correction brutale des marchés",
       "summary": "Alors que les valeurs liées à l’IA poursuivent leur envolée en Bourse, les craintes d’une nouvelle bulle spéculative ressurgissent. Le Fonds monétaire international appelle à la prudence, estimant que les marchés pourraient connaître un sévère retour de bâton.",
       "published_ts": 1762765867,
-      "source_name": "ZDNet France"
-    },
-    {
-      "url": "https://www.zdnet.fr/pratique/ia-pratique-creez-votre-presentation-avec-la-derniere-mise-a-jour-de-gemini-484655.htm#xtor=RSS-1",
-      "title": "IA pratique : créez votre présentation avec la dernière mise à jour de Gemini",
-      "summary": "Vous avez du mal avec vos diapositives ? Voici comment le chatbot d’intelligence artificielle de Google peut vous aider à divers niveaux à peaufiner votre prestation.",
-      "published_ts": 1762765866,
       "source_name": "ZDNet France"
     },
     {
@@ -548,57 +730,6 @@
       "source_name": "ZDNet France"
     },
     {
-      "url": "https://www.journaldunet.com/patrimoine/finances-personnelles/1545873-hf1-taxe-loyer-proprietaire-2790-euros/",
-      "title": "Hausse des taxes sur les loyers : les propriétaires vont payer jusqu'à 2 800 euros de plus par an",
-      "summary": "Des millions de propriétaires vont payer plus de taxes sur les loyers qu'ils encaissent. Même les loueurs qui passent par Airbnb, Booking ou Abritel devront mettre la main à la poche.",
-      "published_ts": 1762753802,
-      "source_name": "Journal du Net"
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/un-reseau-de-voleurs-a-la-fausse-enceinte-connectee-vise-par-un-nouveau-coup-de-filet-judiciaire-484713.htm#xtor=RSS-1",
-      "title": "Un réseau de voleurs à la fausse enceinte connectée visé par un nouveau coup de filet judiciaire",
-      "summary": "Facilement trouvables sur Internet, ces appareils électroniques customisés peuvent, avertissent les gendarmes, servir à des vols de véhicules.",
-      "published_ts": 1762737096,
-      "source_name": "ZDNet France"
-    }
-  ],
-  "news": [
-    {
-      "url": "https://blog.octo.com/du-dataset-jetable-au-data-product-perenne--comment-le-data-mesh-transforme-notre-rapport-a-la-donnee",
-      "title": "Du dataset jetable au data product pérenne : comment le data mesh transforme notre rapport à la donnée",
-      "summary": "Dans les organisations où les données sont nombreuses, hétérogènes et stratégiques, leur mise à disposition efficace devient un levier clé de performance. L’approche data mesh, en décentralisant la gouvernance et en traitant la donnée comme un produit, promet une meilleure agilité et une appropriation renforcée par les équipes métier.",
-      "published_ts": 1763126418,
-      "source_name": "OCTO Talks!"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/your-guide-to-aws-analytics-at-aws-reinvent-2025/",
-      "title": "Your guide to AWS Analytics at AWS re:Invent 2025",
-      "summary": "It’s that time of year again — AWS re:Invent is here! At re:Invent, bold ideas come to life. Get a front-row seat to hear inspiring stories from AWS experts, customers, and leaders as they explore today’s most impactful topics, from data analytics to AI. For all the data enthusiasts and professionals, we’ve curated a comprehensive […]",
-      "published_ts": 1763064379,
-      "source_name": "Redshift / AWS Big Data"
-    },
-    {
-      "url": "https://www.databricks.com/blog/accelerating-data-and-ai-google-axion-c4a-vms-databricks",
-      "title": "Accelerating Data and AI with Google Axion C4A VMs on Databricks",
-      "summary": "Databricks customers on Google Cloud running in Classic compute environments can...",
-      "published_ts": 1762900800,
-      "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://www.databricks.com/blog/unlocking-future-automotive-industry-part-2-implementing-scalable-geospatial-analytics-ai",
-      "title": "Unlocking the future of the Automotive Industry (Part 2): Implementing Scalable Geospatial Analytics & AI",
-      "summary": "In Part 1, we explored core concepts and datasets driving geospatial analytics in...",
-      "published_ts": 1762882200,
-      "source_name": "Databricks Blog"
-    },
-    {
-      "url": "https://vutr.substack.com/p/i-spent-8-hours-learning-about-vector",
-      "title": "I spent 8 hours learning about vector databases",
-      "summary": "From their typical workload, how it stores to how it serves the data",
-      "published_ts": 1762830936,
-      "source_name": "VuTrinh · Data Engineering"
-    },
-    {
       "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-245",
       "title": "Data Engineering Weekly #245",
       "summary": "The Weekly Data Engineering Newsletter",
@@ -607,90 +738,6 @@
     }
   ],
   "news_general": [
-    {
-      "url": "https://www.lebigdata.fr/un-chanteur-100-ia-grimpe-au-sommet-du-billboard-et-trompe-tout-le-monde",
-      "title": "Un chanteur 100 % IA grimpe au sommet du Billboard et trompe tout le monde",
-      "summary": "Un artiste virtuel en tête des classements, cela semblait encore improbable il y a peu. Pourtant, Breaking Rust, né de … Cet article Un chanteur 100 % IA grimpe au sommet du Billboard et trompe tout le monde a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762888656,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/openai-en-panique-son-ia-ressuscite-des-stars-sans-autorisation",
-      "title": "OpenAI en panique : son IA ressuscite des stars sans autorisation",
-      "summary": "Faire parler un défunt, Sora 2, l’IA générateur de vidéos d’OpenAI, l’a fait. Quoique, tout le monde n’est pas émerveillé … Cet article OpenAI en panique : son IA ressuscite des stars sans autorisation a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762885477,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/le-pere-de-lia-previent-pour-quelle-rapporte-il-faut-virer-les-humains",
-      "title": "Le père de l’IA prévient : pour qu’elle rapporte, il faut virer les humains",
-      "summary": "Depuis des siècles, chaque innovation promet de soulager l’humain sans jamais l’effacer. La machine à vapeur, l’ordinateur ou Internet ont … Cet article Le père de l’IA prévient : pour qu’elle rapporte, il faut virer les humains a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762885236,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/whatsapp-et-signal-votre-protection-nest-pas-totale-dit-la-dgse",
-      "title": "WhatsApp et Signal : votre protection n’est pas totale, dit la DGSE",
-      "summary": "WhatsApp, Signal, Telegram, on les considère souvent comme les forteresses ultimes de nos conversations privées. Pourtant, tout n’est pas inviolable. … Cet article WhatsApp et Signal : votre protection n’est pas totale, dit la DGSE a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762883296,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/meta-renforce-sa-puissance-ia-mais-ses-profits-font-un-plongeon-inquietant",
-      "title": "Meta renforce sa puissance IA, mais ses profits font un plongeon inquiétant",
-      "summary": "Tout allait bien chez de Meta. Les publicités cartonnent, les utilisateurs défilent, les revenus explosent. Puis, au milieu de la … Cet article Meta renforce sa puissance IA, mais ses profits font un plongeon inquiétant a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762879504,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/en-chine-les-scenaristes-passent-a-la-trappe-lia-ecrit-les-series",
-      "title": "En Chine, les scénaristes passent à la trappe : l’IA écrit les séries",
-      "summary": "L’IA commence à prendre la place de tout le monde. En Chine, les séries ne sont plus écrites par des … Cet article En Chine, les scénaristes passent à la trappe : l’IA écrit les séries a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762877523,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/iphone-16e-128-go-a-prix-choc-seulement-489-e-au-lieu-de-719-e-chez-rakuten-32",
-      "title": "iPhone 16e 128  Go à prix choc : seulement 489 € au lieu de 719 € chez Rakuten (-32 %)",
-      "summary": "Le plus abordable des iPhone chute à un tarif inédit : 489 € seulement au lieu de 719 €, grâce … Cet article iPhone 16e 128  Go à prix choc : seulement 489 € au lieu de 719 € chez Rakuten (-32 %) a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762873866,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/les-depenses-folles-openai-ne-toucheront-pas-sam-altman",
-      "title": "Les dépenses folles d’OpenAI ne toucheront pas Sam Altman",
-      "summary": "Sam Altman évite toute responsabilité pour les dépenses massives d’OpenAI. Sans enjeux financiers, il mise sur des renégociations ou une … Cet article Les dépenses folles d’OpenAI ne toucheront pas Sam Altman a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762872363,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://www.lebigdata.fr/meta-quest-3-10x-moins-cher-que-lapple-vision-pro-il-explose-les-ventes-sur-aliexpress",
-      "title": "Meta Quest 3 : 10x moins cher que l’Apple Vision Pro, il explose les ventes sur AliExpress",
-      "summary": "Le casque VR/AR haut de gamme de Meta s’effondre à seulement 390 € au lieu de 699 €. En ajoutant … Cet article Meta Quest 3 : 10x moins cher que l’Apple Vision Pro, il explose les ventes sur AliExpress a été publié sur LEBIGDATA.FR .",
-      "published_ts": 1762869830,
-      "source_name": "Le Big Data"
-    },
-    {
-      "url": "https://powerbi.microsoft.com/en-us/blog/microsoft-named-leader-and-outperformer-in-the-2025-gigaom-radar-for-semantic-layers-metric-stores/",
-      "title": "Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers &amp; Metric Stores",
-      "summary": "In today’s data-driven world, semantic models have become the backbone of trustworthy analytics. They define business logic, metrics, and relationships that turn raw data into meaningful, trusted and curated insights. As organizations embrace generative AI, semantic models provide the structure and context that AI needs to deliver accurate, reliable answers.  At Microsoft, we have spent nearly two decades refining the semantic layer that connects data … Continue reading “Microsoft named Leader and Outperformer in the 2025 GigaOm Radar for Semantic Layers & Metric Stores “",
-      "published_ts": 1762858928,
-      "source_name": "Power BI Blog"
-    },
-    {
-      "url": "https://www.numerama.com/tech/2114763-le-morceau-actuellement-top-1-country-est-genere-par-ia-je-lai-ecoute-jaime-bien-et-cest-un-probleme.html",
-      "title": "Le morceau actuellement top 1 country est généré par IA : je l’ai écouté, j’aime bien (et c’est un problème)",
-      "summary": "Un titre de country généré par IA, par un artiste IA, est top 1 des écoutes numériques. Problème pour les musiciens : il est vraiment pas mal.",
-      "published_ts": 1762852663,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://blog.zenika.com/2025/11/11/llm-assistance/",
-      "title": "Using Jest and LLM assistance to test your real-time chat",
-      "summary": "In the\nprevious article\n, we delved into creating a simple web server that serves static files, flat file database that uses lock and the API endpoints that allows for real-time chat interaction. In this article, we’ll follow-up by taking a look into writing unit tests for our flat file database to ",
-      "published_ts": 1762840995,
-      "source_name": "Zenika Tech Blog"
-    },
     {
       "url": "https://www.zdnet.fr/actualites/zdnet-morning-11-11-2025-qualcomm-detrone-apple-carriere-et-si-lia-boostait-vos-chances-boostez-vos-slides-avec-gemini-484744.htm#xtor=RSS-1",
       "title": "ZDNET Morning 11/11/2025 : Qualcomm détrône Apple, Carrière : et si l'IA boostait vos chances ? Boostez vos slides avec Gemini,...",
@@ -711,37 +758,9 @@
       "summary": "<p>Brice Faure, ancien dirigeant d’Anaplan en France, passé par SAP, a pris la tête de la direction générale de Celonis France en février 2025.</p> \n<p>Il remplace Fadi Naffah qui, peu de temps après son départ, a rejoint le concurrent Aris en tant Chief Revenue Officer.</p> \n<p>Lui affirmait avoir <a href=\"https://www.lemagit.fr/actualites/366614836/En-France-Celonis-gagne-du-terrain-chez-les-grands-groupes\">convaincu 57&nbsp;clients français en quatre ans</a>. Trois entreprises avaient choisi la suite d’analyse et d’automation des processus (process mining, process intelligence) avant son installation dans le <a href=\"https://www.lemagit.fr/actualites/252508826/Process-Mining-Celonis-affiche-de-fortes-ambitions-en-France\">bureau parisien, en 2020</a>. Brice Faure évoque une quarantaine de clients, avec pour objectif d’en signer une vingtaine supplémentaire d’ici à deux ans.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Se concentrer sur les grands comptes pour doubler le chiffre d’affaires\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Se concentrer sur les grands comptes pour doubler le chiffre d’affaires</h2>\n <p>«&nbsp;Notre objectif est de doubler le chiffre d’affaires de l’entité française&nbsp;», ajoute l’actuel vice-président et directeur général de Celonis France,&nbsp;lors d’un point presse. Il participait à la conférence annuelle Celosphere qui se déroulait du 3 au 5&nbsp;novembre à Munich. «&nbsp;Le groupe prévoit une croissance annuelle de 30 à 40&nbsp;%&nbsp;».</p>\n <div class=\"imagecaption alignLeft\">\n  <img src=\"https://cdn.ttgtmedia.com/visuals/LeMagIT/bricefaure.jpg\" alt=\"Brice Faure, vice-président &amp; DG France, Celonis\">Brice Faure, \n  <br>vice-président &amp; DG France, Celonis\n </div>\n <p>Celonis est adopté par un peu plus de la moitié des groupes du CAC40. Pour autant, les déploiements à l’échelle ne sont pas encore une généralité. Le chiffre d’affaires, bien qu’en hausse par rapport à l’année passée, n’est pas au niveau des attentes de l’éditeur.</p>\n <p>«&nbsp;Nous avons un retard à rattraper. Et ce retard, pour moi, ne peut se combler que par la maximisation de nos revenus chez nos clients existants&nbsp;», note Brice Faure.</p>\n <p>En France, Celonis veut donc se concentrer sur les grands comptes généralement convaincus par les apports du process mining. Ce qui implique une nouvelle organisation, en cours de développement.</p>\n <p>«&nbsp;Ouvrir des comptes, c’est une chose, mais ensuite il faut les suivre, les garder, les développer et l’on ne peut pas tout faire&nbsp;», pose le directeur général de Celonis France.</p>\n <p>De ce fait, pour répondre aux besoins des ETI, Celonis misera davantage sur les partenaires autres que les grands intégrateurs. Le dirigeant indique que cette partie de la stratégie est en cours de structuration.</p>\n</section>        \n<section class=\"section main-article-chapter\" data-menu-title=\"Place au « tailor made », à l’expertise sectorielle\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Place au «&nbsp;tailor made&nbsp;», à l’expertise sectorielle</h2>\n <p>Du côté des grands comptes, ce développement passe par des commerciaux nommés, et ce que Celonis appelle des «&nbsp;Value Engineers&nbsp;». Ce sont des ingénieurs couvrant l’ensemble du cycle, de l’avant à l’après-vente. Ceux-là sont en cours de spécialisation. Ils doivent accompagner les projets des clients les plus avancés. Ils tiennent généralement un rôle de supervision au côté des grands cabinets de conseil et les intégrateurs sur les premiers projets.</p>\n <p>Il s’agit d’aller au-delà des «&nbsp;gains les plus faciles à obtenir&nbsp;», comme l’expliquait l’année dernière Fadi Naffah.</p>\n <p>«&nbsp;Celonis le reconnaît aujourd’hui, nous nous concentrions trop sur les processus standards&nbsp;: compte fournisseurs, compte clients, gestion d’inventaires, etc.&nbsp;», rappelle Brice Faure. «&nbsp;Nous devons proposer du “tailor made”, une expertise sur des processus métier critique pour nos clients&nbsp;».</p>\n <p>Techniquement, cela implique de passer de l’analyse de processus à l’orchestration d’actions correctives et d’amélioration continue. Ce vers quoi les clients les plus avancés, <a href=\"https://www.lemagit.fr/etude/Comment-Saint-Gobain-suit-ses-processus-metiers-en-continu\">comme Saint-Gobain en France</a>, BMW et Mercedes-Benz en Allemagne, se sont dirigés. <a href=\"https://www.lemagit.fr/actualites/366634061/IA-agentique-un-argument-de-plus-en-faveur-du-process-mining-selon-Celonis\">L’IA et l’orchestrateur de flux automatisés, codéveloppé avec Emporix</a>, peuvent y participer. C’est la feuille de route défendue par l’éditeur.</p>\n <p>De son côté, Celonis France doit recruter des experts métiers par ligne d’activité. «&nbsp;Nous avons des équipes dédiées au manufacturing, au CPG, au secteur bancaire qui sont parmi les principales industries couvertes par Celonis&nbsp;», liste Brice Faure. «&nbsp;Nous avons quelqu’un qui ne traite que des processus des opérateurs télécoms, une autre personne traite des sujets des énergéticiens, etc.&nbsp;»</p>\n <p>Cela vaut aussi pour certains volets plus horizontaux. Par exemple, cette année, LeMagIT a pu échanger avec le «&nbsp;champion de l’IA&nbsp;» chez Celonis en France.</p>\n <p>L’éditeur recherche des profils sortis des grandes écoles «&nbsp;capables de s’adapter&nbsp;rapidement&nbsp;» et qui ont, de préférence, plusieurs années d’expérience dans un des domaines cités plus haut.</p>\n <p>«&nbsp;Nous sommes censés être le miroir des experts métier que nous rencontrons chez nos clients&nbsp;», note Brice Faure. Cela implique par ailleurs le recrutement de consultants dans l’entité service de l’éditeur.</p>\n <p>Or, ces spécialistes sont aussi difficiles à dénicher des deux côtés de la barrière. Ils sont néanmoins nécessaires pour que Celonis prouve sa valeur.</p>\n <p>À ce titre, le dirigeant français, dont c’était le premier Celosphere, a apprécié les «&nbsp;no bullshit talks&nbsp;»&nbsp;de ses clients. «&nbsp;Ils sont dans l’action&nbsp;», constate-t-il. Peu des grands groupes français souhaitaient communiquer avec la presse. Mais, lors du salon se déroulant à Munich, ils ont affiché des résultats et des objectifs conséquents dans le cadre de leur adoption de la plateforme de process mining. Tout en évoquant les défis qu’ils ont rencontrés lors de l’implémentation de la technologie.</p>\n</section>           \n<section class=\"section main-article-chapter\" data-menu-title=\"Les enjeux croisés de Celonis et de ses clients\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Les enjeux croisés de Celonis et de ses clients</h2>\n <p>Celonis a largement bâti sa communication sur les économies réalisées par ses clients. Elles se chiffrent en millions, en dizaine, voire en centaine de millions d’euros/dollars. Des résultats certes impressionnants, mais qui masquent certains aspects de son modèle.</p>\n <p>D’abord, les clients remarquent que le premier projet est généralement plus long à mettre en place. Il faut s’acclimater à la technologie de Celonis et la déployer.</p>\n <p>Depuis deux ans, l’éditeur passe de la modélisation des processus par cas («&nbsp;case centric&nbsp;») à une autre par objet (Object Centric Process Mining, OCPM). Cette deuxième approche doit permettre de capturer les relations entre les composants d’un processus et les intersections entre deux processus ou plus. Or, sur les 300&nbsp;clients ayant adopté ce modèle de données (sur 1400 au total), 30 l’ont déployé sur plus de cinq processus.</p>\n <p>En France, les porte-parole de Celonis rencontrés par LeMagIT assurent que la majorité des clients, sinon tous, ont adopté OCPM. Dans son Magic Quadrant publié le 15&nbsp;avril 2025, Gartner notait que cela accélère les déploiements, mais réclame une plus grande maturité pour bâtir les bonnes analyses, «&nbsp;à cause de l’abondance d’objets et de processus interconnectés&nbsp;».</p>\n <p>Aux enjeux de déploiement s’ajoutent des défis contractuels. Pour rappel, Celonis a porté plainte contre SAP aux États-Unis pour pratiques anticoncurrentielles. <a href=\"https://www.lemagit.fr/actualites/366626841/Donnees-ERP-SAP-autorise-lacces-a-Celonis-jusquau-verdict\">Dans l’attente du verdict, SAP autorise son concurrent</a> (et ex-partenaires), à ingérer les données de son système ERP. Mais Celonis n’est toujours pas un partenaire certifié de SAP, ce qui rebute certains prospects. Pour mémoire, SAP propose une solution concurrente&nbsp;: Signavio.</p>\n <p>Brice Faure imagine que le partenariat entre Celonis et Databricks (puis, plus tard Snowflake), annoncé lors de Celosphere, représente une alternative. Databricks entretient lui-même un partenariat avec SAP.</p>\n <p>Par ailleurs, il convient de «&nbsp;négocier&nbsp;» avec les métiers (dixit les représentants de Socar Turquie, une branche de la compagnie pétrolière et gazière nationale d’Azerbaïdjan) pour le bon usage de la plateforme et appliquer les premières mesures correctives.</p>\n <p>Ces premières corrections sont présentées par le porte-parole d’un grand industriel français comme les «&nbsp;dolipranes&nbsp;» du processus. Elles soignent les symptômes. Reste à trouver le traitement pour le guérir.</p>\n</section>         \n<section class=\"section main-article-chapter\" data-menu-title=\"Stabiliser le modèle économique\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Stabiliser le modèle économique</h2>\n <p>Ensuite, Celonis a vanté, pendant quelques années, un modèle économique basée sur un pourcentage des économies obtenus. Il en revient. Depuis deux ans, il se concentre sur une tarification fonction du nombre de processus et d’une échelle de déploiement (un pays, une région, plusieurs, etc.).</p>\n <p>« Le réflexe de mes commerciaux, c’est de promettre une génération de valeur permettant d’autofinancer l’usage de la plateforme », résume Brice Faure. « Savez-vous combien d’éditeurs de logiciels font ça ? Moi, je n’en connais pas d’autres. Mais nous nous enfermons dans ce discours ».&nbsp;</p>\n <p>La génération de valeur n’est pas forcément financière, justifie-t-il. Comment quantifier les gains d’efficience des métiers, la meilleure connaissance des processus de l’entreprise. «&nbsp;Dans certains cas, ça ne se mesure pas, ou peu&nbsp;».</p>\n <p>De plus, certains clients refusent de partager avec l’éditeur les gains obtenus.</p>\n <p>La promesse de retour sur investissement peut engendrer des frictions au moment de poser le périmètre d’un projet. Certains prospects avancés ont pu découvrir des anomalies importantes dans les processus cibles. Anomalies qu’ils ont préféré régler en interne plutôt que de payer une solution. Ou maintenir le statu quo si cela réclame un changement organisationnel, inenvisageable à&nbsp;l’instant T. «&nbsp;Notre travail consiste à déterminer au plus tôt les organisations compatibles avec notre approche&nbsp;», résume Brice Faure. &nbsp;</p>\n <p>Toutefois, ce choix d’un modèle économique plus prédictible n’était pas forcément limpide pour les clients en début d’année&nbsp;2025. «&nbsp;En particulier, les utilisateurs expriment des difficultés liées à l’évolution des paramètres de tarification, aux coûts basés sur les processus, aux mécanismes d’échelonnement peu clairs et au nombre élevé de SKU complémentaires&nbsp;», note Gartner dans son Magic Quadrant.</p>\n <p>Celonis demeure le leader de sa catégorie, devant Signavio, ARIS, <a href=\"https://www.lemagit.fr/actualites/366632645/IA-agentique-Salesforce-veut-mettre-Slack-au-centre-de-son-dispositif\">Apromore (Salesforce),</a> IBM, UiPah, Pegasystems et Mehrwerk.</p>\n</section>",
       "published_ts": 1762785480,
       "source_name": "LeMagIT"
-    },
-    {
-      "url": "https://www.lemagit.fr/actualites/366634321/Remplacer-les-juniors-par-lIA-pas-une-bonne-idee",
-      "title": "Remplacer les juniors par l’IA, pas une bonne idée",
-      "summary": "<p>Pour le cabinet de conseil international en organisation Korn Ferry, c’est un fait avéré. L’IA prend de plus en plus la place des débutants sur les postes juniors. Problème&nbsp;: en fermant cette porte d’entrée dans l’entreprise, l’IA tarirait aussi une source essentielle au recrutement et au développement des futurs dirigeants.</p> \n<p>Selon <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">un rapport</a> Korn Ferry publié fin octobre, environ 4&nbsp;entreprises sur 10 prévoiraient de remplacer des postes débutant par une IA (37&nbsp;% exactement).</p> \n<p>Une autre étude, du cabinet LHH (groupe Adecco) celle-ci, et menée auprès de 2 000&nbsp;dirigeants dans 13&nbsp;pays, <a href=\"https://www.lesechos.fr/travailler-mieux/metiers-reconversion-professionnelle/la-moitie-des-entreprises-disent-avoir-deja-reduit-leurs-effectifs-a-cause-de-lia-2191307\">confirme</a>. 46&nbsp;% des entreprises auraient déjà réduit leurs effectifs à cause (ou avec) l’IA.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Yale et Hellowork relativisent\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Yale et Hellowork relativisent</h2>\n <p>Et 54&nbsp;% prévoiraient d’employer moins dans les cinq prochaines années.</p>\n <p>La société française de recrutement Hellowork nuance cependant ce constat. Elle rappelle qu’une étude de Yale (<a href=\"https://budgetlab.yale.edu/\">The Budget Lab</a>) ne verrait pas de choc visible sur l’emploi global. Pour l’instant, en tout cas.</p>\n <p>D’après la prestigieuse université américaine, les métiers évolueraient plus vite, certes, mais la tendance aurait commencé avant <a href=\"https://www.lemagit.fr/ezine/Applications-Donnees/Applications-et-donnees-19-ChatGPT-super-ambassadeur-de-lIA\">l’essor de l’IA générative fin&nbsp;2022</a>.</p>\n <p>L’impact de l’IA pourrait ainsi prendre des années à se matérialiser.</p>\n</section>     \n<section class=\"section main-article-chapter\" data-menu-title=\"Un danger pour l’avenir des talents\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Un danger pour l’avenir des talents</h2>\n <p>Quoi qu’il en soit, lorsque Korn Ferry a interrogé plus de 1 670&nbsp;responsables, le cabinet a confirmé que la réduction des recrutements juniors pourrait générer des économies pour les entreprises sur 2026 et sur 2027. Mais il avertit aussi que réduire ce vivier de futurs dirigeants pourrait bien aboutir à une crise de leadership à plus long terme.</p>\n <p>«&nbsp;À mesure que l’IA se déploie – et <a href=\"https://www.lemagit.fr/actualites/366629373/Enterprise-Asset-Management-IFS-inscrit-ses-agents-IA-dans-son-organigramme\">qu’elle devient un vrai collègue, et plus un simple outil</a> – les dirigeants doivent mesurer avec précaution l’équilibre entre l’innovation et le développement de la prochaine génération de leaders&nbsp;», <a href=\"https://www.kornferry.com/about-us/press/korn-ferry-research-unveils-top-talent-acquisition-trends-shaping-2026\">insiste</a> Jeanne MacDonald, CEO, Recruitment Process Outsourcing chez Korn Ferry.</p>\n <p>Pour relever ce défi et s’assurer que la mise en œuvre de l’IA est bien alignée sur les ambitions à long terme de l’entreprise, l’une des priorités serait que la direction générale communique sa vision à l’ensemble du personnel, quitte à se faire aider par les responsables RH de l’acquisition de talents, conseille Korn Ferry.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"L’esprit critique toujours aussi critique\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>L’esprit critique toujours aussi critique</h2>\n <p>Son rapport confirme un autre point. Il y a certes une «&nbsp;hype IA&nbsp;», mais 73&nbsp;% des recruteurs cherchent toujours à évaluer en priorité l’esprit critique des candidats.</p>\n <p>Les entreprises recherchent des personnes capables d’évaluer les recommandations de l’IA, d’analyser ses résultats, de repérer les erreurs, voire de savoir quand il faut passer outre ses conclusions, liste le rapport.</p>\n <p>Lors de son Symposium, <a href=\"https://www.lemagit.fr/actualites/366633467/Gartner-prevoit-un-retour-en-force-de-lesprit-critique-face-a-lIA-generative\">Gartner était arrivé exactement à la même conclusion</a>.</p>\n</section>    \n<section class=\"section main-article-chapter\" data-menu-title=\"Former à l’IA ou laisser former à l’IA ?\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Former à l’IA ou laisser former à l’IA&nbsp;?</h2>\n <p>Sur ce sujet, <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">un autre rapport</a>, de l’entreprise spécialisée dans la formation General Assembly (également du groupe Adecco), estime que les jeunes employés seraient très mal préparés à la montée en puissance de l’IA.</p>\n <p>Les entreprises – du moins aux États-Unis et au Royaume-Uni – estimeraient de leur que se <a href=\"https://www.lemagit.fr/conseil/Former-les-salaries-a-lIA-les-douze-etapes-cles\">former à l’IA</a> relèverait de la responsabilité des employés. Il n’est <a href=\"https://www.lemagit.fr/actualites/366618024/Lacculturation-le-talon-dAchille-des-strategies-IA-en-entreprise-etude\">pas certain que la situation soit très différente en France</a>.</p>\n <p>Mais General Assembly prévient&nbsp;: si l’IA affecte de plus en plus le vivier de talents, c’est aux employeurs qu’il revient d’investir dans la formation des prochaines générations. Sans quoi, les entreprises seront bientôt confrontées à une pénurie critique de compétences.</p>\n <p><i>Avec nos collègues de <a href=\"https://www.hrdive.com/news/entry-level-workers-are-unprepared-for-their-jobs-amid-ai-blitz-survey-say/761239/\">HR Dive</a> (groupe Informa Techtarget dont fait partie LeMagIT)</i></p>\n</section>",
-      "published_ts": 1762777620,
-      "source_name": "LeMagIT"
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/zdnet-morning-10-11-2025-bulle-de-lia-dans-le-labo-des-tv-samsung-la-chine-superpuissance-de-lia-484707.htm#xtor=RSS-1",
-      "title": "ZDNET Morning 10/11/2025 : Bulle de l'IA, Dans le labo des TV Samsung, La Chine superpuissance de l'IA,...",
-      "summary": "Le ZDNET Morning le brief de l'actu tech pour les pros tous les matins à 9h00. Transformation numérique, IA, matériel, logiciels,... ne passez pas à côté de ce qui fait la Une du secteur.",
-      "published_ts": 1762769494,
-      "source_name": "ZDNet France"
-    },
-    {
-      "url": "https://www.zdnet.fr/guide-achat/test-xtar-vx2-pro-ce-testeur-de-batteries-est-un-produit-de-reve-484680.htm#xtor=RSS-1",
-      "title": "Test Xtar VX2 Pro : ce testeur de batteries est un produit de rêve",
-      "summary": "Cet appareil n’est pas seulement un chargeur, il diagnostique et prépare les piles rechargeables pour un stockage à long terme.",
-      "published_ts": 1762765896,
-      "source_name": "ZDNet France"
-    },
-    {
-      "url": "https://www.zdnet.fr/actualites/un-nouveau-modele-dia-chinois-gratuit-pretend-surpasser-gpt-5-et-sonnet-4-5-484684.htm#xtor=RSS-1",
-      "title": "Un nouveau modèle d'IA chinois gratuit prétend surpasser GPT-5 et Sonnet 4.5",
-      "summary": "La course en matière d'IA entre les États-Unis et la Chine vient de s'intensifier, une fois de plus.",
-      "published_ts": 1762762295,
-      "source_name": "ZDNet France"
     }
   ],
-  "python_polars_duckdb": [
+  "python_analytics": [
     {
       "url": "https://blog.cloudflare.com/python-workflows/",
       "title": "A closer look at Python Workflows, now in beta",
@@ -750,21 +769,8 @@
       "source_name": "Cloudflare Engineering Blog"
     }
   ],
+  "python_polars_duckdb": [],
   "viz_bi": [
-    {
-      "url": "https://www.numerama.com/vroom/2115057-on-a-trouve-8-excellents-velos-electriques-a-prix-hallucinant-dans-le-bike-friday-dupway.html",
-      "title": "On a trouvé 8 excellents vélos électriques à prix hallucinant dans le « Bike Friday » d’Upway",
-      "summary": "On a exploré tout le rayon vélo du Bike Friday d'Upway pour vous dénicher ces pépites. Foncez, il n'y a qu'un exemplaire par modèle.",
-      "published_ts": 1762873646,
-      "source_name": "Numerama"
-    },
-    {
-      "url": "https://www.numerama.com/tech/1841152-cette-excellente-console-portable-retrogaming-est-a-35-pour-le-single-day.html",
-      "title": "Cette excellente console portable rétrogaming est à 35 € pour le Single Day",
-      "summary": "Pour le Single Day, AliExpress fait baisser le prix de la Miyoo Mini+ 35 € avec un code promo qui enlève 5 € dès 29 € d'achat. Une occasion à ne pas manquer.",
-      "published_ts": 1762849092,
-      "source_name": "Numerama"
-    },
     {
       "url": "https://www.numerama.com/tech/2114679-liphone-air-2-repousse-indefiniment-un-echec-pour-le-smartphone-coince-entre-les-excellents-iphone-17-et-17-pro.html",
       "title": "L’iPhone Air 2 « repoussé indéfiniment » : un échec pour le smartphone coincé entre les excellents iPhone 17 et 17 Pro ?",
@@ -775,13 +781,6 @@
   ],
   "warehouses_engines": [
     {
-      "url": "https://www.databricks.com/blog/databricks-achieves-awardability-dods-tradewinds-solutions-marketplace",
-      "title": "Databricks Achieves Awardability on the DoD’s Tradewinds Solutions Marketplace",
-      "summary": "Databricks is proud to announce that the Databricks Data Intelligence Platform has...",
-      "published_ts": 1763062800,
-      "source_name": "Databricks Blog"
-    },
-    {
       "url": "https://aws.amazon.com/blogs/big-data/how-yelp-modernized-its-data-infrastructure-with-a-streaming-lakehouse-on-aws/",
       "title": "How Yelp modernized its data infrastructure with a streaming lakehouse on AWS",
       "summary": "This is a guest post by Umesh Dangat, Senior Principal Engineer for Distributed Services and Systems at Yelp, and Toby Cole, Principle Engineer for Data Processing at Yelp, in partnership with AWS. Yelp processes massive amounts of user data daily—over 300 million business reviews, 100,000 photo uploads, and countless check-ins. Maintaining sub-minute data freshness with […]",
@@ -789,25 +788,39 @@
       "source_name": "Redshift / AWS Big Data"
     },
     {
-      "url": "https://www.databricks.com/blog/native-openai-models-now-generally-available-databricks",
-      "title": "Native OpenAI Models Now Generally Available on Databricks",
-      "summary": "OpenAI models, including GPT-5.1, are now generally available on the Databricks Data...",
-      "published_ts": 1763056800,
+      "url": "https://www.databricks.com/blog/explore-data-instantly-databricks-assistant-unity-catalog",
+      "title": "Explore Data Instantly with Databricks Assistant in Unity Catalog",
+      "summary": "Every analyst knows the feeling: you open a dataset in your catalog, scroll through...",
+      "published_ts": 1763042400,
       "source_name": "Databricks Blog"
     },
     {
-      "url": "https://dagster.io/blog/compass-now-available",
-      "title": "Compass: AI Data Analysis for Your Warehouse, in Slack",
-      "summary": "Connect your Snowflake, BigQuery, Redshift, or Databricks warehouse to Compass and get AI-powered answers in Slack. Your data stays where it is. Your governance stays intact. Available now.",
-      "published_ts": 1763054436,
-      "source_name": "Dagster Blog"
+      "url": "https://www.databricks.com/blog/accelerating-data-and-ai-google-axion-c4a-vms-databricks",
+      "title": "Accelerating Data and AI with Google Axion C4A VMs on Databricks",
+      "summary": "Databricks customers on Google Cloud running in Classic compute environments can...",
+      "published_ts": 1762900800,
+      "source_name": "Databricks Blog"
     },
     {
-      "url": "https://www.databricks.com/blog/accelerating-secure-interoperable-identity-collaboration-trade-desk-and-databricks-partnership",
-      "title": "Accelerating Secure, Interoperable Identity Collaboration: The Trade Desk and Databricks Partnership",
-      "summary": "Databricks is pleased to announce a new technology integration with The Trade Desk...",
-      "published_ts": 1763047800,
-      "source_name": "Databricks Blog"
+      "url": "https://blog.dataiku.com/modernizing-analytics-with-dataiku-and-snowflake",
+      "title": "Modernizing Analytics With Dataiku and Snowflake",
+      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
+      "published_ts": 1762871367,
+      "source_name": "Dataiku Blog"
+    },
+    {
+      "url": "http://www.dataiku.com/stories/blog/modernizing-analytics-with-dataiku-and-snowflake",
+      "title": "Modernizing Analytics With Dataiku and Snowflake",
+      "summary": "Today’s enterprises move at a speed legacy systems can’t match. Many still rely on outdated analytics tools built for a slower, simpler era. These systems fragment workflows, duplicate data, and slow the path from insight to action. To stay competitive, organizations need connected, scalable, and governed analytics foundations that bring together people, processes, and data in real time.",
+      "published_ts": 1762871367,
+      "source_name": "Dataiku Blog"
+    },
+    {
+      "url": "https://www.lemagit.fr/actualites/366634267/Snowflake-veut-lui-aussi-faire-de-PostgreSQL-un-lakehouse-ouvert",
+      "title": "Snowflake veut lui aussi faire de PostgreSQL un lakehouse ouvert",
+      "summary": "<p>Dans sa course contre Databricks pour offrir la plateforme de gestion de données la plus complète du marché, l’éditeur lancera «&nbsp;bientôt&nbsp;» sa version managée de PostgreSQL en préversion publique. Pour mémoire, il avait annoncé en juin dernier <a href=\"https://www.lemagit.fr/actualites/366625313/Comme-Databricks-Snowflake-acquiert-un-specialiste-de-PostgreSQL\">l’acquisition de Crunchy Data.</a> Databricks, lui, a racheté, peu de temps avant<a href=\"https://www.lemagit.fr/actualites/366623965/PostgreSQL-serverless-Databricks-sapprete-a-acquerir-Neon\">, Neon, un autre spécialiste</a> de la base de données relationnelle open source.</p> \n<p>Snowflake a surtout profité de son événement Build de la semaine dernière pour libérer pg_lake, une suite d’extensions ouverte pour le SGBDR le plus populaire du marché. Elles permettent de gérer des tables Apache Iceberg dans <a href=\"https://www.lemagit.fr/definition/PostgreSQL\">PostgreSQL</a>. Il est également possible d’interroger des tables étrangères sur S3 ou Azure Blob Storage, qu’elles soient au format CSV, JSON, Parquet et Iceberg. Pg_lake dispose de fonctions pour charger des données depuis des buckets&nbsp;S3 ou d’une URL dans des tables Iceberg ou PostgreSQL. Enfin, les résultats des requêtes peuvent être sauvegardés dans des buckets&nbsp;S3, afin de poursuivre les traitements. À noter que pg_lake lit des fichiers les formats géospatiaux, dont GeoJSON.</p> \n<section class=\"section main-article-chapter\" data-menu-title=\"Combiner les capacités de Postgres, de DuckDB et d’Iceberg\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Combiner les capacités de Postgres, de DuckDB et d’Iceberg</h2>\n <p>Les extensions pg_lake s’intègrent à PostgreSQL pour gérer «&nbsp;la planification des requêtes, les périmètres des transactions et l’orchestration générale des exécutions&nbsp;».</p>\n <p>Sous le capot, un serveur DuckDB (nommé pgduck_server) est utilisé pour externaliser les scans et les traitements parallèles. DuckDB est un moteur analytique orienté colonnes (OLAP) open source. Il est réputé pour gérer des requêtes complexes à partir de grandes bases de données.</p>\n <p>Le projet s’appuie sur le protocole TCP de PostgreSQL pour interconnecter PostgreSQL et DuckDB.</p>\n <p>&nbsp;«&nbsp;Toute personne disposant de Postgres et souhaitant la transformer en interface pour gérer un lac ouvert avec des tables Iceberg pourra le faire à sa guise&nbsp;», promet Christian Kleinerman, vice-président directeur du produit chez Snowflake, lors d’une conférence de presse en ligne.</p>\n <p>C’était une des fonctionnalités au cœur de Crunchy Bridge for Analytics, dont le développement a commencé au début de l’année 2024. Un moyen de simplifier la jonction entre les données opérationnelles et analytiques. Ces fonctionnalités sont ensuite devenues le cœur de l’offre Crunchy Data Warehouse, avant que Snowflake acquière la société.</p>\n <p>Pour rappel, ce n’est pas dans la nature de PostgreSQL que de traiter des charges de travail analytiques. C’est, à l’origine, une base de données transactionnelle.</p>\n <p>«&nbsp;L’industrie des bases de données est divisée en deux grandes factions&nbsp;: les systèmes OLTP et OLAP. Elles ne se parlent pas trop, mais elles sont d’accord sur la gestion de transactions et l’usage de SQL&nbsp;», <a href=\"https://www.youtube.com/watch?v=tpq4nfEoioE\">résume</a> Marco Slot, ingénieur logiciel principal chez Snowflake (ex-Crunchy Data) lors d’un événement Microsoft Developer. «&nbsp;Les systèmes OLTP comme PostgreSQL prennent en charge de grande quantité de transactions telles des petites mises à jour, des changements ligne à ligne, de petites sélections, etc., à une faible latence et à haut débit&nbsp;», poursuit-il. «&nbsp;Les systèmes OLAP se concentrent sur le scan à haute vitesse d’un grand volume de données en une seule requête. C’est un autre problème d’optimisation&nbsp;».</p>\n <p>Outre la différence d’orientation du format de stockage (en ligne pour les systèmes OLTP, en colonne pour les systèmes OLAP), les systèmes analytiques modernes, dont Databricks, Snowflake et DuckDB s’appuient sur des moteurs d’exécution vectorisée. Ceux-là permettent de traiter des données en lot plutôt que ligne par ligne. «&nbsp;Le moteur de requêtes prend un vecteur de valeurs – un lot de valeurs – et les expressions sont implémentées comme des boucles&nbsp;», explique Marco Slot. «&nbsp;Ils font la même comparaison sur toutes les valeurs du vecteur. Et le résultat peut être un nouveau vecteur avec, par exemple, les index des lignes qui correspondent aux filtres de la requête&nbsp;».</p>\n <p>Au lieu de changer d’expression constamment, ici le traitement en batch abaisse le nombre d’appels de fonctions, le processeur peut mieux prédire la suite de l’exécution, le cache CPU est utilisé à bon escient, tandis que les instructions SIMD des processeurs permettent de traiter plusieurs valeurs en une seule requête.</p>\n <p>«&nbsp;En couplant cela à la parallélisation, les bases de données OLAP dotées d’un tel moteur peuvent être 10, voire plus de 100&nbsp;fois plus rapides que PostgreSQL pour des requêtes analytiques&nbsp;», estime l’ingénieur principal.</p>\n <p>Or, il n’est pas simple de bâtir <a href=\"https://www.lemagit.fr/actualites/252522169/Databricks-cimente-les-briques-de-son-data-lakehouse\">un moteur à exécution vectorisée</a>. De plus,&nbsp;«&nbsp;d’autres composants de Postgres ne sont pas optimisés pour l’analytique&nbsp;», ajoute Marco Slot.</p>\n <p>D’où l’usage du «&nbsp;superpouvoir&nbsp;» de PostgreSQL&nbsp;: les extensions. «&nbsp;Il&nbsp;y a quelques années, ce n’était pas une base de données vectorielle, mais maintenant nous avons pg_vector. Ce n’était pas une base de données distribuée, mais le projet <a href=\"https://www.lemagit.fr/actualites/252456460/Microsoft-renforce-les-capacites-de-dimensionnement-de-Postgresql-sur-Azure\">Citus a changé la donne&nbsp;</a>», illustre l’ingénieur principal. «&nbsp;De la même manière, nous pouvons faire de Postgres une bonne base de données analytique à travers les extensions&nbsp;».</p>\n <p>En tant que <a href=\"https://www.lemagit.fr/actualites/366627790/Apptio-affine-sa-gestion-des-couts-de-lIA-et-du-cloud-hybride\">moteur d’exécution vectorisée embarquée, DuckDB</a> était considéré comme le plus adapté à cette tâche. «&nbsp;La licence est similaire, il cible une seule machine, son dialecte SQL est dérivé de PostgreSQL&nbsp;et il a aussi des extensions&nbsp;», justifie Marco Slot.</p>\n</section>              \n<section class=\"section main-article-chapter\" data-menu-title=\"Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>Rapprocher PostgreSQL des lakehouse, une initiative commune à l’écosystème Data</h2>\n <p>Christian Kleinerman envisage que les développeurs utilisent cette extension dans le cadre de développement d’applications. «&nbsp;Je pense que l’un des cas d’usage le plus courant consiste pour les développeurs à créer des applications avec Postgres, puis à effectuer un ETL ou à copier les données à des fins d’analyse dans une plateforme de données telle que Snowflake ou, de plus en plus, dans un lac de données ouvert, avec S3 Table sur AWS ou avec Iceberg, <a href=\"https://www.lemagit.fr/actualites/366631554/Fabric-face-a-Snowflake-et-Databricks-Microsoft-met-les-bouchees-doubles\">sur Microsoft OneLake&nbsp;</a>», indique-t-il, dans un briefing avec la presse. «&nbsp;C’est ce que permet PG Lake. […] Nous avons pensé que c’était plus important que Snowflake et que Snowflake Postgres. D’où la libération du projet&nbsp;».</p>\n <p>Ce n’est pas le premier projet du genre. À travers MotherDuck, l’éditeur DuckDB propose une implémentation différente. Il embarque directement une instance de son moteur dans PostgreSQL. Il faut également noter que Databricks a mis la main au début du mois d’octobre sur Mooncake Labs, une startup basée à San Francisco. Celle-ci a développé pg_mooncake, une extension open source permettant de créer un miroir inversé de tables Postgres dans un format orienté colonne Apache Iceberg. Les données sont ingérées avec sa technologie moonlink et traitées avec… DuckDB.</p>\n</section>   \n<section class=\"section main-article-chapter\" data-menu-title=\"À la croisée des changements de paradigme\">\n <h2 class=\"section-title\"><i class=\"icon\" data-icon=\"1\"></i>À la croisée des changements de paradigme</h2>\n <p>Il y a quelques limitations. La première étant qu’il n’est pas encore possible d’utiliser de catalogue externe à PostgreSQL pour Iceberg dans le cas de pg_lake. Databricks, Cloudera, Dremio, Snowflake et d’autres utilisent désormais des catalogues de métadonnées externes comme Hive, <a href=\"https://www.lemagit.fr/actualites/366599652/Apache-Iceberg-Snowflake-libere-Polaris-et-sallie-a-Dremio\">Polaris ou Unity</a>. Cette gestion de la gouvernance des tables Iceberg (et leur contrôle) n’est pas encore standard.&nbsp;</p>\n <p>Néanmoins, les experts du milieu décrivent deux phénomènes qui convergent. Après la naissance des lakehouse – qui combinent les capacités des entrepôts et des lacs de données – la frontière entre la base et le lac de données s’effacerait, selon Manish K., architecte Big Data chez Accenture.</p>\n <p>«&nbsp;DuckDB a prouvé que nous pouvons exécuter des analyses sérieuses directement sur des fichiers&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393243881011798016-YogO?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">écrit</a> Manish K. sur LinkedIn. «&nbsp;pg_lake et pg_mooncake ont prouvé que Postgres peut parler [le langage] des tables de style Iceberg dans un espace de stockage objet. Les services Postgres cloud-first (calcul/stockage découplé, branchable, élastique) ressemble désormais à un lakehouse sur le plan architectural&nbsp;», ajoute-t-il. «&nbsp;Le schéma est donc clair&nbsp;: la base de données se déplace là où se trouve déjà le lac&nbsp;». Et d’utiliser l’expression «&nbsp;lakebase&nbsp;».</p>\n <p>Bhairav Metha, directeur data science chez JPMorganChase,&nbsp;voit un autre changement. Alors que les systèmes <a href=\"https://www.lemagit.fr/actualites/252473646/Selon-Forrester-les-bases-de-donnees-translytiques-ont-le-vent-en-poupe\">translytiques</a> sont jusqu’à présent majoritairement propriétaires, ils pourraient demain s’appuyer sur un projet open source&nbsp;: PostgreSQL.</p>\n <p>«&nbsp;Nous n’y sommes peut-être pas encore tout à fait – l’OLAP et l’OLTP répondent encore à des objectifs d’optimisation distincts – mais la trajectoire est claire&nbsp;», <a href=\"https://www.linkedin.com/posts/activity-7393518197771182080-E9o3?utm_source=share&amp;utm_medium=member_desktop&amp;rcm=ACoAABfZ9MABbYoGamxFbwWKF3lQzOgcuryCmSk\">avance</a>-t-il. «&nbsp;Postgres pourrait bientôt gérer 90&nbsp;% des charges de travail modernes sans avoir besoin d’un entrepôt ou d’un Lakehouse séparé&nbsp;».</p>\n</section>",
+      "published_ts": 1762757220,
+      "source_name": "LeMagIT"
     }
   ]
 }

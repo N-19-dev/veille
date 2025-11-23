@@ -9,6 +9,7 @@
 
 ## cloud_infra_observability
 
+- [How Yelp modernized its data infrastructure with a streaming lakehouse on AWS](https://aws.amazon.com/blogs/big-data/how-yelp-modernized-its-data-infrastructure-with-a-streaming-lakehouse-on-aws/) — Redshift / AWS Big Data · 2025-11-13 · **58/100**
 - [Your guide to AWS Analytics at AWS re:Invent 2025](https://aws.amazon.com/blogs/big-data/your-guide-to-aws-analytics-at-aws-reinvent-2025/) — Redshift / AWS Big Data · 2025-11-13 · **55/100**
 
 ## data_modeling_governance
@@ -30,6 +31,5 @@
 - [Modernizing Analytics With Dataiku and Snowflake](https://blog.dataiku.com/modernizing-analytics-with-dataiku-and-snowflake) — Dataiku Blog · 2025-11-11 · **61/100**
 - [Modernizing Analytics With Dataiku and Snowflake](http://www.dataiku.com/stories/blog/modernizing-analytics-with-dataiku-and-snowflake) — Dataiku Blog · 2025-11-11 · **61/100**
 - [Accelerating Data and AI with Google Axion C4A VMs on Databricks](https://www.databricks.com/blog/accelerating-data-and-ai-google-axion-c4a-vms-databricks) — Databricks Blog · 2025-11-11 · **59/100**
-- [How Yelp modernized its data infrastructure with a streaming lakehouse on AWS](https://aws.amazon.com/blogs/big-data/how-yelp-modernized-its-data-infrastructure-with-a-streaming-lakehouse-on-aws/) — Redshift / AWS Big Data · 2025-11-13 · **58/100**
 - [Snowflake veut lui aussi faire de PostgreSQL un lakehouse ouvert](https://www.lemagit.fr/actualites/366634267/Snowflake-veut-lui-aussi-faire-de-PostgreSQL-un-lakehouse-ouvert) — LeMagIT · 2025-11-10 · **57/100**
 - [Explore Data Instantly with Databricks Assistant in Unity Catalog](https://www.databricks.com/blog/explore-data-instantly-databricks-assistant-unity-catalog) — Databricks Blog · 2025-11-13 · **57/100**

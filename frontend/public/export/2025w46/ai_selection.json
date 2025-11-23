@@ -36,6 +36,14 @@
   "cloud": [],
   "cloud_infra_observability": [
     {
+      "url": "https://aws.amazon.com/blogs/big-data/how-yelp-modernized-its-data-infrastructure-with-a-streaming-lakehouse-on-aws/",
+      "title": "How Yelp modernized its data infrastructure with a streaming lakehouse on AWS",
+      "summary": "This is a guest post by Umesh Dangat, Senior Principal Engineer for Distributed Services and Systems at Yelp, and Toby Cole, Principle Engineer for Data Processing at Yelp, in partnership with AWS. Yelp processes massive amounts of user data daily—over 300 million business reviews, 100,000 photo uploads, and countless check-ins. Maintaining sub-minute data freshness with […]",
+      "published_ts": 1763057242,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 57.524667263031006
+    },
+    {
       "url": "https://aws.amazon.com/blogs/big-data/your-guide-to-aws-analytics-at-aws-reinvent-2025/",
       "title": "Your guide to AWS Analytics at AWS re:Invent 2025",
       "summary": "It’s that time of year again — AWS re:Invent is here! At re:Invent, bold ideas come to life. Get a front-row seat to hear inspiring stories from AWS experts, customers, and leaders as they explore today’s most impactful topics, from data analytics to AI. For all the data enthusiasts and professionals, we’ve curated a comprehensive […]",
@@ -123,14 +131,6 @@
       "published_ts": 1762900800,
       "source_name": "Databricks Blog",
       "score": 58.52611815929413
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/how-yelp-modernized-its-data-infrastructure-with-a-streaming-lakehouse-on-aws/",
-      "title": "How Yelp modernized its data infrastructure with a streaming lakehouse on AWS",
-      "summary": "This is a guest post by Umesh Dangat, Senior Principal Engineer for Distributed Services and Systems at Yelp, and Toby Cole, Principle Engineer for Data Processing at Yelp, in partnership with AWS. Yelp processes massive amounts of user data daily—over 300 million business reviews, 100,000 photo uploads, and countless check-ins. Maintaining sub-minute data freshness with […]",
-      "published_ts": 1763057242,
-      "source_name": "Redshift / AWS Big Data",
-      "score": 57.524667263031006
     },
     {
       "url": "https://www.lemagit.fr/actualites/366634267/Snowflake-veut-lui-aussi-faire-de-PostgreSQL-un-lakehouse-ouvert",

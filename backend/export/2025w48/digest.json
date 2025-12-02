@@ -1,0 +1,250 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://blog.octo.com/quand-la-generation-synthetique-permet-de-voir-ce-qui-n'existe-pas-1",
+      "title": "Quand la génération synthétique permet de voir ce qui n’existe pas",
+      "summary": "Comment entraîner une IA à détecter des défauts qu'elle ne voit presque jamais ? En industrie, les anomalies graves sont si rares qu'elles privent les modèles de matière d'apprentissage. La donnée synthétique offre une réponse inattendue : générer de faux défauts pour mieux reconnaître les vrais. REX sur la détection de soudures défectueuses.",
+      "published_ts": 1764259210,
+      "source_name": "OCTO Talks!"
+    },
+    {
+      "url": "https://blog.octo.com/octo-school-of-product-2025--les-5-notions-a-retenir",
+      "title": "School of Product 2025 : les 5 notions à retenir",
+      "summary": "La 8ème édition de la conférence Produit et Design organisée par OCTO Technology s'est déroulée le mardi 18 novembre,  à Paris. On avait rendez-vous comme l’an passé avec le caméléon, notre mascotte Produit, et le thème cette année était : “Comment conjuguer performance, prise de risque et bien-être? and quot;",
+      "published_ts": 1764255534,
+      "source_name": "OCTO Talks!"
+    },
+    {
+      "url": "https://blog.octo.com/le-handicap-c'est-l'affaire-de-tous.",
+      "title": "“Le handicap, c’est l’affaire de tous.”",
+      "summary": "Rencontre avec notre chef d’orchestre, Vincent Mathon, référent handicap, qui nous explique d’où vient son engagement et comment il se matérialise au quotidien.",
+      "published_ts": 1764234629,
+      "source_name": "OCTO Talks!"
+    },
+    {
+      "url": "https://blog.langchain.com/using-skills-with-deep-agents/",
+      "title": "Using skills with Deep Agents",
+      "summary": "tl;dr: Anthropic recently introduced the idea of agent skills . Skills are simply folders containing a SKILL.md file along with any associated files (e.g., documents or scripts) that an agent can discover and load dynamically to perform better at specific tasks. We've added skills support to",
+      "published_ts": 1764089109,
+      "source_name": "LangChain Blog"
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/25/%f0%9f%a4%96-gemini-dans-votre-terminal-avec-gemini-cli/",
+      "title": "🤖 Gemini dans votre terminal avec Gemini CLI",
+      "summary": "👉 CLI, Kezako? Les Command Line Interface (CLI) sont  des outils en ligne de commande qui permettent d’interagir avec une",
+      "published_ts": 1764067532,
+      "source_name": "Zenika Tech Blog"
+    },
+    {
+      "url": "https://huggingface.co/blog/flux-2",
+      "title": "Diffusers welcomes FLUX-2",
+      "summary": "Welcome FLUX.2 - BFL’s new open image generation model 🤗\nFLUX.2 is the recent series of image generation models from Black Forest Labs, preceded by the\nFlux.1\nseries. It is an entirely new model with a\nnew architecture\nand pre-training done from scratch!\nIn this post, we discuss the key changes intr",
+      "published_ts": 1764028800,
+      "source_name": "Hugging Face Blog"
+    },
+    {
+      "url": "https://blog.cloudflare.com/flux-2-workers-ai/",
+      "title": "Partnering with Black Forest Labs to bring FLUX.2 [dev] to Workers AI",
+      "summary": "FLUX.2 [dev] by Black Forest Labs is now on Workers AI! This advanced open-weight image model offers superior photorealism, multi-reference inputs, and granular control with JSON prompting.",
+      "published_ts": 1764028800,
+      "source_name": "Cloudflare Engineering"
+    },
+    {
+      "url": "https://blog.cloudflare.com/waf-payload-logging/",
+      "title": "Get better visibility for the WAF with payload logging",
+      "summary": "The WAF provides ways for our customers to gain insight into why it takes certain actions. The more granular and precise the insight, the more reproducible and understandable it is. Revamped payload logging is one such method.",
+      "published_ts": 1763992800,
+      "source_name": "Cloudflare Engineering"
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/how-octus-achieved-85-infrastructure-cost-reduction-with-zero-downtime-migration-to-amazon-opensearch-service/",
+      "title": "How Octus achieved 85% infrastructure cost reduction with zero downtime migration to Amazon OpenSearch Service",
+      "summary": "This post highlights how Octus migrated its Elasticsearch workloads running on Elastic Cloud to Amazon OpenSearch Service. The journey traces Octus’s shift from managing multiple systems to adopting a cost-efficient solution powered by OpenSearch Service.",
+      "published_ts": 1764185921,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/manage-your-secrets-through-ovhcloud-secret-manager-thanks-to-external-secrets-operator-eso-on-ovhcloud-managed-kubernetes-service-mks/",
+      "title": "Manage your secrets through OVHcloud Secret Manager thanks to External Secrets Operator (ESO) on OVHcloud Managed Kubernetes Service (MKS)",
+      "summary": "The Secrets resources in Kubernetes allow us to store sensitive information like login, passwords, tokens, credentials and certificates. But be careful, when creating a Secret in Kubernetes, it is encoded in base64, it is not encrypted so everyone can read and decode it. The good news is that at OVHcloud we released the Beta version […]",
+      "published_ts": 1764081892,
+      "source_name": "OVHcloud Blog"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/introducing-claude-opus-4-5-in-microsoft-foundry/",
+      "title": "Introducing Claude Opus 4.5 in Microsoft Foundry",
+      "summary": "Announcing Anthropic's newest model, Claude Opus 4.5, in Microsoft Foundry. Opus 4.5 is now available in public preview in Microsoft Foundry, GitHub Copilot paid plans, and Microsoft Copilot Studio. The post Introducing Claude Opus 4.5 in Microsoft Foundry appeared first on Microsoft Azure Blog .",
+      "published_ts": 1764010422,
+      "source_name": "Azure Blog"
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/accelerate-data-lake-operations-with-apache-iceberg-v3-deletion-vectors-and-row-lineage/",
+      "title": "Accelerate data lake operations with Apache Iceberg V3 deletion vectors and row lineage",
+      "summary": "In this post, we walk you through the new capabilities in Iceberg V3, explain how deletion vectors and row lineage address these challenges, explore real-world use cases across industries, and provide practical guidance on implementing Iceberg V3 features across AWS analytics, catalog, and storage services.",
+      "published_ts": 1764194747,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://www.databricks.com/blog/year-interoperability-how-enterprises-are-scaling-governance-unity-catalog",
+      "title": "A Year of Interoperability: How Enterprises Are Scaling Governance with Unity Catalog",
+      "summary": "The Era of Open GovernanceA year after we open-sourced Unity Catalog (UC), the results...",
+      "published_ts": 1764176400,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/softbank",
+      "title": "How SoftBank Scaled an AI Agent-Powered Sales Model, Saving 250K Hours a Year",
+      "summary": "SoftBank Corp. is transforming sales with AI agents in Dataiku, capturing every conversation as insight, boosting data quality, and delivering various insights while working to reclaim a quarter-million hours a year for selling. 90% of sellers report higher quality and efficiency in data-driven selling 80% of customer conversations now link directly to opportunities ~20 hours saved per seller per month, projected 250,000 hours saved annually at scale",
+      "published_ts": 1764079020,
+      "source_name": "Dataiku Blog"
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://dlthub.com/blog/workspace-video-tutorial",
+      "title": "Build Pipelines 10x faster with workspace workflow",
+      "summary": "dltHub Workspace: A frictionless LLM-native approach designed to help data developers build, run, and analyze complete pipelines.",
+      "published_ts": 1764115200,
+      "source_name": "dlt Blog"
+    },
+    {
+      "url": "https://huggingface.co/blog/continuous_batching",
+      "title": "Continuous batching from first principles",
+      "summary": "Continuous batching\nTL;DR: in this blog post, starting from attention mechanisms and KV caching, we derive continuous batching by optimizing for throughput.\nIf you've ever used Qwen, Claude, or any other AI chatbot, you've probably noticed something: it takes a while for the first word of the respon",
+      "published_ts": 1764028800,
+      "source_name": "Hugging Face Blog"
+    },
+    {
+      "url": "https://dagster.io/blog/orchestrating-dbt-with-dagster",
+      "title": "How to Orchestrate dbt with Dagster",
+      "summary": "With Dagster’s dbt integration, run and monitor dbt models as part of a larger, asset-driven pipeline for improved lineage and scheduling.",
+      "published_ts": 1764004409,
+      "source_name": "Dagster Blog"
+    },
+    {
+      "url": "https://dagster.io/blog/decade-of-data",
+      "title": "Why We Built Dagster for the Data Decade",
+      "summary": "Our $14M Series A is just the start. Learn how Dagster is positioned for long-term success in the next decade of data.",
+      "published_ts": 1764004409,
+      "source_name": "Dagster Blog"
+    }
+  ],
+  "hors_sujet": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/medidatas-journey-to-a-modern-lakehouse-architecture-on-aws/",
+      "title": "Medidata’s journey to a modern lakehouse architecture on AWS",
+      "summary": "In this post, we show you how Medidata created a unified, scalable, real-time data platform that serves thousands of clinical trials worldwide with AWS services, Apache Iceberg, and a modern lakehouse architecture.",
+      "published_ts": 1764205246,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/achieve-2x-faster-data-lake-query-performance-with-apache-iceberg-on-amazon-redshift/",
+      "title": "Achieve 2x faster data lake query performance with Apache Iceberg on Amazon Redshift",
+      "summary": "In 2025, Amazon Redshift delivered several performance optimizations that improved query performance over twofold for Iceberg workloads on Amazon Redshift Serverless, delivering exceptional performance and cost-effectiveness for your data lake workloads. In this post, we describe some of the optimizations that led to these performance gains.",
+      "published_ts": 1764195375,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/introducing-catalog-federation-for-apache-iceberg-tables-in-the-aws-glue-data-catalog/",
+      "title": "Introducing catalog federation for Apache Iceberg tables in the AWS Glue Data Catalog",
+      "summary": "AWS Glue now supports catalog federation for remote Iceberg tables in the Data Catalog. With catalog federation, you can query remote Iceberg tables, stored in Amazon S3 and cataloged in remote Iceberg catalogs, using AWS analytics engines and without moving or duplicating tables. In this post, we discuss how to get started with catalog federation for Iceberg tables in the Data Catalog.",
+      "published_ts": 1764194887,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/getting-started-with-apache-iceberg-write-support-in-amazon-redshift/",
+      "title": "Getting started with Apache Iceberg write support in Amazon Redshift",
+      "summary": "In this post, we show how you can use Amazon Redshift to write data directly to Apache Iceberg tables stored in Amazon S3 and S3 Tables for seamless integration between your data warehouse and data lake while maintaining ACID compliance.",
+      "published_ts": 1764185695,
+      "source_name": "Redshift / AWS Big Data"
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.databricks.com/blog/blind-spots-real-time-intelligence-how-location-data-o2-motion-transforming-business-decision",
+      "title": "From Blind Spots to Real-Time Intelligence: How Location Data from O2 Motion is Transforming Business Decision-Making",
+      "summary": "A media buyer launches a £50,000 digital billboard campaign, only to discover later...",
+      "published_ts": 1764184500,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://blog.dataexpert.io/p/how-to-secure-your-data-a-practical",
+      "title": "Data security shouldn't be an afterthought",
+      "summary": "A practical guide for Data Engineers",
+      "published_ts": 1764174995,
+      "source_name": "DataEngineer.io"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/orchestrating-data-processing-tasks-with-a-serverless-visual-workflow-in-amazon-sagemaker-unified-studio/",
+      "title": "Orchestrating data processing tasks with a serverless visual workflow in Amazon SageMaker Unified Studio",
+      "summary": "In this post, we show how to use the new visual workflow experience in SageMaker Unified Studio IAM-based domains to orchestrate an end-to-end machine learning workflow. The workflow ingests weather data, applies transformations, and generates predictions—all through a single, intuitive interface, without writing any orchestration code.",
+      "published_ts": 1764112085,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/25/%f0%9f%a4%96-deployer-son-agent-sur-google-vertex-ai-agent-engine/",
+      "title": "🤖 Déployer son agent sur Google Vertex AI Agent Engine",
+      "summary": "Simplifiez le déploiement de vos agents IA sur Google Cloud avec Vertex AI Agent Engine à travers le framework Agent Development Kit (ADK) ou avec le SDK Vertex AI pour intégrer des frameworks comme LangChain, LangGraph et CrewAI.",
+      "published_ts": 1764069425,
+      "source_name": "Zenika Tech Blog"
+    }
+  ],
+  "news_general": [],
+  "python_analytics": [],
+  "warehouses_engines": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/run-apache-spark-and-iceberg-4-5x-faster-than-open-source-spark-with-amazon-emr/",
+      "title": "Run Apache Spark and Iceberg 4.5x faster than open source Spark with Amazon EMR",
+      "summary": "This post shows how Amazon EMR 7.12 can make your Apache Spark and Iceberg workloads up to 4.5x faster performance.",
+      "published_ts": 1764207979,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/apache-spark-encryption-performance-improvement-with-amazon-emr-7-9/",
+      "title": "Apache Spark encryption performance improvement with Amazon EMR 7.9",
+      "summary": "In this post, we analyze the results from our benchmark tests comparing the Amazon EMR 7.9 optimized Spark runtime against Spark 3.5.5 without encryption optimizations. We walk through a detailed cost analysis and provide step-by-step instructions to reproduce the benchmark.",
+      "published_ts": 1764207475,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/run-apache-spark-and-apache-iceberg-write-jobs-2x-faster-with-amazon-emr/",
+      "title": "Run Apache Spark and Apache Iceberg write jobs 2x faster with Amazon EMR",
+      "summary": "In this post, we demonstrate the write performance benefits of using the Amazon EMR 7.12 runtime for Spark and Iceberg compares to open source Spark 3.5.6 with Iceberg 1.10.0 tables on a 3TB merge workload.",
+      "published_ts": 1764205388,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/26/duckdb-on-aws-lambda-the-easy-way-with-layers/",
+      "title": "DuckDB on AWS Lambda: The Easy Way with Layers",
+      "summary": "This article shows how I used DuckDB in AWS Lambda in an easy way. I'll explain how my pre-built Lambda layers bypass complex build processes, allowing you to use DuckDB for efficient serverless analytics with ease.",
+      "published_ts": 1764154404,
+      "source_name": "Zenika Tech Blog"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/save-up-to-24-on-amazon-redshift-serverless-compute-costs-with-reservations/",
+      "title": "Save up to 24% on Amazon Redshift Serverless compute costs with Reservations",
+      "summary": "In this post, you learn how Amazon Redshift Serverless Reservations can help you lower your data warehouse costs. We explore ways to determine the optimal number of RPUs to reserve, review example scenarios, and discuss important considerations when purchasing these reservations.",
+      "published_ts": 1764022463,
+      "source_name": "Redshift / AWS Big Data"
+    },
+    {
+      "url": "https://www.databricks.com/blog/claude-opus-45-here",
+      "title": "Claude Opus 4.5 Is Here",
+      "summary": "Customers process exabytes of data daily on Databricks, and generative AI is already...",
+      "published_ts": 1764010829,
+      "source_name": "Databricks Blog"
+    },
+    {
+      "url": "https://www.databricks.com/blog/building-future-ai-agents-and-intelligence-apps-celebrating-4-years-databricks-seattle-rd",
+      "title": "Building the Future of AI Agents and Intelligence Apps: Celebrating 4 years of Databricks Seattle R&D",
+      "summary": "In November 2021, we announced the opening of our Seattle R&D site and our plan to...",
+      "published_ts": 1764007500,
+      "source_name": "Databricks Blog"
+    }
+  ]
+}

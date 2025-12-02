@@ -1,0 +1,147 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://www.databricks.com/blog/building-future-ai-agents-and-intelligence-apps-celebrating-4-years-databricks-seattle-rd",
+      "title": "Building the Future of AI Agents and Intelligence Apps: Celebrating 4 years of Databricks Seattle R&D",
+      "summary": "In November 2021, we announced the opening of our Seattle R&D site and our plan to...",
+      "published_ts": 1764007500,
+      "source_name": "Databricks Blog",
+      "score": 63.39661505818367
+    },
+    {
+      "url": "https://www.databricks.com/blog/claude-opus-45-here",
+      "title": "Claude Opus 4.5 Is Here",
+      "summary": "Customers process exabytes of data daily on Databricks, and generative AI is already...",
+      "published_ts": 1764010829,
+      "source_name": "Databricks Blog",
+      "score": 58.1588239222765
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/25/%f0%9f%a4%96-deployer-son-agent-sur-google-vertex-ai-agent-engine/",
+      "title": "🤖 Déployer son agent sur Google Vertex AI Agent Engine",
+      "summary": "Simplifiez le déploiement de vos agents IA sur Google Cloud avec Vertex AI Agent Engine à travers le framework Agent Development Kit (ADK) ou avec le SDK Vertex AI pour intégrer des frameworks comme LangChain, LangGraph et CrewAI.",
+      "published_ts": 1764069425,
+      "source_name": "Zenika Tech Blog",
+      "score": 54.48108024895191
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/softbank",
+      "title": "How SoftBank Scaled an AI Agent-Powered Sales Model, Saving 250K Hours a Year",
+      "summary": "SoftBank Corp. is transforming sales with AI agents in Dataiku, capturing every conversation as insight, boosting data quality, and delivering various insights while working to reclaim a quarter-million hours a year for selling. 90% of sellers report higher quality and efficiency in data-driven selling 80% of customer conversations now link directly to opportunities ~20 hours saved per seller per month, projected 250,000 hours saved annually at scale",
+      "published_ts": 1764079020,
+      "source_name": "Dataiku Blog",
+      "score": 52.7156148403883
+    },
+    {
+      "url": "https://blog.zenika.com/2025/11/25/%f0%9f%a4%96-gemini-dans-votre-terminal-avec-gemini-cli/",
+      "title": "🤖 Gemini dans votre terminal avec Gemini CLI",
+      "summary": "👉 CLI, Kezako? Les Command Line Interface (CLI) sont  des outils en ligne de commande qui permettent d’interagir avec une",
+      "published_ts": 1764067532,
+      "source_name": "Zenika Tech Blog",
+      "score": 50.1067309230566
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/medidatas-journey-to-a-modern-lakehouse-architecture-on-aws/",
+      "title": "Medidata’s journey to a modern lakehouse architecture on AWS",
+      "summary": "In this post, we show you how Medidata created a unified, scalable, real-time data platform that serves thousands of clinical trials worldwide with AWS services, Apache Iceberg, and a modern lakehouse architecture.",
+      "published_ts": 1764205246,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 56.13863205909729
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://www.databricks.com/blog/year-interoperability-how-enterprises-are-scaling-governance-unity-catalog",
+      "title": "A Year of Interoperability: How Enterprises Are Scaling Governance with Unity Catalog",
+      "summary": "The Era of Open GovernanceA year after we open-sourced Unity Catalog (UC), the results...",
+      "published_ts": 1764176400,
+      "source_name": "Databricks Blog",
+      "score": 63.177872225642204
+    },
+    {
+      "url": "https://blog.dataexpert.io/p/how-to-secure-your-data-a-practical",
+      "title": "Data security shouldn't be an afterthought",
+      "summary": "A practical guide for Data Engineers",
+      "published_ts": 1764174995,
+      "source_name": "DataEngineer.io",
+      "score": 53.416567742824554
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/introducing-catalog-federation-for-apache-iceberg-tables-in-the-aws-glue-data-catalog/",
+      "title": "Introducing catalog federation for Apache Iceberg tables in the AWS Glue Data Catalog",
+      "summary": "AWS Glue now supports catalog federation for remote Iceberg tables in the Data Catalog. With catalog federation, you can query remote Iceberg tables, stored in Amazon S3 and cataloged in remote Iceberg catalogs, using AWS analytics engines and without moving or duplicating tables. In this post, we discuss how to get started with catalog federation for Iceberg tables in the Data Catalog.",
+      "published_ts": 1764194887,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 52.58264485001564
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://dagster.io/blog/orchestrating-dbt-with-dagster",
+      "title": "How to Orchestrate dbt with Dagster",
+      "summary": "With Dagster’s dbt integration, run and monitor dbt models as part of a larger, asset-driven pipeline for improved lineage and scheduling.",
+      "published_ts": 1764004409,
+      "source_name": "Dagster Blog",
+      "score": 62.82555443048477
+    },
+    {
+      "url": "https://dagster.io/blog/decade-of-data",
+      "title": "Why We Built Dagster for the Data Decade",
+      "summary": "Our $14M Series A is just the start. Learn how Dagster is positioned for long-term success in the next decade of data.",
+      "published_ts": 1764004409,
+      "source_name": "Dagster Blog",
+      "score": 62.48008367419243
+    },
+    {
+      "url": "https://dlthub.com/blog/workspace-video-tutorial",
+      "title": "Build Pipelines 10x faster with workspace workflow",
+      "summary": "dltHub Workspace: A frictionless LLM-native approach designed to help data developers build, run, and analyze complete pipelines.",
+      "published_ts": 1764115200,
+      "source_name": "dlt Blog",
+      "score": 54.01334846019745
+    }
+  ],
+  "hors_sujet": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/accelerate-data-lake-operations-with-apache-iceberg-v3-deletion-vectors-and-row-lineage/",
+      "title": "Accelerate data lake operations with Apache Iceberg V3 deletion vectors and row lineage",
+      "summary": "In this post, we walk you through the new capabilities in Iceberg V3, explain how deletion vectors and row lineage address these challenges, explore real-world use cases across industries, and provide practical guidance on implementing Iceberg V3 features across AWS analytics, catalog, and storage services.",
+      "published_ts": 1764194747,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 53.90515470504761
+    }
+  ],
+  "news": [],
+  "news_general": [],
+  "python_analytics": [
+    {
+      "url": "https://blog.zenika.com/2025/11/26/duckdb-on-aws-lambda-the-easy-way-with-layers/",
+      "title": "DuckDB on AWS Lambda: The Easy Way with Layers",
+      "summary": "This article shows how I used DuckDB in AWS Lambda in an easy way. I'll explain how my pre-built Lambda layers bypass complex build processes, allowing you to use DuckDB for efficient serverless analytics with ease.",
+      "published_ts": 1764154404,
+      "source_name": "Zenika Tech Blog",
+      "score": 58.025508746504784
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/achieve-2x-faster-data-lake-query-performance-with-apache-iceberg-on-amazon-redshift/",
+      "title": "Achieve 2x faster data lake query performance with Apache Iceberg on Amazon Redshift",
+      "summary": "In 2025, Amazon Redshift delivered several performance optimizations that improved query performance over twofold for Iceberg workloads on Amazon Redshift Serverless, delivering exceptional performance and cost-effectiveness for your data lake workloads. In this post, we describe some of the optimizations that led to these performance gains.",
+      "published_ts": 1764195375,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 52.1133601218462
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/run-apache-spark-and-iceberg-4-5x-faster-than-open-source-spark-with-amazon-emr/",
+      "title": "Run Apache Spark and Iceberg 4.5x faster than open source Spark with Amazon EMR",
+      "summary": "This post shows how Amazon EMR 7.12 can make your Apache Spark and Iceberg workloads up to 4.5x faster performance.",
+      "published_ts": 1764207979,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 51.67686231434345
+    }
+  ]
+}

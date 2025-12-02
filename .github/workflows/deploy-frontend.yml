@@ -36,18 +36,13 @@ jobs:
 
       - name: Copy export into public
         run: |
-          echo "📦 Copying export files from backend to frontend..."
-          mkdir -p public/export
-          if [ -d "../backend/export" ]; then
-            rsync -av --delete ../backend/export/ public/export/
-            echo "✅ Export files copied successfully"
-            echo "📂 Contents of public/export:"
-            ls -la public/export/
-            echo "📊 Week directories:"
-            find public/export -type d -name "2025w*" | sort
-          else
-            echo "⚠️ Warning: backend/export directory not found"
-          fi
+          echo "📦 Running copy-export script to handle symlinks..."
+          node scripts/copy-export.js
+          echo "✅ Export files copied successfully"
+          echo "📂 Contents of public/export:"
+          ls -la public/export/
+          echo "📊 Week directories:"
+          find public/export -type d -name "2025w*" -o -name "latest" | sort
 
       - name: Build (Vite)
         run: npm run build

@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
 
       - name: Set up Python
         uses: actions/setup-python@v5
@@ -43,6 +45,7 @@ jobs:
         run: python main.py
 
       - name: Commit updated export/
+        id: commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -50,7 +53,23 @@ jobs:
           git add export
           if git diff --cached --quiet; then
             echo "No changes to commit."
+            echo "has_changes=false" >> $GITHUB_OUTPUT
           else
             git commit -m "chore(export): weekly export $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
             git push
+            echo "has_changes=true" >> $GITHUB_OUTPUT
           fi
+
+      - name: Trigger frontend deployment
+        if: steps.commit.outputs.has_changes == 'true'
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.PAT_TOKEN }}
+          script: |
+            await github.rest.actions.createWorkflowDispatch({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: 'deploy-frontend.yml',
+              ref: 'main'
+            });
+            console.log('Frontend deployment workflow triggered successfully');

@@ -11,6 +11,7 @@ type Props = {
   source?: string;
   date?: string;
   score?: number | string;
+  description?: string;
   className?: string;
 };
 
@@ -20,6 +21,7 @@ export default function ArticleCard({
   source,
   date,
   score,
+  description,
   className = "",
 }: Props) {
   const dom = getDomain(url ?? "");
@@ -39,10 +41,10 @@ export default function ArticleCard({
   const Clickable: React.ElementType = url ? "a" : "div";
   const clickableProps = url
     ? {
-        href: url,
-        target: "_blank",
-        rel: "noreferrer",
-      }
+      href: url,
+      target: "_blank",
+      rel: "noreferrer",
+    }
     : {};
 
   return (
@@ -85,6 +87,11 @@ export default function ArticleCard({
       <h4 className="line-clamp-3 font-semibold leading-snug group-hover:underline">
         {title}
       </h4>
+      {description && (
+        <p className="mt-2 text-sm text-neutral-600 line-clamp-3">
+          {description}
+        </p>
+      )}
     </Clickable>
   );
 }

@@ -1,8 +1,8 @@
 // src/lib/parse.ts
 
 export type WeekMeta = { week: string; range?: string };
-export type TopItem = { title: string; url: string; source?: string; date?: string; score?: string|number };
-export type SectionItem = { title: string; url: string; source?: string; score?: string|number };
+export type TopItem = { title: string; url: string; source?: string; date?: string; score?: string | number };
+export type SectionItem = { title: string; url: string; source?: string; score?: string | number; description?: string };
 export type SummarySection = { title: string; items: SectionItem[] };
 
 // ---------- helpers de chargement (inchangés si tu es en statique) ----------
@@ -46,9 +46,9 @@ function parseTop3(md: string): TopItem[] {
   return out;
 }
 
-// 👉 NOUVEAU : extrait le bloc “Aperçu général de la semaine”
+// 👉 NOUVEAU : extrait le bloc “Aperçu général de la semaine” ou “Tendances de la semaine”
 function parseOverview(md: string): string {
-  const rx = /(^|\n)##\s*(?:🟦\s*)?Aperçu général de la semaine\s*\n([\s\S]*?)(\n##\s|$)/i;
+  const rx = /(^|\n)##\s*(?:🟦\s*)?(?:Aperçu général|Tendances) de la semaine\s*\n([\s\S]*?)(\n##\s|$)/i;
   const m = md.match(rx);
   return m ? m[2].trim() : "";
 }
@@ -66,15 +66,61 @@ function parseSections(md: string): SummarySection[] {
   }
   for (const seg of indices) {
     const title = seg.title;
-    if (/aperçu général/i.test(title)) continue; // on évite le bloc overview ici
+    if (/(aperçu général|tendances) de la semaine/i.test(title)) continue; // on évite le bloc overview ici
     const block = md.slice(seg.start, seg.end).trim();
-    const lineRe =
-      /^\s*[-–•]\s*\[(.+?)\]\((https?:\/\/[^\s)]+)\)\s*(?:—\s*([^·\n]+))?(?:\s*·\s*([\d-]{8,10}))?(?:\s*·\s*\*\*(\d+)\s*\/\s*100\*\*)?/gim;
+
+    // Nouvelle regex pour le format multi-lignes
+    // ### Titre
+    // *Source : ...*
+    // * **Pourquoi c'est important :** ...
+    // *Lien :* url
     const items: SectionItem[] = [];
+
+    // Regex plus souple pour capturer le bloc entier d'un item
+    // On cherche un titre (### ou **) suivi de lignes jusqu'au prochain titre ou fin de bloc
+
+    // On va itérer sur les blocs commençant par ### ou **
+    // const itemSplitRe = /(?:^|\n)(?:###|\*\*)\s*(.+?)(?:\*\*|(?:\n|$))/g;
+
+    // Cette approche par split est compliquée car on veut capturer le contenu après.
+    // Essayons une regex qui capture chaque item complet.
+
+    // Format observé :
+    // ### Title
+    // *Source : Source (Date)*
+    // * **Pourquoi c'est important :** Desc
+    // *Lien :* url
+
+    const itemRe = /(?:^|\n)(?:###|\*\*)\s*([^\n*]+)(?:\*\*)?\s*\n\s*\*Source\s*:\s*([^(]+)\s*(?:\(([^)]+)\))?\*\s*\n\s*\*\s*\*\*Pourquoi c'est important\s*:\*\*\s*([^\n]+)\s*\n\s*\*(?:Lien|Link)[^:]*:\*\s*(?:\[([^\]]+)\]\(([^)]+)\)|(https?:\/\/[^\s]+))/gim;
+
     let lm: RegExpExecArray | null;
-    while ((lm = lineRe.exec(block))) {
-      items.push({ title: lm[1]?.trim(), url: lm[2]?.trim(), source: lm[3]?.trim(), score: lm[5]?.trim() });
+    let foundNewFormat = false;
+
+    while ((lm = itemRe.exec(block))) {
+      foundNewFormat = true;
+      const rawUrl = lm[7];
+      const mdUrl = lm[6];
+      // const mdText = lm[5]; // unused
+
+      items.push({
+        title: lm[1]?.trim(),
+        source: lm[2]?.trim(),
+        // date: lm[3]?.trim(),
+        description: lm[4]?.trim(),
+        url: (mdUrl || rawUrl || "").trim(),
+        score: 0
+      });
     }
+
+    if (!foundNewFormat) {
+      // Fallback ancien format
+      const lineRe =
+        /^\s*[-–•]\s*\[(.+?)\]\((https?:\/\/[^\s)]+)\)\s*(?:—\s*([^·\n]+))?(?:\s*·\s*([\d-]{8,10}))?(?:\s*·\s*\*\*(\d+)\s*\/\s*100\*\*)?/gim;
+      while ((lm = lineRe.exec(block))) {
+        items.push({ title: lm[1]?.trim(), url: lm[2]?.trim(), source: lm[3]?.trim(), score: lm[5]?.trim() });
+      }
+    }
+
     if (items.length) sections.push({ title, items });
   }
   return sections;

@@ -69,6 +69,7 @@ export default function App() {
                   url: it.url,
                   source: it.source,
                   score: it.score,
+                  description: it.description,
                 }))}
               />
             ) : null

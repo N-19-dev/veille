@@ -5,11 +5,22 @@ __pycache__/
 .env
 .ve/
 *.db-journal
+*.db
+backend/logs/
+backend/*.log
+
+# Coverage
+.coverage
+htmlcov/
+.pytest_cache/
 
 # Node
 node_modules/
 dist/
 *.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
 # Vite
 frontend/dist/
@@ -17,10 +28,17 @@ frontend/dist/
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
+Thumbs.db
 
 # Build artifacts
 export/latest/
 site/
+
+# Metrics et exports temporaires
+backend/metrics.json
+backend/export/*/metrics.json

@@ -1,0 +1,11 @@
+{
+  "start_time": "2025-12-03T17:07:23.688521",
+  "feeds_processed": 0,
+  "feeds_failed": 0,
+  "articles_crawled": 37,
+  "articles_filtered": 0,
+  "articles_classified": 0,
+  "llm_calls": 0,
+  "errors": [],
+  "end_time": "2025-12-03T17:07:52.284056"
+}

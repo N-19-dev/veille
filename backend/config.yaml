@@ -12,7 +12,7 @@ crawl:
   concurrency: 12
   per_host_rps: 1.5
   timeout_sec: 25
-  user_agent: "VeilleTechBot/1.0 (+https://example.local/veille)"
+  user_agent: "VeilleTechBot/1.0 (+https://github.com/nathansornet/veille_tech_crawling)"
   min_text_length: 300
 
   # On ne met pas de whitelist → le filtrage se fait via regex + pertinence
@@ -36,6 +36,27 @@ export:
 # ============================================
 notify:
   slack_webhook_env: "SLACK_WEBHOOK_URL"
+
+# ============================================
+#          MONITORING & LOGGING
+# ============================================
+monitoring:
+  # Niveau de log: DEBUG, INFO, WARNING, ERROR
+  log_level: "INFO"
+
+  # Export des métriques vers un fichier JSON
+  export_metrics: true
+
+  # Optionnel: Sentry pour tracking des erreurs en production
+  # sentry_dsn_env: "SENTRY_DSN"
+
+  # Métriques collectées automatiquement:
+  # - feeds_processed: nombre de feeds traités
+  # - feeds_failed: nombre de feeds en erreur
+  # - articles_crawled: nombre d'articles récupérés
+  # - articles_filtered: nombre d'articles filtrés
+  # - llm_calls: nombre d'appels LLM
+  # - errors: liste des erreurs rencontrées
 
 # ============================================
 #               CATEGORIES (Data Engineer)

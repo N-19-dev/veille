@@ -31,6 +31,12 @@ from pydantic import BaseModel
 from readability import Document
 from tqdm.asyncio import tqdm
 
+# Import du logger structuré
+from logger import get_logger, MetricsCollector
+
+# Initialisation du logger
+logger = get_logger("veille_tech", log_file="logs/veille_tech.log", level="INFO")
+
 # -----------------------
 # Models & Config
 # -----------------------
@@ -248,8 +254,22 @@ class Fetcher:
                 async with session.get(url, timeout=self.cfg.timeout_sec, headers={"User-Agent": self.cfg.user_agent}) as resp:
                     if resp.status == 200:
                         return await resp.read()
-            except Exception:
-                return None
+                    elif resp.status == 404:
+                        logger.warning(f"URL not found (404)", url=url)
+                    elif resp.status >= 500:
+                        logger.error(f"Server error ({resp.status})", url=url)
+                    elif resp.status == 429:
+                        logger.warning(f"Rate limited (429)", url=url)
+                    else:
+                        logger.debug(f"Non-200 status: {resp.status}", url=url)
+            except asyncio.TimeoutError:
+                logger.warning("Request timeout", url=url, timeout=self.cfg.timeout_sec)
+            except aiohttp.ClientConnectorError as e:
+                logger.error("Connection error", url=url, error=str(e))
+            except aiohttp.ClientError as e:
+                logger.error("Client error", url=url, error=str(e))
+            except Exception as e:
+                logger.error("Unexpected error during fetch", url=url, error=str(e))
         return None
 
 def hash_id(url: str, title: str) -> str:
@@ -349,10 +369,30 @@ def is_editorial_article(url: str, cfg: dict, text: str = "") -> bool:
     return True
 
 # -----------------------
+# Notification
+# -----------------------
+
+async def notify_slack(webhook_url: str, message: str, session: aiohttp.ClientSession):
+    """Envoie une notification Slack via webhook."""
+    try:
+        async with session.post(webhook_url, json={"text": message}) as resp:
+            if resp.status == 200:
+                logger.info("Slack notification sent successfully")
+            else:
+                logger.warning(f"Slack notification failed with status {resp.status}")
+    except Exception as e:
+        logger.error("Failed to send Slack notification", error=str(e))
+
+# -----------------------
 # Pipeline
 # -----------------------
 
 async def run(config_path: str = "config.yaml"):
+    # Initialiser les métriques
+    metrics = MetricsCollector()
+
+    logger.info("Starting veille tech pipeline", config=config_path)
+
     cfg = AppConfig(**yaml.safe_load(Path(config_path).read_text(encoding="utf-8")))
     ensure_db(cfg.storage.sqlite_path)
 
@@ -365,6 +405,8 @@ async def run(config_path: str = "config.yaml"):
     now_ts = int(datetime.now(tz=timezone.utc).timestamp())
     week_offset = int(os.getenv("WEEK_OFFSET", "0"))
     week_start_ts, week_end_ts, week_label, week_start_str, week_end_str = week_bounds("Europe/Paris", week_offset=week_offset)
+
+    logger.info(f"Processing week {week_label}", start=week_start_str, end=week_end_str, offset=week_offset)
 
     async with aiohttp.ClientSession(headers={"User-Agent": cfg.crawl.user_agent}) as session:
         # 1) Prépare les feeds
@@ -429,7 +471,7 @@ async def run(config_path: str = "config.yaml"):
                                 content_text = extract_main_content(art_txt, link)
 
                         text_for_filter = (content_text or summary or "")
-                        if not is_editorial_article(link, cfg.dict(), text=text_for_filter):
+                        if not is_editorial_article(link, cfg.model_dump(), text=text_for_filter):
                             continue
 
                         cat_key = classify(title, (summary or content_text[:300]), cfg.categories)
@@ -489,7 +531,7 @@ async def run(config_path: str = "config.yaml"):
                         if not published_ts or not within_window(published_ts, week_start_ts, week_end_ts):
                             continue
                         text_content = extract_main_content(art_txt, href)
-                        if not is_editorial_article(href, cfg.dict(), text=text_content):
+                        if not is_editorial_article(href, cfg.model_dump(), text=text_content):
                             continue
                         cat_key = classify(t, text_content[:300], cfg.categories)
                         if not cat_key: continue
@@ -550,10 +592,24 @@ async def run(config_path: str = "config.yaml"):
                         lines.append(f"• {title}: {len(items)} items")
                 await notify_slack(wh, "\n".join(lines), session)
 
+        # Logging final et métriques
+        total_articles = sum(len(items) for items in groups.values())
+        logger.info("Pipeline completed successfully",
+                   feeds_processed=len(final_feeds),
+                   new_items=total_new,
+                   total_articles=total_articles,
+                   week=week_label)
+
+        # Sauvegarder les métriques
+        metrics.increment("articles_crawled", total_new)
+        metrics_path = week_dir / "metrics.json"
+        metrics.save(str(metrics_path))
+
         print(f"Done. New items inserted: {total_new}")
         print(f"Exported: {json_path}")
         if cfg.export.make_markdown_digest:
             print(f"Exported: {md_path}")
+        print(f"Metrics: {metrics_path}")
 
 # -----------------------
 # CLI

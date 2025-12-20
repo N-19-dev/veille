@@ -7,7 +7,9 @@
       "published_ts": 1764768023,
       "source_name": "Dataiku Blog",
       "score": 62.42947806417942,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 20
     },
     {
       "url": "https://www.databricks.com/blog/databricks-and-nvidia-powering-next-generation-industry-ai",
@@ -16,7 +18,9 @@
       "published_ts": 1764628200,
       "source_name": "Databricks Blog",
       "score": 59.13931652903557,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 20
     }
   ],
   "cloud_infra_observability": [
@@ -27,7 +31,9 @@
       "published_ts": 1764781335,
       "source_name": "Pinterest Engineering",
       "score": 55.97172185778618,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "data_modeling_governance": [
@@ -38,7 +44,9 @@
       "published_ts": 1764688343,
       "source_name": "Seattle Data Guy",
       "score": 64.79265508055687,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.databricks.com/blog/completing-lakehouse-vision-open-storage-open-access-unified-governance",
@@ -47,7 +55,9 @@
       "published_ts": 1764683680,
       "source_name": "Databricks Blog",
       "score": 62.54358457028866,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.getdbt.com/blog/bring-structured-context-to-conversational-analytics-with-dbt",
@@ -56,7 +66,9 @@
       "published_ts": 1764802740,
       "source_name": "dbt Blog",
       "score": 58.64597541093826,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "etl_orchestration": [
@@ -67,7 +79,9 @@
       "published_ts": 1764645335,
       "source_name": "VuTrinh · Data Engineering",
       "score": 61.83752524852753,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://airbyte.com/blog/agentic-data-infrastructure",
@@ -76,7 +90,9 @@
       "published_ts": 1764720000,
       "source_name": "Airbyte Blog",
       "score": 60.046813040971756,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     },
     {
       "url": "https://www.databricks.com/blog/events-insights-complex-state-processing-schema-evolution-transformwithstate",
@@ -85,7 +101,9 @@
       "published_ts": 1764608444,
       "source_name": "Databricks Blog",
       "score": 58.854059129953384,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 15
     }
   ],
   "hors_sujet": [],
@@ -97,7 +115,9 @@
       "published_ts": 1764967200,
       "source_name": "Databricks Blog",
       "score": 62.022852540016174,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "news": [
@@ -108,7 +128,9 @@
       "published_ts": 1764864163,
       "source_name": "Data Engineer Things",
       "score": 69.11982552707195,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     },
     {
       "url": "https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent",
@@ -117,7 +139,9 @@
       "published_ts": 1764986504,
       "source_name": "Joe Reis · Data Engineering",
       "score": 60.11103814840317,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://joereis.substack.com/p/help-shape-the-practical-data-2026",
@@ -126,7 +150,9 @@
       "published_ts": 1764869376,
       "source_name": "Joe Reis · Data Engineering",
       "score": 58.119090646505356,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "news_general": [],
@@ -139,7 +165,9 @@
       "published_ts": 1764889500,
       "source_name": "Databricks Blog",
       "score": 62.61396926641464,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 15
     }
   ]
 }

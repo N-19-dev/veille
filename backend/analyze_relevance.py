@@ -61,10 +61,12 @@ def group_filtered_with_thresholds(
             thr = int(thresholds.get(c, default_threshold))
             rows = conn.execute(
                 """
-                SELECT url, title, summary, published_ts, source_name, final_score, content_type
+                SELECT url, title, summary, published_ts, source_name, final_score, content_type,
+                       tech_level, marketing_score, is_excluded
                 FROM items
                 WHERE category_key=? AND published_ts>=? AND published_ts<?
                       AND final_score IS NOT NULL AND final_score >= ?
+                      AND (is_excluded IS NULL OR is_excluded = 0)
                 ORDER BY final_score DESC, published_ts DESC
                 """,
                 (c, min_ts, max_ts, thr),
@@ -89,6 +91,8 @@ def group_filtered_with_thresholds(
                     source_name=row[4],
                     score=row[5],
                     content_type=row[6] or "technical",
+                    tech_level=row[7] or "intermediate",
+                    marketing_score=row[8] or 0,
                 )
                 for row in selected_rows
             ]
@@ -107,16 +111,18 @@ def fetch_items_for_top(
     with db_conn(db_path) as conn:
         rows = conn.execute(
             """
-            SELECT title, url, source_name, category_key, final_score, published_ts, content_type
+            SELECT title, url, source_name, category_key, final_score, published_ts, content_type,
+                   tech_level, marketing_score
             FROM items
             WHERE published_ts >= ? AND published_ts < ?
               AND final_score IS NOT NULL
               AND final_score >= ?
+              AND (is_excluded IS NULL OR is_excluded = 0)
             ORDER BY final_score DESC, published_ts DESC
             """,
             (min_ts, max_ts, min_score),
         ).fetchall()
-    
+
     # Diversity: max 1 per source for Top 3
     seen_sources = set()
     final_rows = []
@@ -127,7 +133,7 @@ def fetch_items_for_top(
         seen_sources.add(src)
         final_rows.append(r)
 
-    keys = ["title", "url", "source", "category", "score", "published_ts", "content_type"]
+    keys = ["title", "url", "source", "category", "score", "published_ts", "content_type", "tech_level", "marketing_score"]
     return [dict(zip(keys, r)) for r in final_rows]
 
 
@@ -531,6 +537,10 @@ def main(config_path: str = "config.yaml", limit: Optional[int] = None):
     top_md = build_top_k_md(top_items, k=3)
     top3_path = week_dir / "top3.md"
     top3_path.write_text(top_md, encoding="utf-8")
+
+    # Export JSON du top3 pour le frontend
+    top3_json_path = week_dir / "top3.json"
+    top3_json_path.write_text(json.dumps(top_items[:3], indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"[done] Top 3: {top3_path}")
 
     # --- lien symbolique "latest" → cette semaine (best effort) ---

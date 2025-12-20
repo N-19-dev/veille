@@ -1,8 +1,8 @@
 // src/lib/parse.ts
 
 export type WeekMeta = { week: string; range?: string };
-export type TopItem = { title: string; url: string; source?: string; date?: string; score?: string|number };
-export type SectionItem = { title: string; url: string; source?: string; score?: string|number; content_type?: string };
+export type TopItem = { title: string; url: string; source?: string; date?: string; score?: string|number; tech_level?: string; marketing_score?: number };
+export type SectionItem = { title: string; url: string; source?: string; score?: string|number; content_type?: string; tech_level?: string; marketing_score?: number };
 export type SummarySection = { title: string; items: SectionItem[] };
 
 // ---------- helpers de chargement (inchangés si tu es en statique) ----------
@@ -110,16 +110,38 @@ async function loadSelectionJson(meta: WeekMeta): Promise<Record<string, any[]>>
   }
 }
 
+// ---------- Chargement du top3 JSON ----------
+async function loadTop3Json(meta: WeekMeta): Promise<TopItem[]> {
+  try {
+    const path = meta.week === "latest"
+      ? "export/latest/top3.json"
+      : `export/${meta.week}/top3.json`;
+    const txt = await loadText(path);
+    const data = JSON.parse(txt);
+    return data.map((item: any) => ({
+      title: item.title || "",
+      url: item.url || "",
+      source: item.source || "",
+      score: item.score,
+      tech_level: item.tech_level || "intermediate",
+      marketing_score: item.marketing_score || 0,
+    }));
+  } catch {
+    return []; // Fallback si le fichier n'existe pas
+  }
+}
+
 // ---------- API principale ----------
 export async function loadWeekSummary(meta: WeekMeta): Promise<{
   overview: string;
   top3: TopItem[];
   sections: SummarySection[];
 }> {
-  // Charger le markdown pour overview et top3
+  // Charger le markdown pour overview uniquement
   const md = await loadText(summaryPath(meta));
 
-  // Charger le JSON pour les sections (avec content_type)
+  // Charger le JSON pour top3 et sections
+  const top3Data = await loadTop3Json(meta);
   const selectionData = await loadSelectionJson(meta);
   const categories = await loadCategories();
 
@@ -136,6 +158,8 @@ export async function loadWeekSummary(meta: WeekMeta): Promise<{
       source: item.source_name || "",
       score: item.score,
       content_type: item.content_type || "technical",
+      tech_level: item.tech_level || "intermediate",
+      marketing_score: item.marketing_score || 0,
     }));
 
     if (sectionItems.length > 0) {
@@ -145,7 +169,7 @@ export async function loadWeekSummary(meta: WeekMeta): Promise<{
 
   return {
     overview: parseOverview(md),
-    top3: parseTop3(md),
+    top3: top3Data,
     sections,
   };
 }

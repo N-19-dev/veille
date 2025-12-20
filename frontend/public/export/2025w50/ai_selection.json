@@ -7,7 +7,9 @@
       "published_ts": 1765302841,
       "source_name": "Seattle Data Guy",
       "score": 67.13117784261703,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.databricks.com/blog/introducing-databricks-genai-partner-accelerators-data-engineering-migration",
@@ -16,7 +18,9 @@
       "published_ts": 1765317600,
       "source_name": "Databricks Blog",
       "score": 63.41874518990517,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "cloud_infra_observability": [
@@ -27,7 +31,9 @@
       "published_ts": 1765315755,
       "source_name": "Redshift / AWS Big Data",
       "score": 56.24005499482155,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 20
     }
   ],
   "data_modeling_governance": [
@@ -38,7 +44,9 @@
       "published_ts": 1765402080,
       "source_name": "dbt Blog",
       "score": 61.114116579294205,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://vutr.substack.com/p/9-lessons-that-will-put-you-3-years",
@@ -47,7 +55,9 @@
       "published_ts": 1765250132,
       "source_name": "VuTrinh · Data Engineering",
       "score": 59.765823505818844,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "etl_orchestration": [
@@ -58,7 +68,9 @@
       "published_ts": 1765550380,
       "source_name": "Dagster Blog",
       "score": 66.21813440322876,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.uber.com/blog/from-batch-to-streaming-accelerating-data-freshness-in-ubers-data-lake/",
@@ -67,7 +79,9 @@
       "published_ts": 1765461600,
       "source_name": "Uber Engineering Blog",
       "score": 64.64556208252907,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     },
     {
       "url": "https://dagster.io/blog/deepdive-recap-building-a-true-data-platform",
@@ -76,7 +90,9 @@
       "published_ts": 1765549595,
       "source_name": "Dagster Blog",
       "score": 64.30898237228394,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     }
   ],
   "hors_sujet": [],
@@ -89,7 +105,9 @@
       "published_ts": 1765157129,
       "source_name": "Data Engineering Weekly",
       "score": 62.98143273591995,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "news_general": [],
@@ -102,7 +120,9 @@
       "published_ts": 1765554569,
       "source_name": "Seattle Data Guy",
       "score": 67.5558843165636,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.getdbt.com/blog/reliable-analytics-dbt-databricks",
@@ -111,7 +131,9 @@
       "published_ts": 1765486680,
       "source_name": "dbt Blog",
       "score": 63.73365345597267,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.uber.com/blog/blazing-fast-olap-on-ubers-inventory-and-catalog-data-with-apache-pinot/",
@@ -120,7 +142,9 @@
       "published_ts": 1765288800,
       "source_name": "Uber Engineering Blog",
       "score": 58.17758099734783,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/relationalai-drives-intelligence-forward",
@@ -129,7 +153,20 @@
       "published_ts": 1765472400,
       "source_name": "Snowflake Blog",
       "score": 58.09667120873928,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs",
+      "title": "Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs",
+      "summary": "From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.",
+      "published_ts": 1765221148,
+      "source_name": "Snowflake Blog",
+      "score": 58.03446029126644,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ]
 }

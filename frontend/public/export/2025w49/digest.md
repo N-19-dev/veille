@@ -50,8 +50,6 @@
 
 ## ☁️ Cloud, Infra & Observability
 
-- [The Hangover 4.0 (Avoided): AWS re:Invent, The "Year of the Agent," Mixed Model Arts, and the Ensh*tification of Everything](https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent) — Joe Reis · Data Engineering · 2025-12-06
-  - The Weekend Windup #13 - Cool Reads, Events, and More
 - [Cloudflare outage on December 5, 2025](https://blog.cloudflare.com/5-december-2025-outage/) — Cloudflare Engineering · 2025-12-05
   - Cloudflare experienced a significant traffic outage on  December 5, 2025, starting approximately at 8:47 UTC. The incident lasted approximately 25 minutes before resolution. We are sorry for the impact that it caused to our customers and th…
 - [Autonomous Observability at Pinterest (Part 1 of 2)](https://medium.com/pinterest-engineering/autonomous-observability-at-pinterest-part-1-of-2-eb0adae830ba?source=rss----4c5a5f6279b6---4) — Pinterest Engineering · 2025-12-03
@@ -197,6 +195,8 @@ Today, as w…
 
 - [[SoPo 2025] From 0 to AI : Product Marketing lessons from launching Create with AI - Dominique Rolink](https://blog.octo.com/sopo-2025-from-0-to-ai--product-marketing-lessons-from-launching-create-with-ai-dominique-rolink) — OCTO Talks! · 2025-12-07
   - Comment positionner l’IA comme un outil accessible plutôt qu’un saut dans l’inconnu ?Dominique Rolink PMM chez Miro nous donne quelques clés pour encourager l'adoption d'un produit IA.
+- [The Hangover 4.0 (Avoided): AWS re:Invent, The "Year of the Agent," Mixed Model Arts, and the Ensh*tification of Everything](https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent) — Joe Reis · Data Engineering · 2025-12-06
+  - The Weekend Windup #13 - Cool Reads, Events, and More
 - [AI Isn't Taking Over, It's Augmenting Decision-Making](https://www.dataiku.com/stories/blog/ai-augmenting-decision-making) — Dataiku Blog · 2025-12-05
   - It's a Saturday afternoon, and I'm at a kid's birthday party. The obligatory small talk is in full swing, and after discussing whose kid belongs to whom and comparing notes on cupcake flavors, I hear the inevitable question, "So, what do yo…
 - [AI Literacy: CHRO’s Strategic Lever for Talent Transformation](https://www.dataiku.com/stories/blog/ai-literacy-chro) — Dataiku Blog · 2025-12-05

@@ -489,6 +489,17 @@ async def run(config_path: str = "config.yaml"):
                         # Détection du type de contenu (technical vs rex)
                         content_type = detect_content_type(title, summary, content_text, cfg.model_dump(), source_name=name)
 
+                        # NOUVEAUTÉ Phase 1 : Calcul du niveau technique et score marketing
+                        from content_classifier import (
+                            calculate_technical_level,
+                            calculate_marketing_score,
+                            should_exclude_article
+                        )
+
+                        tech_level = calculate_technical_level(title, summary, content_text)
+                        marketing_score = calculate_marketing_score(title, summary, content_text)
+                        is_excluded_bool, exclusion_reason = should_exclude_article(title, summary, content_text, min_quality_score=50)
+
                         item = {
                             "id": hash_id(link, title),
                             "url": link, "title": title,
@@ -498,7 +509,11 @@ async def run(config_path: str = "config.yaml"):
                             "source_name": name,
                             "category_key": cat_key,
                             "created_ts": now_ts,
-                            "content_type": content_type
+                            "content_type": content_type,
+                            "tech_level": tech_level,
+                            "marketing_score": marketing_score,
+                            "is_excluded": 1 if is_excluded_bool else 0,
+                            "exclusion_reason": exclusion_reason if is_excluded_bool else None
                         }
                         upsert_item(cfg.storage.sqlite_path, item); inserts += 1
                 else:
@@ -552,6 +567,11 @@ async def run(config_path: str = "config.yaml"):
                         # Détection du type de contenu (technical vs rex)
                         content_type = detect_content_type(t, text_content[:300], text_content, cfg.model_dump(), source_name=name)
 
+                        # NOUVEAUTÉ Phase 1 : Calcul du niveau technique et score marketing
+                        tech_level = calculate_technical_level(t, text_content[:300], text_content)
+                        marketing_score = calculate_marketing_score(t, text_content[:300], text_content)
+                        is_excluded_bool, exclusion_reason = should_exclude_article(t, text_content[:300], text_content, min_quality_score=50)
+
                         item = {
                             "id": hash_id(href, t),
                             "url": href, "title": t,
@@ -561,7 +581,11 @@ async def run(config_path: str = "config.yaml"):
                             "source_name": name,
                             "category_key": cat_key,
                             "created_ts": now_ts,
-                            "content_type": content_type
+                            "content_type": content_type,
+                            "tech_level": tech_level,
+                            "marketing_score": marketing_score,
+                            "is_excluded": 1 if is_excluded_bool else 0,
+                            "exclusion_reason": exclusion_reason if is_excluded_bool else None
                         }
                         upsert_item(cfg.storage.sqlite_path, item); inserts += 1
             return inserts

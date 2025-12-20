@@ -1,7 +1,6 @@
 // src/App.tsx
 import React from "react";
 import Hero from "./components/Hero";
-import Top3 from "./components/Top3";
 import SectionCard from "./components/SectionCard";
 import Overview from "./components/Overview";
 import SearchBar from "./components/SearchBar";
@@ -198,7 +197,6 @@ export default function App() {
           </div>
         )}
 
-        <Top3 items={data.top3} />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
           {filteredSections.map((sec: any) =>
             sec.items?.length ? (
@@ -210,6 +208,8 @@ export default function App() {
                   url: it.url,
                   source: it.source,
                   score: it.score,
+                  tech_level: it.tech_level,
+                  marketing_score: it.marketing_score,
                 }))}
               />
             ) : null

@@ -320,7 +320,7 @@
       "summary": "Examining the new open table format’s return to relational metadata management",
       "published_ts": 1764487838,
       "source_name": "Alireza Sadeghi · Practical Data Engineering",
-      "content_type": "technical"
+      "content_type": "rex"
     },
     {
       "url": "https://aws.amazon.com/blogs/big-data/accelerate-data-lake-operations-with-apache-iceberg-v3-deletion-vectors-and-row-lineage/",

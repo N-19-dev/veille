@@ -71,6 +71,8 @@
   - Discover 2025's data integration trends, from real-time pipelines to privacy-first design.
 - [SAP data ingestion and replication with AWS Glue zero-ETL](https://aws.amazon.com/blogs/big-data/sap-data-ingestion-and-replication-with-aws-glue-zero-etl/) — Redshift / AWS Big Data · 2025-12-08
   - AWS Glue zero-ETL with SAP now supports data ingestion and replication from SAP data sources such as Operational Data Provisioning (ODP) managed SAP Business Warehouse (BW) extractors, Advanced Business Application Programming (ABAP), Core …
+- [Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs](https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs) — Snowflake Blog · 2025-12-08
+  - From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.
 
 ## 📐 Data Modeling, Governance & Quality
 

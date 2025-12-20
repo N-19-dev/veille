@@ -1,5 +1,13 @@
 [
   {
+    "week": "2025w51",
+    "range": "2025-12-15 → 2025-12-22",
+    "top3_md": "export/2025w51/top3.md",
+    "selection_json": "export/2025w51/ai_selection.json",
+    "selection_md": "export/2025w51/ai_selection.md",
+    "summary_md": "export/2025w51/ai_summary.md"
+  },
+  {
     "week": "2025w50",
     "range": "2025-12-08 → 2025-12-15",
     "top3_md": "export/2025w50/top3.md",

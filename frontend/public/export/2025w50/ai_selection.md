@@ -30,3 +30,4 @@
 - [Scale reliable analytics in the AI era with dbt and Databricks](https://www.getdbt.com/blog/reliable-analytics-dbt-databricks) — dbt Blog · 2025-12-11 · **64/100**
 - [Blazing Fast OLAP on Uber’s Inventory and Catalog Data with Apache Pinot™](https://www.uber.com/blog/blazing-fast-olap-on-ubers-inventory-and-catalog-data-with-apache-pinot/) — Uber Engineering Blog · 2025-12-09 · **58/100**
 - [RelationalAI Drives Decision Intelligence Forward with Snowflake Ventures’ Investment](https://www.snowflake.com/content/snowflake-site/global/en/blog/relationalai-drives-intelligence-forward) — Snowflake Blog · 2025-12-11 · **58/100**
+- [Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs](https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs) — Snowflake Blog · 2025-12-08 · **58/100**

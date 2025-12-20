@@ -9,6 +9,8 @@ type Article = {
   source?: string;
   date?: string;
   score?: number | string;
+  tech_level?: 'beginner' | 'intermediate' | 'advanced';
+  marketing_score?: number;
 };
 
 export default function SectionCard({

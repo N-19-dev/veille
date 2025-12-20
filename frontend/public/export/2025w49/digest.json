@@ -219,14 +219,6 @@
   ],
   "cloud_infra_observability": [
     {
-      "url": "https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent",
-      "title": "The Hangover 4.0 (Avoided): AWS re:Invent, The \"Year of the Agent,\" Mixed Model Arts, and the Ensh*tification of Everything",
-      "summary": "The Weekend Windup #13 - Cool Reads, Events, and More",
-      "published_ts": 1764986504,
-      "source_name": "Joe Reis · Data Engineering",
-      "content_type": "rex"
-    },
-    {
       "url": "https://blog.cloudflare.com/5-december-2025-outage/",
       "title": "Cloudflare outage on December 5, 2025",
       "summary": "Cloudflare experienced a significant traffic outage on  December 5, 2025, starting approximately at 8:47 UTC. The incident lasted approximately 25 minutes before resolution. We are sorry for the impact that it caused to our customers and the Internet. The incident was not caused by an attack and was due to configuration changes being applied to attempt to mitigate a recent industry-wide vulnerability impacting React Server Components.",
@@ -562,6 +554,14 @@
       "published_ts": 1765135390,
       "source_name": "OCTO Talks!",
       "content_type": "technical"
+    },
+    {
+      "url": "https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent",
+      "title": "The Hangover 4.0 (Avoided): AWS re:Invent, The \"Year of the Agent,\" Mixed Model Arts, and the Ensh*tification of Everything",
+      "summary": "The Weekend Windup #13 - Cool Reads, Events, and More",
+      "published_ts": 1764986504,
+      "source_name": "Joe Reis · Data Engineering",
+      "content_type": "rex"
     },
     {
       "url": "https://www.dataiku.com/stories/blog/ai-augmenting-decision-making",

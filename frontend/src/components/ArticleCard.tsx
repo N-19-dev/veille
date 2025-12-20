@@ -1,9 +1,11 @@
 // src/components/ArticleCard.tsx
-// Carte article compacte : favicon, source, titre clamp, barre d’accent.
-// Compatible top3/sections: {title,url,source,date,score}
+// Carte article compacte : favicon, source, titre clamp, barre d'accent.
+// Compatible top3/sections: {title,url,source,date,score,tech_level,marketing_score}
 
 import React from "react";
 import { faviconUrl, getDomain } from "../lib/parse";
+
+type TechLevel = 'beginner' | 'intermediate' | 'advanced';
 
 type Props = {
   title: string;
@@ -11,6 +13,8 @@ type Props = {
   source?: string;
   date?: string;
   score?: number | string;
+  tech_level?: TechLevel;
+  marketing_score?: number;
   className?: string;
 };
 

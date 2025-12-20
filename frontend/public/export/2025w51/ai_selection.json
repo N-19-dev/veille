@@ -1,0 +1,81 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://vutr.substack.com/p/everything-you-need-to-know-about-bee",
+      "title": "Everything you need to know about LLMs",
+      "summary": "...as a data engineer",
+      "published_ts": 1765854926,
+      "source_name": "VuTrinh · Data Engineering",
+      "score": 62.70874239504337,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
+    }
+  ],
+  "cloud_infra_observability": [],
+  "data_modeling_governance": [],
+  "etl_orchestration": [],
+  "hors_sujet": [],
+  "lake_storage_formats": [],
+  "news": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-248",
+      "title": "Data Engineering Weekly #248",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1765764013,
+      "source_name": "Data Engineering Weekly",
+      "score": 69.15838368237019,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/dataiku-solutions-how-they-work-and-how-to-use-them",
+      "title": "Dataiku Solutions: How They Work and How to Use Them",
+      "summary": "Most of the time, business teams have a good idea of what they want to achieve when implementing AI use cases. However, when it comes to getting started they often face roadblocks. These projects often require specialized skills and a strong understanding of industry best practices.",
+      "published_ts": 1766004819,
+      "source_name": "Dataiku Blog",
+      "score": 58.18999753892422,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "news_general": [],
+  "python_analytics": [],
+  "warehouses_engines": [
+    {
+      "url": "https://www.databricks.com/blog/databricks-lakehouse-data-modeling-myths-truths-and-best-practices",
+      "title": "Databricks Lakehouse Data Modeling: Myths, Truths, and Best Practices",
+      "summary": "Data warehouses have long been prized for their structure and rigor, and yet many...",
+      "published_ts": 1765819011,
+      "source_name": "Databricks Blog",
+      "score": 66.95491576194763,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.getdbt.com/blog/inside-snowflakes-ai-roadmap",
+      "title": "Inside Snowflake’s AI roadmap",
+      "summary": "Chris Child, Snowflake's VP of Product Management, on the vision for open table formats and the future of the data engineer.",
+      "published_ts": 1765831620,
+      "source_name": "dbt Blog",
+      "score": 65.04346567392349,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.databricks.com/blog/sql-databricks-lakehouse-2025",
+      "title": "SQL on the Databricks Lakehouse in 2025",
+      "summary": "Traditional data warehouses are slow, expensive, and locked behind proprietary systems....",
+      "published_ts": 1765988462,
+      "source_name": "Databricks Blog",
+      "score": 62.34724548459053,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ]
+}

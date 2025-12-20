@@ -164,3 +164,215 @@ def split_by_content_type(items: List[Dict[str, Any]]) -> Dict[str, List[Dict[st
             result[content_type].append(item)
 
     return result
+
+
+# ===========================================================================
+# NOUVEAUTÉS : Filtrage anti-bruit et niveau technique (Phase 1 - Quick Wins)
+# ===========================================================================
+
+# Mots-clés indiquant du contenu débutant (à exclure selon retours utilisateurs)
+BEGINNER_KEYWORDS = [
+    # Anglais
+    "introduction to", "getting started", "tutorial for beginners",
+    "hello world", "step-by-step guide", "from scratch",
+    "for dummies", "basics of", "fundamentals of",
+    "beginner's guide", "crash course", "101",
+    "easy tutorial", "simple guide", "quick start",
+    # Français
+    "introduction à", "débuter avec", "pour débutants",
+    "premier pas", "guide simple", "les bases de",
+    "initiation à", "découvrir", "comprendre en 5 minutes"
+]
+
+# Mots-clés indiquant du contenu promotionnel/marketing (à pénaliser)
+MARKETING_KEYWORDS = [
+    # Superlatifs exagérés
+    "game-changer", "revolutionary", "disruptive",
+    "transform", "revolutionize", "unlock the power",
+    "next generation", "cutting-edge", "groundbreaking",
+    "industry-leading", "world-class", "best-in-class",
+    # Contenu sponsorisé
+    "sponsored", "partner content", "in partnership with",
+    "affiliate", "powered by", "brought to you by",
+    # Call-to-action commercial
+    "sign up now", "get started today", "free trial",
+    "limited offer", "exclusive access", "special discount"
+]
+
+# Mots-clés indiquant du contenu avancé/expert
+ADVANCED_KEYWORDS = [
+    # Architecture & Performance
+    "optimization", "performance tuning", "scaling",
+    "distributed systems", "fault tolerance", "high availability",
+    "load balancing", "sharding", "partitioning",
+    "consensus algorithms", "raft", "paxos",
+    # Bas niveau
+    "internals", "under the hood", "deep dive",
+    "implementation details", "source code analysis",
+    "memory layout", "garbage collection", "jit compilation",
+    # Production & SRE
+    "production-grade", "production-ready", "battle-tested",
+    "incident response", "postmortem", "runbook",
+    "monitoring at scale", "observability patterns",
+    # Concepts avancés
+    "distributed tracing", "service mesh", "zero-downtime",
+    "blue-green deployment", "canary release"
+]
+
+
+def detect_beginner_content(title: str, summary: str, content: str) -> bool:
+    """
+    Détecte si l'article est de niveau débutant.
+
+    Retourne True si l'article contient des patterns "débutant" dans le titre
+    ou de manière répétée dans le contenu.
+
+    Args:
+        title: Titre de l'article
+        summary: Résumé
+        content: Contenu (premiers caractères)
+
+    Returns:
+        True si contenu débutant, False sinon
+    """
+    title_lower = title.lower()
+    full_text = f"{title} {summary} {content[:1000]}".lower()
+
+    # Si un mot-clé débutant est dans le titre, c'est très probablement du contenu débutant
+    for keyword in BEGINNER_KEYWORDS:
+        if keyword in title_lower:
+            return True
+
+    # Compter les occurrences dans le texte complet
+    beginner_count = sum(1 for keyword in BEGINNER_KEYWORDS if keyword in full_text)
+
+    # Si 2+ mots-clés débutants dans le texte, c'est probablement du contenu débutant
+    return beginner_count >= 2
+
+
+def calculate_marketing_score(title: str, summary: str, content: str) -> int:
+    """
+    Calcule un score de marketing/promotion (0-100).
+
+    Plus le score est élevé, plus le contenu est promotionnel.
+
+    Args:
+        title: Titre de l'article
+        summary: Résumé
+        content: Contenu (premiers caractères)
+
+    Returns:
+        Score de 0 à 100 (0 = pas marketing, 100 = très marketing)
+    """
+    full_text = f"{title} {summary} {content[:1000]}".lower()
+    title_lower = title.lower()
+
+    score = 0
+
+    # Mots-clés marketing dans le titre : +15 points chacun
+    for keyword in MARKETING_KEYWORDS:
+        if keyword in title_lower:
+            score += 15
+
+    # Mots-clés marketing dans le contenu : +5 points chacun
+    for keyword in MARKETING_KEYWORDS:
+        if keyword in full_text and keyword not in title_lower:
+            score += 5
+
+    # Détecter les patterns de lien affilié
+    if "affiliate" in full_text or "sponsored" in full_text:
+        score += 30
+
+    # Détecter les call-to-action répétés
+    cta_patterns = ["sign up", "get started", "free trial", "click here"]
+    cta_count = sum(full_text.count(pattern) for pattern in cta_patterns)
+    score += min(cta_count * 10, 30)  # Max 30 points pour CTA
+
+    return min(score, 100)
+
+
+def calculate_technical_level(title: str, summary: str, content: str) -> str:
+    """
+    Détermine le niveau technique de l'article.
+
+    Returns:
+        "beginner", "intermediate", ou "advanced"
+    """
+    # Si c'est du contenu débutant, arrêt immédiat
+    if detect_beginner_content(title, summary, content):
+        return "beginner"
+
+    full_text = f"{title} {summary} {content[:1000]}".lower()
+
+    # Compter les indicateurs de contenu avancé
+    advanced_count = sum(1 for keyword in ADVANCED_KEYWORDS if keyword in full_text)
+
+    # Si 3+ indicateurs avancés, c'est du contenu expert
+    if advanced_count >= 3:
+        return "advanced"
+
+    # Si 1-2 indicateurs avancés, c'est du contenu intermédiaire
+    if advanced_count >= 1:
+        return "intermediate"
+
+    # Par défaut, contenu intermédiaire (sauf si déjà classé débutant)
+    return "intermediate"
+
+
+def should_exclude_article(title: str, summary: str, content: str, min_quality_score: int = 50) -> tuple[bool, str]:
+    """
+    Détermine si un article doit être exclu du feed (filtrage anti-bruit).
+
+    Args:
+        title: Titre de l'article
+        summary: Résumé
+        content: Contenu
+        min_quality_score: Score minimum pour accepter l'article (0-100)
+
+    Returns:
+        (should_exclude: bool, reason: str)
+    """
+    # 1. Exclure le contenu débutant (demande utilisateur #1)
+    if detect_beginner_content(title, summary, content):
+        return (True, "beginner_content")
+
+    # 2. Exclure le contenu trop promotionnel
+    marketing_score = calculate_marketing_score(title, summary, content)
+    if marketing_score >= 50:  # Threshold configurable
+        return (True, "promotional_content")
+
+    # 3. Pénaliser légèrement le contenu avec un peu de marketing
+    quality_penalty = marketing_score // 10  # -1 point par tranche de 10 points de marketing
+    effective_quality = min_quality_score - quality_penalty
+
+    if effective_quality < 40:  # En-dessous de 40, on exclut
+        return (True, "low_quality_with_marketing")
+
+    return (False, "")
+
+
+def get_level_badge_info(level: str) -> Dict[str, str]:
+    """
+    Retourne les informations de style pour le badge de niveau.
+
+    Returns:
+        {"color": "...", "label": "...", "emoji": "..."}
+    """
+    badges = {
+        "beginner": {
+            "color": "green",
+            "label": "Débutant",
+            "emoji": "🟢"
+        },
+        "intermediate": {
+            "color": "yellow",
+            "label": "Intermédiaire",
+            "emoji": "🟡"
+        },
+        "advanced": {
+            "color": "red",
+            "label": "Avancé",
+            "emoji": "🔴"
+        }
+    }
+    return badges.get(level, badges["intermediate"])

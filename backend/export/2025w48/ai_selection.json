@@ -7,7 +7,9 @@
       "published_ts": 1764007500,
       "source_name": "Databricks Blog",
       "score": 63.39661341905594,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     },
     {
       "url": "https://www.databricks.com/blog/claude-opus-45-here",
@@ -16,7 +18,9 @@
       "published_ts": 1764010829,
       "source_name": "Databricks Blog",
       "score": 58.1588190048933,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     }
   ],
   "cloud_infra_observability": [
@@ -27,7 +31,9 @@
       "published_ts": 1764205246,
       "source_name": "Redshift / AWS Big Data",
       "score": 56.13862632215023,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     }
   ],
   "data_modeling_governance": [
@@ -38,7 +44,9 @@
       "published_ts": 1764176400,
       "source_name": "Databricks Blog",
       "score": 63.17786976695061,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "etl_orchestration": [
@@ -49,7 +57,9 @@
       "published_ts": 1764004409,
       "source_name": "Dagster Blog",
       "score": 62.82555115222931,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 15
     },
     {
       "url": "https://dagster.io/blog/decade-of-data",
@@ -58,7 +68,9 @@
       "published_ts": 1764004409,
       "source_name": "Dagster Blog",
       "score": 62.4800795763731,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 10
     },
     {
       "url": "https://www.getdbt.com/blog/reducing-etl-licensing-costs",
@@ -67,7 +79,9 @@
       "published_ts": 1764173340,
       "source_name": "dbt Blog",
       "score": 59.99748635292053,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     }
   ],
   "hors_sujet": [],
@@ -79,7 +93,9 @@
       "published_ts": 1764487838,
       "source_name": "Alireza Sadeghi · Practical Data Engineering",
       "score": 69.04706478118896,
-      "content_type": "rex"
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ],
   "news": [],
@@ -92,7 +108,9 @@
       "published_ts": 1764154404,
       "source_name": "Zenika Tech Blog",
       "score": 58.025508746504784,
-      "content_type": "technical"
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 5
     }
   ],
   "warehouses_engines": []

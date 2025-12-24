@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@sentry/react": "^10.32.1",
     "fuse.js": "^7.1.0",
     "marked": "^17.0.0",
     "react": "^19.2.0",

@@ -30,7 +30,7 @@
       "summary": "AWS recently announced Glue 5.1, a new version of AWS Glue that accelerates data integration workloads in AWS. AWS Glue 5.1 upgrades the Spark engines to Apache Spark 3.5.6, giving you newer Spark release along with the newer dependent libraries so you can develop, run, and scale your data integration workloads and get insights faster. In this post, we describe what’s new in AWS Glue 5.1, key highlights on Spark and related libraries, and how to get started on AWS Glue 5.1.",
       "published_ts": 1765315755,
       "source_name": "Redshift / AWS Big Data",
-      "score": 56.24005499482155,
+      "score": 52.24005499482155,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 20
@@ -54,10 +54,10 @@
       "summary": "It took me six years to distill these insights, but you can read them in just 10 minutes.",
       "published_ts": 1765250132,
       "source_name": "VuTrinh · Data Engineering",
-      "score": 59.765823505818844,
+      "score": 58.765823505818844,
       "content_type": "rex",
       "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 5
     }
   ],
   "etl_orchestration": [
@@ -73,30 +73,28 @@
       "marketing_score": 0
     },
     {
+      "url": "https://dagster.io/blog/deepdive-recap-evolution-data-platform",
+      "title": "Evolution of the Data Platform with Dagster",
+      "summary": "Dagster and SDF connect local dev environments with production pipelines, enabling full lifecycle orchestration with clear asset lineage.",
+      "published_ts": 1765461515,
+      "source_name": "Dagster Blog",
+      "score": 63.790422052145004,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
       "url": "https://www.uber.com/blog/from-batch-to-streaming-accelerating-data-freshness-in-ubers-data-lake/",
       "title": "From Batch to Streaming: Accelerating Data Freshness in Uber’s Data Lake",
       "summary": "Learn how Uber moved from batch to streaming ingestion with IngestionNext, reducing data latency and unlocking real-time analytics across its petabyte-scale data lake.",
       "published_ts": 1765461600,
       "source_name": "Uber Engineering Blog",
-      "score": 64.64556208252907,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 5
-    },
-    {
-      "url": "https://dagster.io/blog/deepdive-recap-building-a-true-data-platform",
-      "title": "How to Build a True Data Platform",
-      "summary": "Skip the noise of the modern data stack and build a unified, observable, and cost-effective data platform powered by Dagster orchestration.",
-      "published_ts": 1765549595,
-      "source_name": "Dagster Blog",
-      "score": 64.30898237228394,
+      "score": 63.64556208252907,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 5
     }
   ],
-  "hors_sujet": [],
-  "lake_storage_formats": [],
   "news": [
     {
       "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-247",
@@ -104,14 +102,12 @@
       "summary": "The Weekly Data Engineering Newsletter",
       "published_ts": 1765157129,
       "source_name": "Data Engineering Weekly",
-      "score": 62.98143273591995,
+      "score": 61.98143273591995,
       "content_type": "rex",
       "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 5
     }
   ],
-  "news_general": [],
-  "python_analytics": [],
   "warehouses_engines": [
     {
       "url": "https://seattledataguy.substack.com/p/snowflake-vs-databricks-is-the-wrong",
@@ -142,28 +138,6 @@
       "published_ts": 1765288800,
       "source_name": "Uber Engineering Blog",
       "score": 58.17758099734783,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/relationalai-drives-intelligence-forward",
-      "title": "RelationalAI Drives Decision Intelligence Forward with Snowflake Ventures’ Investment",
-      "summary": "Snowflake Ventures invests in RelationalAI, a decision-intelligence platform that runs natively in Snowflake via Snowpark Container Services",
-      "published_ts": 1765472400,
-      "source_name": "Snowflake Blog",
-      "score": 58.09667120873928,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs",
-      "title": "Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs",
-      "summary": "From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.",
-      "published_ts": 1765221148,
-      "source_name": "Snowflake Blog",
-      "score": 58.03446029126644,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0

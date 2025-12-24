@@ -49,53 +49,133 @@ def group_filtered_with_thresholds(
     max_ts: int,
     thresholds: Dict[str, int],
     default_threshold: int,
+    max_total_articles: int = 12,  # Limite globale à 12 articles
 ) -> Dict[str, List[Dict[str, Any]]]:
     """
     Regroupe par catégorie en appliquant un seuil par catégorie sur final_score.
+
+    Stratégie de sélection (Option 3 - Mix):
+    1. Garantir au moins 1 article par catégorie (si score > seuil)
+    2. Compléter avec les meilleurs scores jusqu'à max_total_articles (12)
+    3. Respecter diversité: max 2 articles par source
+
     Trie par score puis date.
     """
-    out: Dict[str, List[Dict[str, Any]]] = {}
     with db_conn(db_path) as conn:
-        cats = [r[0] for r in conn.execute("SELECT DISTINCT category_key FROM items")]
+        # Récupérer toutes les catégories
+        cats = [r[0] for r in conn.execute("SELECT DISTINCT category_key FROM items WHERE category_key != 'hors_sujet'")]
+
+        # Phase 1: Sélectionner le meilleur article par catégorie
+        guaranteed_articles = []
+        selected_urls = set()
+        source_counts = {}
+
         for c in cats:
             thr = int(thresholds.get(c, default_threshold))
             rows = conn.execute(
                 """
                 SELECT url, title, summary, published_ts, source_name, final_score, content_type,
-                       tech_level, marketing_score, is_excluded
+                       tech_level, marketing_score, category_key
                 FROM items
                 WHERE category_key=? AND published_ts>=? AND published_ts<?
                       AND final_score IS NOT NULL AND final_score >= ?
                       AND (is_excluded IS NULL OR is_excluded = 0)
                 ORDER BY final_score DESC, published_ts DESC
+                LIMIT 1
                 """,
                 (c, min_ts, max_ts, thr),
             ).fetchall()
 
-            # Diversity filter: max 2 items per source
-            source_counts = {}
-            selected_rows = []
-            for row in rows:
+            if rows:
+                row = rows[0]
+                url = row[0]
                 src = row[4]
+
+                # Respecter diversité (max 2 par source)
+                if source_counts.get(src, 0) < 2:
+                    guaranteed_articles.append(row)
+                    selected_urls.add(url)
+                    source_counts[src] = source_counts.get(src, 0) + 1
+
+        # Phase 2: Compléter jusqu'à max_total_articles avec les meilleurs scores
+        remaining_slots = max_total_articles - len(guaranteed_articles)
+
+        if remaining_slots > 0:
+            # Récupérer tous les articles éligibles (non déjà sélectionnés)
+            all_rows = conn.execute(
+                """
+                SELECT url, title, summary, published_ts, source_name, final_score, content_type,
+                       tech_level, marketing_score, category_key
+                FROM items
+                WHERE published_ts >= ? AND published_ts < ?
+                  AND final_score IS NOT NULL
+                  AND (is_excluded IS NULL OR is_excluded = 0)
+                ORDER BY final_score DESC, published_ts DESC
+                """,
+                (min_ts, max_ts),
+            ).fetchall()
+
+            # Filtrer les articles déjà sélectionnés + respecter diversité
+            additional_articles = []
+            for row in all_rows:
+                url = row[0]
+                src = row[4]
+                cat = row[9]
+                thr = int(thresholds.get(cat, default_threshold))
+                score = row[5]
+
+                # Skip si déjà sélectionné
+                if url in selected_urls:
+                    continue
+
+                # Skip si en dessous du seuil de sa catégorie
+                if score < thr:
+                    continue
+
+                # Skip si hors_sujet
+                if cat == "hors_sujet":
+                    continue
+
+                # Respecter diversité (max 2 par source)
                 if source_counts.get(src, 0) >= 2:
                     continue
-                source_counts[src] = source_counts.get(src, 0) + 1
-                selected_rows.append(row)
 
-            out[c] = [
-                dict(
-                    url=row[0],
-                    title=row[1],
-                    summary=row[2],
-                    published_ts=row[3],
-                    source_name=row[4],
-                    score=row[5],
-                    content_type=row[6] or "technical",
-                    tech_level=row[7] or "intermediate",
-                    marketing_score=row[8] or 0,
-                )
-                for row in selected_rows
-            ]
+                additional_articles.append(row)
+                selected_urls.add(url)
+                source_counts[src] = source_counts.get(src, 0) + 1
+
+                if len(additional_articles) >= remaining_slots:
+                    break
+        else:
+            additional_articles = []
+
+        # Combiner les deux listes
+        all_selected = guaranteed_articles + additional_articles
+
+        # Regrouper par catégorie pour le format de sortie
+        out: Dict[str, List[Dict[str, Any]]] = {}
+        for row in all_selected:
+            cat = row[9]
+            article = dict(
+                url=row[0],
+                title=row[1],
+                summary=row[2],
+                published_ts=row[3],
+                source_name=row[4],
+                score=row[5],
+                content_type=row[6] or "technical",
+                tech_level=row[7] or "intermediate",
+                marketing_score=row[8] or 0,
+            )
+
+            if cat not in out:
+                out[cat] = []
+            out[cat].append(article)
+
+        # Trier chaque catégorie par score
+        for cat in out:
+            out[cat].sort(key=lambda x: (x["score"], x["published_ts"]), reverse=True)
+
     return out
 
 
@@ -300,12 +380,20 @@ def compute_relevance(row: Dict[str, Any], cfg: Dict[str, Any]) -> Dict[str, flo
     qlt = compute_quality_score(row, qcfg)                     # 0–100
     tech = compute_tech_score(row, tcfg)                       # 0–100
 
-    final_score = (
+    base_score = (
         w_sem * sem +
         w_src * srcw +
         w_qlt * qlt +
         w_tech * tech
     )
+
+    # Pénalité anti-marketing (Phase 1 - Amélioration pertinence)
+    # Si marketing_score >= 50 → article exclu par should_exclude_article()
+    # Pour scores 20-50 → pénalité progressive
+    marketing_score = row.get("marketing_score", 0)
+    marketing_penalty = marketing_score * 0.2  # 20% du score marketing
+
+    final_score = base_score - marketing_penalty
 
     return {
         "semantic_score": sem,
@@ -460,7 +548,7 @@ def main(config_path: str = "config.yaml", limit: Optional[int] = None):
     with db_conn(db_path) as conn:
         rows = conn.execute(
             """
-            SELECT id, url, source_name, title, summary, content, published_ts
+            SELECT id, url, source_name, title, summary, content, published_ts, marketing_score
             FROM items
             WHERE published_ts >= ? AND published_ts < ?
             ORDER BY published_ts DESC
@@ -473,13 +561,14 @@ def main(config_path: str = "config.yaml", limit: Optional[int] = None):
         if limit is not None:
             rows = rows[:limit]
 
-        for id_, url, src, title, summary, content, ts in rows:
+        for id_, url, src, title, summary, content, ts, mkt_score in rows:
             row = {
                 "url": url,
                 "source_name": src,
                 "title": title,
                 "summary": summary,
                 "content": content,
+                "marketing_score": mkt_score or 0,  # Fallback to 0 if NULL
             }
             scores = compute_relevance(row, cfg)
             conn.execute(

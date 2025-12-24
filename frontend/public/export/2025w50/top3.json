@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Snowflake vs Databricks Is the Wrong Debate",
+    "url": "https://seattledataguy.substack.com/p/snowflake-vs-databricks-is-the-wrong",
+    "source": "Seattle Data Guy",
+    "category": "warehouses_engines",
+    "score": 67.5558843165636,
+    "published_ts": 1765554569,
+    "content_type": "rex",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Fixing the Data Engineering Mismatch",
+    "url": "https://dagster.io/blog/impedance-mismatch-in-data-orchestration",
+    "source": "Dagster Blog",
+    "category": "etl_orchestration",
+    "score": 66.21813440322876,
+    "published_ts": 1765550380,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Scale reliable analytics in the AI era with dbt and Databricks",
+    "url": "https://www.getdbt.com/blog/reliable-analytics-dbt-databricks",
+    "source": "dbt Blog",
+    "category": "warehouses_engines",
+    "score": 63.73365345597267,
+    "published_ts": 1765486680,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  }
+]

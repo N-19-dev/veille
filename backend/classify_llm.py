@@ -15,11 +15,11 @@ import yaml
 from pathlib import Path
 from typing import List, Dict, Any, Optional
 
-from openai import OpenAI
 from pydantic import BaseModel
 from dotenv import load_dotenv
 
 from veille_tech import db_conn, week_bounds
+from llm_provider import get_provider, LLMProvider
 
 # Charger les variables d'environnement depuis .env
 load_dotenv()
@@ -102,18 +102,10 @@ Règles :
 async def classify_items(
     items: List[Dict[str, Any]],
     categories: List[Dict[str, Any]],
-    base_url: str,
-    api_key_env: str,
-    model: str,
+    provider: LLMProvider,
     db_path: str,
     concurrency: int = 5
 ):
-    api_key = os.getenv(api_key_env)
-    if not api_key:
-        print(f"[warn] {api_key_env} manquant, skip classification.")
-        return
-
-    client = OpenAI(base_url=base_url, api_key=api_key)
     
     # Construit la description des catégories pour le prompt
     cat_desc_lines = []
@@ -150,9 +142,9 @@ Contenu (extrait):
             retries = 3
             for attempt in range(retries):
                 try:
-                    resp = await asyncio.to_thread(
-                        client.chat.completions.create,
-                        model=model,
+                    # Utilise le provider abstrait au lieu du client OpenAI direct
+                    raw = await asyncio.to_thread(
+                        provider.chat_completion,
                         messages=[
                             {"role": "system", "content": system_prompt},
                             {"role": "user", "content": user_msg}
@@ -160,7 +152,6 @@ Contenu (extrait):
                         temperature=0.0,
                         response_format={"type": "json_object"}
                     )
-                    raw = resp.choices[0].message.content
                     res = json.loads(raw)
                     
                     new_key = res.get("category_key")
@@ -198,19 +189,22 @@ Contenu (extrait):
 async def main(config_path: str = "config.yaml", limit: Optional[int] = None, force: bool = False):
     cfg = yaml.safe_load(Path(config_path).read_text(encoding="utf-8"))
     db_path = cfg["storage"]["sqlite_path"]
-    
+
     ensure_classification_columns(db_path)
-    
-    # Config LLM
+
+    # Créer le provider LLM depuis config
     llm_cfg = cfg.get("llm", {})
-    base_url = llm_cfg.get("base_url", "https://api.groq.com/openai/v1")
-    api_key_env = llm_cfg.get("api_key_env", "GROQ_API_KEY")
-    model = llm_cfg.get("model", "llama-3.1-8b-instant")
-    
+    try:
+        provider = get_provider(llm_cfg)
+        print(f"[classify] Provider LLM: {llm_cfg.get('provider', 'groq')} / {provider.model}")
+    except (ValueError, RuntimeError) as e:
+        print(f"[error] Impossible de créer le provider LLM: {e}")
+        return
+
     # Fenêtre temporelle
     week_offset = int(os.getenv("WEEK_OFFSET", "0"))
     start_ts, end_ts, _, _, _ = week_bounds("Europe/Paris", week_offset=week_offset)
-    
+
     if force:
         print(f"[classify] FORCE: Réinitialisation du statut 'llm_classified' pour la semaine.")
         with db_conn(db_path) as conn:
@@ -221,14 +215,12 @@ async def main(config_path: str = "config.yaml", limit: Optional[int] = None, fo
 
     items = fetch_unclassified_items(db_path, start_ts, end_ts, limit=limit)
     print(f"[classify] {len(items)} items à classifier (semaine courante).")
-    
+
     if items:
         await classify_items(
             items,
             cfg["categories"],
-            base_url,
-            api_key_env,
-            model,
+            provider,
             db_path,
             concurrency=1  # Réduit à 1 pour éviter rate limits Groq (30 req/min)
         )

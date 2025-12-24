@@ -6,18 +6,7 @@
       "summary": "Data and IT leaders are under increasing pressure to accelerate the delivery of AI results while  maintaining airtight governance . Data volumes are exploding, models are more complex, and business teams expect real-time, self-service capabilities. Traditional, siloed analytics systems built for batch processing and static reporting can no longer support the speed and scale of today’s enterprise.",
       "published_ts": 1764768023,
       "source_name": "Dataiku Blog",
-      "score": 62.42947806417942,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 20
-    },
-    {
-      "url": "https://www.databricks.com/blog/databricks-and-nvidia-powering-next-generation-industry-ai",
-      "title": "Databricks and NVIDIA: Powering the Next Generation of Industry AI",
-      "summary": "Industry Use Case Transformation with AIAs we head to Las Vegas for Amazon Web Services (AWS) re:Invent...",
-      "published_ts": 1764628200,
-      "source_name": "Databricks Blog",
-      "score": 59.13931652903557,
+      "score": 58.42947806417942,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 20
@@ -30,10 +19,10 @@
       "summary": "Marcel Mateos Salles | Software Engineer Intern; Jorge Chavez | Sr. Software Engineer; Khashayar Kamran | Software Engineer II; Andres Almeida | Software Engineer; Peter Kim | Manager II; Ajay Jha | Sr. Manager At Pinterest, inspiration isn’t just for our users — it shapes how we build and care for our platform. Until recently, our own observability (o11y) tools told a fragmented story: logs over here, traces over there, and metrics somewhere else. We’ve always excelled at collecting signals: time-series metrics, traces, logs, and change related events. But without the seamless context and unity now promised by open standards like OpenTelemetry (OTel), we were missing out on the “big picture”: the full narrative behind every anomaly and alert. While modern observability standards like OpenTelemetry (OTel) promise a unified world of correlated data, the reality for many mature, large-scale infrastructures is far more fragmented. These systems, often predating the widespread adoption of such standards, are composed of powerful but disconnected data silos. We solved the problem with a pragmatic solution to this common challenge by leveraging AI agents through a centralized Model Context Protocol (MCP) server to bridge these gaps without mandating a complete infrastructure overhaul. The Pinterest Observability team is charting a new course that meets the moment. We’re working both left and right: “shift-left” practices to bake better logging and instrumentation into the heart of our code, and “shift-right” strategies to keep production observability robust and responsive. Still, we know that tools alone aren’t enough. The real breakthrough comes with bringing more intelligence and context into the mix. We are embracing the new era of AI, and at its core is the Model Context Protocol (MCP), Agent2Agent(A2A) and context engineering, a new way to bring all our observability signals together and feed them into intelligent agents. Beginning with the MCP server, we attempt to make every major pillar of observability data available in a unified, contextual stream. Observability analysis systems can dig deep, asking the right questions. Following clues across logs, metrics, traces, and change events, and iteratively building insight much like a Pinterest board comes together, piece by piece. The result? Faster, clearer root-cause analysis, and actionable guidance for our engineers, right where they need it. This isn’t just about connecting yesterday’s silos, it’s about creating new frontiers for discovery and problem-solving, empowering every Pinterest team to build their own context-aware tools and shape observability that grows with us. A Fragmented State The field of observability (o11y) faces major turning points every couple of years, with a major shift a couple of years back when OpenTelemetry (OTel) and similar services came into the picture. These tools facilitate the o11y process by enabling context propagation across the different pillars of o11y data while remaining vendor and language agnostic. For example, under a single SDK, you have the ability to generate metrics, logs, and traces with an ID that allows for correlation and connections between those unique data pillars. However, our o11y infrastructure was set up before conventions and tools like OTel were available, and it is not feasible to overturn our entire o11y infrastructure in order to incorporate them into our stack. This means that we suffer from a lack of the virtues they provide. We had to individually implement separate tools and pipelines for ingesting logs, metrics, and traces from our services. This resulted in a strong, yet fragmented system where each individual pillar is constrained to its own domain with no clear matching across datapoints. As a result, an on-call engineer must jump around multiple unique interfaces when root causing an issue, leading to the potential loss of valuable time. A steep learning curve for the current tools unique to each pillar further extends this loss of time for newer engineers. Consequently, advanced o11y analysis by leveraging machine learning or other techniques that can holistically understand the health of our systems creates non-trivial problems for the o11y team. Figure 1: Fragmented Signals for Observability Sidestepping the Problem Knowing these limitations, the o11y team here at Pinterest is committed to overcoming these gaps by what we call “shifting-left” and “shifting-right.” When “shifting-left,” we have prioritized the integration and standardization of o11y practices and tools, which facilitates the proactive identification and resolution of issues. Meanwhile, when “shifting-right,” we focus on maintaining system visibility in production through the use of our alerting and health inferencing systems. This means that we have to continue to innovate and connect the dots across our pillars while ensuring teams can continue to monitor the health of their services and quickly solve problems when they arise. Enter the era of AI and Agents. What if our limitations didn’t truly matter? We could just provide our data to Large Language Models (LLMs) acting as agents and have them connect the dots for us, find correlations, return meaningful information to our users in a single interface, facilitate the root-causing process, and in the future lead to a system where we can autonomously solve issues as they arise. We are working towards that future and are excited to share work we have taken up in that regard. Context Engineering An AI agent is only as good as the information that it has access to, so we knew that we had to build a system that would be able to provide our o11y agents with as much relevant data as possible. LLMs are impressive on their own, but with some real context engineering behind them, they become so impressive that you begin to feel like you are living in the advanced future from your favorite Sci-Fi movies and shows. Different techniques have sprung up recently to facilitate the sharing of context with an agent. However, the most prominent and widely accepted is that of the Model Context Protocol (MCP), which was released by Anthropic in late 2024. This protocol has become the new standard and a staple of agentic projects for companies and enthusiasts alike. In short, it provides an agent different tools that it can utilize when working to resolve a request, allowing it the flexibility to choose what to use (if it wants to call anything at all) as it organically works through a task with its reasoning and newfound information. MCP was the perfect fit to help us sidestep our limitations and begin to drive Pinterest o11y into a new era as it grants the following: Unity of Disparate Signals: By building an MCP server, we can empower an agent to simultaneously interact with time-series metrics, logs, traces, changefeed events (deployments, experiments, etc.), alerts, and more. This allows it to find connections and build hypotheses from patterns it sees within and across our data despite the lack of a thread connecting it together. Fine-Grained Context Control: As the developers of the MCP server, we get to decide what information and ability agents interacting with our team’s data actually get, so developing the MCP server ensures that we maintain full control of our services and data. If not, other teams could have independently developed them on their own, incorrectly accessing our data or giving their agents the ability to alter data that should not be changed. By providing the MCP server as an interface to our data, we prevent the agents access to everything, allowing us to maintain tighter safety and privacy controls. Furthermore, we can also guide agents in the right direction, providing relevant subsets of data by combining what we know with what the agent has learned. Plug-and-Play Extensibility: In a practical sense, an MCP server is a service that provides an AI agent with a toolbox to better fulfill its job. The tools within can easily be removed, replaced, and expanded upon without changing the overall system. The agent will connect and interact with it the same, only changing what it can achieve and discover with the tools provided. This means that our server can easily grow and change with our team, becoming more advanced as we provide more tools over time. Hub for Agentic o11y Experience: We plan for this to only be the beginning of our team’s GenAI tooling. It creates the perfect infrastructure to allow for advanced agents and creates a hub for engineering teams at Pinterest to be able to access our data for their own agentic needs (recently, we hosted our company-wide hackathon where multiple teams developed projects that depended on our MCP server, including the team that bagged the first place!). Figure 2: Before and After experience with Tricorder Agent with MCP Server tools MCP Server For Observability And so, the o11y team’s very own MCP server was born. It is now available internally for Pinterest engineers to use and is a central part of our move towards autonomous o11y. Currently, it provides models with tooling for accessing the following data: ChangeFeed Events: Finds events related to the service of interest; for instance: deploys, feature flag activations, or experiment rollouts Metrics: Queries metrics from our time series database Post Mortem Documents : After having previously ingested incident Post-Mortem documents into a database, fetches them for analysis when relevant Logs : Fetches logs related to the service of interest for a relevant time range Traces : Fetches traces related to the service of interest for a relevant time range Alert Information: From a triggered alert, fetches information such as relevant metrics, service identifiers, and time range of interest Dependency Graphs : Finds dependencies for a service of interest, both downstream and upstream Its development was a great experience and allowed us to learn a very important lesson about applied AI. It is partially a consequence of our data but something that anyone who wants to do something with agents should consider as a limitation: the model context size. Going in, we overestimated the amount of information that a model could take while also underestimating the amount of data that we own as a team. The o11y team processes around 3 billion data points per minute, 12 billion keys (tag key/value combinations) per minute, 7 TB of logs per day, and 7 TB of traces per day — no small amount of data! If we allow an agent to organically look through this data, it would end up querying for too much at a time (even if it was only querying for a 15 min window), breaking its context window and causing itself to crash. We came up with two main solutions to prevent this from happening, the first being short-term while we test the other: Link Generation: The first use case we planned to test our agents on was the collection of relevant data for an on-call engineer. We just wanted it to collect the relevant information related to an alert to facilitate the engineers job, streamlining resolution and reducing mean time to resolution (MTTR). For this use case, the agent does not need to parse the raw data. Instead, it only needs to know of relevant time periods and services. This allowed us to have the agent generate links to the dashboards containing that information (already filtered to the correct time periods and relevant services), saving an on-call engineer the time spent jumping around all our interfaces and filtering. All their time can now be spent on the act of resolving conflicts. More Specific Tool Documentation: Knowing the previous solution would not work for all use cases, especially the most advanced ones where we would want agents to be able to find connections between the data, we kept looking for solutions. We noticed that we were overcomplicating the situation trying to come up with complex solutions. The tools a MCP server gives an agent come with a lot of metadata explaining their functionality so that an agent can reason about whether to use it. This means that in this metadata, we could include instructions to only query for a very small period and to call it again until the wanted time period is covered. We are also currently working on and testing another solution with the Spark team within Pinterest. They are looking at building a similar agent, where we leverage an additional LLM within the server (with a fresh context) to summarize the data. This allows us to only return a summary to the agent connected to the MCP server which, in theory, would conserve a lot of context space. We just need to verify that these summaries don’t drastically decrease the agent’s performance. Our MCP Server agent is called Tricorder Agent. It is designed to assist engineers in quickly analyzing problems and resolving conflicts. The agent is part of a broader suite of new tools under development by the o11y team, collectively known as the Tricorder. The engineer can provide the Tricorder with their alert link/number and sit back while it gathers the relevant information for their investigation. Before, this would have been extremely time consuming as engineers would’ve had to switch between all our interfaces and apply filters to find relevant data. Additionally, Tricorder queries our services directly to understand what is going on and hypothesize a cause, providing suggestions and next steps as it gains more information. Throughout this process, there have been many times where we have been pleasantly surprised by the Tricorder. For example, a lot of information is unlocked when a dependency graph becomes available. The agents use tools on multiple parts of the graph, exploring all the incoming and outgoing dependencies to check for the overall health of connections with no specific prompting to do so. Additionally, when generating links and narrowing down to relevant services, they include the services in the dependency graph, knowing the problems could be stemming from them. Autonomous Observability at Pinterest (Part 1 of 2) was originally published in Pinterest Engineering Blog on Medium, where people are continuing the conversation by highlighting and responding to this story.",
       "published_ts": 1764781335,
       "source_name": "Pinterest Engineering",
-      "score": 55.97172185778618,
+      "score": 54.97172185778618,
       "content_type": "technical",
       "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 5
     }
   ],
   "data_modeling_governance": [
@@ -43,21 +32,10 @@
       "summary": "Bridging the Communication Gap Between Data and the Business",
       "published_ts": 1764688343,
       "source_name": "Seattle Data Guy",
-      "score": 64.79265508055687,
+      "score": 62.79265508055687,
       "content_type": "rex",
       "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://www.databricks.com/blog/completing-lakehouse-vision-open-storage-open-access-unified-governance",
-      "title": "Completing the Lakehouse Vision: Open Storage, Open Access, Unified Governance",
-      "summary": "Until now, organizations have had no way to unify attribute-based access control...",
-      "published_ts": 1764683680,
-      "source_name": "Databricks Blog",
-      "score": 62.54358457028866,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 10
     },
     {
       "url": "https://www.getdbt.com/blog/bring-structured-context-to-conversational-analytics-with-dbt",
@@ -78,10 +56,10 @@
       "summary": "You cannot simply say, \"I'll use Spark, Kafka, and so on\"; you need to ask clarifying questions to gather information for proposing a robust data pipeline.",
       "published_ts": 1764645335,
       "source_name": "VuTrinh · Data Engineering",
-      "score": 61.83752524852753,
+      "score": 59.83752524852753,
       "content_type": "rex",
       "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 10
     },
     {
       "url": "https://airbyte.com/blog/agentic-data-infrastructure",
@@ -89,24 +67,23 @@
       "summary": "Discover how agentic data infrastructure is transforming modern data systems by combining automation, intelligence, and adaptability.",
       "published_ts": 1764720000,
       "source_name": "Airbyte Blog",
-      "score": 60.046813040971756,
+      "score": 59.046813040971756,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 5
     },
     {
-      "url": "https://www.databricks.com/blog/events-insights-complex-state-processing-schema-evolution-transformwithstate",
-      "title": "From Events to Insights: Complex State Processing with Schema Evolution in transformWithState",
-      "summary": "Across industries, one of the most persistent challenges in data engineering is schema...",
-      "published_ts": 1764608444,
-      "source_name": "Databricks Blog",
-      "score": 58.854059129953384,
+      "url": "https://airbyte.com/blog/introducing-agent-blueprint",
+      "title": "Introducing Agent Blueprint | Airbyte",
+      "summary": "Agent Blueprint helps teams connect real-time data to AI agents with production-ready infrastructure, faster integration, and reliable context management.",
+      "published_ts": 1764547200,
+      "source_name": "Airbyte Blog",
+      "score": 54.77395549416542,
       "content_type": "technical",
       "tech_level": "intermediate",
-      "marketing_score": 15
+      "marketing_score": 0
     }
   ],
-  "hors_sujet": [],
   "lake_storage_formats": [
     {
       "url": "https://www.databricks.com/blog/expensive-delta-lake-s3-storage-mistakes-and-how-fix-them",
@@ -114,10 +91,10 @@
       "summary": "1. Introduction: The FoundationCloud object storage, such as S3, is the foundation...",
       "published_ts": 1764967200,
       "source_name": "Databricks Blog",
-      "score": 62.022852540016174,
+      "score": 61.022852540016174,
       "content_type": "technical",
       "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 5
     }
   ],
   "news": [
@@ -127,7 +104,7 @@
       "summary": "Thinking like a Data engineer, Real-time distributed graph, Secret behind super fast databases, Multimodal data workloads, and more.",
       "published_ts": 1764864163,
       "source_name": "Data Engineer Things",
-      "score": 69.11982552707195,
+      "score": 68.11982552707195,
       "content_type": "rex",
       "tech_level": "intermediate",
       "marketing_score": 5
@@ -138,25 +115,12 @@
       "summary": "The Weekend Windup #13 - Cool Reads, Events, and More",
       "published_ts": 1764986504,
       "source_name": "Joe Reis · Data Engineering",
-      "score": 60.11103814840317,
+      "score": 58.11103814840317,
       "content_type": "rex",
       "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://joereis.substack.com/p/help-shape-the-practical-data-2026",
-      "title": "Help shape the Practical Data 2026 State of Data Engineering Report.",
-      "summary": "And it only takes 2-3 minutes of your time!",
-      "published_ts": 1764869376,
-      "source_name": "Joe Reis · Data Engineering",
-      "score": 58.119090646505356,
-      "content_type": "rex",
-      "tech_level": "intermediate",
-      "marketing_score": 0
+      "marketing_score": 10
     }
   ],
-  "news_general": [],
-  "python_analytics": [],
   "warehouses_engines": [
     {
       "url": "https://www.databricks.com/blog/bps-geospatial-ai-engine-transforming-safety-and-operations-databricks",
@@ -164,10 +128,21 @@
       "summary": "The integration of DATABRICKS capabilities with geospatial technology marks a significant...",
       "published_ts": 1764889500,
       "source_name": "Databricks Blog",
-      "score": 62.61396926641464,
+      "score": 59.61396926641464,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 15
+    },
+    {
+      "url": "https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days",
+      "title": "Analyzing how SaaS platforms are shipping payments and finance products in days",
+      "summary": "Leading SaaS platforms across industries—from Squarespace to Jobber—are using embedded components to ship payments and finance features with minimal code. We analyzed the data to see which types of platforms are getting the most value.",
+      "published_ts": 1764806400,
+      "source_name": "Stripe Engineering Blog",
+      "score": 54.654981046915054,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
     }
   ]
 }

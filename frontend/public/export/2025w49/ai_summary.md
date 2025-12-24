@@ -1,46 +1,68 @@
 ## Aperçu général de la semaine
 
-Cette semaine, Databricks a annoncé plusieurs partenariats et innovations importantes, notamment la collaboration avec NVIDIA pour accélérer l'industrie de l'IA. Uber a également partagé son REX (Repository d'Exécution) sur la migration de ses données.
+Cette semaine, Databricks a annoncé plusieurs projets importants, notamment le BP's Geospatial AI Engine, qui utilise Databricks pour transformer la sécurité et les opérations. De plus, Airbyte a présenté son Agent Blueprint, qui vise à simplifier la gestion des données.
 
 ## 🏛️ Warehouses & Query Engines
 
-- [BP’s Geospatial AI Engine: Transforming Safety and Operations with Databricks](https://www.databricks.com/blog/bps-geospatial-ai-engine-transforming-safety-and-operations-databricks) — Databricks Blog · 2025-12-04 — Databricks a aidé BP à créer un moteur d'IA géospatiale pour améliorer la sécurité et les opérations.
+- [BP’s Geospatial AI Engine: Transforming Safety and Operations with Databricks](https://www.databricks.com/blog/bps-geospatial-ai-engine-transforming-safety-and-operations-databricks) — Databricks Blog · 2025-12-04
+- [Analyzing how SaaS platforms are shipping payments and finance products in days](https://stripe.com/blog/analyzing-how-saas-platforms-are-shipping-payments-and-finance-products-in-days) — Stripe Engineering Blog · 2025-12-04
+
 **À creuser :**
-** [Databricks et NVIDIA : comment accélérer l'industrie de l'IA](https://www.databricks.com/blog/databricks-and-nvidia-powering-next-generation-industry-ai) — Databricks Blog · 2025-12-01
+**
+- Comment Databricks est-il utilisé pour améliorer la sécurité et les opérations du BP's Geospatial AI Engine ?
 
 ## 🔄 Orchestration, ETL & Data Movement
 
-- [A framework I use to build a data pipeline.](https://vutr.substack.com/p/my-framework-to-build-a-data-pipeline) — VuTrinh · Data Engineering · 2025-12-02 — VuTrinh partage son cadre pour construire une pipeline de données.
-- [The Rise of Agentic Data Infrastructure | Airbyte](https://airbyte.com/blog/agentic-data-infrastructure) — Airbyte Blog · 2025-12-03 — Airbyte discute de l'émergence d'une infrastructure de données agente.
-- [From Events to Insights: Complex State Processing with Schema Evolution in transformWithState](https://www.databricks.com/blog/events-insights-complex-state-processing-schema-evolution-transformwithstate) — Databricks Blog · 2025-12-01 — Databricks explique comment traiter des événements complexes avec une évolution de schéma dans transformWithState.
+- [A framework I use to build a data pipeline.](https://vutr.substack.com/p/my-framework-to-build-a-data-pipeline) — VuTrinh · Data Engineering · 2025-12-02
+- [The Rise of Agentic Data Infrastructure | Airbyte](https://airbyte.com/blog/agentic-data-infrastructure) — Airbyte Blog · 2025-12-03
+- [Introducing Agent Blueprint | Airbyte](https://airbyte.com/blog/introducing-agent-blueprint) — Airbyte Blog · 2025-12-01
+
 **À creuser :**
-** [Expensive Delta Lake S3 Storage Mistakes (And How to Fix Them)](https://www.databricks.com/blog/expensive-delta-lake-s3-storage-mistakes-and-how-fix-them) — Databricks Blog · 2025-12-05
+**
+- Quel est le rôle de l'Agent Blueprint dans la gestion des données ?
 
 ## 📐 Data Modeling, Governance & Quality
 
-- [Translating Data Buzzwords Into Real Requirements](https://seattledataguy.substack.com/p/translating-data-buzzwords-into-real) — Seattle Data Guy · 2025-12-02 — Seattle Data Guy explique comment traduire les buzzwords de données en exigences réelles.
-- [Completing the Lakehouse Vision: Open Storage, Open Access, Unified Governance](https://www.databricks.com/blog/completing-lakehouse-vision-open-storage-open-access-unified-governance) — Databricks Blog · 2025-12-02 — Databricks discute de la vision de la maison lacustre et de la gouvernance unifiée.
-- [Bring structured context to conversational analytics with dbt](https://www.getdbt.com/blog/bring-structured-context-to-conversational-analytics-with-dbt) — dbt Blog · 2025-12-03 — dbt explique comment apporter un contexte structuré aux analyses conversationnelles avec dbt.
+- [Translating Data Buzzwords Into Real Requirements](https://seattledataguy.substack.com/p/translating-data-buzzwords-into-real) — Seattle Data Guy · 2025-12-02
+- [Bring structured context to conversational analytics with dbt](https://www.getdbt.com/blog/bring-structured-context-to-conversational-analytics-with-dbt) — dbt Blog · 2025-12-03
+
 **À creuser :**
-** [A Modern Approach to Analytics, Powered by Dataiku and Databricks](https://www.dataiku.com/stories/blog/a-modern-approach-to-analytics-powered-by-dataiku-and-databricks) — Dataiku Blog · 2025-12-03
+**
+- Comment dbt peut-il aider à améliorer la qualité des données dans les analyses conversationnelles ?
 
 ## 🗄️ Data Lakes, Storage & Formats
 
-- [Expensive Delta Lake S3 Storage Mistakes (And How to Fix Them)](https://www.databricks.com/blog/expensive-delta-lake-s3-storage-mistakes-and-how-fix-them) — Databricks Blog · 2025-12-05 — Databricks explique comment éviter les erreurs de stockage Delta Lake S3 coûteuses et les corriger.
+- [Expensive Delta Lake S3 Storage Mistakes (And How to Fix Them)](https://www.databricks.com/blog/expensive-delta-lake-s3-storage-mistakes-and-how-fix-them) — Databricks Blog · 2025-12-05
+
+**À creuser :**
+**
+- Quels sont les erreurs courantes dans la gestion des données Delta Lake S3 et comment les corriger ?
 
 ## ☁️ Cloud, Infra & Observability
 
-- [Autonomous Observability at Pinterest (Part 1 of 2)](https://medium.com/pinterest-engineering/autonomous-observability-at-pinterest-part-1-of-2-eb0adae830ba?source=rss----4c5a5f6279b6---4) — Pinterest Engineering · 2025-12-03 — Pinterest Engineering discute de l'observabilité autonome chez Pinterest.
+- [Autonomous Observability at Pinterest (Part 1 of 2)](https://medium.com/pinterest-engineering/autonomous-observability-at-pinterest-part-1-of-2-eb0adae830ba?source=rss----4c5a5f6279b6---4) — Pinterest Engineering · 2025-12-03
+
+**À creuser :**
+**
+- Comment Pinterest a-t-il mis en place une observabilité autonome pour améliorer la qualité de ses services ?
 
 ## 🐍 Python, Analytics & Tools
 
-- [Bring structured context to conversational analytics with dbt](https://www.getdbt.com/blog/bring-structured-context-to-con
+_Rien d’important cette semaine._
 
 ## 🤖 AI for Data Engineering
 
-- [A Modern Approach to Analytics, Powered by Dataiku and Databricks](https://www.dataiku.com/stories/blog/a-modern-approach-to-analytics-powered-by-dataiku-and-databricks) — Dataiku Blog · 2025-12-03 — Dataiku explique comment aborder les analyses modernes avec Dataiku et Databricks.
-- [Databricks and NVIDIA: Powering the Next Generation of Industry AI](https://www.databricks.com/blog/databricks-and-nvidia-powering-next-generation-industry-ai) — Databricks Blog · 2025-12-01 — Databricks et NVIDIA discutent de la collaboration pour accélérer l'industrie de l'IA.
+- [A Modern Approach to Analytics, Powered by Dataiku and Databricks](https://www.dataiku.com/stories/blog/a-modern-approach-to-analytics-powered-by-dataiku-and-databricks) — Dataiku Blog · 2025-12-03
+
+**À creuser :**
+**
+- Comment Dataiku et Databricks peuvent-ils aider à améliorer l'approche analytique moderne ?
 
 ## 📰 Tech / Cloud / IA News
 
-_Rien d’important cette semaine._
+- [Data Engineer Things Newsletter #26 (Dec 2025)](https://dataengineerthings.substack.com/p/data-engineer-things-newsletter-26) — Data Engineer Things · 2025-12-04
+- [The Hangover 4.0 (Avoided): AWS re:Invent, The "Year of the Agent," Mixed Model Arts, and the Ensh*tification of Everything](https://joereis.substack.com/p/the-hangover-40-avoided-aws-reinvent) — Joe Reis · Data Engineering · 2025-12-06
+
+**À creuser :**
+**
+- Quels sont les principaux événements et tendances dans le domaine de la technologie et de l'IA cette semaine ?

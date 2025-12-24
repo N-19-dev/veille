@@ -34,9 +34,13 @@ from tqdm.asyncio import tqdm
 # Import du logger structuré et content classifier
 from logger import get_logger, MetricsCollector
 from content_classifier import detect_content_type
+from sentry_init import init_sentry, set_tag, capture_exception
 
 # Initialisation du logger
 logger = get_logger("veille_tech", log_file="logs/veille_tech.log", level="INFO")
+
+# Initialisation Sentry (si DSN configuré)
+init_sentry(environment="production")
 
 # -----------------------
 # Models & Config

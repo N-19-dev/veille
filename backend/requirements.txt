@@ -12,6 +12,7 @@ tqdm
 openai
 sentence-transformers
 scikit-learn
+sentry-sdk
 
 fastapi
 uvicorn[standard]

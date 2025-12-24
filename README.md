@@ -4,6 +4,8 @@ Système automatisé de veille technologique pour Data Engineers, utilisant l'IA
 
 [![Deploy Frontend](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/deploy-frontend.yml/badge.svg)](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/deploy-frontend.yml)
 [![Backend Weekly](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/backend-weekly.yml/badge.svg)](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/backend-weekly.yml)
+[![Backend Tests](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/test-backend.yml/badge.svg)](https://github.com/USERNAME/veille_tech_crawling/actions/workflows/test-backend.yml)
+[![codecov](https://codecov.io/gh/USERNAME/veille_tech_crawling/branch/main/graph/badge.svg)](https://codecov.io/gh/USERNAME/veille_tech_crawling)
 
 ## 📋 Table des matières
 
@@ -123,14 +125,129 @@ npm install
 Créez un fichier `.env` dans `backend/` :
 
 ```bash
-# API LLM (Groq gratuit)
+# API LLM (Groq gratuit par défaut)
 GROQ_API_KEY=gsk_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+# Optionnel : OpenAI (fallback si Groq down)
+OPENAI_API_KEY=sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 # Optionnel : Notifications Slack
 SLACK_WEBHOOK_URL=https://hooks.slack.com/services/xxx/yyy/zzz
 ```
 
-### 2. Personnaliser config.yaml
+### 2. Configuration LLM Provider
+
+Le système supporte **3 providers LLM interchangeables** pour éliminer la dépendance à un seul service :
+
+#### 🟢 **Groq** (par défaut, gratuit, rapide)
+
+```yaml
+# backend/config.yaml
+llm:
+  provider: groq  # Provider par défaut
+  temperature: 0.2
+  max_tokens: 1200
+
+  groq:
+    api_key_env: GROQ_API_KEY
+    model: llama-3.1-8b-instant
+    base_url: https://api.groq.com/openai/v1
+```
+
+**Avantages** : Gratuit, ultra-rapide, excellente qualité.
+**Inconvénients** : Rate limits (30 req/min), dépendance externe.
+
+#### 🔵 **OpenAI** (fallback, payant)
+
+```yaml
+llm:
+  provider: openai  # Changer ici pour switcher
+  temperature: 0.2
+
+  openai:
+    api_key_env: OPENAI_API_KEY
+    model: gpt-4o-mini  # Moins cher que gpt-4
+    base_url: https://api.openai.com/v1
+```
+
+**Avantages** : Fiable, rate limits généreux, excellente qualité.
+**Inconvénients** : Payant (~$0.15/1M tokens input avec gpt-4o-mini).
+
+#### 🟣 **Ollama** (local, zéro coût)
+
+**Installation** : https://ollama.com
+
+```bash
+# 1. Installer Ollama
+# 2. Télécharger un modèle
+ollama pull llama3.1
+
+# 3. Vérifier que le serveur tourne
+curl http://localhost:11434/api/tags
+```
+
+```yaml
+llm:
+  provider: ollama  # Changer ici pour switcher
+  temperature: 0.2
+
+  ollama:
+    model: llama3.1  # Ou llama3.2, mistral, etc.
+    base_url: http://localhost:11434/v1
+```
+
+**Avantages** : Zéro coût, aucune dépendance externe, confidentialité.
+**Inconvénients** : Plus lent, nécessite machine puissante (8GB+ RAM).
+
+#### 🔄 Switcher de provider
+
+Pour changer de provider LLM, **modifier une seule ligne** dans `config.yaml` :
+
+```yaml
+llm:
+  provider: groq  # ← Changer en: openai, ollama
+```
+
+Aucune autre modification nécessaire. Le code s'adapte automatiquement.
+
+### 3. Monitoring Sentry (Optionnel)
+
+Le projet intègre **Sentry** pour le monitoring d'erreurs en production (backend Python + frontend React).
+
+**Pourquoi Sentry ?**
+- Alertes temps réel si > 10 erreurs (email ou Slack)
+- Dashboard centralisé avec stack traces complètes
+- Contexte complet : variables, environnement, tags
+- Détection proactive des bugs avant vos utilisateurs
+
+**Configuration** :
+
+1. Créer un compte gratuit sur https://sentry.io
+2. Créer deux projets :
+   - Backend (Python) → récupérer `SENTRY_DSN_BACKEND`
+   - Frontend (React) → récupérer `SENTRY_DSN_FRONTEND`
+
+3. Ajouter à `backend/.env` :
+```bash
+# Backend monitoring
+SENTRY_DSN_BACKEND=https://xxxxx@o0000.ingest.us.sentry.io/0000000
+```
+
+4. Ajouter à `frontend/.env.local` :
+```bash
+# Frontend monitoring
+VITE_SENTRY_DSN_FRONTEND=https://yyyyy@o1111.ingest.us.sentry.io/1111111
+```
+
+5. Pour GitHub Actions, ajouter les secrets :
+   - `SENTRY_DSN_BACKEND`
+   - `SENTRY_DSN_FRONTEND`
+
+**Guide complet** : Voir [docs/SENTRY_SETUP.md](docs/SENTRY_SETUP.md) pour instructions détaillées (création compte, configuration alertes, tests, etc.)
+
+**Plan gratuit** : 5,000 erreurs/mois, largement suffisant pour ce projet.
+
+### 4. Personnaliser config.yaml
 
 Éditez `backend/config.yaml` :
 
@@ -151,7 +268,7 @@ relevance:
   score_threshold: 60  # Min score pour être inclus
 ```
 
-### 3. URL du User-Agent
+### 5. URL du User-Agent
 
 **Important** : Dans `config.yaml`, remplacez :
 
@@ -230,6 +347,8 @@ Dans Settings → Secrets and variables → Actions, ajoutez :
 |--------|-------------|
 | `GROQ_API_KEY` | Votre clé API Groq (gratuite) |
 | `PAT_TOKEN` | Personal Access Token avec scope `repo` + `workflow` |
+| `SENTRY_DSN_BACKEND` | (Optionnel) DSN Sentry pour monitoring backend |
+| `SENTRY_DSN_FRONTEND` | (Optionnel) DSN Sentry pour monitoring frontend |
 
 **Créer le PAT** : https://github.com/settings/tokens → Generate new token (classic) → Cocher `repo` + `workflow`
 
@@ -309,7 +428,7 @@ veille_tech_crawling/
 
 ### Moyen terme
 - [ ] API REST (FastAPI)
-- [ ] Monitoring (Sentry)
+- [x] Monitoring (Sentry)
 - [ ] Cache embeddings (Redis)
 - [ ] Export PDF
 - [ ] Mode sombre

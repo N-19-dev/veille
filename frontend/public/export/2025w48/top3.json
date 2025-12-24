@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Is DuckLake a Step Backward?",
+    "url": "https://www.pracdata.io/p/is-ducklake-a-step-backward",
+    "source": "Alireza Sadeghi · Practical Data Engineering",
+    "category": "lake_storage_formats",
+    "score": 69.04706478118896,
+    "published_ts": 1764487838,
+    "content_type": "rex",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Building the Future of AI Agents and Intelligence Apps: Celebrating 4 years of Databricks Seattle R&D",
+    "url": "https://www.databricks.com/blog/building-future-ai-agents-and-intelligence-apps-celebrating-4-years-databricks-seattle-rd",
+    "source": "Databricks Blog",
+    "category": "ai_data_engineering",
+    "score": 63.39661341905594,
+    "published_ts": 1764007500,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "How to build a data pipeline that’s suck",
+    "url": "https://vutr.substack.com/p/how-to-build-a-data-pipeline-thats",
+    "source": "VuTrinh · Data Engineering",
+    "category": "hors_sujet",
+    "score": 61.497723281383514,
+    "published_ts": 1764040522,
+    "content_type": "rex",
+    "tech_level": "intermediate",
+    "marketing_score": 10
+  }
+]

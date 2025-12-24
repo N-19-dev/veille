@@ -5,6 +5,17 @@ export type TopItem = { title: string; url: string; source?: string; date?: stri
 export type SectionItem = { title: string; url: string; source?: string; score?: string|number; content_type?: string; tech_level?: string; marketing_score?: number };
 export type SummarySection = { title: string; items: SectionItem[] };
 
+// Types pour les données JSON brutes
+type RawSelectionItem = {
+  title?: string;
+  url?: string;
+  source_name?: string;
+  score?: number | string;
+  content_type?: string;
+  tech_level?: string;
+  marketing_score?: number;
+};
+
 // ---------- helpers de chargement (inchangés si tu es en statique) ----------
 async function loadText(relativePath: string): Promise<string> {
   const cleanPath = relativePath.startsWith("/") ? relativePath.slice(1) : relativePath;
@@ -31,53 +42,11 @@ function summaryPath(meta: { week: string; summary_md?: string }): string {
 }
 
 // ---------- PARSING ----------
-function parseTop3(md: string): TopItem[] {
-  const out: TopItem[] = [];
-  const topHeader = /(^|\n)##\s*🏆?\s*Top\s*3[^\n]*\n([\s\S]*?)(\n##\s|$)/i;
-  const m = md.match(topHeader);
-  if (!m) return out;
-  const block = m[2];
-  const itemRe =
-    /^\s*[-–•]\s*(?:\*\*\d+\.\*\*\s*)?\[(.+?)\]\((https?:\/\/[^\s)]+)\)\s*—\s*([^·\n]+)?(?:\s*·\s*([\d-]{8,10}))?(?:\s*·\s*\*\*(\d+)\s*\/\s*100\*\*)?/gim;
-  let mm: RegExpExecArray | null;
-  while ((mm = itemRe.exec(block)) && out.length < 3) {
-    out.push({ title: mm[1]?.trim(), url: mm[2]?.trim(), source: mm[3]?.trim(), date: mm[4]?.trim(), score: mm[5]?.trim() });
-  }
-  return out;
-}
-
-// 👉 NOUVEAU : extrait le bloc “Aperçu général de la semaine”
+// 👉 Extrait le bloc "Aperçu général de la semaine"
 function parseOverview(md: string): string {
   const rx = /(^|\n)##\s*(?:🟦\s*)?Aperçu général de la semaine\s*\n([\s\S]*?)(\n##\s|$)/i;
   const m = md.match(rx);
   return m ? m[2].trim() : "";
-}
-
-function parseSections(md: string): SummarySection[] {
-  const sections: SummarySection[] = [];
-  const h2Re = /(^|\n)##\s+([^\n]+)\n/gm;
-  const indices: Array<{ title: string; start: number; end: number }> = [];
-  let match: RegExpExecArray | null;
-  while ((match = h2Re.exec(md))) {
-    const title = match[2].trim();
-    const start = match.index + match[0].length;
-    indices.push({ title, start, end: md.length });
-    if (indices.length > 1) indices[indices.length - 2].end = match.index;
-  }
-  for (const seg of indices) {
-    const title = seg.title;
-    if (/aperçu général/i.test(title)) continue; // on évite le bloc overview ici
-    const block = md.slice(seg.start, seg.end).trim();
-    const lineRe =
-      /^\s*[-–•]\s*\[(.+?)\]\((https?:\/\/[^\s)]+)\)\s*(?:—\s*([^·\n]+))?(?:\s*·\s*([\d-]{8,10}))?(?:\s*·\s*\*\*(\d+)\s*\/\s*100\*\*)?/gim;
-    const items: SectionItem[] = [];
-    let lm: RegExpExecArray | null;
-    while ((lm = lineRe.exec(block))) {
-      items.push({ title: lm[1]?.trim(), url: lm[2]?.trim(), source: lm[3]?.trim(), score: lm[5]?.trim() });
-    }
-    if (items.length) sections.push({ title, items });
-  }
-  return sections;
 }
 
 // ---------- Chargement des catégories ----------
@@ -101,7 +70,7 @@ function selectionPath(meta: WeekMeta): string {
     : `export/${meta.week}/ai_selection.json`;
 }
 
-async function loadSelectionJson(meta: WeekMeta): Promise<Record<string, any[]>> {
+async function loadSelectionJson(meta: WeekMeta): Promise<Record<string, RawSelectionItem[]>> {
   try {
     const txt = await loadText(selectionPath(meta));
     return JSON.parse(txt);
@@ -117,11 +86,11 @@ async function loadTop3Json(meta: WeekMeta): Promise<TopItem[]> {
       ? "export/latest/top3.json"
       : `export/${meta.week}/top3.json`;
     const txt = await loadText(path);
-    const data = JSON.parse(txt);
-    return data.map((item: any) => ({
+    const data = JSON.parse(txt) as RawSelectionItem[];
+    return data.map((item) => ({
       title: item.title || "",
       url: item.url || "",
-      source: item.source || "",
+      source: item.source_name || "",
       score: item.score,
       tech_level: item.tech_level || "intermediate",
       marketing_score: item.marketing_score || 0,
@@ -152,7 +121,7 @@ export async function loadWeekSummary(meta: WeekMeta): Promise<{
   for (const [categoryKey, items] of Object.entries(selectionData)) {
     const categoryTitle = categories[categoryKey] || categoryKey;
 
-    const sectionItems: SectionItem[] = items.map((item: any) => ({
+    const sectionItems: SectionItem[] = items.map((item) => ({
       title: item.title || "",
       url: item.url || "",
       source: item.source_name || "",

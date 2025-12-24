@@ -13,10 +13,10 @@ from pathlib import Path
 from typing import Dict, Any, List, Optional
 
 import yaml
-from openai import OpenAI
 from dotenv import load_dotenv
 
 from veille_tech import week_bounds  # pour retrouver la semaine courante
+from llm_provider import get_provider, LLMProvider
 
 # Charger les variables d'environnement depuis .env
 load_dotenv()
@@ -200,9 +200,7 @@ def ensure_all_sections_ordered(
 # ==========================
 
 def generate_weekly_summary_openai(
-    base_url: str,
-    api_key_env: str,
-    model: str,
+    provider: LLMProvider,
     context_md: str,
     max_sections: int,
     expected_titles: List[str],
@@ -210,10 +208,6 @@ def generate_weekly_summary_openai(
     temperature: float = 0.2,
     max_tokens: int = 1200,
 ) -> str:
-    api_key = os.getenv(api_key_env)
-    if not api_key:
-        raise RuntimeError(f"Variable d'environnement {api_key_env} manquante.")
-    client = OpenAI(base_url=base_url, api_key=api_key)
 
     high_block = f"[HIGHLIGHTS]\n{highlights_md}\n\n" if highlights_md else ""
     section_list = "\n".join(f"- {t}" for t in expected_titles)
@@ -233,8 +227,8 @@ Ensuite, détaille par thèmes avec les titres H2 ci-dessous (dans cet ordre) :
 {context_md}
 """
 
-    resp = client.chat.completions.create(
-        model=model,
+    # Utilise le provider abstrait au lieu du client OpenAI direct
+    return provider.chat_completion(
         messages=[
             {"role": "system", "content": SUMMARY_SYSTEM_PROMPT},
             {"role": "user", "content": user_prompt},
@@ -242,7 +236,6 @@ Ensuite, détaille par thèmes avec les titres H2 ci-dessous (dans cet ordre) :
         temperature=temperature,
         max_tokens=max_tokens,
     )
-    return resp.choices[0].message.content or ""
 
 # ==========================
 #   Lecture ai_selection.json
@@ -290,14 +283,15 @@ def main(config_path: str = "config.yaml", week_offset: Optional[int] = None):
     # Titres attendus pour les sections (dans l'ordre)
     expected_titles = [c.get("title", c.get("key")) for c in cfg.get("categories", [])]
 
-    # LLM config
+    # Créer le provider LLM depuis config
     llm_cfg = cfg.get("llm", {}) or {}
-    if llm_cfg.get("provider") != "openai_compat":
-        raise RuntimeError("llm.provider doit être 'openai_compat' dans config.yaml")
+    try:
+        provider = get_provider(llm_cfg)
+        print(f"[summary] Provider LLM: {llm_cfg.get('provider', 'groq')} / {provider.model}")
+    except (ValueError, RuntimeError) as e:
+        print(f"[error] Impossible de créer le provider LLM: {e}")
+        return
 
-    base_url = llm_cfg.get("base_url", "https://api.groq.com/openai/v1")
-    api_key_env = llm_cfg.get("api_key_env", "GROQ_API_KEY")
-    model = llm_cfg.get("model", "llama-3.1-8b-instant")
     temperature = float(llm_cfg.get("temperature", 0.2))
     max_tokens = int(llm_cfg.get("max_tokens", 1200))
 
@@ -339,9 +333,7 @@ def main(config_path: str = "config.yaml", week_offset: Optional[int] = None):
 
     # Appel LLM
     weekly_md = generate_weekly_summary_openai(
-        base_url=base_url,
-        api_key_env=api_key_env,
-        model=model,
+        provider=provider,
         context_md=context_md,
         max_sections=max_sections,
         expected_titles=expected_titles,

@@ -565,14 +565,6 @@
       "published_ts": 1765235515,
       "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs",
-      "title": "Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs",
-      "summary": "From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.",
-      "published_ts": 1765221148,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
     }
   ],
   "hors_sujet": [
@@ -755,6 +747,14 @@
     {
       "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs",
       "title": "Do More for Less: Announcing New Snowpipe Pricing — and 9 Other Ways to Save on Data Engineering Costs",
+      "summary": "From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.",
+      "published_ts": 1765221148,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/cutting-data-engineering-costs",
+      "title": "Announcing New Snowpipe Pricing and 9 Other Ways to Save on Data Engineering Costs",
       "summary": "From ingestion to pipelines, learn 10 ways to cut data engineering costs. We also outline the new Snowpipe pricing model and how it supports cost predictability.",
       "published_ts": 1765221148,
       "source_name": "Snowflake Blog",

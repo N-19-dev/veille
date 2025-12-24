@@ -36,6 +36,8 @@ content_types:
     - Data Engineer Things
     - Benn Stancil · Mode Analytics
     - Chip Huyen · ML Engineering
+    # Nouvelles sources communautaires (Phase 1)
+    - Reddit Data Engineering (Top)
   rex_keywords:
   - retour d'expérience
   - retour d'expérience
@@ -182,14 +184,14 @@ categories:
   - cybersécurité
   - technologie
 category_thresholds:
-  warehouses_engines: 58        # Must-have : top tier data engineering
-  etl_orchestration: 58         # Must-have : orchestration essentielle
-  data_modeling_governance: 58  # Must-have : gouvernance importante
-  lake_storage_formats: 58      # Must-have : storage patterns
-  cloud_infra_observability: 55 # Bon à savoir : infra/cloud
-  python_analytics: 55          # Bon à savoir : outils Python
-  ai_data_engineering: 58       # Filtrage modéré : inclure REX communautaires
-  news: 58                      # Modéré : newsletters communautaires OK
+  warehouses_engines: 50        # Baissé de 58 → 50 (avg: 55.2, médian proche)
+  etl_orchestration: 50         # Baissé de 58 → 50 (avg: 54.2)
+  data_modeling_governance: 50  # Baissé de 58 → 50 (avg: 53.0)
+  lake_storage_formats: 52      # Baissé de 58 → 52 (avg: 56.8, garder qualité)
+  cloud_infra_observability: 48 # Baissé de 55 → 48 (avg: 45.9, beaucoup rejetés)
+  python_analytics: 48          # Baissé de 55 → 48 (avg: 43.5, beaucoup rejetés)
+  ai_data_engineering: 50       # Baissé de 58 → 50 (avg: 49.7)
+  news: 58                      # MAINTENU à 58 (avg: 53.6, filtrage strict OK)
   hors_sujet: 100               # Jamais inclus
 sources:
 - name: Snowflake Blog
@@ -336,6 +338,17 @@ sources:
   url: https://medium.com/feed/insiden26
 - name: Amplitude Engineering
   url: https://amplitude.engineering/feed
+# ===== NOUVELLES SOURCES (Phase 1 - Amélioration Pertinence) =====
+- name: Reddit Data Engineering (Top)
+  url: https://www.reddit.com/r/dataengineering/top/.rss?limit=20
+- name: Shopify Engineering
+  url: https://shopify.engineering/blog.atom
+- name: Data Mechanics
+  url: https://www.datamechanics.co/blog-rss.xml
+- name: Twitch Engineering
+  url: https://blog.twitch.tv/en/rss/
+- name: Coinbase Engineering
+  url: https://www.coinbase.com/blog/engineering/rss.xml
 relevance:
   weights:
     semantic: 0.55
@@ -386,6 +399,11 @@ relevance:
     Spotify Engineering: 0.85
     Shopify Engineering: 0.8
     Dropbox Tech Blog: 0.8
+    # Nouvelles sources (Phase 1)
+    Reddit Data Engineering (Top): 0.85
+    Data Mechanics: 0.85
+    Twitch Engineering: 0.85
+    Coinbase Engineering: 0.85
     Slack Engineering: 0.8
     DoorDash Engineering: 0.8
     Lyft Engineering: 0.75
@@ -427,12 +445,26 @@ relevance:
     - llm
     max_points: 20
 llm:
-  provider: openai_compat
-  base_url: https://api.groq.com/openai/v1
-  api_key_env: GROQ_API_KEY
-  model: llama-3.1-8b-instant
+  provider: groq  # Switchable: groq (défaut), openai, ollama
   temperature: 0.2
   max_tokens: 1200
+
+  # Config Groq (actuel, gratuit, rapide)
+  groq:
+    api_key_env: GROQ_API_KEY
+    model: llama-3.1-8b-instant
+    base_url: https://api.groq.com/openai/v1
+
+  # Config OpenAI (fallback si Groq down, payant)
+  openai:
+    api_key_env: OPENAI_API_KEY
+    model: gpt-4o-mini  # Moins cher que gpt-4
+    base_url: https://api.openai.com/v1
+
+  # Config Ollama (local, zéro coût, nécessite installation)
+  ollama:
+    model: llama3.1  # Ou llama3.2, mistral, etc.
+    base_url: http://localhost:11434/v1
 summary:
   enabled: true
   max_sections: 8

@@ -35,6 +35,11 @@ jobs:
       - name: Install deps
         run: npm ci
 
+      - name: Lint with ESLint
+        run: |
+          npm run lint
+          echo "✅ Linting passed"
+
       - name: Copy export into public
         run: |
           echo "📦 Running copy-export script to handle symlinks..."

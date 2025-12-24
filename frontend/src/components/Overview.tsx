@@ -3,9 +3,9 @@ import React from "react";
 import { marked } from "marked";
 
 export default function Overview({ content }: { content?: string }) {
-  if (!content) return null;
-
   const html = React.useMemo(() => {
+    if (!content) return "";
+
     // Configuration du parser Markdown
     marked.setOptions({
       breaks: true,
@@ -13,6 +13,8 @@ export default function Overview({ content }: { content?: string }) {
     });
     return marked.parse(content);
   }, [content]);
+
+  if (!content) return null;
 
   return (
     <section className="bg-white border rounded-2xl p-4 sm:p-6 md:p-8 shadow-sm">

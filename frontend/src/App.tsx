@@ -6,20 +6,28 @@ import Overview from "./components/Overview";
 import SearchBar from "./components/SearchBar";
 import CategoryFilter from "./components/CategoryFilter";
 import ContentTypeTabs, { type ContentType } from "./components/ContentTypeTabs";
-import { loadWeeksIndex, loadLatestWeek, loadWeekSummary, type WeekMeta } from "./lib/parse";
+import { loadWeeksIndex, loadLatestWeek, loadWeekSummary, type WeekMeta, type TopItem, type SummarySection } from "./lib/parse";
 import { createSearchIndex, searchArticles, type SearchableArticle } from "./lib/search";
+import type Fuse from "fuse.js";
+
+// Type pour les données de la semaine
+type WeekData = {
+  overview: string;
+  top3: TopItem[];
+  sections: SummarySection[];
+};
 
 export default function App() {
   const [weeks, setWeeks] = React.useState<WeekMeta[]>([]);
   const [currentWeek, setCurrentWeek] = React.useState<WeekMeta | null>(null);
-  const [data, setData] = React.useState<{ overview: string; top3: any[]; sections: any[] } | null>(null);
+  const [data, setData] = React.useState<WeekData | null>(null);
   const [loading, setLoading] = React.useState(true);
   const [error, setError] = React.useState<string | null>(null);
 
   // États pour la recherche et les filtres
   const [searchQuery, setSearchQuery] = React.useState("");
   const [selectedCategory, setSelectedCategory] = React.useState<string | null>(null);
-  const [searchIndex, setSearchIndex] = React.useState<any>(null);
+  const [searchIndex, setSearchIndex] = React.useState<Fuse<SearchableArticle> | null>(null);
   const [activeContentType, setActiveContentType] = React.useState<ContentType>("all");
 
   React.useEffect(() => {
@@ -34,20 +42,20 @@ export default function App() {
 
         // Créer l'index de recherche
         const allArticles: SearchableArticle[] = [];
-        weekData.sections.forEach((section: any) => {
-          section.items?.forEach((item: any) => {
+        weekData.sections.forEach((section) => {
+          section.items?.forEach((item) => {
             allArticles.push({
               title: item.title,
               url: item.url,
-              source: item.source,
-              score: item.score,
+              source: item.source || "",
+              score: typeof item.score === "number" ? item.score : 0,
               category: section.title,
             });
           });
         });
         setSearchIndex(createSearchIndex(allArticles));
-      } catch (e: any) {
-        setError(e.message ?? String(e));
+      } catch (e) {
+        setError(e instanceof Error ? e.message : String(e));
       } finally {
         setLoading(false);
       }
@@ -68,20 +76,20 @@ export default function App() {
 
       // Recréer l'index de recherche
       const allArticles: SearchableArticle[] = [];
-      weekData.sections.forEach((section: any) => {
-        section.items?.forEach((item: any) => {
+      weekData.sections.forEach((section) => {
+        section.items?.forEach((item) => {
           allArticles.push({
             title: item.title,
             url: item.url,
-            source: item.source,
-            score: item.score,
+            source: item.source || "",
+            score: typeof item.score === "number" ? item.score : 0,
             category: section.title,
           });
         });
       });
       setSearchIndex(createSearchIndex(allArticles));
-    } catch (e: any) {
-      setError(e.message ?? String(e));
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
     } finally {
       setLoading(false);
     }
@@ -96,18 +104,18 @@ export default function App() {
     // Appliquer le filtre de type de contenu (technical vs rex)
     if (activeContentType !== "all") {
       sections = sections
-        .map((sec: any) => ({
+        .map((sec) => ({
           ...sec,
-          items: sec.items?.filter((item: any) =>
+          items: sec.items?.filter((item) =>
             (item.content_type || "technical") === activeContentType
           ) || [],
         }))
-        .filter((sec: any) => sec.items.length > 0);
+        .filter((sec) => sec.items.length > 0);
     }
 
     // Appliquer le filtre de catégorie
     if (selectedCategory) {
-      sections = sections.filter((sec: any) => sec.title === selectedCategory);
+      sections = sections.filter((sec) => sec.title === selectedCategory);
     }
 
     // Appliquer la recherche
@@ -116,11 +124,11 @@ export default function App() {
       const searchUrls = new Set(searchResults.map((r) => r.url));
 
       sections = sections
-        .map((sec: any) => ({
+        .map((sec) => ({
           ...sec,
-          items: sec.items?.filter((item: any) => searchUrls.has(item.url)) || [],
+          items: sec.items?.filter((item) => searchUrls.has(item.url)) || [],
         }))
-        .filter((sec: any) => sec.items.length > 0);
+        .filter((sec) => sec.items.length > 0);
     }
 
     return sections;
@@ -129,7 +137,7 @@ export default function App() {
   // Extraire les catégories uniques
   const categories = React.useMemo(() => {
     if (!data) return [];
-    return data.sections.map((sec: any) => sec.title);
+    return data.sections.map((sec) => sec.title);
   }, [data]);
 
   // Compter les articles par type de contenu
@@ -139,8 +147,8 @@ export default function App() {
     let technicalCount = 0;
     let rexCount = 0;
 
-    data.sections.forEach((sec: any) => {
-      sec.items?.forEach((item: any) => {
+    data.sections.forEach((sec) => {
+      sec.items?.forEach((item) => {
         const contentType = item.content_type || "technical";
         if (contentType === "rex") {
           rexCount++;
@@ -198,12 +206,12 @@ export default function App() {
         )}
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          {filteredSections.map((sec: any) =>
+          {filteredSections.map((sec) =>
             sec.items?.length ? (
               <SectionCard
                 key={sec.title}
                 title={sec.title}
-                bullets={sec.items.map((it: any) => ({
+                bullets={sec.items.map((it) => ({
                   title: it.title,
                   url: it.url,
                   source: it.source,

@@ -196,7 +196,15 @@ MARKETING_KEYWORDS = [
     "affiliate", "powered by", "brought to you by",
     # Call-to-action commercial
     "sign up now", "get started today", "free trial",
-    "limited offer", "exclusive access", "special discount"
+    "limited offer", "exclusive access", "special discount",
+    # Nouveaux patterns identifiés par audit (Dec 2024)
+    "pricing", "pricing calculator", "new pricing",
+    "partner of the year", "award", "awards", "winner",
+    "announcing", "announcement", "press release",
+    "webinar", "register now", "join us",
+    "discount", "sale", "promotion", "offer",
+    "buy now", "purchase", "subscribe",
+    "vendor", "product launch", "new release"
 ]
 
 # Mots-clés indiquant du contenu avancé/expert

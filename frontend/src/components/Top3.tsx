@@ -1,41 +1,11 @@
-type TechLevel = 'beginner' | 'intermediate' | 'advanced';
+import { faviconUrl, getDomain } from "../lib/parse";
+
 type Item = {
   title: string;
   url: string;
   source: string;
   date?: string;
   score?: number;
-  tech_level?: TechLevel;
-  marketing_score?: number;
-};
-
-// Badge de niveau technique (même style que ArticleCard)
-const LevelBadge = ({ level }: { level: TechLevel }) => {
-  if (level === 'beginner') {
-    return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium border bg-green-100 text-green-800 border-green-200">
-        <span>🟢</span>
-        <span>Débutant</span>
-      </span>
-    );
-  }
-
-  if (level === 'advanced') {
-    return (
-      <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium border bg-red-100 text-red-800 border-red-200">
-        <span>🔴</span>
-        <span>Avancé</span>
-      </span>
-    );
-  }
-
-  // intermediate (default)
-  return (
-    <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-medium border bg-yellow-100 text-yellow-800 border-yellow-200">
-      <span>🟡</span>
-      <span>Intermédiaire</span>
-    </span>
-  );
 };
 
 export default function Top3({ items }: { items: Item[] }) {
@@ -46,21 +16,44 @@ export default function Top3({ items }: { items: Item[] }) {
         <h2 className="text-lg font-semibold">🏆 Top 3 de la semaine</h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {items.map((it, i) => (
-          <a
-            key={i}
-            href={it.url}
-            target="_blank"
-            rel="noreferrer"
-            className="group block rounded-2xl border bg-white p-4 hover:shadow-sm transition"
-          >
-            <div className="flex items-center gap-2 flex-wrap text-xs text-neutral-500 mb-1">
-              <span>{it.source}{it.date ? ` · ${it.date}` : ""}</span>
-              {it.tech_level && <LevelBadge level={it.tech_level} />}
-            </div>
-            <div className="mt-1 font-medium leading-snug group-hover:underline">{it.title}</div>
-          </a>
-        ))}
+        {items.map((it, i) => {
+          const dom = getDomain(it.url);
+          const displaySource = (it.source || dom || "Source").trim();
+
+          return (
+            <a
+              key={i}
+              href={it.url}
+              target="_blank"
+              rel="noreferrer"
+              className="group block rounded-2xl border bg-white p-4 hover:shadow-sm transition"
+            >
+              <div className="mb-3 flex items-center gap-2">
+                {/* Favicon avec fallback silencieux */}
+                <img
+                  src={faviconUrl(it.url, 64)}
+                  alt=""
+                  className="h-5 w-5 rounded-sm border object-contain"
+                  loading="lazy"
+                  onError={(e) => {
+                    (e.currentTarget as HTMLImageElement).style.display = "none";
+                  }}
+                />
+                <span className="text-[11px] font-semibold uppercase tracking-widest text-neutral-600">
+                  {displaySource}
+                </span>
+                {it.date && <span className="text-[11px] text-neutral-400">· {it.date}</span>}
+              </div>
+
+              {/* Barre d'accent "magazine" */}
+              <div className="mb-3 h-1 w-12 rounded-full bg-gradient-to-r from-neutral-300 to-neutral-200 group-hover:from-neutral-400 group-hover:to-neutral-200" />
+
+              <h4 className="line-clamp-3 font-semibold leading-snug group-hover:underline">
+                {it.title}
+              </h4>
+            </a>
+          );
+        })}
       </div>
     </section>
   );

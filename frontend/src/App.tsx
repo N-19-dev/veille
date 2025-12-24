@@ -2,9 +2,8 @@
 import React from "react";
 import Hero from "./components/Hero";
 import SectionCard from "./components/SectionCard";
-import Overview from "./components/Overview";
 import CategoryFilter from "./components/CategoryFilter";
-import ContentTypeTabs, { type ContentType } from "./components/ContentTypeTabs";
+import Top3 from "./components/Top3";
 import { loadWeeksIndex, loadLatestWeek, loadWeekSummary, type WeekMeta, type TopItem, type SummarySection } from "./lib/parse";
 
 // Type pour les données de la semaine
@@ -23,7 +22,7 @@ export default function App() {
 
   // États pour les filtres
   const [selectedCategory, setSelectedCategory] = React.useState<string | null>(null);
-  const [activeContentType, setActiveContentType] = React.useState<ContentType>("all");
+  const [showFullSelection, setShowFullSelection] = React.useState(false);
 
   React.useEffect(() => {
     (async () => {
@@ -46,7 +45,7 @@ export default function App() {
     try {
       setLoading(true);
       setSelectedCategory(null);  // Reset filter
-      setActiveContentType("all");  // Reset content type
+      setShowFullSelection(false);  // Reset to Top 3 view
       const w = weeks.find((x) => x.week === weekId);
       if (!w) throw new Error("Semaine inconnue");
       setCurrentWeek(w);
@@ -59,23 +58,11 @@ export default function App() {
     }
   };
 
-  // Filtrer les sections en fonction des filtres et du type de contenu
+  // Filtrer les sections en fonction des filtres
   const filteredSections = React.useMemo(() => {
     if (!data) return [];
 
     let sections = data.sections;
-
-    // Appliquer le filtre de type de contenu (technical vs rex)
-    if (activeContentType !== "all") {
-      sections = sections
-        .map((sec) => ({
-          ...sec,
-          items: sec.items?.filter((item) =>
-            (item.content_type || "technical") === activeContentType
-          ) || [],
-        }))
-        .filter((sec) => sec.items.length > 0);
-    }
 
     // Appliquer le filtre de catégorie
     if (selectedCategory) {
@@ -83,7 +70,7 @@ export default function App() {
     }
 
     return sections;
-  }, [data, selectedCategory, activeContentType]);
+  }, [data, selectedCategory]);
 
   // Extraire les catégories uniques
   const categories = React.useMemo(() => {
@@ -91,25 +78,10 @@ export default function App() {
     return data.sections.map((sec) => sec.title);
   }, [data]);
 
-  // Compter les articles par type de contenu
-  const contentTypeCounts = React.useMemo(() => {
-    if (!data) return { technical: 0, rex: 0 };
-
-    let technicalCount = 0;
-    let rexCount = 0;
-
-    data.sections.forEach((sec) => {
-      sec.items?.forEach((item) => {
-        const contentType = item.content_type || "technical";
-        if (contentType === "rex") {
-          rexCount++;
-        } else {
-          technicalCount++;
-        }
-      });
-    });
-
-    return { technical: technicalCount, rex: rexCount };
+  // Compter le nombre total d'articles
+  const totalArticles = React.useMemo(() => {
+    if (!data) return 0;
+    return data.sections.reduce((acc, sec) => acc + (sec.items?.length || 0), 0);
   }, [data]);
 
   if (error) return <div className="p-6 text-red-600">{error}</div>;
@@ -124,50 +96,68 @@ export default function App() {
         onWeekChange={onWeekChange}
       />
       <main className="max-w-6xl mx-auto px-4 py-4 sm:py-6 md:py-8 space-y-4 sm:space-y-6 md:space-y-8">
-        <Overview content={data.overview} />
+        {/* Top 3 - Toujours visible */}
+        <Top3 items={data.top3} />
 
-        {/* Onglets de type de contenu */}
-        <ContentTypeTabs
-          activeTab={activeContentType}
-          onTabChange={setActiveContentType}
-          technicalCount={contentTypeCounts.technical}
-          rexCount={contentTypeCounts.rex}
-        />
-
-        {/* Filtres */}
-        <CategoryFilter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={setSelectedCategory}
-        />
-
-        {/* Message si aucun résultat */}
-        {selectedCategory && filteredSections.length === 0 && (
-          <div className="text-center py-8 sm:py-12">
-            <p className="text-neutral-500 text-base sm:text-lg">
-              Aucun article trouvé pour ce filtre.
-            </p>
-          </div>
-        )}
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-          {filteredSections.map((sec) =>
-            sec.items?.length ? (
-              <SectionCard
-                key={sec.title}
-                title={sec.title}
-                bullets={sec.items.map((it) => ({
-                  title: it.title,
-                  url: it.url,
-                  source: it.source,
-                  score: it.score,
-                  tech_level: it.tech_level,
-                  marketing_score: it.marketing_score,
-                }))}
-              />
-            ) : null
-          )}
+        {/* Bouton toggle pour voir toute la sélection */}
+        <div className="text-center">
+          <button
+            onClick={() => setShowFullSelection(!showFullSelection)}
+            className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-neutral-300 bg-white hover:bg-neutral-50 hover:border-neutral-400 transition-colors text-sm font-medium"
+          >
+            {showFullSelection ? (
+              <>
+                <span>Masquer la sélection complète</span>
+                <span>▲</span>
+              </>
+            ) : (
+              <>
+                <span>Voir toute la sélection ({totalArticles} articles)</span>
+                <span>▼</span>
+              </>
+            )}
+          </button>
         </div>
+
+        {/* Sélection complète - Affichée uniquement si toggle activé */}
+        {showFullSelection && (
+          <>
+            {/* Filtres */}
+            <CategoryFilter
+              categories={categories}
+              selectedCategory={selectedCategory}
+              onCategoryChange={setSelectedCategory}
+            />
+
+            {/* Message si aucun résultat */}
+            {selectedCategory && filteredSections.length === 0 && (
+              <div className="text-center py-8 sm:py-12">
+                <p className="text-neutral-500 text-base sm:text-lg">
+                  Aucun article trouvé pour ce filtre.
+                </p>
+              </div>
+            )}
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+              {filteredSections.map((sec) =>
+                sec.items?.length ? (
+                  <SectionCard
+                    key={sec.title}
+                    title={sec.title}
+                    bullets={sec.items.map((it) => ({
+                      title: it.title,
+                      url: it.url,
+                      source: it.source,
+                      score: it.score,
+                      tech_level: it.tech_level,
+                      marketing_score: it.marketing_score,
+                    }))}
+                  />
+                ) : null
+              )}
+            </div>
+          </>
+        )}
       </main>
     </div>
   );

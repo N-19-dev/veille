@@ -59,9 +59,12 @@ export default function Hero({
             Semaine {weekLabel}
           </div>
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold mt-2 leading-tight">
-            Data • Analytics • ML — la semaine en un coup d'œil
+            Les 3 articles essentiels de la semaine
           </h1>
-          {dateRange && <p className="text-sm sm:text-base text-neutral-600 mt-2">{dateRange}</p>}
+          <p className="text-sm sm:text-base text-neutral-600 mt-2">
+            Data • Analytics • ML — le meilleur, sans la surcharge
+          </p>
+          {dateRange && <p className="text-xs sm:text-sm text-neutral-500 mt-1">{dateRange}</p>}
           <div className="h-1 bg-gradient-to-r from-neutral-300 to-neutral-200 w-16 sm:w-24 mt-3 sm:mt-4 rounded-full" />
         </div>
       </div>

@@ -114,7 +114,10 @@ def test_week_bounds_current_week():
     # Vérifications de base
     assert start_ts < end_ts
     assert end_ts - start_ts == 7 * 24 * 3600  # 7 jours
-    assert label.startswith("2024w") or label.startswith("2025w")
+
+    # Vérifier le format YYYYwWW avec l'année courante
+    current_year = datetime.now(ZoneInfo("Europe/Paris")).year
+    assert label.startswith(f"{current_year}w") or label.startswith(f"{current_year-1}w")
     assert len(label) == 7  # Format: YYYYwWW
 
 

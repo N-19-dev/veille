@@ -1,63 +1,6 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://joereis.substack.com/p/dawn-of-the-brain-rotted-zombies",
-      "title": "Dawn of the Brain-Rotted Zombies",
-      "summary": "The Weekend Windup #16 - Reflections, Cool Reads, Events, and More",
-      "published_ts": 1767463569,
-      "source_name": "Joe Reis · Data Engineering",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://blog.octo.com/retrospective-2025--on-fait-le-bilan",
-      "title": "Rétrospective 2025 : on fait le bilan",
-      "summary": "Comme chaque année, OCTO fait son bilan ! Voici le récap de ce que nos Octos ont fait cette année, et que vous avez (peut-être) raté…",
-      "published_ts": 1767085841,
-      "source_name": "OCTO Talks!",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.dataiku.com/stories/blog/zs-associates",
-      "title": "How ZS Associates Used AI Agents to Reduce Risk, Cut Costs, & Improve Model Reliability",
-      "summary": "ZS Associates deployed AI agents in Dataiku to speed patient-journey insights, automate root cause analysis, and keep 100+ ML models running reliably — reducing delays, operational risk, and manual effort at scale. 60% faster root cause analysis turnaround Millions of dollars in annual cost savings 25% reduction in post-deployment errors",
-      "published_ts": 1767024828,
-      "source_name": "Dataiku Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://blog.octo.com/7-choses-qu'un-developpeur-doit-connaitre-sur-les-bases-de-donnees",
-      "title": "7 choses qu'un développeur doit connaître sur les bases de données",
-      "summary": "Développeur : tes tests automatisés, même couvrants, n'empêcheront pas l'imprévu en production. Parfois, tu te retrouveras dans ce no man's land entre développeurs et administrateurs de bases de données. J'y ai souvent erré, car je voulais résoudre les problèmes des utilisateurs. J'en reviens avec une poignée de conseils pour toi. Bonne chance !",
-      "published_ts": 1767022870,
-      "source_name": "OCTO Talks!",
-      "content_type": "technical"
-    }
-  ],
-  "cloud_infra_observability": [],
-  "data_modeling_governance": [
-    {
-      "url": "https://joereis.substack.com/p/live-with-joe-reis-ama",
-      "title": "Live with Joe Reis - January 2026 AMA. Ontologies, Data Modeling, Data Engineering, and More",
-      "summary": "A recording from Joe Reis's live video",
-      "published_ts": 1767390447,
-      "source_name": "Joe Reis · Data Engineering",
-      "content_type": "technical"
-    }
-  ],
-  "etl_orchestration": [
-    {
-      "url": "https://dagster.io/blog/dagster-code-locations",
-      "title": "Dagster’s Code Location Architecture",
-      "summary": "Use Dagster’s modular architecture to design scalable, testable, and maintainable pipelines that adapt to production demands.",
-      "published_ts": 1767192928,
-      "source_name": "Dagster Blog",
-      "content_type": "technical"
-    }
-  ],
-  "hors_sujet": [],
-  "lake_storage_formats": [],
-  "news": [
-    {
       "url": "https://engineering.salesforce.com/how-agentforce-enabled-incident-response-automation-to-cut-common-resolution-time-by-70-80/",
       "title": "How Agentforce Enabled Incident Response Automation to Cut Common Resolution Time by 70 – 80%",
       "summary": "In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. Today, Deborah Donoghue, Vice President of Centralized Incident Response, who leads the team responsible for leading the mitigation of high-severity incidents across Salesforce’s global operations. Her organization functions at hyperscale, commanding incidents for the thousands of services and billions of […] The post How Agentforce Enabled Incident Response Automation to Cut Common Resolution Time by 70 – 80% appeared first on Salesforce Engineering Blog .",
@@ -74,6 +17,72 @@
       "content_type": "technical"
     },
     {
+      "url": "https://www.dataiku.com/stories/blog/zs-associates",
+      "title": "How ZS Associates Used AI Agents to Reduce Risk, Cut Costs, & Improve Model Reliability",
+      "summary": "ZS Associates deployed AI agents in Dataiku to speed patient-journey insights, automate root cause analysis, and keep 100+ ML models running reliably — reducing delays, operational risk, and manual effort at scale. 60% faster root cause analysis turnaround Millions of dollars in annual cost savings 25% reduction in post-deployment errors",
+      "published_ts": 1767024828,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    }
+  ],
+  "cloud_infra_observability": [],
+  "data_modeling_governance": [
+    {
+      "url": "https://joereis.substack.com/p/live-with-joe-reis-ama",
+      "title": "Live with Joe Reis - January 2026 AMA. Ontologies, Data Modeling, Data Engineering, and More",
+      "summary": "A recording from Joe Reis's live video",
+      "published_ts": 1767390447,
+      "source_name": "Joe Reis · Data Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/7-choses-qu'un-developpeur-doit-connaitre-sur-les-bases-de-donnees",
+      "title": "7 choses qu'un développeur doit connaître sur les bases de données",
+      "summary": "Développeur : tes tests automatisés, même couvrants, n'empêcheront pas l'imprévu en production. Parfois, tu te retrouveras dans ce no man's land entre développeurs et administrateurs de bases de données. J'y ai souvent erré, car je voulais résoudre les problèmes des utilisateurs. J'en reviens avec une poignée de conseils pour toi. Bonne chance !",
+      "published_ts": 1767022870,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://dagster.io/blog/dagster-code-locations",
+      "title": "Dagster’s Code Location Architecture",
+      "summary": "Use Dagster’s modular architecture to design scalable, testable, and maintainable pipelines that adapt to production demands.",
+      "published_ts": 1767192928,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/zero-millions-savings-stroer-transforms-advertising-success-databricks",
+      "title": "From Zero to Millions in Savings: Ströer Transforms Advertising Success with Databricks",
+      "summary": "Ströer, a leader in out-of-home and online advertising in Germany, reaches millions...",
+      "published_ts": 1767133194,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    }
+  ],
+  "hors_sujet": [
+    {
+      "url": "https://joereis.substack.com/p/dawn-of-the-brain-rotted-zombies",
+      "title": "Dawn of the Brain-Rotted Zombies",
+      "summary": "The Weekend Windup #16 - Reflections, Cool Reads, Events, and More",
+      "published_ts": 1767463569,
+      "source_name": "Joe Reis · Data Engineering",
+      "content_type": "technical"
+    }
+  ],
+  "lake_storage_formats": [],
+  "news": [
+    {
+      "url": "https://blog.octo.com/retrospective-2025--on-fait-le-bilan",
+      "title": "Rétrospective 2025 : on fait le bilan",
+      "summary": "Comme chaque année, OCTO fait son bilan ! Voici le récap de ce que nos Octos ont fait cette année, et que vous avez (peut-être) raté…",
+      "published_ts": 1767085841,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
       "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-250",
       "title": "Data Engineering Weekly #250",
       "summary": "The Weekly Data Engineering Newsletter",
@@ -85,14 +94,6 @@
   "news_general": [],
   "python_analytics": [],
   "warehouses_engines": [
-    {
-      "url": "https://www.databricks.com/blog/zero-millions-savings-stroer-transforms-advertising-success-databricks",
-      "title": "From Zero to Millions in Savings: Ströer Transforms Advertising Success with Databricks",
-      "summary": "Ströer, a leader in out-of-home and online advertising in Germany, reaches millions...",
-      "published_ts": 1767133194,
-      "source_name": "Databricks Blog",
-      "content_type": "technical"
-    },
     {
       "url": "https://vutr.substack.com/p/7-insights-to-help-you-learn-any",
       "title": "7 insights to help you learn any OLAP systems",

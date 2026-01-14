@@ -3,6 +3,7 @@
 ## ai_data_engineering
 
 - [How Beinex Strengthened Compliance & Reduced Operational Delays With AI Agents](https://www.dataiku.com/stories/blog/beinex) — Dataiku Blog · 2025-12-23 · **52/100**
+- [#287: 2025 Year in Review](https://analyticshour.io/2025/12/23/287-2025-year-in-review/) — Analytics Power Hour · 2025-12-23 · **51/100**
 
 ## cloud_infra_observability
 
@@ -25,3 +26,7 @@
 
 - [Python Typing Survey 2025: Code Quality and Flexibility As Top Reasons for Typing Adoption](https://engineering.fb.com/2025/12/22/developer-tools/python-typing-survey-2025-code-quality-flexibility-typing-adoption/) — Meta Engineering · 2025-12-22 · **54/100**
 - [Processing 1 TB with DuckDB in less than 30 seconds](https://blog.dataexpert.io/p/i-processed-1-tb-with-duckdb-in-30) — DataEngineer.io · 2025-12-23 · **51/100**
+
+## warehouses_engines
+
+- [Introducing Apache Spark® 4.1](https://www.databricks.com/blog/introducing-apache-sparkr-41) — Databricks Blog · 2025-12-22 · **59/100**

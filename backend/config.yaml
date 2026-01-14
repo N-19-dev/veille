@@ -377,6 +377,58 @@ sources:
   url: https://blog.twitch.tv/en/rss/
 - name: Coinbase Engineering
   url: https://www.coinbase.com/blog/engineering/rss.xml
+
+# ===== YOUTUBE CHANNELS (Phase 2 - Media Sources) =====
+# Chaînes Data Engineering populaires
+- name: Seattle Data Guy (YouTube)
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCmLGJ3VYBcfRaWbP6JLJcpA
+  type: youtube
+# Advancing Analytics - 404 error, source désactivée
+# - name: Advancing Analytics (YouTube)
+#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ3xgpVZYYvFKXsVRb7gWLw
+#   type: youtube
+# Data with Zach - 404 error, source désactivée
+# - name: Data with Zach (YouTube)
+#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ5xYp8_UzYdVXuogsPWyOQ
+#   type: youtube
+# Darshil Parmar - Channel ID incorrect, source désactivée temporairement
+# - name: Darshil Parmar (YouTube)
+#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCH9hKLJ2dXLXI5gNOi5IXvw
+#   type: youtube
+- name: Andreas Kretz (YouTube)
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCY8mzqqGwl5_bTpBY9qLMAA
+  type: youtube
+# E-learning Bridge - 404 error, source désactivée
+# - name: E-learning Bridge (YouTube)
+#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLIBQlOMRaKXW2blCK6CnBg
+#   type: youtube
+- name: Guy in a Cube (YouTube)
+  url: https://www.youtube.com/feeds/videos.xml?channel_id=UCFp1vaKzpfvoGai0vE5VJ0w
+  type: youtube
+# Learn Data with Mark - 404 error, source désactivée
+# - name: Learn Data with Mark (YouTube)
+#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC9xU_-2sjIM6b7eNNK6VWXA
+#   type: youtube
+
+# ===== PODCASTS (Phase 2 - Media Sources) =====
+# Podcasts Data Engineering & Analytics
+- name: Data Engineering Podcast
+  url: https://www.dataengineeringpodcast.com/feed/mp3/
+  type: podcast
+- name: Analytics Power Hour
+  url: https://analyticshour.io/feed/podcast/
+  type: podcast
+# DataFramed (DataCamp) - Flux RSS indisponible (404)
+# - name: DataFramed (DataCamp)
+#   url: https://feeds.simplecast.com/xKDRRjA7
+#   type: podcast
+- name: The Analytics Engineering Podcast (dbt)
+  url: https://roundup.getdbt.com/feed.xml
+  type: podcast
+# DataTopics - Flux RSS indisponible (404)
+# - name: DataTopics
+#   url: https://anchor.fm/s/46a8f5d4/podcast/rss
+#   type: podcast
 relevance:
   weights:
     semantic: 0.55
@@ -435,6 +487,18 @@ relevance:
     Slack Engineering: 0.8
     DoorDash Engineering: 0.8
     Lyft Engineering: 0.75
+    # YouTube channels (Phase 2)
+    Seattle Data Guy (YouTube): 0.9
+    # Advancing Analytics (YouTube): 0.85  # 404 error
+    # Data with Zach (YouTube): 0.9  # 404 error
+    Andreas Kretz (YouTube): 0.95
+    # E-learning Bridge (YouTube): 0.85  # 404 error
+    Guy in a Cube (YouTube): 0.85
+    # Learn Data with Mark (YouTube): 0.85  # 404 error
+    # Podcasts (Phase 2)
+    Data Engineering Podcast: 0.95
+    Analytics Power Hour: 0.85
+    The Analytics Engineering Podcast (dbt): 0.9
     Pinterest Engineering: 0.75
     Instagram Engineering: 0.75
     Twitter/X Engineering: 0.75

@@ -23,15 +23,15 @@ Databricks annonce des résultats impressionnants avec Ströer, qui a transform�
 
 ## 🗄️ Data Lakes, Storage & Formats
 
-- Aucun article pertinent trouvé dans le contexte.
+- Aucun article pertinent cette semaine
 
 ## ☁️ Cloud, Infra & Observability
 
-- Aucun article pertinent trouvé dans le contexte.
+- Aucun article pertinent cette semaine
 
 ## 🐍 Python, Analytics & Tools
 
-- Aucun article pertinent trouvé dans le contexte.
+- Aucun article pertinent cette semaine
 
 ## 🤖 AI for Data Engineering
 

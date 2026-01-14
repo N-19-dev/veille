@@ -1,12 +1,15 @@
 ## Aperçu général de la semaine
 
-Databricks annonce plusieurs nouveautés importantes cette semaine, notamment l'intégration de Stately Cloud pour améliorer la scalabilité des applications AI. Uber partage également son expertise sur la mise en index des données en streaming avec OpenSearch.
+Cette semaine, Databricks a annoncé l'intégration de Stately Cloud pour améliorer la mise en œuvre d'applications AI à grande échelle. Uber a également partagé son approche innovante pour l'indexation de données en flux avec OpenSearch.
 
 ## 🏛️ Warehouses & Query Engines
 
 - [Inside Snowflake’s AI roadmap](https://www.getdbt.com/blog/inside-snowflakes-ai-roadmap) — dbt Blog · 2025-12-15
 - [How Uber Indexes Streaming Data with Pull-Based Ingestion in OpenSearch™](https://www.uber.com/blog/how-uber-indexes-streaming-data-with-pull-based-ingestion-in-opensearch/) — Uber Engineering Blog · 2025-12-16
 - [Powering Billion-Scale Vector Search with OpenSearch](https://www.uber.com/blog/powering-billion-scale-vector-search-with-opensearch/) — Uber Engineering Blog · 2025-12-18
+**À creuser :**
+**
+- [Databricks Lakehouse Data Modeling: Myths, Truths, and Best Practices](https://www.databricks.com/blog/databricks-lakehouse-data-modeling-myths-truths-and-best-practices) — Databricks Blog · 2025-12-15
 
 ## 🔄 Orchestration, ETL & Data Movement
 

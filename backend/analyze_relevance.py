@@ -433,6 +433,84 @@ def build_top_k_md(items: List[Dict[str, Any]], k: int = 3) -> str:
     return "\n".join(lines)
 
 # ==========================
+#   Top Videos (YouTube/Podcast)
+# ==========================
+
+def fetch_videos_for_top(
+    db_path: str,
+    min_ts: int,
+    max_ts: int,
+    min_score: int,
+) -> List[Dict[str, Any]]:
+    """
+    Récupère les vidéos/podcasts YouTube au-dessus d'un seuil pour un Top 3.
+    Similaire à fetch_items_for_top mais filtré sur source_type IN ('youtube', 'podcast').
+    """
+    with db_conn(db_path) as conn:
+        rows = conn.execute(
+            """
+            SELECT title, url, source_name, category_key, final_score, published_ts, content_type,
+                   tech_level, marketing_score, source_type
+            FROM items
+            WHERE published_ts >= ? AND published_ts < ?
+              AND final_score IS NOT NULL
+              AND final_score >= ?
+              AND source_type IN ('youtube', 'podcast')
+              AND (is_excluded IS NULL OR is_excluded = 0)
+            ORDER BY final_score DESC, published_ts DESC
+            """,
+            (min_ts, max_ts, min_score),
+        ).fetchall()
+
+    # Diversity: max 1 per source for Top 3
+    seen_sources = set()
+    final_rows = []
+    for r in rows:
+        src = r[2]
+        if src in seen_sources:
+            continue
+        seen_sources.add(src)
+        final_rows.append({
+            "title": r[0],
+            "url": r[1],
+            "source": r[2],
+            "category": r[3],
+            "score": int(r[4]) if r[4] is not None else 0,
+            "published_ts": r[5],
+            "content_type": r[6] or "technical",
+            "tech_level": r[7] or "intermediate",
+            "marketing_score": r[8] or 0,
+            "source_type": r[9] or "article",
+        })
+
+    return final_rows
+
+def build_top_videos_md(items: List[Dict[str, Any]], k: int = 3) -> str:
+    """
+    Construit une section Markdown 'Top k Videos' pour YouTube/Podcasts.
+    """
+    if not items:
+        return "## 🎥 Top 3 Vidéos / Podcasts de la semaine\n\n_Aucune vidéo/podcast cette semaine._\n"
+
+    top = sorted(
+        items,
+        key=lambda x: (int(x.get("score") or 0), int(x["published_ts"])),
+        reverse=True,
+    )[:k]
+
+    lines = ["## 🎥 Top 3 Vidéos / Podcasts de la semaine", ""]
+    for i, it in enumerate(top, start=1):
+        dt = datetime.fromtimestamp(it["published_ts"], tz=timezone.utc).strftime("%Y-%m-%d")
+        title = it["title"]
+        url = it["url"]
+        src = it["source"]
+        score = it.get("score", "?")
+        source_type_emoji = "🎥" if it.get("source_type") == "youtube" else "🎙️"
+        lines.append(f"- **{i}.** {source_type_emoji} [{title}]({url}) — {src} · {dt} · **{score}/100**")
+    lines.append("")
+    return "\n".join(lines)
+
+# ==========================
 #   Weeks index
 # ==========================
 
@@ -631,6 +709,25 @@ def main(config_path: str = "config.yaml", limit: Optional[int] = None):
     top3_json_path = week_dir / "top3.json"
     top3_json_path.write_text(json.dumps(top_items[:3], indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"[done] Top 3: {top3_path}")
+
+    # --- Top 3 Vidéos/Podcasts ---
+    top_videos = fetch_videos_for_top(
+        db_path, week_start_ts, week_end_ts, min_score=default_threshold
+    )
+
+    # Toujours créer les fichiers, même vides (pour le frontend)
+    top_videos_md = build_top_videos_md(top_videos, k=3)
+    top3_videos_path = week_dir / "top3_videos.md"
+    top3_videos_path.write_text(top_videos_md, encoding="utf-8")
+
+    # Export JSON du top3 vidéos pour le frontend (toujours créer le fichier)
+    top3_videos_json_path = week_dir / "top3_videos.json"
+    top3_videos_json_path.write_text(json.dumps(top_videos[:3], indent=2, ensure_ascii=False), encoding="utf-8")
+
+    if top_videos:
+        print(f"[done] Top 3 Vidéos/Podcasts: {top3_videos_path} ({len(top_videos)} items)")
+    else:
+        print(f"[done] Top 3 Vidéos/Podcasts: {top3_videos_path} (aucune vidéo cette semaine)")
 
     # --- lien symbolique "latest" → cette semaine (best effort) ---
     latest = out_root / "latest"

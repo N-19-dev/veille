@@ -54,6 +54,7 @@ class Category(BaseModel):
 class Source(BaseModel):
     name: str
     url: str
+    type: Optional[str] = None  # 'youtube', 'podcast', or None for regular RSS
 
 class StorageCfg(BaseModel):
     sqlite_path: str
@@ -121,11 +122,19 @@ def ensure_db(path: str):
             # Créer l'index après avoir ajouté la colonne
             conn.execute("CREATE INDEX IF NOT EXISTS idx_items_content_type ON items(content_type)")
 
+        # Migration: ajouter source_type si la colonne n'existe pas
+        cursor = conn.execute("PRAGMA table_info(items)")
+        columns = [row[1] for row in cursor.fetchall()]
+        if "source_type" not in columns:
+            logger.info("Migrating database: adding source_type column")
+            conn.execute("ALTER TABLE items ADD COLUMN source_type TEXT DEFAULT 'article'")
+            conn.execute("CREATE INDEX IF NOT EXISTS idx_items_source_type ON items(source_type)")
+
 def upsert_item(path: str, item: Dict[str, Any]):
     with db_conn(path) as conn:
         conn.execute("""
-            INSERT OR IGNORE INTO items(id, url, title, summary, content, published_ts, source_name, category_key, created_ts, content_type)
-            VALUES (:id, :url, :title, :summary, :content, :published_ts, :source_name, :category_key, :created_ts, :content_type)
+            INSERT OR IGNORE INTO items(id, url, title, summary, content, published_ts, source_name, category_key, created_ts, content_type, source_type)
+            VALUES (:id, :url, :title, :summary, :content, :published_ts, :source_name, :category_key, :created_ts, :content_type, :source_type)
         """, item)
 
 def query_latest_by_cat(path: str, limit_per_cat: int,
@@ -426,14 +435,16 @@ async def run(config_path: str = "config.yaml"):
         feed_urls: List[Dict[str, str]] = []
 
         async def prepare_source(src: Source):
-            if not await robots.allowed(session, src.url): return
+            # Skip robots.txt check for YouTube/Podcast RSS feeds (public feeds meant to be consumed)
+            if src.type not in ("youtube", "podcast"):
+                if not await robots.allowed(session, src.url): return
             raw = await fetcher.get(session, src.url)
             if not raw: return
             try: text = raw.decode("utf-8", errors="ignore")
             except Exception: text = raw.decode("latin-1", errors="ignore")
             lower = text.lower()
             if "<rss" in lower or "<feed" in lower:
-                feed_urls.append({"name": src.name, "feed": src.url}); return
+                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type}); return
             discovered = discover_feed_links(text, src.url)
             if discovered:
                 for f in discovered:
@@ -442,9 +453,9 @@ async def run(config_path: str = "config.yaml"):
                     allow_re = getattr(cfg.crawl, "path_allow_regex", None)
                     if deny_re and re.search(deny_re, p): continue
                     if allow_re and not re.search(allow_re, p): continue
-                    feed_urls.append({"name": src.name, "feed": f})
+                    feed_urls.append({"name": src.name, "feed": f, "type": src.type})
             else:
-                feed_urls.append({"name": src.name, "feed": src.url})
+                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type})
 
         await asyncio.gather(*[prepare_source(s) for s in cfg.sources])
 
@@ -459,9 +470,12 @@ async def run(config_path: str = "config.yaml"):
 
         async def process_feed(entry: Dict[str, str]) -> int:
             url, name = entry["feed"], entry["name"]
+            source_type = entry.get("type")  # 'youtube', 'podcast', or None
             inserts = 0
             async with sem:
-                if not await robots.allowed(session, url): return 0
+                # Skip robots.txt check for YouTube/Podcast RSS feeds (public feeds meant to be consumed)
+                if source_type not in ("youtube", "podcast"):
+                    if not await robots.allowed(session, url): return 0
                 raw = await fetcher.get(session, url)
                 if not raw: return 0
                 text = raw.decode("utf-8", errors="ignore")
@@ -476,16 +490,26 @@ async def run(config_path: str = "config.yaml"):
                         title = (e.get("title") or "").strip() or link
                         summary = BeautifulSoup((e.get("summary") or ""), "lxml").get_text(" ", strip=True)
 
+                        # For YouTube/Podcast feeds, use description as content directly
+                        # No need to fetch the full page content
                         content_text = ""
-                        if link and await robots.allowed(session, link):
-                            art_raw = await fetcher.get(session, link)
-                            if art_raw:
-                                art_txt = art_raw.decode("utf-8", errors="ignore")
-                                content_text = extract_main_content(art_txt, link)
+                        if source_type in ("youtube", "podcast"):
+                            # Use summary/description as main content for media sources
+                            content_text = summary
+                            logger.info(f"Processing {source_type} feed item", title=title[:50], url=link, desc_len=len(summary))
+                        else:
+                            # Regular article: fetch full content
+                            if link and await robots.allowed(session, link):
+                                art_raw = await fetcher.get(session, link)
+                                if art_raw:
+                                    art_txt = art_raw.decode("utf-8", errors="ignore")
+                                    content_text = extract_main_content(art_txt, link)
 
                         text_for_filter = (content_text or summary or "")
-                        if not is_editorial_article(link, cfg.model_dump(), text=text_for_filter):
-                            continue
+                        # Skip editorial filters for YouTube/Podcast sources
+                        if source_type not in ("youtube", "podcast"):
+                            if not is_editorial_article(link, cfg.model_dump(), text=text_for_filter):
+                                continue
 
                         cat_key = classify(title, (summary or content_text[:300]), cfg.categories)
                         if not cat_key: continue
@@ -514,6 +538,7 @@ async def run(config_path: str = "config.yaml"):
                             "category_key": cat_key,
                             "created_ts": now_ts,
                             "content_type": content_type,
+                            "source_type": source_type or "article",
                             "tech_level": tech_level,
                             "marketing_score": marketing_score,
                             "is_excluded": 1 if is_excluded_bool else 0,
@@ -586,6 +611,7 @@ async def run(config_path: str = "config.yaml"):
                             "category_key": cat_key,
                             "created_ts": now_ts,
                             "content_type": content_type,
+                            "source_type": source_type or "article",  # Fallback scraper uses source_type too
                             "tech_level": tech_level,
                             "marketing_score": marketing_score,
                             "is_excluded": 1 if is_excluded_bool else 0,

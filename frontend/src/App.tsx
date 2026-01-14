@@ -4,12 +4,14 @@ import Hero from "./components/Hero";
 import SectionCard from "./components/SectionCard";
 import CategoryFilter from "./components/CategoryFilter";
 import Top3 from "./components/Top3";
-import { loadWeeksIndex, loadLatestWeek, loadWeekSummary, type WeekMeta, type TopItem, type SummarySection } from "./lib/parse";
+import TopVideos from "./components/TopVideos";
+import { loadWeeksIndex, loadLatestWeek, loadWeekSummary, type WeekMeta, type TopItem, type VideoItem, type SummarySection } from "./lib/parse";
 
 // Type pour les données de la semaine
 type WeekData = {
   overview: string;
   top3: TopItem[];
+  topVideos: VideoItem[];
   sections: SummarySection[];
 };
 
@@ -98,6 +100,9 @@ export default function App() {
       <main className="max-w-6xl mx-auto px-4 py-4 sm:py-6 md:py-8 space-y-4 sm:space-y-6 md:space-y-8">
         {/* Top 3 - Toujours visible */}
         <Top3 items={data.top3} />
+
+        {/* Top 3 Vidéos/Podcasts - Visible si présent */}
+        <TopVideos items={data.topVideos} />
 
         {/* Bouton toggle pour voir toute la sélection */}
         <div className="text-center">

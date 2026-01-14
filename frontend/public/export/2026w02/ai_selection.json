@@ -1,0 +1,148 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://www.databricks.com/blog/thumbtack-powering-safe-smart-home-services-databricks-genai",
+      "title": "Thumbtack Powering Safe, Smart Home Services on Databricks with GenAI",
+      "summary": "Building the Most Trusted Home Care PlatformThumbtack’s mission is simple but ambitious: ...",
+      "published_ts": 1767999600,
+      "source_name": "Databricks Blog",
+      "score": 56.335810512304306,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://www.uber.com/blog/from-monitoring-to-observability-cloud-native/",
+      "title": "From Monitoring to Observability: Our Ultra-Marathon to a Cloud-Native Platform",
+      "summary": "Managing a global corporate network at Uber’s scale can feel a bit like running an ultra-marathon. There are long stretches of smooth sailing, but you’re always preparing for the unexpected mountain pass or sudden change in weather. For years, our engineering teams have navigated this terrain with a traditional, monolithic monitoring system. We knew we needed to switch to a modern pair of carbon-fiber running shoes. This meant a complete overhaul: a journey to replace our legacy system with a cloud-native observability platform built for speed, flexibility, and endurance on an open-source stack.",
+      "published_ts": 1767719913,
+      "source_name": "Uber Engineering Blog",
+      "score": 54.944469437003136,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/a-critique-of-iceberg-rest-catalog",
+      "title": "A Critique of Iceberg REST Catalog: A Classic Case of Why Semantic Spec Fails",
+      "summary": "How a Semantically Correct API Becomes Operationally Unreliable at Scale",
+      "published_ts": 1767938258,
+      "source_name": "Data Engineering Weekly",
+      "score": 61.31629614531994,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.getdbt.com/blog/ai-agents-and-the-data-lake",
+      "title": "AI agents and the data lake",
+      "summary": "Lauren Anderson, the head of Okta's enterprise data platform, on why central governance and the semantic layer are so essential.",
+      "published_ts": 1768144620,
+      "source_name": "dbt Blog",
+      "score": 58.570404797792435,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://seattledataguy.substack.com/p/common-data-pipeline-patterns-youll",
+      "title": "Common Data Pipeline Patterns You’ll See in the Real World",
+      "summary": "A practical look at the many ways data pipelines show up inside real companies",
+      "published_ts": 1767643086,
+      "source_name": "Seattle Data Guy",
+      "score": 64.33842438459396,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://dagster.io/blog/dagster-airflow",
+      "title": "Dagster vs Airflow: Feature Comparison",
+      "summary": "Discover why Dagster outpaces Airflow with modern UX, modular pipeline design, asset tracking, and easier maintenance for growing teams.",
+      "published_ts": 1767650692,
+      "source_name": "Dagster Blog",
+      "score": 59.3902850151062,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "lake_storage_formats": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/aws-analytics-at-reinvent-2025-unifying-data-ai-and-governance-at-scale/",
+      "title": "AWS analytics at re:Invent 2025: Unifying Data, AI, and governance at scale",
+      "summary": "re:Invent 2025 showcased the bold Amazon Web Services (AWS) vision for the future of analytics, one where data warehouses, data lakes, and AI development converge into a seamless, open, intelligent platform, with Apache Iceberg compatibility at its core. Across over 18 major announcements spanning three weeks, AWS demonstrated how organizations can break down data silos, […]",
+      "published_ts": 1767825865,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 58.57176595926285,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-251",
+      "title": "Data Engineering Weekly #251",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1767591351,
+      "source_name": "Data Engineering Weekly",
+      "score": 67.70708277821541,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://dagster.io/blog/rise-of-the-data-platform-engineer",
+      "title": "The Rise of the Data Platform Engineer",
+      "summary": "The evolution of data engineering demands a platform-first mindset. See how Data Platform Engineers are shaping the future of analytics.",
+      "published_ts": 1767731183,
+      "source_name": "Dagster Blog",
+      "score": 66.63532847166061,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://juhache.substack.com/p/boring-engineering-manifesto",
+      "title": "The Boring Engineer Manifesto",
+      "summary": "Ju Data Engineering Weekly - Ep 92",
+      "published_ts": 1767961881,
+      "source_name": "Julien Hurault · Ju Data Engineering",
+      "score": 61.07550650835037,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.databricks.com/blog/bcbs-239-compliance-age-ai-turning-regulatory-burden-strategic-advantage",
+      "title": "BCBS 239 Compliance in the Age of AI: Turning Regulatory Burden into Strategic Advantage",
+      "summary": "The strategic imperative of BCBS 239 complianceBCBS 239 (Risk Data Aggregation and...",
+      "published_ts": 1767639660,
+      "source_name": "Databricks Blog",
+      "score": 60.898608297109604,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/data-ai-upskilling-series",
+      "title": "Snowflake Offers Free Data and AI Upskilling Event Series",
+      "summary": "Fast-track your data and AI skills with insights from Snowflake’s leading experts",
+      "published_ts": 1767920100,
+      "source_name": "Snowflake Blog",
+      "score": 51.98205956816673,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ]
+}

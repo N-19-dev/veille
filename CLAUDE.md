@@ -66,10 +66,11 @@ npm run lint           # ESLint check
 The backend runs 4 sequential steps:
 
 1. **veille_tech.py** - Crawling
-   - Fetches RSS/Atom feeds (60+ sources)
+   - Fetches RSS/Atom feeds (70+ sources including YouTube & Podcasts)
    - Auto-discovers feeds from website URLs
-   - Extracts full content using readability
-   - Filters by editorial path patterns (blogs/posts/articles)
+   - Extracts full content using readability (for regular articles)
+   - **YouTube/Podcast support**: Uses title + description directly (no page fetch)
+   - Filters by editorial path patterns (blogs/posts/articles) - disabled for YouTube/Podcast
    - Deduplicates by hash (URL + title)
    - Stores in SQLite with initial category classification by keywords
 
@@ -109,6 +110,44 @@ Articles are classified into two types (content_classifier.py):
 - **REX & All Hands**: Experience reports, post-mortems, case studies
 
 Classification uses keyword matching from `config.yaml` → `content_types.rex_keywords`. The frontend (ContentTypeTabs.tsx) provides tabs to filter by type.
+
+### YouTube & Podcast Support (Phase 2.5)
+
+The system now supports **YouTube channels** and **Podcasts** as sources, using their RSS feeds:
+
+**How it works:**
+- YouTube/Podcast feeds are parsed using `feedparser` (same as regular RSS)
+- **Title + Description** are used as content (no page fetch, no transcription)
+- Editorial path filters are **disabled** for these source types
+- Classification and scoring work the same way as regular articles
+
+**Benefits:**
+- ✅ **Free** (no API keys, no transcription costs)
+- ✅ **Fast** (no additional HTTP requests per item)
+- ✅ **Sufficient** (YouTube descriptions are typically 700+ chars, podcast descriptions 50k+ chars)
+
+**Configuration:**
+```yaml
+sources:
+  - name: Seattle Data Guy (YouTube)
+    url: https://www.youtube.com/feeds/videos.xml?channel_id=CHANNEL_ID
+    type: youtube  # Optional type field
+
+  - name: Data Engineering Podcast
+    url: https://example.com/feed/mp3/
+    type: podcast
+```
+
+**Adding sources:** See [YOUTUBE_PODCAST_GUIDE.md](./YOUTUBE_PODCAST_GUIDE.md) for detailed instructions on:
+- Finding YouTube channel IDs and constructing RSS URLs
+- Finding podcast RSS feeds
+- Recommended source weights
+- Troubleshooting
+
+**Future enhancements:**
+- Optional transcription for short descriptions (<200 chars) using Whisper API ($0.006/min)
+- Extracting metadata (duration, views, likes) from feed
+- Playlist support for YouTube
 
 ### Data Flow
 

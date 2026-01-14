@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Data Engineering Weekly #251",
+    "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-251",
+    "source": "Data Engineering Weekly",
+    "category": "news",
+    "score": 67.70708277821541,
+    "published_ts": 1767591351,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "The Rise of the Data Platform Engineer",
+    "url": "https://dagster.io/blog/rise-of-the-data-platform-engineer",
+    "source": "Dagster Blog",
+    "category": "news",
+    "score": 66.63532847166061,
+    "published_ts": 1767731183,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Common Data Pipeline Patterns You’ll See in the Real World",
+    "url": "https://seattledataguy.substack.com/p/common-data-pipeline-patterns-youll",
+    "source": "Seattle Data Guy",
+    "category": "etl_orchestration",
+    "score": 64.33842438459396,
+    "published_ts": 1767643086,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  }
+]

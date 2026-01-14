@@ -1,5 +1,21 @@
 [
   {
+    "week": "2026w03",
+    "range": "",
+    "top3_md": "export/2026w03/top3.md",
+    "selection_json": "export/2026w03/ai_selection.json",
+    "selection_md": "export/2026w03/ai_selection.md",
+    "summary_md": "export/2026w03/ai_summary.md"
+  },
+  {
+    "week": "2026w02",
+    "range": "2026-01-05 → 2026-01-12",
+    "top3_md": "export/2026w02/top3.md",
+    "selection_json": "export/2026w02/ai_selection.json",
+    "selection_md": "export/2026w02/ai_selection.md",
+    "summary_md": "export/2026w02/ai_summary.md"
+  },
+  {
     "week": "2026w01",
     "range": "2025-12-29 → 2026-01-05",
     "top3_md": "export/2026w01/top3.md",

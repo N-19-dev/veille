@@ -9,43 +9,19 @@
       "content_type": "technical"
     },
     {
-      "url": "https://blog.cloudflare.com/fail-small-resilience-plan/",
-      "title": "Code Orange: Fail Small — our resilience plan following recent incidents",
-      "summary": "We have declared “Code Orange: Fail Small” to focus everyone at Cloudflare on a set of high-priority workstreams with one simple goal: ensure that the cause of our last two global outages never happens again.",
-      "published_ts": 1766183730,
-      "source_name": "Cloudflare Engineering",
+      "url": "https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/",
+      "title": "DrP: Meta’s Root Cause Analysis Platform at Scale",
+      "summary": "Incident investigation can be a daunting task in today’s digital landscape, where large-scale systems comprise numerous interconnected components and dependencies DrP is a root cause analysis (RCA) platform, designed by Meta, to programmatically automate the investigation process, significantly reducing the mean time to resolve (MTTR) for incidents and alleviating on-call toil Today, DrP is used [...] Read More... The post DrP: Meta’s Root Cause Analysis Platform at Scale appeared first on Engineering at Meta .",
+      "published_ts": 1766165713,
+      "source_name": "Meta Engineering",
       "content_type": "technical"
     },
     {
-      "url": "https://blog.octo.com/gemini-veut-il-la-peau-du-blog-octo",
-      "title": "Gemini veut-il la peau du blog OCTO ?",
-      "summary": "Gemini cite notre blog mais menace de détourner nos lecteurs. Faut-il arrêter d'écrire ? Le blog OCTO doit évoluer. L'avenir ? Un contenu hybride où l'expert humain guide le LLM par la maïeutique (l'art de la question) et partage ces conversations de haute valeur.",
-      "published_ts": 1766153590,
-      "source_name": "OCTO Talks!",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/modern-marketing-data-stack-deloitte",
-      "title": "Deloitte on AI Agents, Data Strategy, and What Comes Next",
-      "summary": "Preview key themes from 2026 Modern Marketing Data Stack, plus Deloitte’s take on data strategy, AI agents, and the guardrails marketers should consider.",
-      "published_ts": 1766092020,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/structuring-unstructured-data-cortex-aisql",
-      "title": "Structuring the Unstructured Data:  Powered by Snowflake Cortex AI Functions",
-      "summary": "Snowflake Cortex AI Functions introduces a new workflow to transform unstructured data from calls and tickets into structured insights for BI and ML.",
-      "published_ts": 1766080228,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://blog.octo.com/quand-les-methodes-classiques-ne-suffisent-plus--reinventer-la-facon-dont-les-organisations-pensent-leur-futur",
-      "title": "Quand les méthodes classiques ne suffisent plus : réinventer la façon dont les organisations pensent leur futur",
-      "summary": "Comment dépasser les silos et construire une vision stratégique partagée à l’échelle d’organisations complexes ? Cet article s’appuie sur les travaux de R and amp;D et les retours terrain d’OCTO pour montrer comment LEGO® Serious Play®, le design et l’IA générative se combinent pour passer de la vision à l’action.",
-      "published_ts": 1766047789,
-      "source_name": "OCTO Talks!",
+      "url": "https://www.dataiku.com/stories/blog/the-ai-agent-revolution-for-self-service-bi-why-everything-is-about-to-change",
+      "title": "The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change",
+      "summary": "Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the business, yet many still rely on workflows shaped years ago: dashboards for every new question, exports when dashboards fall short, and manual stitching of data spread across tools, clouds, and spreadsheets. The result is an environment full of reports that rarely match how people actually work.",
+      "published_ts": 1766063700,
+      "source_name": "Dataiku Blog",
       "content_type": "technical"
     },
     {
@@ -57,11 +33,19 @@
       "content_type": "technical"
     },
     {
-      "url": "https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review",
-      "title": "Stripe Atlas startups in 2025: Year in review",
-      "summary": "2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever. Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.",
+      "url": "https://about.gitlab.com/blog/gitlab-18-7-advancing-ai-automation/",
+      "title": "GitLab 18.7: Advancing AI automation, governance, and developer experience",
+      "summary": "GitLab 18.7 delivers development, operations, and security capabilities that strengthen control, improve consistency, and build confidence as teams integrate AI further into their workflows. These improvements arrive as GitLab approaches a major milestone. GitLab Duo Agent Platform will reach general availability in January 2026 with our 18.8 release, pending we continue to meet the exceptionally high quality standards we set for ourselves in service to our customers worldwide across all industries. GitLab Duo Agent Platform's GA is designed to introduce a unified, governed way for organizations to orchestrate agentic AI across their software lifecycle. With foundational agents, custom agents, and automated flows working together inside GitLab, teams will be able to adopt agentic workflows that help accelerate work while staying aligned to organizational standards. At GA, we also plan to include expanded AI Catalog functionality, stronger administrative controls, reliability enhancements, and a flexible usage-based billing model designed to provide flexibility for agentic AI usage across many roles and projects. The 18.7 release adds important building blocks to support GitLab Duo Agent Platform’s upcoming GA. New automation features, stronger governance controls, and enhancements across security and pipeline authoring help teams streamline their work and lay the groundwork for an even more reliable agentic experience in 18.8 and beyond. On February 10, 2026, we will host a global event that brings our vision of GitLab as the intelligent orchestration platform to life, where software teams and their AI agents stay in flow. You will hear how customers are tackling the AI paradox in software delivery , see intelligent orchestration in action across DevSecOps workflows, and get a jump start on what this next chapter means for your own modernization journey. Reserve your spot to see how GitLab’s next chapter comes together. Here's what is new in 18.7: GitLab Duo Agent Platform As more teams bring AI into their development and security workflows, GitLab continues to focus on making adoption powerful and predictable. The updates in 18.7 strengthen the foundation for guided, governed AI experiences that will become fully realized when GitLab Duo Agent Platform reaches GA, as planned for 18.8. Custom Flows Custom Flows introduce a new way for teams to automate multistep workflows using YAML-defined sequences that orchestrate agents to complete repetitive development tasks. Custom Flows help eliminate manual effort for scenarios that follow predictable patterns — such as diagnosing and fixing failed pipelines, updating dependencies, or running policy checks when reviewers are assigned. Instead of handling these tasks interactively, teams can define flows that automatically trigger from GitLab events like mentions and assignments. This capability supports developers who want tailored automations for their own projects, as well as administrators who need consistent, organization-wide workflows for compliance and operational efficiency. SAST False Positive Detection Flow AI-powered false positive management for Static Application Security Testing (SAST) works to introduce a faster, more accurate way for teams to assess and act on potential false positives. GitLab now uses AI to help identify which findings may be false positives earlier in the review process, reducing the time developers and security teams spend triaging noise. Users can see an overview of how many vulnerabilities may warrant review, track their analysis progress, and dismiss false positives directly from the vulnerability report. Once dismissed, these findings stay dismissed across future pipelines and continue to reflect the correct dismissed status in merge request widgets. This assists with a consistent and reliable signal as code evolves and helps teams focus on real risks, streamline remediation, and cut down on unnecessary security review cycles. Custom Agent Versioning Custom Agent Versioning gives teams control over which version of an AI Catalog agent or flow they use in their projects. Instead of automatically inheriting updates from the creator, GitLab now pins each project to the exact version of the agent and flow enabled for the team. This helps prevent breaking changes, security risks, and workflow disruptions, especially in production pipelines or security-sensitive environments. Teams can upgrade when they choose, test new versions in staging before promoting them, and clearly see which version is running to avoid confusion. It also enables safer customization by letting users fork an agent at a specific version and evolve it independently. The result is a more predictable, stable, and secure way to adopt custom agents across development and CI/CD workflows. New Settings for Foundational Agents Admins now have the ability to turn foundational agents on or off, giving teams greater control over how AI is used across their organization. With this update, admins can enable or disable these agents at the instance or group level, choose default availability, and control how new agents are introduced while still providing access to the core agent. The result is more flexible AI adoption with the governance, consistency, and control enterprise teams need. Data Analyst Agent The Data Analyst Agent gives teams a simple way to explore GitLab data using natural language, automatically generating GitLab Query Language (GLQL)  queries, retrieving relevant information, and presenting clear insights without requiring dashboards or manual query writing. Users can analyze work volume, understand team activity, identify development trends, monitor issue and merge request status, and quickly discover work items by labels, authors, milestones, or other criteria. It also creates reusable GLQL queries that can be embedded anywhere GitLab Flavored Markdown is supported, making it easier to share findings and answer everyday questions about project activity directly within GitLab. Core DevOps Innovations with GitLab Duo Agent Platform are most effective when the underlying DevOps experience is equally streamlined and dependable. The improvements in 18.7 to core GitLab workflows help ensure that automation, pipelines, and reusable components operate with highest levels of clarity and consistency. Dynamic Input Selection in GitLab Pipelines Dynamic Input Selection in GitLab Pipelines introduces a more intuitive way to trigger pipelines through dynamic, cascading dropdown fields in the GitLab UI. This allows cross-functional teams to run pipelines without editing YAML or relying on developers, while ensuring that only valid, context-aware options are shown as they make selections. The feature supports complex workflows, assists with reducing misconfigured runs, and removes a key blocker for teams migrating from Jenkins Active Choice, helping organizations standardize their CI/CD processes entirely on GitLab. CI/CD Catalog Publication Guardrails Administrators of GitLab Self-Managed and GitLab Dedicated can now control which projects are allowed to publish components to the CI/CD Catalog. This new setting helps organizations maintain a curated, trusted ecosystem by ensuring only approved sources can add components. It strengthens governance for enterprise customers who want to preserve control over their CI/CD landscape while still enabling teams to discover and reuse sanctioned components. Platform Security As automation and pipeline workflows become more efficient, it remains essential that teams maintain strong visibility and control over how code changes meet organizational standards. The Platform Security update in 18.7 reinforces this balance by giving teams a more flexible way to introduce and refine policy guidance without interrupting delivery. Warn Mode for MR Approval Policies Warn Mode for MR Approval Policies allows violations to be surfaced without blocking merges, giving teams a lower-friction way to introduce or adjust policies while assessing their impact before full enforcement. It also supports a guidance-based approach, where developers can review or dismiss violations with all actions audited to help AppSec refine policy effectiveness. Beyond merge requests, violations already present or introduced into the default branch now appear with a visual badge in the Vulnerability Report , making it easier to identify and prioritize issues that break policy. Elevating how teams build, secure, and deliver software The 18.7 release is about strengthening the foundation for reliable, flexible automation across your GitLab environment. GitLab Premium and Ultimate users can start using these capabilities today on GitLab.com and self-managed environments, with availability for GitLab Dedicated customers planned for next month. GitLab Duo Agent Platform is currently in beta — enable beta and experimental features to experience how full-context AI can transform the way your teams build software. New to GitLab? Start your free trial and see why the future of development is AI-powered, secure, and orchestrated through the world’s most comprehensive DevSecOps platform. Note: Platform capabilities that are in beta are available as part of the GitLab Beta program. They are free to use during the beta period, and when generally available, they will be made available with a paid add-on option for GitLab Duo Agent Platform. Stay up to date with GitLab To make sure you’re getting the latest features, security updates, and performance improvements, we recommend keeping your GitLab instance up to date. The following resources can help you plan and complete your upgrade: Upgrade Path Tool – enter your current version and see the exact upgrade steps for your instance Upgrade Documentation – detailed guides for each supported version, including requirements, step-by-step instructions, and best practices By upgrading regularly, you’ll ensure your team benefits from the newest GitLab capabilities and remains secure and supported. For organizations that want a hands-off approach, consider GitLab’s Managed Maintenance service . With Managed Maintenance, your team stays focused on innovation while GitLab experts keep your Self-Managed instance reliably upgraded, secure, and ready to lead in DevSecOps. Ask your account manager for more information. This blog post contains \"forward‑looking statements\" within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934. Although we believe that the expectations reflected in these statements are reasonable, they are subject to known and unknown risks, uncertainties, assumptions and other factors that may cause actual results or outcomes to differ materially. Further information on these risks and other factors is included under the caption \"Risk Factors\" in our filings with the SEC. We do not undertake any obligation to update or revise these statements after the date of this blog post, except as required by law.",
       "published_ts": 1766016000,
-      "source_name": "Stripe Engineering Blog",
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/dataiku-solutions-how-they-work-and-how-to-use-them",
+      "title": "Dataiku Solutions: How They Work and How to Use Them",
+      "summary": "Most of the time, business teams have a good idea of what they want to achieve when implementing AI use cases. However, when it comes to getting started they often face roadblocks. These projects often require specialized skills and a strong understanding of industry best practices.",
+      "published_ts": 1766004819,
+      "source_name": "Dataiku Blog",
       "content_type": "technical"
     },
     {
@@ -89,19 +73,19 @@
       "content_type": "technical"
     },
     {
-      "url": "https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/",
-      "title": "How We Built Meta Ray-Ban Display: From Zero to Polish",
-      "summary": "We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet. In a previous episode we met the team behind the Meta Neural Band, the EMG wristband packaged with the Ray-Ban Display. Now we’re delving into the glasses themselves. Kenan and Emanuel, from Meta’s Wearables org, join Pascal Hartig on [...] Read More... The post How We Built Meta Ray-Ban Display: From Zero to Polish appeared first on Engineering at Meta .",
-      "published_ts": 1765980017,
-      "source_name": "Meta Engineering",
-      "content_type": "rex"
+      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-evaluation-recipe",
+      "title": "The Open Evaluation Standard: Benchmarking NVIDIA Nemotron 3 Nano with NeMo Evaluator",
+      "summary": "The Open Evaluation Standard: Benchmarking NVIDIA Nemotron 3 Nano with NeMo Evaluator\nIt has become increasingly challenging to assess whether a model’s\nreported improvements reflect genuine advances or variations in\nevaluation conditions, dataset composition, or training data that\nmirrors benchmark",
+      "published_ts": 1765977738,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
     },
     {
-      "url": "https://docs.stripe.com/payouts/next-day-settlement",
-      "title": "Introducing next-day settlement, a faster way to access your earnings",
-      "summary": "Gain next-day access to cash, and use funds where they’re needed most. Get reliable auto-settlement in a few clicks right from the Dashboard.",
-      "published_ts": 1765929600,
-      "source_name": "Stripe Engineering Blog",
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startup-spotlight-emergegen",
+      "title": "Startup Spotlight: EmergeGen AI",
+      "summary": "Learn how EmergeGen is using its AI-driven knowledge graph framework to organize unstructured data and address governance and compliance challenges.",
+      "published_ts": 1765929399,
+      "source_name": "Snowflake Blog",
       "content_type": "technical"
     },
     {
@@ -121,6 +105,14 @@
       "content_type": "technical"
     },
     {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/life-sciences-ai-predictions-2026",
+      "title": "The Future of AI in Life Sciences: 2026 Predictions",
+      "summary": "Get a look on what is next for AI in life sciences in 2026, including documentation/regulatory automation, semantic layers and data virtualization",
+      "published_ts": 1765904400,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
       "url": "https://vutr.substack.com/p/everything-you-need-to-know-about-bee",
       "title": "Everything you need to know about LLMs",
       "summary": "...as a data engineer",
@@ -137,19 +129,19 @@
       "content_type": "technical"
     },
     {
+      "url": "https://airbyte.com/blog/ephemeral-testing-with-generative-ai-part-two",
+      "title": "Unlocking Ephemeral Testing with Generative AI: Part 2 | Airbyte",
+      "summary": "Unlock how generative AI powers scalable ephemeral testing. Explore automation strategies, real-time environments, and improved software quality in Part 2.",
+      "published_ts": 1765843200,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    },
+    {
       "url": "https://engineering.fb.com/2025/12/15/android/how-ai-transforming-secure-by-default-mobile-frameworks-adoption/",
       "title": "How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks",
       "summary": "Meta’s secure-by-default frameworks wrap potentially unsafe OS and third-party functions, making security the default while preserving developer speed and usability. These frameworks are designed to closely mirror existing APIs, rely on public and stable interfaces, and maximize developer adoption by minimizing friction and complexity. Generative AI and automation accelerate the adoption of secure frameworks at [...] Read More... The post How AI Is Transforming the Adoption of Secure-by-Default Mobile Frameworks appeared first on Engineering at Meta .",
       "published_ts": 1765818025,
       "source_name": "Meta Engineering",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://medium.com/walmartglobaltech/keeping-java-as-the-core-python-to-lead-agentic-systems-e2960693e1cd?source=rss----905ea2b3d4d1---4",
-      "title": "Keeping Java as the Core, Python to Lead Agentic Systems",
-      "summary": "We’ve been a Java shop for years, and now agentic AI demands us to rethink. How I got here? I’ve been in the Java world for more than 30 years. Java has been my default answer to “what should we build this in?” for most of my career. I’ve seen it grow from applets and early web apps to large-scale enterprise systems, microservices, and cloud-native platforms. I’ve loved Java and still do. It has given me a solid, safe, and scalable way to build systems that actually run in production . For most of my career, this mental model worked: New system? Java New service? Java Something serious, important, enterprise? Java Then, earlier this year, I stepped into the agentic AI ecosystem and that “Java first” instinct started working against me! When “Java first” started to hurt? I tried to stay in my comfort zone. I tried. I built my first MCP server blueprint using Spring Framework (org.springframework.ai) around May, 2025 (early release), when everything in this space was just geting started. I built an early local AI agent using a Java with google ADK to wire tools and tasks together. On paper, it looked great: 1. Java 2. Spring 3. Strong typing 4. Familiar tooling But in practice, it felt like I was constantly swimming upstream : More glue code than I wanted More boilerplate More “why is this so hard?” moments More time fighting infrastructure instead of experimenting with AI behavior That’s when I realized: I hadn’t hit a wall because Java is “bad”. I hit a wall because agentic AI is a different kind of work than what we historically do in Java. What actually changed with agentic AI? Speed and first-class support In the LLM / agent ecosystem, almost everything shows up in Python first: New libraries New patterns New evaluation frameworks Community research code, tutorials, etc. If you want to try an idea today , chances are: The official examples is in Python The reference implementation is in Python The community discussion assumes Python In Java, I kept finding myself in DIY mode : “There’s a Python example… ok, now let me re-create the entire stack in Java, adjust types, wiring, configs, and hope it behaves the same.” That’s not where you want to spend your time when everything in AI is changing weekly. Experimentation vs. stability Traditional Java enterprise systems optimize for stability : 1. Well-defined interfaces 2. Strict contracts 3. Long-lived services 4. Strong governance and change control Agentic AI optimizes for experimentation : 1. Prompts change frequently (sometimes daily) 2. You add/remove tools 3. You try new reasoning flows 4. You swap models or providers to see what works better. Java and Spring are fantastic for long-lived, stable, governed microservices . They are not naturally optimized for the messy, “try 10 ideas and keep 1” world of early AI experimentation. For that kind of work, you want: Less ceremony Faster iteration Shorter feedback loops That’s exactly where Python shines. Agent code is mostly orchestration, not the real business logic In the traditional world, the code that does the work lives inside your Java services: Business rules Validations Shorter feedback loops Domain models Transactions In the AI agent world, the heavy lifting shifts: The LLM does the reasoning, planning, and language understanding. Tools and data sources do the actual work (APIs, DB queries, searches, actions). The agent itself becomes mostly orchestration and glue : “Take user intent → figure out what tools to call → call them in the right order → reason about the responses → decide the next step.” This kind of glue code: Changes frequently Lives close to prompts and model configs Is easier to express in a concise, dynamic language Domain models Transactions Writing this orchestration in Python is simply much faster than doing it in Java. MCP servers are adapters, not full business systems When I wrote my first MCP server blueprint in Spring, I instinctively treated it like a typical enterprise service: Layers DTOs Configuration Dependency injection The whole Java “production-grade” toolkit! But that’s not what an MCP server really is. An MCP server is basically an adapter : Receive a simple, structured request from the model Call an existing service or database Return a clean, structured response back That’s it. For this kind of lightweight adapter work, Python is usually a better fit: Less boilerplate Faster to write and publish Easier to iterate as your tools and schemas evolve A Let’s take scenario, two approaches Scenario: “ Given a customer’s request, decide whether to approve an order, check credit, apply discounts, and notify. ” If I build this purely in Java I’m tempted to: 1. Design a full microservice (or several) 2. Define DTOs, interfaces, and controller endpoints 3. Bake the logic into Java classes 4. Go through normal deployment, governance, and release cycles This is great when the rules are stable and you want strong guarantees. If I build this with Python agents + Java services I change my mindset: 1. Keep the core logic and data in Java: credit-service pricing-service profile-service 2. Add a Python agent that: Talk to the LLM, Calls those Java services via MCP tools or HTTP APIs, 3. and Orchestrates the flow: “Check credit → if high-risk, ask for manual review → otherwise, fetch pricing → apply rules → approve/deny → send notification. Whenever the decision logic or flow changes: I mostly update Python agent behavior and prompts . Java services stay stable, governed, and reliable. This feels natural : Java keeps doing what it’s amazing at; Python takes the fast-changing orchestration role around the AI. The key realization: it’s not Java vs Python The important shift for me was this: I don’t need to choose Java or Python . I need to choose where Java is right , and where Python is right . From my experience so far: Where Java is still the best choice? 1. Core business services 2. Transactional systems of record 3. High-QPS, low-latency APIs 4. Long-lived, stable, well-governed microservices 5. Places where you need strict contracts, compliance, and reliability over many years. Where Python is the better choice? 1. AI agents (prompt-heavy, fast-changing, experiment-driven) 2. MCP servers and tools (adapters exposing data/actions to models) 3. Data science, ML training, feature engineering, evaluation pipelines 4. Prototypes and “let’s see if this works” flows When I tried to force agents and MCP patterns into pure Java/Spring, I could make it work, but it felt like: Writing a UI in assembly language: technically possible, but you’re fighting the grain of the tools. A simple architectural pattern: Java in the middle, Python at the edge The way I now think about it is in layers : 1. Core Systems (Java) -Systems of record -Domain logic, validations, transactions -APIs with stable contracts 2. Adapters / Tools (Mostly Python MCP servers) -Thin wrappers around those Java services and databases -Fast to change, but still structured and testable 3. Agents & Experiences (Python + LLMs) -Agent logic (tool selection, sequencing, reasoning about results) -Experiments, new flows, new user journeys If I had to describe it in one line: Java holds the truth. Python explores the possibilities. How I personally envison the work today? My mental model now is very simple: Java : the backbone — where the business actually lives. Python : the face and the hands — where the AI lives, coordinates, and experiments. I still love Java. I still default to Java when I think about serious, long-term systems . But when it comes to AI Agents, MCP servers, and fast-moving agentic work , I’ve learned to let Python lead — not because Java can’t do it, but because it’s not the right kind of tool for that style of work. One resource I recommend helpful for Java folks As a Java person stepping into Python, I found it useful to learn in a way that speaks my language and constraints. One book I personally enjoyed to get started is: Python for Java Developers: A Handbook for Busy Experts — Pedro Cavaléro It doesn’t try to convince you that Java is obsolete. It simply helps you quickly see how to think in Python without abandoning everything you know from decades of Java. If you’re a Java veteran like me, you don’t have to choose sides. Keep Java as the core. Let Python lead your agentic systems. Use each tech stack and language where it’s naturally strong and your architecture (and teams) will thank you for it! Keeping Java as the Core, Python to Lead Agentic Systems was originally published in Walmart Global Tech Blog on Medium, where people are continuing the conversation by highlighting and responding to this story.",
-      "published_ts": 1765816538,
-      "source_name": "Walmart Global Tech",
       "content_type": "technical"
     },
     {
@@ -159,41 +151,33 @@
       "published_ts": 1765814464,
       "source_name": "Hugging Face Blog",
       "content_type": "technical"
-    },
-    {
-      "url": "https://blog.zenika.com/2025/12/15/hacktoberfest-25-ledition-zenika-open-source/",
-      "title": "Hacktoberfest 25 : l’édition Zenika Open Source",
-      "summary": "La 11ème édition de l’Hacktoberfest vient de se terminer ! Fidèle aux éditions précédentes (2018, 2019, 2020, 2021, 2022, 2023 et 2024), Zenika était une nouvelle fois mobilisé tout au long du mois d’octobre pour cet évènement.",
-      "published_ts": 1765812682,
-      "source_name": "Zenika Tech Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://blog.cloudflare.com/radar-2025-year-in-review/",
-      "title": "The 2025 Cloudflare Radar Year in Review: The rise of AI, post-quantum, and record-breaking DDoS attacks",
-      "summary": "We present our 6th annual review of Internet trends and patterns observed across the globe, revealing the disruptions, advances and metrics that defined 2025.",
-      "published_ts": 1765807200,
-      "source_name": "Cloudflare Engineering",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://blog.cloudflare.com/radar-2025-year-in-review-internet-services/",
-      "title": "ChatGPT's rivals, Kwai's quiet rise: the top Internet services of 2025",
-      "summary": "AI competition intensified in 2025 as ChatGPT gained strong challengers. Instagram climbed, X declined, and platforms like Shopee, Temu, and Kwai reshaped global Internet usage. Our 2025 DNS data shows how Internet patterns evolved.",
-      "published_ts": 1765807200,
-      "source_name": "Cloudflare Engineering",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://stripe.com/payment-method/payto",
-      "title": "PayTo available in Australia",
-      "summary": "Businesses in Australia can now offer PayTo. Accept one-off and recurring direct debits with PayTo to get real-time payment confirmation and funds deposited into your Stripe balance instantly, 24 hours a day, every day of the year.",
-      "published_ts": 1765756800,
-      "source_name": "Stripe Engineering Blog",
-      "content_type": "technical"
     }
   ],
   "cloud_infra_observability": [
+    {
+      "url": "https://blog.cloudflare.com/fail-small-resilience-plan/",
+      "title": "Code Orange: Fail Small — our resilience plan following recent incidents",
+      "summary": "We have declared “Code Orange: Fail Small” to focus everyone at Cloudflare on a set of high-priority workstreams with one simple goal: ensure that the cause of our last two global outages never happens again.",
+      "published_ts": 1766183730,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/welcoming-stately-cloud-databricks-investing-foundation-scalable-ai-applications",
+      "title": "Welcoming Stately Cloud to Databricks: Investing in the Foundation for Scalable AI Applications",
+      "summary": "Today, we are thrilled to welcome the Stately Cloud team to Databricks. This transaction...",
+      "published_ts": 1766158639,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/modernize-apache-spark-workflows-using-spark-connect-on-amazon-emr-on-amazon-ec2/",
+      "title": "Modernize Apache Spark workflows using Spark Connect on Amazon EMR on Amazon EC2",
+      "summary": "In this post, we demonstrate how to implement Apache Spark Connect on Amazon EMR on Amazon Elastic Compute Cloud (Amazon EC2) to build decoupled data processing applications. We show how to set up and configure Spark Connect securely, so you can develop and test Spark applications locally while executing them on remote Amazon EMR clusters.",
+      "published_ts": 1766093387,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
     {
       "url": "https://aws.amazon.com/blogs/big-data/how-taxbit-achieved-cost-savings-and-faster-processing-times-using-amazon-s3-tables/",
       "title": "How Taxbit achieved cost savings and faster processing times using Amazon S3 Tables",
@@ -203,11 +187,35 @@
       "content_type": "technical"
     },
     {
-      "url": "https://blog.ovhcloud.com/ovhcloud-startup-program-fast-forward-blockchain-and-web3-accelerator-a-resounding-success/",
-      "title": "OVHcloud Startup Program Fast Forward Blockchain and Web3 Accelerator: A Resounding Success",
-      "summary": "We are thrilled to announce the successful completion of the OVHcloud Startup Program Fast Forward Blockchain and Web3 accelerator, a 10-week program designed to equip founders with the go-to-market, technical guidance, business strategy, mentoring, and investor readiness support needed to thrive in the blockchain and Web3 ecosystem. It culminated in fine style at a Showcase […]",
-      "published_ts": 1765942752,
-      "source_name": "OVHcloud Blog",
+      "url": "https://aws.amazon.com/blogs/big-data/power-data-ingestion-into-splunk-using-amazon-data-firehose/",
+      "title": "Power data ingestion into Splunk using Amazon Data Firehose",
+      "summary": "With Kinesis Data Firehose, customers can use a fully managed, reliable, and scalable data streaming solution to Splunk. In this post, we tell you a bit more about the Kinesis Data Firehose and Splunk integration. We also show you how to ingest large amounts of data into Splunk using Kinesis Data Firehose.",
+      "published_ts": 1765997549,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/ipv6-addressing-with-amazon-redshift/",
+      "title": "IPv6 addressing with Amazon Redshift",
+      "summary": "As we witness the gradual transition from IPv4 to IPv6, AWS continues to expand its support for dual-stack networking across its service portfolio. In this post, we show how you can migrate your Amazon Redshift Serverless workgroup from IPv4-only to dual-stack mode, so you can make your data warehouse future ready.",
+      "published_ts": 1765990304,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://docs.stripe.com/payouts/next-day-settlement",
+      "title": "Introducing next-day settlement, a faster way to access your earnings",
+      "summary": "Gain next-day access to cash, and use funds where they’re needed most. Get reliable auto-settlement in a few clicks right from the Dashboard.",
+      "published_ts": 1765929600,
+      "source_name": "Stripe Engineering Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/reference-guide-for-building-a-self-service-analytics-solution-with-amazon-sagemaker/",
+      "title": "Reference guide for building a self-service analytics solution with Amazon SageMaker",
+      "summary": "In this post, we show how to use Amazon SageMaker Catalog to publish data from multiple sources, including Amazon S3, Amazon Redshift, and Snowflake. This approach enables self-service access while ensuring robust data governance and metadata management.",
+      "published_ts": 1765921643,
+      "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
     },
     {
@@ -219,12 +227,20 @@
       "content_type": "technical"
     },
     {
-      "url": "https://eng.lyft.com/from-python3-8-to-python3-10-our-journey-through-a-memory-leak-1fd9b43cc01e?source=rss----25cd379abb8---4",
-      "title": "From Python3.8 to Python3.10: Our Journey Through a Memory Leak",
-      "summary": "Image generated with ChatGPT (OpenAI), 2025. Intro When working with Python, memory management often feels like a solved problem. The garbage collector quietly does its job, and unlike C or C++, we rarely think about malloc or free. This doesn’t mean that there are no memory leaks in Python. Reference cycles, unreleased resources like connection pooling, global caches, etc can slowly inflate your process’s memory footprint. You might not notice it at first, until your worker starts OOM-ing, latency creeps up, or container restarts become mysteriously frequent. In this post, we’ll share the story of a real-world memory leak we encountered during a Python upgrade — how we discovered it, the tools and techniques we used to investigate, and the lessons we learned. What happened after upgrading to Python 3.10? Back in the summer of 2024, we had an initiative at Lyft to upgrade all of our Python services from v3.8 to 3.10 as v3.8 was scheduled to be EoL by the end of 2024. You can find more details on how our awesome Backend Foundations team at Lyft does Python upgrade across hundreds of repos at scale here . The upgrade involved two phases: the first phase was to upgrade all the dependencies to be Python 3.10 compatible, and the second phase was to upgrade the services to Python 3.10. The dependency upgrades went smoothly for all services and then the phase to upgrade all services to Python 3.10 rolled out. While all services were running Python 3.10 smoothly, there was one service for which the upgrade in the test environment caused a flurry of latency spikes, resulting in timeouts for downstream services. Increasing 5xx caused by timeouts after upgrading to Python 3.10 After profiling the APIs with increased latency with stats, we found that the source of latency were repository queries to the dynamo tables. Specifically, we had pynamodb based repository queries which would spin up a bunch of greenlets to fetch data from multiple tables and combine the result which was showing increased timeouts. The individual queries themselves were fine; however, it was the thread join which took the longest time causing the worker to timeout (default = 30 seconds). Individual Dynamo queries taking < 100 ms to finish Gevent thread join takes 30 secs The other interesting thing we found was memory consumption slowly creeping up with time in all of the pods. Memory usage % of all pods At this point, we weren’t sure if there was something up with gevent/greenlet causing the memory leak or the memory leak causing the latency since decreased memory availability can cause increasing page fetches from the disk. We first checked if the gevent monitoring thread detected any event loop blocks, which could potentially cause these timeouts. We then pivoted to find out the root cause of the memory leak. Fortunately, Lyft has an internal library which can help profile memory which is based on tracemalloc . Memory profiling tool The Lyft memory profiling tool is based on tracemalloc . To capture the memory trace for a given gunicorn process, we registered the worker process to listen to USR2 signal during the application initialization phase. # app/__init__.py MemoryProfiler().register_handlers() # mem_profiler.py pseudo code class MemoryProfiler: def __init__(self) -> None: self._state_machine = self._profiling_state_machine() def register_handlers(self) -> None: # Register gunicorn worker to listen to USR2 to dump traces signal.signal(signal.SIGUSR2, self.handle_signal) def handle_signal(self, signum: signal.Signals, frame: FrameType) -> None: next(self._state_machine) def _profiling_state_machine(self) -> Generator[None, None, None]: while True: try: self.start_tracing() # tracemalloc.start() self.memory_dump() # Create snapshot1 yield self.memory_dump() # Create snaphot2,compare with snapshot1, and dump the difference in a file finally: if tracemalloc.is_tracing(): tracemalloc.stop() Let’s start the tracing! Ok, now that we had the memory profiler setup, we are ready for some tracing to find the source of the leak. To start the tracing, we send USR2 signal to the gunicorn process in the K8s pod to start tracing and send the signal again after some time interval to capture the stack trace with highest memory usage. ps aux Initial process list before sending USR2 signal Now, we will send a USR2 signal to worker with pid 12 kill -USR2 12 Upon checking the process list again…. ps aux Tracing killing the gunicorn worker with PID=12 … we observed that the gunicorn process we planned to trace got killed 🙁 It took several hours of debugging and a journey back to one of my favorite class to find the root of the issue — preload . To understand why preload caused the process to be killed, we first need to understand how gunicorn works. Gunicorn Gunicorn works on the pre-fork model. There is a leader process which forks a bunch of workers. There are two ways to fork the workers: No Preload Gunicorn forked workers with no preload When the leader process forks a worker, the worker has its own application code. This results in the worker process having a larger memory footprint than the leader. smem -a - sort=pid -k Service with no preload: Worker PSS mem = ~203MB With Preload Gunicorn forked workers with preload Preload is a memory optimization based on the concept of copy-on-write . Essentially, the workers share the imports and application code with the leader and only modified pages are written to the worker’s memory. smem -a - sort=pid -k Service with preload: Worker PSS mem reduced to ~41MB!! So how does preload play a role with USR2 signal killing the process? If you remember, we registered the signal during the app initialization by calling register_handlers(). # app/__init__.py MemoryProfiler().register_handlers() # mem_profiler.py class MemoryProfiler: def register_handlers(self) -> None: # Register gunicorn worker to listen to USR2 to dump traces signal.signal(signal.SIGUSR2, self.handle_signal) Since the app had preload=True, only the leader process was registering the USR2 signal to handle the tracing. The worker process did not register due to copy-on-write and that causes any kill -USR2 to actually kill the process! Let’s start the tracing again (with no preload)! Now that we have figured out that preload caused the process to be killed, we turn off the preload option and start the tracing again. ps aux Initial process list before sending USR2 signal kill -USR2 12 Successful USR2 signal not killing the gunicorn worker The worker does not get killed! We created a script which iterates through all the K8s pods and sends a USR2 signal to all the workers to start the tracing and resends the signal to stop the tracing after a certain time interval. The trace had a lot of false positives since it collects dumps which may not necessarily be the source of the leak, but have not been garbage collected yet. Root causing The most interesting (and common) memory dump trace after sifting through hundreds of them was the following: Stack trace dump from memory profiler If you remember the initial conclusion we had with the following graph, we knew that the increase in timeouts had something to do with pynamodb and gevent/greenlets since we saw thread joins taking a long time: Our initial observation of gevent thread join takes 30 secs The stack trace combined with the graph above, narrowed down the issue to pynamo/botocore. After digging online, we found the following issue with urllib3 v1.26.16 . Essentially, in a highly concurrent environment using gevent , connections were not being returned to the pool which caused the pool to sit at its max size and block further requests. This particular stack trace confirmed our suspicion: Stack trace showing botocore/urllib3/connectionpool The root cause of the issue was some incompatibility between weakref.finalize and gevent’s monkey patching causing non-deterministic deadlock which made the issue hard to reproduce. The immediate fix was to downgrade the urllib3 version to 1.26.15 , after which the timeouts and the memory leak were gone!! The actual fix which ensures urllib3 connection pooling is cooperative was released in April 2025 and we have seen no issues upgrading both gevent to v25.4.1 as well as urllib3 to 1.26.16+. It is unclear though why the Python version upgrade exposed the issue. In fact, urllib3 upgrade was not part of the dependency upgrade we had done to prepare for the Python 3.10 upgrade! We had actually been running Python 3.8 with urllib v1.26.16 for about a year without any problem. Ironically, we had upgraded to v1.26.16 specifically because it logged the total connections whenever connection pools were full. Tip If you run into memory leaks which are affecting the live production system, you can use gunicorn’s max-request settings which recycles the worker processes after N requests. This ensures your process or container does not run into OOM. While this helps mitigate the issue, it is critical to continue investigating the source of the memory leak. Gevent monitoring thread has an option to print trace for greenlets which exceed a certain memory threshold. While I have personally never tried this, it could help find objects which are holding large amounts of memory, but not necessarily the source of a leak. Closing Notes There is no silver bullet to debugging memory leaks ; it is a hard issue to debug them. There a few things you can look for eg. unbounded global caches, unreleased resources tied to database/network pooling, recently upgraded libraries, etc. If you check the actual gevent/urllib3 issue , none of them talked about memory leaks, only timeouts. We just happened to run into a memory leak and try to find the root cause of it 😀 Lyft is hiring! If you’re passionate about efficient database connection management, visit Lyft Careers to see our openings. From Python3.8 to Python3.10: Our Journey Through a Memory Leak was originally published in Lyft Engineering on Medium, where people are continuing the conversation by highlighting and responding to this story.",
-      "published_ts": 1765827061,
-      "source_name": "Lyft Engineering",
-      "content_type": "rex"
+      "url": "https://aws.amazon.com/blogs/big-data/amazon-emr-hbase-on-amazon-s3-transitioning-to-emr-s3a-with-comparable-emrfs-performance/",
+      "title": "Amazon EMR HBase on Amazon S3 transitioning to EMR S3A with comparable EMRFS performance",
+      "summary": "Starting with version 7.10, Amazon EMR is transitioning from EMR File System (EMRFS) to EMR S3A as the default file system connector for Amazon S3 access. This transition brings HBase on Amazon S3 to a new level, offering performance parity with EMRFS while delivering substantial improvements, including better standardization, improved portability, stronger community support, improved performance through non-blocking I/O, asynchronous clients, and better credential management with AWS SDK V2 integration. In this post, we discuss this transition and its benefits.",
+      "published_ts": 1765833604,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/how-socure-achieved-50-cost-reduction-by-migrating-from-self-managed-spark-to-amazon-emr-serverless/",
+      "title": "How Socure achieved 50% cost reduction by migrating from self-managed Spark to Amazon EMR Serverless",
+      "summary": "Socure is one of the leading providers of digital identity verification and fraud solutions. Socure’s data science environment includes a streaming pipeline called Transaction ETL (TETL), built on OSS Apache Spark running on Amazon EKS. TETL ingests and processes data volumes ranging from small to large datasets while maintaining high-throughput performance. In this post, we show how Socure was able to achieve 50% cost reduction by migrating the TETL streaming pipeline from self-managed spark to Amazon EMR serverless.",
+      "published_ts": 1765826611,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
     },
     {
       "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ecs-amazon-cloudwatch-amazon-cognito-and-more-december-15-2025/",
@@ -232,6 +248,14 @@
       "summary": "Can you believe it? We’re nearly at the end of 2025. And what a year it’s been! From re:Invent recap events, to AWS Summits, AWS Innovate, AWS re:Inforce, Community Days, and DevDays and, recently, adding that cherry on the cake, re:Invent 2025, we have lived through a year filled with exciting moments and technology advancements […]",
       "published_ts": 1765816925,
       "source_name": "AWS Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/radar-2025-year-in-review/",
+      "title": "The 2025 Cloudflare Radar Year in Review: The rise of AI, post-quantum, and record-breaking DDoS attacks",
+      "summary": "We present our 6th annual review of Internet trends and patterns observed across the globe, revealing the disruptions, advances and metrics that defined 2025.",
+      "published_ts": 1765807200,
+      "source_name": "Cloudflare Engineering",
       "content_type": "technical"
     },
     {
@@ -243,62 +267,20 @@
       "content_type": "technical"
     },
     {
-      "url": "https://about.gitlab.com/blog/taming-tool-sprawl-how-to-boost-university-it-productivity/",
-      "title": "Taming tool sprawl: How to boost university IT productivity",
-      "summary": "When Dr. James Quilty began developing engineering project management courses at Victoria University of Wellington's School of Engineering and Computer Science, he didn't find an organized system for delivering course content. Instead, he was faced with chaos. The problem was that back in 2015 learning materials were scattered across a dozen different tools, like the Blackboard platform, customized Wiki pages, personal websites, and shared Google Docs. On top of that, students were left to choose their own tools for coursework. All of this led to a constant state of confusion. As if that weren’t enough, few of these disparate systems provided proper version history or reliable issue tracking. This all-too-familiar lack of standardization was creating massive headaches for both lecturers and students. \"Information was fragmented across multiple files, multiple formats — sitting often on file systems, not necessarily under good version control,\" says Quilty, who is now program director for engineering at the New Zealand university. After consolidating on GitLab Self-Managed Ultimate in 2017, Victoria University saw 483% growth in student users by 2021. They also added 35 GitLab-enabled courses and now host more than 8,000 projects. The university also deployed GitLab as a unified DevSecOps platform for academic coursework, replacing what had become a fragmented and complicated toolchain. More importantly, they've redirected faculty time from administration to actual education. This pattern isn't unique. Across higher education, IT teams struggle with the same tool sprawl — multiple tools and incompatible systems that lead to hours lost to context switching and administering disparate and costly tools. Simplifying how teams build and deliver software is the answer to this widespread problem. The teams making real progress are reducing complexity instead of creating it. Facing the complexity problem Higher education IT teams are faced with managing aging infrastructure, legacy systems, and resource constraints that force difficult tradeoffs with every technology decision they have to make. Development workflows exist in silos since many departments use different version control systems, CI/CD tools, and security scanners. That means teams struggle to collaborate on cross-functional projects because they're working with incompatible toolchains and a lack of shared visibility. Legacy technology compounds these problems. Many institutions run development environments that are outdated and incompatible with modern DevSecOps practices. But replacing them isn't realistic when budgets are tight and IT staff are already stretched thin. To take on these problems, institutions need to modernize, but because of administrative processes, budget constraints, and the reality of managing critical systems, they have to do it in phases, not overnight. For instance, some workloads may move to the cloud while others remain on-premises. A research department , for instance, might shift large datasets off-site while central IT functions stay in-house. Organizations need the flexibility to be able to do that, and that’s what they get with GitLab Ultimate, the enterprise-ready DevSecOps platform that delivers the same capabilities whether you deploy on GitLab.com or self-host on your own infrastructure: on-premises servers, data centers, or cloud providers, including AWS, GCP, Azure, or even multi-cloud. Self-hosted deployments include all features, including air-gapped support for sensitive environments. This means, with GitLab Ultimate , institutions can modernize on their own timeline without abandoning governance requirements or forcing wholesale infrastructure changes. Moving from manual compliance to automated enforcement IT teams also have to work with regulatory mandates and that adds another layer of complexity. Student privacy requirements, research grant stipulations, and institutional security policies all demand audit trails and governance controls. For institutions supporting U.S. Department of Defense research or contractors, CMMC 2.0 compliance requirements add stringent cybersecurity controls based on NIST SP 800-171. Meeting these obligations while modernizing traditionally meant manually documenting everything — a process that didn't scale easily. In conversations with team members from educational institutions at events like EDUCAUSE we've learned it's all too common for dedicated compliance staff to spend the majority of their time gathering evidence for audits, instead of actually improving security. Not building better software. Just proving that policies were followed. This administrative burden extends to development teams, as well. According to Forrester Consulting’s study The Total Economic Impact™ of GitLab Ultimate , which was commissioned by GitLab, software development team members save 90% of the time previously spent on annual auditing and compliance efforts after adopting GitLab's end-to-end platform. GitLab saves all of that time and effort by enabling automation through custom compliance frameworks that map multiple, overlapping controls from different standards and regulations into a single, unified structure. They then cascade automatically from the instance level to all subgroups and projects, ensuring consistent enforcement without manual configuration. Pipeline execution policies enforce compliance directly in CI/CD pipelines where development work happens. Rather than operating disparate governance, risk, and compliance tools, compliance validation occurs automatically as code moves through the pipeline. To make all of this easier, GitLab’s Compliance Center provides oversight through dashboards that show where projects fail to meet framework requirements — whether due to failed security scans or other control gaps. Complete audit trails also capture every code change with timestamps and attribution. And policy-as-code enforces security rules that can't be bypassed. When an auditor asks who changed what code and when, you have the answer instantly — without weeks spent manually gathering evidence. Every pipeline execution automatically generates compliance documentation, enabling teams to instantly prove adherence to requirements and quickly identify any control gaps. AI: Governance over guesswork This visibility across the entire security posture matters now more than ever. Artificial intelligence (AI) is changing how software gets built with many teams testing AI code generation tools to enable them to move faster. But higher education institutions are uniquely positioned to lead on a critical question: How do you adopt AI responsibly? Cornell University and Cal State Fullerton already are developing ethical frameworks for AI use, asking essential questions about transparency, explainability, and bias. The University of California San Diego is adapting its existing data governance framework — originally built for analytics platforms — to secure its on-premises AI assistants, ensuring the same access controls and approval workflows that protect institutional data now extend to AI-driven tools. Educational institutions understand that AI adoption requires more than just enabling new tools — it requires proper oversight and protection. The problem isn't AI itself. It's AI without guardrails integrated into development workflows. Most organizations haven't considered what secure AI development looks like — what governance is needed for AI-generated code, how to maintain visibility into what gets committed to repositories, or how to ensure the same rigor applies whether code comes from a human or AI. This is exactly where platform-level AI integration becomes essential. GitLab Duo Agent Platform goes beyond fragmented AI tools and coding assistants alone to provide an orchestration layer that integrates AI across the entire software development lifecycle. AI agents handle planning, testing, security remediation, and deployment tasks, while working alongside developers rather than just generating code on command. When security scans identify vulnerabilities, for example, AI agents explain findings, assess risks, and prioritize issues to reduce noise and accelerate mean time to recovery (MTTR). This platform approach ensures AI accelerates development without compromising the security standards and governance controls institutions require. The benefits extend beyond technical capabilities. Through GitLab's AI Transparency Center , institutions get clear documentation of data privacy protections, AI ethics principles, and vendor selection processes. This means schools can adopt AI tools while maintaining the governance standards they're developing institution-wide. AI will change how we build software. The question is whether institutions can do it with the same responsible approach they're bringing to AI adoption across campus. See results in your education environment The universities making real progress aren't adding more tools to manage complexity. They're consolidating onto platforms that prevent problems rather than just detecting them, creating visibility and automation across their development workflows. Forrester's The Total Economic Impact™ of GitLab Ultimate study found that a composite organization representative of interviewed customers reclaimed up to 305 hours per developer year through automated testing within a single interface, eliminating constant context switching between tools. New hires ramped to full productivity 75% faster — in 1.5 weeks instead of 1.5 months. Teams spend their time building rather than maintaining fragmented toolchains. Your institution can achieve similar results. Learn more about how GitLab Ultimate can help your institution deliver secure software faster while meeting compliance requirements. Talk to our team about platform approaches for higher education IT.",
+      "url": "https://stripe.com/payment-method/payto",
+      "title": "PayTo available in Australia",
+      "summary": "Businesses in Australia can now offer PayTo. Accept one-off and recurring direct debits with PayTo to get real-time payment confirmation and funds deposited into your Stripe balance instantly, 24 hours a day, every day of the year.",
       "published_ts": 1765756800,
-      "source_name": "GitLab Engineering",
+      "source_name": "Stripe Engineering Blog",
       "content_type": "technical"
     }
   ],
   "data_modeling_governance": [
     {
-      "url": "https://about.gitlab.com/blog/gitlab-18-7-advancing-ai-automation/",
-      "title": "GitLab 18.7: Advancing AI automation, governance, and developer experience",
-      "summary": "GitLab 18.7 delivers development, operations, and security capabilities that strengthen control, improve consistency, and build confidence as teams integrate AI further into their workflows. These improvements arrive as GitLab approaches a major milestone. GitLab Duo Agent Platform will reach general availability in January 2026 with our 18.8 release, pending we continue to meet the exceptionally high quality standards we set for ourselves in service to our customers worldwide across all industries. GitLab Duo Agent Platform's GA is designed to introduce a unified, governed way for organizations to orchestrate agentic AI across their software lifecycle. With foundational agents, custom agents, and automated flows working together inside GitLab, teams will be able to adopt agentic workflows that help accelerate work while staying aligned to organizational standards. At GA, we also plan to include expanded AI Catalog functionality, stronger administrative controls, reliability enhancements, and a flexible usage-based billing model designed to provide flexibility for agentic AI usage across many roles and projects. The 18.7 release adds important building blocks to support GitLab Duo Agent Platform’s upcoming GA. New automation features, stronger governance controls, and enhancements across security and pipeline authoring help teams streamline their work and lay the groundwork for an even more reliable agentic experience in 18.8 and beyond. On February 10, 2026, we will host a global event that brings our vision of GitLab as the intelligent orchestration platform to life, where software teams and their AI agents stay in flow. You will hear how customers are tackling the AI paradox in software delivery , see intelligent orchestration in action across DevSecOps workflows, and get a jump start on what this next chapter means for your own modernization journey. Reserve your spot to see how GitLab’s next chapter comes together. Here's what is new in 18.7: GitLab Duo Agent Platform As more teams bring AI into their development and security workflows, GitLab continues to focus on making adoption powerful and predictable. The updates in 18.7 strengthen the foundation for guided, governed AI experiences that will become fully realized when GitLab Duo Agent Platform reaches GA, as planned for 18.8. Custom Flows Custom Flows introduce a new way for teams to automate multistep workflows using YAML-defined sequences that orchestrate agents to complete repetitive development tasks. Custom Flows help eliminate manual effort for scenarios that follow predictable patterns — such as diagnosing and fixing failed pipelines, updating dependencies, or running policy checks when reviewers are assigned. Instead of handling these tasks interactively, teams can define flows that automatically trigger from GitLab events like mentions and assignments. This capability supports developers who want tailored automations for their own projects, as well as administrators who need consistent, organization-wide workflows for compliance and operational efficiency. SAST False Positive Detection Flow AI-powered false positive management for Static Application Security Testing (SAST) works to introduce a faster, more accurate way for teams to assess and act on potential false positives. GitLab now uses AI to help identify which findings may be false positives earlier in the review process, reducing the time developers and security teams spend triaging noise. Users can see an overview of how many vulnerabilities may warrant review, track their analysis progress, and dismiss false positives directly from the vulnerability report. Once dismissed, these findings stay dismissed across future pipelines and continue to reflect the correct dismissed status in merge request widgets. This assists with a consistent and reliable signal as code evolves and helps teams focus on real risks, streamline remediation, and cut down on unnecessary security review cycles. Custom Agent Versioning Custom Agent Versioning gives teams control over which version of an AI Catalog agent or flow they use in their projects. Instead of automatically inheriting updates from the creator, GitLab now pins each project to the exact version of the agent and flow enabled for the team. This helps prevent breaking changes, security risks, and workflow disruptions, especially in production pipelines or security-sensitive environments. Teams can upgrade when they choose, test new versions in staging before promoting them, and clearly see which version is running to avoid confusion. It also enables safer customization by letting users fork an agent at a specific version and evolve it independently. The result is a more predictable, stable, and secure way to adopt custom agents across development and CI/CD workflows. New Settings for Foundational Agents Admins now have the ability to turn foundational agents on or off, giving teams greater control over how AI is used across their organization. With this update, admins can enable or disable these agents at the instance or group level, choose default availability, and control how new agents are introduced while still providing access to the core agent. The result is more flexible AI adoption with the governance, consistency, and control enterprise teams need. Data Analyst Agent The Data Analyst Agent gives teams a simple way to explore GitLab data using natural language, automatically generating GitLab Query Language (GLQL)  queries, retrieving relevant information, and presenting clear insights without requiring dashboards or manual query writing. Users can analyze work volume, understand team activity, identify development trends, monitor issue and merge request status, and quickly discover work items by labels, authors, milestones, or other criteria. It also creates reusable GLQL queries that can be embedded anywhere GitLab Flavored Markdown is supported, making it easier to share findings and answer everyday questions about project activity directly within GitLab. Core DevOps Innovations with GitLab Duo Agent Platform are most effective when the underlying DevOps experience is equally streamlined and dependable. The improvements in 18.7 to core GitLab workflows help ensure that automation, pipelines, and reusable components operate with highest levels of clarity and consistency. Dynamic Input Selection in GitLab Pipelines Dynamic Input Selection in GitLab Pipelines introduces a more intuitive way to trigger pipelines through dynamic, cascading dropdown fields in the GitLab UI. This allows cross-functional teams to run pipelines without editing YAML or relying on developers, while ensuring that only valid, context-aware options are shown as they make selections. The feature supports complex workflows, assists with reducing misconfigured runs, and removes a key blocker for teams migrating from Jenkins Active Choice, helping organizations standardize their CI/CD processes entirely on GitLab. CI/CD Catalog Publication Guardrails Administrators of GitLab Self-Managed and GitLab Dedicated can now control which projects are allowed to publish components to the CI/CD Catalog. This new setting helps organizations maintain a curated, trusted ecosystem by ensuring only approved sources can add components. It strengthens governance for enterprise customers who want to preserve control over their CI/CD landscape while still enabling teams to discover and reuse sanctioned components. Platform Security As automation and pipeline workflows become more efficient, it remains essential that teams maintain strong visibility and control over how code changes meet organizational standards. The Platform Security update in 18.7 reinforces this balance by giving teams a more flexible way to introduce and refine policy guidance without interrupting delivery. Warn Mode for MR Approval Policies Warn Mode for MR Approval Policies allows violations to be surfaced without blocking merges, giving teams a lower-friction way to introduce or adjust policies while assessing their impact before full enforcement. It also supports a guidance-based approach, where developers can review or dismiss violations with all actions audited to help AppSec refine policy effectiveness. Beyond merge requests, violations already present or introduced into the default branch now appear with a visual badge in the Vulnerability Report , making it easier to identify and prioritize issues that break policy. Elevating how teams build, secure, and deliver software The 18.7 release is about strengthening the foundation for reliable, flexible automation across your GitLab environment. GitLab Premium and Ultimate users can start using these capabilities today on GitLab.com and self-managed environments, with availability for GitLab Dedicated customers planned for next month. GitLab Duo Agent Platform is currently in beta — enable beta and experimental features to experience how full-context AI can transform the way your teams build software. New to GitLab? Start your free trial and see why the future of development is AI-powered, secure, and orchestrated through the world’s most comprehensive DevSecOps platform. Note: Platform capabilities that are in beta are available as part of the GitLab Beta program. They are free to use during the beta period, and when generally available, they will be made available with a paid add-on option for GitLab Duo Agent Platform. Stay up to date with GitLab To make sure you’re getting the latest features, security updates, and performance improvements, we recommend keeping your GitLab instance up to date. The following resources can help you plan and complete your upgrade: Upgrade Path Tool – enter your current version and see the exact upgrade steps for your instance Upgrade Documentation – detailed guides for each supported version, including requirements, step-by-step instructions, and best practices By upgrading regularly, you’ll ensure your team benefits from the newest GitLab capabilities and remains secure and supported. For organizations that want a hands-off approach, consider GitLab’s Managed Maintenance service . With Managed Maintenance, your team stays focused on innovation while GitLab experts keep your Self-Managed instance reliably upgraded, secure, and ready to lead in DevSecOps. Ask your account manager for more information. This blog post contains \"forward‑looking statements\" within the meaning of Section 27A of the Securities Act of 1933, as amended, and Section 21E of the Securities Exchange Act of 1934. Although we believe that the expectations reflected in these statements are reasonable, they are subject to known and unknown risks, uncertainties, assumptions and other factors that may cause actual results or outcomes to differ materially. Further information on these risks and other factors is included under the caption \"Risk Factors\" in our filings with the SEC. We do not undertake any obligation to update or revise these statements after the date of this blog post, except as required by law.",
-      "published_ts": 1766016000,
-      "source_name": "GitLab Engineering",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.dataiku.com/stories/blog/dataiku-is-a-gartner-peer-insights-customers-choice",
-      "title": "Dataiku Is a Gartner Peer Insights Customers’ Choice",
-      "summary": "More than 700 companies around the world are getting concrete value from Dataiku. With Dataiku, the Universal AI Platform, they are uniting their teams, data, technology, and governance in one central place to not only survive — but thrive — in the era of Generative AI.",
-      "published_ts": 1766002636,
-      "source_name": "Dataiku Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.rudderstack.com/blog/holistic-data-governance-customer-data-quality-compliance",
-      "title": "Holistic data governance: The key to customer data quality and compliance",
-      "summary": "See how holistic data governance improves customer data quality and compliance, and how RudderStack helps enforce tracking plans, PII controls, and monitoring.",
-      "published_ts": 1765911717,
-      "source_name": "Rudderstack Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/life-sciences-ai-predictions-2026",
-      "title": "The Future of AI in Life Sciences: 2026 Predictions",
-      "summary": "Get a look on what is next for AI in life sciences in 2026, including documentation/regulatory automation, semantic layers and data virtualization",
-      "published_ts": 1765904400,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    }
-  ],
-  "etl_orchestration": [
-    {
       "url": "https://www.getdbt.com/blog/whats-new-in-dbt-december-2025",
       "title": "What’s new in dbt - December 2025",
       "summary": "Catch up on the latest in dbt: from Fusion and AI updates to Core 1.11 previews and new partner integrations.",
       "published_ts": 1766186700,
-      "source_name": "dbt Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.getdbt.com/blog/dbt-labs-expands-iso-certifications",
-      "title": "dbt Labs expands ISO certifications",
-      "summary": "dbt Labs expands ISO certifications with new standards for cloud security, privacy protection, and AI governance.",
-      "published_ts": 1766175900,
       "source_name": "dbt Blog",
       "content_type": "technical"
     },
@@ -319,6 +301,32 @@
       "content_type": "technical"
     },
     {
+      "url": "https://www.rudderstack.com/blog/holistic-data-governance-customer-data-quality-compliance",
+      "title": "Holistic data governance: The key to customer data quality and compliance",
+      "summary": "See how holistic data governance improves customer data quality and compliance, and how RudderStack helps enforce tracking plans, PII controls, and monitoring.",
+      "published_ts": 1765911717,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/databricks-lakehouse-data-modeling-myths-truths-and-best-practices",
+      "title": "Databricks Lakehouse Data Modeling: Myths, Truths, and Best Practices",
+      "summary": "Data warehouses have long been prized for their structure and rigor, and yet many...",
+      "published_ts": 1765819011,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/data-privacy-compliance",
+      "title": "Data privacy compliance: Principles, regulations, & best practices",
+      "summary": "Understand data privacy compliance regulations and best practices to ensure trust in 2025",
+      "published_ts": 1765813275,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    }
+  ],
+  "etl_orchestration": [
+    {
       "url": "https://airbyte.com/blog/ai-configured-connections",
       "title": "AI-Configured Connections in Airbyte | Airbyte",
       "summary": "AI-configured connections in Airbyte automatically set up data pipelines using intelligent schema detection and best-practice configurations.",
@@ -335,19 +343,19 @@
       "content_type": "technical"
     },
     {
+      "url": "https://dagster.io/blog/dagster-plus-now-available-in-the-eu",
+      "title": "https://dagster.io/blog/dagster-plus-now-available-in-the-eu",
+      "summary": "We're thrilled to announce that Dagster+ has arrived in Europe! After hearing from so many organizations who need their Dagster control plane within EU boundaries for compliance and data residency requirements, we’re excited make Dagster+ EU available! With this launch, your control plane, metadata,",
+      "published_ts": 1765982406,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
       "url": "https://dagster.io/blog/orchestrating-nanochat-deploying-the-model",
       "title": "Deploying Your Dagster-Trained Model: Serving NanoChat on RunPod Endpoints",
       "summary": "Discover how to package, deploy, and serve your trained NanoChat-Dagster model as a production-ready inference endpoint using RunPod.",
       "published_ts": 1765918387,
       "source_name": "Dagster Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.uber.com/blog/how-uber-indexes-streaming-data-with-pull-based-ingestion-in-opensearch/",
-      "title": "How Uber Indexes Streaming Data with Pull-Based Ingestion in OpenSearch™",
-      "summary": "Discover how Uber uses OpenSearch™’s streaming ingestion architecture for powerful search, and learn about our contributions to a pull-based ingestion framework in the OpenSearch project.",
-      "published_ts": 1765893600,
-      "source_name": "Uber Engineering Blog",
       "content_type": "technical"
     },
     {
@@ -359,64 +367,40 @@
       "content_type": "technical"
     },
     {
-      "url": "https://airbyte.com/blog/ephemeral-testing-with-generative-ai-part-two",
-      "title": "Unlocking Ephemeral Testing with Generative AI: Part 2 | Airbyte",
-      "summary": "Unlock how generative AI powers scalable ephemeral testing. Explore automation strategies, real-time environments, and improved software quality in Part 2.",
-      "published_ts": 1765843200,
-      "source_name": "Airbyte Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/how-socure-achieved-50-cost-reduction-by-migrating-from-self-managed-spark-to-amazon-emr-serverless/",
-      "title": "How Socure achieved 50% cost reduction by migrating from self-managed Spark to Amazon EMR Serverless",
-      "summary": "Socure is one of the leading providers of digital identity verification and fraud solutions. Socure’s data science environment includes a streaming pipeline called Transaction ETL (TETL), built on OSS Apache Spark running on Amazon EKS. TETL ingests and processes data volumes ranging from small to large datasets while maintaining high-throughput performance. In this post, we show how Socure was able to achieve 50% cost reduction by migrating the TETL streaming pipeline from self-managed spark to Amazon EMR serverless.",
-      "published_ts": 1765826611,
-      "source_name": "Redshift / AWS Big Data",
+      "url": "https://about.gitlab.com/blog/taming-tool-sprawl-how-to-boost-university-it-productivity/",
+      "title": "Taming tool sprawl: How to boost university IT productivity",
+      "summary": "When Dr. James Quilty began developing engineering project management courses at Victoria University of Wellington's School of Engineering and Computer Science, he didn't find an organized system for delivering course content. Instead, he was faced with chaos. The problem was that back in 2015 learning materials were scattered across a dozen different tools, like the Blackboard platform, customized Wiki pages, personal websites, and shared Google Docs. On top of that, students were left to choose their own tools for coursework. All of this led to a constant state of confusion. As if that weren’t enough, few of these disparate systems provided proper version history or reliable issue tracking. This all-too-familiar lack of standardization was creating massive headaches for both lecturers and students. \"Information was fragmented across multiple files, multiple formats — sitting often on file systems, not necessarily under good version control,\" says Quilty, who is now program director for engineering at the New Zealand university. After consolidating on GitLab Self-Managed Ultimate in 2017, Victoria University saw 483% growth in student users by 2021. They also added 35 GitLab-enabled courses and now host more than 8,000 projects. The university also deployed GitLab as a unified DevSecOps platform for academic coursework, replacing what had become a fragmented and complicated toolchain. More importantly, they've redirected faculty time from administration to actual education. This pattern isn't unique. Across higher education, IT teams struggle with the same tool sprawl — multiple tools and incompatible systems that lead to hours lost to context switching and administering disparate and costly tools. Simplifying how teams build and deliver software is the answer to this widespread problem. The teams making real progress are reducing complexity instead of creating it. Facing the complexity problem Higher education IT teams are faced with managing aging infrastructure, legacy systems, and resource constraints that force difficult tradeoffs with every technology decision they have to make. Development workflows exist in silos since many departments use different version control systems, CI/CD tools, and security scanners. That means teams struggle to collaborate on cross-functional projects because they're working with incompatible toolchains and a lack of shared visibility. Legacy technology compounds these problems. Many institutions run development environments that are outdated and incompatible with modern DevSecOps practices. But replacing them isn't realistic when budgets are tight and IT staff are already stretched thin. To take on these problems, institutions need to modernize, but because of administrative processes, budget constraints, and the reality of managing critical systems, they have to do it in phases, not overnight. For instance, some workloads may move to the cloud while others remain on-premises. A research department , for instance, might shift large datasets off-site while central IT functions stay in-house. Organizations need the flexibility to be able to do that, and that’s what they get with GitLab Ultimate, the enterprise-ready DevSecOps platform that delivers the same capabilities whether you deploy on GitLab.com or self-host on your own infrastructure: on-premises servers, data centers, or cloud providers, including AWS, GCP, Azure, or even multi-cloud. Self-hosted deployments include all features, including air-gapped support for sensitive environments. This means, with GitLab Ultimate , institutions can modernize on their own timeline without abandoning governance requirements or forcing wholesale infrastructure changes. Moving from manual compliance to automated enforcement IT teams also have to work with regulatory mandates and that adds another layer of complexity. Student privacy requirements, research grant stipulations, and institutional security policies all demand audit trails and governance controls. For institutions supporting U.S. Department of Defense research or contractors, CMMC 2.0 compliance requirements add stringent cybersecurity controls based on NIST SP 800-171. Meeting these obligations while modernizing traditionally meant manually documenting everything — a process that didn't scale easily. In conversations with team members from educational institutions at events like EDUCAUSE we've learned it's all too common for dedicated compliance staff to spend the majority of their time gathering evidence for audits, instead of actually improving security. Not building better software. Just proving that policies were followed. This administrative burden extends to development teams, as well. According to Forrester Consulting’s study The Total Economic Impact™ of GitLab Ultimate , which was commissioned by GitLab, software development team members save 90% of the time previously spent on annual auditing and compliance efforts after adopting GitLab's end-to-end platform. GitLab saves all of that time and effort by enabling automation through custom compliance frameworks that map multiple, overlapping controls from different standards and regulations into a single, unified structure. They then cascade automatically from the instance level to all subgroups and projects, ensuring consistent enforcement without manual configuration. Pipeline execution policies enforce compliance directly in CI/CD pipelines where development work happens. Rather than operating disparate governance, risk, and compliance tools, compliance validation occurs automatically as code moves through the pipeline. To make all of this easier, GitLab’s Compliance Center provides oversight through dashboards that show where projects fail to meet framework requirements — whether due to failed security scans or other control gaps. Complete audit trails also capture every code change with timestamps and attribution. And policy-as-code enforces security rules that can't be bypassed. When an auditor asks who changed what code and when, you have the answer instantly — without weeks spent manually gathering evidence. Every pipeline execution automatically generates compliance documentation, enabling teams to instantly prove adherence to requirements and quickly identify any control gaps. AI: Governance over guesswork This visibility across the entire security posture matters now more than ever. Artificial intelligence (AI) is changing how software gets built with many teams testing AI code generation tools to enable them to move faster. But higher education institutions are uniquely positioned to lead on a critical question: How do you adopt AI responsibly? Cornell University and Cal State Fullerton already are developing ethical frameworks for AI use, asking essential questions about transparency, explainability, and bias. The University of California San Diego is adapting its existing data governance framework — originally built for analytics platforms — to secure its on-premises AI assistants, ensuring the same access controls and approval workflows that protect institutional data now extend to AI-driven tools. Educational institutions understand that AI adoption requires more than just enabling new tools — it requires proper oversight and protection. The problem isn't AI itself. It's AI without guardrails integrated into development workflows. Most organizations haven't considered what secure AI development looks like — what governance is needed for AI-generated code, how to maintain visibility into what gets committed to repositories, or how to ensure the same rigor applies whether code comes from a human or AI. This is exactly where platform-level AI integration becomes essential. GitLab Duo Agent Platform goes beyond fragmented AI tools and coding assistants alone to provide an orchestration layer that integrates AI across the entire software development lifecycle. AI agents handle planning, testing, security remediation, and deployment tasks, while working alongside developers rather than just generating code on command. When security scans identify vulnerabilities, for example, AI agents explain findings, assess risks, and prioritize issues to reduce noise and accelerate mean time to recovery (MTTR). This platform approach ensures AI accelerates development without compromising the security standards and governance controls institutions require. The benefits extend beyond technical capabilities. Through GitLab's AI Transparency Center , institutions get clear documentation of data privacy protections, AI ethics principles, and vendor selection processes. This means schools can adopt AI tools while maintaining the governance standards they're developing institution-wide. AI will change how we build software. The question is whether institutions can do it with the same responsible approach they're bringing to AI adoption across campus. See results in your education environment The universities making real progress aren't adding more tools to manage complexity. They're consolidating onto platforms that prevent problems rather than just detecting them, creating visibility and automation across their development workflows. Forrester's The Total Economic Impact™ of GitLab Ultimate study found that a composite organization representative of interviewed customers reclaimed up to 305 hours per developer year through automated testing within a single interface, eliminating constant context switching between tools. New hires ramped to full productivity 75% faster — in 1.5 weeks instead of 1.5 months. Teams spend their time building rather than maintaining fragmented toolchains. Your institution can achieve similar results. Learn more about how GitLab Ultimate can help your institution deliver secure software faster while meeting compliance requirements. Talk to our team about platform approaches for higher education IT.",
+      "published_ts": 1765756800,
+      "source_name": "GitLab Engineering",
       "content_type": "technical"
     }
   ],
   "hors_sujet": [],
   "lake_storage_formats": [
     {
-      "url": "https://aws.amazon.com/blogs/big-data/create-and-update-apache-iceberg-tables-with-partitions-in-the-aws-glue-data-catalog-using-the-aws-sdk-and-aws-cloudformation/",
-      "title": "Create and update Apache Iceberg tables with partitions in the AWS Glue Data Catalog using the AWS SDK and AWS CloudFormation",
-      "summary": "In this post, we show how to create and update Iceberg tables with partitions in the Data Catalog using the AWS SDK and AWS CloudFormation.",
-      "published_ts": 1766092963,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/accelerate-apache-hive-read-and-write-on-amazon-emr-using-enhanced-s3a/",
-      "title": "Accelerate Apache Hive read and write on Amazon EMR using enhanced S3A",
-      "summary": "In this post, we demonstrate how Apache Hive on Amazon EMR 7.10 delivers significant performance improvements for both read and write operations on Amazon S3.",
-      "published_ts": 1765835733,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/amazon-emr-hbase-on-amazon-s3-transitioning-to-emr-s3a-with-comparable-emrfs-performance/",
-      "title": "Amazon EMR HBase on Amazon S3 transitioning to EMR S3A with comparable EMRFS performance",
-      "summary": "Starting with version 7.10, Amazon EMR is transitioning from EMR File System (EMRFS) to EMR S3A as the default file system connector for Amazon S3 access. This transition brings HBase on Amazon S3 to a new level, offering performance parity with EMRFS while delivering substantial improvements, including better standardization, improved portability, stronger community support, improved performance through non-blocking I/O, asynchronous clients, and better credential management with AWS SDK V2 integration. In this post, we discuss this transition and its benefits.",
-      "published_ts": 1765833604,
-      "source_name": "Redshift / AWS Big Data",
+      "url": "https://duckdb.org/2025/12/16/iceberg-in-the-browser.html",
+      "title": "Iceberg in the Browser",
+      "summary": "DuckDB is the first end-to-end interface to Iceberg REST Catalogs within a browser tab. You can now read and write tables in Iceberg catalogs without needing to manage any infrastructure – directly from your browser!",
+      "published_ts": 1765843200,
+      "source_name": "DuckDB Blog",
       "content_type": "technical"
     }
   ],
   "news": [
     {
-      "url": "https://engineering.fb.com/2025/12/19/data-infrastructure/drp-metas-root-cause-analysis-platform-at-scale/",
-      "title": "DrP: Meta’s Root Cause Analysis Platform at Scale",
-      "summary": "Incident investigation can be a daunting task in today’s digital landscape, where large-scale systems comprise numerous interconnected components and dependencies DrP is a root cause analysis (RCA) platform, designed by Meta, to programmatically automate the investigation process, significantly reducing the mean time to resolve (MTTR) for incidents and alleviating on-call toil Today, DrP is used [...] Read More... The post DrP: Meta’s Root Cause Analysis Platform at Scale appeared first on Engineering at Meta .",
-      "published_ts": 1766165713,
-      "source_name": "Meta Engineering",
+      "url": "https://www.getdbt.com/blog/dbt-labs-expands-iso-certifications",
+      "title": "dbt Labs expands ISO certifications",
+      "summary": "dbt Labs expands ISO certifications with new standards for cloud security, privacy protection, and AI governance.",
+      "published_ts": 1766175900,
+      "source_name": "dbt Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://www.databricks.com/blog/welcoming-stately-cloud-databricks-investing-foundation-scalable-ai-applications",
-      "title": "Welcoming Stately Cloud to Databricks: Investing in the Foundation for Scalable AI Applications",
-      "summary": "Today, we are thrilled to welcome the Stately Cloud team to Databricks. This transaction...",
-      "published_ts": 1766158639,
-      "source_name": "Databricks Blog",
+      "url": "https://blog.octo.com/gemini-veut-il-la-peau-du-blog-octo",
+      "title": "Gemini veut-il la peau du blog OCTO ?",
+      "summary": "Gemini cite notre blog mais menace de détourner nos lecteurs. Faut-il arrêter d'écrire ? Le blog OCTO doit évoluer. L'avenir ? Un contenu hybride où l'expert humain guide le LLM par la maïeutique (l'art de la question) et partage ces conversations de haute valeur.",
+      "published_ts": 1766153590,
+      "source_name": "OCTO Talks!",
       "content_type": "technical"
     },
     {
@@ -428,19 +412,11 @@
       "content_type": "technical"
     },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/modernize-apache-spark-workflows-using-spark-connect-on-amazon-emr-on-amazon-ec2/",
-      "title": "Modernize Apache Spark workflows using Spark Connect on Amazon EMR on Amazon EC2",
-      "summary": "In this post, we demonstrate how to implement Apache Spark Connect on Amazon EMR on Amazon Elastic Compute Cloud (Amazon EC2) to build decoupled data processing applications. We show how to set up and configure Spark Connect securely, so you can develop and test Spark applications locally while executing them on remote Amazon EMR clusters.",
-      "published_ts": 1766093387,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.databricks.com/blog/top-10-questions-you-asked-about-databricks-clean-rooms-answered",
-      "title": "Top 10 Questions You Asked About Databricks Clean Rooms, Answered",
-      "summary": "Data collaboration is the backbone of modern AI innovation, especially as organizations...",
-      "published_ts": 1766075400,
-      "source_name": "Databricks Blog",
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/modern-marketing-data-stack-deloitte",
+      "title": "Deloitte on AI Agents, Data Strategy, and What Comes Next",
+      "summary": "Preview key themes from 2026 Modern Marketing Data Stack, plus Deloitte’s take on data strategy, AI agents, and the guardrails marketers should consider.",
+      "published_ts": 1766092020,
+      "source_name": "Snowflake Blog",
       "content_type": "technical"
     },
     {
@@ -449,6 +425,123 @@
       "summary": "From big tech to independent consulting: the art of professional brand building and communication. Featuring Ben Rogojan (aka the Seattle Data Guy).",
       "published_ts": 1766073650,
       "source_name": "Data Engineer Things",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/quand-les-methodes-classiques-ne-suffisent-plus--reinventer-la-facon-dont-les-organisations-pensent-leur-futur",
+      "title": "Quand les méthodes classiques ne suffisent plus : réinventer la façon dont les organisations pensent leur futur",
+      "summary": "Comment dépasser les silos et construire une vision stratégique partagée à l’échelle d’organisations complexes ? Cet article s’appuie sur les travaux de R and amp;D et les retours terrain d’OCTO pour montrer comment LEGO® Serious Play®, le design et l’IA générative se combinent pour passer de la vision à l’action.",
+      "published_ts": 1766047789,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://stripe.com/blog/stripe-atlas-startups-in-2025-year-in-review",
+      "title": "Stripe Atlas startups in 2025: Year in review",
+      "summary": "2025 was a breakout year for early-stage startups, as founders launched more companies and generated revenue faster than ever. Three shifts stand out: customer bases are more international than ever, time-to-revenue has compressed, and founders are turning their attention to AI agents over AI infrastructure or copilots.",
+      "published_ts": 1766016000,
+      "source_name": "Stripe Engineering Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/dataiku-is-a-gartner-peer-insights-customers-choice",
+      "title": "Dataiku Is a Gartner Peer Insights Customers’ Choice",
+      "summary": "More than 700 companies around the world are getting concrete value from Dataiku. With Dataiku, the Universal AI Platform, they are uniting their teams, data, technology, and governance in one central place to not only survive — but thrive — in the era of Generative AI.",
+      "published_ts": 1766002636,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.fb.com/2025/12/17/virtual-reality/meta-ray-ban-display-from-zero-to-polish/",
+      "title": "How We Built Meta Ray-Ban Display: From Zero to Polish",
+      "summary": "We’re going behind the scenes of the Meta Ray-Ban Display, Meta’s most advanced AI glasses yet. In a previous episode we met the team behind the Meta Neural Band, the EMG wristband packaged with the Ray-Ban Display. Now we’re delving into the glasses themselves. Kenan and Emanuel, from Meta’s Wearables org, join Pascal Hartig on [...] Read More... The post How We Built Meta Ray-Ban Display: From Zero to Polish appeared first on Engineering at Meta .",
+      "published_ts": 1765980017,
+      "source_name": "Meta Engineering",
+      "content_type": "rex"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/ovhcloud-startup-program-fast-forward-blockchain-and-web3-accelerator-a-resounding-success/",
+      "title": "OVHcloud Startup Program Fast Forward Blockchain and Web3 Accelerator: A Resounding Success",
+      "summary": "We are thrilled to announce the successful completion of the OVHcloud Startup Program Fast Forward Blockchain and Web3 accelerator, a 10-week program designed to equip founders with the go-to-market, technical guidance, business strategy, mentoring, and investor readiness support needed to thrive in the blockchain and Web3 ecosystem. It culminated in fine style at a Showcase […]",
+      "published_ts": 1765942752,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/announcing-winners-inaugural-databricks-free-edition-hackathon",
+      "title": "Announcing the winners of the inaugural Databricks Free Edition Hackathon",
+      "summary": "We are excited to announce the winners of the inaugural Databricks Free Edition Hackathon...",
+      "published_ts": 1765915200,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.zenika.com/2025/12/15/hacktoberfest-25-ledition-zenika-open-source/",
+      "title": "Hacktoberfest 25 : l’édition Zenika Open Source",
+      "summary": "La 11ème édition de l’Hacktoberfest vient de se terminer ! Fidèle aux éditions précédentes (2018, 2019, 2020, 2021, 2022, 2023 et 2024), Zenika était une nouvelle fois mobilisé tout au long du mois d’octobre pour cet évènement.",
+      "published_ts": 1765812682,
+      "source_name": "Zenika Tech Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/radar-2025-year-in-review-internet-services/",
+      "title": "ChatGPT's rivals, Kwai's quiet rise: the top Internet services of 2025",
+      "summary": "AI competition intensified in 2025 as ChatGPT gained strong challengers. Instagram climbed, X declined, and platforms like Shopee, Temu, and Kwai reshaped global Internet usage. Our 2025 DNS data shows how Internet patterns evolved.",
+      "published_ts": 1765807200,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-248",
+      "title": "Data Engineering Weekly #248",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1765764013,
+      "source_name": "Data Engineering Weekly",
+      "content_type": "technical"
+    }
+  ],
+  "news_general": [],
+  "python_analytics": [
+    {
+      "url": "https://eng.lyft.com/from-python3-8-to-python3-10-our-journey-through-a-memory-leak-1fd9b43cc01e?source=rss----25cd379abb8---4",
+      "title": "From Python3.8 to Python3.10: Our Journey Through a Memory Leak",
+      "summary": "Image generated with ChatGPT (OpenAI), 2025. Intro When working with Python, memory management often feels like a solved problem. The garbage collector quietly does its job, and unlike C or C++, we rarely think about malloc or free. This doesn’t mean that there are no memory leaks in Python. Reference cycles, unreleased resources like connection pooling, global caches, etc can slowly inflate your process’s memory footprint. You might not notice it at first, until your worker starts OOM-ing, latency creeps up, or container restarts become mysteriously frequent. In this post, we’ll share the story of a real-world memory leak we encountered during a Python upgrade — how we discovered it, the tools and techniques we used to investigate, and the lessons we learned. What happened after upgrading to Python 3.10? Back in the summer of 2024, we had an initiative at Lyft to upgrade all of our Python services from v3.8 to 3.10 as v3.8 was scheduled to be EoL by the end of 2024. You can find more details on how our awesome Backend Foundations team at Lyft does Python upgrade across hundreds of repos at scale here . The upgrade involved two phases: the first phase was to upgrade all the dependencies to be Python 3.10 compatible, and the second phase was to upgrade the services to Python 3.10. The dependency upgrades went smoothly for all services and then the phase to upgrade all services to Python 3.10 rolled out. While all services were running Python 3.10 smoothly, there was one service for which the upgrade in the test environment caused a flurry of latency spikes, resulting in timeouts for downstream services. Increasing 5xx caused by timeouts after upgrading to Python 3.10 After profiling the APIs with increased latency with stats, we found that the source of latency were repository queries to the dynamo tables. Specifically, we had pynamodb based repository queries which would spin up a bunch of greenlets to fetch data from multiple tables and combine the result which was showing increased timeouts. The individual queries themselves were fine; however, it was the thread join which took the longest time causing the worker to timeout (default = 30 seconds). Individual Dynamo queries taking < 100 ms to finish Gevent thread join takes 30 secs The other interesting thing we found was memory consumption slowly creeping up with time in all of the pods. Memory usage % of all pods At this point, we weren’t sure if there was something up with gevent/greenlet causing the memory leak or the memory leak causing the latency since decreased memory availability can cause increasing page fetches from the disk. We first checked if the gevent monitoring thread detected any event loop blocks, which could potentially cause these timeouts. We then pivoted to find out the root cause of the memory leak. Fortunately, Lyft has an internal library which can help profile memory which is based on tracemalloc . Memory profiling tool The Lyft memory profiling tool is based on tracemalloc . To capture the memory trace for a given gunicorn process, we registered the worker process to listen to USR2 signal during the application initialization phase. # app/__init__.py MemoryProfiler().register_handlers() # mem_profiler.py pseudo code class MemoryProfiler: def __init__(self) -> None: self._state_machine = self._profiling_state_machine() def register_handlers(self) -> None: # Register gunicorn worker to listen to USR2 to dump traces signal.signal(signal.SIGUSR2, self.handle_signal) def handle_signal(self, signum: signal.Signals, frame: FrameType) -> None: next(self._state_machine) def _profiling_state_machine(self) -> Generator[None, None, None]: while True: try: self.start_tracing() # tracemalloc.start() self.memory_dump() # Create snapshot1 yield self.memory_dump() # Create snaphot2,compare with snapshot1, and dump the difference in a file finally: if tracemalloc.is_tracing(): tracemalloc.stop() Let’s start the tracing! Ok, now that we had the memory profiler setup, we are ready for some tracing to find the source of the leak. To start the tracing, we send USR2 signal to the gunicorn process in the K8s pod to start tracing and send the signal again after some time interval to capture the stack trace with highest memory usage. ps aux Initial process list before sending USR2 signal Now, we will send a USR2 signal to worker with pid 12 kill -USR2 12 Upon checking the process list again…. ps aux Tracing killing the gunicorn worker with PID=12 … we observed that the gunicorn process we planned to trace got killed 🙁 It took several hours of debugging and a journey back to one of my favorite class to find the root of the issue — preload . To understand why preload caused the process to be killed, we first need to understand how gunicorn works. Gunicorn Gunicorn works on the pre-fork model. There is a leader process which forks a bunch of workers. There are two ways to fork the workers: No Preload Gunicorn forked workers with no preload When the leader process forks a worker, the worker has its own application code. This results in the worker process having a larger memory footprint than the leader. smem -a - sort=pid -k Service with no preload: Worker PSS mem = ~203MB With Preload Gunicorn forked workers with preload Preload is a memory optimization based on the concept of copy-on-write . Essentially, the workers share the imports and application code with the leader and only modified pages are written to the worker’s memory. smem -a - sort=pid -k Service with preload: Worker PSS mem reduced to ~41MB!! So how does preload play a role with USR2 signal killing the process? If you remember, we registered the signal during the app initialization by calling register_handlers(). # app/__init__.py MemoryProfiler().register_handlers() # mem_profiler.py class MemoryProfiler: def register_handlers(self) -> None: # Register gunicorn worker to listen to USR2 to dump traces signal.signal(signal.SIGUSR2, self.handle_signal) Since the app had preload=True, only the leader process was registering the USR2 signal to handle the tracing. The worker process did not register due to copy-on-write and that causes any kill -USR2 to actually kill the process! Let’s start the tracing again (with no preload)! Now that we have figured out that preload caused the process to be killed, we turn off the preload option and start the tracing again. ps aux Initial process list before sending USR2 signal kill -USR2 12 Successful USR2 signal not killing the gunicorn worker The worker does not get killed! We created a script which iterates through all the K8s pods and sends a USR2 signal to all the workers to start the tracing and resends the signal to stop the tracing after a certain time interval. The trace had a lot of false positives since it collects dumps which may not necessarily be the source of the leak, but have not been garbage collected yet. Root causing The most interesting (and common) memory dump trace after sifting through hundreds of them was the following: Stack trace dump from memory profiler If you remember the initial conclusion we had with the following graph, we knew that the increase in timeouts had something to do with pynamodb and gevent/greenlets since we saw thread joins taking a long time: Our initial observation of gevent thread join takes 30 secs The stack trace combined with the graph above, narrowed down the issue to pynamo/botocore. After digging online, we found the following issue with urllib3 v1.26.16 . Essentially, in a highly concurrent environment using gevent , connections were not being returned to the pool which caused the pool to sit at its max size and block further requests. This particular stack trace confirmed our suspicion: Stack trace showing botocore/urllib3/connectionpool The root cause of the issue was some incompatibility between weakref.finalize and gevent’s monkey patching causing non-deterministic deadlock which made the issue hard to reproduce. The immediate fix was to downgrade the urllib3 version to 1.26.15 , after which the timeouts and the memory leak were gone!! The actual fix which ensures urllib3 connection pooling is cooperative was released in April 2025 and we have seen no issues upgrading both gevent to v25.4.1 as well as urllib3 to 1.26.16+. It is unclear though why the Python version upgrade exposed the issue. In fact, urllib3 upgrade was not part of the dependency upgrade we had done to prepare for the Python 3.10 upgrade! We had actually been running Python 3.8 with urllib v1.26.16 for about a year without any problem. Ironically, we had upgraded to v1.26.16 specifically because it logged the total connections whenever connection pools were full. Tip If you run into memory leaks which are affecting the live production system, you can use gunicorn’s max-request settings which recycles the worker processes after N requests. This ensures your process or container does not run into OOM. While this helps mitigate the issue, it is critical to continue investigating the source of the memory leak. Gevent monitoring thread has an option to print trace for greenlets which exceed a certain memory threshold. While I have personally never tried this, it could help find objects which are holding large amounts of memory, but not necessarily the source of a leak. Closing Notes There is no silver bullet to debugging memory leaks ; it is a hard issue to debug them. There a few things you can look for eg. unbounded global caches, unreleased resources tied to database/network pooling, recently upgraded libraries, etc. If you check the actual gevent/urllib3 issue , none of them talked about memory leaks, only timeouts. We just happened to run into a memory leak and try to find the root cause of it 😀 Lyft is hiring! If you’re passionate about efficient database connection management, visit Lyft Careers to see our openings. From Python3.8 to Python3.10: Our Journey Through a Memory Leak was originally published in Lyft Engineering on Medium, where people are continuing the conversation by highlighting and responding to this story.",
+      "published_ts": 1765827061,
+      "source_name": "Lyft Engineering",
+      "content_type": "rex"
+    },
+    {
+      "url": "https://medium.com/walmartglobaltech/keeping-java-as-the-core-python-to-lead-agentic-systems-e2960693e1cd?source=rss----905ea2b3d4d1---4",
+      "title": "Keeping Java as the Core, Python to Lead Agentic Systems",
+      "summary": "We’ve been a Java shop for years, and now agentic AI demands us to rethink. How I got here? I’ve been in the Java world for more than 30 years. Java has been my default answer to “what should we build this in?” for most of my career. I’ve seen it grow from applets and early web apps to large-scale enterprise systems, microservices, and cloud-native platforms. I’ve loved Java and still do. It has given me a solid, safe, and scalable way to build systems that actually run in production . For most of my career, this mental model worked: New system? Java New service? Java Something serious, important, enterprise? Java Then, earlier this year, I stepped into the agentic AI ecosystem and that “Java first” instinct started working against me! When “Java first” started to hurt? I tried to stay in my comfort zone. I tried. I built my first MCP server blueprint using Spring Framework (org.springframework.ai) around May, 2025 (early release), when everything in this space was just geting started. I built an early local AI agent using a Java with google ADK to wire tools and tasks together. On paper, it looked great: 1. Java 2. Spring 3. Strong typing 4. Familiar tooling But in practice, it felt like I was constantly swimming upstream : More glue code than I wanted More boilerplate More “why is this so hard?” moments More time fighting infrastructure instead of experimenting with AI behavior That’s when I realized: I hadn’t hit a wall because Java is “bad”. I hit a wall because agentic AI is a different kind of work than what we historically do in Java. What actually changed with agentic AI? Speed and first-class support In the LLM / agent ecosystem, almost everything shows up in Python first: New libraries New patterns New evaluation frameworks Community research code, tutorials, etc. If you want to try an idea today , chances are: The official examples is in Python The reference implementation is in Python The community discussion assumes Python In Java, I kept finding myself in DIY mode : “There’s a Python example… ok, now let me re-create the entire stack in Java, adjust types, wiring, configs, and hope it behaves the same.” That’s not where you want to spend your time when everything in AI is changing weekly. Experimentation vs. stability Traditional Java enterprise systems optimize for stability : 1. Well-defined interfaces 2. Strict contracts 3. Long-lived services 4. Strong governance and change control Agentic AI optimizes for experimentation : 1. Prompts change frequently (sometimes daily) 2. You add/remove tools 3. You try new reasoning flows 4. You swap models or providers to see what works better. Java and Spring are fantastic for long-lived, stable, governed microservices . They are not naturally optimized for the messy, “try 10 ideas and keep 1” world of early AI experimentation. For that kind of work, you want: Less ceremony Faster iteration Shorter feedback loops That’s exactly where Python shines. Agent code is mostly orchestration, not the real business logic In the traditional world, the code that does the work lives inside your Java services: Business rules Validations Shorter feedback loops Domain models Transactions In the AI agent world, the heavy lifting shifts: The LLM does the reasoning, planning, and language understanding. Tools and data sources do the actual work (APIs, DB queries, searches, actions). The agent itself becomes mostly orchestration and glue : “Take user intent → figure out what tools to call → call them in the right order → reason about the responses → decide the next step.” This kind of glue code: Changes frequently Lives close to prompts and model configs Is easier to express in a concise, dynamic language Domain models Transactions Writing this orchestration in Python is simply much faster than doing it in Java. MCP servers are adapters, not full business systems When I wrote my first MCP server blueprint in Spring, I instinctively treated it like a typical enterprise service: Layers DTOs Configuration Dependency injection The whole Java “production-grade” toolkit! But that’s not what an MCP server really is. An MCP server is basically an adapter : Receive a simple, structured request from the model Call an existing service or database Return a clean, structured response back That’s it. For this kind of lightweight adapter work, Python is usually a better fit: Less boilerplate Faster to write and publish Easier to iterate as your tools and schemas evolve A Let’s take scenario, two approaches Scenario: “ Given a customer’s request, decide whether to approve an order, check credit, apply discounts, and notify. ” If I build this purely in Java I’m tempted to: 1. Design a full microservice (or several) 2. Define DTOs, interfaces, and controller endpoints 3. Bake the logic into Java classes 4. Go through normal deployment, governance, and release cycles This is great when the rules are stable and you want strong guarantees. If I build this with Python agents + Java services I change my mindset: 1. Keep the core logic and data in Java: credit-service pricing-service profile-service 2. Add a Python agent that: Talk to the LLM, Calls those Java services via MCP tools or HTTP APIs, 3. and Orchestrates the flow: “Check credit → if high-risk, ask for manual review → otherwise, fetch pricing → apply rules → approve/deny → send notification. Whenever the decision logic or flow changes: I mostly update Python agent behavior and prompts . Java services stay stable, governed, and reliable. This feels natural : Java keeps doing what it’s amazing at; Python takes the fast-changing orchestration role around the AI. The key realization: it’s not Java vs Python The important shift for me was this: I don’t need to choose Java or Python . I need to choose where Java is right , and where Python is right . From my experience so far: Where Java is still the best choice? 1. Core business services 2. Transactional systems of record 3. High-QPS, low-latency APIs 4. Long-lived, stable, well-governed microservices 5. Places where you need strict contracts, compliance, and reliability over many years. Where Python is the better choice? 1. AI agents (prompt-heavy, fast-changing, experiment-driven) 2. MCP servers and tools (adapters exposing data/actions to models) 3. Data science, ML training, feature engineering, evaluation pipelines 4. Prototypes and “let’s see if this works” flows When I tried to force agents and MCP patterns into pure Java/Spring, I could make it work, but it felt like: Writing a UI in assembly language: technically possible, but you’re fighting the grain of the tools. A simple architectural pattern: Java in the middle, Python at the edge The way I now think about it is in layers : 1. Core Systems (Java) -Systems of record -Domain logic, validations, transactions -APIs with stable contracts 2. Adapters / Tools (Mostly Python MCP servers) -Thin wrappers around those Java services and databases -Fast to change, but still structured and testable 3. Agents & Experiences (Python + LLMs) -Agent logic (tool selection, sequencing, reasoning about results) -Experiments, new flows, new user journeys If I had to describe it in one line: Java holds the truth. Python explores the possibilities. How I personally envison the work today? My mental model now is very simple: Java : the backbone — where the business actually lives. Python : the face and the hands — where the AI lives, coordinates, and experiments. I still love Java. I still default to Java when I think about serious, long-term systems . But when it comes to AI Agents, MCP servers, and fast-moving agentic work , I’ve learned to let Python lead — not because Java can’t do it, but because it’s not the right kind of tool for that style of work. One resource I recommend helpful for Java folks As a Java person stepping into Python, I found it useful to learn in a way that speaks my language and constraints. One book I personally enjoyed to get started is: Python for Java Developers: A Handbook for Busy Experts — Pedro Cavaléro It doesn’t try to convince you that Java is obsolete. It simply helps you quickly see how to think in Python without abandoning everything you know from decades of Java. If you’re a Java veteran like me, you don’t have to choose sides. Keep Java as the core. Let Python lead your agentic systems. Use each tech stack and language where it’s naturally strong and your architecture (and teams) will thank you for it! Keeping Java as the Core, Python to Lead Agentic Systems was originally published in Walmart Global Tech Blog on Medium, where people are continuing the conversation by highlighting and responding to this story.",
+      "published_ts": 1765816538,
+      "source_name": "Walmart Global Tech",
+      "content_type": "technical"
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/create-and-update-apache-iceberg-tables-with-partitions-in-the-aws-glue-data-catalog-using-the-aws-sdk-and-aws-cloudformation/",
+      "title": "Create and update Apache Iceberg tables with partitions in the AWS Glue Data Catalog using the AWS SDK and AWS CloudFormation",
+      "summary": "In this post, we show how to create and update Iceberg tables with partitions in the Data Catalog using the AWS SDK and AWS CloudFormation.",
+      "published_ts": 1766092963,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/structuring-unstructured-data-cortex-aisql",
+      "title": "Structuring the Unstructured Data:  Powered by Snowflake Cortex AI Functions",
+      "summary": "Snowflake Cortex AI Functions introduces a new workflow to transform unstructured data from calls and tickets into structured insights for BI and ML.",
+      "published_ts": 1766080228,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/top-10-questions-you-asked-about-databricks-clean-rooms-answered",
+      "title": "Top 10 Questions You Asked About Databricks Clean Rooms, Answered",
+      "summary": "Data collaboration is the backbone of modern AI innovation, especially as organizations...",
+      "published_ts": 1766075400,
+      "source_name": "Databricks Blog",
       "content_type": "technical"
     },
     {
@@ -468,14 +561,6 @@
       "content_type": "technical"
     },
     {
-      "url": "https://www.dataiku.com/stories/blog/the-ai-agent-revolution-for-self-service-bi-why-everything-is-about-to-change",
-      "title": "The AI Agent Revolution for Self-Service BI: Why Everything Is About to Change",
-      "summary": "Business intelligence (BI) is entering a new phase. Organizations want insights that move at the pace of the business, yet many still rely on workflows shaped years ago: dashboards for every new question, exports when dashboards fall short, and manual stitching of data spread across tools, clouds, and spreadsheets. The result is an environment full of reports that rarely match how people actually work.",
-      "published_ts": 1766063700,
-      "source_name": "Dataiku Blog",
-      "content_type": "technical"
-    },
-    {
       "url": "https://www.databricks.com/blog/databricks-spatial-joins-now-17x-faster-out-box",
       "title": "Databricks Spatial Joins Now 17x Faster Out-of-the-Box",
       "summary": "Spatial data processing and analysis is business critical for geospatial workloads on Databricks...",
@@ -484,94 +569,10 @@
       "content_type": "technical"
     },
     {
-      "url": "https://www.dataiku.com/stories/blog/dataiku-solutions-how-they-work-and-how-to-use-them",
-      "title": "Dataiku Solutions: How They Work and How to Use Them",
-      "summary": "Most of the time, business teams have a good idea of what they want to achieve when implementing AI use cases. However, when it comes to getting started they often face roadblocks. These projects often require specialized skills and a strong understanding of industry best practices.",
-      "published_ts": 1766004819,
-      "source_name": "Dataiku Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/power-data-ingestion-into-splunk-using-amazon-data-firehose/",
-      "title": "Power data ingestion into Splunk using Amazon Data Firehose",
-      "summary": "With Kinesis Data Firehose, customers can use a fully managed, reliable, and scalable data streaming solution to Splunk. In this post, we tell you a bit more about the Kinesis Data Firehose and Splunk integration. We also show you how to ingest large amounts of data into Splunk using Kinesis Data Firehose.",
-      "published_ts": 1765997549,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://dagster.io/blog/dagster-plus-now-available-in-the-eu",
-      "title": "https://dagster.io/blog/dagster-plus-now-available-in-the-eu",
-      "summary": "We're thrilled to announce that Dagster+ has arrived in Europe! After hearing from so many organizations who need their Dagster control plane within EU boundaries for compliance and data residency requirements, we’re excited make Dagster+ EU available! With this launch, your control plane, metadata,",
-      "published_ts": 1765982406,
-      "source_name": "Dagster Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://huggingface.co/blog/nvidia/nemotron-3-nano-evaluation-recipe",
-      "title": "The Open Evaluation Standard: Benchmarking NVIDIA Nemotron 3 Nano with NeMo Evaluator",
-      "summary": "The Open Evaluation Standard: Benchmarking NVIDIA Nemotron 3 Nano with NeMo Evaluator\nIt has become increasingly challenging to assess whether a model’s\nreported improvements reflect genuine advances or variations in\nevaluation conditions, dataset composition, or training data that\nmirrors benchmark",
-      "published_ts": 1765977738,
-      "source_name": "Hugging Face Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startup-spotlight-emergegen",
-      "title": "Startup Spotlight: EmergeGen AI",
-      "summary": "Learn how EmergeGen is using its AI-driven knowledge graph framework to organize unstructured data and address governance and compliance challenges.",
-      "published_ts": 1765929399,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startup-spotlight-honeycomb-maps",
-      "title": "Startup Spotlight: Honeycomb Maps",
-      "summary": "How Honeycomb Maps turns Snowflake data into interactive map dashboards, handling rich geospatial sets and H3 grids to tie operational and financial metrics to place.",
-      "published_ts": 1765830918,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ismap-certification-snowflake-japan",
-      "title": "Snowflake Achieves ISMAP Certification: Becoming the \"Trusted Cloud\" to Support Japan's Data Utilization",
-      "summary": "As the value of the cloud shifts to trust, Snowflake achieved the ISMAP certification in 2025, certifying its security foundation is suitable for use by public sector organizations in Japan.",
-      "published_ts": 1765818005,
-      "source_name": "Snowflake Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.rudderstack.com/blog/data-privacy-compliance",
-      "title": "Data privacy compliance: Principles, regulations, & best practices",
-      "summary": "Understand data privacy compliance regulations and best practices to ensure trust in 2025",
-      "published_ts": 1765813275,
-      "source_name": "Rudderstack Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-248",
-      "title": "Data Engineering Weekly #248",
-      "summary": "The Weekly Data Engineering Newsletter",
-      "published_ts": 1765764013,
-      "source_name": "Data Engineering Weekly",
-      "content_type": "technical"
-    }
-  ],
-  "news_general": [],
-  "python_analytics": [],
-  "warehouses_engines": [
-    {
       "url": "https://aws.amazon.com/blogs/big-data/best-practices-for-querying-apache-iceberg-data-with-amazon-redshift/",
       "title": "Best practices for querying Apache Iceberg data with Amazon Redshift",
       "summary": "In this post, we discuss the best practices that you can follow while querying Apache Iceberg data with Amazon Redshift",
       "published_ts": 1765991742,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://aws.amazon.com/blogs/big-data/ipv6-addressing-with-amazon-redshift/",
-      "title": "IPv6 addressing with Amazon Redshift",
-      "summary": "As we witness the gradual transition from IPv4 to IPv6, AWS continues to expand its support for dual-stack networking across its service portfolio. In this post, we show how you can migrate your Amazon Redshift Serverless workgroup from IPv4-only to dual-stack mode, so you can make your data warehouse future ready.",
-      "published_ts": 1765990304,
       "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
     },
@@ -592,19 +593,11 @@
       "content_type": "technical"
     },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/reference-guide-for-building-a-self-service-analytics-solution-with-amazon-sagemaker/",
-      "title": "Reference guide for building a self-service analytics solution with Amazon SageMaker",
-      "summary": "In this post, we show how to use Amazon SageMaker Catalog to publish data from multiple sources, including Amazon S3, Amazon Redshift, and Snowflake. This approach enables self-service access while ensuring robust data governance and metadata management.",
-      "published_ts": 1765921643,
-      "source_name": "Redshift / AWS Big Data",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.databricks.com/blog/announcing-winners-inaugural-databricks-free-edition-hackathon",
-      "title": "Announcing the winners of the inaugural Databricks Free Edition Hackathon",
-      "summary": "We are excited to announce the winners of the inaugural Databricks Free Edition Hackathon...",
-      "published_ts": 1765915200,
-      "source_name": "Databricks Blog",
+      "url": "https://www.uber.com/blog/how-uber-indexes-streaming-data-with-pull-based-ingestion-in-opensearch/",
+      "title": "How Uber Indexes Streaming Data with Pull-Based Ingestion in OpenSearch™",
+      "summary": "Discover how Uber uses OpenSearch™’s streaming ingestion architecture for powerful search, and learn about our contributions to a pull-based ingestion framework in the OpenSearch project.",
+      "published_ts": 1765893600,
+      "source_name": "Uber Engineering Blog",
       "content_type": "technical"
     },
     {
@@ -616,11 +609,11 @@
       "content_type": "technical"
     },
     {
-      "url": "https://duckdb.org/2025/12/16/iceberg-in-the-browser.html",
-      "title": "Iceberg in the Browser",
-      "summary": "DuckDB is the first end-to-end interface to Iceberg REST Catalogs within a browser tab. You can now read and write tables in Iceberg catalogs without needing to manage any infrastructure – directly from your browser!",
-      "published_ts": 1765843200,
-      "source_name": "DuckDB Blog",
+      "url": "https://aws.amazon.com/blogs/big-data/accelerate-apache-hive-read-and-write-on-amazon-emr-using-enhanced-s3a/",
+      "title": "Accelerate Apache Hive read and write on Amazon EMR using enhanced S3A",
+      "summary": "In this post, we demonstrate how Apache Hive on Amazon EMR 7.10 delivers significant performance improvements for both read and write operations on Amazon S3.",
+      "published_ts": 1765835733,
+      "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
     },
     {
@@ -640,11 +633,19 @@
       "content_type": "technical"
     },
     {
-      "url": "https://www.databricks.com/blog/databricks-lakehouse-data-modeling-myths-truths-and-best-practices",
-      "title": "Databricks Lakehouse Data Modeling: Myths, Truths, and Best Practices",
-      "summary": "Data warehouses have long been prized for their structure and rigor, and yet many...",
-      "published_ts": 1765819011,
-      "source_name": "Databricks Blog",
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startup-spotlight-honeycomb-maps",
+      "title": "Startup Spotlight: Honeycomb Maps",
+      "summary": "How Honeycomb Maps turns Snowflake data into interactive map dashboards, handling rich geospatial sets and H3 grids to tie operational and financial metrics to place.",
+      "published_ts": 1765830918,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ismap-certification-snowflake-japan",
+      "title": "Snowflake Achieves ISMAP Certification: Becoming the \"Trusted Cloud\" to Support Japan's Data Utilization",
+      "summary": "As the value of the cloud shifts to trust, Snowflake achieved the ISMAP certification in 2025, certifying its security foundation is suitable for use by public sector organizations in Japan.",
+      "published_ts": 1765818005,
+      "source_name": "Snowflake Blog",
       "content_type": "technical"
     }
   ]

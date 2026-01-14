@@ -2,6 +2,7 @@
 
 export type WeekMeta = { week: string; range?: string };
 export type TopItem = { title: string; url: string; source?: string; date?: string; score?: string|number; tech_level?: string; marketing_score?: number };
+export type VideoItem = { title: string; url: string; source?: string; date?: string; score?: string|number; source_type?: "youtube" | "podcast" };
 export type SectionItem = { title: string; url: string; source?: string; score?: string|number; content_type?: string; tech_level?: string; marketing_score?: number };
 export type SummarySection = { title: string; items: SectionItem[] };
 
@@ -14,6 +15,7 @@ type RawSelectionItem = {
   content_type?: string;
   tech_level?: string;
   marketing_score?: number;
+  source_type?: "youtube" | "podcast" | "article";
 };
 
 // ---------- helpers de chargement (inchangés si tu es en statique) ----------
@@ -100,17 +102,39 @@ async function loadTop3Json(meta: WeekMeta): Promise<TopItem[]> {
   }
 }
 
+// ---------- Chargement du top3_videos JSON ----------
+async function loadTopVideosJson(meta: WeekMeta): Promise<VideoItem[]> {
+  try {
+    const path = meta.week === "latest"
+      ? "export/latest/top3_videos.json"
+      : `export/${meta.week}/top3_videos.json`;
+    const txt = await loadText(path);
+    const data = JSON.parse(txt) as RawSelectionItem[];
+    return data.map((item) => ({
+      title: item.title || "",
+      url: item.url || "",
+      source: item.source_name || "",
+      score: item.score,
+      source_type: item.source_type === "youtube" ? "youtube" : "podcast",
+    }));
+  } catch {
+    return []; // Fallback si le fichier n'existe pas
+  }
+}
+
 // ---------- API principale ----------
 export async function loadWeekSummary(meta: WeekMeta): Promise<{
   overview: string;
   top3: TopItem[];
+  topVideos: VideoItem[];
   sections: SummarySection[];
 }> {
   // Charger le markdown pour overview uniquement
   const md = await loadText(summaryPath(meta));
 
-  // Charger le JSON pour top3 et sections
+  // Charger le JSON pour top3, topVideos et sections
   const top3Data = await loadTop3Json(meta);
+  const topVideosData = await loadTopVideosJson(meta);
   const selectionData = await loadSelectionJson(meta);
   const categories = await loadCategories();
 
@@ -139,6 +163,7 @@ export async function loadWeekSummary(meta: WeekMeta): Promise<{
   return {
     overview: parseOverview(md),
     top3: top3Data,
+    topVideos: topVideosData,
     sections,
   };
 }

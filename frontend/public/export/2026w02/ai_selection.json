@@ -1,12 +1,12 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://www.databricks.com/blog/thumbtack-powering-safe-smart-home-services-databricks-genai",
-      "title": "Thumbtack Powering Safe, Smart Home Services on Databricks with GenAI",
-      "summary": "Building the Most Trusted Home Care PlatformThumbtack’s mission is simple but ambitious: ...",
-      "published_ts": 1767999600,
+      "url": "https://www.databricks.com/blog/securing-grid-practical-guide-cyber-analytics-energy-utilities",
+      "title": "Securing the Grid: A Practical Guide to Cyber Analytics for Energy & Utilities",
+      "summary": "How Modern Data Platforms Are Transforming Cybersecurity Operations in Critical InfrastructureThe...",
+      "published_ts": 1767831300,
       "source_name": "Databricks Blog",
-      "score": 56.335810512304306,
+      "score": 60.41772401332855,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -14,12 +14,23 @@
   ],
   "cloud_infra_observability": [
     {
+      "url": "https://aws.amazon.com/blogs/big-data/aws-analytics-at-reinvent-2025-unifying-data-ai-and-governance-at-scale/",
+      "title": "AWS analytics at re:Invent 2025: Unifying Data, AI, and governance at scale",
+      "summary": "re:Invent 2025 showcased the bold Amazon Web Services (AWS) vision for the future of analytics, one where data warehouses, data lakes, and AI development converge into a seamless, open, intelligent platform, with Apache Iceberg compatibility at its core. Across over 18 major announcements spanning three weeks, AWS demonstrated how organizations can break down data silos, […]",
+      "published_ts": 1767825865,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 58.57176923751831,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
       "url": "https://www.uber.com/blog/from-monitoring-to-observability-cloud-native/",
       "title": "From Monitoring to Observability: Our Ultra-Marathon to a Cloud-Native Platform",
       "summary": "Managing a global corporate network at Uber’s scale can feel a bit like running an ultra-marathon. There are long stretches of smooth sailing, but you’re always preparing for the unexpected mountain pass or sudden change in weather. For years, our engineering teams have navigated this terrain with a traditional, monolithic monitoring system. We knew we needed to switch to a modern pair of carbon-fiber running shoes. This meant a complete overhaul: a journey to replace our legacy system with a cloud-native observability platform built for speed, flexibility, and endurance on an open-source stack.",
       "published_ts": 1767719913,
       "source_name": "Uber Engineering Blog",
-      "score": 54.944469437003136,
+      "score": 54.94447189569473,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -32,18 +43,29 @@
       "summary": "How a Semantically Correct API Becomes Operationally Unreliable at Scale",
       "published_ts": 1767938258,
       "source_name": "Data Engineering Weekly",
-      "score": 61.31629614531994,
+      "score": 61.31630106270313,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
     },
     {
-      "url": "https://www.getdbt.com/blog/ai-agents-and-the-data-lake",
-      "title": "AI agents and the data lake",
-      "summary": "Lauren Anderson, the head of Okta's enterprise data platform, on why central governance and the semantic layer are so essential.",
-      "published_ts": 1768144620,
-      "source_name": "dbt Blog",
-      "score": 58.570404797792435,
+      "url": "https://www.databricks.com/blog/bcbs-239-compliance-age-ai-turning-regulatory-burden-strategic-advantage",
+      "title": "BCBS 239 Compliance in the Age of AI: Turning Regulatory Burden into Strategic Advantage",
+      "summary": "The strategic imperative of BCBS 239 complianceBCBS 239 (Risk Data Aggregation and...",
+      "published_ts": 1767639660,
+      "source_name": "Databricks Blog",
+      "score": 60.89860665798187,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://dlthub.com/blog/building-semantic-models-with-llms-and-dlt",
+      "title": "Autofiling the Boring Semantic Layer: From Sakila to Chat-BI with dltHub",
+      "summary": "Build one semantic model and reuse it across APIs, chatbots, and apps. Let LLMs handle the tedious mapping so you can ship data products that quietly just work.",
+      "published_ts": 1767744000,
+      "source_name": "dlt Blog",
+      "score": 56.028964564204216,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -51,12 +73,12 @@
   ],
   "etl_orchestration": [
     {
-      "url": "https://seattledataguy.substack.com/p/common-data-pipeline-patterns-youll",
-      "title": "Common Data Pipeline Patterns You’ll See in the Real World",
-      "summary": "A practical look at the many ways data pipelines show up inside real companies",
-      "published_ts": 1767643086,
-      "source_name": "Seattle Data Guy",
-      "score": 64.33842438459396,
+      "url": "https://dagster.io/blog/rise-of-the-data-platform-engineer",
+      "title": "The Rise of the Data Platform Engineer",
+      "summary": "The evolution of data engineering demands a platform-first mindset. See how Data Platform Engineers are shaping the future of analytics.",
+      "published_ts": 1767731183,
+      "source_name": "Dagster Blog",
+      "score": 66.63533011078835,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -71,16 +93,14 @@
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
-    }
-  ],
-  "lake_storage_formats": [
+    },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/aws-analytics-at-reinvent-2025-unifying-data-ai-and-governance-at-scale/",
-      "title": "AWS analytics at re:Invent 2025: Unifying Data, AI, and governance at scale",
-      "summary": "re:Invent 2025 showcased the bold Amazon Web Services (AWS) vision for the future of analytics, one where data warehouses, data lakes, and AI development converge into a seamless, open, intelligent platform, with Apache Iceberg compatibility at its core. Across over 18 major announcements spanning three weeks, AWS demonstrated how organizations can break down data silos, […]",
-      "published_ts": 1767825865,
-      "source_name": "Redshift / AWS Big Data",
-      "score": 58.57176595926285,
+      "url": "https://airbyte.com/blog/search-fetch-write-agents",
+      "title": "Search, Fetch, and Write: A Primer | Airbyte",
+      "summary": "Why AI agents fail when built on batch data systems and how search, fetch, and write enable real-time, entity-centric agentic data infrastructure.",
+      "published_ts": 1767744000,
+      "source_name": "Airbyte Blog",
+      "score": 57.821447998285294,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -93,40 +113,20 @@
       "summary": "The Weekly Data Engineering Newsletter",
       "published_ts": 1767591351,
       "source_name": "Data Engineering Weekly",
-      "score": 67.70708277821541,
+      "score": 67.707085236907,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
-    },
+    }
+  ],
+  "python_analytics": [
     {
-      "url": "https://dagster.io/blog/rise-of-the-data-platform-engineer",
-      "title": "The Rise of the Data Platform Engineer",
-      "summary": "The evolution of data engineering demands a platform-first mindset. See how Data Platform Engineers are shaping the future of analytics.",
-      "published_ts": 1767731183,
-      "source_name": "Dagster Blog",
-      "score": 66.63532847166061,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://juhache.substack.com/p/boring-engineering-manifesto",
-      "title": "The Boring Engineer Manifesto",
-      "summary": "Ju Data Engineering Weekly - Ep 92",
-      "published_ts": 1767961881,
-      "source_name": "Julien Hurault · Ju Data Engineering",
-      "score": 61.07550650835037,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "marketing_score": 0
-    },
-    {
-      "url": "https://www.databricks.com/blog/bcbs-239-compliance-age-ai-turning-regulatory-burden-strategic-advantage",
-      "title": "BCBS 239 Compliance in the Age of AI: Turning Regulatory Burden into Strategic Advantage",
-      "summary": "The strategic imperative of BCBS 239 complianceBCBS 239 (Risk Data Aggregation and...",
-      "published_ts": 1767639660,
-      "source_name": "Databricks Blog",
-      "score": 60.898608297109604,
+      "url": "https://about.gitlab.com/blog/how-iit-bombay-students-code-future-with-gitlab/",
+      "title": "How IIT Bombay students are coding the future with GitLab",
+      "summary": "The GitLab team recently had the privilege of judging the iHack Hackathon at IIT Bombay's E-Summit . The energy was electric, the coffee was flowing, and the talent was undeniable. But what struck us most wasn't just the code — it was the sheer determination of students to solve real-world problems, often overcoming significant logistical and financial hurdles to simply be in the room. Through our GitLab for Education program , we aim to empower the next generation of developers with tools and opportunity. Here is a look at what the students built, and how they used GitLab to bridge the gap between idea and reality. The challenge: Build faster, build securely The premise for the GitLab track of the hackathon was simple: Don't just show us a product; show us how you built it. We wanted to see how students utilized GitLab's platform — from Issue Boards to CI/CD pipelines — to accelerate the development lifecycle. The results were inspiring. The winners 1st place: Team Decode — Democratizing Scientific Research Project: FIRE (Fast Integrated Research Environment) Team Decode took home the top prize with a solution that warms a developer's heart: a local-first, blazing-fast data processing tool built with Rust and Tauri. They identified a massive pain point for data science students: existing tools are fragmented, slow, and expensive. Their solution, FIRE, allows researchers to visualize complex formats (like NetCDF) instantly. What impressed the judges most was their \"hacker\" ethos. They didn't just build a tool; they built it to be open and accessible. How they used GitLab: Since the team lived far apart, asynchronous communication was key. They utilized GitLab Issue Boards and Milestones to track progress and integrated their repo with Telegram to get real-time push notifications. As one team member noted, \"Coordinating all these technologies was really difficult, and what helped us was GitLab... the Issue Board really helped us track who was doing what.\" 2nd place: Team BichdeHueDost — Reuniting to Solve Payments Project: SemiPay (RFID Cashless Payment for Schools) The team name, BichdeHueDost, translates to \"Friends who have been set apart.\" It's a fitting name for a group of friends who went to different colleges but reunited to build this project. They tackled a unique problem: handling cash in schools for young children. Their solution used RFID cards backed by a blockchain ledger to ensure secure, cashless transactions for students. How they used GitLab: They utilized GitLab CI/CD to automate the build process for their Flutter application (APK), ensuring that every commit resulted in a testable artifact. This allowed them to iterate quickly despite the \"flaky\" nature of cross-platform mobile development. 3rd place: Team ZenYukti — The Eyes of the Campus Project: KSHR (Unified Intelligence Platform) Team ZenYukti impressed us with a heavy-duty enterprise architecture. They built a comprehensive campus monitoring system designed to detect anomalies and ensure student safety using CCTV and biometric data. How they used GitLab: This team showed a sophisticated understanding of DevOps. They used GitLab CI with conditional logic, triggering specific pipelines only when front-end or back-end folders changed. They also utilized private container registries to manage their Docker images securely. Beyond the code: A lesson in inclusion While the code was impressive, the most powerful moment of the event happened away from the keyboard. During the feedback session, we learned about the journey Team ZenYukti took to get to Mumbai. They traveled over 24 hours, covering nearly 1,800 kilometers. Because flights were too expensive and trains were booked, they traveled in the \"General Coach,\" a non-reserved, severely overcrowded carriage. As one student described it: \"You cannot even imagine something like this... there are no seats... people sit on the top of the train. This is what we have endured.\" This hit home. Diversity, Inclusion, and Belonging are core values at GitLab. We realized that for these students, the barrier to entry wasn't intellect or skill, it was access. In that moment, we decided to break that barrier. We committed to reimbursing the travel expenses for the participants who struggled to get there. It's a small step, but it underlines a massive truth: talent is distributed equally, but opportunity is not. The future is bright (and automated) We also saw incredible potential in teams like Prometheus, who attempted to build an autonomous patch remediation tool (DevGuardian), and Team Arrakis, who built a voice-first job portal for blue-collar workers using GitLab Duo to troubleshoot their pipelines. To all the students who participated: You are the future. Through GitLab for Education , we are committed to providing you with the top-tier tools (like GitLab Ultimate) you need to learn, collaborate, and change the world — whether you are coding from a dorm room, a lab, or a train carriage. Keep shipping. 💡 Learn more about the GitLab for Education program .",
+      "published_ts": 1767830400,
+      "source_name": "GitLab Engineering",
+      "score": 52.32422801852226,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
@@ -134,12 +134,12 @@
   ],
   "warehouses_engines": [
     {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/data-ai-upskilling-series",
-      "title": "Snowflake Offers Free Data and AI Upskilling Event Series",
-      "summary": "Fast-track your data and AI skills with insights from Snowflake’s leading experts",
-      "published_ts": 1767920100,
-      "source_name": "Snowflake Blog",
-      "score": 51.98205956816673,
+      "url": "https://aws.amazon.com/blogs/big-data/simplify-multi-warehouse-data-governance-with-amazon-redshift-federated-permissions/",
+      "title": "Simplify multi-warehouse data governance with Amazon Redshift federated permissions",
+      "summary": "Amazon Redshift federated permissions simplify permissions management across multiple Redshift warehouses. In this post, we show you how to define data permissions one time and automatically enforce them across warehouses in your AWS account, removing the need to re-create security policies in each warehouse.",
+      "published_ts": 1767648001,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 51.44377985596657,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0

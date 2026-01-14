@@ -1,124 +1,365 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://blog.octo.com/le-seuil-de-delegation",
-      "title": "Le seuil de délégation",
-      "summary": "Avec Blackwell, NVIDIA passe de 8 à 72 GPU par domaine. Ce n'est pas une amélioration de l'inférence, c'est un nouveau mode: la délégation. Vous assignez une tâche, elle tourne des heures. Les modèles open-weights locaux ne pourront jamais y accéder. La qualité est l'échelle. La dépendance est à sens unique.",
-      "published_ts": 1768390810,
-      "source_name": "OCTO Talks!",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://www.blog.langchain.com/langsmith-agent-builder-generally-available/",
-      "title": "Now GA: LangSmith Agent Builder",
-      "summary": "LangSmith Agent Builder is now generally available—enabling anyone to build agents for complex daily tasks, without writing code.",
-      "published_ts": 1768320038,
+      "url": "https://blog.langchain.com/in-software-the-code-documents-the-app-in-ai-the-traces-do/",
+      "title": "In software, the code documents the app. In AI, the traces do.",
+      "summary": "TL;DR In traditional software, you read the code to understand what the app does - the decision logic lives in your codebase In AI agents, the code is just scaffolding - the actual decision-making happens in the model at runtime Because of this, the source of truth for what",
+      "published_ts": 1768066767,
       "source_name": "LangChain Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://www.uber.com/blog/from-static-rate-limiting-to-intelligent-load-management/",
-      "title": "How Uber Conquered Database Overload: The Journey from Static Rate-Limiting to Intelligent Load Management",
-      "summary": "🧠 Overload in stateful databases isn’t one-dimensional. See how we built an intelligent load manager that sheds smarter, adapts to diverse signals, and stays fair under pressure. Even better, this approach led to a ~70% reduction in P99 latency.",
-      "published_ts": 1768314600,
-      "source_name": "Uber Engineering Blog",
-      "content_type": "rex"
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/AI-Reshaping-Consumer-Shopping-Habits",
+      "title": "A Revolution Unfolding: AI Reshaping Consumer Shopping Habits",
+      "summary": "Emerging AI agents and open protocols like AP2 and ACP are fundamentally reshaping consumer shopping habits by automating research, discovery, and the path to purchase for brands and retailers.",
+      "published_ts": 1768004040,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
     },
     {
-      "url": "https://blog.octo.com/digital-omnibus--l'europe-est-elle-en-train-de-detricoter-sa-propre-souverainete-numerique",
-      "title": "Digital Omnibus : l’Europe est-elle en train de détricoter sa propre souveraineté numérique ?",
-      "summary": "Au moment où l’IA rebattait les cartes du pouvoir numérique, l’Europe pensait avoir trouvé sa singularité : un modèle fondé sur la confiance et la protection des citoyens.",
-      "published_ts": 1768302877,
+      "url": "https://www.databricks.com/blog/thumbtack-powering-safe-smart-home-services-databricks-genai",
+      "title": "Thumbtack Powering Safe, Smart Home Services on Databricks with GenAI",
+      "summary": "Building the Most Trusted Home Care PlatformThumbtack’s mission is simple but ambitious: ...",
+      "published_ts": 1767999600,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/dignified-python-10-rules-to-improve-your-llm-agents",
+      "title": "Dignified Python: 10 Rules to Improve your LLM Agents Writing Python",
+      "summary": "Learn how Dagster's \"Dignified Python\" principles help developers align AI agents with intentional, readable, and performant Python. Ten rules from our Claude prompt that you can adopt.",
+      "published_ts": 1767978756,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/strengthening-gitlab-com-security-mandatory-multi-factor-authentication/",
+      "title": "Strengthening GitLab.com security: Mandatory multi-factor authentication",
+      "summary": "To strengthen the security of all user accounts on GitLab.com, GitLab is implementing mandatory multi-factor authentication (MFA) for all users and API endpoints who sign in using a username and password. Why this is happening This move is a vital part of our Secure by Design commitment . MFA provides critical defense against credential stuffing and account takeover attacks, which remain persistent threats across the software development industry. Key information to know What is changing? GitLab is making MFA mandatory for sign-ins that authenticate with a username and password. This introduces a critical second layer of security beyond just a password. Does this apply to me? Yes, it applies if: You sign in to GitLab.com with a username and a password, or use a password to authenticate to the API. No, it does not apply if: You exclusively use social sign-on (such as Google) or single sign-on (SSO) for access. ( Please note: If you use SSO, but also have a password for direct login, you will still need MFA for any non-SSO, password-based login.) When is the rollout? The implementation will be a phased approach over the coming months, intended to both minimize unexpected interruptions and productivity loss for users and prevent account lockouts. Groups of users will be asked to enable MFA over time. Each group will be selected based on the actions they’ve taken or the code they’ve contributed to. You will be notified in the following ways: ✉️ Email notification - prior to the phase where you will be impacted 🔔 Regular in-product reminders - 14 days before ⏱️ After a specific time period (this will be shared via email) - blocked from accessing GitLab until you enable MFA What action do I need to take? If you sign in to GitLab.com with a username and a password: We highly recommend you proactively set up one of the available MFA methods today, such as passkeys, an authenticator app, a WebAuthn device, or email verification. This ensures the most secure and seamless transition: Go to your GitLab.com User Settings . Select the Account section. Activate two-factor authentication and configure your preferred method (e.g., authenticator app or a WebAuthn device). Securely save your recovery codes to guarantee you can regain access if needed. If you use a password to authenticate to the API: We  highly recommend you proactively switch to a personal access token (PAT). Read our documentation to learn more. FAQ What happens if I don't enable MFA by the deadline? You'll be required to set up MFA before you can sign in. Does this affect CI/CD pipelines or automation? Yes, unless you're using PATs or deploy tokens instead of passwords. I use SSO but sometimes sign in directly, do I need MFA? Yes, MFA is required for any password-based authentication, including fallback scenarios. Specific timelines and further resources will be shared as rollout dates approach. Thank you for your attention to this important change.",
+      "published_ts": 1767916800,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/agentic-ai-from-a-security-perspective/",
+      "title": "Agentic AI from a security perspective",
+      "summary": "Large Language Models (LLMs) and generative AI technologies are everywhere, infiltrating both our personal and professional daily lives. Well-known services are already diverting most internet users away from their old browsing habits, and online information consumption is being profoundly transformed, most likely with no possible return to past behaviours. Issues related to intellectual property laws […]",
+      "published_ts": 1767884313,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/evaluating-model-behavior-through-chess",
+      "title": "Evaluating AI Models Through Chess: What Stateful Games Reveal",
+      "summary": "Chess provides a structured, stateful environment for evaluating AI model behavior over time. Learn how simulated tournaments expose failure modes that benchmarks miss.",
+      "published_ts": 1767818021,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/choisir-le-bon-framework-la-bonne-librairie-javascript--un-guide-pratique-pour-chaque-type-de-projet",
+      "title": "Choisir le bon framework, la bonne librairie JavaScript : un guide pratique pour chaque type de projet",
+      "summary": "Tu hésites entre React, Vue, Angular ou Remix ? Ne choisis pas à l’aveugle ! Ce guide dévoile le framework JavaScript vraiment adapté à ton projet. Comparatifs explosifs, perfs, sécurité, tests… Spoiler : le meilleur n’est pas toujours celui que tu crois 👀",
+      "published_ts": 1767807670,
       "source_name": "OCTO Talks!",
       "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.atspotify.com/2026/1/why-we-use-separate-tech-stacks-for-personalization-and-experimentation/",
+      "title": "Why We Use Separate Tech Stacks for Personalization and Experimentation",
+      "summary": "The technical and practical rationale for a clear separation between these domains. The post Why We Use Separate Tech Stacks for Personalization and Experimentation appeared first on Spotify Engineering .",
+      "published_ts": 1767796871,
+      "source_name": "Spotify Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/2025-owasp-top-10-whats-changed-and-why-it-matters/",
+      "title": "OWASP Top 10 2025: What's changed and why it matters",
+      "summary": "The OWASP Foundation has released the eighth edition of its influential \"Top 10 Security Risks\" list for 2025 ,\nintroducing significant changes that reflect the evolving landscape of application security. Based on analysis\nof more than 175,000 Common Vulnerabilities and Exposures (CVEs) records and feedback from security practitioners across the globe, this update addresses\nmodern attack vectors. Here's everything you need to know about what's changed, why these changes matter,\nand how to protect your systems. 💡 Join GitLab Transcend on February 10 to learn how agentic AI transforms software delivery. Hear from customers and discover how to jumpstart your own modernization journey. Register now. What's new in 2025? The shift from 2021 (the last time the list came out) to 2025 represents more than minor adjustments, it's a fundamental shift in application security.\nTwo entirely new categories entered the list and one category was consolidated into another, which highlights emerging risks\nthat traditional testing often misses. These additions and shifts can be seen in the chart below: Two new categories A03: Software Supply Chain Failures : Expands the 2021 category \"Vulnerable and Outdated Components\" to encompass the entire software supply chain, including dependencies, build systems, and distribution infrastructure. Despite having the fewest occurrences in testing data, this category has the highest average exploit and impact scores from CVEs. A10: Mishandling of Exceptional Conditions : Focuses on improper error handling, logical errors, and failing open scenarios. This addresses how systems respond to abnormal conditions. Major ranking changes Security Misconfiguration surged from #5 (2021) to #2 (2025), now affecting 3% of tested applications. Server-Side Request Forgery (SSRF) has been consolidated into A01: Broken Access Control. Cryptographic Failures dropped from #2 to #4. Injection fell from #3 to #5. Insecure Design moved from #4 to #6. Why these changes were made The OWASP methodology combines data-driven analysis with community insights. The 2025 edition analyzed 589\nCommon Weakness Enumerations (CWEs), which is a substantial increase from the approximately 400 CWEs in 2021.\nThis expansion reflects the growing complexity of modern software systems and the need to capture emerging threats. The community survey component addresses a fundamental limitation: testing data essentially looks into the past.\nBy the time security researchers develop testing methodologies and integrate them into automated tools, years may\nhave passed. The two community-voted categories ensure that emerging risks identified by frontline practitioners\nare included, even if they're not yet prevalent in automated testing data. The rise of Security Misconfiguration highlights an industry trend toward configuration-based security,\nwhile Software Supply Chain Failures acknowledges the rise of sophisticated attacks targeting compromised packages. Using GitLab Ultimate for vulnerability detection and management GitLab Ultimate provides comprehensive security scanning to detect risks across the\n2025 OWASP Top 10 categories. For instance, the end-to-end platform analyzes your project's source code, dependencies, and infrastructure\ndefinitions. It also uses Advanced Static Application Security Testing (SAST) to detect injection flaws,\ncryptographic failures, and insecure design patterns in source code. Infrastructure as Code (IaC) scanning finds\nsecurity misconfigurations in your deployment definitions. Secret Detection prevents the leakage of credentials, and Dependency Scanning uncovers libraries with known vulnerabilities in your software supply chain, which directly\naddresses the new A03 category for Software Supply Chain Failures. In addition: Dynamic Application Security Testing (DAST) probes your deployed application for broken access control,\nauthentication failures, and injection vulnerabilities by simulating attack vectors. API Security Testing probes your API endpoints for input validation weaknesses and authentication bypasses. Web API Fuzz Testing uncovers how your application handles exceptional conditions by generating unexpected inputs, which directly\naddresses the new A10 category for mishandling of exceptional conditions. Security scanning integrates seamlessly into your CI/CD pipeline , running when code is pushed from a feature\nbranch so developers can remediate vulnerabilities before they reach production. Security findings are consolidated in\nthe Vulnerability Report , where security\nteams can triage, analyze, and track remediation. GitLab also allows you to leverage AI agents such as Security Analyst Agent , available in GitLab Duo Agent Platform, to quickly determine what are the most critical vulnerabilities and how to take action on\nthem. You can enforce additional controls through merge request approval policies and pipeline execution policies to ensure security scanning runs consistently across your organization. Customer Success and Professional Services teams at GitLab ensure you derive value from an investment in GitLab in a timely manner. Deliver secure software faster with security testing in the same platform developers already use.\nTo learn more, visit our application security testing solutions site . The OWASP Top 10 2025: Complete breakdown A01: Broken Access Control What it is Failures in enforcing policies that prevent users from acting outside their intended permissions,\nleading to unauthorized access. Impact on your system Unauthorized information disclosure Complete data destruction or data modification Privilege escalation (users gaining admin rights) Viewing or editing other users' accounts API access from unauthorized or untrusted sources Notable CWEs CWE-22: Path Traversal CWE-200: Exposure of Sensitive Information to an Unauthorized Actor CWE-352: Cross-Site Request Forgery (CSRF) A02: Security Misconfiguration What it is Systems, applications, or cloud services configured incorrectly from a security perspective. Impact on your system Exposure of sensitive information through error messages Unauthorized access through default accounts Unnecessary services or features enabled Outdated security patches Server does not send security headers or directives Notable CWEs CWE-16: Configuration CWE-521: Weak Password Requirements CWE-798: Use of Hard-coded Credentials A03: Software Supply Chain Failures What it is Breakdowns or compromises in building, distributing, or updating software through vulnerabilities or malicious changes in dependencies, tools, or build processes. Impact on your system: Compromised packages introducing backdoors Malicious code injected during build processes Vulnerable dependencies cascading through your application Use of components from untrusted sources in production Changes within your supply chain are not tracked Notable CWEs CWE-1395: Dependency on Vulnerable Third-Party Component CWE-1104: Use of Unmaintained Third Party Components A04: Cryptographic Failures What it is Failures related to lack of cryptography, insufficiently strong cryptography, leaking of cryptographic keys, and related errors. Impact on your system: Sensitive data exposure (passwords, credit cards, health records) Man-in-the-middle attacks Data breach through weak encryption Key compromise leading to system-wide exposure Regulatory compliance failures (GDPR, PCI DSS) Notable CWEs CWE-327: Use of a Broken or Risky Cryptographic Algorithm CWE-330: Use of Insufficiently Random Values A05: Injection What it is System flaws allowing attackers to insert malicious code or commands (SQL, NoSQL, OS commands, LDAP, etc.) into programs. Impact on your system Data loss or corruption through SQL injection Complete database compromise Server takeover through command injection Cross-site scripting (XSS) attacks Information disclosure Denial of service Notable CWEs CWE-89: SQL Injection CWE-78: OS Command Injection A06: Insecure Design What it is Weaknesses in design representing different failures, expressed as missing or ineffective control design—architectural flaws rather than implementation bugs. Impact on your system Weak password reset flows Missing authorization steps Flawed business logic allowing bypasses Inadequate threat modeling leading to blind spots Design patterns that fail under attack scenarios Notable CWEs CWE-209: Generation of Error Messages Containing Sensitive Information CWE-522: Insufficiently Protected Credentials CWE-656: Reliance on Security Through Obscurity A07: Authentication Failures What it is Vulnerabilities allowing attackers to trick systems into recognizing invalid or incorrect users as legitimate. Impact on your system Account takeover and credential stuffing Session hijacking Brute force attacks succeeding Weak password recovery mechanisms exploited Multi-factor authentication bypass Notable CWEs CWE-287: Improper Authentication CWE-306: Missing Authentication for Critical Function CWE-521: Weak Password Requirements A08: Software or Data Integrity Failures What it is Code and infrastructure failing to protect against invalid or untrusted code/data being treated as trusted and valid. Impact on your system Unsigned updates allowing malicious code injection Insecure deserialization leading to remote code execution CI/CD pipeline compromise Auto-update mechanisms exploited Tampered software artifacts Notable CWEs CWE-345: Insufficient Verification of Data Authenticity CWE-346: Origin Validation Error CWE-347: Improper Verification of Cryptographic Signature A09: Security Logging & Alerting Failures What it is Insufficient logging and monitoring with inadequate alerting, which makes rapid response difficult. Impact on your system Attacks go undetected for extended periods Breach investigation becomes impossible Compliance violations from lack of audit trails Delayed incident response Inability to determine scope of compromise Notable CWEs CWE-117: Improper Output Neutralization for Logs CWE-532: Insertion of Sensitive Information into Log File CWE-778: Insufficient Logging A10: Mishandling of Exceptional Conditions What it is Programs failing to prevent, detect, and respond to unusual and unpredictable situations, which leads to crashes, unexpected behavior, or vulnerabilities. Impact on your system Information disclosure through verbose error messages Denial of service from unhandled exceptions State corruption from improper error handling Race conditions exploited Systems failing open instead of closed Application crashes exposing sensitive data Notable CWEs CWE-248: Uncaught Exception CWE-390: Detection of Error Condition Without Action CWE-391: Unchecked Error Condition Prevention and remediation best practices GitLab provides tools to enable you to not only quickly find and remediate vulnerabilities within the OWASP Top 10,\nbut also to prevent them from making it into your production system. By following these best practices you can enhance\nand maintain your security posture: Automated security scanning for all repositories Perform SAST Scanning to detect insecure design patterns like plaintext password storage, inadequate error handling, and missing encryption during code review, catching design flaws early in the development lifecycle. Perform Secret Detection to identify credentials in configuration files, environment variables, and code, preventing plaintext password storage and ensuring secrets are properly managed through GitLab's CI/CD variables with masking and encryption. Perform DAST Scanning to detect broken access control vulnerabilities Perform Dependency Scanning to scan project dependencies against vulnerability databases, identifying known CVEs in direct and transitive dependencies across multiple package managers (npm, pip, Maven, etc.). Perform Container Scanning to analyze Docker images for vulnerable base layers and packages, ensuring container supply chain security before deployment. Perform IaC Scanning to check your infrastructure definition files for known vulnerabilities. Leverage API Security Tools to secure and protect web APIs from unauthorized access, misuse, and attacks. Perform Web API Fuzz Testing to discover bugs and potential vulnerabilities that other QA processes might miss. View vulnerabilities detected in MR with diff from feature branch to main branch. Understand your security posture Generate a software bill of materials (SBOM) for complete dependency visibility and compliance requirements. Leverage the Vulnerability Report to sort through and triage vulnerabilites via consolidated view of security vulnerabilities found in your codebase. Quickly take action on vulnerabilities using detailed remdiation guidance and risk assessment data . Use Security Iventory to visualize which assets you need to secure and understand the actions you need to take to improve security. Leverage Compliance Center to manage compliance standards adherence reporting, violations reporting, and compliance frameworks. Use Security Inventory to viewing enabled security scanners and vulnerabilities. Set up prevention and maintain documentation Configure Security Policies to block merges or deployments when high-severity vulnerabilities are detected in dependencies, enforcing security standards automatically. Use Compliance Frameworks to enforce organizational security standards through automated policy checks that verify encryption requirements, credential management practices, and secure workflow implementations are followed. Use GitLab Wiki and repository documentation to maintain security design principles, approved patterns, and architectural decision records that guide developers toward secure-by-design implementations . Implement merge request approval rules requiring security architect review for features involving authentication, authorization, encryption, or sensitive data handling, ensuring design-level security validation. Create tests to verify input validation and allowlist approaches for file paths Use GitLab Issues and Epics to document security requirements and threat models during the design phase, creating a traceable record of security decisions and ensuring security considerations are addressed before implementation begins. View and set Security Policies scoped to instance, group, or project. Leverage AI Use Code Suggestions for proactive guidance during development, suggesting secure design patterns like proper password hashing (bcrypt, Argon2), encrypted storage mechanisms, and appropriate error handling that doesn't leak sensitive information. Use Security Analyst Agent to review detected insecure design vulnerabilities in context, explaining the architectural implications, assessing risk based on your application's threat model, and providing remediation strategies that address root design flaws rather than just symptoms. Review your code using AI to help ensure consistent code review standards in your project. Leverage Security Analyst Agent to quickly triage and assess security vulnerabilities. Key takeaways for development teams Supply chain security is critical : With A03's addition and high-impact scores, securing your software supply chain is no longer optional. Implement SBOM tracking, dependency scanning, and integrity verification throughout your pipeline. Configuration matters more than ever : The rise to #2 shows that configuration-based security is now a primary attack vector. Automate configuration verification and implement IaC with security baked in. Traditional threats persist : While Injection and Cryptographic Failures dropped in ranking, they remain critical. Don't deprioritize them just because they've fallen on the list. Error handling is security : The new A10 category emphasizes that how your application handles failures is a security concern. Implement secure error handling from the start. Testing must evolve : The expanded CWE coverage (589 vs. 400 in 2021) means testing strategies must be comprehensive. Combine SAST, DAST, source code analysis, and manual penetration testing for effective coverage. Explore our GitLab Security and Governance Solutions and security scanning documentation to start strengthening your\nsecurity posture today.",
+      "published_ts": 1767744000,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/amazon-emr-serverless-eliminates-local-storage-provisioning-reducing-data-processing-costs-by-up-to-20/",
+      "title": "Amazon EMR Serverless eliminates local storage provisioning, reducing data processing costs by up to 20%",
+      "summary": "In this post, you'll learn how Amazon EMR Serverless eliminates the need to configure local disk storage for Apache Spark workloads through a new serverless storage capability. We explain how this feature automatically handles shuffle operations, reduces data processing costs by up to 20%, prevents job failures from disk capacity constraints, and enables elastic scaling by decoupling storage from compute.",
+      "published_ts": 1767739540,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.salesforce.com/scaling-sales-agents-engineering-next-gen-ai-for-the-enterprise-era/",
+      "title": "Scaling Sales Agents: Engineering Next-Gen AI for the Enterprise Era",
+      "summary": "By Rakesh Nagaraju, Shweta Joshi, Guru Prasad, Renuka Prasad and Ashraya Raj Mathur. In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. Today we meet Shweta Joshi, Software Engineering Architect for the Engagement Agent, a generative-AI powered system automating personalized sales follow-ups and outreach across large lead volumes. Her […] The post Scaling Sales Agents: Engineering Next-Gen AI for the Enterprise Era appeared first on Salesforce Engineering Blog .",
+      "published_ts": 1767716463,
+      "source_name": "Salesforce Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/",
+      "title": "AI-powered vulnerability triaging with GitLab Duo Security Agent",
+      "summary": "Security vulnerabilities are discovered constantly in modern applications. Development teams often face hundreds or thousands\nof findings from security scanners, making it challenging to identify which vulnerabilities pose the greatest risk and should\nbe prioritized. This is where effective vulnerability triaging becomes essential. In this article, we'll explore how GitLab's integrated security scanning capabilities combined with the GitLab Duo Security Analyst Agent can transform vulnerability management from a time-consuming manual process into an intelligent, efficient workflow. 💡 Join GitLab Transcend on February 10 to learn how agentic AI transforms software delivery. Hear from customers and discover how to jumpstart your own modernization journey. Register now. What is vulnerability triaging? Vulnerability triaging is the process of analyzing, prioritizing, and deciding how to address security findings discovered in\nyour applications. Not all vulnerabilities are created equal — some represent critical risks requiring immediate attention, while\nothers may be false positives or pose minimal threat in your specific context. Traditional triaging involves: Reviewing scan results from multiple security tools Assessing severity based on CVSS scores and exploitability Understanding context such as whether vulnerable code is actually reachable Prioritizing remediation based on business impact and risk Tracking resolution through to deployment This process becomes overwhelming when dealing with large codebases and frequent scans. GitLab addresses these challenges through\nintegrated security scanning and AI-powered analysis. How to add integrated security scanners in GitLab GitLab provides built-in security scanners that integrate seamlessly into your CI/CD pipelines. These scanners run automatically\nduring pipeline execution and populate GitLab's Vulnerability Report with findings from the default branch. Available security scanners GitLab offers the following security scanning capabilities: Static Application Security Testing (SAST) : Analyzes source code for vulnerabilities Dependency Scanning : Identifies vulnerabilities in project dependencies Container Scanning : Scans Docker images for known vulnerabilities Dynamic Application Security Testing (DAST) : Tests running applications for vulnerabilities Secret Detection : Finds accidentally committed secrets and credentials Infrastructure-as-Code (IaC) Scanning : Analyzes infrastructure as code for misconfigurations API Security Testing : Test web APIs to help discover bugs and potential security issues Web API Fuzzing : Passes unexpected values to API operation parameters to cause unexpected behavior and errors in the backend Example: Adding SAST and Dependency Scanning To enable security scanning, add the scanners to your .gitlab-ci.yml file. In this example, we are including SAST and Dependency Scanning templates which automatically run those scanners on the test stage.\nEach scanner can be overwritten using variables (which differ for each scanner). For example, the SAST_EXCLUDED_PATHS variable\ntells SAST to skip the directories/files provided. Security jobs can be further overwritten using the GitLab Job Syntax . include:\n  - template: Security/SAST.gitlab-ci.yml\n  - template: Security/Dependency-Scanning.gitlab-ci.yml\n\nstages:\n  - test\n\nvariables:\n  SAST_EXCLUDED_PATHS: \"spec/, test/, tests/, tmp/\" Example: Adding Container Scanning GitLab provides a built-in container registry where you can store container images for each GitLab project. To scan those containers for vulnerabilities,\nyou can enable container scanning. This example shows how a container is built and pushed in the build-container job running in the build stage\nand how it is then scanned in the same pipeline in the test stage: include:\n  - template: Security/Container-Scanning.gitlab-ci.yml\n\nstages:\n  - build\n  - test\n\nbuild-container:\n  stage: build\n  variables:\n    IMAGE: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA\n  before_script:\n    - docker login -u $CI_REGISTRY_USER -p $CI_REGISTRY_PASSWORD $CI_REGISTRY\n  script:\n    - docker build -t $IMAGE .\n    - docker push $IMAGE\n\ncontainer_scanning:\n  variables:\n    CS_IMAGE: $CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA Once configured, these scanners execute automatically in your pipeline and report findings to\nthe Vulnerability Report . Note: Although not covered in this blog, in merge requests, scanners show the diff of vulnerabilities from a feature\nbranch to the target branch. Additionally, granular security policies can be created to prevent vulnerable code\nfrom being merged (without approval) if vulnerabilities are detected, as well as force scanners to run, regardless of how the .gitlab-ci.yml is defined. Triaging using the Vulnerability Report and Pages After scanners run, GitLab aggregates all findings in centralized views that make triaging more manageable. Accessing the Vulnerability Report Navigate to Security & Compliance > Vulnerability Report in your project or group. This page displays all\ndiscovered vulnerabilities with key information: Severity levels (Critical, High, Medium, Low, Info) Status (Detected, Confirmed, Dismissed, Resolved) Scanner type that detected the vulnerability Affected files and lines of code Detection date and pipeline information Filtering and organizing vulnerabilities The Vulnerability Report provides powerful filtering options: Filter by severity, status, scanner, identifier, and reachability Group by severity, status, scanner, OWASP Top 10 Search for specific CVEs or vulnerability names Sort by detection date or severity View trends over time with the security dashboard Manual workflow triage Traditional triaging in GitLab involves: Reviewing each vulnerability by clicking into the detail page Assessing the description and understand the potential impact Examining the affected code through integrated links Checking for existing fixes or patches in dependencies Setting status (Confirm, Dismiss with reason, or create an issue) Assigning ownership for remediation This is an example of vulnerability data provided to allow for triage including the code flow: When on the vulnerability data page, you can select Edit vulnerability to change its\nstatus as well as provide a reason. Then you can create an issue and assign ownership for remediation. While this workflow is comprehensive, it requires security expertise and can be time-consuming when dealing with hundreds\nof findings. This is where GitLab Duo Security Analyst Agent, part of GitLab Duo Agent Platform , becomes invaluable. About Security Analyst Agent and how to set it up GitLab Duo Security Analyst Agent is an AI-powered tool that automates vulnerability analysis and triaging.\nThe agent understands your application context, evaluates risk intelligently, and provides actionable recommendations. What Security Analyst Agent does The agent analyzes vulnerabilities by: Evaluating exploitability in your specific codebase context Assessing reachability to determine if vulnerable code paths are actually used Prioritizing based on risk rather than just CVSS scores Explaining vulnerabilities in clear, actionable language Recommending remediation steps specific to your application Reducing false positives through contextual analysis Prerequisites To use Security Analyst Agent, you need: GitLab Ultimate subscription with GitLab Duo Agent Platform enabled Security scanners configured in your project At least one vulnerability in your Vulnerability Report Enabling Security Analyst Agent Security Analyst Agent is a foundational agent .\nUnlike the general-purpose GitLab Duo agent, foundational agents understand the unique workflows, frameworks, and best practices\nof their specialized domains. Foundational agents can be accessed directly from your project without any additional configuration. You can find Security Analyst Agent in the AI Catalog : To dive in and see the details of the agent, such as its system prompt and tools: Navigate to gitlab.com/explore/ . Select AI Catalog from the side tab. Select Security Analyst Agent from the list. The agent is integrated directly into your existing workflow without requiring additional configuration beyond the defined\nprerequistes. Using Security Analyst Agent to find most critical vulnerabilities Now let's explore how to leverage Security Analyst Agent to quickly identify and prioritize the vulnerabilities\nthat matter most. Starting an analysis To start an analysis, navigate to your GitLab project (ensure it meets the prerequistes). Then\nyou can open GitLab Duo Chat and select the Security Agent . From the chat, select the model to use with the agent and make sure to enable Agentic mode. A chat will open where you can engage with Security Analyst Agent by using the agent's conversational\ninterface. This agent can perform: Vulnerability triage : Analyze and prioritize security findings across different scan types. Risk assessment : Evaluate the severity, exploitability, and business impact of vulnerabilities. False positive identification : Distinguish genuine threats from benign findings. Compliance management : Understand regulatory requirements and remediation timelines. Security reporting : Generate summaries of security posture and remediation progress. Remediation planning : Create actionable plans to address security vulnerabilities. Security workflow automation : Streamline repetitive security assessment tasks. Additionally, these are the tools which Security Analyst Agent has at its disposal: For example, I can ask \" What are the most critical vulnerabilities and which vulnerabilities should I address first? \"\nto make it easy to determine what is important. The agent will respond as follows: Example queries for effective triaging Here are powerful queries to use with the Security Analyst Agent: Identify critical issues: \"Show me vulnerabilities that are actively exploitable in our production code\" Focus on reachable vulnerabilities: \"Which high-severity vulnerabilities are in code paths that are actually executed?\" Understand dependencies: \"What are the most critical dependency vulnerabilities and are patches available?\" Get remediation guidance: \"Explain how to fix the SQL injection vulnerability in user authentication\" You can also directly assign developers to vulnerabilities. Understanding agent recommendations When Security Analyst Agent analyzes vulnerabilities, it provides: Risk assessment : The agent explains why a vulnerability is critical beyond just the CVSS score, considering your\napplication's specific architecture and usage patterns. Exploitability analysis : It determines whether vulnerable code is actually reachable and exploitable in your\nenvironment, helping filter out theoretical risks. Remediation steps : The agent provides specific, actionable guidance on how to fix vulnerabilities, including code\nexamples when appropriate. Priority ranking : Instead of overwhelming you with hundreds of findings, the agent helps identify the top issues\nthat should be addressed first. Real-world workflow example Here's how a typical triaging session might look: Start with the big picture : \"Analyze the security posture of this project and highlight the top 5 most critical vulnerabilities.\" Dive into specifics : For each critical vulnerability identified, ask \"Is this vulnerability actually exploitable in our application?\" Plan remediation : \"What's the recommended fix for this SQL injection issue, and are there any side effects to consider?\" Track progress : After addressing critical issues, ask \"What vulnerabilities should I prioritize next?\" Benefits of agent-assisted triaging Using Security Analyst Agent transforms vulnerability management: Time savings : Reduce hours of manual analysis to minutes of guided review Better prioritization : Focus on vulnerabilities that actually pose risk to your specific application Knowledge transfer : Learn security best practices through agent explanations Consistent standards : Apply consistent triaging logic across all projects Reduced alert fatigue : Filter noise and false positives effectively Get started today Vulnerability triaging doesn't have to be an overwhelming manual process. By combining GitLab's integrated security scanners\nwith GitLab Duo Security Analyst Agent, development teams can quickly identify and prioritize the vulnerabilities that\ntruly matter. The agent's ability to understand context, assess real risk, and provide actionable guidance transforms security scanning\nfrom a compliance checkbox into a practical, efficient part of your development workflow. Instead of drowning in hundreds\nof vulnerability reports, you can focus your energy on addressing the issues that actually threaten your application's security. Start by enabling security scanners in your GitLab pipelines, then leverage Security Analyst Agent to make intelligent,\ninformed decisions about vulnerability remediation. Your future self — and your security team — will thank you. Ready to get started? Check out the GitLab Duo Agent Platform documentation and security scanning documentation to begin transforming your\nvulnerability management workflow today.",
+      "published_ts": 1767657600,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/microsofts-strategic-ai-datacenter-planning-enables-seamless-large-scale-nvidia-rubin-deployments/",
+      "title": "Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments",
+      "summary": "CES 2026 showcases the arrival of the NVIDIA Rubin Platform, along with Azure’s proven readiness for deployment. The post Microsoft’s strategic AI datacenter planning enables seamless, large-scale NVIDIA Rubin deployments appeared first on Microsoft Azure Blog .",
+      "published_ts": 1767654000,
+      "source_name": "Azure Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia/nvidia-cosmos-reason-2-brings-advanced-reasoning",
+      "title": "NVIDIA Cosmos Reason 2 Brings Advanced Reasoning To Physical AI",
+      "summary": "NVIDIA Cosmos Reason 2 Brings Advanced Reasoning To Physical AI\nNVIDIA today released\nCosmos Reason 2\n, the latest advancement in open, reasoning vision language models for physical AI. Cosmos Reason 2 surpasses its previous version in accuracy and tops the\nPhysical AI Bench\nand\nPhysical Reasoning\nl",
+      "published_ts": 1767653811,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/tiiuae/falcon-h1-arabic",
+      "title": "Introducing Falcon-H1-Arabic: Pushing the Boundaries of Arabic Language AI with Hybrid Architecture",
+      "summary": "Introducing Falcon-H1-Arabic: Pushing the Boundaries of Arabic Language AI with Hybrid Architecture\nDiscover more in\nour official blogpost\n, featuring an interactive experience\nThe journey of building world-class Arabic language models has been one of continuous learning and iteration. Today, we're ",
+      "published_ts": 1767604611,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/building-trust-in-agentic-tools-what-we-learned-from-our-users/",
+      "title": "Building trust in agentic tools: What we learned from our users",
+      "summary": "As AI agents become increasingly sophisticated partners in software development, a critical question emerges: How do we build lasting trust between humans and these autonomous systems? Recent research from GitLab's UX Research team reveals that trust in AI agents isn't built through dramatic breakthroughs, but rather through countless small interactions called inflection points that accumulate over time to create confidence and reliability. Our comprehensive study of 13 agentic tool users from companies of different sizes identified that adoption happens through \"micro-inflection points,\" subtle design choices and interaction patterns that gradually build the trust needed for developers to rely on AI agents in their daily workflows. These findings offer crucial insights for organizations implementing AI agents in their DevSecOps processes. Traditional software tools earn trust through predictable behavior and consistent performance. AI agents, however, operate with a degree of autonomy that introduces uncertainty. Our research shows that users don't commit to AI tools through single \"aha\" moments. Instead, they develop trust through accumulated positive micro-interactions that demonstrate the agent understands their context, respects their guardrails, and enhances rather than disrupts their workflows. This incremental trust-building is especially critical in DevSecOps environments where mistakes can impact production systems, customer data, and business operations. Each small interaction either reinforces or erodes the foundation of trust necessary for productive human-AI collaboration. Four pillars of trust in AI agents Our research identified four key categories of micro-inflection points that build user trust: Safeguarding actions Trust begins with safety. Users need confidence that AI agents won't cause irreversible damage to their systems. Essential safeguards include: Confirmation dialogs for critical changes: Before executing operations that could affect production systems or delete data, agents should pause and seek explicit approval Rollback capabilities: Users must know they can undo agent actions if something goes wrong Secure boundaries: For organizations with compliance requirements, agents must respect data residency and security policies without constant manual oversight Providing transparency Users can't trust what they can't understand. Effective AI agents maintain visibility through: Real-time progress updates: Especially crucial when user attention might be needed Action explanations: Before executing high-stakes operations, agents should clearly communicate their planned approach Clear error handling: When issues arise, users need immediate alerts with understandable error messages and recovery paths This transparency transforms AI agents from mysterious black boxes into comprehensible partners whose logic users can follow and verify. Remembering context Nothing erodes trust faster than having to repeatedly teach an AI agent the same information. Trust-building agents demonstrate memory through: Preference retention: Accepting and applying user feedback about coding styles, deployment patterns, or workflow preferences Context awareness: Remembering previous instructions and project-specific requirements Adaptive learning: Evolving based on user corrections without requiring explicit reprogramming Our research participants consistently highlighted frustration with tools that couldn't remember basic preferences, forcing them to provide the same guidance repeatedly. Anticipating needs Trust emerges when AI agents proactively support user workflows. Agents could support the user in the following ways: Pattern recognition: Learning user routines and predicting tasks based on time of day or project context Intelligent agent selection: Automatically recognizing which specialized agents are most relevant for specific tasks Environment analysis: Understanding coding environments, dependencies, and project structures without explicit configuration These anticipatory capabilities transform AI agents from reactive tools into proactive partners that reduce cognitive load and streamline development processes. Implementing trust-building features For organizations deploying AI agents, our research suggests several practical implementations: Start with low-risk environments: Allow users to build trust gradually by beginning with non-critical tasks. As confidence grows through positive micro-interactions, users naturally expand their reliance on AI capabilities. Design for continuous orchestration of agents, which includes intervention: Unlike traditional automation, AI agents should know when to pause and seek human input. This intervention assures users they maintain ultimate control while benefiting from AI efficiency. Agents also need autonomy level controls so that they can calibrate autonomy for different types of action, in different contexts. Maintain audit trails: Every agent action should be traceable, allowing users to understand not just what happened, but why the agent made specific decisions. Personalize the experience: Agents that adapt to individual user preferences and team workflows create stronger trust bonds than one-size-fits-all solutions. The compounding impact of trust Our findings reveal that trust in AI agents follows a compound growth pattern. Each positive micro-interaction makes users slightly more willing to rely on the agent for the next task. Over time, these small trust deposits accumulate into deep confidence that transforms AI agents from experimental tools into essential development partners. This trust-building process is delicate – a single significant failure can erase weeks of accumulated confidence. That's why consistency in these micro-inflection points is crucial. Every interaction matters. Supporting these micro-inflection points is a cornerstone of having software teams and their AI agents collaborate at enterprise scale with intelligent orchestration. Next steps Building trust in AI agents requires intentional design focused on user needs and concerns. Organizations implementing agentic tools should: Audit their AI agents for trust-building micro-interactions Prioritize transparency and user control in agent design Invest in memory and learning capabilities that reduce user friction Create clear escalation paths for when agents encounter uncertainty Key takeaways Trust in AI agents builds incrementally through micro-inflection points rather than breakthrough moments Four key categories drive trust: safeguarding actions, providing transparency, remembering context, and anticipating needs Small design choices in AI interactions have compound effects on user adoption and long-term reliance Organizations must intentionally design for trust through consistent, positive micro-interactions Help us learn what matters to you: Your experiences and insights are invaluable in shaping how we design and improve agentic interactions. Join our research panel to participate in upcoming studies. Explore GitLab’s agents in action: GitLab Duo Agent Platform extends AI's speed beyond just coding to your entire software lifecycle. With your workflows defining the rules, your context maintaining organizational knowledge, and your guardrails ensuring control, teams can orchestrate while agents execute across the SDLC. Visit the GitLab Duo Agent Platform site to discover how intelligent orchestration can transform your DevSecOps journey. Whether you're exploring agents for the first time or looking to optimize your existing implementations, we believe that understanding and designing for trust is the key to successful adoption. Let's build that future together!",
+      "published_ts": 1767571200,
+      "source_name": "GitLab Engineering",
+      "content_type": "rex"
     }
   ],
   "cloud_infra_observability": [
     {
-      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-aws-lambda-for-net-10-aws-client-vpn-quickstart-best-of-aws-reinvent-and-more-january-12-2026/",
-      "title": "AWS Weekly Roundup: AWS Lambda for .NET 10, AWS Client VPN quickstart, Best of AWS re:Invent, and more (January 12, 2026)",
-      "summary": "At the beginning of January, I tend to set my top resolutions for the year, a way to focus on what I want to achieve. If AI and cloud computing are on your resolution list, consider creating an AWS Free Tier account to receive up to $200 in credits and have 6 months of risk-free […]",
-      "published_ts": 1768239587,
-      "source_name": "AWS Blog",
+      "url": "https://aws.amazon.com/blogs/big-data/use-amazon-sagemaker-custom-tags-for-project-resource-governance-and-cost-tracking/",
+      "title": "Use Amazon SageMaker custom tags for project resource governance and cost tracking",
+      "summary": "Amazon SageMaker announced a new feature that you can use to add custom tags to resources created through an Amazon SageMaker Unified Studio project. This helps you enforce tagging standards that conform to your organization’s service control policies (SCPs) and helps enable cost tracking reporting practices on resources created across the organization. In this post, we look at use cases for custom tags and how to use the AWS Command Line Interface (AWS CLI) to add tags to project resources.",
+      "published_ts": 1767920651,
+      "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
     },
     {
-      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/healthcare-pharma-contact-center-modernization",
-      "title": "Modernize Healthcare & Pharma Contact Centers",
-      "summary": "How healthcare and life sciences organizations can modernize contact centers to cut costs and deliver personalized patient experiences on trusted data",
-      "published_ts": 1768237200,
+      "url": "https://www.dataiku.com/stories/blog/aws-reinvent-takeaways-sanofi",
+      "title": "My AWS re:Invent Takeaway: The End of “Just Build an Agent”",
+      "summary": "Each year, AWS re:Invent takes place at roughly the same time and in roughly the same place as the National Finals Rodeo. The result is a uniquely Vegas blend of Patagonia tech vests, oversized hoodies, and wranglers over cowboy boots, which makes the Cosmo Chandelier Bar game of “which conference does this guy belong to” all too easy.",
+      "published_ts": 1767883025,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/observe-ai-powered-observability",
+      "title": "Snowflake Announces Intent to Acquire Observe to Deliver AI-Powered Observability",
+      "summary": "Snowflake announces intent to acquire Observe to deliver AI-powered observability, reduce telemetry costs, and unify logs, metrics, and traces at scale.",
+      "published_ts": 1767880800,
       "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.uber.com/blog/from-monitoring-to-observability-cloud-native/",
+      "title": "From Monitoring to Observability: Our Ultra-Marathon to a Cloud-Native Platform",
+      "summary": "Managing a global corporate network at Uber’s scale can feel a bit like running an ultra-marathon. There are long stretches of smooth sailing, but you’re always preparing for the unexpected mountain pass or sudden change in weather. For years, our engineering teams have navigated this terrain with a traditional, monolithic monitoring system. We knew we needed to switch to a modern pair of carbon-fiber running shoes. This meant a complete overhaul: a journey to replace our legacy system with a cloud-native observability platform built for speed, flexibility, and endurance on an open-source stack.",
+      "published_ts": 1767719913,
+      "source_name": "Uber Engineering Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/happy-new-year-aws-weekly-roundup-10000-aideas-competition-amazon-ec2-amazon-ecs-managed-instances-and-more-january-5-2026/",
+      "title": "Happy New Year! AWS Weekly Roundup: 10,000 AIdeas Competition, Amazon EC2, Amazon ECS Managed Instances and more (January 5, 2026)",
+      "summary": "Happy New Year! I hope the holidays gave you time to recharge and spend time with your loved ones. Like every year, I took a few weeks off after AWS re:Invent to rest and plan ahead. I used some of that downtime to plan the next cohort for Become a Solutions Architect (BeSA). BeSA is […]",
+      "published_ts": 1767633037,
+      "source_name": "AWS Blog",
       "content_type": "technical"
     }
   ],
   "data_modeling_governance": [
     {
-      "url": "https://www.rudderstack.com/blog/ai-stress-test-modern-data-stack",
-      "title": "AI is a stress test: How the modern data stack breaks under pressure",
-      "summary": "AI acts on customer context in real time. See how latency, drift, and weak governance break experiences, and what an AI-ready data stack needs.",
-      "published_ts": 1768336808,
-      "source_name": "Rudderstack Blog",
+      "url": "https://www.dataengineeringweekly.com/p/a-critique-of-iceberg-rest-catalog",
+      "title": "A Critique of Iceberg REST Catalog: A Classic Case of Why Semantic Spec Fails",
+      "summary": "How a Semantically Correct API Becomes Operationally Unreliable at Scale",
+      "published_ts": 1767938258,
+      "source_name": "Data Engineering Weekly",
       "content_type": "technical"
     },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/access-databricks-unity-catalog-data-using-catalog-federation-in-the-aws-glue-data-catalog/",
-      "title": "Access Databricks Unity Catalog data using catalog federation in the AWS Glue Data Catalog",
-      "summary": "AWS has launched the catalog federation capability, enabling direct access to Apache Iceberg tables managed in Databricks Unity Catalog through the AWS Glue Data Catalog. With this integration, you can discover and query Unity Catalog data in Iceberg format using an Iceberg REST API endpoint, while maintaining granular access controls through AWS Lake Formation. In this post, we demonstrate how to set up catalog federation between the Glue Data Catalog and Databricks Unity Catalog, enabling data querying using AWS analytics services.",
-      "published_ts": 1768250264,
+      "url": "https://aws.amazon.com/blogs/big-data/create-aws-glue-data-catalog-views-using-cross-account-definer-roles/",
+      "title": "Create AWS Glue Data Catalog views using cross-account definer roles",
+      "summary": "In this post, we demonstrate how to use cross-account IAM definer roles with AWS Glue Data Catalog views. We show how data owner accounts can create and manage views in a central governance account while maintaining security and control over their data assets.",
+      "published_ts": 1767912319,
       "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/ai-is-reshaping-devsecops-attend-gitlab-transcend-to-see-whats-next/",
+      "title": "AI is reshaping DevSecOps: Attend GitLab Transcend to see what’s next",
+      "summary": "AI promises a step change in innovation velocity, but most software teams are hitting a wall. According to our latest Global DevSecOps Report , AI-generated code now accounts for 34% of all development work. Yet 70% of DevSecOps professionals report that AI is making compliance management more difficult, and 76% say agentic AI will create unprecedented security challenges. This is the AI paradox: AI accelerates coding, but software delivery slows down as teams struggle to test, secure, and deploy all that code. Productivity gains meet workflow bottlenecks The problem isn't AI itself. It's how software gets built today. The traditional DevSecOps lifecycle contains hundreds of small tasks that developers must navigate manually: updating tickets, running tests, requesting reviews, waiting for approvals, fixing merge conflicts, addressing security findings. These tasks drain an average of seven hours per week from every team member, according to our research. Development teams are producing code faster than ever, but that code still crawls through fragmented toolchains, manual handoffs, and disconnected processes. In fact, 60% of DevSecOps teams use more than five tools for software development overall, and 49% use more than five AI tools. This fragmentation creates collaboration barriers, with 94% of DevSecOps professionals experiencing factors that limit collaboration in the software development lifecycle. The answer isn't more tools. It's intelligent orchestration that brings software teams and their AI agents together across projects and release cycles, with enterprise-grade security, governance, and compliance built in. Seeking deeper human-AI partnerships DevSecOps professionals don't want AI to take over — they want reliable partnerships. The vast majority (82%) say using agentic AI would increase their job satisfaction, and 43% envision an ideal future with a 50/50 split between human and AI contributions. They're ready to trust AI with 37% of their daily tasks without human review, particularly for documentation, test writing, and code reviews. What we heard resoundingly from DevSecOps professionals is that AI won't replace them; rather, it will fundamentally reshape their roles. 83% of DevSecOps professionals believe AI will significantly change their work within five years, and notably, 76% think this will create more engineering jobs, not fewer. As coding becomes easier with AI, engineers who can architect systems, ensure quality, and apply business context will be in high demand. Critically, 88% agree there are essential human qualities that AI will never fully replace, including creativity, innovation, collaboration, and strategic vision. So how can organizations bridge the gap between AI’s promise and the reality of fragmented workflows? Join us at GitLab Transcend: Explore how to drive real value with agentic AI On February 10, 2026, GitLab will be hosting Transcend, where we'll reveal how intelligent orchestration transforms AI-powered software development. You'll get a first look at GitLab's upcoming product roadmap and learn how teams are solving real-world challenges by modernizing development workflows with AI. Organizations winning in this new era balance AI adoption with security, compliance, and platform consolidation. AI offers genuine productivity gains when implemented thoughtfully — not by replacing human developers, but by freeing DevSecOps professionals to focus on strategic thinking and creative innovation. Register for Transcend today to secure your spot and discover how intelligent orchestration can help your software teams stay in flow.",
+      "published_ts": 1767830400,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/how-to-improve-data-quality",
+      "title": "How to improve data quality: 10 best practices for 2026",
+      "summary": "Learn how to improve data quality with modern best practices for enterprises for success in 2026",
+      "published_ts": 1767725477,
+      "source_name": "Rudderstack Blog",
       "content_type": "technical"
     }
   ],
   "etl_orchestration": [
     {
-      "url": "https://dagster.io/blog/how-to-enforce-data-quality-at-every-stage",
-      "title": "How to Enforce Data Quality at Every Stage of Your Data Pipeline",
-      "summary": "Learn how to enforce data quality across ingestion, transformation, and consumption. Catch data issues early and prevent broken dashboards with Dagster.",
-      "published_ts": 1768236711,
-      "source_name": "Dagster Blog",
-      "content_type": "technical"
-    },
-    {
-      "url": "https://airbyte.com/blog/chat-with-schema",
-      "title": "Chat with Your Schema: AI-Powered Configuration in Agent Engine | Airbyte",
-      "summary": "Discover Chat with Your Schema in Agent Engine – AI-powered configuration that simplifies data integration, automates workflows, and enhances agent intelligence.",
-      "published_ts": 1768176000,
-      "source_name": "Airbyte Blog",
-      "content_type": "technical"
-    }
-  ],
-  "hors_sujet": [],
-  "lake_storage_formats": [],
-  "news": [
-    {
-      "url": "https://www.databricks.com/blog/databricks-genie-powers-conversational-insights-atlassian-rovo",
-      "title": "Databricks Genie Powers Conversational Insights in Atlassian Rovo",
-      "summary": "Powering the Future of TeamworkFor millions of users, Atlassian is where work happens....",
-      "published_ts": 1768356900,
+      "url": "https://www.databricks.com/blog/chaos-scale-templatizing-spark-declarative-pipelines-dlt-meta",
+      "title": "From Chaos to Scale: Templatizing Spark Declarative Pipelines with DLT-META",
+      "summary": "Declarative pipelines give teams an intent driven way to build batch and streaming workflows...",
+      "published_ts": 1767825900,
       "source_name": "Databricks Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://www.getdbt.com/blog/finding-your-people-in-data",
-      "title": "Finding your people in data (and building a community that actually sticks)",
-      "summary": "The View on Data explores how data leaders find community, rethink mentorship, and build connections.",
-      "published_ts": 1768324680,
-      "source_name": "dbt Blog",
+      "url": "https://dlthub.com/blog/building-semantic-models-with-llms-and-dlt",
+      "title": "Autofiling the Boring Semantic Layer: From Sakila to Chat-BI with dltHub",
+      "summary": "Build one semantic model and reuse it across APIs, chatbots, and apps. Let LLMs handle the tedious mapping so you can ship data products that quietly just work.",
+      "published_ts": 1767744000,
+      "source_name": "dlt Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://blog.cloudflare.com/iran-protests-internet-shutdown/",
-      "title": "What we know about Iran’s Internet shutdown",
-      "summary": "Cloudflare Radar data shows Internet traffic from Iran has effectively dropped to zero since January 8, signaling a complete shutdown in the country and disconnection from the global Internet.",
-      "published_ts": 1768262400,
+      "url": "https://airbyte.com/blog/search-fetch-write-agents",
+      "title": "Search, Fetch, and Write: A Primer | Airbyte",
+      "summary": "Why AI agents fail when built on batch data systems and how search, fetch, and write enable real-time, entity-centric agentic data infrastructure.",
+      "published_ts": 1767744000,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/building-scalable-aws-lake-formation-governed-data-lakes-with-dbt-and-amazon-managed-workflows-for-apache-airflow/",
+      "title": "Building scalable AWS Lake Formation governed data lakes with dbt and Amazon Managed Workflows for Apache Airflow",
+      "summary": "Organizations often struggle with building scalable and maintainable data lakes—especially when handling complex data transformations, enforcing data quality, and monitoring compliance with established governance. Traditional approaches typically involve custom scripts and disparate tools, which can increase operational overhead and complicate access control. A scalable, integrated approach is needed to simplify these processes, improve data reliability, […]",
+      "published_ts": 1767739050,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/how-to-enforce-data-quality-at-every-stage-a-practical-guide-to-catching-issues-before-they-cost-you",
+      "title": "How to Enforce Data Quality at Every Stage of Your Data Pipeline",
+      "summary": "Learn how to enforce data quality across ingestion, transformation, and consumption. Catch data issues early and prevent broken dashboards with Dagster.",
+      "published_ts": 1767723794,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/dagster-airflow",
+      "title": "Dagster vs Airflow: Feature Comparison",
+      "summary": "Discover why Dagster outpaces Airflow with modern UX, modular pipeline design, asset tracking, and easier maintenance for growing teams.",
+      "published_ts": 1767650692,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/when-sync-isnt-enough",
+      "title": "When Sync Isn’t Enough: Async Execution Inside Dagster",
+      "summary": "Explore why and how to use an async executor in Dagster to efficiently run highly concurrent, I/O-bound workflows like inference, embeddings, and real-time enrichment.",
+      "published_ts": 1767624240,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    }
+  ],
+  "hors_sujet": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/aws-analytics-at-reinvent-2025-unifying-data-ai-and-governance-at-scale/",
+      "title": "AWS analytics at re:Invent 2025: Unifying Data, AI, and governance at scale",
+      "summary": "re:Invent 2025 showcased the bold Amazon Web Services (AWS) vision for the future of analytics, one where data warehouses, data lakes, and AI development converge into a seamless, open, intelligent platform, with Apache Iceberg compatibility at its core. Across over 18 major announcements spanning three weeks, AWS demonstrated how organizations can break down data silos, […]",
+      "published_ts": 1767825865,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.databricks.com/blog/how-7-eleven-transformed-maintenance-technician-knowledge-access-databricks-agent-bricks",
+      "title": "How 7‑Eleven Transformed Maintenance Technician Knowledge Access with Databricks Agent Bricks",
+      "summary": "Empowering Technicians Across Every Store7‑Eleven’s maintenance technicians keep...",
+      "published_ts": 1767999600,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/data-trust-clickstream-discrepancy",
+      "title": "Data trust is death by a thousand paper cuts",
+      "summary": "Data trust breaks via small data paper cuts. Learn how to debug clickstream discrepancies and prevent drift, bots, and pipeline misconfigurations in the AI era.",
+      "published_ts": 1767973353,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/securing-grid-practical-guide-cyber-analytics-energy-utilities",
+      "title": "Securing the Grid: A Practical Guide to Cyber Analytics for Energy & Utilities",
+      "summary": "How Modern Data Platforms Are Transforming Cybersecurity Operations in Critical InfrastructureThe...",
+      "published_ts": 1767831300,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/how-iit-bombay-students-code-future-with-gitlab/",
+      "title": "How IIT Bombay students are coding the future with GitLab",
+      "summary": "The GitLab team recently had the privilege of judging the iHack Hackathon at IIT Bombay's E-Summit . The energy was electric, the coffee was flowing, and the talent was undeniable. But what struck us most wasn't just the code — it was the sheer determination of students to solve real-world problems, often overcoming significant logistical and financial hurdles to simply be in the room. Through our GitLab for Education program , we aim to empower the next generation of developers with tools and opportunity. Here is a look at what the students built, and how they used GitLab to bridge the gap between idea and reality. The challenge: Build faster, build securely The premise for the GitLab track of the hackathon was simple: Don't just show us a product; show us how you built it. We wanted to see how students utilized GitLab's platform — from Issue Boards to CI/CD pipelines — to accelerate the development lifecycle. The results were inspiring. The winners 1st place: Team Decode — Democratizing Scientific Research Project: FIRE (Fast Integrated Research Environment) Team Decode took home the top prize with a solution that warms a developer's heart: a local-first, blazing-fast data processing tool built with Rust and Tauri. They identified a massive pain point for data science students: existing tools are fragmented, slow, and expensive. Their solution, FIRE, allows researchers to visualize complex formats (like NetCDF) instantly. What impressed the judges most was their \"hacker\" ethos. They didn't just build a tool; they built it to be open and accessible. How they used GitLab: Since the team lived far apart, asynchronous communication was key. They utilized GitLab Issue Boards and Milestones to track progress and integrated their repo with Telegram to get real-time push notifications. As one team member noted, \"Coordinating all these technologies was really difficult, and what helped us was GitLab... the Issue Board really helped us track who was doing what.\" 2nd place: Team BichdeHueDost — Reuniting to Solve Payments Project: SemiPay (RFID Cashless Payment for Schools) The team name, BichdeHueDost, translates to \"Friends who have been set apart.\" It's a fitting name for a group of friends who went to different colleges but reunited to build this project. They tackled a unique problem: handling cash in schools for young children. Their solution used RFID cards backed by a blockchain ledger to ensure secure, cashless transactions for students. How they used GitLab: They utilized GitLab CI/CD to automate the build process for their Flutter application (APK), ensuring that every commit resulted in a testable artifact. This allowed them to iterate quickly despite the \"flaky\" nature of cross-platform mobile development. 3rd place: Team ZenYukti — The Eyes of the Campus Project: KSHR (Unified Intelligence Platform) Team ZenYukti impressed us with a heavy-duty enterprise architecture. They built a comprehensive campus monitoring system designed to detect anomalies and ensure student safety using CCTV and biometric data. How they used GitLab: This team showed a sophisticated understanding of DevOps. They used GitLab CI with conditional logic, triggering specific pipelines only when front-end or back-end folders changed. They also utilized private container registries to manage their Docker images securely. Beyond the code: A lesson in inclusion While the code was impressive, the most powerful moment of the event happened away from the keyboard. During the feedback session, we learned about the journey Team ZenYukti took to get to Mumbai. They traveled over 24 hours, covering nearly 1,800 kilometers. Because flights were too expensive and trains were booked, they traveled in the \"General Coach,\" a non-reserved, severely overcrowded carriage. As one student described it: \"You cannot even imagine something like this... there are no seats... people sit on the top of the train. This is what we have endured.\" This hit home. Diversity, Inclusion, and Belonging are core values at GitLab. We realized that for these students, the barrier to entry wasn't intellect or skill, it was access. In that moment, we decided to break that barrier. We committed to reimbursing the travel expenses for the participants who struggled to get there. It's a small step, but it underlines a massive truth: talent is distributed equally, but opportunity is not. The future is bright (and automated) We also saw incredible potential in teams like Prometheus, who attempted to build an autonomous patch remediation tool (DevGuardian), and Team Arrakis, who built a voice-first job portal for blue-collar workers using GitLab Duo to troubleshoot their pipelines. To all the students who participated: You are the future. Through GitLab for Education , we are committed to providing you with the top-tier tools (like GitLab Ultimate) you need to learn, collaborate, and change the world — whether you are coding from a dorm room, a lab, or a train carriage. Keep shipping. 💡 Learn more about the GitLab for Education program .",
+      "published_ts": 1767830400,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.salesforce.com/migration-at-scale-moving-marketing-cloud-caching-from-memcached-to-redis-at-1-5m-rps-without-downtime/",
+      "title": "Migration at Scale: Moving Marketing Cloud Caching from Memcached to Redis at 1.5M RPS Without Downtime",
+      "summary": "By Paladi Sandhya Madhuri, Rakesh Chhabra, Piyush Pruthi, Sumit Sahrawat, Ankit Jain, and Basaveshwar Hiremath. In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. Today’s edition features Paladi Sandhya Madhuri, a Senior Software Engineer on the Marketing Cloud Caching team, whose work involves evolving the platform’s core caching infrastructure […] The post Migration at Scale: Moving Marketing Cloud Caching from Memcached to Redis at 1.5M RPS Without Downtime appeared first on Salesforce Engineering Blog .",
+      "published_ts": 1767766740,
+      "source_name": "Salesforce Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/rise-of-the-data-platform-engineer",
+      "title": "The Rise of the Data Platform Engineer",
+      "summary": "The evolution of data engineering demands a platform-first mindset. See how Data Platform Engineers are shaping the future of analytics.",
+      "published_ts": 1767731183,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/gemini-3-snowflake-cortex-ai",
+      "title": "Announcing Gemini 3 Within Snowflake Cortex AI: A Deeper Google Cloud Collaboration to Help Customers Build Smarter, Faster and More Secure AI",
+      "summary": "Snowflake and Google Cloud bring Gemini AI models natively to Snowflake Cortex AI, enabling customers to build and scale generative AI apps with governed data.",
+      "published_ts": 1767708000,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/bgp-route-leak-venezuela/",
+      "title": "A closer look at a BGP anomaly in Venezuela",
+      "summary": "There has been speculation about the cause of a BGP anomaly observed in Venezuela on January 2. We take a look at BGP route leaks, and dive into what the data suggests caused the anomaly in question.",
+      "published_ts": 1767686400,
       "source_name": "Cloudflare Engineering",
       "content_type": "technical"
     },
     {
-      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-252",
-      "title": "Data Engineering Weekly #252",
+      "url": "https://www.databricks.com/blog/bcbs-239-compliance-age-ai-turning-regulatory-burden-strategic-advantage",
+      "title": "BCBS 239 Compliance in the Age of AI: Turning Regulatory Burden into Strategic Advantage",
+      "summary": "The strategic imperative of BCBS 239 complianceBCBS 239 (Risk Data Aggregation and...",
+      "published_ts": 1767639660,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-251",
+      "title": "Data Engineering Weekly #251",
       "summary": "The Weekly Data Engineering Newsletter",
-      "published_ts": 1768185484,
+      "published_ts": 1767591351,
       "source_name": "Data Engineering Weekly",
       "content_type": "technical"
     }
@@ -127,27 +368,43 @@
   "python_analytics": [],
   "warehouses_engines": [
     {
-      "url": "https://www.databricks.com/blog/open-sourcing-dicer-databricks-auto-sharder",
-      "title": "Open Sourcing Dicer: Databricks’ Auto-Sharder",
-      "summary": "1. AnnouncementToday, we are excited to announce the open sourcing of one of our...",
-      "published_ts": 1768333500,
-      "source_name": "Databricks Blog",
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/data-ai-upskilling-series",
+      "title": "Snowflake Offers Free Data and AI Upskilling Event Series",
+      "summary": "Fast-track your data and AI skills with insights from Snowflake’s leading experts",
+      "published_ts": 1767920100,
+      "source_name": "Snowflake Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://vutr.substack.com/p/why-single-node-engine-like-duckdb",
-      "title": "Why single-node engines like DuckDB and Polars are getting a lot of attention?",
-      "summary": "From cluster-based engines like MapReduce or Spark to the claim \"Big Data is dead\"",
-      "published_ts": 1768281308,
-      "source_name": "VuTrinh · Data Engineering",
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/regulated-workloads-snowflake-backups",
+      "title": "Modernizing Regulated Workloads with Snowflake Backups",
+      "summary": "Snowflake Backups, now generally available, enable immutable retention for critical data to help meet regulatory and security needs.",
+      "published_ts": 1767805140,
+      "source_name": "Snowflake Blog",
       "content_type": "technical"
     },
     {
-      "url": "https://aws.amazon.com/blogs/big-data/navigating-architectural-choices-for-a-lakehouse-using-amazon-sagemaker/",
-      "title": "Navigating architectural choices for a lakehouse using Amazon SageMaker",
-      "summary": "Over time, several distinct lakehouse approaches have emerged. In this post, we show you how to evaluate and choose the right lakehouse pattern for your needs. A lakehouse architecture isn’t about choosing between a data lake and a data warehouse. Instead, it’s an approach to interoperability where both frameworks coexist and serve different purposes within a unified data architecture. By understanding fundamental storage patterns, implementing effective catalog strategies, and using native storage capabilities, you can build scalable, high-performance data architectures that support both your current analytics needs and future innovation.",
-      "published_ts": 1768250787,
+      "url": "https://duckdb.org/2026/01/06/duckdb-on-loongarch-morefine.html",
+      "title": "DuckDB on LoongArch",
+      "summary": "In today's “What's on your desk?” episode, we test a Loongson CPU with the LoongArch architecture.",
+      "published_ts": 1767657600,
+      "source_name": "DuckDB Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/simplify-multi-warehouse-data-governance-with-amazon-redshift-federated-permissions/",
+      "title": "Simplify multi-warehouse data governance with Amazon Redshift federated permissions",
+      "summary": "Amazon Redshift federated permissions simplify permissions management across multiple Redshift warehouses. In this post, we show you how to define data permissions one time and automatically enforce them across warehouses in your AWS account, removing the need to re-create security policies in each warehouse.",
+      "published_ts": 1767648001,
       "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia-reachy-mini",
+      "title": "NVIDIA brings agents to life with DGX Spark and Reachy Mini",
+      "summary": "NVIDIA brings agents to life with DGX Spark and Reachy Mini\nToday at CES 2026, NVIDIA unveiled a world of new open models to enable the future of agents, online and in the real world. From the recently released\nNVIDIA Nemotron\nreasoning LLMs to the new\nNVIDIA Isaac GR00T N1.6\nopen reasoning VLA and\n",
+      "published_ts": 1767571200,
+      "source_name": "Hugging Face Blog",
       "content_type": "technical"
     }
   ]

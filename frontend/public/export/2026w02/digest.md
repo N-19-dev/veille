@@ -30,17 +30,11 @@ reasoning LLM…
   - Learn how to enforce data quality across ingestion, transformation, and consumption. Catch data issues early and prevent broken dashboards with Dagster.
 - [Dagster vs Airflow: Feature Comparison](https://dagster.io/blog/dagster-airflow) — Dagster Blog · 2026-01-05
   - Discover why Dagster outpaces Airflow with modern UX, modular pipeline design, asset tracking, and easier maintenance for growing teams.
-- [Common Data Pipeline Patterns You’ll See in the Real World](https://seattledataguy.substack.com/p/common-data-pipeline-patterns-youll) — Seattle Data Guy · 2026-01-05
-  - A practical look at the many ways data pipelines show up inside real companies
 - [When Sync Isn’t Enough: Async Execution Inside Dagster](https://dagster.io/blog/when-sync-isnt-enough) — Dagster Blog · 2026-01-05
   - Explore why and how to use an async executor in Dagster to efficiently run highly concurrent, I/O-bound workflows like inference, embeddings, and real-time enrichment.
 
 ## 📐 Data Modeling, Governance & Quality
 
-- [AI agents and the data lake](https://www.getdbt.com/blog/ai-agents-and-the-data-lake) — dbt Blog · 2026-01-11
-  - Lauren Anderson, the head of Okta's enterprise data platform, on why central governance and the semantic layer are so essential.
-- [AI agents and the data lake (w/ Lauren Anderson)](https://roundup.getdbt.com/p/ai-agents-and-the-data-lake-w-lauren) — The Analytics Engineering Podcast (dbt) · 2026-01-11
-  - The head of Okta's enterprise data platform on why central governance and the semantic layer are so essential
 - [A Critique of Iceberg REST Catalog: A Classic Case of Why Semantic Spec Fails](https://www.dataengineeringweekly.com/p/a-critique-of-iceberg-rest-catalog) — Data Engineering Weekly · 2026-01-09
   - How a Semantically Correct API Becomes Operationally Unreliable at Scale
 - [Create AWS Glue Data Catalog views using cross-account definer roles](https://aws.amazon.com/blogs/big-data/create-aws-glue-data-catalog-views-using-cross-account-definer-roles/) — Redshift / AWS Big Data · 2026-01-08
@@ -72,8 +66,6 @@ reasoning LLM…
 
 - [In software, the code documents the app. In AI, the traces do.](https://blog.langchain.com/in-software-the-code-documents-the-app-in-ai-the-traces-do/) — LangChain Blog · 2026-01-10
   - TL;DR In traditional software, you read the code to understand what the app does - the decision logic lives in your codebase In AI agents, the code is just scaffolding - the actual decision-making happens in the model at runtime Because of …
-- [In software, the code documents the app. In AI, the traces do.](https://www.blog.langchain.com/in-software-the-code-documents-the-app-in-ai-the-traces-do/) — LangChain Blog · 2026-01-10
-  - TL;DR In traditional software, you read the code to understand what the app does - the decision logic lives in your codebase In AI agents, the code is just scaffolding - the actual decision-making happens in the model at runtime Because of …
 - [A Revolution Unfolding: AI Reshaping Consumer Shopping Habits](https://www.snowflake.com/content/snowflake-site/global/en/blog/AI-Reshaping-Consumer-Shopping-Habits) — Snowflake Blog · 2026-01-10
   - Emerging AI agents and open protocols like AP2 and ACP are fundamentally reshaping consumer shopping habits by automating research, discovery, and the path to purchase for brands and retailers.
 - [Thumbtack Powering Safe, Smart Home Services on Databricks with GenAI](https://www.databricks.com/blog/thumbtack-powering-safe-smart-home-services-databricks-genai) — Databricks Blog · 2026-01-09
@@ -82,14 +74,6 @@ reasoning LLM…
   - Learn how Dagster's "Dignified Python" principles help developers align AI agents with intentional, readable, and performant Python. Ten rules from our Claude prompt that you can adopt.
 - [Strengthening GitLab.com security: Mandatory multi-factor authentication](https://about.gitlab.com/blog/strengthening-gitlab-com-security-mandatory-multi-factor-authentication/) — GitLab Engineering · 2026-01-09
   - To strengthen the security of all user accounts on GitLab.com, GitLab is implementing mandatory multi-factor authentication (MFA) for all users and API endpoints who sign in using a username and password. Why this is happening This move is …
-- [The Power BI MCP Server is changing the game of how you do Power BI!](https://www.youtube.com/shorts/EJPisMWTMTA) — Guy in a Cube (YouTube) · 2026-01-08
-  - Check out the full video: https://youtu.be/7UapKxtxQUo
-
-📢 Become a member: https://guyinacu.be/membership 
-
-*******************
-
-Want to take your Power BI skills to the next level? We have training courses available to help you with your j…
 - [Agentic AI from a security perspective](https://blog.ovhcloud.com/agentic-ai-from-a-security-perspective/) — OVHcloud Blog · 2026-01-08
   - Large Language Models (LLMs) and generative AI technologies are everywhere, infiltrating both our personal and professional daily lives. Well-known services are already diverting most internet users away from their old browsing habits, and …
 - [Evaluating AI Models Through Chess: What Stateful Games Reveal](https://dagster.io/blog/evaluating-model-behavior-through-chess) — Dagster Blog · 2026-01-07
@@ -106,16 +90,6 @@ of more than 175,…
   - In this post, you'll learn how Amazon EMR Serverless eliminates the need to configure local disk storage for Apache Spark workloads through a new serverless storage capability. We explain how this feature automatically handles shuffle opera…
 - [Scaling Sales Agents: Engineering Next-Gen AI for the Enterprise Era](https://engineering.salesforce.com/scaling-sales-agents-engineering-next-gen-ai-for-the-enterprise-era/) — Salesforce Engineering · 2026-01-06
   - By Rakesh Nagaraju, Shweta Joshi, Guru Prasad, Renuka Prasad and Ashraya Raj Mathur. In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. Today we meet Shweta Joshi, Software Eng…
-- [Let's install the Power BI MCP Server!](https://www.youtube.com/shorts/OlE0R4wCPgg) — Guy in a Cube (YouTube) · 2026-01-06
-  - Check out the full video here: https://youtu.be/umZReVr10Xw
-
-📢 Become a member: https://guyinacu.be/membership 
-
-*******************
-
-Want to take your Power BI skills to the next level? We have training courses available to help you with y…
-- [#288: Our LLM Suggested We Chat about MCP. Kinda’ Meta, No?](https://analyticshour.io/2026/01/06/288-our-llm-suggested-we-chat-about-mcp-kinda-meta-no/) — Analytics Power Hour · 2026-01-06
-  - If there’s one thing that we absolutely knew would be coming along with the increased interest and use of AI, it would be… more acronyms! And, along with the acronyms, we pretty much could predict that we see a lot of online flexing through…
 - [AI-powered vulnerability triaging with GitLab Duo Security Agent](https://about.gitlab.com/blog/vulnerability-triage-made-simple-with-gitlab-security-analyst-agent/) — GitLab Engineering · 2026-01-06
   - Security vulnerabilities are discovered constantly in modern applications. Development teams often face hundreds or thousands
 of findings from security scanners, making it challenging to identify which vulnerabilities pose the greatest risk…
@@ -139,21 +113,8 @@ The journey of building world-class Arabic language models has …
 
 - [How 7‑Eleven Transformed Maintenance Technician Knowledge Access with Databricks Agent Bricks](https://www.databricks.com/blog/how-7-eleven-transformed-maintenance-technician-knowledge-access-databricks-agent-bricks) — Databricks Blog · 2026-01-09
   - Empowering Technicians Across Every Store7‑Eleven’s maintenance technicians keep...
-- [Stackoverflow is basically dead](https://www.youtube.com/watch?v=RG4VyQARSfg) — Andreas Kretz (YouTube) · 2026-01-09
-  - Yup, it's bad!
-Here's the source for the material I showed: https://blog.pragmaticengineer.com/stack-overflow-is-almost-dead/
-
-If you want to learn Data Engineering check out: LearnDataEngineering.com
 - [Data trust is death by a thousand paper cuts](https://www.rudderstack.com/blog/data-trust-clickstream-discrepancy) — Rudderstack Blog · 2026-01-09
   - Data trust breaks via small data paper cuts. Learn how to debug clickstream discrepancies and prevent drift, bots, and pipeline misconfigurations in the AI era.
-- [The Boring Engineer Manifesto](https://juhache.substack.com/p/boring-engineering-manifesto) — Julien Hurault · Ju Data Engineering · 2026-01-09
-  - Ju Data Engineering Weekly - Ep 92
-- [Data Governance Is NOT the Foundation for AI](https://www.youtube.com/watch?v=YiT8YejCf6g) — Andreas Kretz (YouTube) · 2026-01-08
-  - Data Governance Is NOT the Foundation for AI
-That statement alone triggers a lot of people.
-And there’s a reason for that.
-
-In this video, I break down why starting AI initiatives with data governance, definitions, and policies often leads …
 - [Securing the Grid: A Practical Guide to Cyber Analytics for Energy & Utilities](https://www.databricks.com/blog/securing-grid-practical-guide-cyber-analytics-energy-utilities) — Databricks Blog · 2026-01-08
   - How Modern Data Platforms Are Transforming Cybersecurity Operations in Critical InfrastructureThe...
 - [How IIT Bombay students are coding the future with GitLab](https://about.gitlab.com/blog/how-iit-bombay-students-code-future-with-gitlab/) — GitLab Engineering · 2026-01-08

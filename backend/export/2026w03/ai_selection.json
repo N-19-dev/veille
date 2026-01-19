@@ -1,0 +1,150 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-252",
+      "title": "Data Engineering Weekly #252",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1768185484,
+      "source_name": "Data Engineering Weekly",
+      "score": 69.85952944918112,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.databricks.com/blog/building-your-ai-skillset-accelerate-your-career-databricks-certifications",
+      "title": "Building your AI skillset: Accelerate your career with Databricks Certifications",
+      "summary": "The data and AI landscape is moving at a breakneck pace. As organizations shift from...",
+      "published_ts": 1768493767,
+      "source_name": "Databricks Blog",
+      "score": 55.55129567330534,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/navigating-architectural-choices-for-a-lakehouse-using-amazon-sagemaker/",
+      "title": "Navigating architectural choices for a lakehouse using Amazon SageMaker",
+      "summary": "Over time, several distinct lakehouse approaches have emerged. In this post, we show you how to evaluate and choose the right lakehouse pattern for your needs. A lakehouse architecture isn’t about choosing between a data lake and a data warehouse. Instead, it’s an approach to interoperability where both frameworks coexist and serve different purposes within a unified data architecture. By understanding fundamental storage patterns, implementing effective catalog strategies, and using native storage capabilities, you can build scalable, high-performance data architectures that support both your current analytics needs and future innovation.",
+      "published_ts": 1768250787,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 60.88007322766564,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.uber.com/blog/from-static-rate-limiting-to-intelligent-load-management/",
+      "title": "How Uber Conquered Database Overload: The Journey from Static Rate-Limiting to Intelligent Load Management",
+      "summary": "🧠 Overload in stateful databases isn’t one-dimensional. See how we built an intelligent load manager that sheds smarter, adapts to diverse signals, and stays fair under pressure. Even better, this approach led to a ~70% reduction in P99 latency.",
+      "published_ts": 1768314600,
+      "source_name": "Uber Engineering Blog",
+      "score": 54.91767780347303,
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://dagster.io/blog/how-to-enforce-data-quality-at-every-stage",
+      "title": "How to Enforce Data Quality at Every Stage of Your Data Pipeline",
+      "summary": "Learn how to enforce data quality across ingestion, transformation, and consumption. Catch data issues early and prevent broken dashboards with Dagster.",
+      "published_ts": 1768236711,
+      "source_name": "Dagster Blog",
+      "score": 57.14092720638622,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.getdbt.com/blog/finding-your-people-in-data",
+      "title": "Finding your people in data (and building a community that actually sticks)",
+      "summary": "The View on Data explores how data leaders find community, rethink mentorship, and build connections.",
+      "published_ts": 1768324680,
+      "source_name": "dbt Blog",
+      "score": 54.509988251057536,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://dagster.io/blog/your-gtm-data-finally-untangled",
+      "title": "Your GTM Data, Finally Untangled | Dagster Compass",
+      "summary": "Connect Salesforce, Google Ads, and Gong to Compass and ask questions in Slack. No dashboards, no SQL, no tickets. Get real answers from your GTM data in seconds.",
+      "published_ts": 1768488057,
+      "source_name": "Dagster Blog",
+      "score": 55.89699677445672,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "lake_storage_formats": [
+    {
+      "url": "https://www.uber.com/blog/apache-hudi-at-uber/",
+      "title": "Apache Hudi™ at Uber: Engineering for Trillion-Record-Scale Data Lake Operations",
+      "summary": "Check out this deep dive into how Uber runs Apache Hudi™ at extreme scale—handling trillions of records, petabytes of data, and high-concurrency table services across regions.",
+      "published_ts": 1768573800,
+      "source_name": "Uber Engineering Blog",
+      "score": 62.90348835966803,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.youtube.com/watch?v=Lz9nU0l7sGg",
+      "title": "How to start with Data Engineering in 2026 & my biggest regret",
+      "summary": "Advice for Data Analysts, Data Scientists and beginners.\n\nCheck out LearnDataEngineering.com to get good :)",
+      "published_ts": 1768337060,
+      "source_name": "Andreas Kretz (YouTube)",
+      "score": 61.29743302410299,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "python_analytics": [
+    {
+      "url": "https://vutr.substack.com/p/why-single-node-engine-like-duckdb",
+      "title": "Why single-node engines like DuckDB and Polars are getting a lot of attention?",
+      "summary": "From cluster-based engines like MapReduce or Spark to the claim \"Big Data is dead\"",
+      "published_ts": 1768281308,
+      "source_name": "VuTrinh · Data Engineering",
+      "score": 64.75499936125496,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://www.databricks.com/blog/open-sourcing-dicer-databricks-auto-sharder",
+      "title": "Open Sourcing Dicer: Databricks’ Auto-Sharder",
+      "summary": "1. AnnouncementToday, we are excited to announce the open sourcing of one of our...",
+      "published_ts": 1768333500,
+      "source_name": "Databricks Blog",
+      "score": 57.08338749679652,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/access-databricks-unity-catalog-data-using-catalog-federation-in-the-aws-glue-data-catalog/",
+      "title": "Access Databricks Unity Catalog data using catalog federation in the AWS Glue Data Catalog",
+      "summary": "AWS has launched the catalog federation capability, enabling direct access to Apache Iceberg tables managed in Databricks Unity Catalog through the AWS Glue Data Catalog. With this integration, you can discover and query Unity Catalog data in Iceberg format using an Iceberg REST API endpoint, while maintaining granular access controls through AWS Lake Formation. In this post, we demonstrate how to set up catalog federation between the Glue Data Catalog and Databricks Unity Catalog, enabling data querying using AWS analytics services.",
+      "published_ts": 1768250264,
+      "source_name": "Redshift / AWS Big Data",
+      "score": 54.65748193589124,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ]
+}

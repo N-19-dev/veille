@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Data Engineering Weekly #252",
+    "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-252",
+    "source": "Data Engineering Weekly",
+    "category": "ai_data_engineering",
+    "score": 69.85952944918112,
+    "published_ts": 1768185484,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Why single-node engines like DuckDB and Polars are getting a lot of attention?",
+    "url": "https://vutr.substack.com/p/why-single-node-engine-like-duckdb",
+    "source": "VuTrinh · Data Engineering",
+    "category": "python_analytics",
+    "score": 64.75499936125496,
+    "published_ts": 1768281308,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "Apache Hudi™ at Uber: Engineering for Trillion-Record-Scale Data Lake Operations",
+    "url": "https://www.uber.com/blog/apache-hudi-at-uber/",
+    "source": "Uber Engineering Blog",
+    "category": "lake_storage_formats",
+    "score": 62.90348835966803,
+    "published_ts": 1768573800,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  }
+]

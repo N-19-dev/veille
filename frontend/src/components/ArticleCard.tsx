@@ -18,8 +18,10 @@ type Props = {
 };
 
 // Helper function to generate article ID (matches backend hash)
+// Uses unescape+encodeURIComponent to handle UTF-8 characters
 function generateArticleId(url: string, title: string): string {
-  return btoa(`${url}${title}`).slice(0, 40);
+  const str = `${url}${title}`;
+  return btoa(unescape(encodeURIComponent(str))).slice(0, 40);
 }
 
 export default function ArticleCard({

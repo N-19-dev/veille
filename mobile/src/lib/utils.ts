@@ -20,7 +20,12 @@ function btoa(input: string): string {
 }
 
 // Generate article ID - must match web app algorithm
+// Uses encodeURIComponent to handle UTF-8 characters
 export function generateArticleId(url: string, title: string): string {
   const str = `${url}${title}`;
-  return btoa(str).slice(0, 40);
+  // Convert UTF-8 to Latin1 bytes for base64 encoding
+  const latin1 = encodeURIComponent(str).replace(/%([0-9A-F]{2})/gi, (_, hex) =>
+    String.fromCharCode(parseInt(hex, 16))
+  );
+  return btoa(latin1).slice(0, 40);
 }

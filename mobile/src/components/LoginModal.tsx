@@ -1,7 +1,7 @@
 import { View, Text, Pressable, Modal, ActivityIndicator } from 'react-native';
 import { useAuth } from '../lib/AuthContext';
 import { auth } from '../lib/firebase';
-import { signInWithCredential, GoogleAuthProvider, signInAnonymously } from 'firebase/auth';
+import { signInWithCredential, GoogleAuthProvider } from 'firebase/auth';
 import * as Google from 'expo-auth-session/providers/google';
 import * as WebBrowser from 'expo-web-browser';
 import { useEffect, useState } from 'react';
@@ -64,20 +64,6 @@ export default function LoginModal() {
     }
   };
 
-  const handleAnonymousSignIn = async () => {
-    setIsLoading(true);
-    setError(null);
-    try {
-      await signInAnonymously(auth);
-      closeLoginModal();
-    } catch (err) {
-      console.error('Error signing in anonymously:', err);
-      setError('Erreur de connexion. Réessayez.');
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   return (
     <Modal
       visible={isLoginModalOpen}
@@ -122,29 +108,6 @@ export default function LoginModal() {
             </Pressable>
           ) : null}
 
-          {/* Anonymous Sign In */}
-          <Pressable
-            onPress={handleAnonymousSignIn}
-            disabled={isLoading}
-            className={`flex-row items-center justify-center gap-3 bg-slate-800 rounded-xl py-3 px-4 ${
-              isLoading ? 'opacity-50' : 'active:bg-slate-700'
-            }`}
-          >
-            {isLoading ? (
-              <ActivityIndicator size="small" color="#fff" />
-            ) : (
-              <>
-                <Text className="text-lg">👤</Text>
-                <Text className="font-medium text-white">
-                  Continuer en tant qu'invité
-                </Text>
-              </>
-            )}
-          </Pressable>
-
-          <Text className="text-xs text-neutral-400 text-center mt-3">
-            Les votes invité sont liés à cet appareil
-          </Text>
 
           <Pressable
             onPress={closeLoginModal}

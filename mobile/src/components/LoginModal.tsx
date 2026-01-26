@@ -53,10 +53,12 @@ export default function LoginModal() {
     }
   }, [response, closeLoginModal]);
 
-  const handleGoogleSignIn = () => {
+  const handleGoogleSignIn = async () => {
     setError(null);
     if (IOS_CLIENT_ID) {
-      promptAsync();
+      // Clear any cached browser session first
+      await WebBrowser.coolDownAsync();
+      promptAsync({ showInRecents: true });
     } else {
       setError('iOS Client ID non configuré. Utilisez la connexion invité.');
     }

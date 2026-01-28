@@ -24,31 +24,33 @@ export default function Top3({ items, weekLabel }: Props) {
         return (
           <View
             key={item.url}
-            className="bg-white rounded-2xl border border-neutral-200 overflow-hidden"
+            className="bg-gradient-to-r from-neutral-50 to-slate-50 rounded-2xl border border-neutral-100 overflow-hidden"
           >
             <Pressable
               onPress={() => Linking.openURL(item.url)}
-              className="p-4 active:bg-neutral-50"
+              className="flex-row items-start gap-3 p-4 active:opacity-80"
             >
-              <View className="flex-row items-center gap-2 mb-2">
+              <View className="w-10 h-10 bg-white rounded-xl items-center justify-center border border-neutral-100 shadow-sm">
                 <Image
                   source={{ uri: faviconUrl(item.url, 32) }}
-                  className="w-5 h-5 rounded"
+                  className="w-6 h-6 rounded"
                   resizeMode="contain"
                 />
+              </View>
+              <View className="flex-1">
                 {item.source && (
-                  <Text className="text-xs text-neutral-500">
+                  <Text className="text-xs font-medium text-indigo-600 uppercase tracking-wide mb-1">
                     {item.source}
                   </Text>
                 )}
+                <Text className="text-base font-semibold text-neutral-900 leading-6" numberOfLines={2}>
+                  {item.title}
+                </Text>
               </View>
-              <Text className="text-base font-medium text-neutral-900 leading-6">
-                {item.title}
-              </Text>
             </Pressable>
 
             {weekLabel && (
-              <View className="flex-row items-center justify-between px-4 pb-4">
+              <View className="flex-row items-center justify-between px-4 pb-4 pt-1">
                 <VoteButton
                   articleId={articleId}
                   articleUrl={item.url}

@@ -113,25 +113,25 @@ export default function VoteButton({
       <Pressable
         onPress={() => handleVote(1)}
         disabled={loading}
-        className={`w-9 h-9 rounded-xl items-center justify-center ${
+        className={`w-8 h-8 rounded-lg items-center justify-center ${
           userVote === 1
             ? 'bg-emerald-500'
             : 'bg-neutral-100 active:bg-emerald-100'
         } ${loading ? 'opacity-50' : ''}`}
       >
-        <Text className={`text-lg ${userVote === 1 ? '' : 'opacity-60'}`}>
-          {userVote === 1 ? '👍' : '👍'}
+        <Text className={`text-base font-bold ${userVote === 1 ? 'text-white' : 'text-neutral-400'}`}>
+          ▲
         </Text>
       </Pressable>
 
       {/* Vote count */}
-      <View className="min-w-[32px] items-center">
+      <View className="min-w-[28px] items-center">
         <Text className={`text-sm font-bold ${
           netVotes > 0 ? 'text-emerald-600' :
           netVotes < 0 ? 'text-red-500' :
           'text-neutral-400'
         }`}>
-          {netVotes > 0 ? `+${netVotes}` : netVotes}
+          {netVotes}
         </Text>
       </View>
 
@@ -139,14 +139,14 @@ export default function VoteButton({
       <Pressable
         onPress={() => handleVote(-1)}
         disabled={loading}
-        className={`w-9 h-9 rounded-xl items-center justify-center ${
+        className={`w-8 h-8 rounded-lg items-center justify-center ${
           userVote === -1
             ? 'bg-red-500'
             : 'bg-neutral-100 active:bg-red-100'
         } ${loading ? 'opacity-50' : ''}`}
       >
-        <Text className={`text-lg ${userVote === -1 ? '' : 'opacity-60'}`}>
-          {userVote === -1 ? '👎' : '👎'}
+        <Text className={`text-base font-bold ${userVote === -1 ? 'text-white' : 'text-neutral-400'}`}>
+          ▼
         </Text>
       </Pressable>
     </View>

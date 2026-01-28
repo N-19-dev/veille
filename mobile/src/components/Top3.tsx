@@ -11,27 +11,9 @@ type Props = {
 };
 
 const rankingStyles = [
-  {
-    medal: "🥇",
-    bg: "bg-amber-50",
-    border: "border-amber-200",
-    medalBg: "bg-amber-100",
-    accent: "bg-amber-400",
-  },
-  {
-    medal: "🥈",
-    bg: "bg-slate-50",
-    border: "border-slate-200",
-    medalBg: "bg-slate-100",
-    accent: "bg-slate-400",
-  },
-  {
-    medal: "🥉",
-    bg: "bg-orange-50",
-    border: "border-orange-200",
-    medalBg: "bg-orange-100",
-    accent: "bg-orange-400",
-  },
+  { bg: "bg-indigo-50", border: "border-indigo-100", numBg: "bg-indigo-600", numText: "text-white" },
+  { bg: "bg-indigo-50/70", border: "border-indigo-100", numBg: "bg-indigo-500", numText: "text-white" },
+  { bg: "bg-indigo-50/50", border: "border-indigo-100", numBg: "bg-indigo-400", numText: "text-white" },
 ];
 
 export default function Top3({ items, weekLabel }: Props) {
@@ -60,26 +42,25 @@ export default function Top3({ items, weekLabel }: Props) {
                 className="p-4 active:opacity-80"
               >
                 <View className="flex-row items-start gap-3">
-                  {/* Medal badge */}
-                  <View className={`${style.medalBg} w-12 h-12 rounded-xl items-center justify-center`}>
-                    <Text className="text-2xl">{style.medal}</Text>
+                  {/* Rank number */}
+                  <View className={`${style.numBg} w-8 h-8 rounded-lg items-center justify-center`}>
+                    <Text className={`text-base font-bold ${style.numText}`}>{idx + 1}</Text>
                   </View>
 
                   {/* Content */}
                   <View className="flex-1">
-                    <View className="flex-row items-center gap-2 mb-2">
+                    <View className="flex-row items-center gap-2 mb-1">
                       <Image
                         source={{ uri: faviconUrl(item.url, 32) }}
-                        className="w-5 h-5 rounded"
+                        className="w-4 h-4 rounded"
                         resizeMode="contain"
                       />
                       {item.source && (
-                        <Text className="text-xs font-medium text-neutral-500 uppercase tracking-wide">
+                        <Text className="text-xs font-medium text-indigo-600 uppercase tracking-wide">
                           {item.source}
                         </Text>
                       )}
                     </View>
-                    <View className={`h-1 w-10 rounded-full ${style.accent} mb-2`} />
                     <Text className="text-base font-semibold text-neutral-900 leading-6" numberOfLines={2}>
                       {item.title}
                     </Text>

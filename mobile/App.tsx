@@ -103,20 +103,12 @@ function AppContent() {
 
   return (
     <SafeAreaView className="flex-1 bg-neutral-50">
-      <StatusBar style="light" />
+      <StatusBar style="dark" />
 
-      {/* Header with gradient effect */}
-      <View className="px-5 py-4 bg-indigo-600 flex-row items-center justify-between">
-        <View className="flex-row items-center gap-3">
-          <View className="w-10 h-10 bg-white/20 rounded-xl items-center justify-center">
-            <Text className="text-2xl">🚀</Text>
-          </View>
-          <View>
-            <Text className="text-xl font-bold text-white tracking-tight">Veille Tech</Text>
-            <Text className="text-xs text-indigo-200">Le meilleur de la tech</Text>
-          </View>
-        </View>
-        <View className="flex-row items-center gap-3">
+      {/* Header */}
+      <View className="px-5 py-4 bg-white border-b border-neutral-200 flex-row items-center justify-between">
+        <Text className="text-xl font-bold text-neutral-900">Veille Tech</Text>
+        <View className="flex-row items-center gap-2">
           <WeekPicker
             weeks={weeks}
             currentWeek={currentWeek}

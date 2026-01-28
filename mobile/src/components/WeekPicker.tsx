@@ -21,12 +21,12 @@ export default function WeekPicker({ weeks, currentWeek, onSelect }: Props) {
       {/* Trigger button */}
       <Pressable
         onPress={() => setIsOpen(true)}
-        className="bg-white/20 px-3 py-2 rounded-xl flex-row items-center gap-2 active:bg-white/30"
+        className="bg-neutral-100 px-3 py-2 rounded-lg flex-row items-center gap-2 active:bg-neutral-200"
       >
-        <Text className="text-sm font-semibold text-white">
+        <Text className="text-sm font-medium text-neutral-700">
           {currentWeek?.week || "..."}
         </Text>
-        <Text className="text-indigo-200 text-xs">▼</Text>
+        <Text className="text-neutral-400 text-xs">▼</Text>
       </Pressable>
 
       {/* Modal */}

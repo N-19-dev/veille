@@ -22,16 +22,16 @@ export default function AuthButton() {
     return (
       <Pressable
         onPress={handleLogout}
-        className="flex-row items-center gap-2 bg-white/20 rounded-xl px-3 py-2 active:bg-white/30"
+        className="active:opacity-70"
       >
         {user.photoURL ? (
           <Image
             source={{ uri: user.photoURL }}
-            className="w-7 h-7 rounded-full border-2 border-white/50"
+            className="w-8 h-8 rounded-full"
           />
         ) : (
-          <View className="w-7 h-7 rounded-full bg-white/30 items-center justify-center">
-            <Text className="text-white text-xs font-bold">
+          <View className="w-8 h-8 rounded-full bg-neutral-200 items-center justify-center">
+            <Text className="text-neutral-600 text-sm font-bold">
               {user.email?.charAt(0).toUpperCase() || '?'}
             </Text>
           </View>
@@ -43,9 +43,9 @@ export default function AuthButton() {
   return (
     <Pressable
       onPress={openLoginModal}
-      className="bg-white rounded-xl px-4 py-2 active:bg-indigo-50"
+      className="bg-neutral-900 rounded-lg px-4 py-2 active:bg-neutral-700"
     >
-      <Text className="text-sm text-indigo-600 font-semibold">Connexion</Text>
+      <Text className="text-sm text-white font-medium">Connexion</Text>
     </Pressable>
   );
 }

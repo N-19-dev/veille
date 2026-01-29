@@ -13,6 +13,7 @@ import WeekPicker from "./src/components/WeekPicker";
 import { AuthProvider } from "./src/lib/AuthContext";
 import { CommentsProvider } from "./src/lib/CommentsContext";
 import { useWeekVotes } from "./src/lib/useWeekVotes";
+import { useNotifications } from "./src/lib/useNotifications";
 import { generateArticleId } from "./src/lib/utils";
 import {
   loadWeeksIndex,
@@ -39,6 +40,9 @@ function AppContent() {
   const [refreshing, setRefreshing] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showFullSelection, setShowFullSelection] = useState(false);
+
+  // Initialize push notifications
+  useNotifications();
 
   // Fetch community votes for ranking
   const { getVoteCount } = useWeekVotes(currentWeek?.week);

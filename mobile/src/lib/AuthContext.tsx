@@ -1,6 +1,7 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { auth } from './firebase';
 import { onAuthStateChanged, type User } from 'firebase/auth';
+import { removePushToken } from './notifications';
 
 interface AuthContextType {
   user: User | null;
@@ -16,9 +17,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState(true);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const previousUserId = useRef<string | null>(null);
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      // Remove push token when user logs out
+      if (previousUserId.current && !currentUser) {
+        removePushToken(previousUserId.current);
+      }
+
+      previousUserId.current = currentUser?.uid || null;
       setUser(currentUser);
       setLoading(false);
     });

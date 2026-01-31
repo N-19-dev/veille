@@ -2,6 +2,7 @@
 import { type FeedItem, faviconUrl, formatRelativeDate } from "../lib/parse";
 import VoteButton from "./VoteButton";
 import CommentsCount from "./CommentsCount";
+import TopCommentPreview from "./TopCommentPreview";
 import { useComments } from "../lib/CommentsContext";
 
 type FeedViewProps = {
@@ -84,32 +85,50 @@ function FeedCard({ item }: { item: FeedItem }) {
         </div>
       </a>
 
-      {/* Vote and Comments - not clickable through to article */}
-      <div className="mt-3 pt-3 border-t flex items-center justify-between">
-        <VoteButton
-          articleId={articleId}
-          articleUrl={item.url}
-          weekLabel={weekLabel}
-          source={item.source_name}
-          category={item.category_key}
-        />
+      {/* Vote and Comments */}
+      <div className="mt-3 pt-3 border-t flex items-center justify-between gap-4">
+        {/* Votes - left */}
+        <div className="flex-shrink-0">
+          <VoteButton
+            articleId={articleId}
+            articleUrl={item.url}
+            weekLabel={weekLabel}
+            source={item.source_name}
+            category={item.category_key}
+          />
+        </div>
 
-        <button
-          onClick={() => {
-            openCommentsModal(
-              articleId,
-              item.url,
-              item.title,
-              weekLabel,
-              item.category_key || 'unknown',
-              item.source_name
-            );
-          }}
-          className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition"
-        >
-          <CommentsCount articleId={articleId} weekLabel={weekLabel} />
-          <span>comments</span>
-        </button>
+        {/* Comments section - right */}
+        <div className="flex items-center gap-3 overflow-hidden">
+          {/* Top comment preview - hidden on small screens */}
+          <div className="hidden md:block truncate max-w-[180px]">
+            <TopCommentPreview
+              articleId={articleId}
+              articleUrl={item.url}
+              articleTitle={item.title}
+              weekLabel={weekLabel}
+              category={item.category_key || 'unknown'}
+              source={item.source_name}
+            />
+          </div>
+
+          <button
+            onClick={() => {
+              openCommentsModal(
+                articleId,
+                item.url,
+                item.title,
+                weekLabel,
+                item.category_key || 'unknown',
+                item.source_name
+              );
+            }}
+            className="flex-shrink-0 flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition"
+          >
+            <CommentsCount articleId={articleId} weekLabel={weekLabel} />
+            <span>comments</span>
+          </button>
+        </div>
       </div>
     </div>
   );

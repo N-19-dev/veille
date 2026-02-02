@@ -1,0 +1,28 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://openai.com/index/inside-our-in-house-data-agent/",
+      "title": "Inside OpenAI’s in-house data agent",
+      "summary": "Data powers how systems learn, products evolve, and how companies make choices. But getting answers quickly, correctly, and with the right context is often harder than it should be. To make this easier as OpenAI scales, we built\nour own bespoke in-house AI data agent\nthat explores and reasons over o",
+      "published_ts": 1769998946,
+      "source_name": "Data Engineering Weekly (via newsletter)",
+      "score": 50.183147395199,
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://preset.io/blog/semantic-layer-is-back/",
+      "title": "The Semantic Layer Is Back. Here's What We're Doing About It.",
+      "summary": "There's a new wave of enthusiasm around semantic layers, and for once, I think the hype is justified.\nSince the very early days of analytics, self-service has been the holy grail, yet it's still largely unsolved. We built increasingly powerful tools. We democratized SQL. We made dashboards beautiful",
+      "published_ts": 1769998946,
+      "source_name": "Data Engineering Weekly (via newsletter)",
+      "score": 50.43887143785304,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ]
+}

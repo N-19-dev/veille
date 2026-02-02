@@ -18,6 +18,7 @@ Usage:
 import argparse
 import json
 import os
+import re
 import sqlite3
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -25,6 +26,162 @@ from pathlib import Path
 from typing import Any, Optional
 
 import yaml
+from dotenv import load_dotenv
+
+# Charger les variables d'environnement (.env)
+load_dotenv()
+
+# LLM pour renommer les newsletters (optional)
+try:
+    from llm_provider import get_provider
+    LLM_AVAILABLE = True
+except ImportError:
+    LLM_AVAILABLE = False
+
+
+# Patterns pour détecter les newsletters
+NEWSLETTER_PATTERNS = [
+    r"weekly\s*#?\d*",
+    r"newsletter\s*#?\d*",
+    r"digest\s*#?\d*",
+    r"roundup\s*#?\d*",
+    r"edition\s*#?\d*",
+]
+
+def is_newsletter(title: str) -> bool:
+    """Détecte si un article est une newsletter basé sur le titre."""
+    title_lower = title.lower()
+    return any(re.search(pattern, title_lower) for pattern in NEWSLETTER_PATTERNS)
+
+
+def generate_newsletter_title(original_title: str, summary: str, config: dict, content: str = "") -> str:
+    """
+    Génère un titre plus descriptif pour une newsletter.
+
+    Utilise le LLM si disponible, sinon extrait du résumé ou contenu.
+    """
+    # Utiliser le contenu si le résumé est trop court
+    text_for_title = summary if len(summary or "") >= 100 else (content or summary or "")
+
+    if not text_for_title or len(text_for_title) < 50:
+        return original_title
+
+    # Extraire le numéro de la newsletter pour le garder
+    number_match = re.search(r"#(\d+)", original_title)
+    number_suffix = f" (#{number_match.group(1)})" if number_match else ""
+
+    # Essayer avec le LLM si disponible
+    if LLM_AVAILABLE and os.getenv("GROQ_API_KEY"):
+        try:
+            provider = get_provider(config.get("llm", {}))
+
+            # Skip les premiers 500 caractères qui sont souvent des pubs/promos
+            content_for_llm = text_for_title[500:2000] if len(text_for_title) > 500 else text_for_title[:1500]
+
+            # Nettoyer les URLs du contenu pour éviter que le LLM les extraie
+            content_for_llm = re.sub(r'https?://\S+', '', content_for_llm)
+            content_for_llm = re.sub(r'\s+', ' ', content_for_llm).strip()
+
+            prompt = f"""Cette newsletter agrège plusieurs articles tech. Génère un titre accrocheur basé sur le sujet technique le plus intéressant.
+
+RÈGLES STRICTES:
+1. Le titre DOIT mentionner une TECHNOLOGIE concrète (Iceberg, Kafka, DuckDB, Spark, etc.) ou un CONCEPT technique (data lakehouse, streaming, ML pipelines, etc.)
+2. INTERDIT: "Reserve", "Join", "Register", "Webinar", "Download", "Free", dates, URLs
+3. Format: "[Sujet technique principal]" (30-50 caractères)
+4. Exemples de BONS titres: "Iceberg REST Catalog Deep Dive", "OpenAI's Data Agent Architecture", "DuckDB vs Polars Performance"
+
+Contenu de la newsletter:
+{content_for_llm[:1200]}
+
+Réponds avec UNIQUEMENT le titre (sans guillemets). Si aucun sujet technique clair, réponds: SKIP"""
+
+            response = provider.chat_completion(
+                messages=[{"role": "user", "content": prompt}],
+                temperature=0.3,
+                max_tokens=50,
+            )
+
+            new_title = response.strip().strip('"\'')
+
+            # Si le LLM dit SKIP ou retourne un titre trop court, utiliser le fallback
+            if new_title and new_title.upper() != "SKIP" and len(new_title) > 15:
+                return new_title + number_suffix
+
+        except Exception as e:
+            print(f"[warning] LLM title generation failed: {e}")
+
+    # Fallback: extraire du texte (nettoyer les URLs d'abord)
+    clean_text = re.sub(r'https?://\S+', '', text_for_title)
+    clean_text = re.sub(r'\s+', ' ', clean_text).strip()
+
+    # Prendre la première phrase significative
+    sentences = re.split(r'[.!?]', clean_text)
+    for sentence in sentences:
+        sentence = sentence.strip()
+        # Éviter les CTAs et phrases trop courtes/longues
+        if len(sentence) > 25 and len(sentence) < 70:
+            lower = sentence.lower()
+            if not any(word in lower for word in ['reserve', 'join', 'register', 'webinar', 'download']):
+                return sentence + number_suffix
+
+    # Dernier recours: garder le titre original
+    return original_title
+
+
+def rename_newsletters_in_feed(
+    items: list[dict[str, Any]],
+    config: dict,
+    db_path: str = None
+) -> list[dict[str, Any]]:
+    """
+    Renomme les newsletters dans une liste d'items.
+
+    Applique le renommage à tous les items qui sont des newsletters,
+    y compris ceux venant du rolling buffer.
+
+    Si db_path est fourni, charge le content depuis la DB pour les newsletters
+    avec un résumé trop court.
+    """
+    # Pré-charger les contenus des newsletters depuis la DB si nécessaire
+    content_cache: dict[str, str] = {}
+    if db_path:
+        newsletter_urls = [
+            item.get("url", "") for item in items
+            if is_newsletter(item.get("title", "")) and len(item.get("summary", "")) < 100
+        ]
+        if newsletter_urls:
+            try:
+                conn = get_db_connection(db_path)
+                placeholders = ",".join("?" * len(newsletter_urls))
+                rows = conn.execute(
+                    f"SELECT url, content FROM items WHERE url IN ({placeholders})",
+                    newsletter_urls
+                ).fetchall()
+                conn.close()
+                content_cache = {row["url"]: row["content"] or "" for row in rows}
+            except Exception as e:
+                print(f"[warning] Could not load newsletter content: {e}")
+
+    renamed_count = 0
+    for item in items:
+        title = item.get("title", "")
+        if is_newsletter(title):
+            # Garder le titre original si pas déjà stocké
+            if "original_title" not in item:
+                item["original_title"] = title
+
+            summary = item.get("summary", "")
+            content = content_cache.get(item.get("url", ""), "")
+            new_title = generate_newsletter_title(title, summary, config, content)
+
+            if new_title != title:
+                item["title"] = new_title
+                renamed_count += 1
+
+    if renamed_count > 0:
+        print(f"[info] {renamed_count} newsletter(s) renommée(s)")
+
+    return items
 
 # Firebase (optional - graceful fallback if not available)
 try:
@@ -189,33 +346,50 @@ def fetch_top_articles(
     conn: sqlite3.Connection,
     votes: dict[str, dict[str, int]],
     limit: int = 10,
-    days: int = 14,
+    days: int | None = 14,
     min_score: int = 40
 ) -> list[dict[str, Any]]:
     """
     Récupère les meilleurs articles (hors vidéos/podcasts).
     Trie par score combiné (algo + votes).
-    """
-    cutoff_ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
 
+    Args:
+        days: Nombre de jours à considérer. None = pas de limite de date.
+    """
     # Fetch more articles than needed to allow re-ranking
     fetch_limit = limit * 3
 
-    query = """
-        SELECT
-            id, url, title, summary, source_name, published_ts,
-            category_key, final_score, content_type, tech_level,
-            marketing_score, source_type
-        FROM items
-        WHERE published_ts >= ?
-          AND final_score >= ?
-          AND (source_type IS NULL OR source_type = 'article')
-          AND is_excluded = 0
-        ORDER BY final_score DESC, published_ts DESC
-        LIMIT ?
-    """
-
-    cursor = conn.execute(query, (cutoff_ts, min_score, fetch_limit))
+    if days is not None:
+        cutoff_ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
+        query = """
+            SELECT
+                id, url, title, summary, source_name, published_ts,
+                category_key, final_score, content_type, tech_level,
+                marketing_score, source_type
+            FROM items
+            WHERE published_ts >= ?
+              AND final_score >= ?
+              AND (source_type IS NULL OR source_type = 'article')
+              AND is_excluded = 0
+            ORDER BY final_score DESC, published_ts DESC
+            LIMIT ?
+        """
+        cursor = conn.execute(query, (cutoff_ts, min_score, fetch_limit))
+    else:
+        # No date restriction - fetch all time
+        query = """
+            SELECT
+                id, url, title, summary, source_name, published_ts,
+                category_key, final_score, content_type, tech_level,
+                marketing_score, source_type
+            FROM items
+            WHERE final_score >= ?
+              AND (source_type IS NULL OR source_type = 'article')
+              AND is_excluded = 0
+            ORDER BY final_score DESC, published_ts DESC
+            LIMIT ?
+        """
+        cursor = conn.execute(query, (min_score, fetch_limit))
     rows = cursor.fetchall()
 
     # Add votes and compute combined score
@@ -245,32 +419,49 @@ def fetch_top_videos(
     conn: sqlite3.Connection,
     votes: dict[str, dict[str, int]],
     limit: int = 5,
-    days: int = 14,
+    days: int | None = 14,
     min_score: int = 30
 ) -> list[dict[str, Any]]:
     """
     Récupère les meilleures vidéos et podcasts.
     Trie par score combiné (algo + votes).
-    """
-    cutoff_ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
 
+    Args:
+        days: Nombre de jours à considérer. None = pas de limite de date.
+    """
     fetch_limit = limit * 3
 
-    query = """
-        SELECT
-            id, url, title, summary, source_name, published_ts,
-            category_key, final_score, content_type, tech_level,
-            marketing_score, source_type
-        FROM items
-        WHERE published_ts >= ?
-          AND final_score >= ?
-          AND source_type IN ('youtube', 'podcast')
-          AND is_excluded = 0
-        ORDER BY final_score DESC, published_ts DESC
-        LIMIT ?
-    """
-
-    cursor = conn.execute(query, (cutoff_ts, min_score, fetch_limit))
+    if days is not None:
+        cutoff_ts = int((datetime.now(timezone.utc) - timedelta(days=days)).timestamp())
+        query = """
+            SELECT
+                id, url, title, summary, source_name, published_ts,
+                category_key, final_score, content_type, tech_level,
+                marketing_score, source_type
+            FROM items
+            WHERE published_ts >= ?
+              AND final_score >= ?
+              AND source_type IN ('youtube', 'podcast')
+              AND is_excluded = 0
+            ORDER BY final_score DESC, published_ts DESC
+            LIMIT ?
+        """
+        cursor = conn.execute(query, (cutoff_ts, min_score, fetch_limit))
+    else:
+        # No date restriction - fetch all time
+        query = """
+            SELECT
+                id, url, title, summary, source_name, published_ts,
+                category_key, final_score, content_type, tech_level,
+                marketing_score, source_type
+            FROM items
+            WHERE final_score >= ?
+              AND source_type IN ('youtube', 'podcast')
+              AND is_excluded = 0
+            ORDER BY final_score DESC, published_ts DESC
+            LIMIT ?
+        """
+        cursor = conn.execute(query, (min_score, fetch_limit))
     rows = cursor.fetchall()
 
     # Add votes and compute combined score
@@ -296,13 +487,21 @@ def fetch_top_videos(
     return videos[:limit]
 
 
-def format_item(item: dict[str, Any]) -> dict[str, Any]:
+def format_item(item: dict[str, Any], config: dict = None) -> dict[str, Any]:
     """Formate un item pour l'export JSON."""
+    title = item["title"]
+    summary = item["summary"] or ""
+
+    # Renommer les newsletters avec un titre plus descriptif
+    if config and is_newsletter(title):
+        title = generate_newsletter_title(title, summary, config)
+
     return {
         "id": item["id"],
         "url": item["url"],
-        "title": item["title"],
-        "summary": item["summary"] or "",
+        "title": title,
+        "original_title": item["title"],  # Garder le titre original
+        "summary": summary,
         "source_name": item["source_name"],
         "published_ts": item["published_ts"],
         "category_key": item["category_key"],
@@ -352,10 +551,10 @@ def generate_feed(
     conn = get_db_connection(db_path)
 
     try:
-        # Fetch new articles from DB (last N days)
+        # Fetch articles from DB (last N days first)
         new_articles = fetch_top_articles(
             conn, votes,
-            limit=articles_limit * 2,  # Fetch more to have selection
+            limit=articles_limit * 2,
             days=days
         )
         new_videos = fetch_top_videos(
@@ -364,9 +563,36 @@ def generate_feed(
             days=days
         )
 
-        # Format for export
-        formatted_articles = [format_item(a) for a in new_articles]
-        formatted_videos = [format_item(v) for v in new_videos]
+        # If not enough items in recent window, fetch from all time
+        # Time decay will still rank newer items higher
+        if len(new_articles) < articles_limit:
+            all_articles = fetch_top_articles(
+                conn, votes,
+                limit=articles_limit * 2,
+                days=None  # No date restriction
+            )
+            # Merge: keep recent ones + add older ones to fill
+            seen_urls = {a["url"] for a in new_articles}
+            for a in all_articles:
+                if a["url"] not in seen_urls:
+                    new_articles.append(a)
+                    seen_urls.add(a["url"])
+
+        if len(new_videos) < videos_limit:
+            all_videos = fetch_top_videos(
+                conn, votes,
+                limit=videos_limit * 2,
+                days=None  # No date restriction
+            )
+            seen_urls = {v["url"] for v in new_videos}
+            for v in all_videos:
+                if v["url"] not in seen_urls:
+                    new_videos.append(v)
+                    seen_urls.add(v["url"])
+
+        # Format for export (with newsletter title rewriting)
+        formatted_articles = [format_item(a, config) for a in new_articles]
+        formatted_videos = [format_item(v, config) for v in new_videos]
 
         # Rolling buffer: merge with existing feed
         if use_rolling_buffer:
@@ -388,13 +614,26 @@ def generate_feed(
                     "videos"
                 )
             else:
-                # No existing feed, just take top N
-                formatted_articles = formatted_articles[:articles_limit]
-                formatted_videos = formatted_videos[:videos_limit]
+                # No existing feed - apply time decay and take top N
+                formatted_articles = merge_feeds(
+                    formatted_articles,
+                    [],  # No existing items
+                    articles_limit,
+                    "articles"
+                )
+                formatted_videos = merge_feeds(
+                    formatted_videos,
+                    [],
+                    videos_limit,
+                    "videos"
+                )
         else:
-            # No rolling buffer, just take top N
-            formatted_articles = formatted_articles[:articles_limit]
-            formatted_videos = formatted_videos[:videos_limit]
+            # No rolling buffer - still apply time decay for ranking
+            formatted_articles = merge_feeds(formatted_articles, [], articles_limit, "articles")
+            formatted_videos = merge_feeds(formatted_videos, [], videos_limit, "videos")
+
+        # Renommer les newsletters (Data Engineering Weekly → titre descriptif)
+        formatted_articles = rename_newsletters_in_feed(formatted_articles, config, db_path)
 
         feed = {
             "generated_at": datetime.now(timezone.utc).isoformat(),

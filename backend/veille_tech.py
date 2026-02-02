@@ -55,6 +55,7 @@ class Source(BaseModel):
     name: str
     url: str
     type: Optional[str] = None  # 'youtube', 'podcast', or None for regular RSS
+    extract_links: bool = False  # True = newsletter, extract individual article URLs
 
 class StorageCfg(BaseModel):
     sqlite_path: str
@@ -360,6 +361,373 @@ def discover_feed_links(html: str, base_url: str) -> List[str]:
             urls.append(urljoin(base_url, a["href"]))
     return list(dict.fromkeys(urls))
 
+
+def extract_newsletter_urls(content: str) -> List[str]:
+    """
+    Extrait les URLs des articles mentionnés dans une newsletter.
+
+    Filtre les URLs internes (unsubscribe, settings, etc.) et
+    garde uniquement les articles de blogs/tech.
+    """
+    import re
+
+    # Extraire toutes les URLs
+    urls = re.findall(r'https?://[^\s<>"\']+', content)
+
+    # Nettoyer les URLs (enlever ponctuation finale)
+    cleaned_urls = []
+    for url in urls:
+        url = url.rstrip('.,;:)\'"')
+        # Filtrer les URLs non-articles
+        lower_url = url.lower()
+
+        # Exclure les URLs internes/admin
+        exclude_patterns = [
+            'unsubscribe', 'subscribe', 'mailto:', 'settings', 'preferences',
+            'manage', 'profile', 'account', 'login', 'signup', 'register',
+            'twitter.com', 'linkedin.com/in/', 'facebook.com', 'youtube.com/channel',
+            'github.com/sponsors', 'patreon.com', 'buymeacoffee', 'ko-fi.com',
+            'substack.com/subscribe', 'share', 'utm_', 'ref=', '?source=',
+            '.png', '.jpg', '.gif', '.svg', '.pdf', '.mp3', '.mp4',
+            'substackcdn.com',  # Image CDN
+            'cdn.substack.com',  # CDN assets
+            '/image/', '/images/',  # Image paths
+        ]
+
+        if any(pattern in lower_url for pattern in exclude_patterns):
+            continue
+
+        # Garder uniquement les URLs de blogs/articles (heuristique)
+        include_domains = [
+            'medium.com', 'dev.to', 'hashnode', 'substack.com',
+            'techblog', 'engineering', 'blog', 'article', 'post',
+            'openai.com', 'anthropic.com', 'google.com/blog',
+            'aws.amazon.com/blogs', 'cloud.google.com/blog',
+            'netflix', 'uber', 'airbnb', 'spotify', 'dropbox',
+            'databricks.com', 'snowflake.com', 'confluent.io',
+            'preset.io', 'dagster.io', 'airbyte.com', 'dbt.com',
+        ]
+
+        # Accepter si c'est un domaine connu OU si l'URL contient des patterns d'articles
+        is_article = (
+            any(domain in lower_url for domain in include_domains) or
+            '/blog/' in lower_url or
+            '/posts/' in lower_url or
+            '/article/' in lower_url or
+            '/news/' in lower_url or
+            '/index/' in lower_url  # OpenAI style
+        )
+
+        if is_article and url not in cleaned_urls:
+            cleaned_urls.append(url)
+
+    return cleaned_urls
+
+
+def extract_source_from_url(url: str) -> dict[str, str] | None:
+    """
+    Extrait les informations de source depuis une URL d'article.
+
+    Gère les plateformes (Medium, dev.to, Substack) en extrayant
+    l'auteur ou la publication spécifique.
+
+    Retourne un dict avec 'name', 'base_url', 'feed_url' (si connu).
+    """
+    parsed = urlparse(url)
+    domain = parsed.netloc.lower()
+    path = parsed.path
+
+    # Skip les réseaux sociaux et agrégateurs purs
+    skip_domains = [
+        'github.com', 'reddit.com', 'news.ycombinator.com',
+        'twitter.com', 'x.com', 'linkedin.com', 'youtube.com',
+        'facebook.com', 'instagram.com',
+    ]
+    if any(skip in domain for skip in skip_domains):
+        return None
+
+    # === PLATEFORMES AVEC FEEDS PAR AUTEUR/PUBLICATION ===
+
+    # Medium: medium.com/publication, medium.com/@author, ou publication.medium.com
+    if 'medium.com' in domain:
+        # Cas 1: sous-domaine (netflixtechblog.medium.com)
+        if domain != 'medium.com' and not domain.startswith('www.'):
+            subdomain = domain.replace('.medium.com', '')
+            name = subdomain.replace('-', ' ').title()
+            feed_url = f"https://{domain}/feed"
+            return {
+                "name": f"{name} (Medium)",
+                "domain": domain,
+                "base_url": f"https://{domain}",
+                "feed_url": feed_url,
+            }
+        # Cas 2: medium.com/publication ou medium.com/@author
+        parts = [p for p in path.split('/') if p]
+        if not parts:
+            return None
+        pub_or_author = parts[0]  # Ex: "airbnb-engineering" ou "@username"
+        if pub_or_author.startswith('@'):
+            name = pub_or_author[1:].replace('-', ' ').title()
+        else:
+            name = pub_or_author.replace('-', ' ').title()
+        # Medium RSS: https://medium.com/feed/publication ou /feed/@author
+        feed_url = f"https://medium.com/feed/{pub_or_author}"
+        return {
+            "name": f"{name} (Medium)",
+            "domain": f"medium.com/{pub_or_author}",
+            "base_url": f"https://medium.com/{pub_or_author}",
+            "feed_url": feed_url,
+        }
+
+    # Dev.to: dev.to/username
+    if 'dev.to' in domain:
+        parts = [p for p in path.split('/') if p]
+        if not parts:
+            return None
+        username = parts[0]
+        name = username.replace('_', ' ').replace('-', ' ').title()
+        # Dev.to RSS: https://dev.to/feed/username
+        feed_url = f"https://dev.to/feed/{username}"
+        return {
+            "name": f"{name} (Dev.to)",
+            "domain": f"dev.to/{username}",
+            "base_url": f"https://dev.to/{username}",
+            "feed_url": feed_url,
+        }
+
+    # Substack: author.substack.com
+    if 'substack.com' in domain:
+        # Extraire le sous-domaine (author.substack.com)
+        subdomain = domain.replace('.substack.com', '')
+        if subdomain and subdomain != 'www':
+            name = subdomain.replace('-', ' ').title()
+            feed_url = f"https://{domain}/feed"
+            return {
+                "name": f"{name} (Substack)",
+                "domain": domain,
+                "base_url": f"https://{domain}",
+                "feed_url": feed_url,
+            }
+        return None
+
+    # Hashnode: author.hashnode.dev ou hashnode.com/@author
+    if 'hashnode' in domain:
+        if '.hashnode.dev' in domain:
+            subdomain = domain.replace('.hashnode.dev', '')
+            name = subdomain.replace('-', ' ').title()
+            feed_url = f"https://{domain}/rss.xml"
+            return {
+                "name": f"{name} (Hashnode)",
+                "domain": domain,
+                "base_url": f"https://{domain}",
+                "feed_url": feed_url,
+            }
+        return None
+
+    # === SITES CLASSIQUES ===
+
+    # Extraire le nom depuis le domaine
+    # netflix.techblog.com -> Netflix Tech Blog
+    # engineering.uber.com -> Uber Engineering
+    # blog.example.com -> Example Blog
+
+    name_parts = domain.replace('www.', '').split('.')
+
+    # Patterns connus
+    if 'techblog' in name_parts[0]:
+        # netflixtechblog.com -> Netflix Tech Blog
+        company = name_parts[0].replace('techblog', '')
+        name = f"{company.title()} Tech Blog" if company else "Tech Blog"
+    elif domain.startswith('engineering.') or domain.startswith('eng.'):
+        # engineering.uber.com -> Uber Engineering
+        name = f"{name_parts[1].title()} Engineering"
+    elif domain.startswith('blog.'):
+        # blog.cloudflare.com -> Cloudflare Blog
+        name = f"{name_parts[1].title()} Blog"
+    elif 'engineering' in domain:
+        # someengineering.com -> Some Engineering
+        company = name_parts[0].replace('engineering', '')
+        name = f"{company.title()} Engineering" if company else name_parts[0].title()
+    else:
+        # example.com/blog -> Example Blog
+        name = name_parts[0].title()
+        if '/blog' in url.lower():
+            name += " Blog"
+
+    # URL de base pour le feed
+    base_url = f"{parsed.scheme}://{parsed.netloc}"
+
+    return {
+        "name": name,
+        "domain": domain,
+        "base_url": base_url,
+    }
+
+
+def add_discovered_source(
+    source_info: dict[str, str],
+    feed_url: str,
+    config_path: str = "config.yaml",
+    discovered_by: str = "newsletter"
+) -> bool:
+    """
+    Ajoute une nouvelle source découverte à config.yaml et au registre.
+
+    Retourne True si la source a été ajoutée, False si déjà existante.
+    """
+    # Charger la config actuelle
+    with open(config_path, 'r', encoding='utf-8') as f:
+        config = yaml.safe_load(f)
+
+    # Vérifier si la source existe déjà (par URL ou domaine similaire)
+    existing_urls = {s.get('url', '').lower() for s in config.get('sources', [])}
+    existing_domains = set()
+    for s in config.get('sources', []):
+        try:
+            existing_domains.add(urlparse(s.get('url', '')).netloc.lower())
+        except:
+            pass
+
+    domain = source_info.get('domain', '')
+    if feed_url.lower() in existing_urls or domain in existing_domains:
+        return False
+
+    # Ajouter la nouvelle source
+    new_source = {
+        "name": source_info['name'],
+        "url": feed_url,
+    }
+
+    # Trouver la section sources et ajouter à la fin
+    config['sources'].append(new_source)
+
+    # Sauvegarder config.yaml
+    with open(config_path, 'w', encoding='utf-8') as f:
+        yaml.dump(config, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+
+    # Ajouter au registre des sources découvertes
+    discovered_path = Path("export/discovered_sources.json")
+    discovered_path.parent.mkdir(parents=True, exist_ok=True)
+
+    discovered = []
+    if discovered_path.exists():
+        with open(discovered_path, 'r', encoding='utf-8') as f:
+            discovered = json.load(f)
+
+    discovered.append({
+        "name": source_info['name'],
+        "url": feed_url,
+        "domain": domain,
+        "discovered_by": discovered_by,
+        "discovered_at": datetime.now(timezone.utc).isoformat(),
+    })
+
+    with open(discovered_path, 'w', encoding='utf-8') as f:
+        json.dump(discovered, f, ensure_ascii=False, indent=2)
+
+    logger.info(f"New source discovered and added",
+                name=source_info['name'],
+                feed=feed_url,
+                discovered_by=discovered_by)
+
+    return True
+
+
+async def discover_and_add_source(
+    session: aiohttp.ClientSession,
+    article_url: str,
+    config_path: str = "config.yaml",
+    discovered_by: str = "newsletter"
+) -> bool:
+    """
+    Découvre le feed RSS d'un article et l'ajoute aux sources si nouveau.
+    """
+    source_info = extract_source_from_url(article_url)
+    if not source_info:
+        return False
+
+    base_url = source_info['base_url']
+
+    # Si la plateforme fournit déjà le feed URL (Medium, dev.to, Substack...)
+    feed_url = source_info.get('feed_url')
+
+    # Essayer de découvrir le feed RSS si pas déjà connu
+    common_feed_paths = [
+        '/feed', '/feed/', '/rss', '/rss/', '/feed.xml', '/rss.xml',
+        '/atom.xml', '/index.xml', '/blog/feed', '/blog/rss',
+        '/blog/feed.xml', '/blog/rss.xml', '/feeds/posts/default',
+    ]
+
+    # URLs à exclure (pas des feeds)
+    excluded_patterns = ['sitemap', 'favicon', 'robots.txt', '.png', '.jpg', '.ico', '.css', '.js']
+
+    def is_valid_feed_url(url: str) -> bool:
+        """Vérifie que l'URL ressemble à un feed RSS/Atom."""
+        lower = url.lower()
+        if any(p in lower for p in excluded_patterns):
+            return False
+        # Doit contenir des indicateurs de feed
+        feed_indicators = ['feed', 'rss', 'atom', '.xml']
+        return any(ind in lower for ind in feed_indicators)
+
+    # Si pas de feed_url prédéfini, essayer de le découvrir
+    if not feed_url:
+        # D'abord essayer de trouver le feed dans la page de l'article
+        try:
+            async with session.get(article_url, timeout=aiohttp.ClientTimeout(total=10)) as resp:
+                if resp.status == 200:
+                    html = await resp.text()
+                    soup = BeautifulSoup(html, 'lxml')
+                    # Chercher les liens RSS/Atom avec rel="alternate"
+                    for link in soup.find_all('link', rel='alternate'):
+                        link_type = (link.get('type') or '').lower()
+                        if 'rss' in link_type or 'atom' in link_type:
+                            href = link.get('href')
+                            if href:
+                                candidate = urljoin(article_url, href)
+                                if is_valid_feed_url(candidate):
+                                    feed_url = candidate
+                                    break
+        except:
+            pass
+
+        # Si pas trouvé, essayer les chemins communs
+        if not feed_url:
+            for path in common_feed_paths:
+                test_url = base_url + path
+                try:
+                    async with session.head(test_url, timeout=aiohttp.ClientTimeout(total=5), allow_redirects=True) as resp:
+                        if resp.status == 200:
+                            content_type = resp.headers.get('content-type', '').lower()
+                            # Vérifier que c'est un vrai feed XML
+                            if ('xml' in content_type or 'rss' in content_type or 'atom' in content_type) and 'html' not in content_type:
+                                feed_url = test_url
+                                break
+                except:
+                    continue
+
+    if not feed_url:
+        return False
+
+    # Pour les sites classiques, vérifier que l'URL est valide
+    if not source_info.get('feed_url') and not is_valid_feed_url(feed_url):
+        return False
+
+    # Valider que le feed est parsable
+    try:
+        async with session.get(feed_url, timeout=aiohttp.ClientTimeout(total=10)) as resp:
+            if resp.status == 200:
+                content = await resp.text()
+                parsed = feedparser.parse(content)
+                if not parsed.entries and not parsed.feed.get('title'):
+                    return False  # Pas un feed valide
+    except:
+        return False
+
+    # Ajouter la source
+    return add_discovered_source(source_info, feed_url, config_path, discovered_by)
+
+
 # -----------------------
 # Classification & Filters
 # -----------------------
@@ -444,7 +812,7 @@ async def run(config_path: str = "config.yaml"):
             except Exception: text = raw.decode("latin-1", errors="ignore")
             lower = text.lower()
             if "<rss" in lower or "<feed" in lower:
-                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type}); return
+                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type, "extract_links": src.extract_links}); return
             discovered = discover_feed_links(text, src.url)
             if discovered:
                 for f in discovered:
@@ -453,9 +821,9 @@ async def run(config_path: str = "config.yaml"):
                     allow_re = getattr(cfg.crawl, "path_allow_regex", None)
                     if deny_re and re.search(deny_re, p): continue
                     if allow_re and not re.search(allow_re, p): continue
-                    feed_urls.append({"name": src.name, "feed": f, "type": src.type})
+                    feed_urls.append({"name": src.name, "feed": f, "type": src.type, "extract_links": src.extract_links})
             else:
-                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type})
+                feed_urls.append({"name": src.name, "feed": src.url, "type": src.type, "extract_links": src.extract_links})
 
         await asyncio.gather(*[prepare_source(s) for s in cfg.sources])
 
@@ -471,6 +839,7 @@ async def run(config_path: str = "config.yaml"):
         async def process_feed(entry: Dict[str, str]) -> int:
             url, name = entry["feed"], entry["name"]
             source_type = entry.get("type")  # 'youtube', 'podcast', or None
+            extract_links = entry.get("extract_links", False)  # Newsletter mode
             inserts = 0
             async with sem:
                 # Skip robots.txt check for YouTube/Podcast RSS feeds (public feeds meant to be consumed)
@@ -504,6 +873,91 @@ async def run(config_path: str = "config.yaml"):
                                 if art_raw:
                                     art_txt = art_raw.decode("utf-8", errors="ignore")
                                     content_text = extract_main_content(art_txt, link)
+
+                        # NEWSLETTER MODE: Extract individual article URLs and crawl them
+                        if extract_links and content_text:
+                            extracted_urls = extract_newsletter_urls(content_text)
+                            if extracted_urls:
+                                logger.info(f"Newsletter detected, extracting {len(extracted_urls)} article URLs",
+                                           source=name, newsletter_title=title[:50])
+
+                                for ext_url in extracted_urls[:15]:  # Limit to 15 articles per newsletter
+                                    try:
+                                        if not await robots.allowed(session, ext_url):
+                                            continue
+                                        ext_raw = await fetcher.get(session, ext_url)
+                                        if not ext_raw:
+                                            continue
+                                        ext_html = ext_raw.decode("utf-8", errors="ignore")
+                                        ext_content = extract_main_content(ext_html, ext_url)
+
+                                        if len(ext_content) < 200:  # Skip too short content
+                                            continue
+
+                                        # Extract title from the page
+                                        ext_soup = BeautifulSoup(ext_html, "lxml")
+                                        ext_title_tag = ext_soup.find("title")
+                                        ext_title = ext_title_tag.get_text(strip=True) if ext_title_tag else ext_url
+                                        # Clean title (remove site name suffix)
+                                        ext_title = ext_title.split(" | ")[0].split(" - ")[0].strip()
+
+                                        ext_summary = ext_content[:300]
+
+                                        # Apply editorial filter
+                                        if not is_editorial_article(ext_url, cfg.model_dump(), text=ext_content):
+                                            continue
+
+                                        ext_cat = classify(ext_title, ext_summary, cfg.categories)
+                                        if not ext_cat:
+                                            continue
+
+                                        ext_content_type = detect_content_type(ext_title, ext_summary, ext_content, cfg.model_dump(), source_name=name)
+
+                                        from content_classifier import (
+                                            calculate_technical_level,
+                                            calculate_marketing_score,
+                                            should_exclude_article
+                                        )
+                                        ext_tech_level = calculate_technical_level(ext_title, ext_summary, ext_content)
+                                        ext_marketing_score = calculate_marketing_score(ext_title, ext_summary, ext_content)
+                                        ext_excluded, ext_reason = should_exclude_article(ext_title, ext_summary, ext_content, min_quality_score=50)
+
+                                        ext_item = {
+                                            "id": hash_id(ext_url, ext_title),
+                                            "url": ext_url,
+                                            "title": ext_title,
+                                            "summary": ext_summary,
+                                            "content": ext_content[:10000],
+                                            "published_ts": published_ts,  # Use newsletter's publish date
+                                            "source_name": name,
+                                            "category_key": ext_cat,
+                                            "created_ts": now_ts,
+                                            "content_type": ext_content_type,
+                                            "source_type": "article",
+                                            "tech_level": ext_tech_level,
+                                            "marketing_score": ext_marketing_score,
+                                            "is_excluded": 1 if ext_excluded else 0,
+                                            "exclusion_reason": ext_reason if ext_excluded else None
+                                        }
+                                        upsert_item(cfg.storage.sqlite_path, ext_item)
+                                        inserts += 1
+                                        logger.info(f"Extracted article from newsletter", title=ext_title[:50], url=ext_url[:60])
+
+                                        # Découvrir et ajouter la source si nouvelle
+                                        try:
+                                            await discover_and_add_source(
+                                                session, ext_url,
+                                                config_path="config.yaml",
+                                                discovered_by=name  # Nom de la newsletter
+                                            )
+                                        except Exception as disc_err:
+                                            pass  # Silently ignore discovery errors
+
+                                    except Exception as ext_err:
+                                        logger.warning(f"Failed to extract article from newsletter", url=ext_url[:60], error=str(ext_err))
+                                        continue
+
+                                continue  # Skip inserting the newsletter itself
 
                         text_for_filter = (content_text or summary or "")
                         # Skip editorial filters for YouTube/Podcast sources

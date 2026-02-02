@@ -2,8 +2,8 @@ storage:
   sqlite_path: veille.db
 crawl:
   lookback_days: 7
-  concurrency: 8      # Réduit de 12 à 8 (moins agressif)
-  per_host_rps: 1.0   # Réduit de 1.5 à 1.0 req/sec par host
+  concurrency: 8
+  per_host_rps: 1.0
   timeout_sec: 25
   user_agent: VeilleTechBot/1.0 (+https://github.com/nathansornet/veille_tech_crawling)
   min_text_length: 300
@@ -16,56 +16,47 @@ export:
   max_items_per_cat: 60
 notify:
   slack_webhook_env: SLACK_WEBHOOK_URL
-
-# Email Digest Configuration (Phase 2 - Daily Push)
 email_digest:
   enabled: true
-  # SendGrid API configuration
   sendgrid_api_key_env: SENDGRID_API_KEY
-  from_email: veille@datamag.dev  # Change to your verified sender
-  from_name: "Veille MAG"
-
-  # Recipients (MVP: static list)
+  from_email: veille@datamag.dev
+  from_name: Veille MAG
   recipients:
-    - email: your-email@example.com  # Replace with your email
-      name: "Your Name"
-
-  # Daily digest settings
+  - email: your-email@example.com
+    name: Your Name
   schedule:
-    frequency: daily  # daily, weekly, manual
-    time: "08:00"
-    timezone: "Europe/Paris"
-    days: [mon, tue, wed, thu, fri]  # Only weekdays
-
-  # Content selection
+    frequency: daily
+    time: 08:00
+    timezone: Europe/Paris
+    days:
+    - mon
+    - tue
+    - wed
+    - thu
+    - fri
   selection:
-    articles_per_digest: 1  # Start with 1 article/day
-    min_score_threshold: 60  # Only send high-quality articles
-    round_robin_categories: true  # Rotate categories
-    avoid_duplicates_days: 30  # Don't send same article for 30 days
-
+    articles_per_digest: 1
+    min_score_threshold: 60
+    round_robin_categories: true
+    avoid_duplicates_days: 30
 monitoring:
   log_level: INFO
   export_metrics: true
 content_types:
-  # Sources communautaires authentiques (ingénieurs individuels, non corporate)
-  # Seules ces sources peuvent produire des articles "rex"
   community_sources:
-    - VuTrinh · Data Engineering
-    - Seattle Data Guy
-    - Blef · Data (FR)
-    - Data Engineering Weekly
-    - DataEngineer.io
-    # Créateurs LinkedIn Data Engineering
-    - Zach Wilson · DataExpert.io
-    - Joe Reis · Data Engineering
-    - Julien Hurault · Ju Data Engineering
-    - Alireza Sadeghi · Practical Data Engineering
-    - Data Engineer Things
-    - Benn Stancil · Mode Analytics
-    - Chip Huyen · ML Engineering
-    # Nouvelles sources communautaires (Phase 1)
-    - Reddit Data Engineering (Top)
+  - VuTrinh · Data Engineering
+  - Seattle Data Guy
+  - Blef · Data (FR)
+  - Data Engineering Weekly
+  - DataEngineer.io
+  - Zach Wilson · DataExpert.io
+  - Joe Reis · Data Engineering
+  - Julien Hurault · Ju Data Engineering
+  - Alireza Sadeghi · Practical Data Engineering
+  - Data Engineer Things
+  - Benn Stancil · Mode Analytics
+  - Chip Huyen · ML Engineering
+  - Reddit Data Engineering (Top)
   rex_keywords:
   - retour d'expérience
   - retour d'expérience
@@ -212,15 +203,15 @@ categories:
   - cybersécurité
   - technologie
 category_thresholds:
-  warehouses_engines: 50        # Baissé de 58 → 50 (avg: 55.2, médian proche)
-  etl_orchestration: 50         # Baissé de 58 → 50 (avg: 54.2)
-  data_modeling_governance: 50  # Baissé de 58 → 50 (avg: 53.0)
-  lake_storage_formats: 52      # Baissé de 58 → 52 (avg: 56.8, garder qualité)
-  cloud_infra_observability: 48 # Baissé de 55 → 48 (avg: 45.9, beaucoup rejetés)
-  python_analytics: 48          # Baissé de 55 → 48 (avg: 43.5, beaucoup rejetés)
-  ai_data_engineering: 50       # Baissé de 58 → 50 (avg: 49.7)
-  news: 58                      # MAINTENU à 58 (avg: 53.6, filtrage strict OK)
-  hors_sujet: 100               # Jamais inclus
+  warehouses_engines: 50
+  etl_orchestration: 50
+  data_modeling_governance: 50
+  lake_storage_formats: 52
+  cloud_infra_observability: 48
+  python_analytics: 48
+  ai_data_engineering: 50
+  news: 58
+  hors_sujet: 100
 sources:
 - name: Snowflake Blog
   url: https://www.snowflake.com/feed/
@@ -282,13 +273,13 @@ sources:
   url: https://vutr.substack.com/feed
 - name: Data Engineering Weekly
   url: https://www.dataengineeringweekly.com/feed
+  extract_links: true
 - name: Seattle Data Guy
   url: https://seattledataguy.substack.com/feed
 - name: DataEngineer.io
   url: https://blog.dataengineer.io/feed
 - name: Blef · Data (FR)
   url: https://www.blef.fr/blog/rss
-# Créateurs LinkedIn Data Engineering (Substack/blogs personnels)
 - name: Zach Wilson · DataExpert.io
   url: https://blog.dataexpert.io/feed
 - name: Joe Reis · Data Engineering
@@ -303,11 +294,6 @@ sources:
   url: https://benn.substack.com/feed
 - name: Chip Huyen · ML Engineering
   url: https://huyenchip.com/feed.xml
-# Hashnode sources supprimées - trop de rate limiting (429)
-# - name: Hashnode · data
-#   url: https://hashnode.com/n/data/rss
-# - name: Hashnode · machine-learning
-#   url: https://hashnode.com/n/machine-learning/rss
 - name: daily.dev
   url: https://daily.dev
 - name: Netflix Tech Blog
@@ -366,7 +352,6 @@ sources:
   url: https://medium.com/feed/insiden26
 - name: Amplitude Engineering
   url: https://amplitude.engineering/feed
-# ===== NOUVELLES SOURCES (Phase 1 - Amélioration Pertinence) =====
 - name: Reddit Data Engineering (Top)
   url: https://www.reddit.com/r/dataengineering/top/.rss?limit=20
 - name: Shopify Engineering
@@ -377,58 +362,32 @@ sources:
   url: https://blog.twitch.tv/en/rss/
 - name: Coinbase Engineering
   url: https://www.coinbase.com/blog/engineering/rss.xml
-
-# ===== YOUTUBE CHANNELS (Phase 2 - Media Sources) =====
-# Chaînes Data Engineering populaires
 - name: Seattle Data Guy (YouTube)
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCmLGJ3VYBcfRaWbP6JLJcpA
   type: youtube
-# Advancing Analytics - 404 error, source désactivée
-# - name: Advancing Analytics (YouTube)
-#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ3xgpVZYYvFKXsVRb7gWLw
-#   type: youtube
-# Data with Zach - 404 error, source désactivée
-# - name: Data with Zach (YouTube)
-#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCQ5xYp8_UzYdVXuogsPWyOQ
-#   type: youtube
-# Darshil Parmar - Channel ID incorrect, source désactivée temporairement
-# - name: Darshil Parmar (YouTube)
-#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCH9hKLJ2dXLXI5gNOi5IXvw
-#   type: youtube
 - name: Andreas Kretz (YouTube)
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCY8mzqqGwl5_bTpBY9qLMAA
   type: youtube
-# E-learning Bridge - 404 error, source désactivée
-# - name: E-learning Bridge (YouTube)
-#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCLIBQlOMRaKXW2blCK6CnBg
-#   type: youtube
 - name: Guy in a Cube (YouTube)
   url: https://www.youtube.com/feeds/videos.xml?channel_id=UCFp1vaKzpfvoGai0vE5VJ0w
   type: youtube
-# Learn Data with Mark - 404 error, source désactivée
-# - name: Learn Data with Mark (YouTube)
-#   url: https://www.youtube.com/feeds/videos.xml?channel_id=UC9xU_-2sjIM6b7eNNK6VWXA
-#   type: youtube
-
-# ===== PODCASTS (Phase 2 - Media Sources) =====
-# Podcasts Data Engineering & Analytics
 - name: Data Engineering Podcast
   url: https://www.dataengineeringpodcast.com/feed/mp3/
   type: podcast
 - name: Analytics Power Hour
   url: https://analyticshour.io/feed/podcast/
   type: podcast
-# DataFramed (DataCamp) - Flux RSS indisponible (404)
-# - name: DataFramed (DataCamp)
-#   url: https://feeds.simplecast.com/xKDRRjA7
-#   type: podcast
 - name: The Analytics Engineering Podcast (dbt)
   url: https://roundup.getdbt.com/feed.xml
   type: podcast
-# DataTopics - Flux RSS indisponible (404)
-# - name: DataTopics
-#   url: https://anchor.fm/s/46a8f5d4/podcast/rss
-#   type: podcast
+- name: Openai
+  url: https://openai.com/blog/rss.xml
+- name: Preset Blog
+  url: https://preset.io/rss.xml
+- name: Whatnot Engineering (Medium)
+  url: https://medium.com/feed/whatnot-engineering
+- name: Community_Md101 (Medium)
+  url: https://medium.com/feed/@community_md101
 relevance:
   weights:
     semantic: 0.55
@@ -447,7 +406,6 @@ relevance:
     VuTrinh · Data Engineering: 1.0
     Start Data Engineering: 0.95
     Seattle Data Guy: 0.95
-    # Créateurs LinkedIn Data Engineering (haute autorité)
     Zach Wilson · DataExpert.io: 1.0
     Joe Reis · Data Engineering: 1.0
     Chip Huyen · ML Engineering: 0.95
@@ -479,7 +437,6 @@ relevance:
     Spotify Engineering: 0.85
     Shopify Engineering: 0.8
     Dropbox Tech Blog: 0.8
-    # Nouvelles sources (Phase 1)
     Reddit Data Engineering (Top): 0.85
     Data Mechanics: 0.85
     Twitch Engineering: 0.85
@@ -487,15 +444,9 @@ relevance:
     Slack Engineering: 0.8
     DoorDash Engineering: 0.8
     Lyft Engineering: 0.75
-    # YouTube channels (Phase 2)
     Seattle Data Guy (YouTube): 0.9
-    # Advancing Analytics (YouTube): 0.85  # 404 error
-    # Data with Zach (YouTube): 0.9  # 404 error
     Andreas Kretz (YouTube): 0.95
-    # E-learning Bridge (YouTube): 0.85  # 404 error
     Guy in a Cube (YouTube): 0.85
-    # Learn Data with Mark (YouTube): 0.85  # 404 error
-    # Podcasts (Phase 2)
     Data Engineering Podcast: 0.95
     Analytics Power Hour: 0.85
     The Analytics Engineering Podcast (dbt): 0.9
@@ -537,25 +488,19 @@ relevance:
     - llm
     max_points: 20
 llm:
-  provider: groq  # Switchable: groq (défaut), openai, ollama
+  provider: groq
   temperature: 0.2
   max_tokens: 1200
-
-  # Config Groq (actuel, gratuit, rapide)
   groq:
     api_key_env: GROQ_API_KEY
     model: llama-3.1-8b-instant
     base_url: https://api.groq.com/openai/v1
-
-  # Config OpenAI (fallback si Groq down, payant)
   openai:
     api_key_env: OPENAI_API_KEY
-    model: gpt-4o-mini  # Moins cher que gpt-4
+    model: gpt-4o-mini
     base_url: https://api.openai.com/v1
-
-  # Config Ollama (local, zéro coût, nécessite installation)
   ollama:
-    model: llama3.1  # Ou llama3.2, mistral, etc.
+    model: llama3.1
     base_url: http://localhost:11434/v1
 summary:
   enabled: true

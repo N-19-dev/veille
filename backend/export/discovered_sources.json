@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Openai",
+    "url": "https://openai.com/blog/rss.xml",
+    "domain": "openai.com",
+    "discovered_by": "Data Engineering Weekly",
+    "discovered_at": "2026-02-02T15:31:08.443248+00:00"
+  },
+  {
+    "name": "Preset Blog",
+    "url": "https://preset.io/rss.xml",
+    "domain": "preset.io",
+    "discovered_by": "Data Engineering Weekly",
+    "discovered_at": "2026-02-02T15:31:09.264790+00:00"
+  },
+  {
+    "name": "Whatnot Engineering (Medium)",
+    "url": "https://medium.com/feed/whatnot-engineering",
+    "domain": "medium.com/whatnot-engineering",
+    "discovered_by": "Test",
+    "discovered_at": "2026-02-02T15:38:45.437152+00:00"
+  },
+  {
+    "name": "Community_Md101 (Medium)",
+    "url": "https://medium.com/feed/@community_md101",
+    "domain": "medium.com/@community_md101",
+    "discovered_by": "Data Engineering Weekly",
+    "discovered_at": "2026-02-02T15:39:21.088540+00:00"
+  }
+]

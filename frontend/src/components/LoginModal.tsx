@@ -42,13 +42,13 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       onClick={onClose}
     >
       <div
-        className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-8 animate-scale-in"
+        className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 sm:p-8 animate-scale-in"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 transition"
+          className="absolute top-3 right-3 sm:top-4 sm:right-4 text-gray-400 hover:text-gray-600 transition"
           aria-label="Fermer"
         >
           <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -57,12 +57,12 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         </button>
 
         {/* Header */}
-        <div className="text-center mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 mb-2">
+        <div className="text-center mb-6 sm:mb-8">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-2">
             Connexion requise
           </h2>
-          <p className="text-gray-600">
-            Connectez-vous pour voter sur les articles et améliorer les recommandations
+          <p className="text-sm sm:text-base text-gray-600">
+            Connectez-vous pour voter et améliorer les recommandations
           </p>
         </div>
 

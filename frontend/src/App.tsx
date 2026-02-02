@@ -123,20 +123,27 @@ export default function App() {
     <div className="min-h-screen bg-neutral-50">
       {/* Header simplifié */}
       <header className="bg-white border-b border-neutral-200">
-        <div className="max-w-6xl mx-auto px-4 py-4">
-          <div className="flex items-center justify-between">
-            {/* Logo / Title */}
-            <div>
-              <h1 className="text-xl font-bold text-neutral-900">Veille Tech</h1>
-              <p className="text-sm text-neutral-500">Data Engineering</p>
+        <div className="max-w-6xl mx-auto px-3 sm:px-4 py-3 sm:py-4">
+          {/* Mobile: stacked layout, Desktop: horizontal */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+            {/* Top row: Logo + Auth */}
+            <div className="flex items-center justify-between">
+              <div>
+                <h1 className="text-lg sm:text-xl font-bold text-neutral-900">Veille Tech</h1>
+                <p className="text-xs sm:text-sm text-neutral-500">Data Engineering</p>
+              </div>
+              {/* Auth button visible on mobile in top row */}
+              <div className="sm:hidden">
+                <AuthButton />
+              </div>
             </div>
 
-            {/* Mode toggle */}
-            <div className="flex items-center gap-4">
-              <div className="flex bg-neutral-100 rounded-lg p-1">
+            {/* Mode toggle + Auth (desktop) */}
+            <div className="flex items-center justify-center sm:justify-end gap-3 sm:gap-4">
+              <div className="flex bg-neutral-100 rounded-lg p-1 w-full sm:w-auto">
                 <button
                   onClick={() => setViewMode("feed")}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
                     viewMode === "feed"
                       ? "bg-white text-neutral-900 shadow-sm"
                       : "text-neutral-600 hover:text-neutral-900"
@@ -146,7 +153,7 @@ export default function App() {
                 </button>
                 <button
                   onClick={() => setViewMode("videos")}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
                     viewMode === "videos"
                       ? "bg-white text-neutral-900 shadow-sm"
                       : "text-neutral-600 hover:text-neutral-900"
@@ -156,7 +163,7 @@ export default function App() {
                 </button>
                 <button
                   onClick={() => setViewMode("week")}
-                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
                     viewMode === "week"
                       ? "bg-white text-neutral-900 shadow-sm"
                       : "text-neutral-600 hover:text-neutral-900"
@@ -166,13 +173,16 @@ export default function App() {
                 </button>
               </div>
 
-              <AuthButton />
+              {/* Auth button hidden on mobile (shown in top row instead) */}
+              <div className="hidden sm:block">
+                <AuthButton />
+              </div>
             </div>
           </div>
         </div>
       </header>
 
-      <main className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-4 sm:py-8">
         {/* Mode Feed (articles uniquement) */}
         {viewMode === "feed" && feedData && (
           <FeedView

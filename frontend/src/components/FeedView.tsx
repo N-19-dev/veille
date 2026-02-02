@@ -27,7 +27,7 @@ function FeedCard({ item }: { item: FeedItem }) {
   const weekLabel = getCurrentWeekLabel();
 
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 p-4 hover:border-neutral-300 hover:shadow-sm transition-all">
+    <div className="bg-white rounded-xl border border-neutral-200 p-3 sm:p-4 hover:border-neutral-300 hover:shadow-sm transition-all">
       {/* Main content - clickable */}
       <a
         href={item.url}
@@ -35,32 +35,32 @@ function FeedCard({ item }: { item: FeedItem }) {
         rel="noopener noreferrer"
         className="block"
       >
-        <div className="flex gap-3">
+        <div className="flex gap-2.5 sm:gap-3">
           {/* Favicon */}
           <img
             src={faviconUrl(item.url, 32)}
             alt=""
-            className="w-8 h-8 rounded-md flex-shrink-0 mt-0.5"
+            className="w-7 h-7 sm:w-8 sm:h-8 rounded-md flex-shrink-0 mt-0.5"
             loading="lazy"
           />
 
           <div className="flex-1 min-w-0">
             {/* Title */}
-            <h3 className="font-medium text-neutral-900 leading-snug line-clamp-2 group-hover:underline">
+            <h3 className="font-medium text-neutral-900 leading-snug line-clamp-2 text-sm sm:text-base">
               {icon && <span className="mr-1">{icon}</span>}
               {item.title}
             </h3>
 
             {/* Meta */}
-            <div className="flex items-center gap-2 mt-1.5 text-sm text-neutral-500">
-              <span className="truncate">{item.source_name}</span>
+            <div className="flex items-center gap-1.5 sm:gap-2 mt-1 sm:mt-1.5 text-xs sm:text-sm text-neutral-500">
+              <span className="truncate max-w-[120px] sm:max-w-none">{item.source_name}</span>
               <span>·</span>
               <span className="flex-shrink-0">{formatRelativeDate(item.published_ts)}</span>
             </div>
 
-            {/* Summary (if exists) */}
+            {/* Summary (if exists) - hidden on very small screens */}
             {item.summary && (
-              <p className="mt-2 text-sm text-neutral-600 line-clamp-2">
+              <p className="hidden sm:block mt-2 text-sm text-neutral-600 line-clamp-2">
                 {item.summary}
               </p>
             )}
@@ -69,7 +69,7 @@ function FeedCard({ item }: { item: FeedItem }) {
       </a>
 
       {/* Vote and Comments */}
-      <div className="mt-3 pt-3 border-t flex items-center justify-between gap-4">
+      <div className="mt-2.5 sm:mt-3 pt-2.5 sm:pt-3 border-t flex items-center justify-between gap-2 sm:gap-4">
         {/* Votes - left */}
         <div className="flex-shrink-0">
           <VoteButton
@@ -82,7 +82,7 @@ function FeedCard({ item }: { item: FeedItem }) {
         </div>
 
         {/* Comments section - right */}
-        <div className="flex items-center gap-3 overflow-hidden">
+        <div className="flex items-center gap-2 sm:gap-3 overflow-hidden">
           {/* Top comment preview - hidden on small screens */}
           <div className="hidden md:block truncate max-w-[180px]">
             <TopCommentPreview
@@ -106,10 +106,11 @@ function FeedCard({ item }: { item: FeedItem }) {
                 item.source_name
               );
             }}
-            className="flex-shrink-0 flex items-center gap-1.5 text-sm text-gray-400 hover:text-gray-600 transition"
+            className="flex-shrink-0 flex items-center gap-1 sm:gap-1.5 text-xs sm:text-sm text-gray-400 hover:text-gray-600 transition"
           >
             <CommentsCount articleId={articleId} weekLabel={weekLabel} />
-            <span>comments</span>
+            <span className="hidden sm:inline">comments</span>
+            <span className="sm:hidden">💬</span>
           </button>
         </div>
       </div>

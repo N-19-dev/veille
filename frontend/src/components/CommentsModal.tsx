@@ -109,24 +109,24 @@ export default function CommentsModal() {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 animate-fade-in"
+      className="fixed inset-0 z-50 flex items-end sm:items-center justify-center bg-black/50 animate-fade-in"
       onClick={closeCommentsModal}
     >
       <div
-        className="relative w-full max-w-3xl max-h-[90vh] bg-white rounded-2xl shadow-2xl animate-scale-in flex flex-col"
+        className="relative w-full sm:max-w-3xl max-h-[95vh] sm:max-h-[90vh] bg-white rounded-t-2xl sm:rounded-2xl shadow-2xl animate-scale-in flex flex-col sm:mx-4"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className="flex items-start justify-between p-6 border-b border-gray-200">
+        <div className="flex items-start justify-between p-4 sm:p-6 border-b border-gray-200">
           <div className="flex-1 pr-4">
-            <h2 className="text-xl font-bold text-gray-900 mb-2">💬 Commentaires</h2>
-            <p className="text-sm text-gray-600 line-clamp-2">{currentArticle.articleTitle}</p>
-            <div className="flex items-center gap-4 mt-2">
+            <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 sm:mb-2">💬 Commentaires</h2>
+            <p className="text-xs sm:text-sm text-gray-600 line-clamp-2">{currentArticle.articleTitle}</p>
+            <div className="flex flex-wrap items-center gap-2 sm:gap-4 mt-2">
               <span className="text-xs text-gray-500">
                 {comments.length} commentaire{comments.length !== 1 ? 's' : ''}
               </span>
               {/* Sort options */}
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-1 sm:gap-2">
                 <button
                   onClick={() => setSortBy('recent')}
                   className={`text-xs px-2 py-1 rounded ${
@@ -135,7 +135,7 @@ export default function CommentsModal() {
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 >
-                  Plus récents
+                  Récents
                 </button>
                 <button
                   onClick={() => setSortBy('popular')}
@@ -145,7 +145,7 @@ export default function CommentsModal() {
                       : 'text-gray-600 hover:bg-gray-100'
                   }`}
                 >
-                  Plus populaires
+                  Populaires
                 </button>
               </div>
             </div>
@@ -161,7 +161,7 @@ export default function CommentsModal() {
         </div>
 
         {/* Comments List */}
-        <div className="flex-1 overflow-y-auto p-6 space-y-6">
+        <div className="flex-1 overflow-y-auto p-4 sm:p-6 space-y-4 sm:space-y-6">
           {loading && (
             <div className="text-center py-8 text-gray-500">
               <div className="inline-block animate-spin rounded-full h-8 w-8 border-b-2 border-gray-900"></div>
@@ -190,7 +190,7 @@ export default function CommentsModal() {
         </div>
 
         {/* Comment Input */}
-        <div className="border-t border-gray-200 p-6 bg-gray-50">
+        <div className="border-t border-gray-200 p-4 sm:p-6 bg-gray-50">
           {user ? (
             <CommentInput
               articleId={currentArticle.articleId}

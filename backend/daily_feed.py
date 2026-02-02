@@ -426,23 +426,23 @@ def load_existing_feed(output_dir: str = "export") -> dict[str, Any] | None:
     return None
 
 
-def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 1.2) -> float:
+def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 1.5) -> float:
     """
-    Recalcule le score avec time decay inspiré HN mais adapté au flux hebdomadaire.
+    Recalcule le score avec time decay proche de HN.
 
     Utilise algo_score (score de pertinence brut) + votes + âge en JOURS.
-    Gravity 1.2 = turnover plus rapide que 0.8 mais moins brutal que HN (1.8 en heures).
+    Gravity 1.5 = turnover agressif (~3-4 jours), proche de HN (1.8 en heures).
 
     Formule: score / (age_days + 1)^gravity
 
-    Avec gravity=1.2:
+    Avec gravity=1.5:
     - Article frais (0j): score / 1 = 100%
-    - Article 1 jour: score / 2.30 = 43%
-    - Article 3 jours: score / 4.66 = 21%
-    - Article 7 jours: score / 11.2 = 9%
-    - Article 14 jours: score / 25.3 = 4%
+    - Article 1 jour: score / 2.83 = 35%
+    - Article 3 jours: score / 8 = 12.5%
+    - Article 7 jours: score / 22.6 = 4.4%
+    - Article 14 jours: score / 58 = 1.7%
 
-    Turnover ~1 semaine pour que les nouveaux articles montent.
+    Turnover ~3-4 jours, les nouveaux articles montent vite.
     """
     import math
 
@@ -494,7 +494,7 @@ def merge_feeds(
     existing_items: list[dict[str, Any]],
     target_count: int,
     item_type: str = "articles",
-    gravity: float = 1.2
+    gravity: float = 1.5
 ) -> list[dict[str, Any]]:
     """
     Fusionne les nouveaux items avec les existants (rolling buffer).

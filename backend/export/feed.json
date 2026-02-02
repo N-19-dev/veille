@@ -1,12 +1,28 @@
 {
-  "generated_at": "2026-02-02T10:34:36.965404+00:00",
+  "generated_at": "2026-02-02T10:46:23.116398+00:00",
   "config": {
     "articles_limit": 10,
     "videos_limit": 5,
-    "days_lookback": 30,
+    "days_lookback": 14,
     "rolling_buffer": true
   },
   "articles": [
+    {
+      "id": "5727409eab08b8b506c01b417723d34e512e4fffe44e30e93dd7c2ecc376dadd",
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-255",
+      "title": "Data Engineering Weekly #255",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "source_name": "Data Engineering Weekly",
+      "published_ts": 1769998946,
+      "category_key": "news",
+      "score": 1.8309,
+      "algo_score": 61.4,
+      "upvotes": 0,
+      "downvotes": 0,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "source_type": "article"
+    },
     {
       "id": "https://www.databricks.com/blog/announcing-first-c",
       "url": "https://www.databricks.com/blog/announcing-first-class-support-iceberg-format-databricks-delta-sharing",
@@ -150,22 +166,6 @@
       "content_type": "technical",
       "tech_level": "intermediate",
       "source_type": "article"
-    },
-    {
-      "id": "1a4f1d3bed0aadda69f967d70725650720ae0b2418812fac413648844aa83770",
-      "url": "https://www.databricks.com/blog/thumbtack-powering-safe-smart-home-services-databricks-genai",
-      "title": "Thumbtack Powering Safe, Smart Home Services on Databricks with GenAI",
-      "summary": "Building the Most Trusted Home Care PlatformThumbtack’s mission is simple but ambitious: ...",
-      "source_name": "Databricks Blog",
-      "published_ts": 1767999600,
-      "category_key": "ai_data_engineering",
-      "score": 0.0042,
-      "algo_score": 56.3,
-      "upvotes": 0,
-      "downvotes": 0,
-      "content_type": "technical",
-      "tech_level": "intermediate",
-      "source_type": "article"
     }
   ],
   "videos": [
@@ -209,7 +209,7 @@
       "source_name": "Andreas Kretz (YouTube)",
       "published_ts": 1768337060,
       "category_key": "news",
-      "score": 0.006,
+      "score": 0.0059,
       "algo_score": 61,
       "upvotes": 0,
       "downvotes": 0,

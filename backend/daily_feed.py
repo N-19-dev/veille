@@ -320,10 +320,24 @@ def generate_feed(
     config_path: str = "config.yaml",
     days: int = 14,
     articles_limit: int = 10,
-    videos_limit: int = 5
+    videos_limit: int = 5,
+    output_dir: str = "export",
+    use_rolling_buffer: bool = True
 ) -> dict[str, Any]:
     """
-    Génère le feed complet.
+    Génère le feed complet avec rolling buffer.
+
+    Le rolling buffer garantit qu'on a toujours `articles_limit` articles
+    et `videos_limit` vidéos. Les anciens items ne sont remplacés que
+    si de meilleurs arrivent.
+
+    Args:
+        config_path: Chemin vers config.yaml
+        days: Jours à considérer pour les nouveaux articles
+        articles_limit: Nombre d'articles cible (constant)
+        videos_limit: Nombre de vidéos cible (constant)
+        output_dir: Dossier contenant le feed existant
+        use_rolling_buffer: Si True, fusionne avec le feed existant
 
     Returns:
         Dict avec 'articles' et 'videos'
@@ -338,16 +352,49 @@ def generate_feed(
     conn = get_db_connection(db_path)
 
     try:
-        articles = fetch_top_articles(
+        # Fetch new articles from DB (last N days)
+        new_articles = fetch_top_articles(
             conn, votes,
-            limit=articles_limit,
+            limit=articles_limit * 2,  # Fetch more to have selection
             days=days
         )
-        videos = fetch_top_videos(
+        new_videos = fetch_top_videos(
             conn, votes,
-            limit=videos_limit,
+            limit=videos_limit * 2,
             days=days
         )
+
+        # Format for export
+        formatted_articles = [format_item(a) for a in new_articles]
+        formatted_videos = [format_item(v) for v in new_videos]
+
+        # Rolling buffer: merge with existing feed
+        if use_rolling_buffer:
+            existing_feed = load_existing_feed(output_dir)
+            if existing_feed:
+                existing_articles = existing_feed.get("articles", [])
+                existing_videos = existing_feed.get("videos", [])
+
+                formatted_articles = merge_feeds(
+                    formatted_articles,
+                    existing_articles,
+                    articles_limit,
+                    "articles"
+                )
+                formatted_videos = merge_feeds(
+                    formatted_videos,
+                    existing_videos,
+                    videos_limit,
+                    "videos"
+                )
+            else:
+                # No existing feed, just take top N
+                formatted_articles = formatted_articles[:articles_limit]
+                formatted_videos = formatted_videos[:videos_limit]
+        else:
+            # No rolling buffer, just take top N
+            formatted_articles = formatted_articles[:articles_limit]
+            formatted_videos = formatted_videos[:videos_limit]
 
         feed = {
             "generated_at": datetime.now(timezone.utc).isoformat(),
@@ -355,15 +402,83 @@ def generate_feed(
                 "articles_limit": articles_limit,
                 "videos_limit": videos_limit,
                 "days_lookback": days,
+                "rolling_buffer": use_rolling_buffer,
             },
-            "articles": [format_item(a) for a in articles],
-            "videos": [format_item(v) for v in videos],
+            "articles": formatted_articles,
+            "videos": formatted_videos,
         }
 
         return feed
 
     finally:
         conn.close()
+
+
+def load_existing_feed(output_dir: str = "export") -> dict[str, Any] | None:
+    """Charge le feed existant s'il existe."""
+    feed_path = Path(output_dir) / "feed.json"
+    if feed_path.exists():
+        try:
+            with open(feed_path, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except (json.JSONDecodeError, IOError) as e:
+            print(f"[warning] Could not load existing feed: {e}")
+    return None
+
+
+def merge_feeds(
+    new_items: list[dict[str, Any]],
+    existing_items: list[dict[str, Any]],
+    target_count: int,
+    item_type: str = "articles"
+) -> list[dict[str, Any]]:
+    """
+    Fusionne les nouveaux items avec les existants (rolling buffer).
+
+    Stratégie:
+    1. Combine nouveaux + existants
+    2. Déduplique par URL (garde le plus récent)
+    3. Trie par score et garde les top N
+
+    Cela garantit qu'on a toujours `target_count` items,
+    et les anciens ne sont remplacés que par de meilleurs.
+    """
+    # URLs des nouveaux items pour tracking
+    new_urls = {item.get("url", "") for item in new_items}
+    existing_urls = {item.get("url", "") for item in existing_items}
+
+    # Index par URL pour déduplication (nouveaux ont priorité)
+    items_by_url: dict[str, dict[str, Any]] = {}
+
+    # D'abord les existants
+    for item in existing_items:
+        url = item.get("url", "")
+        if url:
+            items_by_url[url] = item
+
+    # Puis les nouveaux (écrasent les existants)
+    for item in new_items:
+        url = item.get("url", "")
+        if url:
+            items_by_url[url] = item
+
+    # Trier par score (score ou combined_score)
+    all_items = list(items_by_url.values())
+    all_items.sort(
+        key=lambda x: x.get("score", x.get("combined_score", 0)),
+        reverse=True
+    )
+
+    result = all_items[:target_count]
+
+    # Compte combien d'anciens sont conservés (URL existait et pas dans les nouveaux)
+    result_urls = {item.get("url", "") for item in result}
+    kept_from_existing = len(result_urls & existing_urls - new_urls)
+    from_new = len(result_urls & new_urls)
+
+    print(f"[info] {item_type}: {from_new} nouveaux, {kept_from_existing} conservés, {len(result)} total")
+
+    return result
 
 
 def export_feed(feed: dict[str, Any], output_dir: str = "export") -> Path:
@@ -384,16 +499,22 @@ def main():
     parser.add_argument("--articles", type=int, default=10, help="Nombre d'articles")
     parser.add_argument("--videos", type=int, default=5, help="Nombre de vidéos")
     parser.add_argument("--output", default="export", help="Dossier de sortie")
+    parser.add_argument("--no-rolling-buffer", action="store_true",
+                        help="Désactive le rolling buffer (remplace tout)")
 
     args = parser.parse_args()
 
     print(f"Génération du feed (derniers {args.days} jours)...")
+    if not args.no_rolling_buffer:
+        print("[info] Rolling buffer activé - les anciens articles sont conservés si meilleurs")
 
     feed = generate_feed(
         config_path=args.config,
         days=args.days,
         articles_limit=args.articles,
-        videos_limit=args.videos
+        videos_limit=args.videos,
+        output_dir=args.output,
+        use_rolling_buffer=not args.no_rolling_buffer
     )
 
     print(f"  - {len(feed['articles'])} articles")

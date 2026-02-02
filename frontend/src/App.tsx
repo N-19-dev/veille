@@ -29,7 +29,7 @@ type WeekData = {
   sections: SummarySection[];
 };
 
-type ViewMode = "feed" | "week";
+type ViewMode = "feed" | "videos" | "week";
 
 export default function App() {
   const { isLoginModalOpen, closeLoginModal } = useAuth();
@@ -145,6 +145,16 @@ export default function App() {
                   Feed
                 </button>
                 <button
+                  onClick={() => setViewMode("videos")}
+                  className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
+                    viewMode === "videos"
+                      ? "bg-white text-neutral-900 shadow-sm"
+                      : "text-neutral-600 hover:text-neutral-900"
+                  }`}
+                >
+                  Vidéos
+                </button>
+                <button
                   onClick={() => setViewMode("week")}
                   className={`px-4 py-2 text-sm font-medium rounded-md transition-colors ${
                     viewMode === "week"
@@ -163,13 +173,27 @@ export default function App() {
       </header>
 
       <main className="max-w-3xl mx-auto px-4 py-6 sm:py-8">
-        {/* Mode Feed */}
+        {/* Mode Feed (articles uniquement) */}
         {viewMode === "feed" && feedData && (
           <FeedView
             articles={feedData.articles}
-            videos={feedData.videos}
+            videos={[]}
             generatedAt={feedData.generated_at}
           />
+        )}
+
+        {/* Mode Vidéos */}
+        {viewMode === "videos" && feedData && (
+          <div className="space-y-6">
+            <div className="text-center text-sm text-neutral-500">
+              Vidéos & Podcasts récents
+            </div>
+            <FeedView
+              articles={[]}
+              videos={feedData.videos}
+              generatedAt={feedData.generated_at}
+            />
+          </div>
         )}
 
         {/* Mode Semaine (Archives) */}

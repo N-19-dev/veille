@@ -164,19 +164,23 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
         Mis à jour : {formattedDate}
       </div>
 
-      {/* Articles feed */}
-      <FeedSection
-        title={`📰 Articles (${articles.length})`}
-        items={articles}
-        emptyMessage="Aucun article pour le moment"
-      />
+      {/* Articles feed (only if there are articles) */}
+      {articles.length > 0 && (
+        <FeedSection
+          title={`📰 Articles (${articles.length})`}
+          items={articles}
+          emptyMessage="Aucun article pour le moment"
+        />
+      )}
 
-      {/* Videos/Podcasts feed */}
-      <FeedSection
-        title={`🎬 Vidéos & Podcasts (${videos.length})`}
-        items={videos}
-        emptyMessage="Aucune vidéo ou podcast pour le moment"
-      />
+      {/* Videos/Podcasts feed (only if there are videos) */}
+      {videos.length > 0 && (
+        <FeedSection
+          title={`🎬 Vidéos & Podcasts (${videos.length})`}
+          items={videos}
+          emptyMessage="Aucune vidéo ou podcast pour le moment"
+        />
+      )}
     </div>
   );
 }

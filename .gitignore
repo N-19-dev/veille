@@ -42,3 +42,9 @@ site/
 # Metrics et exports temporaires
 backend/metrics.json
 backend/export/*/metrics.json
+
+# Frontend generated exports (copied from backend)
+frontend/public/export/
+
+# Session files
+SESSION_STATUS.md

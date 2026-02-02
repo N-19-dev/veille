@@ -71,17 +71,6 @@ function FeedCard({ item }: { item: FeedItem }) {
               </p>
             )}
           </div>
-
-          {/* Score badge */}
-          <div className="flex-shrink-0">
-            <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ${
-              item.score >= 60 ? "bg-green-100 text-green-700" :
-              item.score >= 45 ? "bg-yellow-100 text-yellow-700" :
-              "bg-neutral-100 text-neutral-600"
-            }`}>
-              {Math.round(item.score)}
-            </span>
-          </div>
         </div>
       </a>
 

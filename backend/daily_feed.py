@@ -426,11 +426,65 @@ def load_existing_feed(output_dir: str = "export") -> dict[str, Any] | None:
     return None
 
 
+def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 0.8) -> float:
+    """
+    Recalcule le score avec time decay adapté à un flux hebdomadaire.
+
+    Utilise algo_score (score de pertinence brut) + votes + âge en JOURS.
+    Les vieux articles descendent naturellement mais restent visibles plus longtemps
+    qu'avec le decay HN (qui est en heures).
+
+    Formule: score / (age_days + 1)^gravity
+
+    Avec gravity=0.8:
+    - Article frais (0j): score / 1 = 100%
+    - Article 1 jour: score / 1.74 = 57%
+    - Article 3 jours: score / 2.64 = 38%
+    - Article 7 jours: score / 4.59 = 22%
+    - Article 14 jours: score / 7.46 = 13%
+
+    Cela permet aux articles de rester ~2 semaines avant d'être remplacés.
+    """
+    import math
+
+    # Score de base (algo_score = score sans time decay)
+    algo_score = item.get("algo_score", item.get("score", 50))
+    upvotes = item.get("upvotes", 0)
+    downvotes = item.get("downvotes", 0)
+    published_ts = item.get("published_ts", 0)
+
+    # Vote boost (même logique que compute_combined_score)
+    total_votes = upvotes + downvotes
+    vote_boost = 0.0
+    max_boost = 20.0
+    confidence_prior = 5
+
+    if total_votes > 0:
+        bayesian_ratio = (confidence_prior * 0.5 + upvotes) / (confidence_prior + total_votes)
+        normalized_boost = (bayesian_ratio - 0.5) * 2
+        confidence_factor = math.sqrt(total_votes)
+        vote_boost = normalized_boost * confidence_factor * (max_boost / 3)
+        vote_boost = max(-max_boost, min(max_boost, vote_boost))
+
+    base_score = algo_score + vote_boost
+
+    # Time decay en JOURS (pas en heures comme HN)
+    now_ts = datetime.now(timezone.utc).timestamp()
+    age_days = max(0, (now_ts - published_ts) / 86400)  # 86400 = secondes par jour
+
+    # Formule adaptée: score / (age_days + 1)^gravity
+    time_decay_factor = math.pow(age_days + 1, gravity)
+    final_score = base_score / time_decay_factor
+
+    return final_score
+
+
 def merge_feeds(
     new_items: list[dict[str, Any]],
     existing_items: list[dict[str, Any]],
     target_count: int,
-    item_type: str = "articles"
+    item_type: str = "articles",
+    gravity: float = 0.8
 ) -> list[dict[str, Any]]:
     """
     Fusionne les nouveaux items avec les existants (rolling buffer).
@@ -438,10 +492,11 @@ def merge_feeds(
     Stratégie:
     1. Combine nouveaux + existants
     2. Déduplique par URL (garde le plus récent)
-    3. Trie par score et garde les top N
+    3. Recalcule le time decay pour TOUS les items (HN-style)
+    4. Trie par score recalculé et garde les top N
 
-    Cela garantit qu'on a toujours `target_count` items,
-    et les anciens ne sont remplacés que par de meilleurs.
+    Le time decay fait descendre naturellement les vieux articles,
+    permettant aux nouveaux d'avoir leur chance même avec un score plus bas.
     """
     # URLs des nouveaux items pour tracking
     new_urls = {item.get("url", "") for item in new_items}
@@ -462,14 +517,20 @@ def merge_feeds(
         if url:
             items_by_url[url] = item
 
-    # Trier par score (score ou combined_score)
+    # Recalculer le time decay score pour TOUS les items
     all_items = list(items_by_url.values())
-    all_items.sort(
-        key=lambda x: x.get("score", x.get("combined_score", 0)),
-        reverse=True
-    )
+    for item in all_items:
+        item["_ranking_score"] = recalculate_time_decay_score(item, gravity)
+
+    # Trier par score recalculé avec time decay
+    all_items.sort(key=lambda x: x["_ranking_score"], reverse=True)
 
     result = all_items[:target_count]
+
+    # Mettre à jour le score affiché avec le nouveau calcul
+    for item in result:
+        item["score"] = round(item["_ranking_score"], 1)
+        del item["_ranking_score"]
 
     # Compte combien d'anciens sont conservés (URL existait et pas dans les nouveaux)
     result_urls = {item.get("url", "") for item in result}

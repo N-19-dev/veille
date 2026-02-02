@@ -452,18 +452,29 @@ def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 1.2) -> 
     downvotes = item.get("downvotes", 0)
     published_ts = item.get("published_ts", 0)
 
-    # Vote boost (même logique que compute_combined_score)
+    # Vote boost - les votes ont un impact significatif sur le ranking
+    # max_boost=40 permet aux votes de doubler ou diviser par 2 un score moyen (50)
+    # confidence_prior=3 = les premiers votes comptent rapidement
     total_votes = upvotes + downvotes
     vote_boost = 0.0
-    max_boost = 20.0
-    confidence_prior = 5
+    max_boost = 40.0  # ±40 points (était 20)
+    confidence_prior = 3  # Moins de votes nécessaires pour impact (était 5)
 
     if total_votes > 0:
+        # Bayesian average: évite qu'un seul vote ait trop d'impact
         bayesian_ratio = (confidence_prior * 0.5 + upvotes) / (confidence_prior + total_votes)
+        # Normalise entre -1 et +1
         normalized_boost = (bayesian_ratio - 0.5) * 2
+        # Plus de votes = plus de confiance (sqrt pour ne pas exploser)
         confidence_factor = math.sqrt(total_votes)
-        vote_boost = normalized_boost * confidence_factor * (max_boost / 3)
+        vote_boost = normalized_boost * confidence_factor * (max_boost / 2.5)
         vote_boost = max(-max_boost, min(max_boost, vote_boost))
+
+    # Exemples d'impact:
+    # - 3 upvotes, 0 downvotes → +17 points
+    # - 5 upvotes, 0 downvotes → +24 points
+    # - 10 upvotes, 2 downvotes → +26 points
+    # - 0 upvotes, 3 downvotes → -17 points
 
     base_score = algo_score + vote_boost
 

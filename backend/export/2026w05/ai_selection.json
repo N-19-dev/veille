@@ -1,0 +1,146 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/the-missing-layer-in-your-ai-stack",
+      "title": "The Missing Layer in Your AI Stack: Context, Not Just State",
+      "summary": "From SQL to Semantics: The Rise of the Context Graph for AI Agents",
+      "published_ts": 1769832797,
+      "source_name": "Data Engineering Weekly",
+      "score": 63.11269593509761,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.youtube.com/shorts/Q4PgetJ8b7E",
+      "title": "Future of Data Engineering: Specialist or Generalist?",
+      "summary": "AI is coming for everyone who is coding. So as a Data Engineer, should you go into a specific area / tool and become an expert or should you focus rather on things like platform architecture and understanding the business?\n\n#ai #dataengineering #dataengineer",
+      "published_ts": 1769527825,
+      "source_name": "Andreas Kretz (YouTube)",
+      "score": 56.922466253692455,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://www.databricks.com/blog/announcing-databricks-new-york-rd-hub",
+      "title": "Announcing Databricks New York R&D Hub",
+      "summary": "I’m excited to announce the official launch of Databricks' new R&D and Engineering hub in New York City.I ...",
+      "published_ts": 1769819700,
+      "source_name": "Databricks Blog",
+      "score": 58.30831000750715,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://www.getdbt.com/blog/what-makes-a-great-dbt-summit-presentation",
+      "title": "What makes a great dbt Summit presentation? (And why yours belongs on stage)",
+      "summary": "Share your data story at dbt Summit. CFP now open. Real problems, real solutions. Submit by March 31.",
+      "published_ts": 1769511600,
+      "source_name": "dbt Blog",
+      "score": 58.011874502355404,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.getdbt.com/blog/the-osi-spec-updates",
+      "title": "What the Open Semantic Interchange (OSI) spec means for metrics, semantics, and AI",
+      "summary": "An open OSI spec for semantic portability is now available, plus dbt's commitment to operationalize semantics.",
+      "published_ts": 1769701980,
+      "source_name": "dbt Blog",
+      "score": 56.02110830220309,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://airbyte.com/blog/agent-architecture-differences",
+      "title": "From Warehouses to Operations: Why Agent Architecture Differs | Airbyte",
+      "summary": "Learn why agent architecture differs from data warehouses and how operational agents require new design patterns for real-time action.",
+      "published_ts": 1769644800,
+      "source_name": "Airbyte Blog",
+      "score": 62.0720228146423,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.youtube.com/shorts/g_6JxG31f4g",
+      "title": "The most important data pipeline pattern for Data Engineers: Get event driven!",
+      "summary": "#datapipeline #dataengineering #kestra #eventdrivenarchitecture",
+      "published_ts": 1769617827,
+      "source_name": "Andreas Kretz (YouTube)",
+      "score": 60.62616700475866,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-254",
+      "title": "Data Engineering Weekly #254",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1769400744,
+      "source_name": "Data Engineering Weekly",
+      "score": 66.05550453066826,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/bringing-ai-analytics-lakehouses",
+      "title": "Bringing the Engine to Data: How 3 Big Brands Power Analytics and AI on Lakehouses",
+      "summary": "Learn how 3 global enterprises power analytics and AI directly on lakehouse architectures using open table formats like Apache Iceberg",
+      "published_ts": 1769708391,
+      "source_name": "Snowflake Blog",
+      "score": 59.6833469380032,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.databricks.com/blog/2025-review-databricks-sql-faster-every-workload",
+      "title": "2025 in Review: Databricks SQL, faster for every workload",
+      "summary": "For most data teams, performance is no longer about one-time tuning. It’s about analytics...",
+      "published_ts": 1769538244,
+      "source_name": "Databricks Blog",
+      "score": 58.61870888959278,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startups-building-ai-snowflake",
+      "title": "Meet the Startups Building the Future of AI on Snowflake",
+      "summary": "Meet the latest Snowflake Startup Accelerator cohort and learn how startups are building, scaling, and innovating on Snowflake AI Data Cloud.",
+      "published_ts": 1769619780,
+      "source_name": "Snowflake Blog",
+      "score": 57.02018136327917,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.uber.com/blog/scaled-data-replication/",
+      "title": "How Uber Scaled Data Replication to Move Petabytes Every Day",
+      "summary": "Uber prioritizes a reliable data lake, which is distributed across on-premise and cloud environments. This multi-region setup presents challenges for ensuring reliable and timely data access due to limited network bandwidth and the need for seamless data availability, particularly for disaster recovery. Uber uses the Hive Sync service, which uses Apache HadoopⓇ Ditscp (Distributed Copy) for data replication. However, with Uber’s Data Lake exceeding 350 PB, Distcp’s limitations became apparent. This blog explores the optimizations made to Distcp to enhance its performance and meet Uber’s growing data replication and disaster recovery needs across its distributed infrastructure.",
+      "published_ts": 1769697000,
+      "source_name": "Uber Engineering Blog",
+      "score": 56.7927460507913,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ]
+}

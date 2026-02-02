@@ -1,5 +1,13 @@
 [
   {
+    "week": "2026w05",
+    "range": "2026-01-26 → 2026-02-02",
+    "top3_md": "export/2026w05/top3.md",
+    "selection_json": "export/2026w05/ai_selection.json",
+    "selection_md": "export/2026w05/ai_selection.md",
+    "summary_md": "export/2026w05/ai_summary.md"
+  },
+  {
     "week": "2026w04",
     "range": "2026-01-19 → 2026-01-26",
     "top3_md": "export/2026w04/top3.md",

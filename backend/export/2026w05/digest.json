@@ -1,0 +1,620 @@
+{
+  "ai_data_engineering": [
+    {
+      "url": "https://blog.cloudflare.com/uk-google-ai-crawler-policy/",
+      "title": "Google’s AI advantage: why crawler separation is the only path to a fair Internet",
+      "summary": "Google's dual-purpose crawler creates an unfair AI advantage. To protect publishers and foster competition, the UK’s Competition and Markets Authority must mandate crawler separation for search and AI.",
+      "published_ts": 1769792464,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/vertical-microfrontends/",
+      "title": "Building vertical microfrontends on Cloudflare’s platform",
+      "summary": "Deploy multiple Workers under a single domain with the ability to make them feel like single-page applications. We take a look at how service bindings enable URL path routing to multiple projects.",
+      "published_ts": 1769781600,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/hidden-technical-debt-genai-systems",
+      "title": "Hidden Technical Debt of GenAI Systems",
+      "summary": "IntroductionIf we broadly compare classical machine learning and generative AI workflows...",
+      "published_ts": 1769742000,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.blog.langchain.com/january-2026-langchain-newsletter/",
+      "title": "January 2026: LangChain Newsletter",
+      "summary": "Read about the latest product updates, events, and content from the LangChain team",
+      "published_ts": 1769740048,
+      "source_name": "LangChain Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/pytest-for-agent-generated-code-concrete-testing-strategies-to-put-into-practice",
+      "title": "Pytest for Agent-Generated Code: Concrete Testing Strategies to Put Into Practice",
+      "summary": "Learn how to design a Pytest strategy for agent-generated code, with explicit test levels, fake infrastructure, and guardrails that keep tests fast, reliable, and maintainable.",
+      "published_ts": 1769718205,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/reduce-emr-hbase-upgrade-downtime-with-the-emr-read-replica-prewarm-feature/",
+      "title": "Reduce EMR HBase upgrade downtime with the EMR read-replica prewarm feature",
+      "summary": "In this post, we show you how the read-replica prewarm feature of Amazon EMR 7.12 improves HBase cluster operations by minimizing the hard cutover constraints that make infrastructure changes challenging. This feature gives you a consistent blue-green deployment pattern that reduces risk and downtime for version upgrades and security patches.",
+      "published_ts": 1769711117,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia/cosmos-policy-for-robot-control",
+      "title": "Introducing NVIDIA Cosmos Policy for Advanced Robot Control",
+      "summary": "Introducing NVIDIA Cosmos Policy for Advanced Robot Control\nWe are continuously expanding\nNVIDIA Cosmos™\nworld foundation models (WFMs) to tackle some of the hardest problems in robotics, autonomous vehicle development, and industrial vision AI.\nTo further support this effort, we’re introducing\nCosm",
+      "published_ts": 1769706205,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/retail-2026-predictions-webinar-recap",
+      "title": "2026 AI Predictions: Retail and Consumer Goods Trends",
+      "summary": "Explore 2026 AI Predictions for retail and consumer goods, from autonomous supply chains to agentic commerce, and what leaders need to prepare for next.",
+      "published_ts": 1769706000,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.salesforce.com/scaling-code-reviews-adapting-to-a-surge-in-ai-generated-code/",
+      "title": "Scaling Code Reviews: Adapting to a Surge in AI-Generated Code",
+      "summary": "By Shan Appajodu and Ravi Boyapati. For years, software engineering viewed code review as a bounded, human-scalable activity. Pull requests grew gradually, and reviewers relied on local context. File-by-file diffs were enough to reason about changes. This model fractured when AI-assisted coding tools altered the economics of code creation faster than review workflows could adapt. […] The post Scaling Code Reviews: Adapting to a Surge in AI-Generated Code appeared first on Salesforce Engineering Blog .",
+      "published_ts": 1769702647,
+      "source_name": "Salesforce Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/moltworker-self-hosted-ai-agent/",
+      "title": "Introducing Moltworker: a self-hosted personal AI agent, minus the minis",
+      "summary": "Moltworker is a middleware Worker and adapted scripts that allows running OpenClaw (formerly Moltbot, formerly Clawdbot) on Cloudflare's Sandbox SDK and our Developer Platform APIs. So you can self-host an AI personal assistant — without any new hardware.",
+      "published_ts": 1769695200,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/retail-cpg-trends-2026",
+      "title": "3 Trends Shaping Retail & CPG in 2026: Agentic Commerce & Beyond",
+      "summary": "Agentic commerce represents a pivotal shift in the evolution of retail — one that retailers can’t afford to ignore. Retailers and consumer packaged goods (CPG) manufacturers that build agentic AI capabilities in 2026 will set the competitive standard and position themselves to carve out their fair share of the $1 trillion expected from agentic commerce in the U.S. retail market by 2030.",
+      "published_ts": 1769695200,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/les-articles-de-blog-a-l'ere-des-llm--les-cartouches-de-connaissances",
+      "title": "Les articles de blog à l’ère des LLM : les cartouches de connaissances",
+      "summary": "Et si l'article de blog devenait un dialogue ? Avec les LLM, un texte n'est plus un chemin imposé : c'est une cartouche de connaissances à interroger, synthétiser, transformer en podcast. Le même contenu s'adapte à chaque lecteur. Découvrez ce nouveau paradigme de lecture et d'écriture.",
+      "published_ts": 1769677383,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/daggr",
+      "title": "Introducing Daggr: Chain apps programmatically, inspect visually",
+      "summary": "Introducing Daggr: Chain apps programmatically, inspect visually\nTL;DR:\nDaggr\nis a new, open-source Python library for building AI workflows that connect Gradio apps, ML models, and custom functions. It automatically generates a visual canvas where you can inspect intermediate outputs, rerun individ",
+      "published_ts": 1769644800,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/customer-context-engine-ai-era",
+      "title": "Beyond the modern data stack: The customer context engine for the AI era",
+      "summary": "Why AI systems demand a new approach to customer data, and how leading teams are evolving their data stacks to deliver fresh, trustworthy customer context.",
+      "published_ts": 1769633146,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/modernize-game-intelligence-with-generative-ai-on-amazon-redshift/",
+      "title": "Modernize game intelligence with generative AI on Amazon Redshift",
+      "summary": "In this post, we discuss how you can use Amazon Redshift as a knowledge base to provide additional context to your LLM. We share best practices and explain how you can improve the accuracy of responses from the knowledge base by following these best practices.",
+      "published_ts": 1769622893,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/streamline-your-amazon-redshift-maintenance-event-notifications-with-amazon-simple-notification-service/",
+      "title": "Streamline your Amazon Redshift maintenance event notifications with Amazon Simple Notification Service",
+      "summary": "In this post, we take you through customization options for managing the schedule of your Amazon Redshift maintenance events, along with Amazon Redshift maintenance tracks for optimizing cluster performance. We also walk you through how to set up Amazon Redshift event notifications using Amazon SNS.",
+      "published_ts": 1769622834,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.blog.langchain.com/context-management-for-deepagents/",
+      "title": "Context Management for Deep Agents",
+      "summary": "By Chester Curme and Mason Daugherty As the addressable task length of AI agents continues to grow , effective context management becomes critical to prevent context rot and to manage LLMs’ finite memory constraints. The Deep Agents SDK is LangChain’s open source, batteries-included agent harness . It provides an",
+      "published_ts": 1769616689,
+      "source_name": "LangChain Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/pourquoi-les-entreprises-ne-vont-pas-toujours-facilement-en-production",
+      "title": "Pourquoi les entreprises ne vont pas toujours en production facilement ?",
+      "summary": "Dans nos missions chez OCTO, nous souhaitons mettre en production le plus tôt possible pour dérisquer la production, tester les modes opératoires mais aussi tester l’application dans des conditions réelles pour récolter des informations précieuses des utilisateurs finaux du système dans sa globalité qui permettront d’améliorer l’application.",
+      "published_ts": 1769615890,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/shift-right--pourquoi-valider-des-hypotheses-en-production-au-plus-tot",
+      "title": "Shift Right : Pourquoi valider des hypothèses en production au plus tôt ?",
+      "summary": "Nous parlons souvent dans nos pratiques ingénierie de shift right and left. Je vous propose ici d’explorer l’intérêt de faire du “Shift Right”",
+      "published_ts": 1769612110,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/get-started-faster-with-one-click-onboarding-serverless-notebooks-and-ai-agents-in-amazon-sagemaker-unified-studio/",
+      "title": "Get started faster with one-click onboarding, serverless notebooks, and AI agents in Amazon SageMaker Unified Studio",
+      "summary": "Using Amazon SageMaker Unified Studio serverless notebooks, AI-assisted development, and unified governance, you can speed up your data and AI workflows across data team functions while maintaining security and compliance. In this post, we walk you through how these new capabilities in SageMaker Unified Studio can help you consolidate your fragmented data tools, reduce time to insight, and collaborate across your data teams.",
+      "published_ts": 1769540059,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/agent-bricks-knowledge-assistant-now-generally-available-turning-enterprise-knowledge-answers",
+      "title": "Agent Bricks Knowledge Assistant Is Now Generally Available: Turning Enterprise Knowledge into Answers",
+      "summary": "Some of your company’s most valuable data is still hard to access. Documents, slides,...",
+      "published_ts": 1769531407,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-2",
+      "title": "Architectural Choices in China's Open-Source AI Ecosystem: Building Beyond DeepSeek",
+      "summary": "Architectural Choices in China's Open-Source AI Ecosystem: Building Beyond DeepSeek\nThis is the second blog in a three-part series on China's open source community's historical advancements since January 2025's \"DeepSeek Moment.\" The first blog is available\nhere\n.\nIn this second piece we turn our fo",
+      "published_ts": 1769526105,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.fb.com/2026/01/27/security/rust-at-scale-security-whatsapp/",
+      "title": "Rust at Scale: An Added Layer of Security for WhatsApp",
+      "summary": "WhatsApp has adopted and rolled out a new layer of security for users – built with Rust – as part of its effort to harden defenses against malware threats. WhatsApp’s experience creating and distributing our media consistency library in Rust to billions of devices and browsers proves Rust is production ready at a global scale. [...] Read More... The post Rust at Scale: An Added Layer of Security for WhatsApp appeared first on Engineering at Meta .",
+      "published_ts": 1769526009,
+      "source_name": "Meta Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/reference-architecture-build-a-sovereign-n8n-rag-workflow-for-ai-agent-using-ovhcloud-public-cloud-solutions/",
+      "title": "Reference Architecture: build a sovereign n8n RAG workflow for AI agent using OVHcloud Public Cloud solutions",
+      "summary": "What if an n8n workflow, deployed in a sovereign environment, saved you time while giving you peace of mind? From document ingestion to targeted response generation, n8n acts as the conductor of your RAG pipeline without compromising data protection. In the current landscape of AI agents and knowledge assistants, connecting your internal documentation with Large Language Models (LLMs) […]",
+      "published_ts": 1769519523,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/tiiuae/emirati-benchmarks",
+      "title": "Alyah ⭐️: Toward Robust Evaluation of Emirati Dialect Capabilities in Arabic LLMs",
+      "summary": "Alyah ⭐️: Toward Robust Evaluation of Emirati Dialect Capabilities in Arabic LLMs\nArabic is one of the most widely spoken languages in the world, with hundreds of millions of speakers across more than twenty countries. Despite this global reach, Arabic is not a monolithic language. Modern Standard A",
+      "published_ts": 1769509602,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/LinkedIn/gpt-oss-agentic-rl",
+      "title": "Unlocking Agentic RL Training for GPT-OSS: A Practical Retrospective",
+      "summary": "Unlocking Agentic RL Training for GPT-OSS: A Practical Retrospective\nAgentic reinforcement learning (RL) extends traditional LLM training by optimizing not just a single-turn response, but an entire decision-making process learned through direct interaction with an environment during training. Unlik",
+      "published_ts": 1769478795,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/how-to-set-up-gitlab-saml-sso-with-google-workspace/",
+      "title": "How to set up GitLab SAML SSO with Google Workspace",
+      "summary": "Single sign-on (SSO) simplifies user authentication and improves security by allowing employees to access multiple applications with one set of credentials. For organizations using both GitLab and Google Workspace, integrating SAML-based SSO streamlines access management and ensures your teams can collaborate seamlessly. In this guide, we'll walk through configuring SAML authentication between Google Workspace and GitLab.com, including automatic group synchronization that maps Google Workspace groups to GitLab roles. By the end, your users will be able to sign in to GitLab using their Google credentials, and their permissions will automatically reflect their Google group memberships. Note: This guide focuses on GitLab.com (SaaS). If you're using GitLab Self-Managed, the setup process differs slightly. Refer to the official GitLab SAML documentation for self-managed instances for detailed instructions. What you'll need Before getting started, make sure you have: Google Workspace with Super Admin access GitLab.com with a Premium or Ultimate tier subscription Owner role on a GitLab top-level group Users already existing in Google Workspace (they'll be created in GitLab automatically on first login) Understanding the architecture When you configure SAML SSO with group synchronization, here's what happens: Authentication flow : Users navigate to GitLab's SSO URL and are redirected to Google Workspace to authenticate. SAML assertion : After successful authentication, Google sends a SAML response containing user details and group memberships. Automatic provisioning : GitLab creates the user account (if needed) and assigns them to groups based on their Google group memberships. Permission sync : Each time users sign in, GitLab updates their group memberships and roles to match their current Google groups. This setup provides several benefits: Centralized access control : You can manage user access through Google Workspace groups. Automatic provisioning : New users gain GitLab access on their first login. Dynamic permissions : User roles update automatically based on group membership changes. Enhanced security : You can leverage Google's authentication security features. Reduced administrative overhead : There is no need to manually manage GitLab group memberships. Part 1: Get your GitLab SAML configuration values First, you'll need to gather some information from GitLab that you'll use when creating the SAML application in Google Workspace. Here are the steps to take: Step 1: Navigate to your GitLab group SAML settings Sign in to GitLab.com . Navigate to your top-level group (Note: SAML SSO can only be configured at the top-level group, not in subgroups). In the left sidebar, select Settings > SAML SSO . Step 2: Copy the required URLs On the SAML SSO settings page, you'll see three important URLs. Copy and save these somewhere accessible — you'll need them shortly: Assertion consumer service URL : This is where Google will send SAML responses. Format: https://gitlab.com/groups/your-group/-/saml/callback Identifier : Also called the Entity ID, this uniquely identifies your GitLab group. Format: https://gitlab.com/groups/your-group GitLab SSO URL : This is the URL your users will use to sign in. Format: https://gitlab.com/groups/your-group/-/saml/sso GitLab SAML single sign-on settings Now you'll create a custom SAML application in Google Workspace that connects to your GitLab group. Step 3: Access the Google Admin Console Open a new browser tab and sign in to the Google Admin Console with a Super Administrator account. Click the Menu icon (☰) in the top-left. Navigate to Apps > Web and mobile apps . Click Add App > Add custom SAML app . Google custom SAML app Step 4: Configure the application name In the App name field, enter GitLab (or your preferred name). Optionally upload a GitLab logo as the app icon for easy recognition. Click Continue . Step 5: Download Google identity provider details On the Google Identity Provider details page, you'll need to capture two pieces of information: SSO URL : Copy this URL. It tells GitLab where to send authentication requests. Example format: https://accounts.google.com/o/saml2/idp?idpid=C1234abcd Certificate : Click the Download button to save the certificate file. The file will be named something like: GoogleIDPCertificate-gitlab.pem Save this file somewhere you can easily find it. You'll need it in the next section Click Continue . Step 6: Configure service provider details This is where you'll use the GitLab URLs you copied in Step 2. Enter the following: Field Value Description ACS URL Your GitLab Assertion consumer service URL Where Google sends SAML responses Entity ID Your GitLab Identifier Unique identifier for your GitLab group Start URL Leave blank Not required for this setup Name ID format Select EMAIL The format for the user identifier Name ID Select Basic Information > Primary Email The user's primary email will be used as their identifier Signed response Leave unchecked GitLab doesn't require signed responses by default GitLab SAML app details Click Continue when complete. Step 7: Configure attribute mapping Attribute mapping tells Google which user information to send to GitLab. You'll configure both basic user attributes and group membership. Basic attributes Add these three attribute mappings by clicking Add mapping for each: Google Directory attribute App attribute Primary email email First name first_name Last name last_name Group membership configuration This is the critical configuration that enables automatic group synchronization: Scroll down to the \"Group membership (optional)\" section. Under \"Google groups\" , click \"Search for a group\" . Search for and select each Google Workspace group you want to synchronize with GitLab. You can select up to 75 groups Examples: Engineering, DevOps, Platform-Team, Security-Team Under \"App attribute\" , enter exactly: groups . Click Finish . GitLab SAML app attribute mapping Critical : The app attribute name MUST be exactly groups (lowercase). This is what GitLab expects to receive in the SAML response. Any other value or capitalization will prevent group synchronization from working. Step 8: Enable the application for users Your SAML app is created but not yet enabled. To make it available to users: In the Google Admin Console, find your GitLab app in the Web and mobile apps list. Click on the app to open its details. In the left sidebar, click User access . Select one of the following: ON for everyone - Enables the app for all users in your organization ON for some organizational units - Select specific organizational units Click Save . Note : Changes can take up to 24 hours to propagate, but typically take effect within a few minutes. Part 3: Convert the certificate to SHA-1 fingerprint format GitLab requires a SHA-1 certificate fingerprint, but Google's certificate download doesn't include this format directly. You'll need to convert it. Step 9: Convert your certificate You have two options for converting the certificate to the required format. Option 1: Online conversion tool This is a viable method if you're comfortable using a third-party tool: Locate the certificate file you downloaded in Step 5: Check your Downloads folder The file name will be something like: GoogleIDPCertificate-gitlab.pem Open the file in a text editor: Mac: Right-click > Open With > TextEdit Windows: Right-click > Open With > Notepad Linux: Use your preferred text editor Copy ALL contents of the file, including the header and footer: -----BEGIN CERTIFICATE-----\nMIIDdDCCAlygAwIBAgIGAXqD...\n(multiple lines of encoded text)\n...kE7RnF6yQ==\n-----END CERTIFICATE----- Navigate to : A SHA-1 fingerprint conversion tool. This one is a good example. Paste the certificate content into the text box. Select \"SHA-1\" from the algorithm dropdown (not SHA-256!). Click \"Calculate Fingerprint\" . Copy the resulting fingerprint - it will be in the format: XX:XX:XX:XX:XX:... . Option 2: Command-line conversion If you prefer using the command line: For Mac, Linux, or Windows with WSL: cd ~/Downloads\nopenssl x509 -noout -fingerprint -sha1 -inform pem -in \"GoogleIDPCertificate-gitlab.pem\" The output will show: SHA1 Fingerprint=XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX:XX Copy everything after SHA1 Fingerprint= . Part 4: Complete your GitLab SAML configuration Now that you have the Google SSO URL and certificate fingerprint, you can complete the GitLab side of the configuration. Step 10: Enter Google identity provider details Return to your GitLab browser tab ( Settings > SAML SSO ) and do the following: Identity provider SSO URL : Paste the SSO URL you copied from Google in Step 5 Certificate fingerprint : Paste the SHA-1 fingerprint you generated in Step 9 Verify the format is correct: 59 characters with colons (XX:XX:XX:...) Enable SAML authentication for this group : Check this box to activate SAML SSO GitLab SAML Configuration with Google SAML values Step 11: Configure security settings (recommended) For enhanced security, consider enabling these additional options: \"Enforce SAML authentication for web activity for this group\" Requires users to authenticate via SAML to access the GitLab web interface \"Enforce SAML authentication for Git and Dependency Proxy activity for this group\" Requires SAML authentication for Git operations and dependency proxy access Click Save changes to apply your configuration. Step 12: Test your SAML configuration Before proceeding with group synchronization, verify that basic SAML authentication works: Open an incognito or private browsing window. Navigate to your GitLab SSO URL. Format: https://gitlab.com/groups/your-group/-/saml/sso You should be redirected to the Google sign-in page. Sign in with a Google Workspace account that has access to the GitLab app. After successful authentication, you should be redirected back to GitLab. If the test succeeds , you can proceed to configure group synchronization. If the test fails , check the following: Verify the certificate fingerprint is SHA-1 format (not SHA-256). Confirm the SSO URL is correct. Ensure the user has access to the GitLab SAML app in Google Admin Console. Check that the ACS URL and Entity ID match exactly. Part 5: Set up SAML group synchronization Now it's time to map your Google Workspace groups to GitLab roles so that permissions are automatically managed based on group membership. Step 13: Configure default membership role As a security best practice, set a minimal default role for users who log in but don't belong to any mapped groups: In your GitLab group, navigate to Settings > General . Expand the Permissions and group features section. Under Default membership role , select Minimal Access or Guest . Click Save changes . GitLab SAML Default membership setting Step 14: Create SAML group links SAML Group Links are the mappings between Google Workspace groups and GitLab roles. Here's how to create them: In your GitLab group, navigate to Settings > SAML Group Links . Click \"Add new SAML Group Link\" . For each Google Workspace group you want to sync: SAML Group Name : Enter the exact name of your Google Workspace group This is case-sensitive and must match perfectly Example: Engineering (not engineering) To find the exact name: Google Admin Console > Directory > Groups Access Level : Select the appropriate GitLab role: Minimal Access - Can see that the group exists Guest - Can view issues and leave comments Reporter - Can pull code, view issues, and create new issues Developer - Can push code, create merge requests, and manage issues Maintainer - Can manage project settings and members Owner - Full administrative control over the group Click Save . Repeat this process for each Google Workspace group you want to map. Note: SAML group sync rules are enforced every time a user signs in. If a user's Google group membership matches a sync rule, their GitLab role will be automatically set to the configured access level, even if you've manually changed it to something different. For example, if you set up a sync rule that grants \"Maintainer\" access and then manually promote a user to \"Owner,\" they'll be automatically downgraded back to \"Maintainer\" on their next SAML sign-in. Best practices: To maintain custom access levels for specific users, do one of the following: Use SAML group sync only on your top-level group and manually manage permissions in subgroups Create separate Google groups for users who need elevated permissions Avoid setting up sync rules that would conflict with manual role assignments GitLab SAML Group Links setup Here's a practical example of how you might structure your group mappings: Google Workspace Group GitLab Role Purpose GitLab-Admins Owner Full administrative access Engineering-Team Maintainer Can manage projects and settings Developer-Team Developer Can write and push code QA-Team Developer Can test and manage issues Contractors Reporter Read-only access to code All-Employees Minimal Access Basic visibility Step 15: Verify your group links After creating all your group links: Review the complete list of SAML Group Links in Settings > SAML Group Links . Verify each SAML Group Name exactly matches the corresponding Google Workspace group. Verify each Access Level is appropriate for the intended purpose. Check for any typos or extra spaces. Part 6: Test the complete configuration Now it's time to test the entire setup including group synchronization. Step 16: Test with a real user Choose a test user who meets these criteria: Has a Google Workspace account Is a member of at least one Google Workspace group you configured Has the GitLab SAML app enabled in Google Admin Console Ideally is not you (to ensure a realistic test) To perform the test: Open an incognito or private browsing window Navigate to your GitLab SSO URL : https://gitlab.com/groups/your-group/-/saml/sso Sign in with the test user's Google Workspace credentials The user should be: Authenticated successfully Redirected to GitLab Automatically added to the GitLab group Assigned the appropriate role based on their Google group membership Step 17: Verify group membership and role assignment Using your GitLab administrator account: Navigate to your group in GitLab. Select Manage > Members from the left sidebar. Find the test user in the members list. Verify the following: User appears in the members list User has the correct Max role based on their Google group(s) Source column shows a SAML indicator Verified SAML user added Part 7: Configure subgroup access (optional) For larger organizations, you may want to provide more granular access control using GitLab subgroups. SAML Group Links can be configured at any level of your group hierarchy, allowing you to map different Google Workspace groups to specific teams or projects. Understanding GitLab's subgroup structure GitLab supports nested group hierarchies that can mirror your organizational structure: acme-corp/                          ← Top-level group (SAML configured here)\n├── engineering/                    ← Subgroup\n│   ├── backend/                   ← Nested subgroup\n│   └── frontend/                  ← Nested subgroup\n├── marketing/                      ← Subgroup\n└── operations/                     ← Subgroup Creating subgroups If you need to create additional subgroups: Navigate to your parent group (e.g., acme-corp). Click the New subgroup button. Configure the subgroup: Subgroup name : Display name (e.g., Engineering) Subgroup URL : URL slug (e.g., engineering) Visibility level : Choose Private, Internal, or Public Click Create subgroup . Repeat for other subgroups as needed. Configuring SAML group links for subgroups Here are the steps to configure SAML group links for subgroups. Add new Google groups to the SAML app (if needed) If you're introducing new Google Workspace groups for subgroup access: Go to Google Admin Console > Apps > Web and mobile apps > GitLab . Click SAML attribute mapping . Scroll to \"Group membership (optional)\" . Add your new groups (e.g., Backend-Team, Frontend-Team). Verify the \"App attribute\" is still groups . Click Save . Map Google groups to subgroups Navigate to the specific subgroup in GitLab Example: acme-corp/engineering/backend Go to Settings > SAML Group Links . Click \"Add new SAML Group Link\" . Configure the mapping: SAML Group Name : Backend-Team (exact Google Workspace group name) Access Level : Developer (or your desired role) Click Save .\nRepeat this process for all subgroups and their corresponding Google groups. Multi-level access example Here's how permissions might work across different levels: Top-level group: acme-corp SAML Group Links: \"Company-Admins\" → Owner \"All-Employees\" → Minimal Access Subgroup: acme-corp/engineering SAML Group Links: \"Engineering-Leads\" → Owner \"Engineering-Team\" → Maintainer Nested subgroup: acme-corp/engineering/backend SAML Group Links: \"Backend-Leads\" → Maintainer \"Backend-Team\" → Developer How permissions inherit and combine Understanding permission behavior is important: Role calculation : At each level, users receive the highest role from all their Google groups. Inheritance : Higher permissions at parent levels flow down to child subgroups. Independence : Each level calculates permissions based on its own group links plus inherited permissions. No limitation : Lower permissions at parent levels do NOT restrict higher permissions at child levels. Example scenarios : User A (member of Backend-Team only): acme-corp: Minimal Access (from \"All-Employees\" default) acme-corp/engineering: Minimal Access (inherited from parent) acme-corp/engineering/backend: Developer (from \"Backend-Team\" mapping) User B (member of Engineering-Leads and Backend-Team): acme-corp: Minimal Access (from \"All-Employees\" default) acme-corp/engineering: Owner (from \"Engineering-Leads\" mapping) acme-corp/engineering/backend: Owner (inherited from parent, which is higher than Developer) How the synchronization works Understanding the mechanics of SAML group synchronization helps you manage the system effectively. Synchronization timing When sync occurs : Group memberships update every time a user signs in via SAML. Frequency : Changes are not continuous — they only happen at login. Direction : Synchronization is one-way from Google Workspace to GitLab. First login : User account is created automatically and groups are assigned. Subsequent logins : Existing group memberships are updated to match current Google groups. Role priority and combination When a user belongs to multiple Google Workspace groups: GitLab evaluates all the user's groups at each level of the hierarchy. The user receives the highest role from any of their groups. This calculation happens independently at each level (top-level group, subgroups, etc.). Example : User in \"Developers\" (Developer role) + \"Tech-Leads\" (Maintainer role) → Gets Maintainer Automatic role changes The system automatically handles membership changes: User added to a Google group : Role upgraded on next login. User removed from a Google group : Role recalculated based on remaining groups on next login. User removed from all mapped groups : Reverts to default membership role on next login. User added to additional groups : Gets highest role from all groups on next login. Propagation timing Be aware of these timing considerations: Google Workspace changes : Can take up to 24 hours to propagate, though usually take only a few minutes. GitLab sync : Happens immediately when the user logs in after Google changes are live. Testing : Have users log out and log back in to test permission changes. Understanding user lifecycle and edge cases What happens when you remove a user from GitLab? Removing permissions only: If you remove a user from GitLab projects but leave their account active and they're still in the authorized Google groups: They keep their same account (same user ID and username) When they log in via SAML, their group memberships are automatically restored They regain permissions based on their current Google group memberships Blocking the account: Account exists but is locked User cannot log in even if in Google groups Can be unblocked later, preserving all history Deleting the account: Account is permanently removed If user logs in again (while still in Google groups), GitLab creates a completely new account New account has different user ID with no connection to the old one Proper offboarding process To permanently revoke access, follow this order: Remove from Google Workspace groups - Prevents authentication Block in GitLab - Prevents account recreation and preserves audit trails Delete account (optional) - Only if you're certain they won't return Critical : Removing a user only from GitLab without removing them from Google groups means they can simply log back in and regain access. Google group membership propagation According to Google's documentation , group membership changes can take up to 24 hours to propagate, though typically occur within minutes. Account recreation scenarios Scenario User still in Google groups? What happens on login Permissions removed Yes Same account, group memberships restored Account blocked Yes Login fails Account deleted Yes New account created with new user ID Removed from Google groups No Login fails at Google Troubleshooting common issues Even with careful configuration, you might encounter issues. Here are solutions to the most common problems. Users not being added to groups Symptom : User successfully logs in via SAML but doesn't appear in any GitLab groups, or appears with only the default role. Possible causes and solutions : Group names don't match exactly Check spelling and capitalization in both Google Workspace and GitLab Look for extra spaces before or after group names Verify the exact name in Google Admin Console > Directory > Groups User not actually in the Google group Verify membership: Google Admin Console > Directory > Groups > Group > Members Remember that nested group membership might not be included Groups not configured in SAML app Verify the groups are selected in Google SAML attribute mapping Confirm \"App attribute\" is set to groups (lowercase) Use \"Test SAML Login\" to inspect the SAML response Timing or cache issue Wait 24 hours for Google changes to fully propagate Have the user log out of GitLab and Google completely Clear browser cache and try again User must log in via the SAML SSO URL, not regular GitLab login User has incorrect role Symptom : User has access but with the wrong permission level. Possible causes and solutions : User belongs to multiple groups Remember: Users get the highest role from all their groups Check all Google groups the user belongs to Review all SAML Group Link configurations at all levels SAML Group Link misconfigured Verify the Access Level setting in Settings > SAML Group Links Check for duplicate group mappings that might conflict User hasn't logged in since changes Roles only update when users log in via SAML Have the user log out completely and log back in via the SSO URL Inherited permissions from parent groups Check SAML Group Links in parent groups Remember that higher roles at parent levels flow down to children SAML authentication fails completely Symptom : Users cannot log in at all, or receive error messages during authentication. Possible causes and solutions : Incorrect certificate fingerprint Verify you used SHA-1 format, not SHA-256 Check the fingerprint has the correct format with colons Regenerate using the online tool or OpenSSL command Wrong SSO URL Double-check the SSO URL copied from Google Ensure there are no extra spaces or characters ACS URL or Entity ID mismatch Verify the ACS URL in Google Admin Console matches GitLab exactly Confirm the Entity ID matches between both systems User doesn't have app access Check User Access settings in Google Admin Console Verify the user's organizational unit has the app enabled Confirm the app is \"ON\" for the appropriate users Certificate expired Check certificate validity dates Download a fresh certificate if needed Groups attribute missing from SAML response Symptom : Users can log in but group synchronization doesn't work at all. Possible causes and solutions : Groups not selected in Google configuration Return to Google Admin > Apps > GitLab > Attribute mapping Verify groups are selected under \"Group membership\" Confirm \"App attribute\" is exactly groups (lowercase) User not in any configured groups Only groups the user belongs to are sent in the SAML response Add the user to at least one selected group to test Configuration hasn't propagated Wait up to 24 hours for changes to take effect Try logging out of Google Admin Console and back in Typo in app attribute name The attribute name must be exactly groups (lowercase) Even a capital letter or extra space will break functionality Best practices for managing SAML group sync Follow these recommendations to maintain a secure and efficient setup. Security best practices Maintain emergency access Keep at least one Owner account that uses password authentication (not SAML) This provides emergency access if SAML configuration breaks Store these credentials securely Use least privilege principle Set default membership to Minimal Access Only grant higher permissions through explicit group mappings Regularly review and audit group memberships Enable enforcement options Turn on \"Enforce SAML authentication\" options This prevents users from bypassing SSO Exceptions should be rare and well-documented Regular security audits Quarterly review of Google Workspace group memberships Annual review of SAML Group Link mappings Monitor GitLab audit logs for unusual access patterns Summary and next steps Congratulations! You've successfully configured SAML SSO and automatic group synchronization between Google Workspace and GitLab. Your setup now provides: Seamless authentication - Users sign in with their familiar Google Workspace credentials. Automatic provisioning - User accounts are created on first login without manual intervention. Dynamic permissions - Group memberships and roles update automatically based on Google Workspace groups. Centralized access control - Manage all access through your existing Google Workspace groups. Enhanced security - Leverage Google's authentication infrastructure and enforce consistent policies. Reduced administrative overhead - Eliminate manual user and permission management in GitLab. What happens now When users access GitLab: They navigate to your GitLab SSO URL. Authenticate using their Google Workspace credentials. Get automatically added to appropriate GitLab groups. Receive permissions based on their Google group memberships. Their permissions update every time they sign in. Additional resources GitLab SAML SSO Documentation GitLab SAML Group Sync Documentation Google Workspace SAML App Setup SAML Certificate Fingerprint Tool Related article How-to: GitLab Single Sign-on with SAML, SCIM, and Azure's Entra ID",
+      "published_ts": 1769472000,
+      "source_name": "GitLab Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/centrally-defined-metrics",
+      "title": "Centrally defined metrics: The key to AI success",
+      "summary": "Spaghetti metrics won’t work in the age of AI. Here’s how to create and manage a centralized, consistent metrics framework.",
+      "published_ts": 1769460600,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/access-a-vpc-hosted-amazon-opensearch-service-domain-with-saml-authentication-using-aws-client-vpn/",
+      "title": "Access a VPC-hosted Amazon OpenSearch Service domain with SAML authentication using AWS Client VPN",
+      "summary": "In this post, we explore different OpenSearch Service authentication methods and network topology considerations. Then we show how to build an architecture to access an OpenSearch Service domain hosted in a VPC using AWS Client VPN, AWS Transit Gateway, and AWS IAM Identity Center.",
+      "published_ts": 1769449400,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/scaling-small-llms-nvidia-mps",
+      "title": "Scaling Small LLMs with NVIDIA MPS",
+      "summary": "Small models are rapidly becoming more capable and applicable across a wide variety of enterprise use cases...",
+      "published_ts": 1769441400,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://airbyte.com/blog/knowledge-mcp-server",
+      "title": "The New Airbyte Knowledge MCP Server | Airbyte",
+      "summary": "Discover the New Airbyte Knowledge MCP Server — optimized for intelligent knowledge orchestration, superior metadata control, and seamless end-to-end data operations.",
+      "published_ts": 1769385600,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://www.youtube.com/shorts/tshuC3CEHYo",
+      "title": "The Major Layers of Cloud Sovereignty",
+      "summary": "#AWSPartner #ad #EuropeanSovereignCloud #DigitalSovereignty",
+      "published_ts": 1769700640,
+      "source_name": "Andreas Kretz (YouTube)",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-ec2-g7e-instances-with-nvidia-blackwell-gpus-january-26-2026/",
+      "title": "AWS Weekly Roundup: Amazon EC2 G7e instances, Amazon Corretto updates, and more (January 26, 2026)",
+      "summary": "Hey! It’s my first post for 2026, and I’m writing to you while watching our driveway getting dug out. I hope wherever you are you are safe and warm and your data is still flowing! This week brings exciting news for customers running GPU-intensive workloads, with the launch of our newest graphics and AI inference […]",
+      "published_ts": 1769444746,
+      "source_name": "AWS Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blogs.microsoft.com/blog/2026/01/26/maia-200-the-ai-accelerator-built-for-inference/",
+      "title": "Maia 200: The AI accelerator built for inference",
+      "summary": "Today, we’re proud to introduce Maia 200, a breakthrough inference accelerator engineered to dramatically improve the economics of AI token generation. The post Maia 200: The AI accelerator built for inference appeared first on Microsoft Azure Blog .",
+      "published_ts": 1769443944,
+      "source_name": "Azure Blog",
+      "content_type": "technical"
+    }
+  ],
+  "data_modeling_governance": [
+    {
+      "url": "https://www.databricks.com/blog/getting-ai-governance-right-without-slowing-everything-down",
+      "title": "Getting AI Governance Right Without Slowing Everything Down",
+      "summary": "As enterprises move from AI experimentation to scale, governance has become a board-level...",
+      "published_ts": 1769803200,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/the-technology-foundations-cios-cant-skip",
+      "title": "Before AI Agents: The Technology Foundations CIOs Can’t Skip",
+      "summary": "AI agents require data readiness first and foremost. They don’t transform enterprises; they reveal whether the organization was prepared for AI, acting as a forcing function for mature data and AI governance.",
+      "published_ts": 1769789653,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/build-a-trusted-foundation-for-data-and-ai-using-alation-and-amazon-sagemaker-unified-studio/",
+      "title": "Build a trusted foundation for data and AI using Alation and Amazon SageMaker Unified Studio",
+      "summary": "The Alation and SageMaker Unified Studio integration helps organizations bridge the gap between fast analytics and ML development and the governance requirements most enterprises face. By cataloging metadata from SageMaker Unified Studio in Alation, you gain a governed, discoverable view of how assets are created and used. In this post, we demonstrate who benefits from this integration, how it works, the specific metadata it synchronizes, and provide a complete deployment guide for your environment.",
+      "published_ts": 1769729610,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/7-elevens-journey-unity-catalog-success",
+      "title": "7-Eleven’s Journey to Unity Catalog Success",
+      "summary": "7-Eleven, Inc. operates more than 85,000 stores worldwide, serving millions of customers...",
+      "published_ts": 1769617800,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/enterprise-ai-agent-trends-top-use-cases-governance-evaluations-and-more",
+      "title": "Enterprise AI Agent Trends: Top Use Cases, Governance + Evaluations and More",
+      "summary": "There’s a rapid shift happening in enterprise AI. Organizations are transitioning...",
+      "published_ts": 1769496338,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/migrating-snowpipe-streaming-architecture",
+      "title": "Migrating to Snowpipe Streaming High Performance Architecture",
+      "summary": "See how teams migrate from Snowpipe Streaming Classic to High-Performance to achieve massive throughput, lower latency, and simpler real-time ingestion at scale.",
+      "published_ts": 1769801688,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/the-osi-spec-updates",
+      "title": "What the Open Semantic Interchange (OSI) spec means for metrics, semantics, and AI",
+      "summary": "An open OSI spec for semantic portability is now available, plus dbt's commitment to operationalize semantics.",
+      "published_ts": 1769701980,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/how-tipico-democratized-data-transformations-using-amazon-managed-workflows-for-apache-airflow-and-aws-batch/",
+      "title": "How Tipico democratized data transformations using Amazon Managed Workflows for Apache Airflow and AWS Batch",
+      "summary": "Tipico is the number one name in sports betting in Germany. Every day, we connect millions of fans to the thrill of sport, combining technology, passion, and trust to deliver fast, secure, and exciting betting, both online and in more than a thousand retail shops across Germany. We also bring this experience to Austria, where we proudly operate a strong sports betting business. In this post, we show how Tipico built a unified data transformation platform using Amazon Managed Workflows for Apache Airflow (Amazon MWAA) and AWS Batch.",
+      "published_ts": 1769622960,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.youtube.com/shorts/g_6JxG31f4g",
+      "title": "The most important data pipeline pattern for Data Engineers: Get event driven!",
+      "summary": "#datapipeline #dataengineering #kestra #eventdrivenarchitecture",
+      "published_ts": 1769617827,
+      "source_name": "Andreas Kretz (YouTube)",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/what-makes-a-great-dbt-summit-presentation",
+      "title": "What makes a great dbt Summit presentation? (And why yours belongs on stage)",
+      "summary": "Share your data story at dbt Summit. CFP now open. Real problems, real solutions. Submit by March 31.",
+      "published_ts": 1769511600,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/enable-strategic-data-quality-management-with-aws-glue-dqdl-labels/",
+      "title": "Enable strategic data quality management with AWS Glue DQDL labels",
+      "summary": "AWS Glue DQDL labels add organizational context to data quality management by attaching business metadata directly to validation rules. In this post, we highlight the new DQDL labels feature, which enhances how you organize, prioritize, and operationalize your data quality efforts at scale. We show how labels such as business criticality, compliance requirements, team ownership, or data domain can be attached to data quality rules to streamline triage and analysis. You’ll learn how to quickly surface targeted insights (for example, “all high-priority customer data failures owned by marketing” or “GDPR-related issues from our Salesforce ingestion pipeline”) and how DQDL labels can help teams improve accountability and accelerate remediation workflows.",
+      "published_ts": 1769449325,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    }
+  ],
+  "hors_sujet": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/bringing-ai-analytics-lakehouses",
+      "title": "Bringing the Engine to Data: How 3 Big Brands Power Analytics and AI on Lakehouses",
+      "summary": "Learn how 3 global enterprises power analytics and AI directly on lakehouse architectures using open table formats like Apache Iceberg",
+      "published_ts": 1769708391,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/snowflake-commitment-iceberg-interoperability",
+      "title": "Open by Design: Snowflake’s Commitment to Iceberg and Interoperability",
+      "summary": "Snowflake supports full bidirectional interoperability via the Iceberg REST Catalog. Discover how we enable open data federation without vendor lock-in.",
+      "published_ts": 1769631540,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    }
+  ],
+  "news": [
+    {
+      "url": "https://www.databricks.com/blog/announcing-databricks-new-york-rd-hub",
+      "title": "Announcing Databricks New York R&D Hub",
+      "summary": "I’m excited to announce the official launch of Databricks' new R&D and Engineering hub in New York City.I ...",
+      "published_ts": 1769819700,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/financial-services-data-ai-awards",
+      "title": "Financial Services Data + AI Innovation: 2026 Award Winners",
+      "summary": "Meet the 2026 award winners driving data and AI innovation in financial services, delivering measurable ROI and real business transformation",
+      "published_ts": 1769787059,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/ovhcloud-powering-hands-on-labs-a-story-of-collaboration-and-innovation/",
+      "title": "OVHcloud Powering Hands-On Labs: A Story of Collaboration and Innovation",
+      "summary": "Learning by Doing: OVHcloud & Hands-On Labs “Your turn to try!”Attracting thousands of participants at VMware Explore 2025 in Las Vegas, this year’s Hands-on Labs (HOL) offered professionals the opportunity to explore VMware technologies firsthand. Backed by OVHcloud, the HOL was presented with a guided, cloud-hosted environment for an internationally scalable learning experience. As the […]",
+      "published_ts": 1769769530,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/investment-pantomath-data-operations",
+      "title": "Backed by Snowflake Ventures, Pantomath Is Redefining Data Operations",
+      "summary": "Snowflake Ventures announces its investment in Pantomath, an AI-powered data operations platform designed to automate data reliability, incident detection, and resolution at scale.",
+      "published_ts": 1769706000,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=Vuzqbi3EWuU",
+      "title": "Why AI Fails in Analytics (And Why Power BI Is Different)",
+      "summary": "AI is changing analytics—but prompting AI for analytics is not the same as prompting a chatbot.\n\nIn this video, Patrick explains why prompting for analytics is fundamentally different, especially in Power BI and enterprise analytics environments, and why AI so often produces confident but incorrect numbers.\n\nIf you’ve tried using AI to:\n\n- write DAX\n- explain Power BI reports\n- answer business questions from your data\n\n…and ended up with wrong totals, missing filters, or broken time intelligence, this video explains why that happens.\n\nIn this video, you’ll learn:\n\nWhy analytics is semantic, not conversational\n\nWhy natural language introduces ambiguity in analytics\n\nHow measures, models, and definitions change how prompts must be designed\n\nWhy generic prompt engineering advice fails for Power BI\n\nThe difference between creative prompting and analytical prompting\n\nThe goal is simple:\nHelp analytics professionals use AI without breaking trust, semantics, or governance.\n\nJoin the Conversation\n\nIf you’ve experimented with AI in Power BI:\n\nWhere did it fail?\n\nWhat broke?\n\nWhich numbers were wrong?\n\nLeave a comment—I’ll use real-world failure cases in future videos.\n\n📢 Become a member: https://guyinacu.be/membership \n\n*******************\n\nWant to take your Power BI skills to the next level? We have training courses available to help you with your journey.\n\n🎓 Guy in a Cube courses: https://courses.guyinacube.com/\n\n*******************\nLET'S CONNECT!\n*******************\n\n-- https://bsky.app/profile/guyinacube.bsky.social\n-- http://twitter.com/guyinacube\n-- http://www.facebook.com/guyinacube\n\n\n#PowerBI #GuyInACube",
+      "published_ts": 1769700621,
+      "source_name": "Guy in a Cube (YouTube)",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.uber.com/blog/scaled-data-replication/",
+      "title": "How Uber Scaled Data Replication to Move Petabytes Every Day",
+      "summary": "Uber prioritizes a reliable data lake, which is distributed across on-premise and cloud environments. This multi-region setup presents challenges for ensuring reliable and timely data access due to limited network bandwidth and the need for seamless data availability, particularly for disaster recovery. Uber uses the Hive Sync service, which uses Apache HadoopⓇ Ditscp (Distributed Copy) for data replication. However, with Uber’s Data Lake exceeding 350 PB, Distcp’s limitations became apparent. This blog explores the optimizations made to Distcp to enhance its performance and meet Uber’s growing data replication and disaster recovery needs across its distributed infrastructure.",
+      "published_ts": 1769697000,
+      "source_name": "Uber Engineering Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/idc-ai-governance-leader",
+      "title": "Dataiku Named a Leader for Unified AI Governance in IDC MarketScape 2025-2026",
+      "summary": "As enterprises scale generative AI and AI agents across the business, governance has evolved from a compliance function into core operational infrastructure.",
+      "published_ts": 1769633833,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/startups-building-ai-snowflake",
+      "title": "Meet the Startups Building the Future of AI on Snowflake",
+      "summary": "Meet the latest Snowflake Startup Accelerator cohort and learn how startups are building, scaling, and innovating on Snowflake AI Data Cloud.",
+      "published_ts": 1769619780,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/create-a-customizable-cross-company-log-lake-part-ii-build-and-add-amazon-bedrock/",
+      "title": "Create a customizable cross-company log lake, Part II: Build and add Amazon Bedrock",
+      "summary": "In this post, you learn how to build Log Lake, a customizable cross-company data lake for compliance-related use cases that combines AWS CloudTrail and Amazon CloudWatch logs. You'll discover how to set up separate tables for writing and reading, implement event-driven partition management using AWS Lambda, and transform raw JSON files into read-optimized Apache ORC format using AWS Glue jobs. Additionally, you'll see how to extend Log Lake by adding Amazon Bedrock model invocation logs to enable human review of agent actions with elevated permissions, and how to use an AI agent to query your log data without writing SQL.",
+      "published_ts": 1769536005,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/secure-apache-spark-writes-to-amazon-s3-on-amazon-emr-with-dynamic-aws-kms-encryption/",
+      "title": "Secure Apache Spark writes to Amazon S3 on Amazon EMR with dynamic AWS KMS encryption",
+      "summary": "When processing data at scale, many organizations use Apache Spark on Amazon EMR to run shared clusters that handle workloads across tenants, business units, or classification levels. In such multi-tenant environments, different datasets often require distinct AWS Key Management Service (AWS KMS) keys to enforce strict access controls and meet compliance requirements. At the same […]",
+      "published_ts": 1769535938,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/open-semantic-interchanges-specs-finalized",
+      "title": "Open Semantic Interchange (OSI) Specification Finalized | Unified Semantics",
+      "summary": "The Open Semantic Interchange (OSI) specification is now finalized, introducing an open standard for sharing semantic models and enabling consistent metrics across data tools and platforms.",
+      "published_ts": 1769533080,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.youtube.com/shorts/Q4PgetJ8b7E",
+      "title": "Future of Data Engineering: Specialist or Generalist?",
+      "summary": "AI is coming for everyone who is coding. So as a Data Engineer, should you go into a specific area / tool and become an expert or should you focus rather on things like platform architecture and understanding the business?\n\n#ai #dataengineering #dataengineer",
+      "published_ts": 1769527825,
+      "source_name": "Andreas Kretz (YouTube)",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://engineering.salesforce.com/inside-salesforce-edge-automating-global-rollback-for-1-5-trillion-requests-in-10-minutes/",
+      "title": "Inside Salesforce Edge: Automating Global Rollback for 1.5 Trillion Requests in 10 Minutes",
+      "summary": "By Sanjeev Chhabria, Aditya Kamath, Derek Donaldson, and Sandeep Siroya. In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. Today we spotlight Sanjeev Chhabria, Vice President of Engineering, who leads the Salesforce Edge (Trusted Perimeter Platform) team, building and operating global perimeter services that handle 1.5 trillion requests and […] The post Inside Salesforce Edge: Automating Global Rollback for 1.5 Trillion Requests in 10 Minutes appeared first on Salesforce Engineering Blog .",
+      "published_ts": 1769523768,
+      "source_name": "Salesforce Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/l'ia-introduit-elle-une-rupture-dans-les-modeles-d'affaires-des-esn",
+      "title": "L’IA introduit-elle une rupture dans les modèles d’affaires des ESN ?",
+      "summary": "En tant qu’ESN, ne pourrait-on pas voir apparaître de nouveaux acteurs aux business modèles disruptifs dont des modèles low cost ? Quels profils recruter alors et/ou comment les former ? Assiste-t-on à une innovation de rupture qui bouleverse les modèles d'affaires de tout un secteur, ou bien est-ce une transformation accélérée de nos modèles ?",
+      "published_ts": 1769523490,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/serverless-matrix-homeserver-workers/",
+      "title": "Building a serverless, post-quantum Matrix homeserver",
+      "summary": "As a proof of concept, we built a Matrix homeserver to Cloudflare Workers — delivering encrypted messaging at the edge with automatic post-quantum cryptography.",
+      "published_ts": 1769522400,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "rex"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/data-driven-energy-solutions",
+      "title": "Snowflake Energy Solutions: Powering the Future of Data-Driven Energy",
+      "summary": "Unify IT, OT and IoT Data to power AI-driven energy operations. Snowflake Energy Solutions help energy companies improve reliability, efficiency, and real-time decision-making.",
+      "published_ts": 1769522100,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/q4-2025-internet-disruption-summary/",
+      "title": "Cable cuts, storms, and DNS: a look at Internet disruptions in Q4 2025",
+      "summary": "The last quarter of 2025 brought several notable disruptions to Internet connectivity. Cloudflare Radar data reveals the impact of cable cuts, power outages, extreme weather, technical problems, and more.",
+      "published_ts": 1769436000,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-254",
+      "title": "Data Engineering Weekly #254",
+      "summary": "The Weekly Data Engineering Newsletter",
+      "published_ts": 1769400744,
+      "source_name": "Data Engineering Weekly",
+      "content_type": "technical"
+    }
+  ],
+  "news_general": [],
+  "python_analytics": [
+    {
+      "url": "https://www.dataengineeringweekly.com/p/the-missing-layer-in-your-ai-stack",
+      "title": "The Missing Layer in Your AI Stack: Context, Not Just State",
+      "summary": "From SQL to Semantics: The Rise of the Context Graph for AI Agents",
+      "published_ts": 1769832797,
+      "source_name": "Data Engineering Weekly",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/apache-spark-4-0-1-preview-now-available-on-amazon-emr-serverless/",
+      "title": "Apache Spark 4.0.1 preview now available on Amazon EMR Serverless",
+      "summary": "In this post, we explore key benefits, technical capabilities, and considerations for getting started with Spark 4.0.1 on Amazon EMR Serverless. With the emr-spark-8.0-preview release label, you can evaluate new SQL capabilities, Python API improvements, and streaming enhancements in your existing EMR Serverless environment.",
+      "published_ts": 1769449126,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://airbyte.com/blog/agent-architecture-differences",
+      "title": "From Warehouses to Operations: Why Agent Architecture Differs | Airbyte",
+      "summary": "Learn why agent architecture differs from data warehouses and how operational agents require new design patterns for real-time action.",
+      "published_ts": 1769644800,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/marketing-predictions-agentic-ai-2026",
+      "title": "2026 Marketing Predictions: Agentic AI and the Rise of the Context Marketer",
+      "summary": "See Snowflake’s 2026 marketing predictions, including how agentic AI is transforming decision-making and ushering in the era of the context-aware marketer",
+      "published_ts": 1769624760,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/exai-bio-databricks-accelerating-ai-powered-liquid-biopsy-early-cancer-detection",
+      "title": "Exai Bio & Databricks: Accelerating AI-Powered Liquid Biopsy for Early Cancer Detection",
+      "summary": "Liquid biopsies unlock noninvasive cancer screening and monitoring by analyzing cancer biomarkers in blood...",
+      "published_ts": 1769549129,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/2025-review-databricks-sql-faster-every-workload",
+      "title": "2025 in Review: Databricks SQL, faster for every workload",
+      "summary": "For most data teams, performance is no longer about one-time tuning. It’s about analytics...",
+      "published_ts": 1769538244,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/intelligence-real-time-webinar-qa",
+      "title": "How Snowflake Intelligence Filled the Expert Gap: Turning a Webinar Conundrum into an AI Opportunity",
+      "summary": "See how Snowflake Intelligence helped marketing team answer live technical questions in real-time without an on-call solutions engineer.",
+      "published_ts": 1769471275,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/top-10-best-practices-for-amazon-emr-serverless/",
+      "title": "Top 10 best practices for Amazon EMR Serverless",
+      "summary": "Amazon EMR Serverless is a deployment option for Amazon EMR that you can use to run open source big data analytics frameworks such as Apache Spark and Apache Hive without having to configure, manage, or scale clusters and servers. Based on insights from hundreds of customer engagements, in this post, we share the top 10 best practices for optimizing your EMR Serverless workloads for performance, cost, and scalability. Whether you're getting started with EMR Serverless or looking to fine-tune existing production workloads, these recommendations will help you build efficient, cost-effective data processing pipelines.",
+      "published_ts": 1769449493,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/transforming-manufacturing-snowflake-intelligence",
+      "title": "How Modern Manufacturers Are Transforming Operations with Snowflake Intelligence",
+      "summary": "Learn how manufacturers are using AI agents and unified data to accelerate decisions across engineering, operations, and quality.",
+      "published_ts": 1769446800,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://duckdb.org/2026/01/26/announcing-duckdb-144.html",
+      "title": "Announcing DuckDB 1.4.4 LTS",
+      "summary": "Today we are releasing DuckDB 1.4.4 with bugfixes and performance improvements.",
+      "published_ts": 1769385600,
+      "source_name": "DuckDB Blog",
+      "content_type": "technical"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "title": "Data Engineering Weekly #254",
+    "url": "https://www.dataengineeringweekly.com/p/data-engineering-weekly-254",
+    "source": "Data Engineering Weekly",
+    "category": "news",
+    "score": 66.05550453066826,
+    "published_ts": 1769400744,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "From Warehouses to Operations: Why Agent Architecture Differs | Airbyte",
+    "url": "https://airbyte.com/blog/agent-architecture-differences",
+    "source": "Airbyte Blog",
+    "category": "etl_orchestration",
+    "score": 62.0720228146423,
+    "published_ts": 1769644800,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  },
+  {
+    "title": "The most important data pipeline pattern for Data Engineers: Get event driven!",
+    "url": "https://www.youtube.com/shorts/g_6JxG31f4g",
+    "source": "Andreas Kretz (YouTube)",
+    "category": "etl_orchestration",
+    "score": 60.62616700475866,
+    "published_ts": 1769617827,
+    "content_type": "technical",
+    "tech_level": "intermediate",
+    "marketing_score": 0
+  }
+]

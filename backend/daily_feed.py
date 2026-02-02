@@ -530,14 +530,17 @@ def merge_feeds(
     for item in all_items:
         item["_ranking_score"] = recalculate_time_decay_score(item, gravity)
 
-    # Trier par score recalculé avec time decay
-    all_items.sort(key=lambda x: x["_ranking_score"], reverse=True)
+    # Trier par score recalculé, puis par date (plus récent = mieux) pour départager
+    all_items.sort(
+        key=lambda x: (x["_ranking_score"], x.get("published_ts", 0)),
+        reverse=True
+    )
 
     result = all_items[:target_count]
 
-    # Mettre à jour le score affiché avec le nouveau calcul
+    # Mettre à jour le score affiché (4 décimales pour différencier les petits scores)
     for item in result:
-        item["score"] = round(item["_ranking_score"], 1)
+        item["score"] = round(item["_ranking_score"], 4)
         del item["_ranking_score"]
 
     # Compte combien d'anciens sont conservés (URL existait et pas dans les nouveaux)

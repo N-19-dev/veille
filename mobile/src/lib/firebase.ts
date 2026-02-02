@@ -2,14 +2,17 @@ import { initializeApp } from 'firebase/app';
 import { initializeAuth, getReactNativePersistence, GoogleAuthProvider } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Constants from 'expo-constants';
+
+const extra = Constants.expoConfig?.extra;
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCi4DBUjiAPqv-VygYZ4E6AlFW28Hhv_Mk",
-  authDomain: "veille-tech-bb46c.firebaseapp.com",
-  projectId: "veille-tech-bb46c",
-  storageBucket: "veille-tech-bb46c.firebasestorage.app",
-  messagingSenderId: "243729050286",
-  appId: "1:243729050286:web:fbb75d7a9cff4a3e5d5b3f",
+  apiKey: extra?.firebaseApiKey,
+  authDomain: extra?.firebaseAuthDomain,
+  projectId: extra?.firebaseProjectId,
+  storageBucket: extra?.firebaseStorageBucket,
+  messagingSenderId: extra?.firebaseMessagingSenderId,
+  appId: extra?.firebaseAppId,
 };
 
 // Initialize Firebase

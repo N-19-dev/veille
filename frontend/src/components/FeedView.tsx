@@ -11,12 +11,6 @@ type FeedViewProps = {
   generatedAt: string;
 };
 
-// Helper function to generate article ID (matches backend hash)
-function generateArticleId(url: string, title: string): string {
-  const str = `${url}${title}`;
-  return btoa(unescape(encodeURIComponent(str))).slice(0, 40);
-}
-
 // Get current week label (format: 2026w05)
 function getCurrentWeekLabel(): string {
   const now = new Date();
@@ -29,7 +23,7 @@ function getCurrentWeekLabel(): string {
 function FeedCard({ item }: { item: FeedItem }) {
   const { openCommentsModal } = useComments();
   const icon = item.source_type === "youtube" ? "▶️" : item.source_type === "podcast" ? "🎙️" : null;
-  const articleId = generateArticleId(item.url, item.title);
+  const articleId = item.id;  // Use backend ID directly
   const weekLabel = getCurrentWeekLabel();
 
   return (

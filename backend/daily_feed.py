@@ -428,21 +428,19 @@ def load_existing_feed(output_dir: str = "export") -> dict[str, Any] | None:
 
 def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 1.5) -> float:
     """
-    Recalcule le score avec time decay proche de HN.
+    Recalcule le score avec time decay style Hacker News (en HEURES).
 
-    Utilise algo_score (score de pertinence brut) + votes + âge en JOURS.
-    Gravity 1.5 = turnover agressif (~3-4 jours), proche de HN (1.8 en heures).
-
-    Formule: score / (age_days + 1)^gravity
+    Utilise algo_score (score de pertinence brut) + votes + âge en HEURES.
+    Formule HN: score / (age_hours + 2)^gravity
 
     Avec gravity=1.5:
-    - Article frais (0j): score / 1 = 100%
-    - Article 1 jour: score / 2.83 = 35%
-    - Article 3 jours: score / 8 = 12.5%
-    - Article 7 jours: score / 22.6 = 4.4%
-    - Article 14 jours: score / 58 = 1.7%
+    - Article frais (0h): score / 2.83 = 35%
+    - Article 6h: score / 22.6 = 4.4%
+    - Article 12h: score / 52.4 = 1.9%
+    - Article 24h: score / 133 = 0.75%
+    - Article 48h: score / 354 = 0.28%
 
-    Turnover ~3-4 jours, les nouveaux articles montent vite.
+    Turnover très rapide, nouveaux articles montent en quelques heures.
     """
     import math
 
@@ -478,12 +476,12 @@ def recalculate_time_decay_score(item: dict[str, Any], gravity: float = 1.5) -> 
 
     base_score = algo_score + vote_boost
 
-    # Time decay en JOURS (pas en heures comme HN)
+    # Time decay en HEURES (comme HN)
     now_ts = datetime.now(timezone.utc).timestamp()
-    age_days = max(0, (now_ts - published_ts) / 86400)  # 86400 = secondes par jour
+    age_hours = max(0, (now_ts - published_ts) / 3600)  # 3600 = secondes par heure
 
-    # Formule adaptée: score / (age_days + 1)^gravity
-    time_decay_factor = math.pow(age_days + 1, gravity)
+    # Formule HN: score / (age_hours + 2)^gravity
+    time_decay_factor = math.pow(age_hours + 2, gravity)
     final_score = base_score / time_decay_factor
 
     return final_score

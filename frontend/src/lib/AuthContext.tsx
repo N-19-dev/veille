@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth, googleProvider } from './firebase';
-import { onAuthStateChanged, getRedirectResult, signInWithRedirect, type User } from 'firebase/auth';
+import { onAuthStateChanged, getRedirectResult, signInWithRedirect, signInWithPopup, type User } from 'firebase/auth';
 
 interface AuthContextType {
   user: User | null;
@@ -40,10 +40,21 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signInWithGoogle = async () => {
     try {
-      await signInWithRedirect(auth, googleProvider);
-    } catch (error) {
-      console.error('Sign in error:', error);
-      throw error;
+      // Try popup first (better UX on desktop)
+      const result = await signInWithPopup(auth, googleProvider);
+      if (result.user) {
+        setIsLoginModalOpen(false);
+      }
+    } catch (error: unknown) {
+      const firebaseError = error as { code?: string };
+      // If popup blocked, fall back to redirect
+      if (firebaseError.code === 'auth/popup-blocked' || firebaseError.code === 'auth/popup-closed-by-user') {
+        console.log('Popup blocked, falling back to redirect...');
+        await signInWithRedirect(auth, googleProvider);
+      } else {
+        console.error('Sign in error:', error);
+        throw error;
+      }
     }
   };
 

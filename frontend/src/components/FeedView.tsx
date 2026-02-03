@@ -58,10 +58,10 @@ function FeedCard({ item }: { item: FeedItem }) {
               <span className="flex-shrink-0">{formatRelativeDate(item.published_ts)}</span>
             </div>
 
-            {/* Summary (if exists) - hidden on very small screens */}
+            {/* Summary (if exists) - hidden on very small screens, truncated to 200 chars */}
             {item.summary && (
               <p className="hidden sm:block mt-2 text-sm text-neutral-600 line-clamp-2">
-                {item.summary}
+                {item.summary.length > 200 ? item.summary.slice(0, 200) + '...' : item.summary}
               </p>
             )}
           </div>

@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth, googleProvider } from './firebase';
-import { onAuthStateChanged, getRedirectResult, signInWithRedirect, signInWithPopup, type User } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup, type User } from 'firebase/auth';
 
 interface AuthContextType {
   user: User | null;
@@ -19,42 +19,39 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   useEffect(() => {
-    // Handle redirect result when page loads
-    getRedirectResult(auth)
-      .then((result) => {
-        if (result?.user) {
-          setIsLoginModalOpen(false);
-        }
-      })
-      .catch((error) => {
-        console.error('Redirect sign in error:', error);
-      });
+    console.log('[Auth] Initializing...');
+
+    // Set a timeout to prevent infinite loading
+    const loadingTimeout = setTimeout(() => {
+      console.log('[Auth] Loading timeout - forcing ready state');
+      setLoading(false);
+    }, 5000);
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      console.log('[Auth] Auth state changed:', currentUser?.email || 'no user');
+      clearTimeout(loadingTimeout);
       setUser(currentUser);
       setLoading(false);
     });
 
-    return () => unsubscribe();
+    return () => {
+      clearTimeout(loadingTimeout);
+      unsubscribe();
+    };
   }, []);
 
   const signInWithGoogle = async () => {
     try {
-      // Try popup first (better UX on desktop)
+      console.log('[Auth] Starting Google sign in...');
       const result = await signInWithPopup(auth, googleProvider);
+      console.log('[Auth] Sign in successful:', result.user?.email);
       if (result.user) {
         setIsLoginModalOpen(false);
       }
     } catch (error: unknown) {
-      const firebaseError = error as { code?: string };
-      // If popup blocked, fall back to redirect
-      if (firebaseError.code === 'auth/popup-blocked' || firebaseError.code === 'auth/popup-closed-by-user') {
-        console.log('Popup blocked, falling back to redirect...');
-        await signInWithRedirect(auth, googleProvider);
-      } else {
-        console.error('Sign in error:', error);
-        throw error;
-      }
+      const firebaseError = error as { code?: string; message?: string };
+      console.error('[Auth] Sign in error:', firebaseError.code, firebaseError.message);
+      throw error;
     }
   };
 

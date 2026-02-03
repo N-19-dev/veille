@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { auth, googleProvider } from './firebase';
-import { onAuthStateChanged, signInWithRedirect, getRedirectResult, type User } from 'firebase/auth';
+import { onAuthStateChanged, signInWithPopup, type User } from 'firebase/auth';
 
 interface AuthContextType {
   user: User | null;
@@ -21,23 +21,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     console.log('[Auth] Initializing...');
 
-    // Handle redirect result first (for when user comes back from Google)
-    getRedirectResult(auth)
-      .then((result) => {
-        if (result?.user) {
-          console.log('[Auth] Redirect login successful:', result.user.email);
-          setIsLoginModalOpen(false);
-        }
-      })
-      .catch((error) => {
-        console.error('[Auth] Redirect error:', error);
-      });
-
     // Set a timeout to prevent infinite loading
     const loadingTimeout = setTimeout(() => {
       console.log('[Auth] Loading timeout - forcing ready state');
       setLoading(false);
-    }, 5000);
+    }, 3000);
 
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('[Auth] Auth state changed:', currentUser?.email || 'no user');
@@ -53,15 +41,12 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   }, []);
 
   const signInWithGoogle = async () => {
-    try {
-      console.log('[Auth] Starting Google sign in with redirect...');
-      await signInWithRedirect(auth, googleProvider);
-      // User will be redirected to Google, then back to the app
-    } catch (error: unknown) {
-      const firebaseError = error as { code?: string; message?: string };
-      console.error('[Auth] Sign in error:', firebaseError.code, firebaseError.message);
-      throw error;
-    }
+    console.log('[Auth] Starting Google sign in...');
+    // signInWithPopup must be called synchronously from user click
+    const result = await signInWithPopup(auth, googleProvider);
+    console.log('[Auth] Sign in successful:', result.user?.email);
+    setIsLoginModalOpen(false);
+    return result;
   };
 
   const openLoginModal = () => setIsLoginModalOpen(true);

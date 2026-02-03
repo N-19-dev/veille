@@ -492,6 +492,10 @@ def format_item(item: dict[str, Any], config: dict = None) -> dict[str, Any]:
     title = item["title"]
     summary = item["summary"] or ""
 
+    # Truncate long summaries (e.g. podcast transcripts) to 300 chars
+    if len(summary) > 300:
+        summary = summary[:300].rsplit(' ', 1)[0] + '...'
+
     # Renommer les newsletters avec un titre plus descriptif
     if config and is_newsletter(title):
         title = generate_newsletter_title(title, summary, config)
@@ -767,6 +771,10 @@ def merge_feeds(
     # Recalculer le time decay score pour TOUS les items
     all_items = list(items_by_url.values())
     for item in all_items:
+        # Truncate long summaries (legacy items may have full transcripts)
+        summary = item.get("summary", "")
+        if len(summary) > 300:
+            item["summary"] = summary[:300].rsplit(' ', 1)[0] + '...'
         item["_ranking_score"] = recalculate_time_decay_score(item, gravity)
 
     # Trier par score recalculé, puis par date (plus récent = mieux) pour départager

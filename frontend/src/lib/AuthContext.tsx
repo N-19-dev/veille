@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import { auth } from './firebase';
-import { onAuthStateChanged, type User } from 'firebase/auth';
+import { auth, googleProvider } from './firebase';
+import { onAuthStateChanged, getRedirectResult, signInWithRedirect, type User } from 'firebase/auth';
 
 interface AuthContextType {
   user: User | null;
@@ -8,6 +8,7 @@ interface AuthContextType {
   openLoginModal: () => void;
   closeLoginModal: () => void;
   isLoginModalOpen: boolean;
+  signInWithGoogle: () => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -18,6 +19,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   useEffect(() => {
+    // Handle redirect result when page loads
+    getRedirectResult(auth)
+      .then((result) => {
+        if (result?.user) {
+          setIsLoginModalOpen(false);
+        }
+      })
+      .catch((error) => {
+        console.error('Redirect sign in error:', error);
+      });
+
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
       setLoading(false);
@@ -26,11 +38,20 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => unsubscribe();
   }, []);
 
+  const signInWithGoogle = async () => {
+    try {
+      await signInWithRedirect(auth, googleProvider);
+    } catch (error) {
+      console.error('Sign in error:', error);
+      throw error;
+    }
+  };
+
   const openLoginModal = () => setIsLoginModalOpen(true);
   const closeLoginModal = () => setIsLoginModalOpen(false);
 
   return (
-    <AuthContext.Provider value={{ user, loading, openLoginModal, closeLoginModal, isLoginModalOpen }}>
+    <AuthContext.Provider value={{ user, loading, openLoginModal, closeLoginModal, isLoginModalOpen, signInWithGoogle }}>
       {children}
     </AuthContext.Provider>
   );

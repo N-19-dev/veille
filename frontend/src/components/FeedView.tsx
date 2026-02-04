@@ -1,4 +1,5 @@
 // src/components/FeedView.tsx
+import { useState, useEffect } from "react";
 import { type FeedItem, faviconUrl, formatRelativeDate } from "../lib/parse";
 import VoteButton from "./VoteButton";
 import CommentsCount from "./CommentsCount";
@@ -11,6 +12,33 @@ type FeedViewProps = {
   generatedAt: string;
 };
 
+// Track seen articles in localStorage
+const SEEN_KEY = "veille_seen_articles";
+
+function getSeenArticles(): Set<string> {
+  try {
+    const stored = localStorage.getItem(SEEN_KEY);
+    if (stored) {
+      return new Set(JSON.parse(stored));
+    }
+  } catch (e) {
+    console.error("Error reading seen articles:", e);
+  }
+  return new Set();
+}
+
+function markAsSeen(url: string): void {
+  try {
+    const seen = getSeenArticles();
+    seen.add(url);
+    // Keep only last 200 URLs to avoid localStorage bloat
+    const urls = Array.from(seen).slice(-200);
+    localStorage.setItem(SEEN_KEY, JSON.stringify(urls));
+  } catch (e) {
+    console.error("Error saving seen article:", e);
+  }
+}
+
 // Get current week label (format: 2026w05)
 function getCurrentWeekLabel(): string {
   const now = new Date();
@@ -20,20 +48,25 @@ function getCurrentWeekLabel(): string {
   return `${now.getFullYear()}w${weekNumber.toString().padStart(2, '0')}`;
 }
 
-function FeedCard({ item }: { item: FeedItem }) {
+function FeedCard({ item, isSeen, onSeen }: { item: FeedItem; isSeen: boolean; onSeen: (url: string) => void }) {
   const { openCommentsModal } = useComments();
   const icon = item.source_type === "youtube" ? "▶️" : item.source_type === "podcast" ? "🎙️" : null;
   const articleId = item.id;  // Use backend ID directly
   const weekLabel = getCurrentWeekLabel();
 
+  const handleClick = () => {
+    onSeen(item.url);
+  };
+
   return (
-    <div className="bg-white rounded-xl border border-neutral-200 p-3 sm:p-4 hover:border-neutral-300 hover:shadow-sm transition-all">
+    <div className={`bg-white rounded-xl border border-neutral-200 p-3 sm:p-4 hover:border-neutral-300 hover:shadow-sm transition-all ${isSeen ? "opacity-60" : ""}`}>
       {/* Main content - clickable */}
       <a
         href={item.url}
         target="_blank"
         rel="noopener noreferrer"
         className="block"
+        onClick={handleClick}
       >
         <div className="flex gap-2.5 sm:gap-3">
           {/* Favicon */}
@@ -121,11 +154,15 @@ function FeedCard({ item }: { item: FeedItem }) {
 function FeedSection({
   title,
   items,
-  emptyMessage
+  emptyMessage,
+  seenUrls,
+  onSeen
 }: {
   title: string;
   items: FeedItem[];
   emptyMessage: string;
+  seenUrls: Set<string>;
+  onSeen: (url: string) => void;
 }) {
   return (
     <section>
@@ -133,7 +170,12 @@ function FeedSection({
       {items.length > 0 ? (
         <div className="space-y-3">
           {items.map((item) => (
-            <FeedCard key={item.id} item={item} />
+            <FeedCard
+              key={item.id}
+              item={item}
+              isSeen={seenUrls.has(item.url)}
+              onSeen={onSeen}
+            />
           ))}
         </div>
       ) : (
@@ -144,6 +186,18 @@ function FeedSection({
 }
 
 export default function FeedView({ articles, videos, generatedAt }: FeedViewProps) {
+  const [seenUrls, setSeenUrls] = useState<Set<string>>(new Set());
+
+  // Load seen articles on mount
+  useEffect(() => {
+    setSeenUrls(getSeenArticles());
+  }, []);
+
+  const handleSeen = (url: string) => {
+    markAsSeen(url);
+    setSeenUrls((prev) => new Set([...prev, url]));
+  };
+
   const generatedDate = new Date(generatedAt);
   const formattedDate = generatedDate.toLocaleDateString("fr-FR", {
     day: "numeric",
@@ -165,6 +219,8 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
           title={`📰 Articles (${articles.length})`}
           items={articles}
           emptyMessage="Aucun article pour le moment"
+          seenUrls={seenUrls}
+          onSeen={handleSeen}
         />
       )}
 
@@ -174,6 +230,8 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
           title={`🎬 Vidéos & Podcasts (${videos.length})`}
           items={videos}
           emptyMessage="Aucune vidéo ou podcast pour le moment"
+          seenUrls={seenUrls}
+          onSeen={handleSeen}
         />
       )}
     </div>

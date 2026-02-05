@@ -5,6 +5,7 @@ import CategoryFilter from "./components/CategoryFilter";
 import Top3 from "./components/Top3";
 import TopVideos from "./components/TopVideos";
 import FeedView from "./components/FeedView";
+import MySpace from "./components/MySpace";
 import AuthButton from "./components/AuthButton";
 import LoginModal from "./components/LoginModal";
 import CommentsModal from "./components/CommentsModal";
@@ -29,10 +30,10 @@ type WeekData = {
   sections: SummarySection[];
 };
 
-type ViewMode = "feed" | "videos" | "week";
+type ViewMode = "feed" | "videos" | "week" | "myspace";
 
 export default function App() {
-  const { isLoginModalOpen, closeLoginModal } = useAuth();
+  const { user, isLoginModalOpen, closeLoginModal } = useAuth();
 
   // Mode de vue: feed continu ou semaine
   const [viewMode, setViewMode] = React.useState<ViewMode>("feed");
@@ -171,6 +172,18 @@ export default function App() {
                 >
                   Archives
                 </button>
+                {user && (
+                  <button
+                    onClick={() => setViewMode("myspace")}
+                    className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
+                      viewMode === "myspace"
+                        ? "bg-white text-neutral-900 shadow-sm"
+                        : "text-neutral-600 hover:text-neutral-900"
+                    }`}
+                  >
+                    ⭐
+                  </button>
+                )}
               </div>
 
               {/* Auth button hidden on mobile (shown in top row instead) */}
@@ -204,6 +217,11 @@ export default function App() {
               generatedAt={feedData.generated_at}
             />
           </div>
+        )}
+
+        {/* Mode Mon espace */}
+        {viewMode === "myspace" && (
+          <MySpace />
         )}
 
         {/* Mode Semaine (Archives) */}

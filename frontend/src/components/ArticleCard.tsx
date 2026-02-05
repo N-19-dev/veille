@@ -6,6 +6,8 @@ import { faviconUrl, getDomain } from "../lib/parse";
 import VoteButton from "./VoteButton";
 import CommentsCount from "./CommentsCount";
 import { useComments } from "../lib/CommentsContext";
+import { useSavedArticles } from "../lib/SavedArticlesContext";
+import { useAuth } from "../lib/AuthContext";
 
 type Props = {
   title: string;
@@ -34,8 +36,11 @@ export default function ArticleCard({
   className = "",
 }: Props) {
   const { openCommentsModal } = useComments();
+  const { user } = useAuth();
+  const { isSaved, toggleSave } = useSavedArticles();
   const dom = getDomain(url ?? "");
   const displaySource = (source || dom || "Source").trim();
+  const saved = url ? isSaved(url) : false;
 
   // Si pas d'URL, on rend un <div> non cliquable
   const Clickable: React.ElementType = url ? "a" : "div";
@@ -119,6 +124,25 @@ export default function ArticleCard({
             <span>💬</span>
             <CommentsCount articleId={generateArticleId(url, title)} weekLabel={weekLabel} />
           </button>
+
+          {/* Save button */}
+          {user && (
+            <button
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                toggleSave({ url, title, source_name: displaySource });
+              }}
+              className={`px-3 py-1.5 rounded-lg text-sm transition ${
+                saved
+                  ? "text-yellow-500 hover:text-yellow-600"
+                  : "text-gray-400 hover:text-yellow-500"
+              }`}
+              title={saved ? "Retirer des favoris" : "Sauvegarder"}
+            >
+              {saved ? "★" : "☆"}
+            </button>
+          )}
         </div>
       )}
     </Clickable>

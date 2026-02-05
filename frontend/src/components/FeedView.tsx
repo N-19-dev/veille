@@ -9,6 +9,7 @@ import TopCommentPreview from "./TopCommentPreview";
 import SubmitArticle from "./SubmitArticle";
 import { useComments } from "../lib/CommentsContext";
 import { useAuth } from "../lib/AuthContext";
+import { useSavedArticles } from "../lib/SavedArticlesContext";
 
 // Type for user submissions
 type Submission = {
@@ -158,16 +159,34 @@ function SubmissionCard({ submission, isSeen, onSeen, currentUserEmail, currentU
 
 function FeedCard({ item, isSeen, onSeen }: { item: FeedItem; isSeen: boolean; onSeen: (url: string) => void }) {
   const { openCommentsModal } = useComments();
+  const { user } = useAuth();
+  const { isSaved, toggleSave } = useSavedArticles();
   const icon = item.source_type === "youtube" ? "▶️" : item.source_type === "podcast" ? "🎙️" : null;
   const articleId = item.id;  // Use backend ID directly
   const weekLabel = getCurrentWeekLabel();
+  const saved = isSaved(item.url);
 
   const handleClick = () => {
     onSeen(item.url);
   };
 
   return (
-    <div className={`bg-white rounded-xl border border-neutral-200 p-3 sm:p-4 hover:border-neutral-300 hover:shadow-sm transition-all ${isSeen ? "opacity-60" : ""}`}>
+    <div className={`bg-white rounded-xl border border-neutral-200 p-3 sm:p-4 hover:border-neutral-300 hover:shadow-sm transition-all ${isSeen ? "opacity-60" : ""} relative`}>
+      {/* Save button - top right */}
+      {user && (
+        <button
+          onClick={() => toggleSave({ url: item.url, title: item.title, source_name: item.source_name })}
+          className={`absolute top-2 right-2 sm:top-3 sm:right-3 text-lg transition ${
+            saved
+              ? "text-yellow-500 hover:text-yellow-600"
+              : "text-gray-300 hover:text-yellow-500"
+          }`}
+          title={saved ? "Retirer des favoris" : "Sauvegarder"}
+        >
+          {saved ? "★" : "☆"}
+        </button>
+      )}
+
       {/* Main content - clickable */}
       <a
         href={item.url}
@@ -176,7 +195,7 @@ function FeedCard({ item, isSeen, onSeen }: { item: FeedItem; isSeen: boolean; o
         className="block"
         onClick={handleClick}
       >
-        <div className="flex gap-2.5 sm:gap-3">
+        <div className="flex gap-2.5 sm:gap-3 pr-6">
           {/* Favicon */}
           <img
             src={faviconUrl(item.url, 32)}

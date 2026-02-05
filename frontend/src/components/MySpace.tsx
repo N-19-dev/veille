@@ -1,8 +1,7 @@
 // src/components/MySpace.tsx
 import { useState, useEffect, useMemo } from "react";
-import { db } from "../lib/firebase";
-import { collection, query, where, onSnapshot, addDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
 import { useAuth } from "../lib/AuthContext";
+import { useSavedArticles, type SavedArticle } from "../lib/SavedArticlesContext";
 import { faviconUrl } from "../lib/parse";
 
 type SearchArticle = {
@@ -15,13 +14,14 @@ type SearchArticle = {
   week: string;
 };
 
-type SavedArticle = {
+// Raw search index item (abbreviated keys to reduce file size)
+type RawSearchItem = {
   id: string;
-  article_id: string;
-  url: string;
-  title: string;
-  source_name: string;
-  saved_at: Date;
+  t: string;   // title
+  u: string;   // url
+  s: string;   // source_name
+  d: number;   // published_ts
+  c: string;   // category_key
 };
 
 // Load search index
@@ -31,7 +31,17 @@ async function loadSearchIndex(): Promise<SearchArticle[]> {
     const url = new URL("export/search.json", base).toString();
     const res = await fetch(url, { cache: "no-store" });
     if (!res.ok) return [];
-    return await res.json();
+    const raw: RawSearchItem[] = await res.json();
+    // Map abbreviated keys to full keys
+    return raw.map((item) => ({
+      id: item.id,
+      title: item.t,
+      url: item.u,
+      source_name: item.s,
+      published_ts: item.d,
+      category_key: item.c,
+      week: "",
+    }));
   } catch {
     return [];
   }
@@ -45,10 +55,9 @@ function formatDate(timestamp: number): string {
 
 export default function MySpace() {
   const { user } = useAuth();
+  const { savedArticles, savedUrls, toggleSave, unsaveArticle } = useSavedArticles();
   const [searchQuery, setSearchQuery] = useState("");
   const [allArticles, setAllArticles] = useState<SearchArticle[]>([]);
-  const [savedArticles, setSavedArticles] = useState<SavedArticle[]>([]);
-  const [savedUrls, setSavedUrls] = useState<Set<string>>(new Set());
   const [isLoading, setIsLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<"search" | "saved">("search");
 
@@ -62,43 +71,6 @@ export default function MySpace() {
     });
   }, []);
 
-  // Load saved articles from Firebase
-  useEffect(() => {
-    if (!user) {
-      setSavedArticles([]);
-      setSavedUrls(new Set());
-      return;
-    }
-
-    const q = query(
-      collection(db, "saved_articles"),
-      where("user_id", "==", user.uid)
-    );
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const saved: SavedArticle[] = [];
-      const urls = new Set<string>();
-      snapshot.forEach((doc) => {
-        const data = doc.data();
-        saved.push({
-          id: doc.id,
-          article_id: data.article_id,
-          url: data.url,
-          title: data.title,
-          source_name: data.source_name,
-          saved_at: data.saved_at?.toDate() || new Date(),
-        });
-        urls.add(data.url);
-      });
-      // Sort by most recently saved
-      saved.sort((a, b) => b.saved_at.getTime() - a.saved_at.getTime());
-      setSavedArticles(saved);
-      setSavedUrls(urls);
-    });
-
-    return () => unsubscribe();
-  }, [user]);
-
   // Filter articles based on search query
   const searchResults = useMemo(() => {
     if (!searchQuery.trim()) return [];
@@ -110,38 +82,6 @@ export default function MySpace() {
       )
       .slice(0, 50); // Limit to 50 results
   }, [searchQuery, allArticles]);
-
-  // Save article
-  const handleSave = async (article: SearchArticle) => {
-    if (!user) return;
-
-    try {
-      await addDoc(collection(db, "saved_articles"), {
-        user_id: user.uid,
-        article_id: article.id,
-        url: article.url,
-        title: article.title,
-        source_name: article.source_name,
-        saved_at: serverTimestamp(),
-      });
-    } catch (err) {
-      console.error("Error saving article:", err);
-    }
-  };
-
-  // Unsave article
-  const handleUnsave = async (url: string) => {
-    if (!user) return;
-
-    const saved = savedArticles.find((a) => a.url === url);
-    if (!saved) return;
-
-    try {
-      await deleteDoc(doc(db, "saved_articles", saved.id));
-    } catch (err) {
-      console.error("Error unsaving article:", err);
-    }
-  };
 
   if (!user) {
     return (
@@ -218,8 +158,7 @@ export default function MySpace() {
                   key={article.id}
                   article={article}
                   isSaved={savedUrls.has(article.url)}
-                  onSave={() => handleSave(article)}
-                  onUnsave={() => handleUnsave(article.url)}
+                  onToggle={() => toggleSave({ url: article.url, title: article.title, source_name: article.source_name })}
                 />
               ))}
             </div>
@@ -239,7 +178,7 @@ export default function MySpace() {
               <SavedArticleRow
                 key={saved.id}
                 article={saved}
-                onUnsave={() => handleUnsave(saved.url)}
+                onUnsave={() => unsaveArticle(saved.url)}
               />
             ))
           )}
@@ -253,13 +192,11 @@ export default function MySpace() {
 function ArticleRow({
   article,
   isSaved,
-  onSave,
-  onUnsave,
+  onToggle,
 }: {
   article: SearchArticle;
   isSaved: boolean;
-  onSave: () => void;
-  onUnsave: () => void;
+  onToggle: () => void;
 }) {
   return (
     <div className="flex items-center gap-3 p-3 bg-white rounded-lg border border-neutral-200 hover:border-neutral-300 transition">
@@ -284,7 +221,7 @@ function ArticleRow({
       <button
         onClick={(e) => {
           e.preventDefault();
-          if (isSaved) { onUnsave(); } else { onSave(); }
+          onToggle();
         }}
         className={`flex-shrink-0 p-2 rounded transition ${
           isSaved

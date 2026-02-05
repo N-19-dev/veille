@@ -1,16 +1,10 @@
 // src/lib/SavedArticlesContext.tsx
+/* eslint-disable react-refresh/only-export-components */
 import { createContext, useContext, useState, useEffect, ReactNode } from "react";
 import { db } from "./firebase";
 import { collection, query, where, onSnapshot, addDoc, deleteDoc, doc, serverTimestamp } from "firebase/firestore";
 import { useAuth } from "./AuthContext";
-
-export type SavedArticle = {
-  id: string;
-  url: string;
-  title: string;
-  source_name: string;
-  saved_at: Date;
-};
+import type { SavedArticle } from "./types";
 
 type SavedArticlesContextType = {
   savedArticles: SavedArticle[];

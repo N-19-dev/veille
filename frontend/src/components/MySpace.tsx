@@ -1,7 +1,8 @@
 // src/components/MySpace.tsx
 import { useState, useEffect, useMemo } from "react";
 import { useAuth } from "../lib/AuthContext";
-import { useSavedArticles, type SavedArticle } from "../lib/SavedArticlesContext";
+import { useSavedArticles } from "../lib/SavedArticlesContext";
+import type { SavedArticle } from "../lib/types";
 import { faviconUrl } from "../lib/parse";
 
 type SearchArticle = {

@@ -8,6 +8,7 @@ import CommentsCount from "./CommentsCount";
 import TopCommentPreview from "./TopCommentPreview";
 import SubmitArticle from "./SubmitArticle";
 import { useComments } from "../lib/CommentsContext";
+import { useAuth } from "../lib/AuthContext";
 
 // Type for user submissions
 type Submission = {
@@ -63,10 +64,41 @@ function getCurrentWeekLabel(): string {
   return `${now.getFullYear()}w${weekNumber.toString().padStart(2, '0')}`;
 }
 
+// Admin email for delete permissions
+const ADMIN_EMAIL = 'natsornet@gmail.com';
+
 // Card for user submissions
-function SubmissionCard({ submission, isSeen, onSeen }: { submission: Submission; isSeen: boolean; onSeen: (url: string) => void }) {
+function SubmissionCard({ submission, isSeen, onSeen, currentUserEmail, currentUserId }: {
+  submission: Submission;
+  isSeen: boolean;
+  onSeen: (url: string) => void;
+  currentUserEmail: string | null;
+  currentUserId: string | null;
+}) {
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  const canDelete = currentUserEmail === ADMIN_EMAIL || currentUserId === submission.submitted_by;
+
   const handleClick = () => {
     onSeen(submission.url);
+  };
+
+  const handleDelete = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    if (!confirm('Supprimer cette soumission ?')) return;
+
+    setIsDeleting(true);
+    try {
+      const { doc, deleteDoc } = await import('firebase/firestore');
+      await deleteDoc(doc(db, 'submissions', submission.id));
+    } catch (err) {
+      console.error('Error deleting submission:', err);
+      alert('Erreur lors de la suppression');
+    } finally {
+      setIsDeleting(false);
+    }
   };
 
   // Extract domain for display
@@ -84,14 +116,14 @@ function SubmissionCard({ submission, isSeen, onSeen }: { submission: Submission
 
   return (
     <div className={`bg-white rounded-xl border border-blue-200 p-3 sm:p-4 hover:border-blue-300 hover:shadow-sm transition-all ${isSeen ? "opacity-60" : ""}`}>
-      <a
-        href={submission.url}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="block"
-        onClick={handleClick}
-      >
-        <div className="flex gap-2.5 sm:gap-3">
+      <div className="flex gap-2.5 sm:gap-3">
+        <a
+          href={submission.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex gap-2.5 sm:gap-3 flex-1 min-w-0"
+          onClick={handleClick}
+        >
           <img
             src={faviconUrl(submission.url, 32)}
             alt=""
@@ -108,8 +140,18 @@ function SubmissionCard({ submission, isSeen, onSeen }: { submission: Submission
               <span>{ageText}</span>
             </div>
           </div>
-        </div>
-      </a>
+        </a>
+        {canDelete && (
+          <button
+            onClick={handleDelete}
+            disabled={isDeleting}
+            className="flex-shrink-0 text-neutral-400 hover:text-red-500 transition p-1"
+            title="Supprimer"
+          >
+            {isDeleting ? '...' : '✕'}
+          </button>
+        )}
+      </div>
     </div>
   );
 }
@@ -252,6 +294,7 @@ function FeedSection({
 }
 
 export default function FeedView({ articles, videos, generatedAt }: FeedViewProps) {
+  const { user } = useAuth();
   const [seenUrls, setSeenUrls] = useState<Set<string>>(new Set());
   const [submissions, setSubmissions] = useState<Submission[]>([]);
 
@@ -314,6 +357,8 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
                 submission={sub}
                 isSeen={seenUrls.has(sub.url)}
                 onSeen={handleSeen}
+                currentUserEmail={user?.email || null}
+                currentUserId={user?.uid || null}
               />
             ))}
           </div>

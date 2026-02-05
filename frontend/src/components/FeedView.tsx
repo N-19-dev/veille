@@ -14,7 +14,6 @@ type Submission = {
   id: string;
   url: string;
   title: string | null;
-  category_key: string | null;
   submitted_by: string;
   submitted_by_name: string;
   submitted_at: Timestamp;

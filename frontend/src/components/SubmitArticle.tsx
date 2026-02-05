@@ -3,23 +3,11 @@ import { db } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useAuth } from '../lib/AuthContext';
 
-const CATEGORIES = [
-  { key: 'warehouses_engines', label: '🏛️ Warehouses & Query Engines' },
-  { key: 'orchestration', label: '⚙️ Orchestration' },
-  { key: 'data_governance', label: '📋 Data Governance' },
-  { key: 'lakes_formats', label: '🌊 Data Lakes & Formats' },
-  { key: 'cloud_infra', label: '☁️ Cloud & Infrastructure' },
-  { key: 'python_dev', label: '🐍 Python & Dev Tools' },
-  { key: 'ai_data_engineering', label: '🤖 AI & Data Engineering' },
-  { key: 'news_trends', label: '📰 News & Trends' },
-];
-
 export default function SubmitArticle() {
   const { user, openLoginModal } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [url, setUrl] = useState('');
   const [title, setTitle] = useState('');
-  const [category, setCategory] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -52,11 +40,9 @@ export default function SubmitArticle() {
       await addDoc(collection(db, 'submissions'), {
         url: url.trim(),
         title: title.trim() || null,
-        category_key: category || null,
         submitted_by: user.uid,
         submitted_by_name: user.displayName || 'Anonymous',
         submitted_at: serverTimestamp(),
-        status: 'pending', // For future moderation
         upvotes: 0,
         downvotes: 0,
       });
@@ -64,7 +50,6 @@ export default function SubmitArticle() {
       setSuccess(true);
       setUrl('');
       setTitle('');
-      setCategory('');
 
       // Reset success message after 3s
       setTimeout(() => {
@@ -139,25 +124,6 @@ export default function SubmitArticle() {
               placeholder="Sera extrait automatiquement si vide"
               className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
-          </div>
-
-          <div>
-            <label htmlFor="category" className="block text-sm font-medium text-neutral-700 mb-1">
-              Catégorie (optionnel)
-            </label>
-            <select
-              id="category"
-              value={category}
-              onChange={(e) => setCategory(e.target.value)}
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            >
-              <option value="">-- Sélectionner --</option>
-              {CATEGORIES.map((cat) => (
-                <option key={cat.key} value={cat.key}>
-                  {cat.label}
-                </option>
-              ))}
-            </select>
           </div>
 
           {error && (

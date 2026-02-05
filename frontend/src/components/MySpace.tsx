@@ -105,8 +105,8 @@ export default function MySpace() {
     const q = searchQuery.toLowerCase();
     return allArticles
       .filter((a) =>
-        a.title.toLowerCase().includes(q) ||
-        a.source_name.toLowerCase().includes(q)
+        (a.title || "").toLowerCase().includes(q) ||
+        (a.source_name || "").toLowerCase().includes(q)
       )
       .slice(0, 50); // Limit to 50 results
   }, [searchQuery, allArticles]);

@@ -3,11 +3,47 @@ import { db } from '../lib/firebase';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { useAuth } from '../lib/AuthContext';
 
+const TECH_KEYWORDS = [
+  'api', 'sdk', 'cli', 'sql', 'nosql', 'graphql', 'rest', 'grpc',
+  'devops', 'mlops', 'dataops', 'devsecops', 'gitops', 'ci/cd', 'cicd',
+  'docker', 'kubernetes', 'k8s', 'terraform', 'ansible', 'helm',
+  'python', 'javascript', 'typescript', 'rust', 'golang', 'java', 'scala', 'kotlin',
+  'react', 'vue', 'angular', 'svelte', 'nextjs', 'nuxt', 'node', 'deno', 'bun',
+  'aws', 'azure', 'gcp', 'cloud', 'serverless', 'lambda', 'saas', 'paas', 'iaas',
+  'data', 'database', 'postgres', 'mysql', 'mongo', 'redis', 'elastic', 'kafka',
+  'spark', 'flink', 'airflow', 'dbt', 'dagster', 'prefect', 'snowflake', 'bigquery', 'redshift',
+  'machine learning', 'deep learning', 'llm', 'gpt', 'transformer', 'neural', 'ai',
+  'nlp', 'rag', 'embedding', 'fine-tuning', 'finetune', 'prompt',
+  'git', 'github', 'gitlab', 'bitbucket', 'open source', 'opensource',
+  'backend', 'frontend', 'fullstack', 'full-stack', 'microservice', 'monorepo',
+  'algorithm', 'architecture', 'framework', 'library', 'package', 'module',
+  'deploy', 'pipeline', 'orchestration', 'etl', 'elt', 'streaming',
+  'security', 'auth', 'oauth', 'jwt', 'encryption', 'vulnerability', 'cve',
+  'linux', 'unix', 'bash', 'shell', 'terminal', 'wasm', 'webassembly',
+  'blockchain', 'web3', 'smart contract',
+  'agile', 'scrum', 'kanban', 'sprint',
+  'monitoring', 'observability', 'logging', 'tracing', 'prometheus', 'grafana',
+  'testing', 'tdd', 'unittest', 'pytest', 'jest', 'cypress',
+  'startup', 'saas', 'tech', 'engineering', 'developer', 'software', 'code', 'coding',
+  'infra', 'infrastructure', 'network', 'dns', 'cdn', 'load balancer',
+  'lakehouse', 'data lake', 'data warehouse', 'iceberg', 'delta', 'hudi',
+  'governance', 'lineage', 'catalog', 'metadata',
+  'tutorial', 'benchmark', 'migration', 'refactor', 'debug',
+];
+
+function looksLikeTech(url: string): { ok: boolean; reason?: string } {
+  const text = url.toLowerCase();
+  const found = TECH_KEYWORDS.some(kw => text.includes(kw));
+  if (!found) {
+    return { ok: false, reason: 'Cet article ne correspond pas à la thématique du site.' };
+  }
+  return { ok: true };
+}
+
 export default function SubmitArticle() {
   const { user, openLoginModal } = useAuth();
   const [isOpen, setIsOpen] = useState(false);
   const [url, setUrl] = useState('');
-  const [title, setTitle] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -33,13 +69,20 @@ export default function SubmitArticle() {
       return;
     }
 
+    // Tech moderation check
+    const check = looksLikeTech(url);
+    if (!check.ok) {
+      setError(check.reason!);
+      return;
+    }
+
     setIsSubmitting(true);
     setError(null);
 
     try {
       await addDoc(collection(db, 'submissions'), {
         url: url.trim(),
-        title: title.trim() || null,
+        title: null,
         submitted_by: user.uid,
         submitted_by_name: user.displayName || 'Anonymous',
         submitted_at: serverTimestamp(),
@@ -49,7 +92,6 @@ export default function SubmitArticle() {
 
       setSuccess(true);
       setUrl('');
-      setTitle('');
 
       // Reset success message after 3s
       setTimeout(() => {
@@ -109,20 +151,6 @@ export default function SubmitArticle() {
               placeholder="https://..."
               className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               required
-            />
-          </div>
-
-          <div>
-            <label htmlFor="title" className="block text-sm font-medium text-neutral-700 mb-1">
-              Titre (optionnel)
-            </label>
-            <input
-              type="text"
-              id="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="Sera extrait automatiquement si vide"
-              className="w-full px-3 py-2 border border-neutral-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
           </div>
 

@@ -1,4 +1,5 @@
 ## 🏆 Top 3 de la semaine
 
-- **1.** [Lessons learned from scaling data scientists with AI](https://medium.com/whatnot-engineering/lessons-learned-from-scaling-data-scientists-with-ai-e7aa7b3235b4) — Data Engineering Weekly (via newsletter) · 2026-02-02 · **50.70916869423606/100**
-- **2.** [Avec Gemini Nano, voyez l'IA vie en rose !](https://blog.octo.com/avec-gemini-nano-voyez-l'ia-vie-en-rose-!) — OCTO Talks! · 2026-02-02 · **49.38514972274954/100**
+- **1.** [Delta Lake Explained: Boost Data Reliability in Cloud Storage](https://www.databricks.com/blog/delta-lake-explained-boost-data-reliability-cloud-storage) — Databricks Blog · 2026-02-03 · **67.24865379658613/100**
+- **2.** [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly · 2026-02-02 · **61.3479668172923/100**
+- **3.** [Why analytics engineering isn't just data modeling](https://www.getdbt.com/blog/why-analytics-engineering-isnt-just-data-modeling) — dbt Blog · 2026-02-02 · **59.81727931987156/100**

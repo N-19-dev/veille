@@ -1,13 +1,48 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://openai.com/index/inside-our-in-house-data-agent/",
-      "title": "Inside OpenAI’s in-house data agent",
-      "summary": "Data powers how systems learn, products evolve, and how companies make choices. But getting answers quickly, correctly, and with the right context is often harder than it should be. To make this easier as OpenAI scales, we built\nour own bespoke in-house AI data agent\nthat explores and reasons over o",
-      "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly (via newsletter)",
-      "score": 50.183147395199,
-      "content_type": "rex",
+      "url": "https://www.getdbt.com/blog/why-analytics-engineering-isnt-just-data-modeling",
+      "title": "Why analytics engineering isn't just data modeling",
+      "summary": "Analytics engineering extends beyond modeling to collaboration, testing, documentation, and scaling analytics workflows.",
+      "published_ts": 1770050580,
+      "source_name": "dbt Blog",
+      "score": 59.81727931987156,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://blog.dataexpert.io/p/the-2026-ai-data-engineer-roadmap",
+      "title": "The 2026 AI Data Engineer Roadmap",
+      "summary": "And how to avoid getting replaced",
+      "published_ts": 1770323197,
+      "source_name": "DataEngineer.io",
+      "score": 58.67605576461012,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.getdbt.com/blog/dbt-mcp-server-reliable-ai",
+      "title": "Deliver reliable AI with the dbt Semantic Layer and dbt MCP Server",
+      "summary": "Learn how to provide structured context to AI systems with a dbt-powered MCP server.",
+      "published_ts": 1770310740,
+      "source_name": "dbt Blog",
+      "score": 58.66872475905852,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "cloud_infra_observability": [
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/",
+      "title": "PostgreSQL on Azure supercharged for AI",
+      "summary": "From GitHub Copilot AI assistance to built-in model management, Azure is helping devs and enterprises unlock the full potential of PostgreSQL. The post PostgreSQL on Azure supercharged for AI appeared first on Microsoft Azure Blog .",
+      "published_ts": 1770044400,
+      "source_name": "Azure Blog",
+      "score": 51.47383221171119,
+      "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0
     }
@@ -18,8 +53,91 @@
       "title": "The Semantic Layer Is Back. Here's What We're Doing About It.",
       "summary": "There's a new wave of enthusiasm around semantic layers, and for once, I think the hype is justified.\nSince the very early days of analytics, self-service has been the holy grail, yet it's still largely unsolved. We built increasingly powerful tools. We democratized SQL. We made dashboards beautiful",
       "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly (via newsletter)",
-      "score": 50.43887143785304,
+      "source_name": "Data Engineering Weekly",
+      "score": 61.3479668172923,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/the-5-places-analytics-value-leaks-before-it-reaches-a-decision",
+      "title": "The 5 Places Analytics Value Leaks Before It Reaches a Decision",
+      "summary": "Pinpointing the 5 Points Where Analytics Value Is Lost\n1. Creation Without Compounding\nTeams build analytics,\nmachine learning (ML)\nmodels, and AI agents rapidly, often as one-off projects. Each initiative risks resetting accumulated enterprise intelligence: logic, features, and metrics are rebuilt ",
+      "published_ts": 1770391352,
+      "source_name": "Dataiku Blog",
+      "score": 55.43828588995066,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://www.databricks.com/blog/sap-and-salesforce-data-integration-supplier-analytics-databricks",
+      "title": "SAP and Salesforce Data Integration for Supplier Analytics on Databricks",
+      "summary": "How to Build Supplier Analytics With Salesforce SAP Integration on DatabricksSupplier...",
+      "published_ts": 1770424200,
+      "source_name": "Databricks Blog",
+      "score": 61.77197427912192,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://dagster.io/blog/closing-the-dataops-loop-why-we-built-compass-for-dagster",
+      "title": "Closing the DataOps Loop: Why We Built Compass for Dagster+",
+      "summary": "Dagster+ Compass brings AI-powered investigation to your data platform. Ask questions in Slack, get answers grounded in your runs, assets, and metadata, and surface patterns before they become incidents.",
+      "published_ts": 1770136737,
+      "source_name": "Dagster Blog",
+      "score": 58.25075302611698,
+      "content_type": "rex",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://airbyte.com/blog/airbyte-oss-to-airbyte-cloud",
+      "title": "From DIY to Done-For-You: Is It Time to Move from Airbyte OSS to Airbyte Cloud? | Airbyte",
+      "summary": "Still managing Airbyte OSS yourself? Learn when it makes sense to move from DIY pipelines to Airbyte Cloud’s fully managed, done-for-you data integration.",
+      "published_ts": 1770336000,
+      "source_name": "Airbyte Blog",
+      "score": 55.257601737976074,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    },
+    {
+      "url": "https://dagster.io/blog/great-infrastructure-needs-great-stories",
+      "title": "Great Infrastructure Needs Great Stories: Making Our Dagster Children’s Book",
+      "summary": "Go behind the scenes of Dagster’s children’s book, how assets became characters, design choices shaped the story, and motion helped make platform concepts intuitive.",
+      "published_ts": 1770390321,
+      "source_name": "Dagster Blog",
+      "score": 54.95373154228384,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "lake_storage_formats": [
+    {
+      "url": "https://www.databricks.com/blog/delta-lake-explained-boost-data-reliability-cloud-storage",
+      "title": "Delta Lake Explained: Boost Data Reliability in Cloud Storage",
+      "summary": "What is Delta Lake? Data-reliant organizations today face a critical challenge of...",
+      "published_ts": 1770144600,
+      "source_name": "Databricks Blog",
+      "score": 67.24865379658613,
+      "content_type": "technical",
+      "tech_level": "intermediate",
+      "marketing_score": 0
+    }
+  ],
+  "warehouses_engines": [
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ai-ready-enterprise-data-platform",
+      "title": "Snowflake Puts AI-Ready Enterprise Data at Your Fingertips",
+      "summary": "Make all your enterprise data AI ready with continuous performance, built-in governance controls, and interoperability. Reduce data movement and scale AI applications confidently",
+      "published_ts": 1770105660,
+      "source_name": "Snowflake Blog",
+      "score": 53.600146702744745,
       "content_type": "technical",
       "tech_level": "intermediate",
       "marketing_score": 0

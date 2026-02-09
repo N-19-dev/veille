@@ -1,73 +1,44 @@
 ## Aperçu général de la semaine
 
-Cette semaine, OpenAI partage son agent de données interne et Preset.io revient sur le concept de couche sémantique.
+Cette semaine, Databricks a annoncé plusieurs développements importants, notamment l'intégration de données de SAP et Salesforce pour les analyses de fournisseurs, ainsi que l'explication de Delta Lake pour améliorer la fiabilité des données dans les magasins de données cloud. Uber a également partagé son REX sur la migration de données.
 
 ## 🏛️ Warehouses & Query Engines
 
-- [Databricks annonce X et Y cette semaine](https://www.databricks.com/fr) — Databricks · 2026-02-01
-- [AWS Lake Formation prend en charge les requêtes SQL](https://aws.amazon.com/fr/blogs/aws/aws-lake-formation-now-supports-sql-queries/) — AWS · 2026-02-02
-
-**À creuser :**
-**
-- [Databricks](https://www.databricks.com/fr) — Databricks · 2026-02-01
-- [AWS Lake Formation](https://aws.amazon.com/fr/blogs/aws/aws-lake-formation-now-supports-sql-queries/) — AWS · 2026-02-02
+- [Snowflake Puts AI-Ready Enterprise Data at Your Fingertips](https://www.snowflake.com/content/snowflake-site/global/en/blog/ai-ready-enterprise-data-platform) — Snowflake Blog · 2026-02-03
+- [Delta Lake Explained: Boost Data Reliability in Cloud Storage](https://www.databricks.com/blog/delta-lake-explained-boost-data-reliability-cloud-storage) — Databricks Blog · 2026-02-03
 
 ## 🔄 Orchestration, ETL & Data Movement
 
-- [Apache Airflow 2.4.0 est disponible](https://airflow.apache.org/news/2026-02-01-airflow-240-released/) — Apache Airflow · 2026-02-01
-- [AWS Glue prend en charge les workflows de données](https://aws.amazon.com/fr/blogs/aws/aws-glue-now-supports-data-workflows/) — AWS · 2026-02-02
-
-**À creuser :**
-**
-- [Apache Airflow 2.4.0](https://airflow.apache.org/news/2026-02-01-airflow-240-released/) — Apache Airflow · 2026-02-01
-- [AWS Glue](https://aws.amazon.com/fr/blogs/aws/aws-glue-now-supports-data-workflows/) — AWS · 2026-02-02
+- [SAP and Salesforce Data Integration for Supplier Analytics on Databricks](https://www.databricks.com/blog/sap-and-salesforce-data-integration-supplier-analytics-databricks) — Databricks Blog · 2026-02-07
+- [Closing the DataOps Loop: Why We Built Compass for Dagster+](https://dagster.io/blog/closing-the-dataops-loop-why-we-built-compass-for-dagster) — Dagster Blog · 2026-02-03
+- [From DIY to Done-For-You: Is It Time to Move from Airbyte OSS to Airbyte Cloud? | Airbyte](https://airbyte.com/blog/airbyte-oss-to-airbyte-cloud) — Airbyte Blog · 2026-02-06
+- [Great Infrastructure Needs Great Stories: Making Our Dagster Children’s Book](https://dagster.io/blog/great-infrastructure-needs-great-stories) — Dagster Blog · 2026-02-06
 
 ## 📐 Data Modeling, Governance & Quality
 
-- [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly (via newsletter) · 2026-02-02
-
-**À creuser :**
-**
-- [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly (via newsletter) · 2026-02-02
+- [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly · 2026-02-02
+- [The 5 Places Analytics Value Leaks Before It Reaches a Decision](https://www.dataiku.com/stories/blog/the-5-places-analytics-value-leaks-before-it-reaches-a-decision) — Dataiku Blog · 2026-02-06
 
 ## 🗄️ Data Lakes, Storage & Formats
 
-- [AWS S3 prend en charge les objets de données de grande taille](https://aws.amazon.com/fr/blogs/aws/aws-s3-now-supports-large-data-objects/) — AWS · 2026-02-02
-
-**À creuser :**
-**
-- [AWS S3](https://aws.amazon.com/fr/blogs/aws/aws-s3-now-supports-large-data-objects/) — AWS · 2026-02-02
+- [Delta Lake Explained: Boost Data Reliability in Cloud Storage](https://www.databricks.com/blog/delta-lake-explained-boost-data-reliability-cloud-storage) — Databricks Blog · 2026-02-03
 
 ## ☁️ Cloud, Infra & Observability
 
-- [AWS prend en charge les clusters Kubernetes](https://aws.amazon.com/fr/blogs/aws/aws-now-supports-kubernetes-clusters/) — AWS · 2026-02-02
-
-**À creuser :**
-**
-- [AWS](https://aws.amazon.com/fr/blogs/aws/aws-now-supports-kubernetes-clusters/) — AWS · 2026-02-02
+- [PostgreSQL on Azure supercharged for AI](https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/) — Azure Blog · 2026-02-02
 
 ## 🐍 Python, Analytics & Tools
 
-- [NumPy 1.23.0 est disponible](https://numpy.org/devdocs/release/1.23.0.html) — NumPy · 2026-02-01
-
-**À creuser :**
-**
-- [NumPy 1.23.0](https://numpy.org/devdocs/release/1.23.0.html) — NumPy · 2026-02-01
+- [Why analytics engineering isn't just data modeling](https://www.getdbt.com/blog/why-analytics-engineering-isnt-just-data-modeling) — dbt Blog · 2026-02-02
+- [Deliver reliable AI with the dbt Semantic Layer and dbt MCP Server](https://www.getdbt.com/blog/dbt-mcp-server-reliable-ai) — dbt Blog · 2026-02-05
 
 ## 🤖 AI for Data Engineering
 
-- [Inside OpenAI’s in-house data agent](https://openai.com/index/inside-our-in-house-data-agent/) — Data Engineering Weekly (via newsletter) · 2026-02-02
-
-**À creuser :**
-**
-- [Inside OpenAI’s in-house data agent](https://openai.com/index/inside-our-in-house-data-agent/) — Data Engineering Weekly (via newsletter) · 2026-02-02
+- [Why analytics engineering isn't just data modeling](https://www.getdbt.com/blog/why-analytics-engineering-isnt-just-data-modeling) — dbt Blog · 2026-02-02
+- [The 2026 AI Data Engineer Roadmap](https://blog.dataexpert.io/p/the-2026-ai-data-engineer-roadmap) — DataEngineer.io · 2026-02-05
+- [Deliver reliable AI with the dbt Semantic Layer and dbt MCP Server](https://www.getdbt.com/blog/dbt-mcp-server-reliable-ai) — dbt Blog · 2026-02-05
 
 ## 📰 Tech / Cloud / IA News
 
-- [Inside OpenAI’s in-house data agent](https://openai.com/index/inside-our-in-house-data-agent/) — Data Engineering Weekly (via newsletter) · 2026-02-02
-- [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly (via newsletter) · 2026-02-02
-
-**À creuser :**
-**
-- [Inside OpenAI’s in-house data agent](https://openai.com/index/inside-our-in-house-data-agent/) — Data Engineering Weekly (via newsletter) · 2026-02-02
-- [The Semantic Layer Is Back. Here's What We're Doing About It.](https://preset.io/blog/semantic-layer-is-back/) — Data Engineering Weekly (via newsletter) · 2026-02-02
+- [Snowflake Puts AI-Ready Enterprise Data at Your Fingertips](https://www.snowflake.com/content/snowflake-site/global/en/blog/ai-ready-enterprise-data-platform) — Snowflake Blog · 2026-02-03
+- [PostgreSQL on Azure supercharged for AI](https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/) — Azure Blog · 2026-02-02

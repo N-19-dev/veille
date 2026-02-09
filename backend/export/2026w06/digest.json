@@ -1,16 +1,273 @@
 {
   "ai_data_engineering": [
     {
-      "url": "https://openai.com/index/inside-our-in-house-data-agent/",
-      "title": "Inside OpenAI’s in-house data agent",
-      "summary": "Data powers how systems learn, products evolve, and how companies make choices. But getting answers quickly, correctly, and with the right context is often harder than it should be. To make this easier as OpenAI scales, we built\nour own bespoke in-house AI data agent\nthat explores and reasons over o",
-      "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly",
+      "url": "https://blog.octo.com/apprivoiser-un-legacy-consequent-sans-y-perdre-ses-plumes-partie-ii",
+      "title": "Moderniser un legacy conséquent sans y perdre ses plumes - Partie II",
+      "summary": "La modernisation technique doit être progressive, sécurisée et alignée avec la capacité réelle des équipes. Elle débute par une phase de découverte dont l’objectif est de clarifier ce que l’application ou le service métier est réellement censé faire.",
+      "published_ts": 1770535630,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/the-5-places-analytics-value-leaks-before-it-reaches-a-decision",
+      "title": "The 5 Places Analytics Value Leaks Before It Reaches a Decision",
+      "summary": "Pinpointing the 5 Points Where Analytics Value Is Lost\n1. Creation Without Compounding\nTeams build analytics,\nmachine learning (ML)\nmodels, and AI agents rapidly, often as one-off projects. Each initiative risks resetting accumulated enterprise intelligence: logic, features, and metrics are rebuilt ",
+      "published_ts": 1770391352,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.dataexpert.io/p/the-2026-ai-data-engineer-roadmap",
+      "title": "The 2026 AI Data Engineer Roadmap",
+      "summary": "And how to avoid getting replaced",
+      "published_ts": 1770323197,
+      "source_name": "DataEngineer.io",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/ServiceNow-AI/sygra-studio",
+      "title": "Introducing SyGra Studio",
+      "summary": "Introducing SyGra Studio\nSyGra 2.0.0\nintroduces\nStudio\n, an interactive environment that turns synthetic data generation into a transparent, visual craft. Instead of juggling YAML files and terminals, you compose flows directly on the canvas, preview datasets before committing, tune prompts with inl",
+      "published_ts": 1770310348,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://openai.com/index/trusted-access-for-cyber",
+      "title": "Introducing Trusted Access for Cyber",
+      "summary": "OpenAI introduces Trusted Access for Cyber, a trust-based framework that expands access to frontier cyber capabilities while strengthening safeguards against misuse.",
+      "published_ts": 1770285600,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://openai.com/index/introducing-gpt-5-3-codex",
+      "title": "Introducing GPT-5.3-Codex",
+      "summary": "GPT-5.3-Codex is a Codex-native agent that pairs frontier coding performance with general reasoning to support long-horizon, real-world technical work.",
+      "published_ts": 1770249600,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/amazon-ec2-c8id-m8id-and-r8id-instances-with-up-to-22-8-tb-local-nvme-storage-are-generally-available/",
+      "title": "Amazon EC2 C8id, M8id, and R8id instances with up to 22.8 TB local NVMe storage are generally available",
+      "summary": "AWS launches Amazon EC2 C8id, M8id, and R8id instances backed by NVMe-based SSD block-level instance storage physically connected to the host server. These instances offer 3 times more vCPUs, memory, and local storage with up to 22.8TB of local NVMe-backed SSD block-level storage.",
+      "published_ts": 1770244316,
+      "source_name": "AWS Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/enhanced-storage-resiliency-with-azure-netapp-files-elastic-zone-redundant-service/",
+      "title": "Enhanced storage resiliency with Azure NetApp Files Elastic zone-redundant service",
+      "summary": "Data resiliency is no longer optional—it is the foundation that keeps mission‑critical applications running, teams productive, and compliance intact. Organizations must ensure continuous data availability and zero data loss to meet stringent regulatory and audit standards. The post Enhanced storage resiliency with Azure NetApp Files Elastic zone-redundant service appeared first on Microsoft Azure Blog .",
+      "published_ts": 1770220800,
+      "source_name": "Azure Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/how-enterprises-are-preparing-agentic-ai",
+      "title": "How enterprises are preparing for agentic AI",
+      "summary": "As enterprises move from early experimentation with generative AI to building agentic, goal-driven systems...",
+      "published_ts": 1770219000,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/nvidia/nemotron-colembed-v2",
+      "title": "Nemotron ColEmbed V2: Raising the Bar for Multimodal Retrieval with ViDoRe V3’s Top Model",
+      "summary": "Nemotron ColEmbed V2: Raising the Bar for Multimodal Retrieval with ViDoRe V3’s Top Model\nModern search systems are increasingly designed to process heterogeneous document images that may contain text, tables, charts, figures, and other visual components. In this context, accurately retrieving relev",
+      "published_ts": 1770217240,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/octo-glossaire-ia--comprendre-l'intelligence-artificielle-un-mot-a-la-fois",
+      "title": "Glossaire IA : Comprendre l’intelligence artificielle, un mot à la fois",
+      "summary": "Comprendre l’intelligence artificielle commence par maîtriser les mots que l’on utilise pour en parler. Ce glossaire IA a été conçu comme un outil de découverte et de clarification, destiné aux non spécialistes. Il n’a pas vocation à faire de vous des experts techniques, mais à vous donner les clés de lecture essentielles pour comprendre l’IA.",
+      "published_ts": 1770214280,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/le-low-code-pris-en-etau-entre-le-no-code-et-le-developpement-assiste-par-l'ia",
+      "title": "Le Low-Code pris en étau entre le No-Code et le développement assisté par l’IA",
+      "summary": "L’irruption massive de L’IA générative est en train de rebattre les cartes. Aujourd’hui, le low-code se retrouve coincé entre deux forces qui progressent beaucoup plus vite que lui : le no-code boosté à l’IA d’un côté, et le développement assisté par l’IA de l’autre.",
+      "published_ts": 1770208090,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/accelerating-drug-discovery-fasta-files-genai-insights-databricks",
+      "title": "Accelerating Drug Discovery: From FASTA Files to GenAI Insights on Databricks",
+      "summary": "Drug development is notoriously slow and expensive. The average Research and Development...",
+      "published_ts": 1770197400,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/optimizing-flinks-join-operations-on-amazon-emr-with-alluxio/",
+      "title": "Optimizing Flink’s join operations on Amazon EMR with Alluxio",
+      "summary": "In this post, we show you how to implement real-time data correlation using Apache Flink to join streaming order data with historical customer and product information, enabling you to make informed decisions based on comprehensive, up-to-date analytics. We also introduce an optimized solution to automatically load Hive dimension table data into Alluxio Universal Flash Storage (UFS) through the Alluxio cache layer. This enables Flink to perform temporal joins on changing data, accurately reflecting the content of a table at specific points in time.",
+      "published_ts": 1770144091,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/huggingface/one-year-since-the-deepseek-moment-blog-3",
+      "title": "The Future of the Global Open-Source AI Ecosystem: From DeepSeek to AI+",
+      "summary": "The Future of the Global Open-Source AI Ecosystem: From DeepSeek to AI+\nThis is the third and final blog in a three-part series on China's open source community's historical advancements since January 2025's \"DeepSeek Moment.\" The first blog on strategic changes and open artifact growth is available",
+      "published_ts": 1770130999,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/customer-context-architecture-ai-experiences",
+      "title": "How to assemble and serve fresh customer context with RudderStack",
+      "summary": "Learn how to assemble and serve fresh, trustworthy customer context for customer-facing AI, and where RudderStack fits in the end-to-end system.",
+      "published_ts": 1770128839,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/financial-services-ai-trends-2026",
+      "title": "Financial Services AI Trends 2026: Closing the Production Value Gap",
+      "summary": "Between 2023 and 2024, the value of generative & agentic AI in financial services remained mostly theoretical. Proofs of Concept (POCs) often stalled due to technical immaturity and a disconnect from end-user needs.",
+      "published_ts": 1770126808,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/Photoroom/prx-part2",
+      "title": "Training Design for Text-to-Image Models: Lessons from Ablations",
+      "summary": "Training Design for Text-to-Image Models: Lessons from Ablations\nWelcome back! This is the second part of\nour series on training efficient text-to-image models from scratch\n.\nIn the\nfirst post of this series\n, we introduced our goal: training a competitive text-to-image foundation model entirely fro",
+      "published_ts": 1770117953,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.octo.com/de-6-mois-a-2-jours--la-revolution-llm-pour-le-traitement-documentaire",
+      "title": "De 6 mois à 2 jours : La révolution LLM pour le traitement documentaire",
+      "summary": "De 6 mois à 2 jours. De 100 000€ à 500€. Les LLM multimodaux (GPT-4 Vision, Gemini, Claude) révolutionnent l'OCR et l'extraction automatique de documents. Fini l'entraînement de modèles, les datasets annotés et les pipelines complexes. Un prompt et une image suffisent. Retour d'expérience sur projet IA RAD/LAD : CNI, RIB. Code et benchmarks inclus.",
+      "published_ts": 1770102610,
+      "source_name": "OCTO Talks!",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://analyticshour.io/2026/02/03/290-always-be-learning/",
+      "title": "#290: Always Be Learning",
+      "summary": "From a professional development perspective, you should always be learning: listening to podcasts, reading books, connecting with internal colleagues, following useful people on Medium and LinkedIn, and so on. Did we mention listening to podcasts? Well, THIS episode of THIS podcast is not really about that kind of learning. It’s more about the sort of organizational learning that experimentation and analytics is supposed to deliver. How does a brand stay ahead of their competitors? One surefire way is to get smarter about their customers at a faster rate than their competitors do. But what does that even mean? Is it a learning to discover that the MVP of a hot new feature…doesn’t look to be moving the needle at all? Our guest, Mårten Schultzberg from Spotify, makes a compelling case that it is! And the co-hosts agree. But it’s tricky. Links to Resources Mentioned in the Show (Article) Beyond Winning: Spotify’s Experiments with Learning Framework (Article) Two Questions Every Experiment Should Answer (Platform) Confidence by Spotify (Article) Choosing a Sequential Testing Framework — Comparisons and Discussions (Article) Bringing Sequential Testing to Experiments with Longitudinal Data (Part 1): The Peeking Problem 2.0 (Article) Bringing Sequential Testing to Experiments with Longitudinal Data (Part 2): Sequential Testing (Article) Risk-Aware Product Decisions in A/B Tests with Multiple Metrics (YouTube Channel) 3blue1brown by Grant Sanderson (Article) Escaping the AI sludge…why MVPs should be delightful (Conference) DataTune in Nashville: March 6-7, 2026 (Conference) Marketing Analytics Summit in Santa Barbara: April 28-29 (Article) The next data bottleneck by Katie Bauer Photo by Jason Dent on Unsplash Episode Transcript 00:00:05.75 [Announcer]: Welcome to the Analytics Power Hour. Analytics topics covered conversationally and sometimes with explicit language. 00:00:15.90 [Tim Wilson]: Hi, everyone. Welcome to the Analytics Power Hour. This is episode 290. I’m Tim Wilson, and I’m joined for this episode by Val Kroll. How’s it going, Val? 00:00:25.38 [Val Kroll]: Fantastic. Excited for today. 00:00:28.80 [Tim Wilson]: Outstanding. Unfortunately, we were supposed to also be joined by Michael Helbling for this show, but he’s gone all on brand for the winner and gotten the flu. Luckily, as we’re into our 11th year of doing this show now, we’ve learned a thing or two about rolling with the punches. And as it turns out, learning is the topic for today’s show. I mean, it’s implicit in all forms of working with data. We’re looking at analysis or research or experimentation results and hoping, just hoping that we come out of the experience with a deeper knowledge of something. I mean, and hopefully it’s something useful, more knowledge than we had before. It’s a simple idea. Sometimes though, it’s a little harder to execute in practice. That’s why we perked up when we came across an article from some folks at Spotify called Beyond Winning, Spotify’s experiments with learning framework. We’re excited to welcome one of the co-authors of that piece to today’s show. Mårten Schultzberg is a product manager and staff’s data scientist at Spotify. He has a deep background in experimentation and statistics, including actually teaching advanced statistics in a prior role for a number of years. So who better to chat with about learning? Welcome to the show, Mårten. Thank you so much. Excited to be here. Oh, right. It’s a borderline giddy about the topic as we were diving into our excitement before we hit the record button. Yeah. 00:01:59.34 [Val Kroll]: We definitely fought over who got to be on this one. 00:02:05.69 [Tim Wilson]: Mårten, in the article that I referenced in the opening, which we’re definitely going to link to in the show notes, it’s a great read, you and your co-authors make the distinction between a win rate and a learning rate for experimentation. That’s the premise of the article is this win rate. this learning rate as a proposed metrics or a metric that’s actually in use. That seems like a good place to start. Maybe can you explain what you were seeing as a drawback to too much focus on win rate as a metric for experimentation programs? 00:02:43.90 [Mårten Schultzberg]: Yes. I think it needs to take a little step back. I think it started with When we rolled experimentation out at Spotify properly, like at scale 2019-2020, we quite quickly realized that one of the biggest wins that we made over and over again was to detect bad things early and being able to avoid them. So using it as a sort of dodge-bullets type of mechanism. And we have used it like that since. It’s one of the biggest reasons why we run so many experiments. We want to avoid shipping bad things that happens, you know, unintentionally. Side effects and stuff like that. And at the same time, I’ve seen over the years a lot of blog posts and papers published about win rates from other companies. Win rates as in the rate of experiments where you find a variant that is better than the previous variant and you ship it. So a clear winner. And so I just felt that it was sort of under celebrated all of the other types of wins that you can make besides finding something that was better than the current version. And I also think that it doesn’t really reflect how most companies, at least the companies I’m familiar with, are actually using experimentation. They’re using experimentation partly to optimize things. So to find winners, to continuously improve something and optimize it. But that’s only one part of that puzzle. The other part of using it as a mechanism for safety and safety net is something that wasn’t, I think, talked about enough. And so that’s sort of where this sprung from. 00:04:22.92 [Val Kroll]: I love that. And the one thing though that I think is, I would love for you to talk a little bit about more, that I think even if an organization was like, yes, like in spirit, I completely agree with that premise, Mårten. It seems like using a metric like learning rate seems squishy. Like win rate is objective. We can tally that in a column and calculate that percentage. But can you talk a little bit about how you thought about the criteria for determining how you say, yes, we learned something from this experiment or how it’s defined. 00:04:56.01 [Mårten Schultzberg]: Yeah, and so yeah, I want to firstly call out that this was a team effort. It was a lot of people involved. It was driven by the central experimentation team at Spotify, but there was also a lot of other data scientists that are actually doing product work that was involved in this discussion. We had a lot of really good discussions actually about what learning means and when you actually get value from an experiment. And so I just want to call that out. And I think We see it as there are essentially three ways that you can learn from a Navy test. One is that you find an obvious winner. So what other people refer to as win rate. So you find a version that is better than the current version. The other one is that you find that the current version was worse somehow, that you detect something bad, that you detect the regression or Often that can be, you know, not only that users didn’t like it, but more that maybe something went wrong with some integration somewhere, so you get latencies increasing or crashes increasing. And so those are quite obvious wins, so the finding better stuff and avoiding worse stuff. And then there is the middle one, which is more nuanced, which is when you run a well-planned experiment and you find nothing. So a neutral experiment, which is, I guess, vague. But what we count there as a win is an experiment that actually had a sample size calculation before that did a proper power analysis and said, hey, I want to have a certain power of finding an effect if it exists. And then they ran that experiment according to that plan, and they found nothing. We also view that as a learning, because at that point, they can actually, with the certainty that they hoped for, say, no, there was no effect from this change. So the neutrality in that case is informative, because you can say, hey, maybe this is not worth pursuing, because we actually ran a proper experiment. If there was an effect of the size that we were interested in, or that we hypothesized, we would have found it. So there are those three cases. And obviously that middle one, the neutral one, is a little bit more complicated. It’s more complicated to implement or to instrument because you need to know what sample size calculations were run and if the experiment actually met the planned sample size and all of those things. Fortunately for us, in our tool, it’s fairly easy to do. But yeah, take some thinking to get that right. 00:07:27.62 [Val Kroll]: I’m literally writing those because there’s so many things I want to dig into. But before going to the 5,000-foot view, I guess I’m just curious about the culture change internally. with so many people with access to run experiments and this appetite for experiments, what was it like to get them to shift away from the win rate to this other new metric that you rolled out? I’m just very curious what that experience was like if there was resistance, if there was excitement, or some people were really questioning it. 00:08:01.99 [Mårten Schultzberg]: There’s always people questioning everything at Spotify, which is one of the things that I love about Spotify. So that’s a constant. But yeah, I think because of the fact that we so early realized that experiment was such a powerful tool to avoid mistakes and to detect bad things early, I think that the sort of common definition of learning was already incorporating that aspect of experimentation. I think a lot of people has sort of over the years learned to, I should not use the word learned, come to appreciate that, yeah exactly, come to appreciate that avoiding something bad is a great learning and something that is super valuable for product development. So I think that part was not so controversial when we developed this metric. I think the neutral one is trickier and there’s also It’s a much more room there for discussions about what should count, should you be super strict about that it should be exactly powered, should you allow some wiggle room, there’s a lot of things that you can discuss there. We were eager to get a very clear and explicit definition out and we were also eager actually to write about it externally because we were hoping that other companies would, and I guess this podcast is a good example of that too, that we could have this discussion because I think it’s been I’m really curious how other people think about this. I’m not convinced that our definition of learning is like the ultimate one or the final one or anything, but I think it’s a good first step away from the more naive, only wins count definition. 00:09:53.50 [Tim Wilson]: The raging cynic in me would be, well, gee, if people realized that’s a way to game the metric would be to run really inconsequential small tests, which at the same time, the analyst in me thinks that, yeah, that happens with analytics a lot, that you’re kind of digging in and trying to find something. You’re like, well, somebody thought there would be some relationship here and we’re just not seeing it. And that can be equally unsatisfying for the analyst. So like, how do you think about neutral being, we were trying something that did have a legitimate chance of being meaningful. And maybe this kind of bridges to another article that you wrote, which is, you know, like, how do you say neutral, but not have neutral become a crutch for, yeah, we’re essentially doing AA tests and, you know, giving ourselves two thumbs up on the learning rate. 00:11:01.44 [Mårten Schultzberg]: That’s a great question. I think we’ve been thinking a lot about what a healthy distribution should look like. A healthy distribution of different types of winds and also the proportion of neutral experiments. And I think that’s actually a super interesting topic. I think depending on what kind of strategy you have here from a product side, you can want to have different distributions. So for example, if you take the If we wait with the neutral one, because it’s maybe a trickier one, but if we think about how many experiments should you find regressions in that you dodge versus the win rate, how should that distribution look? Well, that will depend on a lot of things. But if you’re a company that has everything to win and little to lose, then maybe you can afford to have a high rate of just trying stuff. Because whenever you find a win, it’s going to be quite big because you’re still in early stages, whereas if you’re If you’re a product that is already very mature, then maybe you have other goals for those things. It’s a super interesting discussion to have, and that’s one of the discussions we’re having now with teams at Spotify and other people that are using our experimentation tooling. What should we do with this information? And what’s good and what’s bad? And I think it’s different for different parts, even of organizations within Spotify. What’s good, depending on how they’re looking at it. But for sure, we wouldn’t look at the learning rate only. So we would say we want the learning rate to be reasonable. But then we, of course, should probably aspire for having a high win rate. That’s nothing bad in itself. But at least if we have a high learning rate, we know that we’re not wasting our experimentation efforts. We know that experiments we’re running, we’re actually learning from. If we’re running a ton of experiments that are not powered and neutral, then we will never be able to say these things didn’t have an effect. We can’t separate between if these things didn’t have an effect or if we just didn’t run a good enough experiment to detect it. So on the one hand, you look at the learning rate and say like, hey, we want to utilize our experimentation bandwidth really well. So we want to have a high learning rate at all times. But then at each quarter, you can look at this metric and the distribution of these outcomes and say like, hey, you know what, we’re dodging a lot of bullets, but we’re almost never finding something good. Should we rethink our strategy or even more, if we’re finding a ton of neutral results and we see more and more neutral results in some part of the organization, maybe we’re hitting diminishing returns and we should try something different. Maybe we found some kind of local optima, maybe, or something like that. So I think it can be a quite strategic instrument if you have all of these, the distribution of all of these outcomes as part of the learning metric. 00:13:52.61 [Michael Helbling]: You know what’s worse than writing SQL? Probably writing that same SQL for the third time because you forgot where you saved it. 00:14:00.54 [Tim Wilson]: or explaining to an LLM for the 10th time that your GA4 medium field is a mess because three different interns had three different naming conventions. 00:14:10.59 [Michael Helbling]: Yeah, like organic, organic underscore social or, I mean, it’s like a crime scene of good intentions. 00:14:18.34 [Tim Wilson]: Which is why Askwise Skills feature really helps. 00:14:22.20 [Michael Helbling]: Record that data cleaning nightmare once as a skill, reuse it across different datasets, portable expertise, and their jam memory system remembers context, like the July data is doubled or use the product table, not staging. Exactly. 00:14:39.18 [Tim Wilson]: It’s context focused, not just code focused. Plus your data never touches the LLM. Semantic layer generates code that runs locally. 00:14:48.33 [Michael Helbling]: where your data presumably won’t judge you for that medium field situation. We can hope. We’re going to ask-y.ai. That’s ask-y.ai. Use code APH to jump the wait list and stop paying the context switching tax. 00:15:07.37 [Val Kroll]: That’s making me think as you were talking about that, that like even within an organization, like you were saying like companies who have everything to gain or you know, I think everything to Nothing to lose. I forget exactly. I never get that right. Well, apparently I can’t either. But even within Spotify, thinking about the different product teams that if it’s a group that’s working on the cancellation flow and thinking about retention, they’re probably having very different distribution of those outcomes as their goals or targets versus playlist creation which is like such an established user pattern is that like how you customize some of those conversations from like the center of excellence experience like perspective to kind of consult with those teams. 00:15:56.79 [Mårten Schultzberg]: Yeah, let’s say so, but I also add that there’s a lot of centers of excellence when it comes to experimentation at Spotify. Fortunately, we have many parts of the organization that have super strong experimentation organizations or champion groups or nerds. I like to think about it. I mean, look who’s talking. But anyway, no, but so I think, so that discussion happens locally in a lot of places and a lot of people are having those discussions. So it’s not like sometimes we get, you know, questions about how to think about things. And also, one interesting aspect of this metric is that sometimes you might find that You know, if you’re actually, we didn’t talk about, there’s one outcome here that we didn’t talk about, which was the, when you get an invalid experiment where something is wrong with the setup of the experiment. That’s the final sort of outcome in this learning framework. So you didn’t learn because something went wrong. For example, something went wrong with integration. Maybe you got imbalanced treatment and control group assignment for some reason, or you don’t get all of the data that you should get or something like that. And that’s of course an outcome that is the least fun one, so to speak. It’s just like, yeah, we couldn’t get this integration to work well enough. So we have used that one and worked really hard on getting that to as close to zero as possible. We want it to be possible for anyone to run a really high quality experiment. With Spotify running experiments on so many different devices and apps and combinations of those, it’s really tricky to always nail those things, but it’s obviously an important signal. So whenever that one is high, that’s something that teams come to us with and say like, hey, we don’t get our integration to work as well as we want to, how can we improve these things? And also when it comes to the neutral aspect, the quality of the sample size calculator starts mattering a lot. So whenever someone sets up an experiment and we try to predict what sample size they need, it’s a prediction, right? We’re looking at historical data saying like, yeah, well, given how historical data has moved, the variation in that data and the means and the treatment effects that you say you’re interested in finding, we think that you need to run your experiment for this long to reach this many users. And that’s a prediction that takes a lot of things into account, but it can always be improved probably. So that’s also a conversation that we sometimes have when people are like, in our use case, the sample size calculator is not good enough. 00:18:33.77 [Tim Wilson]: But that is a case where you, that’s one where you would come back. Like what is the scenario where you run it, they’ve got a MDE, they’ve got the estimates, you’ve got the sample size calculator, it says run this. If it comes back, I’m trying to understand the distinction between, actually, we probably just didn’t run this long enough versus, well, for what we ran and what parameters we put in, it’s a neutral result. Is there a distinction there? 00:19:13.12 [Mårten Schultzberg]: I can speak a little bit to it. In practice, when we do the sample size calculation, I don’t know how technical and nerdy I’m allowed to get here, but given the name of this podcast, I’m going to go deep. 00:19:26.24 [Tim Wilson]: We don’t want to hit if Matt Gershauf would have to think about it for a minute, that’s a little bit too technical. 00:19:34.37 [Mårten Schultzberg]: No chance, no chance. This is bread and butter for him, promise. No, so we never know the variance of the treatment group, right, before we run the experiment. We can always just think like maybe it will be a homogeneous treatment effect, or we could, I suppose, speculate about how the treatment will affect the variance, but it’s always gnarly, it’s difficult to do. So what we do always in practice, I think everyone essentially is saying like, let’s presume that the treatment effect is homogeneous. In practice, of course, when we start running the experiment, maybe the treatment effects only part of the treatment group, which will then disperse the distribution. If we have a beautiful distribution to start with, but some people get the large treatment effect, you will make the variation of that distribution larger. So the variance in that group will be larger. So the required sample size will go up. We do, in confidence in our experimentation tool, we do both. So we have the pre-experimentation sample size calculator, which uses historical data to make this prediction. And then during the experiment, we’re also collecting the data from the experiment and running the subsize calculation continuously. I actually wrote a paper about that. I think there is a blog post about that too. If someone wants to nerd in on that, that it’s actually valid to look at the power during the experiment. It’s a peaking that is non-problematic. You can look at that. Anyway, so you have those and you might have a big discrepancy then. So when you start the experiment, you might think that, hey, I can run this for two weeks. I will reach my whatever 10,000 users that I need. But then when you run it for a week, you realize that like, no chance. I will reach much less or I will need much more, maybe more likely. I thought I needed 10,000, maybe I need 40,000. And that’s just not possible given the traffic that I have on this page. And in that case, it might be done a conversation about like, hey, how can we make this better? And so one way that we do it in practice is that we say like, okay, maybe instead of us trying to predict it, you can point to a similar experiment. If you know you have a similar experiment, we’re changing the same kind of thing. But yeah, it’s a tricky thing. It’s a truly difficult problem to make good sample size estimations. 00:21:43.79 [Val Kroll]: And one thing that I found interesting, because there’s definitely like two different camps here, is that I hopefully I’m not putting, correct me if I’ve interpreted this incorrectly, that you do allow for multiple success metrics in this, which I know makes that a little bit more complicated. And I think it also talked about adequately powered guardrail metrics, deterioration metrics, quality metrics, which not a lot of organizations do or have the capability to do, but that was like, oh, well, definitely enough to talk a little bit about that. But how do you handle the multiple success metrics, especially if you’re looking at things further into the funnel that have a lower incidence? How do you think about that layer? 00:22:27.60 [Mårten Schultzberg]: Yeah. This is a rich topic. We have a framework for this that we have developed over the years. And it’s also a paper that is, I think, about to be published. It’s an archive, at least, where we go through exactly all of the details of how we’re handling the multi-metric that we call decision framework, statistically. But I can give the short version of it. So essentially, what we’re saying is that we have an explicit decision rule for the multi-metric setup. So we have success metrics and guardrail metrics. So success metrics are metrics that you want to improve, and guardrail metrics are metrics that you don’t want to harm. And so, for example, at Spotify, maybe we want to improve the music consumption, but we don’t want to harm the podcast consumption. We don’t want to do it at the expense of podcast, for example. So if you’re making a new music recommendation algorithm, you don’t want to harm any other consumption. And so the decision rule is essentially that at least one of the success metrics should have improved and none of the guardrail metrics should have been harmed. There are a lot of nuance here, because for the garter and metrics we’re using so-called non-inferiority tests, which makes everything much more complicated to talk about, but leaving that aside, it means that when we’re talking about power and false positive rate, we’re talking about the false positive rate and the power for that decision rule. So we’re saying we want that decision that we would make based on this rule. So at least one of the success metrics are significantly better, and none of the garter and metrics are worse. We want that to be the false positive rate of intent, and we want to have the power to detect given the sample size. So we have to make the adjustments for multiple testing corrections accordingly, and then we have to make the power and sample size calculations accordingly. things to fiddle with there. But in principle, since the guardrail metrics all have to be not harmed, they are not giving you additional chances of succeeding, so you don’t have to correct for them in the same sense. But at the same time, you have to power them simultaneously, because all of them has to show simultaneously that they weren’t harmed if you’re using non-inferiority tests. I’m deliberately avoiding going in too much to know if you were to test because it’s like such a tongue twister to talk about. But if you’re interested in… You still said it eight times. 00:24:51.78 [Tim Wilson]: Good. 00:24:52.60 [Mårten Schultzberg]: Yeah, no, but that was… No, but it’s tricky. So, yeah, so that’s how we do those things. So it’s a bit messy, but… 00:25:02.95 [Val Kroll]: So back to the culture side of this, how do you coach product teams to not just pick 50 success metrics? Because they are so excited about this new feature. It came from up high, and we really want this to, we want to find some success. And obviously, there’s a statistical part of it, like the correction, but culturally, how do you guide that conversation away from? No, it shouldn’t be like a pick list of up to 75 metrics to find something that went quote unquote up. 00:25:36.58 [Mårten Schultzberg]: Yeah, yeah, yeah. No, I mean, this is a conversation that we have. I think it’s Spotify. It has settled, but like this is a conversation that we have from time to time. And I think it’s a It’s a sort of healthy discussion to have because it’s not… I think this is more tricky than it might seem. I want to give the answer that, no, but of course you should just have a discussion and decide on the metrics. I’ll come back to that because that’s ultimately what we do a lot at Spotify, but there is more to it. There is also the fact that we’re making a lot of changes and we are truly interested in any kind of effect that it has. It’s a true statement that if actually this change that I made affected a metric that I didn’t think about, like some weird metric, weird from my perspective metric, if that was truly the case, I would want to know. So from one perspective, I can really understand this. I want to look at all of the metrics and just see which one that I affected. But then on the other hand, you get this obviously super hard problem of like, cursor dimensionality type issues here where you’re looking from too much, so you’re either just going to find noise, or you’re going to find noise, and then you have to control that, and then you’re going to have, instead, very low power to find things. But I think there is merit to the type of experiments where you’re just like, I just want to see what happens when I do this. And I don’t really care. Of course, I care what it is that happens, but I am ultimately interested in all things. But in practice, of course, this is hard. So again, at Spotify, it’s not like the central experimentation team, which I’m part of. building the tooling, we are not dictating these things. It’s rather the other way around that we are, I like to think about it as that we are sort of cultivating what the teams that are doing experimentation are thinking about this. So we have a lot of discussions with them. So the way it works as Spotify is that we don’t decide the defaults and how things should work in the platform. It’s rather that we talk to all of the product teams that are experimenting the 300 teams in various forms and then We collect what they’re saying, and we’re refining it, and then we’re putting that into the tool. So when it comes to this, how many metrics you should have, there’s not one answer at Spotify. It’s different in different parts of the organization. But in most of these parts, there have been very explicit conversations where people have talked about, like, hey, how should we trade off here? actually getting super high precision in the things that we know we’re interested in versus getting interesting insights and stuff that we could be interested in. And this is sort of traded off in various parts of the organization and in various projects, depending on how and what stage those projects are. If it’s like a very new product, then you probably see, or you often see experiments with much more metrics because you’re just interested in understanding what happens when we ship something like this, what kind of behavioral changes does this cause? Whereas when we’re optimizing something, then we’re like, okay, we know pretty well what we need to measure here to do this and to optimize this in a healthy way. 00:28:38.19 [Tim Wilson]: to Spotify, massive user base, a lot of the ability to design, to try to cover and still be sufficiently powered seems doable. I’m thinking of a client we had that was in that same boat. It still feels like the risk, the slippery slope, fishing expedition of let me tell myself a story that I just want to see if it impacted anything. And the understanding required that if you go on a fishing expedition, you are, I think, if I understand correctly, your false positive rate can go way up because you detect noise as a signal, which then when you detect it, you get really excited. Nobody can rationalize why this metric changed. It turns out it was noise. Now we’ve wound up doing negative. We’ve learned something incorrect potentially, unless you have the discipline to say, if we’re going to chase that, we need to come up with a theory, and we need to have the rigor to validate that theory before we accept it as fact. That just feels coming from an analytic side, similar sort of thing. If I just point the machine at all the data and it finds anomalies or finds patterns, there’s a very good chance that it’s detecting noise that just happened to hit at a point where it can show some statistical merit. Somehow, some part of me is just terrified. While I love getting comfortable with We looked for X, we did not find X. That is still a learning and let’s work with our business partners to acknowledge that’s a learning and not have them just chasing for everything. That also feels like a challenge, you know? 00:30:40.48 [Mårten Schultzberg]: Yeah, no, no, I mean, I agree with everything you say, but I also feel like, I mean, I have the same uncomfortable feeling in my body when I think about this, like, let’s look at all of the metrics from a statistics perspective. But I also just like, I really want to, I also think it’s a cop out, not projecting on you now, Tim, but for myself to say like, you know, to say like, you know, We can only look at the metrics that we decided before because we decided that we found nothing. Let’s move on because it’s also obviously true to me somehow, even though I can’t come up with this is how you should do it and this is how it won’t lead to these incorrect learnings that you mentioned. But it feels like it’s a hard argument to make when someone says, yeah, but I looked at some other metrics and I learned something. And then you’re like, maybe you did, maybe you didn’t. And I can think about ways that you could do this. You could do sample splitting and stuff. You could take one part of the sample and look for groups. And then you could validate those findings in another part of the sample and stuff like that to make it much more plausible. Again, you would have the issue then of having lower powers actually find things, or lower precision at least. I just don’t want to be too much of a… Curious? Yeah, or like a grumpy statistician kind of person. But I do, I mean, I agree. I have the same feeling and I haven’t seen anyone do it well. So what I’ve seen is that people have used the argument of saying like, yeah, we must be able to be able, you know, it must be possible to learn more and then just throw all of the metrics at it. And then I think they’re just as well. Like that’s just as bad as not doing it, I think. So I don’t have an answer to it, but Maybe someone smart listens and then they can call me. 00:32:22.39 [Val Kroll]: Yeah. Let us know in the comments. 00:32:24.08 [Tim Wilson]: I mean, I, I mean, I, and I don’t know that this is the answer, but I’m, it does feel like, well, if you, if you throw that at it and you find something figuring out how to have the, the step, which is probably a combination of a data scientist or a statistician with the product manager to say, we need to come up with a, plausible theory as to what’s causing that surprising thing. And we need to have somebody with their bullshit meter turned on. Cause I mean, I’ve certainly watched people find things and they come up with a bullshit theory. They’re like, well, this is clearly happening. Cause obviously like left-handed people, when they’re in the Southern hemisphere, it makes sense that they would prefer the color blue, you know, and something that’s, It’s a theory that fits the data, but it’s not a theory that holds up to human scrutiny. 00:33:25.16 [Mårten Schultzberg]: I think one thing that I’m excited about is replication. I think if you have a streamlined enough way to run experiments and you have your velocity throughput for experimentation high, then one true possibility here is to replicate, to just say like, okay, I looked broad and deep here and I found something. I believe in it. I think I’ve made my people in the sudden hemisphere argument, but I believe it. And then for anyone who would say, I believe in it to the extent that I will now launch a new experiment, take 10% other people or a new random sample and run it again with only that metric or only the new metrics that I care about. And if I can repeat it, then I will ship it. Then I would be like, yeah, go for it. 00:34:16.19 [Tim Wilson]: Or potentially, if the theory is, well, it was this kind of incidental thing that happened to be part of it, but it wasn’t the core focus when we run an experiment where I’ve doubled down on that to say this should now I should now really detect a strong signal because it’s backing that up. 00:34:39.73 [Mårten Schultzberg]: That sort of touches a little bit on the other blog post that you mentioned that has to do with what the intent with an experiment is. I haven’t really talked about it yet. 00:34:51.12 [Tim Wilson]: Let’s talk about that one. Boy, I got giddy on that one too. 00:34:56.65 [Mårten Schultzberg]: Should you want me to give the TLDR on that one too? 00:34:59.45 [Tim Wilson]: Yes, please do. 00:35:01.50 [Mårten Schultzberg]: Yeah, so the idea with that one is I often have like it has sort of come from a lot of the conversations that we’ve had with people running experiments, talking about the learning framework. And then people are like, hey, we have a lot of neutral experiments here. We run high quality experiments, but we don’t find things. And so one thing that I’ve sort of identified from working with teams that Spotify, but also externally other companies is that People are often sort of starting to optimize the idea in their head before they’ve tried that the idea is at all something that will affect the user users. And so what I mean by that is that people are, you know, when they identify something that they think is like, this is important for our users, like, let’s, let’s use a stupid example, like a button color or something, you know, like we think it’s important. And then immediately, instead of saying, OK, we should first answer the question, is it important or not? Do users care or not? Instead, they immediately start thinking about which color is the best. And so they jump from, we have no idea if people care about this to having the conversation about which color is the best. So sort of presuming that people care at all which color this has, besides having a high enough contrast so you can see it. And so this blog post was me just trying to formulate that, like the distinction between identifying if an aspect of your user experience is something that you can optimize if it has sort of an effect on users in any way, people care about it on the one hand, and optimizing that once you have identified that it’s something that people care about on the other hand. So sort of identifying something versus optimizing something. And so I think that this thing that we talked about now is a little bit about maybe if you run an experiment where you thought something, you thought that it was important with some aspect, or you tried to optimize it, and then you find something something new, some metric that you didn’t anticipate to move. That might cost the sort of idea in your head to be like, hey, maybe there is a mechanism here that people care about. Maybe people actually care about how many items we show on this screen. I was thinking about the ranking, but as a side effect of that, we showed more things. So we saw that, I don’t know, lower down that the list clicks increased or something like that. And maybe that’s an indication that this is a mechanism that people care about. I think this going in between the states of identifying something to optimize and optimize the thing you have identified and doing that explicitly and deliberately is something that a lot of product teams would benefit from. It’s easy to fall in the trap of trying to do both at once, I think. 00:37:48.86 [Tim Wilson]: Totally. Is a cousin to the optimizing I mean, the framing of say, which is kind of a, I think it might even be in the article, like the case for taking a bigger swing, take the big swing first, make sure that connects, even if it’s a, you know, in a while, it’s like, yes, there’s something here, now we can tune it. And that, I think of it from a, I mean, from a marketing analytics perspective, where companies will say, Let’s just try it out and see what happens. It’s kind of a death knell. It’s going to be an underinvestment in a new channel or a new tactic where logically, it’s going to be really hard to detect a signal because it winds up getting kind of tempered down to a pretty subtle change. The logic is, well, if this thing actually matters, then we can make a nominal investment and we’ll see this outsized lift as opposed to saying, does this matter at all? Double down on it for some period of time. Go hard. See if you actually see something and then say, okay, we definitely need to be in this channel or using this tactic or doing this to the user experience. Now we need to sort of figure out Did we actually spend twice as much as we needed to, we can get the same? Where are the diminishing returns? It does feel like culturally it’s a tough, human nature is risk averse. Saying, try something and know that you’ll find that it is okay to find that it didn’t work. A big swing with a neutral result feels like it has a lot more merit than a little small tap with a neutral result. That’s the fun in that. 00:39:39.89 [Mårten Schultzberg]: That’s precisely it. This actually what provoked me to write it was discussions about the neutral outcome in the learnings framework where people are like, people are like, yeah, but neutral is no fun. I don’t care if it was powered or not. I don’t want neutral. And that got me thinking, well, if you don’t like the neutral result, it means that the question you posed wasn’t interesting enough. Because I would be like, if I’m convinced as a product person that people care about this thing in our app, if I change this, people are going to care. And then I make a drastic change and nobody cares. I’ve run the experiment, I have high precision in my estimates and nobody cares. If that’s not the learning to be excited about, I don’t know what is, to be honest. That really shows that I’m 100% off with my understanding of what people care about, which is truly strong learning. But on the other hand, this change that I made was like, yeah, I really think our users care about this aspect and I made a minuscule change to it and I didn’t find anything. I might think for a long time about if this was the right change that I made, or if it was… You just get stuck in weird things. But one way that I have sort of sold that, because I agree that people are risk-averses to run both. If you run a neighbor test, people tend to want to be like… But I think I know what users like. I want to go for the identify and optimize at the same time version of this thing, where… I try to choose the right value for my customers or my users. But I also say, just also add then, if you haven’t actually identified that this is something that people care about or that matters for your business or where it might be. Add the more sort of provocative version. I call it maximum viable product, I think, because of course, this has to be reasonable. If you make some button larger than the screen, then of course, you’re going to see some change. So it has to be within the limits from what is still a usable function, but that is still extreme. So the maximum change that you think is like, but this is still, this is not 00:41:48.80 [Tim Wilson]: You’re saying doing that within kind of a multivariate, say we’ve got our control, we’ve got what the optimized and identified at the same time version, and then we have an identify only version. And it’s okay if that identify version detects like the biggest effect, you can say, yeah, that was kind of hedging to make sure that that we got something out of it. And if that one that was identified and optimized simultaneously didn’t, then we’re probably still on a good track. It just turns out we’re not so omniscient that we can come up with the perfect variant in one shot. 00:42:30.52 [Mårten Schultzberg]: I think it’s smart also from, I mean, a lot of companies at least, Spotify and other companies that I work with, they’re all struggling with having big enough sample size, right? both because they have limited traffic, but also because they’re interested in small effects, generally speaking. But the nice thing about making a very drastic change is that it should have a large effect. If you’re making this maximum viable change, then that should cause a large effect. So you should be able to say, yeah, but now I pull this lever as hard as it’s possible to pull. So this should cause maybe 5% change, like whether it’s good or bad. And so you can maybe run smaller experiments. If you’re in a situation where it’s hard for you to know what you should, like you have a hard time finding bandwidth essentially for optimizing things, then I think it’s a smart idea to do these more drastic changes to identify what you should then spend larger experiments on optimizing. Because the truth is that when you start optimizing, even if it’s a nice convex surface for this thing, button size or something, the closer you come to the optimum there, the larger samples you’re going to need to be able to identify those steps. 00:43:44.98 [Val Kroll]: It seems like the framing that I really liked in this article is the building the right thing versus building the thing right. And it feels like the stakes couldn’t be higher in everything you guys are just talking about in a product context because it’s not just about changing a button color. In a lot of cases, this isn’t about UX. It’s about adding additional features or different capabilities. and you’re hoping to impact things like customer lifetime value, not just did they get to the next screen, right? So it’s not just like checkout flows, right? I think I was thinking about this. I’ve actually spent more time than the average human should thinking about the changes that have been happening lately inside of my United app. So I’m United Loyal, I fly United and the app has been changing a ton lately. And we went from, there was one place where I could change my seat to every single screen within this app. I can change my, which I do appreciate. I’m definitely someone who loves feeling a lot of control over changing my seat. But I’m like, what were the conversations that happened internally that said, you know what? The user needs to be able to change their seat while they’re checking in their bag, while they’re checking to see what gate their flight is at. Anyway, just to bring this back to an actual question, building the thing right, and maybe the feature is great, the new functionality that you’re adding, but maybe you have gone about it the wrong way, which has impacted the ability for someone to understand What exactly this is capable of? Maybe it was a micro copy issue, or maybe it was in the wrong place in the flow, which feels more like optimization. Even though this framing and big swing versus small change, that sounds really objective. If you put them side by side, that’s clear. I’m especially interested because now you are in a product role to get a little meta about it. How do you think about what is, when would you ever recycle a concept in a different context? Because it does feel like the optimization killed your ability to understand if it was viable. 00:45:59.02 [Mårten Schultzberg]: The truth is here that this is difficult. I think especially starting with that building the thing right versus building the right thing. Some things you have to do quite a lot of building to even check if it’s the right thing. If you’re building a new feature, there might be a lot of things that you have to get in place to even see if it’s something that people cares about. once you’ve seen that they care about it, like maybe they don’t like it. And that’s because you haven’t built it right yet. So like, I mean, it’s this is a very stylized blog post, of course. But the truth is, is much more muddy. So yeah, I mean, in practice, I think that one of the things that have been discussed a lot that Spotify and other places is like, okay, but with experimentation, where is the room for the product intuition and making bets on things and stuff like that? And I’ve always liked to say that these are completely uh you know they’re they’re augmenting each other they’re helping each other like it’s no they you can make you can have this strong intuition still and you can make these bets what experimentation helps you with this actually validating that your bet was good and helping you change your direction if it wasn’t good and so What I’m trying to say is that, of course, sometimes, and maybe not even rarely, when we’re building experimentation tooling, we have to build for quite some time before we can answer either of these questions. And it’s hard to disentangle them even. So I’d say that we build a completely new feature for experimentation, then some new methodology or something. It’s hard to even have What’s the dimension along here I can test if this is a lever worth pulling? That’s maybe a question more for market research or user research, all those kinds of things. Yeah, so that’s the truth. I think it’s just a lot of, I think the teams that I’m writing this blog post for that I’m thinking about are the teams that sort of have a product already and they’ve been owning it for a while and they feel a bit stuck in terms of like they’re not getting the sort of return of investment rate that they would like from their expectation. They see that they have a lot of neutral results and they’re wondering if they should run much longer experiments or what they should do about it. But yeah, I don’t know. Felt like partly cop out from your question there. 00:48:30.79 [Val Kroll]: No, no, it’s good. It’s, I mean, there’s no clear question. 00:48:34.94 [Tim Wilson]: Come on, Ben. I mean, it’s, he basically said that it’s like, it’s like intuition with experimentation combines. It’s kind of like you need to combine like the facts and the feelings. 00:48:45.65 [Val Kroll]: I knew exactly where you were going with that when he said. Come together. 00:48:50.46 [Tim Wilson]: Cheesy. So. 00:48:51.58 [Val Kroll]: Okay, so. Before I lose the thread because I last question, by the way, because we’re, we’re don’t do that to me. No, no, no, no. I’ve got like three more, but I’ll go fast. I’ll go, we’ll go fire around. Okay. So you’re talking about, um, uh, no one really likes the neutral results talking about some intuition with product. I’m going to talk about those outcomes. So obviously if there’s a win positive outcome, it ships. If it hurt the experience, it doesn’t ship. If there was an issue with the test set up, you hit an SRM or whatever, it doesn’t ship neutral. I want to talk about that. Are there scenarios where the product intuition says, even though this was neutral, it makes sense for where the roadmap is going or some decisions we’re making from branding, like maybe we’re This is building towards a bigger bet in the larger ecosystem to make things easier to share, more social. How do you think about the ship or no ship kind of action as it relates to those neutral results? 00:49:51.28 [Mårten Schultzberg]: It’s a great question. My general recommendation there is that as long as you’ve decided before you run the experiment that you’re going to ship if it’s neutral, I’m all good with it. I think that there’s a ton of situations where it makes sense to ship something if it didn’t change anything, especially if you’re building infrastructural type changes or if you’re building towards something. We’re building a lot of Spotify, building out AI features, as everyone else I suppose, but there’s a lot of changes that we’re making to our infrastructure just to be able to support features that we’re planning to build. And when we’re making those changes, the idea is that we’re hoping that nothing will change. Maybe we’re doing stuff to make things faster or something like that, but that’s a bonus if it changes anything at any point. So there’s a lot of changes that we are expecting won’t make any difference. So what we do then is that we essentially run what we call rollouts where we only have guardrail metrics, actually. So we say, as long as As long as we can prove that we didn’t harm these metrics, we’re going to ship it. So then by using the rollout, you’re sort of declaring your attempt from the beginning that like, hey, we’re planning to ship this as long as it’s not bad, which can sort of be a quite nice way to just make it explicit. That’s completely fine. But then again, I think that I just want to add a small caveat here that they also, I’ve heard a lot of product people at Spotify and other places talk about that like, And this, even maybe if a metric doesn’t look great or if it’s neutral and stuff like that, there is this, I think, almost human fallacy to say, like, this is strategically imported, let’s ship it anyway. And so I think it’s, even though that’s true, and I think that’s why it’s sort of an easy fallacy to fall into, or like it’s an easy trap. That can be true, but I think everyone should think about how large proportions of the things we ship should be shipped from the argument this is strategically important. Pretty small proportion is my general sense. 00:51:58.64 [Val Kroll]: Everyone gets three here. Something like that. 00:52:00.88 [Mårten Schultzberg]: I would love if I could give people a budget for those kinds of things. I think it’s all about trying to avoid the pitfalls of changing the objective when you see the results. We do that all the time at Spotify. We’re shipping a ton of things that are neutral. A lot of them are shipped with rollouts where we just explicitly say, we are planning to ship this thing for some reason. It might be business statistically or we have to improve our back end to scale for more traffic or whatever it might be. We’re going to ship it. So we just want to know that we’re not harming things. 00:52:40.72 [Val Kroll]: I like that. Okay, so Tim, I’m sorry. I have to sneak in. So what you’re talking about here is a very nuanced It feels like a nuanced analytical discussion. Should this be a rollout or how should this be exactly validated? How do you think about the education? Because you’re not talking about an audience of 400 people who are deeply steeped in the analytics or the rationale for why you’d make some of those choices. How do you think about the education piece to these different product teams? 00:53:14.68 [Mårten Schultzberg]: Yeah, I mean, it’s super important. So I’ve spent, I wouldn’t say majority, but a very big portion of my time at Spotify building educational material and mechanisms for this. I think that we have, I think, two strategies for this. I think the first one is to keep the the tool as simple as we possibly can, so have as few options as possible. So we’re talking about a lot of nuanced stuff here, but we also have removed a lot of stuff from our platform and simplified a lot of stuff and removed a lot of options, so made it quite opinionated. to minimize the things that people actually have to understand and know. So that’s one side. On the other side is that we have very explicitly and deliberately built educational material and tooling for experimentation for many years. So with confidence, we have this whole boot camp of self-serve courses. We’ve also given a bunch of courses. We have something called Quick Starts, which is a very basic tutorial for like, this is how you run an experiment, this is how you run a rollout. and those kinds of things. I know it’s a super important thing, but I think it has to come from two sides here. You have to try to make the thing that people should learn as simple as possible because people don’t have time. People have a lot of other things that they need to be good at and learn and understand, and then you have to create the material so that they can learn those things that they have to learn. That’s our solution to that. I mean, we have thought a lot about that. There’s a lot of things that everyone that joins Spotify is onboarded to experimentation immediately, and they go through certain what’s called golden paths at Spotify, which is like onboarding to certain things. And so if you’re a mobile developer, then you learn how to work with our feature flags in mobile, and you run an AA test as part of your mobile engineer. onboarding, for example. So there’s like, we have infiltrated the whole organization with experimentation onboarding and materials. And that has helped. 00:55:22.91 [Tim Wilson]: Wow. Wow. And Val, I’m going to have to put some duct tape. I was like… And we’re going to have to move to wrap. But I just have seven more. Val and the role of Moee Kiss on this episode. 00:55:35.21 [Val Kroll]: Yeah, right? 00:55:36.49 [Mårten Schultzberg]: No. I have zero stress at least, so don’t worry about me. 00:55:42.56 [Tim Wilson]: Well, this great discussion, I love sort of the thinking about what are we doing, why are we doing it, and how can tooling and education and culture and framing all sort of come together. So thanks for coming on for this discussion. But before we leave, the last thing we do on the show is go around the horn and we share a last call, something that might be of interest to our users. And Mårten, you’re our guest. Do you have a last call you’d like to share? 00:56:20.13 [Mårten Schultzberg]: Yes. So one thing that I’m completely, like I have been for actually for many years, but now renewed is the YouTube channel Three Blue One Brown. If I’m not the first one, that just makes me happy because it’s the best. The thing that I’m particularly thinking about now is the videos on Transformers and LLMs. This YouTube channel is essentially a channel that visualizes a bunch of math. That sounds maybe not fun, but it is so insanely good. They have a long series on linear algebra that I think if I would have actually seen it when I was taking linear algebra, it would have helped me a lot. But they also have a bunch of super, super nice things on LLMs and Transformers, which I think is like If you are, like most people, like hearing that word many times and you have like, yeah, it’s some kind of neural net. Maybe I haven’t used a neural net once or twice, but like you have no idea really how it works. Those videos are so very, very good. So I recommend them highly. 00:57:33.50 [Tim Wilson]: We have reached out to have, we had an exchange trying to get him to come on the show. I think it might have been around to talk about neural networks. He was in the process of like moving. So he’s on our list to try to get him on. That’s a- Good reminder. That’s a good one, good reminder to go back because they are, they’re like, I’ve sampled some of those and I’m like, this is so clear. And how does a human being have the time to produce something like this? 00:57:59.15 [Mårten Schultzberg]: Yeah, I mean, Grant Sanderson who has that channel. I mean, he seems to be like one of the true geniuses alive. Like, I mean, just a side note here is like he’s doing this super nice like animations of math and you just built that library himself, the library he built. It’s just… 00:58:19.19 [Tim Wilson]: Come on. We’re going to use this call out when this comes out to reach out to him again and say, hey, come chat with us. 00:58:27.48 [Mårten Schultzberg]: I would listen 100%. 00:58:29.52 [Tim Wilson]: Awesome. Val, what about you? Do you have a last call? 00:58:33.83 [Val Kroll]: I do. And it’s actually related to today’s episode. So this is a medium article published on Unix Collective, article written by James Skinner. It’s called Escaping the AI Sludge Why MVPs Should Be Delightful. And there’s a lot in here, one of the cases he makes is that like using AI is just like regurgitating like we’re not going to get to that delight level if we’re just, you know, using AI to help, you know, develop those different. net new versions that are being tested within a product context. But he talks about the MLPs. I’m obsessed with MVP’s, Mårten, I should tell you, just understanding different people’s perspective. But the MLP is the minimum levelable product. And he also referenced one, the minimum viable whatever, because there’s so many acronyms related to this, with people trying to figure out exactly what that level of fidelity should be, what type of investment you should make before you experiment. He does talk about experimentation at the end, which I do love, but there’s a lot of really good examples. And I love reading from that design product perspective. So, but it’s a, it’s a good read, about 10 minute read. So it’s a good one. And Tim, how about you? Do you have a last call for today? 00:59:47.36 [Tim Wilson]: I’ve got a smidge of housekeeping and a last call. So we are now like into month number two of 2026, which means we’re heading into a conference season. Actually, I am, sitting in Budapest, Hungary as you were listening to this, if you’re listening to it when it came out. A couple of analytics power hour conference attendee appearances coming up in Nashville. If you’re in the States, there’s the Datatune conference that Val and I will both be attending on March 6th and 7th. Some critical mass of the Analytics Power Hour crew, we will be recording a show with a live audience at the Marketing Analytics Summit in Santa Barbara, California on April 28th and 29th. Those are PSAs more than last calls. My last call would be friend of the show, past guest, Katie Bauer, the wrong but useful sub-stack wrote a post called The Next Data Bottle Neck, which I thought it was a unique and really thought-provoking take on the whole drive towards conversational analytics and not the will it or won’t it or the technical challenges of it, but when looking at what people are asking for and why they actually seem to be mundane requests that they seem to be kind of just simple data fetching requests, not these super nuanced things. So she has a lot of musings that can be a little unsettling for the analyst, but then she actually kind of wraps by making the case that really it goes back to good analysts really thinking about the business deeply. So it’s a worthwhile read. So I was a threefer, but I’ve labeled two of them as being a housekeeping writer in the last class. 01:01:45.78 [Val Kroll]: Can I ask one more question then? 01:01:48.19 [Mårten Schultzberg]: That’s how you get airtime in this show, right? 01:01:51.33 [Tim Wilson]: I’m drunk on power. Is Michael as drunk on Tamiflu? Tamiflu? Tamiflu? Tamiflu? I don’t know what the flu medications are. Yeah. By the time this comes out, he will be back to good health and he will vow to never get sick again and cede the mic to me. So this was great. Thanks again, Mårten, for coming on. This was a really fun discussion. 01:02:17.28 [Mårten Schultzberg]: My pleasure. It’s really nice. Thank you so much for having me. 01:02:21.69 [Tim Wilson]: Awesome. Everybody get your Spotify subscription up to speed. This is what’s driving Spotify’s next round of growth is the confidence podcast appearance. 01:02:33.83 [Mårten Schultzberg]: Quarterly call coming, so like, please. 01:02:35.93 [Val Kroll]: There you go. 01:02:38.11 [Tim Wilson]: Perfect. If you are listening and you’ve enjoyed this show or other shows, we would always love a rating and review. I’ll do a little call on audible and read out this one from Apple Podcast that just T5272018 left. It was titled Smart and Funny. And it was love the insights and laughs I get from this podcast. You all have a high bar for analysts and the value they can add, which I so appreciate. And you share all of that perspective via hilarious and authentic banter. Keep it up. Wait, let me check. That is our podcast. Yeah, that is this one. So that was kind of nice. We’ll always love to get ratings and reviews. Theoretically, that is how we expand the reach of the show, that and recording video and putting them on YouTube. So we’ll just double down on the ratings and reviews. If you’re a fan of the show and would like to have a sticker for your laptop or water bottle or whatever, you can go to analyticshour.io and request a sticker. We’ll ship one over. If you have something to say, a thought for a topic, criticism, your own little witticism that you’d like to share, you can reach out to any of us or the show as a whole on LinkedIn. You can catch us on the measure slack or you can just send an email to contact at analyticshour.io. So, with that, for Val and for Michael in absentia from his sickbed, I’m Tim Wilson and no matter what your reason, whether you’re identifying or you’re optimizing or you’re being just aggressively neutral in your findings, you should always keep analyzing. 01:04:24.79 [Announcer]: Thanks for listening. Let’s keep the conversation going with your comments, suggestions, and questions on Twitter at @analyticshour on the web at analyticshour.io, our LinkedIn group, and the Measure Chat Slack group. Music for the podcast by Josh Crowhurst. Those smart guys wanted to fit in, so they made up a term called analytics. Analytics don’t work. 01:04:49.43 [Charles Barkley]: Do the analytics say go for it, no matter who’s going for it? So if you and I were on the field, the analytics say go for it. It’s the stupidest, laziest, lamest thing I’ve ever heard for reasoning in competition. 01:05:03.47 [Tim Wilson]: Yeah, we’ve sent, Australia is the one that’s the real Australia. 01:05:08.27 [Val Kroll]: Singapore. 01:05:08.99 [Tim Wilson]: We’ll take weeks. Singapore, one made it all the way to Singapore, came back to Ohio. Never came to me, turned around and went back to Singapore. So it was like eight weeks. 01:05:22.69 [Val Kroll]: The box was like smashed. The gift wasn’t ruined, but the box was in shambles. 01:05:29.07 [Tim Wilson]: There is now more packing material. I did change after seeing that. It’s a process update. 01:05:35.73 [Mårten Schultzberg]: I guess I should save all of my comments about it for the actual recording. 01:05:40.98 [Val Kroll]: Yeah, we’ll get into it for sure. I’m very excited. 01:05:43.92 [Mårten Schultzberg]: It wasn’t that terrible. The distortion wasn’t that terrible. 01:05:47.21 [Val Kroll]: So every time you do that while we actually record, because you’ll definitely be doing that multiple times, I’m just kidding. 01:05:52.61 [Mårten Schultzberg]: Yeah. 01:05:54.07 [Val Kroll]: Yeah, it looks like. Last for me. 01:05:55.93 [Mårten Schultzberg]: Part of your signal yelling at you. 01:05:58.98 [Val Kroll]: Your guests. 01:06:02.77 [Tim Wilson]: All right, let’s try it again. 01:06:12.37 [Val Kroll]: Rock flag and focus on those learnings. The post #290: Always Be Learning appeared first on The Analytics Power Hour: Data and Analytics Podcast .",
+      "published_ts": 1770093359,
+      "source_name": "Analytics Power Hour",
       "content_type": "rex"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/supply-chain-ai-trends-2026",
+      "title": "Supply Chain AI Trends 2026: Building Resilient Operations",
+      "summary": "Supply chain disruption is the new normal, and most organizations aren't ready. Industry surveys confirm that 78% of supply chain leaders anticipate disruptions to intensify over the next two years, but only 25% feel prepared. While agentic capabilities garnered attention in 2025, agents are expected to dominate supply chain initiatives in 2026 as leaders forge a path to enterprise value through tangible applications that support decision makers and drive autonomy.",
+      "published_ts": 1770051298,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://openai.com/index/introducing-the-codex-app",
+      "title": "Introducing the Codex app",
+      "summary": "Introducing the Codex app for macOS—a command center for AI coding and software development with multiple agents, parallel workflows, and long-running tasks.",
+      "published_ts": 1769990400,
+      "source_name": "Openai",
+      "content_type": "technical"
     }
   ],
-  "cloud_infra_observability": [],
+  "cloud_infra_observability": [
+    {
+      "url": "https://openai.com/index/our-approach-to-localization",
+      "title": "Making AI work for everyone, everywhere: our approach to localization",
+      "summary": "OpenAI shares its approach to AI localization, showing how globally shared frontier models can be adapted to local languages, laws, and cultures without compromising safety.",
+      "published_ts": 1770372000,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/reduce-mean-time-to-resolution-with-an-observability-agent/",
+      "title": "Reduce Mean Time to Resolution with an observability agent",
+      "summary": "In this post, we present an observability agent using OpenSearch Service and Amazon Bedrock AgentCore that can help surface root cause and get insights faster, handle multiple query-correlation cycles, and ultimately reduce MTTR even further.",
+      "published_ts": 1770320913,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://openai.com/index/gpt-5-lowers-protein-synthesis-cost",
+      "title": "GPT-5 lowers the cost of cell-free protein synthesis",
+      "summary": "An autonomous lab combining OpenAI’s GPT-5 with Ginkgo Bioworks’ cloud automation cut cell-free protein synthesis costs by 40% through closed-loop experimentation.",
+      "published_ts": 1770289200,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/federate-access-to-amazon-sagemaker-unified-studio-with-aws-iam-identity-center-and-ping-identity/",
+      "title": "Federate access to Amazon SageMaker Unified Studio with AWS IAM Identity Center and Ping Identity",
+      "summary": "In this post, we show how to set up workforce access with SageMaker Unified Studio using Ping Identity as an external IdP with IAM Identity Center.",
+      "published_ts": 1770064779,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-amazon-bedrock-agent-workflows-amazon-sagemaker-private-connectivity-and-more-february-2-2026/",
+      "title": "AWS Weekly Roundup: Amazon Bedrock agent workflows, Amazon SageMaker private connectivity, and more (February 2, 2026)",
+      "summary": "Over the past week, we passed Laba festival, a traditional marker in the Chinese calendar that signals the final stretch leading up to the Lunar New Year. For many in China, it’s a moment associated with reflection and preparation, wrapping up what the year has carried, and turning attention toward what lies ahead. Looking forward, […]",
+      "published_ts": 1770052788,
+      "source_name": "AWS Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://azure.microsoft.com/en-us/blog/postgresql-on-azure-supercharged-for-ai/",
+      "title": "PostgreSQL on Azure supercharged for AI",
+      "summary": "From GitHub Copilot AI assistance to built-in model management, Azure is helping devs and enterprises unlock the full potential of PostgreSQL. The post PostgreSQL on Azure supercharged for AI appeared first on Microsoft Azure Blog .",
+      "published_ts": 1770044400,
+      "source_name": "Azure Blog",
+      "content_type": "technical"
+    }
+  ],
   "data_modeling_governance": [
+    {
+      "url": "https://openai.com/index/introducing-openai-frontier",
+      "title": "Introducing OpenAI Frontier",
+      "summary": "OpenAI Frontier is an enterprise platform for building, deploying, and managing AI agents with shared context, onboarding, permissions, and governance.",
+      "published_ts": 1770271200,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/how-data-mesh-solves-centralized-data-challenges",
+      "title": "How data mesh solved centralized data management challenges",
+      "summary": "Data mesh decentralizes data ownership and reduces bottlenecks with self-service platforms and federated governance.",
+      "published_ts": 1770224400,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/data-quality-monitoring-scale-agentic-ai",
+      "title": "Data Quality Monitoring at scale with Agentic AI",
+      "summary": "The challenge of data quality at scaleAs organizations build more data and AI products...",
+      "published_ts": 1770221420,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.dataiku.com/stories/blog/roche",
+      "title": "How Roche Cut Patent Research Costs With Scalable, Governed Agentic AI",
+      "summary": "Roche unified patent research into a scalable AI foundation for patent intelligence, giving attorneys faster, more complete answers while reducing consultancy spend — all with orchestration and governance built in.",
+      "published_ts": 1770210000,
+      "source_name": "Dataiku Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/why-analytics-engineering-isnt-just-data-modeling",
+      "title": "Why analytics engineering isn't just data modeling",
+      "summary": "Analytics engineering extends beyond modeling to collaboration, testing, documentation, and scaling analytics workflows.",
+      "published_ts": 1770050580,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
     {
       "url": "https://preset.io/blog/semantic-layer-is-back/",
       "title": "The Semantic Layer Is Back. Here's What We're Doing About It.",
@@ -18,20 +275,190 @@
       "published_ts": 1769998946,
       "source_name": "Data Engineering Weekly",
       "content_type": "technical"
+    }
+  ],
+  "etl_orchestration": [
+    {
+      "url": "https://dagster.io/blog/great-infrastructure-needs-great-stories",
+      "title": "Great Infrastructure Needs Great Stories: Making Our Dagster Children’s Book",
+      "summary": "Go behind the scenes of Dagster’s children’s book, how assets became characters, design choices shaped the story, and motion helped make platform concepts intuitive.",
+      "published_ts": 1770390321,
+      "source_name": "Dagster Blog",
+      "content_type": "technical"
     },
     {
-      "url": "https://openai.com/index/unrolling-the-codex-agent-loop/",
-      "title": "Unrolling the Codex agent loop",
-      "summary": "Codex CLI\n⁠\n(opens in a new window)\nis our cross-platform local software agent, designed to produce high-quality, reliable software changes while operating safely and efficiently on your machine. We’ve learned a tremendous amount about how to build a world-class software agent\nsince we first launche",
-      "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly",
+      "url": "https://airbyte.com/blog/airbyte-oss-to-airbyte-cloud",
+      "title": "From DIY to Done-For-You: Is It Time to Move from Airbyte OSS to Airbyte Cloud? | Airbyte",
+      "summary": "Still managing Airbyte OSS yourself? Learn when it makes sense to move from DIY pipelines to Airbyte Cloud’s fully managed, done-for-you data integration.",
+      "published_ts": 1770336000,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/amazon-opensearch-ingestion-service-101-set-cloudwatch-alarms-for-key-metrics/",
+      "title": "Amazon OpenSearch Ingestion 101: Set CloudWatch alarms for key metrics",
+      "summary": "This post provides an in-depth look at setting up Amazon CloudWatch alarms for OpenSearch Ingestion pipelines. It goes beyond our recommended alarms to help identify bottlenecks in the pipeline, whether that’s in the sink, the OpenSearch clusters data is being sent to, the processors, or the pipeline not pulling or accepting enough from the source. This post will help you proactively monitor and troubleshoot your OpenSearch Ingestion pipelines.",
+      "published_ts": 1770320846,
+      "source_name": "Redshift / AWS Big Data",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.rudderstack.com/blog/customer-data-infrastructure-ai-era",
+      "title": "Customer data infrastructure for the AI era",
+      "summary": "AI agents are moving to production in 2026. They need infrastructure built for trustworthy context, not batch analytics. Here's how we're building it.",
+      "published_ts": 1770311259,
+      "source_name": "Rudderstack Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/dbt-mcp-server-reliable-ai",
+      "title": "Deliver reliable AI with the dbt Semantic Layer and dbt MCP Server",
+      "summary": "Learn how to provide structured context to AI systems with a dbt-powered MCP server.",
+      "published_ts": 1770310740,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://airbyte.com/blog/types-of-agent-memory",
+      "title": "The Two Types of Agent Memory | Airbyte",
+      "summary": "Explore the two types of agent memory, how they work, and why they matter for building smarter, more reliable AI agents.",
+      "published_ts": 1770249600,
+      "source_name": "Airbyte Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/Hcompany/introducing-holo2-235b-a22b",
+      "title": "H Company's new Holo2 model takes the lead in UI Localization",
+      "summary": "H Company's new Holo2 model takes the lead in UI Localization\nTwo months since releasing our first batch of Holo2 models, H Company is back with our largest UI localization model yet:\nHolo2-235B-A22B Preview\n. This model achieves a new State-of-the-Art (SOTA) record of 78.5% on\nScreenspot-Pro\nand 79",
+      "published_ts": 1770140414,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://dagster.io/blog/closing-the-dataops-loop-why-we-built-compass-for-dagster",
+      "title": "Closing the DataOps Loop: Why We Built Compass for Dagster+",
+      "summary": "Dagster+ Compass brings AI-powered investigation to your data platform. Ask questions in Slack, get answers grounded in your runs, assets, and metadata, and surface patterns before they become incidents.",
+      "published_ts": 1770136737,
+      "source_name": "Dagster Blog",
+      "content_type": "rex"
+    }
+  ],
+  "hors_sujet": [],
+  "lake_storage_formats": [
+    {
+      "url": "https://aws.amazon.com/blogs/big-data/use-amazon-msk-connect-and-iceberg-kafka-connect-to-build-a-real-time-data-lake/",
+      "title": "Use Amazon MSK Connect and Iceberg Kafka Connect to build a real-time data lake",
+      "summary": "In this post, we demonstrate how to use Iceberg Kafka Connect with Amazon Managed Streaming for Apache Kafka (Amazon MSK) Connect to accelerate real-time data ingestion into data lakes, simplifying the synchronization process from transactional databases to Apache Iceberg tables.",
+      "published_ts": 1770144158,
+      "source_name": "Redshift / AWS Big Data",
       "content_type": "technical"
     }
   ],
-  "etl_orchestration": [],
-  "hors_sujet": [],
-  "lake_storage_formats": [],
   "news": [
+    {
+      "url": "https://www.databricks.com/blog/tutorial-3-free-databricks-analytics-projects-you-can-do-afternoon",
+      "title": "Tutorial: 3 Free Databricks Analytics Projects You Can Do In An Afternoon",
+      "summary": "Want a real analytics project you can share publicly, talk about in interviews, or...",
+      "published_ts": 1770318000,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/throwing-out-a-life-raft-how-ovhcloud-rescued-customers-from-the-vmware-licensing-crisis/",
+      "title": "Throwing Out a Life Raft: How OVHcloud Rescued Customers from the VMware Licensing Crisis",
+      "summary": "Crack, splash, boom! In 2024, the VMware ecosystem endured a seismic shift. Broadcom acquired VMware and quickly introduced a controversial change in its pricing model — shifting from a vRAM-based system to one centered on per physical core (pCore) licensing — and shaking the veritable ground users stood upon. What once allowed customers to pay for […]",
+      "published_ts": 1770297530,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/data-dialogue-best-practices-guide-building-high-performing-genie-spaces",
+      "title": "From Data to Dialogue: A Best Practices Guide for Building High-Performing Genie Spaces",
+      "summary": "Across most organizations, there is a growing expectation that anyone should be able...",
+      "published_ts": 1770275700,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/unlocking-future-energy-smart-meter-innovation",
+      "title": "Unlocking the Future of Energy with Smart Meter Innovation",
+      "summary": "IntroductionsIn today’s rapidly evolving energy landscape, utilities face mounting...",
+      "published_ts": 1770239400,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.ovhcloud.com/startup-success-highlight-cryptomate/",
+      "title": "Startup Success highlight: Cryptomate",
+      "summary": "Startup highlight: Interview with Alan Boryszanski, CEO at Cryptomate Can you introduce Cryptomate, its industry, mission and values? CryptoMate was founded by a team with deep experience in Fintech, Banking, Crypto, and Academia. We are capitalizing on a massive shift we identified: just as traditional fintech evolved from single services to Super Apps and finally […]",
+      "published_ts": 1770195210,
+      "source_name": "OVHcloud Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/tensorstax-acquisition-agentic-ai",
+      "title": "Snowflake Acquires TensorStax to Accelerate Agentic AI for Data Engineering",
+      "summary": "Learn how innovations in autonomous AI will help make agents more effective at data engineering and help Snowflake customes focus on building intelligent ecosystems.",
+      "published_ts": 1770192060,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/building-reliable-applications",
+      "title": "Turning AI Innovation into Reliable, Production-Ready Applications with Snowflake",
+      "summary": "Explore how developers can build, deploy, and scale reliable AI agents while controlling cost, performance, and resource usage.",
+      "published_ts": 1770167940,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://huggingface.co/blog/community-evals",
+      "title": "Community Evals: Because we're done trusting black-box leaderboards over the community",
+      "summary": "Community Evals: Because we're done trusting black-box leaderboards over the community\nTL;DR:\nBenchmark datasets on Hugging Face can now host leaderboards. Models store their own eval scores. Everything links together. The community can submit results via PR. Verified badges prove that the results c",
+      "published_ts": 1770163200,
+      "source_name": "Hugging Face Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://aws.amazon.com/blogs/aws/aws-iam-identity-center-now-supports-multi-region-replication-for-aws-account-access-and-application-use/",
+      "title": "AWS IAM Identity Center now supports multi-Region replication for AWS account access and application use",
+      "summary": "AWS IAM Identity Center now supports multi-Region replication of workforce identities and permission sets, enabling improved resiliency for AWS account access and allowing applications to be deployed closer to users while meeting data residency requirements.",
+      "published_ts": 1770146014,
+      "source_name": "AWS Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/delta-lake-explained-boost-data-reliability-cloud-storage",
+      "title": "Delta Lake Explained: Boost Data Reliability in Cloud Storage",
+      "summary": "What is Delta Lake? Data-reliant organizations today face a critical challenge of...",
+      "published_ts": 1770144600,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://blog.cloudflare.com/r2-local-uploads/",
+      "title": "Improve global upload performance with R2 Local Uploads",
+      "summary": "Local Uploads on R2 reduces request duration for uploads by up to 75%. It writes object data to a nearby location and asynchronously copies it to your bucket, all while data is available immediately.",
+      "published_ts": 1770127200,
+      "source_name": "Cloudflare Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/observe-acquisition-ai-powered-observability",
+      "title": "Snowflake Closes Acquisition of Observe to Bring AI-Powered Observability to Customers",
+      "summary": "Snowflake has closed its acquisition of Observe, AI-powered observability to help customers run critical data and AI workloads with greater reliability and performance.",
+      "published_ts": 1770060171,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.getdbt.com/blog/data-marts-vs-data-products",
+      "title": "Data marts vs. Data products: What's the difference?",
+      "summary": "Understand how data marts and data products serve different roles in modern data platforms—and why you need both.",
+      "published_ts": 1770046740,
+      "source_name": "dbt Blog",
+      "content_type": "technical"
+    },
     {
       "url": "https://blog.octo.com/avec-gemini-nano-voyez-l'ia-vie-en-rose-!",
       "title": "Avec Gemini Nano, voyez l'IA vie en rose !",
@@ -41,26 +468,113 @@
       "content_type": "technical"
     },
     {
-      "url": "https://medium.com/@community_md101/modeling-semantics-how-data-models-and-ontologies-connect-to-build-your-semantic-foundations-3a9a0664e3ff",
-      "title": "Modeling Semantics: How Data Models and Ontologies Connect to Build Your Semantic Foundations",
-      "summary": "Think of “Customer”, “Order”, “Product”, “Delivery”, and so on. These are what you have data\nabout\n, no matter how the data is technically stored in database tables or files.\nIn addition to the list of\nthings\n, to fully understand the business context, we need\nrelationships\nbetween the things. How d",
-      "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly",
+      "url": "https://engineering.salesforce.com/how-agentforce-enhanced-chat-built-an-agent-first-chat-experience-while-ensuring-easy-migration-for-3000-customers/",
+      "title": "How Agentforce Enhanced Chat Built an Agent-first Chat Experience While Ensuring Easy Migration for 3,000+ Customers",
+      "summary": "By Andy Shah, Jeremy Klukan, Ben Drasin, Nikhil Pachpande, and Stuart Clark. In our Engineering Energizers Q&A series, we highlight the engineering minds driving innovation across Salesforce. This edition features Andy Shah, Director of Software Engineering, who leads the development of Agentforce Enhanced Chat, a core customer-facing surface that brings Agentforce capabilities to the consumer […] The post How Agentforce Enhanced Chat Built an Agent-first Chat Experience While Ensuring Easy Migration for 3,000+ Customers appeared first on Salesforce Engineering Blog .",
+      "published_ts": 1769996986,
+      "source_name": "Salesforce Engineering",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://preset.io/blog/why-preset-is-the-most-open-data-analytics-platform/",
+      "title": "Why Preset is the Most Open Data Analytics Platform",
+      "summary": "Preset takes a different approach to analytics: one built on openness at every layer. Connect your own tools, define your own logic, and stay in control.",
+      "published_ts": 1769990400,
+      "source_name": "Preset Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://about.gitlab.com/blog/whats-new-in-git-2-53-0/",
+      "title": "What’s new in Git 2.53.0?",
+      "summary": "The Git project recently released Git 2.53.0 . Let's look at a few notable highlights from this release, which includes\ncontributions from the Git team at GitLab. Geometric repacking support with promisor remotes Newly written objects in a Git repository are often stored as individual loose files. To ensure good performance and optimal use of disk space, these loose objects are regularly compressed into so-called packfiles. The number of packfiles in a repository grows over time as a result of the user’s activities, like writing new commits or fetching from a remote. As the number of packfiles in a repository increases, Git has to do more work to look up individual objects. Therefore, to preserve optimal repository performance, packfiles are periodically repacked via git-repack(1) to consolidate the objects into fewer packfiles. When repacking there are two strategies: “all-into-one” and “geometric”. The all-into-one strategy is fairly straightforward and the current default. As its name implies, all objects in the repository are packed into a single packfile. From a performance perspective this is great for the repository as Git only has to scan through a single packfile when looking up objects. The main downside of such a repacking strategy is that computing a single packfile for a repository can take a significant amount of time for large repositories. The geometric strategy helps mitigate this concern by maintaining a geometric progression of packfiles based on their size instead of always repacking into a single packfile. To explain more plainly, when repacking Git maintains a set of packfiles ordered by size where each packfile in the sequence is expected to be at least twice the size of the preceding packfile. If a packfile in the sequence violates this property, packfiles are combined as needed until the progression is restored. This strategy has the advantage of still minimizing the number of packfiles in a repository while also minimizing the amount of work that must be done for most repacking operations. One problem with the geometric repacking strategy was that it was not compatible with partial clones. Partial clones allow the user to clone only parts of a repository by, for example, skipping all blobs larger than 1 megabyte. This can significantly reduce the size of a repository, and Git knows how to backfill missing objects that it needs to access at a later point in time. The result is a repository that is missing some objects, and any object that may not be fully connected is stored in a “promisor” packfile.  When repacking, this promisor property needs to be retained going forward for packfiles containing a promisor object so it is known whether a missing object is expected and can be backfilled from the promisor remote. With an all-into-one repack, Git knows how to handle promisor objects properly and stores them in a separate promisor packfile. Unfortunately, the geometric repacking strategy did not know to give special treatment to promisor packfiles and instead would merge them with normal packfiles without considering whether they reference promisor objects. Luckily, due to a bug the underlying git-pack-objects(1) dies when using geometric repacking in a partial clone repository. So this means repositories in this configuration were not able to be repacked anyways which isn’t great, but better than repository corruption. With the release of Git 2.53, geometric repacking now works with partial clone repositories. When performing a geometric repack, promisor packfiles are handled separately in order to preserve the promisor marker and repacked following a separate geometric progression. With this fix, the geometric strategy moves closer towards becoming the default repacking strategy. For more information check out the corresponding mailing list thread . This project was led by Patrick Steinhardt . git-fast-import(1) learned to preserve only valid signatures In our Git 2.52 release article , we covered signature related improvements to git-fast-import(1) and git-fast-export(1). Be sure to check out that post for a more detailed explanation of these commands, how they are used, and the changes being made with regards to signatures. To quickly recap, git-fast-import(1) provides a backend to efficiently import data into a repository and is used by tools such as git-filter-repo(1) to help rewrite the history of a repository in bulk. In the Git 2.52 release, git-fast-import(1) learned the --signed-commits=<mode> option similar to the same option in git-fast-export(1). With this option, it became possible to unconditionally retain or strip signatures from commits/tags. In situations where only part of the repository history has been rewritten, any signature for rewritten commits/tags becomes invalid. This means git-fast-import(1) is limited to either stripping all signatures or keeping all signatures even if they have become invalid. But retaining invalid signatures doesn’t make much sense, so rewriting history with git-repo-filter(1) results in all signatures being stripped, even if the underlying commit/tag is not rewritten. This is unfortunate because if the commit/tag is unchanged, its signature is still valid and thus there is no real reason to strip it. What is really needed is a means to preserve signatures for unchanged objects, but strip invalid ones. With the release of Git 2.53, the git-fast-import(1) --signed-commits=<mode> option has learned a new strip-if-invalid mode which, when specified, only strips signatures from commits that become invalid due to being rewritten. Thus, with this option it becomes possible to preserve some commit signatures when using git-fast-import(1). This is a critical step towards providing the foundation for tools like git-repo-filter(1) to preserve valid signatures and eventually re-sign invalid signatures. This project was led by Christian Couder . More data collected in git-repo-structure In the Git 2.52 release, the “structure” subcommand was introduced to git-repo(1). The intent of this command was to collect information about the repository and eventually become a native replacement for tools such as git-sizer(1) . At GitLab, we host some extremely large repositories, and having insight into the general structure of a repository is critical to understand its performance characteristics. In this release, the command now also collects total size information for reachable objects in a repository to help understand the overall size of the repository. In the output below, you can see the command now collects both the total inflated and disk sizes of reachable objects by object type. $ git repo structure\n\n| Repository structure | Value      |\n| -------------------- | ---------- |\n| * References         |            |\n|   * Count            |   1.78 k   |\n|     * Branches       |      5     |\n|     * Tags           |   1.03 k   |\n|     * Remotes        |    749     |\n|     * Others         |      0     |\n|                      |            |\n| * Reachable objects  |            |\n|   * Count            | 421.37 k   |\n|     * Commits        |  88.03 k   |\n|     * Trees          | 169.95 k   |\n|     * Blobs          | 162.40 k   |\n|     * Tags           |    994     |\n|   * Inflated size    |   7.61 GiB |\n|     * Commits        |  60.95 MiB |\n|     * Trees          |   2.44 GiB |\n|     * Blobs          |   5.11 GiB |\n|     * Tags           | 731.73 KiB |\n|   * Disk size        | 301.50 MiB |\n|     * Commits        |  33.57 MiB |\n|     * Trees          |  77.92 MiB |\n|     * Blobs          | 189.44 MiB |\n|     * Tags           | 578.13 KiB | The keen-eyed among you may have also noticed that the size values in the table output are also now listed in a more human-friendly manner with units appended. In subsequent releases we hope to further expand this command's output to provide additional data points such as the largest individual objects in the repository. This project was led by Justin Tobler . Read more This article highlighted just a few of the contributions made by GitLab and\nthe wider Git community for this latest release. You can learn about these from\nthe official release announcement of the Git project. Also, check\nout our previous Git release blog posts to see other past highlights of contributions from GitLab team members.",
+      "published_ts": 1769990400,
+      "source_name": "GitLab Engineering",
       "content_type": "technical"
     }
   ],
   "news_general": [],
-  "python_analytics": [
-    {
-      "url": "https://medium.com/whatnot-engineering/lessons-learned-from-scaling-data-scientists-with-ai-e7aa7b3235b4",
-      "title": "Lessons learned from scaling data scientists with AI",
-      "summary": "Lessons learned from scaling data scientists with AI\nAlice Leach, Anthony Sedarous, Evan Hou, Faithful Alabi, Stephen Bailey, Tanisha Kore | Data\n“Can you check my SQL?”\n“Which table has the livestream data?”\n“How do I calculate GMV again?”\nAt Whatnot, our data scientists were drowning in these sort",
-      "published_ts": 1769998946,
-      "source_name": "Data Engineering Weekly",
-      "content_type": "rex"
-    }
-  ],
+  "python_analytics": [],
   "warehouses_engines": [
+    {
+      "url": "https://www.databricks.com/blog/sap-and-salesforce-data-integration-supplier-analytics-databricks",
+      "title": "SAP and Salesforce Data Integration for Supplier Analytics on Databricks",
+      "summary": "How to Build Supplier Analytics With Salesforce SAP Integration on DatabricksSupplier...",
+      "published_ts": 1770424200,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/how-build-production-ready-genie-spaces-and-build-trust-along-way",
+      "title": "How to Build Production-Ready Genie Spaces, and Build Trust Along the Way",
+      "summary": "The Trust Challenge in Self-Service AnalyticsGenie is a Databricks feature that allows...",
+      "published_ts": 1770419400,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.databricks.com/blog/databricks-named-leader-idc-marketscape-worldwide-unified-ai-governance-platforms-2025-2026",
+      "title": "Databricks Named a Leader in the IDC MarketScape: Worldwide Unified AI Governance Platforms 2025-2026 Vendor Assessment",
+      "summary": "We’re proud to share that Databricks has been named a Leader in the IDC MarketScape: W...",
+      "published_ts": 1770392954,
+      "source_name": "Databricks Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/claude-opus-4-6-snowflake-cortex-ai",
+      "title": "Announcing Claude Opus 4.6 on Snowflake Cortex AI",
+      "summary": "Claude Opus 4.6 is now available on Snowflake Cortex AI, bringing advanced reasoning and agentic capabilities with Snowflake’s secure governed AI platform",
+      "published_ts": 1770319842,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ecommerce-data-democratization",
+      "title": "How Ecommerce Companies Democratize Data with Snowflake Intelligence",
+      "summary": "Learn how ecommerce companies use Snowflake Intelligence to democratize data, unlock AI-driven insights, and enable faster, smarter decision-making across teams.",
+      "published_ts": 1770310800,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/agentic-ai-developer-platform",
+      "title": "Take Ideas to Production Faster in Snowflake with New Data-Native Development Tools",
+      "summary": "Explore how developers can build and run agentic AI applications faster using a unified platform with built-in DevOps and AI tooling.",
+      "published_ts": 1770191880,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/semantic-view-autopilot",
+      "title": "Snowflake Semantic View Autopilot: AI-Powered Semantic Modeling in Minutes",
+      "summary": "Snowflake Semantic View Autopilot automates semantic modeling in minutes, creating governed, trusted semantic views that power AI and BI at scale.",
+      "published_ts": 1770105840,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/production-ml-workflows",
+      "title": "Production ML Workflows: Agentic ML, Multimodal & Real-time ML",
+      "summary": "Announcing new Snowflake ML capabilities for production workflows, including agentic ML, multimodal and real-time inference at scale.",
+      "published_ts": 1770105720,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://www.snowflake.com/content/snowflake-site/global/en/blog/ai-ready-enterprise-data-platform",
+      "title": "Snowflake Puts AI-Ready Enterprise Data at Your Fingertips",
+      "summary": "Make all your enterprise data AI ready with continuous performance, built-in governance controls, and interoperability. Reduce data movement and scale AI applications confidently",
+      "published_ts": 1770105660,
+      "source_name": "Snowflake Blog",
+      "content_type": "technical"
+    },
+    {
+      "url": "https://openai.com/index/sora-feed-philosophy",
+      "title": "The Sora feed philosophy",
+      "summary": "Discover the Sora feed philosophy—built to spark creativity, foster connections, and keep experiences safe with personalized recommendations, parental controls, and strong guardrails.",
+      "published_ts": 1770076800,
+      "source_name": "Openai",
+      "content_type": "technical"
+    },
     {
       "url": "https://openai.com/index/snowflake-partnership",
       "title": "Snowflake and OpenAI partner to bring frontier intelligence to enterprise data",

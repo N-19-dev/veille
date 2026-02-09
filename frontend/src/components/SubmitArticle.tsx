@@ -31,13 +31,21 @@ const TECH_KEYWORDS = [
   'tutorial', 'benchmark', 'migration', 'refactor', 'debug',
 ];
 
-function looksLikeTech(url: string): { ok: boolean; reason?: string } {
-  const text = url.toLowerCase();
-  const found = TECH_KEYWORDS.some(kw => text.includes(kw));
-  if (!found) {
-    return { ok: false, reason: 'Cet article ne correspond pas à la thématique du site.' };
+function looksLikeTech(text: string): boolean {
+  const lower = text.toLowerCase();
+  return TECH_KEYWORDS.some(kw => lower.includes(kw));
+}
+
+async function fetchTitle(url: string): Promise<string | null> {
+  try {
+    const res = await fetch(`https://corsproxy.io/?${encodeURIComponent(url)}`);
+    if (!res.ok) return null;
+    const html = await res.text();
+    const match = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+    return match ? match[1].trim() : null;
+  } catch {
+    return null;
   }
-  return { ok: true };
 }
 
 export default function SubmitArticle() {
@@ -69,10 +77,9 @@ export default function SubmitArticle() {
       return;
     }
 
-    // Tech moderation check
-    const check = looksLikeTech(url);
-    if (!check.ok) {
-      setError(check.reason!);
+    // Tech moderation: check URL first
+    if (!looksLikeTech(url)) {
+      setError('Cet article ne correspond pas à la thématique du site.');
       return;
     }
 
@@ -80,9 +87,19 @@ export default function SubmitArticle() {
     setError(null);
 
     try {
+      // Auto-fetch title from the page
+      const fetchedTitle = await fetchTitle(url.trim());
+
+      // Also check fetched title for tech keywords (URL + title combined)
+      if (fetchedTitle && !looksLikeTech(`${url} ${fetchedTitle}`)) {
+        setError('Cet article ne correspond pas à la thématique du site.');
+        setIsSubmitting(false);
+        return;
+      }
+
       await addDoc(collection(db, 'submissions'), {
         url: url.trim(),
-        title: null,
+        title: fetchedTitle,
         submitted_by: user.uid,
         submitted_by_name: user.displayName || 'Anonymous',
         submitted_at: serverTimestamp(),

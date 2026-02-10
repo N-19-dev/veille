@@ -1,27 +1,12 @@
 // src/components/FeedView.tsx
 import { useState, useEffect } from "react";
 import { type FeedItem, faviconUrl, formatRelativeDate } from "../lib/parse";
-import { db } from "../lib/firebase";
-import { collection, query, orderBy, limit, onSnapshot, Timestamp } from "firebase/firestore";
 import VoteButton from "./VoteButton";
 import CommentsCount from "./CommentsCount";
 import TopCommentPreview from "./TopCommentPreview";
-import SubmitArticle from "./SubmitArticle";
 import { useComments } from "../lib/CommentsContext";
 import { useAuth } from "../lib/AuthContext";
 import { useSavedArticles } from "../lib/SavedArticlesContext";
-
-// Type for user submissions
-type Submission = {
-  id: string;
-  url: string;
-  title: string | null;
-  submitted_by: string;
-  submitted_by_name: string;
-  submitted_at: Timestamp;
-  upvotes: number;
-  downvotes: number;
-};
 
 type FeedViewProps = {
   articles: FeedItem[];
@@ -63,98 +48,6 @@ function getCurrentWeekLabel(): string {
   const days = Math.floor((now.getTime() - startOfYear.getTime()) / 86400000);
   const weekNumber = Math.ceil((days + startOfYear.getDay() + 1) / 7);
   return `${now.getFullYear()}w${weekNumber.toString().padStart(2, '0')}`;
-}
-
-// Admin email for delete permissions
-const ADMIN_EMAIL = 'natsornet@gmail.com';
-
-// Card for user submissions
-function SubmissionCard({ submission, isSeen, onSeen, currentUserEmail, currentUserId }: {
-  submission: Submission;
-  isSeen: boolean;
-  onSeen: (url: string) => void;
-  currentUserEmail: string | null;
-  currentUserId: string | null;
-}) {
-  const [isDeleting, setIsDeleting] = useState(false);
-
-  const canDelete = currentUserEmail === ADMIN_EMAIL || currentUserId === submission.submitted_by;
-
-  const handleClick = () => {
-    onSeen(submission.url);
-  };
-
-  const handleDelete = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if (!confirm('Supprimer cette soumission ?')) return;
-
-    setIsDeleting(true);
-    try {
-      const { doc, deleteDoc } = await import('firebase/firestore');
-      await deleteDoc(doc(db, 'submissions', submission.id));
-    } catch (err) {
-      console.error('Error deleting submission:', err);
-      alert('Erreur lors de la suppression');
-    } finally {
-      setIsDeleting(false);
-    }
-  };
-
-  // Extract domain for display
-  let domain = "";
-  try {
-    domain = new URL(submission.url).hostname.replace(/^www\./, "");
-  } catch {
-    domain = "unknown";
-  }
-
-  const submittedAt = submission.submitted_at?.toDate?.() || new Date();
-  const ageMs = Date.now() - submittedAt.getTime();
-  const ageHours = Math.floor(ageMs / 3600000);
-  const ageText = ageHours < 1 ? "à l'instant" : ageHours < 24 ? `il y a ${ageHours}h` : `il y a ${Math.floor(ageHours / 24)}j`;
-
-  return (
-    <div className={`bg-white rounded-xl border border-blue-200 p-3 sm:p-4 hover:border-blue-300 hover:shadow-sm transition-all ${isSeen ? "opacity-60" : ""}`}>
-      <div className="flex gap-2.5 sm:gap-3">
-        <a
-          href={submission.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex gap-2.5 sm:gap-3 flex-1 min-w-0"
-          onClick={handleClick}
-        >
-          <img
-            src={faviconUrl(submission.url, 32)}
-            alt=""
-            className="w-7 h-7 sm:w-8 sm:h-8 rounded-md flex-shrink-0 mt-0.5"
-            loading="lazy"
-          />
-          <div className="flex-1 min-w-0">
-            <h3 className="font-medium text-neutral-900 leading-snug line-clamp-2 text-sm sm:text-base">
-              {submission.title || domain}
-            </h3>
-            <div className="flex items-center gap-1.5 sm:gap-2 mt-1 sm:mt-1.5 text-xs sm:text-sm text-neutral-500">
-              <span className="text-blue-600 font-medium">Soumis par {submission.submitted_by_name}</span>
-              <span>·</span>
-              <span>{ageText}</span>
-            </div>
-          </div>
-        </a>
-        {canDelete && (
-          <button
-            onClick={handleDelete}
-            disabled={isDeleting}
-            className="flex-shrink-0 text-neutral-400 hover:text-red-500 transition p-1"
-            title="Supprimer"
-          >
-            {isDeleting ? '...' : '✕'}
-          </button>
-        )}
-      </div>
-    </div>
-  );
 }
 
 function FeedCard({ item, isSeen, onSeen }: { item: FeedItem; isSeen: boolean; onSeen: (url: string) => void }) {
@@ -313,34 +206,11 @@ function FeedSection({
 }
 
 export default function FeedView({ articles, videos, generatedAt }: FeedViewProps) {
-  const { user } = useAuth();
   const [seenUrls, setSeenUrls] = useState<Set<string>>(new Set());
-  const [submissions, setSubmissions] = useState<Submission[]>([]);
 
   // Load seen articles on mount
   useEffect(() => {
     setSeenUrls(getSeenArticles());
-  }, []);
-
-  // Load user submissions from Firebase
-  useEffect(() => {
-    const q = query(
-      collection(db, "submissions"),
-      orderBy("submitted_at", "desc"),
-      limit(10)
-    );
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const subs: Submission[] = [];
-      snapshot.forEach((doc) => {
-        subs.push({ id: doc.id, ...doc.data() } as Submission);
-      });
-      setSubmissions(subs);
-    }, (error) => {
-      console.error("Error fetching submissions:", error);
-    });
-
-    return () => unsubscribe();
   }, []);
 
   const handleSeen = (url: string) => {
@@ -362,27 +232,6 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
       <div className="text-center text-sm text-neutral-500">
         Mis à jour : {formattedDate}
       </div>
-
-      {/* User submissions */}
-      {submissions.length > 0 && (
-        <section>
-          <h2 className="text-lg font-semibold text-neutral-900 mb-4">
-            ✨ Proposés par la communauté ({submissions.length})
-          </h2>
-          <div className="space-y-3">
-            {submissions.map((sub) => (
-              <SubmissionCard
-                key={sub.id}
-                submission={sub}
-                isSeen={seenUrls.has(sub.url)}
-                onSeen={handleSeen}
-                currentUserEmail={user?.email || null}
-                currentUserId={user?.uid || null}
-              />
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* Articles feed (only if there are articles) */}
       {articles.length > 0 && (
@@ -406,8 +255,6 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
         />
       )}
 
-      {/* Submit article */}
-      <SubmitArticle />
     </div>
   );
 }

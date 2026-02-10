@@ -67,13 +67,16 @@ export default function CommunityPage() {
 
   return (
     <div className="space-y-6">
-      <div className="text-center">
-        <h2 className="text-lg font-semibold text-neutral-900">
-          Must Have ({submissions.length})
+      <div className="text-center space-y-2">
+        <h2 className="text-xl font-bold text-neutral-900">
+          Must Have de la communauté
         </h2>
-        <p className="text-sm text-neutral-500 mt-1">
-          Les articles recommandés par la communauté
+        <p className="text-sm text-neutral-500">
+          Ces articles sont propos&eacute;s et vot&eacute;s par les membres de la communaut&eacute;, pas par l'algorithme.
         </p>
+        <span className="inline-block text-xs font-medium text-blue-700 bg-blue-50 px-2.5 py-1 rounded-full">
+          {submissions.length} {submissions.length > 1 ? "articles proposés" : "article proposé"}
+        </span>
       </div>
 
       {sorted.length === 0 ? (

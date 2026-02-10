@@ -5,6 +5,7 @@ import CategoryFilter from "./components/CategoryFilter";
 import Top3 from "./components/Top3";
 import TopVideos from "./components/TopVideos";
 import FeedView from "./components/FeedView";
+import CommunityPage from "./components/CommunityPage";
 import MySpace from "./components/MySpace";
 import AuthButton from "./components/AuthButton";
 import LoginModal from "./components/LoginModal";
@@ -30,7 +31,7 @@ type WeekData = {
   sections: SummarySection[];
 };
 
-type ViewMode = "feed" | "videos" | "week" | "myspace";
+type ViewMode = "feed" | "videos" | "community" | "week" | "myspace";
 
 export default function App() {
   const { user, isLoginModalOpen, closeLoginModal } = useAuth();
@@ -163,6 +164,16 @@ export default function App() {
                   Vidéos
                 </button>
                 <button
+                  onClick={() => setViewMode("community")}
+                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
+                    viewMode === "community"
+                      ? "bg-white text-neutral-900 shadow-sm"
+                      : "text-neutral-600 hover:text-neutral-900"
+                  }`}
+                >
+                  Must Have
+                </button>
+                <button
                   onClick={() => setViewMode("week")}
                   className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
                     viewMode === "week"
@@ -217,6 +228,11 @@ export default function App() {
               generatedAt={feedData.generated_at}
             />
           </div>
+        )}
+
+        {/* Mode Community */}
+        {viewMode === "community" && (
+          <CommunityPage />
         )}
 
         {/* Mode Mon espace */}

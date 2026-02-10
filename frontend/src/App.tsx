@@ -213,6 +213,7 @@ export default function App() {
             articles={feedData.articles}
             videos={[]}
             generatedAt={feedData.generated_at}
+            onNavigateCommunity={() => setViewMode("community")}
           />
         )}
 
@@ -226,6 +227,7 @@ export default function App() {
               articles={[]}
               videos={feedData.videos}
               generatedAt={feedData.generated_at}
+              onNavigateCommunity={() => setViewMode("community")}
             />
           </div>
         )}

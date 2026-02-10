@@ -12,6 +12,7 @@ type FeedViewProps = {
   articles: FeedItem[];
   videos: FeedItem[];
   generatedAt: string;
+  onNavigateCommunity?: () => void;
 };
 
 // Track seen articles in localStorage
@@ -205,7 +206,7 @@ function FeedSection({
   );
 }
 
-export default function FeedView({ articles, videos, generatedAt }: FeedViewProps) {
+export default function FeedView({ articles, videos, generatedAt, onNavigateCommunity }: FeedViewProps) {
   const [seenUrls, setSeenUrls] = useState<Set<string>>(new Set());
 
   // Load seen articles on mount
@@ -253,6 +254,19 @@ export default function FeedView({ articles, videos, generatedAt }: FeedViewProp
           seenUrls={seenUrls}
           onSeen={handleSeen}
         />
+      )}
+
+      {/* Link to community page */}
+      {onNavigateCommunity && (
+        <div className="text-center py-6">
+          <button
+            onClick={onNavigateCommunity}
+            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 hover:text-blue-800 hover:bg-blue-50 rounded-lg transition"
+          >
+            <span>+</span>
+            <span>Proposer un article dans le Must Have</span>
+          </button>
+        </div>
       )}
 
     </div>

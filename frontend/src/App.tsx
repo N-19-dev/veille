@@ -7,6 +7,7 @@ import TopVideos from "./components/TopVideos";
 import FeedView from "./components/FeedView";
 import CommunityPage from "./components/CommunityPage";
 import MySpace from "./components/MySpace";
+import EventsPage from "./components/EventsPage";
 import AuthButton from "./components/AuthButton";
 import LoginModal from "./components/LoginModal";
 import CommentsModal from "./components/CommentsModal";
@@ -31,7 +32,7 @@ type WeekData = {
   sections: SummarySection[];
 };
 
-type ViewMode = "feed" | "videos" | "community" | "week" | "myspace";
+type ViewMode = "feed" | "videos" | "community" | "week" | "myspace" | "events";
 
 export default function App() {
   const { user, isLoginModalOpen, closeLoginModal } = useAuth();
@@ -174,6 +175,16 @@ export default function App() {
                   Must Have
                 </button>
                 <button
+                  onClick={() => setViewMode("events")}
+                  className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
+                    viewMode === "events"
+                      ? "bg-white text-neutral-900 shadow-sm"
+                      : "text-neutral-600 hover:text-neutral-900"
+                  }`}
+                >
+                  Events
+                </button>
+                <button
                   onClick={() => setViewMode("week")}
                   className={`flex-1 sm:flex-none px-3 sm:px-4 py-2 text-xs sm:text-sm font-medium rounded-md transition-colors ${
                     viewMode === "week"
@@ -235,6 +246,11 @@ export default function App() {
         {/* Mode Community */}
         {viewMode === "community" && (
           <CommunityPage />
+        )}
+
+        {/* Mode Events */}
+        {viewMode === "events" && (
+          <EventsPage />
         )}
 
         {/* Mode Mon espace */}
